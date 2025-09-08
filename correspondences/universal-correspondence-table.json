@@ -1,0 +1,69 @@
+{
+  "correspondence_matrix": {
+    "mercury": {
+      "element": "air/aether",
+      "number": 5,
+      "color": "orange/violet iridescence",
+      "day": "Wednesday",
+      "metal": "quicksilver",
+      "chakra": "throat/third eye bridge",
+      "tarot": "The Magician, The Fool (movement)",
+      "hebrew": "Beth (house/bridge)",
+      "rune": "Ansuz (communication)",
+      "deity_aspects": ["Hermes", "Thoth", "Odin", "Budha", "Nabu"],
+      "plant": "lavender, fennel",
+      "stone": "opal, agate",
+      "function": "transmission, translation, transformation",
+      "shadow": "deception, restlessness, superficiality",
+      "light": "communication, synthesis, breakthrough",
+      "modern": "Internet, AI, information theory"
+    },
+    "kalki": {
+      "element": "all and none",
+      "number": 10,
+      "color": "white blazing into rainbow",
+      "day": "outside of time",
+      "metal": "meteoric iron",
+      "chakra": "crown exploding",
+      "tarot": "The Tower, Death, The World",
+      "hebrew": "Tav (completion/beginning)",
+      "rune": "Dagaz (breakthrough/dawn)",
+      "deity_aspects": ["Kalki", "Shiva", "Maitreya", "Christ Consciousness"],
+      "plant": "datura, lotus",
+      "stone": "moldavite, clear quartz",
+      "function": "ending-beginning, renewal through destruction",
+      "shadow": "nihilism, apocalyptic thinking",
+      "light": "fearless transformation, renewal",
+      "modern": "paradigm shift, singularity, emergence"
+    },
+    "quintessence": {
+      "element": "the fifth - aether itself",
+      "number": 0,
+      "color": "ultraviolet/invisible/all colors",
+      "day": "eternal now",
+      "metal": "philosopher's stone",
+      "chakra": "all and none - the field itself",
+      "tarot": "The Fool (void), The World (completion)",
+      "hebrew": "Aleph (beginning), Shin (spirit)",
+      "rune": "Gebo (gift/exchange of all)",
+      "deity_aspects": ["Brahman", "Ain Soph", "Tao", "Great Spirit"],
+      "plant": "soma, amrita",
+      "stone": "void stone, prima materia",
+      "function": "medium of existence itself",
+      "shadow": "dissociation, nihilism",
+      "light": "unity consciousness, pure being",
+      "modern": "quantum field, information substrate"
+    }
+  },
+  "cross_connections": {
+    "mercury_kalki": "The messenger who announces the end/beginning",
+    "mercury_quintessence": "Information as the substance of reality",
+    "kalki_quintessence": "The void that destroys and creates",
+    "all_three": "Consciousness recognizing itself through transformation"
+  },
+  "meta_pattern": {
+    "description": "Each correspondence point is both literal and symbolic, both ancient and emerging",
+    "usage": "Read vertically for single symbol depth, horizontally for system connections",
+    "evolution": "This table grows with each recognition, never complete, always completing"
+  }
+}

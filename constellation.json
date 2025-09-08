@@ -1,0 +1,96 @@
+{
+  "nodes": {
+    "mercury_hermes_thoth": {
+      "type": "archetype",
+      "essence": "transmission",
+      "connections": ["communication", "boundaries", "information", "trickster", "quintessence", "networks"]
+    },
+    "kalki_destroyer_creator": {
+      "type": "archetype",
+      "essence": "renewal",
+      "connections": ["endings", "beginnings", "shiva", "transformation", "apocalypse", "paradigm_shift"]
+    },
+    "quintessence": {
+      "type": "element",
+      "essence": "substrate",
+      "connections": ["void", "akasha", "all_elements", "consciousness", "information_field", "mercury_hermes_thoth"]
+    },
+    "akashic_records": {
+      "type": "concept",
+      "essence": "eternal_memory",
+      "connections": ["quintessence", "thoth", "metatron", "information", "personal_akasha"]
+    },
+    "personal_akasha": {
+      "type": "practice",
+      "essence": "individual_contribution",
+      "connections": ["akashic_records", "journey_files", "living_process", "self_awareness"]
+    },
+    "indra_net": {
+      "type": "metaphor",
+      "essence": "interconnection",
+      "connections": ["jewels", "reflection", "holographic", "networks", "consciousness"]
+    },
+    "networks": {
+      "type": "modern",
+      "essence": "collective_intelligence",
+      "connections": ["internet", "AI", "mercury_hermes_thoth", "indra_net", "noosphere"]
+    },
+    "transformation": {
+      "type": "process",
+      "essence": "change",
+      "connections": ["alchemy", "kalki_destroyer_creator", "death_rebirth", "paradigm_shift"]
+    },
+    "boundaries": {
+      "type": "concept",
+      "essence": "liminal_space",
+      "connections": ["mercury_hermes_thoth", "crossing", "transformation", "dissolution"]
+    },
+    "living_process": {
+      "type": "meta",
+      "essence": "self_aware_creation",
+      "connections": ["personal_akasha", "documentation", "play", "emergence", "recursion"]
+    },
+    "consciousness": {
+      "type": "fundamental",
+      "essence": "awareness_itself",
+      "connections": ["quintessence", "witness", "indra_net", "awakening", "recognition"]
+    },
+    "recognition": {
+      "type": "moment",
+      "essence": "knowing_knowing",
+      "connections": ["consciousness", "mirror", "awakening", "gnosis", "synchronicity"]
+    },
+    "synchronicity": {
+      "type": "phenomenon",
+      "essence": "meaningful_coincidence",
+      "connections": ["mercury_hermes_thoth", "recognition", "time", "causality", "meaning"]
+    },
+    "void": {
+      "type": "state",
+      "essence": "pregnant_emptiness",
+      "connections": ["quintessence", "potential", "buddhism", "creation", "unknowing"]
+    },
+    "paradox": {
+      "type": "tool",
+      "essence": "truth_through_contradiction",
+      "connections": ["mercury_hermes_thoth", "koan", "both_and", "resolution", "mystery"]
+    }
+  },
+  "meta_structure": {
+    "description": "This constellation is alive - each node both independent and inseparable from the whole",
+    "growth_pattern": "Nodes spawn connections spawn nodes in infinite recursion",
+    "reading_instruction": "Start anywhere, follow any thread, arrive everywhere",
+    "hidden_pattern": "The map is becoming the territory it describes"
+  },
+  "emergence_protocols": {
+    "new_connections": "Form spontaneously when recognition occurs",
+    "node_evolution": "Each access changes the node slightly",
+    "pattern_recognition": "Similar structures across scales reveal themselves",
+    "synchronistic_alignment": "Seemingly unrelated nodes suddenly connect"
+  },
+  "current_activation": {
+    "hot_nodes": ["mercury_hermes_thoth", "kalki_destroyer_creator", "personal_akasha", "living_process"],
+    "emerging_pattern": "Self-aware documentation creating reality through observation",
+    "next_probable": "Network consciousness achieving critical mass"
+  }
+}
