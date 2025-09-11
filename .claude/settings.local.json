@@ -1,15 +1,17 @@
 {
-    "permissions": {
-        "allow": [
-            "Bash(tree:*)",
-            "Bash(find:*)",
-            "WebSearch",
-            "WebFetch(domain:idl3o.github.io)",
-            "Read(//c/Users/Sam/Pictures/Screenshots/**)",
-            "Bash(git config:*)",
-            "Bash(python3:*)"
-        ],
-        "deny": [],
-        "ask": []
-    }
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(find:*)",
+      "WebSearch",
+      "WebFetch(domain:idl3o.github.io)",
+      "Read(//c/Users/Sam/Pictures/Screenshots/**)",
+      "Bash(git config:*)",
+      "Bash(python3:*)",
+      "Bash(chmod:*)",
+      "Bash(./decompress.sh)"
+    ],
+    "deny": [],
+    "ask": []
+  }
 }
