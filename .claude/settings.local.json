@@ -3,7 +3,9 @@
     "allow": [
       "Bash(tree:*)",
       "Bash(find:*)",
-      "WebSearch"
+      "WebSearch",
+      "WebFetch(domain:idl3o.github.io)",
+      "Read(//c/Users/Sam/Pictures/Screenshots/**)"
     ],
     "deny": [],
     "ask": []
