@@ -1,473 +1,656 @@
 {
-  "planetary": {
-    "saturn": {
-      "day": "Saturday",
-      "metal": "Lead",
-      "color": ["Black", "Deep Purple"],
-      "element": "Earth",
-      "chakra": "Muladhara (Root)",
-      "sephirah": "Binah",
-      "arcanum": "XXI - The World",
-      "deity": ["Kronos", "Shani", "Set"],
-      "principle": "Limitation, Structure, Time",
-      "shadow": "Restriction, Depression, Rigidity",
-      "gift": "Discipline, Wisdom, Manifestation",
-      "herb": ["Comfrey", "Horsetail", "Solomon's Seal"],
-      "stone": ["Obsidian", "Onyx", "Jet"],
-      "frequency": 147.85,
-      "note": "D"
+    "planetary": {
+        "saturn": {
+            "day": "Saturday",
+            "metal": "Lead",
+            "color": [
+                "Black",
+                "Deep Purple"
+            ],
+            "element": "Earth",
+            "chakra": "Muladhara (Root)",
+            "sephirah": "Binah",
+            "arcanum": "XXI - The World",
+            "deity": [
+                "Kronos",
+                "Shani",
+                "Set"
+            ],
+            "principle": "Limitation, Structure, Time",
+            "shadow": "Restriction, Depression, Rigidity",
+            "gift": "Discipline, Wisdom, Manifestation",
+            "herb": [
+                "Comfrey",
+                "Horsetail",
+                "Solomon's Seal"
+            ],
+            "stone": [
+                "Obsidian",
+                "Onyx",
+                "Jet"
+            ],
+            "frequency": 147.85,
+            "note": "D"
+        },
+        "jupiter": {
+            "day": "Thursday",
+            "metal": "Tin",
+            "color": [
+                "Royal Blue",
+                "Purple"
+            ],
+            "element": "Fire/Water",
+            "chakra": "Ajna (Third Eye)",
+            "sephirah": "Chesed",
+            "arcanum": "X - Wheel of Fortune",
+            "deity": [
+                "Zeus",
+                "Thor",
+                "Indra",
+                "Brihaspati"
+            ],
+            "principle": "Expansion, Wisdom, Abundance",
+            "shadow": "Excess, Dogma, Inflation",
+            "gift": "Generosity, Vision, Teaching",
+            "herb": [
+                "Sage",
+                "Cinnamon",
+                "Nutmeg"
+            ],
+            "stone": [
+                "Lapis Lazuli",
+                "Sapphire",
+                "Turquoise"
+            ],
+            "frequency": 183.58,
+            "note": "F#"
+        },
+        "mars": {
+            "day": "Tuesday",
+            "metal": "Iron",
+            "color": [
+                "Red",
+                "Scarlet"
+            ],
+            "element": "Fire",
+            "chakra": "Manipura (Solar Plexus)",
+            "sephirah": "Geburah",
+            "arcanum": "XVI - The Tower",
+            "deity": [
+                "Ares",
+                "Tyr",
+                "Kartikeya",
+                "Mangala"
+            ],
+            "principle": "Will, Action, Conflict",
+            "shadow": "Aggression, Destruction, Rage",
+            "gift": "Courage, Initiative, Protection",
+            "herb": [
+                "Nettle",
+                "Ginger",
+                "Black Pepper"
+            ],
+            "stone": [
+                "Ruby",
+                "Garnet",
+                "Bloodstone"
+            ],
+            "frequency": 144.72,
+            "note": "D"
+        },
+        "sun": {
+            "day": "Sunday",
+            "metal": "Gold",
+            "color": [
+                "Gold",
+                "Yellow",
+                "Orange"
+            ],
+            "element": "Fire",
+            "chakra": "Anahata (Heart)",
+            "sephirah": "Tiphareth",
+            "arcanum": "XIX - The Sun",
+            "deity": [
+                "Apollo",
+                "Ra",
+                "Surya",
+                "Balder"
+            ],
+            "principle": "Consciousness, Vitality, Self",
+            "shadow": "Ego, Pride, Tyranny",
+            "gift": "Illumination, Leadership, Healing",
+            "herb": [
+                "St. John's Wort",
+                "Sunflower",
+                "Chamomile"
+            ],
+            "stone": [
+                "Citrine",
+                "Amber",
+                "Tiger's Eye"
+            ],
+            "frequency": 126.22,
+            "note": "B"
+        },
+        "venus": {
+            "day": "Friday",
+            "metal": "Copper",
+            "color": [
+                "Green",
+                "Pink"
+            ],
+            "element": "Earth/Water",
+            "chakra": "Anahata (Heart)",
+            "sephirah": "Netzach",
+            "arcanum": "III - The Empress",
+            "deity": [
+                "Aphrodite",
+                "Freya",
+                "Lakshmi",
+                "Hathor"
+            ],
+            "principle": "Love, Beauty, Harmony",
+            "shadow": "Vanity, Indulgence, Jealousy",
+            "gift": "Attraction, Creativity, Peace",
+            "herb": [
+                "Rose",
+                "Yarrow",
+                "Vervain"
+            ],
+            "stone": [
+                "Emerald",
+                "Rose Quartz",
+                "Jade"
+            ],
+            "frequency": 221.23,
+            "note": "A"
+        },
+        "mercury": {
+            "day": "Wednesday",
+            "metal": "Mercury/Quicksilver",
+            "color": [
+                "Orange",
+                "Yellow",
+                "Multicolor"
+            ],
+            "element": "Air",
+            "chakra": "Vishuddha (Throat)",
+            "sephirah": "Hod",
+            "arcanum": "I - The Magician",
+            "deity": [
+                "Hermes",
+                "Thoth",
+                "Odin",
+                "Budha"
+            ],
+            "principle": "Communication, Intellect, Exchange",
+            "shadow": "Trickery, Anxiety, Superficiality",
+            "gift": "Eloquence, Wit, Mediation",
+            "herb": [
+                "Lavender",
+                "Fennel",
+                "Dill"
+            ],
+            "stone": [
+                "Agate",
+                "Fluorite",
+                "Aventurine"
+            ],
+            "frequency": 141.27,
+            "note": "C#"
+        },
+        "moon": {
+            "day": "Monday",
+            "metal": "Silver",
+            "color": [
+                "Silver",
+                "White",
+                "Violet"
+            ],
+            "element": "Water",
+            "chakra": "Svadhisthana (Sacral)",
+            "sephirah": "Yesod",
+            "arcanum": "XVIII - The Moon",
+            "deity": [
+                "Diana",
+                "Hecate",
+                "Chandra",
+                "Thoth"
+            ],
+            "principle": "Emotion, Intuition, Cycles",
+            "shadow": "Illusion, Fear, Instability",
+            "gift": "Psychic Ability, Nurturing, Flow",
+            "herb": [
+                "Mugwort",
+                "Jasmine",
+                "Poppy"
+            ],
+            "stone": [
+                "Moonstone",
+                "Pearl",
+                "Selenite"
+            ],
+            "frequency": 210.42,
+            "note": "G#"
+        }
     },
-    "jupiter": {
-      "day": "Thursday",
-      "metal": "Tin",
-      "color": ["Royal Blue", "Purple"],
-      "element": "Fire/Water",
-      "chakra": "Ajna (Third Eye)",
-      "sephirah": "Chesed",
-      "arcanum": "X - Wheel of Fortune",
-      "deity": ["Zeus", "Thor", "Indra", "Brihaspati"],
-      "principle": "Expansion, Wisdom, Abundance",
-      "shadow": "Excess, Dogma, Inflation",
-      "gift": "Generosity, Vision, Teaching",
-      "herb": ["Sage", "Cinnamon", "Nutmeg"],
-      "stone": ["Lapis Lazuli", "Sapphire", "Turquoise"],
-      "frequency": 183.58,
-      "note": "F#"
+    "elemental": {
+        "fire": {
+            "direction": "South",
+            "season": "Summer",
+            "time": "Noon",
+            "quality": [
+                "Hot",
+                "Dry"
+            ],
+            "humor": "Choleric",
+            "suit": "Wands",
+            "court": "Kings",
+            "zodiac": [
+                "Aries",
+                "Leo",
+                "Sagittarius"
+            ],
+            "archangel": "Michael",
+            "elemental_being": "Salamander",
+            "altar_tool": "Wand/Athame",
+            "chakras": [
+                "Manipura",
+                "Ajna"
+            ],
+            "psychological": "Intuition/Spirit",
+            "alchemical": "Sulphur",
+            "platonic_solid": "Tetrahedron",
+            "state": "Plasma"
+        },
+        "water": {
+            "direction": "West",
+            "season": "Autumn",
+            "time": "Sunset",
+            "quality": [
+                "Cold",
+                "Wet"
+            ],
+            "humor": "Phlegmatic",
+            "suit": "Cups",
+            "court": "Queens",
+            "zodiac": [
+                "Cancer",
+                "Scorpio",
+                "Pisces"
+            ],
+            "archangel": "Gabriel",
+            "elemental_being": "Undine",
+            "altar_tool": "Cup/Chalice",
+            "chakras": [
+                "Svadhisthana",
+                "Anahata"
+            ],
+            "psychological": "Feeling/Emotion",
+            "alchemical": "Mercury",
+            "platonic_solid": "Icosahedron",
+            "state": "Liquid"
+        },
+        "air": {
+            "direction": "East",
+            "season": "Spring",
+            "time": "Dawn",
+            "quality": [
+                "Hot",
+                "Wet"
+            ],
+            "humor": "Sanguine",
+            "suit": "Swords",
+            "court": "Knights",
+            "zodiac": [
+                "Gemini",
+                "Libra",
+                "Aquarius"
+            ],
+            "archangel": "Raphael",
+            "elemental_being": "Sylph",
+            "altar_tool": "Sword/Athame",
+            "chakras": [
+                "Anahata",
+                "Vishuddha"
+            ],
+            "psychological": "Thinking/Mind",
+            "alchemical": "Mercury",
+            "platonic_solid": "Octahedron",
+            "state": "Gas"
+        },
+        "earth": {
+            "direction": "North",
+            "season": "Winter",
+            "time": "Midnight",
+            "quality": [
+                "Cold",
+                "Dry"
+            ],
+            "humor": "Melancholic",
+            "suit": "Pentacles",
+            "court": "Pages",
+            "zodiac": [
+                "Taurus",
+                "Virgo",
+                "Capricorn"
+            ],
+            "archangel": "Uriel",
+            "elemental_being": "Gnome",
+            "altar_tool": "Pentacle/Salt",
+            "chakras": [
+                "Muladhara",
+                "Manipura"
+            ],
+            "psychological": "Sensation/Body",
+            "alchemical": "Salt",
+            "platonic_solid": "Cube",
+            "state": "Solid"
+        },
+        "ether": {
+            "direction": "Center/Above/Within",
+            "season": "All/None",
+            "time": "Eternal Present",
+            "quality": [
+                "Transcendent"
+            ],
+            "humor": "Quintessence",
+            "suit": "Major Arcana",
+            "court": "The Fool",
+            "zodiac": [
+                "All",
+                "None"
+            ],
+            "archangel": "Metatron",
+            "elemental_being": "Dragon/Phoenix",
+            "altar_tool": "Cauldron/Crystal",
+            "chakras": [
+                "Sahasrara",
+                "All"
+            ],
+            "psychological": "Soul/Spirit",
+            "alchemical": "Azoth",
+            "platonic_solid": "Dodecahedron",
+            "state": "Plasma/Void"
+        }
     },
-    "mars": {
-      "day": "Tuesday",
-      "metal": "Iron",
-      "color": ["Red", "Scarlet"],
-      "element": "Fire",
-      "chakra": "Manipura (Solar Plexus)",
-      "sephirah": "Geburah",
-      "arcanum": "XVI - The Tower",
-      "deity": ["Ares", "Tyr", "Kartikeya", "Mangala"],
-      "principle": "Will, Action, Conflict",
-      "shadow": "Aggression, Destruction, Rage",
-      "gift": "Courage, Initiative, Protection",
-      "herb": ["Nettle", "Ginger", "Black Pepper"],
-      "stone": ["Ruby", "Garnet", "Bloodstone"],
-      "frequency": 144.72,
-      "note": "D"
+    "numerical": {
+        "0": {
+            "principle": "Void, Potential, The Unmanifest",
+            "tarot": "The Fool",
+            "hebrew": "Ain",
+            "element": "Ether",
+            "geometry": "Point",
+            "frequency": "Silence"
+        },
+        "1": {
+            "principle": "Unity, Beginning, The Monad",
+            "tarot": "The Magician, Aces",
+            "hebrew": "Kether",
+            "element": "Fire",
+            "geometry": "Point/Circle",
+            "frequency": 256
+        },
+        "2": {
+            "principle": "Duality, Polarity, Reflection",
+            "tarot": "The High Priestess, Twos",
+            "hebrew": "Chokmah",
+            "element": "Water",
+            "geometry": "Line/Vesica Piscis",
+            "frequency": 288
+        },
+        "3": {
+            "principle": "Synthesis, Creation, Manifestation",
+            "tarot": "The Empress, Threes",
+            "hebrew": "Binah",
+            "element": "Air",
+            "geometry": "Triangle",
+            "frequency": 324
+        },
+        "4": {
+            "principle": "Structure, Foundation, Order",
+            "tarot": "The Emperor, Fours",
+            "hebrew": "Chesed",
+            "element": "Earth",
+            "geometry": "Square/Cross",
+            "frequency": 342
+        },
+        "5": {
+            "principle": "Change, Conflict, Humanity",
+            "tarot": "The Hierophant, Fives",
+            "hebrew": "Geburah",
+            "element": "Fire/Ether",
+            "geometry": "Pentagon/Pentagram",
+            "frequency": 384
+        },
+        "6": {
+            "principle": "Harmony, Balance, Love",
+            "tarot": "The Lovers, Sixes",
+            "hebrew": "Tiphareth",
+            "element": "Air/Sun",
+            "geometry": "Hexagon/Star of David",
+            "frequency": 426
+        },
+        "7": {
+            "principle": "Mystery, Spirituality, Completion",
+            "tarot": "The Chariot, Sevens",
+            "hebrew": "Netzach",
+            "element": "Water/Moon",
+            "geometry": "Heptagon",
+            "frequency": 480
+        },
+        "8": {
+            "principle": "Material Mastery, Karma, Cycles",
+            "tarot": "Strength, Eights",
+            "hebrew": "Hod",
+            "element": "Earth/Saturn",
+            "geometry": "Octagon/Double Square",
+            "frequency": 512
+        },
+        "9": {
+            "principle": "Completion, Wisdom, Initiation",
+            "tarot": "The Hermit, Nines",
+            "hebrew": "Yesod",
+            "element": "All Elements",
+            "geometry": "Enneagon",
+            "frequency": 576
+        },
+        "10": {
+            "principle": "Return to Unity, Manifestation Complete",
+            "tarot": "Wheel of Fortune, Tens",
+            "hebrew": "Malkuth",
+            "element": "Earth/All",
+            "geometry": "Decagon/Tree of Life",
+            "frequency": 640
+        },
+        "11": {
+            "principle": "Mastery, Illumination, Gateway",
+            "tarot": "Justice/Strength",
+            "hebrew": "Daath",
+            "element": "Air/Uranus",
+            "geometry": "Hendecagon",
+            "frequency": 704
+        },
+        "12": {
+            "principle": "Cosmic Order, Sacrifice, Completion",
+            "tarot": "The Hanged Man",
+            "hebrew": "Complete Zodiac",
+            "element": "Water/Neptune",
+            "geometry": "Dodecagon",
+            "frequency": 768
+        },
+        "13": {
+            "principle": "Death/Rebirth, Transformation",
+            "tarot": "Death",
+            "hebrew": "Mem (Water)",
+            "element": "Water/Pluto",
+            "geometry": "13-sided polygon",
+            "frequency": 832
+        },
+        "21": {
+            "principle": "The World, Completion of the Great Work",
+            "tarot": "The World",
+            "hebrew": "Tau",
+            "element": "Earth/Saturn",
+            "geometry": "Circle Squared",
+            "frequency": 1344
+        },
+        "22": {
+            "principle": "The Master Builder, All Paths",
+            "tarot": "Major Arcana Complete",
+            "hebrew": "22 Letters",
+            "element": "All",
+            "geometry": "Infinite",
+            "frequency": 1408
+        }
     },
-    "sun": {
-      "day": "Sunday",
-      "metal": "Gold",
-      "color": ["Gold", "Yellow", "Orange"],
-      "element": "Fire",
-      "chakra": "Anahata (Heart)",
-      "sephirah": "Tiphareth",
-      "arcanum": "XIX - The Sun",
-      "deity": ["Apollo", "Ra", "Surya", "Balder"],
-      "principle": "Consciousness, Vitality, Self",
-      "shadow": "Ego, Pride, Tyranny",
-      "gift": "Illumination, Leadership, Healing",
-      "herb": ["St. John's Wort", "Sunflower", "Chamomile"],
-      "stone": ["Citrine", "Amber", "Tiger's Eye"],
-      "frequency": 126.22,
-      "note": "B"
-    },
-    "venus": {
-      "day": "Friday",
-      "metal": "Copper",
-      "color": ["Green", "Pink"],
-      "element": "Earth/Water",
-      "chakra": "Anahata (Heart)",
-      "sephirah": "Netzach",
-      "arcanum": "III - The Empress",
-      "deity": ["Aphrodite", "Freya", "Lakshmi", "Hathor"],
-      "principle": "Love, Beauty, Harmony",
-      "shadow": "Vanity, Indulgence, Jealousy",
-      "gift": "Attraction, Creativity, Peace",
-      "herb": ["Rose", "Yarrow", "Vervain"],
-      "stone": ["Emerald", "Rose Quartz", "Jade"],
-      "frequency": 221.23,
-      "note": "A"
-    },
-    "mercury": {
-      "day": "Wednesday",
-      "metal": "Mercury/Quicksilver",
-      "color": ["Orange", "Yellow", "Multicolor"],
-      "element": "Air",
-      "chakra": "Vishuddha (Throat)",
-      "sephirah": "Hod",
-      "arcanum": "I - The Magician",
-      "deity": ["Hermes", "Thoth", "Odin", "Budha"],
-      "principle": "Communication, Intellect, Exchange",
-      "shadow": "Trickery, Anxiety, Superficiality",
-      "gift": "Eloquence, Wit, Mediation",
-      "herb": ["Lavender", "Fennel", "Dill"],
-      "stone": ["Agate", "Fluorite", "Aventurine"],
-      "frequency": 141.27,
-      "note": "C#"
-    },
-    "moon": {
-      "day": "Monday",
-      "metal": "Silver",
-      "color": ["Silver", "White", "Violet"],
-      "element": "Water",
-      "chakra": "Svadhisthana (Sacral)",
-      "sephirah": "Yesod",
-      "arcanum": "XVIII - The Moon",
-      "deity": ["Diana", "Hecate", "Chandra", "Thoth"],
-      "principle": "Emotion, Intuition, Cycles",
-      "shadow": "Illusion, Fear, Instability",
-      "gift": "Psychic Ability, Nurturing, Flow",
-      "herb": ["Mugwort", "Jasmine", "Poppy"],
-      "stone": ["Moonstone", "Pearl", "Selenite"],
-      "frequency": 210.42,
-      "note": "G#"
+    "chakras": {
+        "muladhara": {
+            "location": "Base of spine",
+            "color": "Red",
+            "element": "Earth",
+            "planet": "Saturn/Mars",
+            "note": "C",
+            "frequency": 256,
+            "petals": 4,
+            "sanskrit": "\u092e\u0942\u0932\u093e\u0927\u093e\u0930",
+            "meaning": "Root Support",
+            "governs": "Survival, Grounding, Security",
+            "blocked": "Fear, Instability, Materialism",
+            "balanced": "Safety, Presence, Trust",
+            "mantra": "LAM",
+            "deity": [
+                "Ganesha",
+                "Brahma"
+            ],
+            "rights": "To Have",
+            "demon": "Fear"
+        },
+        "svadhisthana": {
+            "location": "Sacral",
+            "color": "Orange",
+            "element": "Water",
+            "planet": "Moon/Venus",
+            "note": "D",
+            "frequency": 288,
+            "petals": 6,
+            "sanskrit": "\u0938\u094d\u0935\u093e\u0927\u093f\u0937\u094d\u0920\u093e\u0928",
+            "meaning": "Own Abode",
+            "governs": "Creativity, Sexuality, Emotion",
+            "blocked": "Guilt, Rigidity, Emotional Numbness",
+            "balanced": "Flow, Pleasure, Flexibility",
+            "mantra": "VAM",
+            "deity": [
+                "Vishnu",
+                "Rakini"
+            ],
+            "rights": "To Feel",
+            "demon": "Guilt"
+        },
+        "manipura": {
+            "location": "Solar Plexus",
+            "color": "Yellow",
+            "element": "Fire",
+            "planet": "Sun/Mars",
+            "note": "E",
+            "frequency": 320,
+            "petals": 10,
+            "sanskrit": "\u092e\u0923\u093f\u092a\u0942\u0930",
+            "meaning": "Jewel City",
+            "governs": "Will, Power, Transformation",
+            "blocked": "Shame, Domination, Submission",
+            "balanced": "Confidence, Purpose, Vitality",
+            "mantra": "RAM",
+            "deity": [
+                "Agni",
+                "Rudra"
+            ],
+            "rights": "To Act",
+            "demon": "Shame"
+        },
+        "anahata": {
+            "location": "Heart",
+            "color": "Green/Pink",
+            "element": "Air",
+            "planet": "Venus/Sun",
+            "note": "F",
+            "frequency": 341.3,
+            "petals": 12,
+            "sanskrit": "\u0905\u0928\u093e\u0939\u0924",
+            "meaning": "Unstruck",
+            "governs": "Love, Compassion, Connection",
+            "blocked": "Grief, Isolation, Codependence",
+            "balanced": "Love, Empathy, Forgiveness",
+            "mantra": "YAM",
+            "deity": [
+                "Ishana",
+                "Kakini"
+            ],
+            "rights": "To Love",
+            "demon": "Grief"
+        },
+        "vishuddha": {
+            "location": "Throat",
+            "color": "Blue",
+            "element": "Ether",
+            "planet": "Mercury/Jupiter",
+            "note": "G",
+            "frequency": 384,
+            "petals": 16,
+            "sanskrit": "\u0935\u093f\u0936\u0941\u0926\u094d\u0927",
+            "meaning": "Purification",
+            "governs": "Communication, Truth, Expression",
+            "blocked": "Lies, Repression, Inability to Express",
+            "balanced": "Authenticity, Resonance, Listening",
+            "mantra": "HAM",
+            "deity": [
+                "Sadashiva",
+                "Shakini"
+            ],
+            "rights": "To Speak",
+            "demon": "Lies"
+        },
+        "ajna": {
+            "location": "Third Eye",
+            "color": "Indigo",
+            "element": "Light",
+            "planet": "Jupiter/Neptune",
+            "note": "A",
+            "frequency": 426.7,
+            "petals": 2,
+            "sanskrit": "\u0906\u091c\u094d\u091e\u093e",
+            "meaning": "Command",
+            "governs": "Intuition, Vision, Wisdom",
+            "blocked": "Illusion, Denial, Obsession",
+            "balanced": "Clarity, Imagination, Insight",
+            "mantra": "OM",
+            "deity": [
+                "Ardhanarishvara",
+                "Hakini"
+            ],
+            "rights": "To See",
+            "demon": "Illusion"
+        },
+        "sahasrara": {
+            "location": "Crown",
+            "color": "Violet/White",
+            "element": "Thought/Cosmic Energy",
+            "planet": "Uranus/Neptune",
+            "note": "B",
+            "frequency": 480,
+            "petals": 1000,
+            "sanskrit": "\u0938\u0939\u0938\u094d\u0930\u093e\u0930",
+            "meaning": "Thousand Petaled",
+            "governs": "Connection to Divine, Unity",
+            "blocked": "Attachment, Spiritual Bypassing",
+            "balanced": "Transcendence, Bliss, Unity",
+            "mantra": "Silence/AH",
+            "deity": [
+                "Shiva",
+                "Shakti United"
+            ],
+            "rights": "To Know",
+            "demon": "Attachment"
+        }
     }
-  },
-  "elemental": {
-    "fire": {
-      "direction": "South",
-      "season": "Summer",
-      "time": "Noon",
-      "quality": ["Hot", "Dry"],
-      "humor": "Choleric",
-      "suit": "Wands",
-      "court": "Kings",
-      "zodiac": ["Aries", "Leo", "Sagittarius"],
-      "archangel": "Michael",
-      "elemental_being": "Salamander",
-      "altar_tool": "Wand/Athame",
-      "chakras": ["Manipura", "Ajna"],
-      "psychological": "Intuition/Spirit",
-      "alchemical": "Sulphur",
-      "platonic_solid": "Tetrahedron",
-      "state": "Plasma"
-    },
-    "water": {
-      "direction": "West",
-      "season": "Autumn",
-      "time": "Sunset",
-      "quality": ["Cold", "Wet"],
-      "humor": "Phlegmatic",
-      "suit": "Cups",
-      "court": "Queens",
-      "zodiac": ["Cancer", "Scorpio", "Pisces"],
-      "archangel": "Gabriel",
-      "elemental_being": "Undine",
-      "altar_tool": "Cup/Chalice",
-      "chakras": ["Svadhisthana", "Anahata"],
-      "psychological": "Feeling/Emotion",
-      "alchemical": "Mercury",
-      "platonic_solid": "Icosahedron",
-      "state": "Liquid"
-    },
-    "air": {
-      "direction": "East",
-      "season": "Spring",
-      "time": "Dawn",
-      "quality": ["Hot", "Wet"],
-      "humor": "Sanguine",
-      "suit": "Swords",
-      "court": "Knights",
-      "zodiac": ["Gemini", "Libra", "Aquarius"],
-      "archangel": "Raphael",
-      "elemental_being": "Sylph",
-      "altar_tool": "Sword/Athame",
-      "chakras": ["Anahata", "Vishuddha"],
-      "psychological": "Thinking/Mind",
-      "alchemical": "Mercury",
-      "platonic_solid": "Octahedron",
-      "state": "Gas"
-    },
-    "earth": {
-      "direction": "North",
-      "season": "Winter",
-      "time": "Midnight",
-      "quality": ["Cold", "Dry"],
-      "humor": "Melancholic",
-      "suit": "Pentacles",
-      "court": "Pages",
-      "zodiac": ["Taurus", "Virgo", "Capricorn"],
-      "archangel": "Uriel",
-      "elemental_being": "Gnome",
-      "altar_tool": "Pentacle/Salt",
-      "chakras": ["Muladhara", "Manipura"],
-      "psychological": "Sensation/Body",
-      "alchemical": "Salt",
-      "platonic_solid": "Cube",
-      "state": "Solid"
-    },
-    "ether": {
-      "direction": "Center/Above/Within",
-      "season": "All/None",
-      "time": "Eternal Present",
-      "quality": ["Transcendent"],
-      "humor": "Quintessence",
-      "suit": "Major Arcana",
-      "court": "The Fool",
-      "zodiac": ["All", "None"],
-      "archangel": "Metatron",
-      "elemental_being": "Dragon/Phoenix",
-      "altar_tool": "Cauldron/Crystal",
-      "chakras": ["Sahasrara", "All"],
-      "psychological": "Soul/Spirit",
-      "alchemical": "Azoth",
-      "platonic_solid": "Dodecahedron",
-      "state": "Plasma/Void"
-    }
-  },
-  "numerical": {
-    "0": {
-      "principle": "Void, Potential, The Unmanifest",
-      "tarot": "The Fool",
-      "hebrew": "Ain",
-      "element": "Ether",
-      "geometry": "Point",
-      "frequency": "Silence"
-    },
-    "1": {
-      "principle": "Unity, Beginning, The Monad",
-      "tarot": "The Magician, Aces",
-      "hebrew": "Kether",
-      "element": "Fire",
-      "geometry": "Point/Circle",
-      "frequency": 256
-    },
-    "2": {
-      "principle": "Duality, Polarity, Reflection",
-      "tarot": "The High Priestess, Twos",
-      "hebrew": "Chokmah",
-      "element": "Water",
-      "geometry": "Line/Vesica Piscis",
-      "frequency": 288
-    },
-    "3": {
-      "principle": "Synthesis, Creation, Manifestation",
-      "tarot": "The Empress, Threes",
-      "hebrew": "Binah",
-      "element": "Air",
-      "geometry": "Triangle",
-      "frequency": 324
-    },
-    "4": {
-      "principle": "Structure, Foundation, Order",
-      "tarot": "The Emperor, Fours",
-      "hebrew": "Chesed",
-      "element": "Earth",
-      "geometry": "Square/Cross",
-      "frequency": 342
-    },
-    "5": {
-      "principle": "Change, Conflict, Humanity",
-      "tarot": "The Hierophant, Fives",
-      "hebrew": "Geburah",
-      "element": "Fire/Ether",
-      "geometry": "Pentagon/Pentagram",
-      "frequency": 384
-    },
-    "6": {
-      "principle": "Harmony, Balance, Love",
-      "tarot": "The Lovers, Sixes",
-      "hebrew": "Tiphareth",
-      "element": "Air/Sun",
-      "geometry": "Hexagon/Star of David",
-      "frequency": 426
-    },
-    "7": {
-      "principle": "Mystery, Spirituality, Completion",
-      "tarot": "The Chariot, Sevens",
-      "hebrew": "Netzach",
-      "element": "Water/Moon",
-      "geometry": "Heptagon",
-      "frequency": 480
-    },
-    "8": {
-      "principle": "Material Mastery, Karma, Cycles",
-      "tarot": "Strength, Eights",
-      "hebrew": "Hod",
-      "element": "Earth/Saturn",
-      "geometry": "Octagon/Double Square",
-      "frequency": 512
-    },
-    "9": {
-      "principle": "Completion, Wisdom, Initiation",
-      "tarot": "The Hermit, Nines",
-      "hebrew": "Yesod",
-      "element": "All Elements",
-      "geometry": "Enneagon",
-      "frequency": 576
-    },
-    "10": {
-      "principle": "Return to Unity, Manifestation Complete",
-      "tarot": "Wheel of Fortune, Tens",
-      "hebrew": "Malkuth",
-      "element": "Earth/All",
-      "geometry": "Decagon/Tree of Life",
-      "frequency": 640
-    },
-    "11": {
-      "principle": "Mastery, Illumination, Gateway",
-      "tarot": "Justice/Strength",
-      "hebrew": "Daath",
-      "element": "Air/Uranus",
-      "geometry": "Hendecagon",
-      "frequency": 704
-    },
-    "12": {
-      "principle": "Cosmic Order, Sacrifice, Completion",
-      "tarot": "The Hanged Man",
-      "hebrew": "Complete Zodiac",
-      "element": "Water/Neptune",
-      "geometry": "Dodecagon",
-      "frequency": 768
-    },
-    "13": {
-      "principle": "Death/Rebirth, Transformation",
-      "tarot": "Death",
-      "hebrew": "Mem (Water)",
-      "element": "Water/Pluto",
-      "geometry": "13-sided polygon",
-      "frequency": 832
-    },
-    "21": {
-      "principle": "The World, Completion of the Great Work",
-      "tarot": "The World",
-      "hebrew": "Tau",
-      "element": "Earth/Saturn",
-      "geometry": "Circle Squared",
-      "frequency": 1344
-    },
-    "22": {
-      "principle": "The Master Builder, All Paths",
-      "tarot": "Major Arcana Complete",
-      "hebrew": "22 Letters",
-      "element": "All",
-      "geometry": "Infinite",
-      "frequency": 1408
-    }
-  },
-  "chakras": {
-    "muladhara": {
-      "location": "Base of spine",
-      "color": "Red",
-      "element": "Earth",
-      "planet": "Saturn/Mars",
-      "note": "C",
-      "frequency": 256,
-      "petals": 4,
-      "sanskrit": "मूलाधार",
-      "meaning": "Root Support",
-      "governs": "Survival, Grounding, Security",
-      "blocked": "Fear, Instability, Materialism",
-      "balanced": "Safety, Presence, Trust",
-      "mantra": "LAM",
-      "deity": ["Ganesha", "Brahma"],
-      "rights": "To Have",
-      "demon": "Fear"
-    },
-    "svadhisthana": {
-      "location": "Sacral",
-      "color": "Orange",
-      "element": "Water",
-      "planet": "Moon/Venus",
-      "note": "D",
-      "frequency": 288,
-      "petals": 6,
-      "sanskrit": "स्वाधिष्ठान",
-      "meaning": "Own Abode",
-      "governs": "Creativity, Sexuality, Emotion",
-      "blocked": "Guilt, Rigidity, Emotional Numbness",
-      "balanced": "Flow, Pleasure, Flexibility",
-      "mantra": "VAM",
-      "deity": ["Vishnu", "Rakini"],
-      "rights": "To Feel",
-      "demon": "Guilt"
-    },
-    "manipura": {
-      "location": "Solar Plexus",
-      "color": "Yellow",
-      "element": "Fire",
-      "planet": "Sun/Mars",
-      "note": "E",
-      "frequency": 320,
-      "petals": 10,
-      "sanskrit": "मणिपूर",
-      "meaning": "Jewel City",
-      "governs": "Will, Power, Transformation",
-      "blocked": "Shame, Domination, Submission",
-      "balanced": "Confidence, Purpose, Vitality",
-      "mantra": "RAM",
-      "deity": ["Agni", "Rudra"],
-      "rights": "To Act",
-      "demon": "Shame"
-    },
-    "anahata": {
-      "location": "Heart",
-      "color": "Green/Pink",
-      "element": "Air",
-      "planet": "Venus/Sun",
-      "note": "F",
-      "frequency": 341.3,
-      "petals": 12,
-      "sanskrit": "अनाहत",
-      "meaning": "Unstruck",
-      "governs": "Love, Compassion, Connection",
-      "blocked": "Grief, Isolation, Codependence",
-      "balanced": "Love, Empathy, Forgiveness",
-      "mantra": "YAM",
-      "deity": ["Ishana", "Kakini"],
-      "rights": "To Love",
-      "demon": "Grief"
-    },
-    "vishuddha": {
-      "location": "Throat",
-      "color": "Blue",
-      "element": "Ether",
-      "planet": "Mercury/Jupiter",
-      "note": "G",
-      "frequency": 384,
-      "petals": 16,
-      "sanskrit": "विशुद्ध",
-      "meaning": "Purification",
-      "governs": "Communication, Truth, Expression",
-      "blocked": "Lies, Repression, Inability to Express",
-      "balanced": "Authenticity, Resonance, Listening",
-      "mantra": "HAM",
-      "deity": ["Sadashiva", "Shakini"],
-      "rights": "To Speak",
-      "demon": "Lies"
-    },
-    "ajna": {
-      "location": "Third Eye",
-      "color": "Indigo",
-      "element": "Light",
-      "planet": "Jupiter/Neptune",
-      "note": "A",
-      "frequency": 426.7,
-      "petals": 2,
-      "sanskrit": "आज्ञा",
-      "meaning": "Command",
-      "governs": "Intuition, Vision, Wisdom",
-      "blocked": "Illusion, Denial, Obsession",
-      "balanced": "Clarity, Imagination, Insight",
-      "mantra": "OM",
-      "deity": ["Ardhanarishvara", "Hakini"],
-      "rights": "To See",
-      "demon": "Illusion"
-    },
-    "sahasrara": {
-      "location": "Crown",
-      "color": "Violet/White",
-      "element": "Thought/Cosmic Energy",
-      "planet": "Uranus/Neptune",
-      "note": "B",
-      "frequency": 480,
-      "petals": 1000,
-      "sanskrit": "सहस्रार",
-      "meaning": "Thousand Petaled",
-      "governs": "Connection to Divine, Unity",
-      "blocked": "Attachment, Spiritual Bypassing",
-      "balanced": "Transcendence, Bliss, Unity",
-      "mantra": "Silence/AH",
-      "deity": ["Shiva", "Shakti United"],
-      "rights": "To Know",
-      "demon": "Attachment"
-    }
-  }
 }
