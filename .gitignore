@@ -1,2 +1,8 @@
 .DS_Store
 **/.DS_Store
+
+# Claude configuration files (user-specific)
+.claude/settings.local.json
+
+# Markdown linting configuration (user-specific)
+.markdownlint.json
