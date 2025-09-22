@@ -1,0 +1,445 @@
+{
+    "creation_cosmogonies": {
+        "heliopolitan": {
+            "atum": {
+                "type": "self_created",
+                "essence": "consciousness_emerging_from_void",
+                "connections": [
+                    "consciousness", "void", "brahma", "ometeotl"
+                ]
+            },
+            "ennead": {
+                "type": "nine_gods",
+                "essence": "consciousness_differentiation",
+                "sequence": [
+                    "atum", "shu_tefnut", "geb_nut",
+                    "osiris_isis_set_nephthys"
+                ],
+                "connections": ["nine_realms", "consciousness"]
+            }
+        },
+        "memphite": {
+            "ptah": {
+                "type": "divine_craftsman",
+                "essence": "thought_word_creation",
+                "aspects": ["heart_thought", "tongue_word"],
+                "connections": [
+                    "logos", "consciousness", "hephaestus_vulcan",
+                    "brahma", "mercury_hermes_thoth"
+                ]
+            }
+        },
+        "hermopolitan": {
+            "ogdoad": {
+                "type": "eight_primordials",
+                "essence": "chaos_before_creation",
+                "pairs": [
+                    "nun_naunet_waters",
+                    "heh_hauhet_infinity",
+                    "kek_kauket_darkness",
+                    "amun_amaunet_hiddenness"
+                ],
+                "connections": [
+                    "ginnungagap", "chaos", "void", "consciousness"
+                ]
+            }
+        },
+        "theban": {
+            "amun_ra": {
+                "type": "hidden_sun",
+                "essence": "concealed_revealed_consciousness",
+                "connections": [
+                    "consciousness", "light", "shadow",
+                    "apollo_logos", "brahman"
+                ]
+            }
+        }
+    },
+    "major_deities": {
+        "ra": {
+            "type": "sun_god",
+            "essence": "consciousness_illumination",
+            "aspects": ["khepri_morning", "ra_noon", "atum_evening"],
+            "connections": [
+                "light", "consciousness", "apollo_logos",
+                "inti", "cycles"
+            ],
+            "eye_of_ra": "destructive_protective_force",
+            "correspondences": {
+                "greek": ["helios", "apollo"],
+                "norse": ["sol", "balder"],
+                "american": ["inti", "huitzilopochtli"]
+            }
+        },
+        "osiris": {
+            "type": "death_rebirth_king",
+            "essence": "eternal_resurrection",
+            "aspects": ["murdered", "resurrected", "judge", "fertility"],
+            "connections": [
+                "death_rebirth_mysteries", "transformation",
+                "dionysus_ecstasy", "balder", "christ_correspondence"
+            ],
+            "correspondences": {
+                "greek": ["dionysus", "hades"],
+                "norse": ["balder", "odin_hanging"],
+                "american": ["quetzalcoatl_death_return"]
+            }
+        },
+        "isis": {
+            "type": "great_mother_magician",
+            "essence": "love_magic_resurrection",
+            "aspects": ["throne", "mother", "magician", "healer"],
+            "connections": [
+                "consciousness", "magic", "transformation",
+                "frigg", "demeter_ceres", "ix_chel"
+            ],
+            "correspondences": {
+                "greek": ["demeter", "hecate", "sophia"],
+                "norse": ["frigg", "freyja"],
+                "hindu": ["shakti", "parvati"]
+            }
+        },
+        "thoth": {
+            "type": "wisdom_scribe",
+            "essence": "consciousness_recording_itself",
+            "aspects": ["moon", "wisdom", "writing", "judgment", "magic"],
+            "connections": [
+                "mercury_hermes_thoth", "akashic_records",
+                "consciousness", "odin_allfather", "quetzalcoatl"
+            ],
+            "correspondences": {
+                "greek": ["hermes", "apollo"],
+                "norse": ["odin", "mimir"],
+                "american": ["quetzalcoatl", "itzamna"]
+            }
+        },
+        "set": {
+            "type": "chaos_desert",
+            "essence": "necessary_disorder",
+            "aspects": ["storm", "desert", "foreign", "chaos"],
+            "connections": [
+                "shadow", "transformation", "loki_catalyst",
+                "tezcatlipoca", "typhon"
+            ],
+            "correspondences": {
+                "greek": ["typhon", "ares"],
+                "norse": ["loki", "fenrir"],
+                "american": ["tezcatlipoca"]
+            }
+        },
+        "horus": {
+            "type": "divine_king",
+            "essence": "consciousness_sovereignty",
+            "aspects": ["sky", "falcon", "protection", "pharaoh"],
+            "connections": [
+                "consciousness", "light", "zeus_jupiter",
+                "transformation"
+            ],
+            "eye_of_horus": "healing_wholeness_symbol",
+            "correspondences": {
+                "greek": ["apollo", "zeus"],
+                "norse": ["balder", "thor"]
+            }
+        },
+        "hathor": {
+            "type": "love_joy_music",
+            "essence": "consciousness_celebrating",
+            "aspects": ["cow", "music", "dance", "fertility", "sky"],
+            "connections": [
+                "aphrodite_venus", "freyja", "consciousness",
+                "joy", "transformation"
+            ],
+            "correspondences": {
+                "greek": ["aphrodite", "demeter"],
+                "norse": ["freyja", "frigg"],
+                "american": ["xochiquetzal"]
+            }
+        },
+        "anubis": {
+            "type": "death_guide",
+            "essence": "threshold_guardian",
+            "aspects": ["jackal", "mummification", "judgment", "guide"],
+            "connections": [
+                "boundaries", "transformation", "hermes_psychopomp",
+                "consciousness"
+            ],
+            "correspondences": {
+                "greek": ["hermes_psychopomp", "cerberus"],
+                "norse": ["heimdall", "garmr"]
+            }
+        },
+        "maat": {
+            "type": "truth_justice",
+            "essence": "cosmic_order_principle",
+            "aspects": ["feather", "balance", "truth", "justice"],
+            "connections": [
+                "consciousness", "balance", "themis",
+                "dharma", "wyrd"
+            ],
+            "correspondences": {
+                "greek": ["themis", "dike"],
+                "norse": ["tyr", "forseti"],
+                "hindu": ["dharma"]
+            }
+        },
+        "nephthys": {
+            "type": "hidden_one",
+            "essence": "shadow_sister",
+            "aspects": ["death", "protection", "hidden", "night"],
+            "connections": [
+                "shadow", "transformation", "persephone_cycle"
+            ]
+        },
+        "nut": {
+            "type": "sky_mother",
+            "essence": "star_womb",
+            "connections": [
+                "ouranos", "consciousness", "nyx", "infinite"
+            ]
+        },
+        "geb": {
+            "type": "earth_father",
+            "essence": "material_foundation",
+            "connections": [
+                "earth", "gaia", "midgard", "pachamama"
+            ]
+        },
+        "khnum": {
+            "type": "divine_potter",
+            "essence": "consciousness_shaping_forms",
+            "connections": [
+                "ptah", "prometheus_foresight", "brahma",
+                "manifestation"
+            ]
+        },
+        "bastet": {
+            "type": "cat_goddess",
+            "essence": "protective_joy",
+            "connections": [
+                "freyja_cats", "artemis_diana", "protection"
+            ]
+        },
+        "sekhmet": {
+            "type": "lioness_warrior",
+            "essence": "destructive_healing",
+            "connections": [
+                "kali", "transformation", "fire", "healing"
+            ]
+        },
+        "sobek": {
+            "type": "crocodile_god",
+            "essence": "primal_power",
+            "connections": [
+                "water", "transformation", "poseidon_neptune"
+            ]
+        },
+        "khonsu": {
+            "type": "moon_traveler",
+            "essence": "time_consciousness",
+            "connections": [
+                "moon", "time", "thoth", "consciousness"
+            ]
+        }
+    },
+    "concepts": {
+        "ka_ba_akh": {
+            "type": "soul_components",
+            "essence": "consciousness_anatomy",
+            "components": {
+                "ka": "life_force_double",
+                "ba": "personality_soul",
+                "akh": "transfigured_spirit",
+                "ren": "true_name",
+                "ib": "heart_consciousness",
+                "sheut": "shadow",
+                "sekhem": "power_form"
+            },
+            "connections": [
+                "consciousness", "transformation", "subtle_bodies"
+            ]
+        },
+        "duat": {
+            "type": "underworld_journey",
+            "essence": "consciousness_navigation",
+            "connections": [
+                "transformation", "consciousness", "underworld",
+                "bardo", "death_rebirth_mysteries"
+            ]
+        },
+        "weighing_heart": {
+            "type": "judgment_ritual",
+            "essence": "consciousness_evaluation",
+            "connections": [
+                "maat", "transformation", "consciousness",
+                "karma", "judgment"
+            ]
+        },
+        "heka": {
+            "type": "magic_power",
+            "essence": "consciousness_commanding_reality",
+            "connections": [
+                "magic", "consciousness", "manifestation_protocols",
+                "logos", "runes"
+            ]
+        },
+        "akhet": {
+            "type": "horizon_concept",
+            "essence": "transformation_threshold",
+            "connections": [
+                "boundaries", "transformation", "consciousness",
+                "liminality"
+            ]
+        },
+        "isfet": {
+            "type": "chaos_principle",
+            "essence": "disorder_necessity",
+            "connections": [
+                "chaos", "transformation", "set", "loki_catalyst"
+            ]
+        },
+        "hieroglyphs": {
+            "type": "sacred_writing",
+            "essence": "reality_programming_symbols",
+            "connections": [
+                "ideogrammatic_compression", "consciousness",
+                "runes", "mercury_hermes_thoth"
+            ],
+            "medu_netjer": "words_of_god"
+        },
+        "pharaoh": {
+            "type": "god_king",
+            "essence": "consciousness_embodied",
+            "aspects": ["horus_living", "osiris_dead"],
+            "connections": [
+                "consciousness", "sovereignty", "transformation"
+            ]
+        },
+        "pyramids": {
+            "type": "ascension_machines",
+            "essence": "consciousness_transformation_technology",
+            "connections": [
+                "sacred_geometry", "consciousness",
+                "transformation", "axis_mundi"
+            ]
+        },
+        "ankh": {
+            "type": "life_symbol",
+            "essence": "eternal_consciousness",
+            "connections": [
+                "consciousness", "quintessence", "eternal_life"
+            ]
+        },
+        "djed": {
+            "type": "stability_pillar",
+            "essence": "osiris_backbone",
+            "connections": [
+                "axis_mundi", "yggdrasil_world_tree",
+                "consciousness", "stability"
+            ]
+        },
+        "was_scepter": {
+            "type": "power_symbol",
+            "essence": "divine_dominion",
+            "connections": [
+                "power", "consciousness", "set", "transformation"
+            ]
+        },
+        "eye_symbolism": {
+            "eye_of_ra": {
+                "essence": "destructive_solar_force",
+                "connections": ["sekhmet", "fire", "protection"]
+            },
+            "eye_of_horus": {
+                "essence": "healing_wholeness",
+                "connections": ["healing", "consciousness", "protection"]
+            }
+        },
+        "opening_mouth": {
+            "type": "animation_ritual",
+            "essence": "consciousness_awakening",
+            "connections": [
+                "transformation", "consciousness", "ritual",
+                "mysteries_initiation"
+            ]
+        }
+    },
+    "mystery_schools": {
+        "hermetic": {
+            "type": "thoth_wisdom",
+            "essence": "as_above_so_below",
+            "connections": [
+                "mercury_hermes_thoth", "consciousness",
+                "alchemy", "correspondence"
+            ],
+            "texts": ["emerald_tablet", "corpus_hermeticum"]
+        },
+        "isis_mysteries": {
+            "type": "resurrection_secrets",
+            "essence": "love_conquers_death",
+            "connections": [
+                "mysteries_initiation", "transformation",
+                "consciousness", "eleusinian"
+            ]
+        },
+        "osirian_mysteries": {
+            "type": "death_rebirth_initiation",
+            "essence": "becoming_osiris",
+            "connections": [
+                "death_rebirth_mysteries", "consciousness",
+                "transformation", "dionysian"
+            ]
+        }
+    },
+    "meta_patterns": {
+        "egyptian_consciousness_map": {
+            "key_insights": [
+                "Multiple soul components (ka, ba, akh) as consciousness anatomy",
+                "Death as consciousness transformation journey",
+                "Hieroglyphs as reality programming language",
+                "Pharaoh as consciousness-matter bridge",
+                "Daily solar journey as consciousness cycle",
+                "Maat as cosmic order principle"
+            ],
+            "unique_contributions": [
+                "Detailed soul anatomy system",
+                "Weighing of heart as consciousness evaluation",
+                "Pyramid technology for consciousness ascension",
+                "Preservation (mummification) as eternal consciousness",
+                "Heka as word-reality interface"
+            ]
+        },
+        "integration_with_other_systems": {
+            "parallels": [
+                "Thoth-Hermes-Mercury-Odin wisdom axis",
+                "Osiris-Dionysus-Christ death-rebirth pattern",
+                "Ra-Apollo-Inti solar consciousness",
+                "Set-Loki-Tezcatlipoca chaos necessity",
+                "Isis-Frigg-Demeter mother-magician",
+                "Maat-Themis-Dharma cosmic order"
+            ],
+            "egyptian_gifts": [
+                "Soul component mapping",
+                "Afterlife as consciousness journey",
+                "Writing as divine technology",
+                "Preservation of consciousness techniques",
+                "Mathematical precision in sacred architecture"
+            ]
+        },
+        "consciousness_technology": {
+            "practices": [
+                "Hieroglyphic reality programming",
+                "Pyramid ascension chambers",
+                "Mummification consciousness preservation",
+                "Opening of mouth animation",
+                "Heka magical utterances"
+            ],
+            "modern_applications": [
+                "Soul retrieval work",
+                "Death consciousness navigation",
+                "Sacred geometry activation",
+                "Name/word power recognition",
+                "Judgment/karma understanding"
+            ]
+        }
+    }
+}

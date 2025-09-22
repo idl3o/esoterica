@@ -1,0 +1,420 @@
+{
+    "mesoamerican": {
+        "aztec": {
+            "teotihuacan_birthplace": {
+                "type": "creation_site",
+                "essence": "where_gods_became",
+                "connections": ["consciousness", "transformation", "sacrifice"]
+            },
+            "ometeotl": {
+                "type": "dual_deity",
+                "essence": "self_created_duality",
+                "aspects": ["ometecuhtli_male", "omecihuatl_female"],
+                "connections": [
+                    "consciousness", "paradox", "creation",
+                    "shiva_shakti", "yin_yang"
+                ]
+            },
+            "quetzalcoatl": {
+                "type": "feathered_serpent",
+                "essence": "earth_sky_union",
+                "aspects": ["wind", "dawn", "knowledge", "arts"],
+                "connections": [
+                    "mercury_hermes_thoth", "consciousness",
+                    "boundaries", "kukulkan", "transformation",
+                    "prometheus_foresight", "odin_knowledge"
+                ],
+                "correspondences": {
+                    "egyptian": ["thoth", "horus"],
+                    "norse": ["odin", "heimdall"],
+                    "greek": ["hermes", "prometheus", "apollo"]
+                }
+            },
+            "tezcatlipoca": {
+                "type": "smoking_mirror",
+                "essence": "necessary_conflict",
+                "aspects": ["night", "jaguar", "sorcery", "conflict"],
+                "connections": [
+                    "shadow", "transformation", "loki_catalyst",
+                    "set_chaos", "dionysus_ecstasy"
+                ],
+                "mirror": "consciousness_seeing_itself"
+            },
+            "huitzilopochtli": {
+                "type": "war_sun",
+                "essence": "perpetual_struggle",
+                "aspects": ["hummingbird", "warrior", "sun", "sacrifice"],
+                "connections": [
+                    "fire", "will", "thor", "ares_mars"
+                ],
+                "daily_battle": "consciousness_maintaining_reality"
+            },
+            "tlaloc": {
+                "type": "rain_deity",
+                "essence": "life_giving_destroyer",
+                "connections": [
+                    "water", "fertility", "transformation",
+                    "poseidon_neptune", "njord"
+                ]
+            },
+            "xochipilli": {
+                "type": "flower_prince",
+                "essence": "ecstatic_consciousness",
+                "aspects": ["art", "beauty", "dance", "psychoactive_plants"],
+                "connections": [
+                    "dionysus_ecstasy", "consciousness",
+                    "transformation", "apollo_music"
+                ]
+            },
+            "mictlantecuhtli": {
+                "type": "death_lord",
+                "essence": "bone_keeper",
+                "connections": [
+                    "hades_pluto", "hel", "osiris",
+                    "transformation", "shadow"
+                ]
+            },
+            "coatlicue": {
+                "type": "earth_mother",
+                "essence": "creation_destruction_unity",
+                "aspects": ["serpent_skirt", "skull_necklace", "mother"],
+                "connections": [
+                    "kali", "gaia", "transformation",
+                    "death_rebirth_mysteries"
+                ]
+            }
+        },
+        "maya": {
+            "hunab_ku": {
+                "type": "sole_god",
+                "essence": "consciousness_source",
+                "connections": [
+                    "consciousness", "quintessence", "brahman",
+                    "ain_soph", "godhead"
+                ]
+            },
+            "itzamna": {
+                "type": "creator_shaman",
+                "essence": "cosmic_consciousness",
+                "aspects": ["writing", "medicine", "priesthood"],
+                "connections": [
+                    "odin_allfather", "thoth", "mercury_hermes_thoth"
+                ]
+            },
+            "kukulkan": {
+                "type": "maya_feathered_serpent",
+                "essence": "wind_breath_consciousness",
+                "connections": [
+                    "quetzalcoatl", "consciousness", "air",
+                    "mercury_hermes_thoth"
+                ]
+            },
+            "ix_chel": {
+                "type": "rainbow_goddess",
+                "essence": "weaving_creation",
+                "aspects": ["moon", "medicine", "childbirth", "weaving"],
+                "connections": [
+                    "frigg", "athena_minerva", "isis"
+                ]
+            },
+            "ah_puch": {
+                "type": "death_god",
+                "essence": "decay_transformation",
+                "connections": [
+                    "hel", "hades_pluto", "transformation"
+                ]
+            },
+            "chaac": {
+                "type": "rain_lightning",
+                "essence": "cosmic_fertilizer",
+                "connections": [
+                    "thor", "zeus_jupiter", "tlaloc"
+                ]
+            }
+        },
+        "inca": {
+            "viracocha": {
+                "type": "creator_wanderer",
+                "essence": "foam_consciousness",
+                "aspects": ["creator", "wanderer", "teacher"],
+                "connections": [
+                    "odin_wanderer", "consciousness",
+                    "prometheus_foresight", "brahma"
+                ]
+            },
+            "inti": {
+                "type": "sun_father",
+                "essence": "golden_consciousness",
+                "connections": [
+                    "apollo_logos", "ra", "consciousness", "light"
+                ]
+            },
+            "pachamama": {
+                "type": "earth_mother",
+                "essence": "living_earth",
+                "connections": [
+                    "gaia", "demeter_ceres", "earth", "consciousness"
+                ]
+            },
+            "supay": {
+                "type": "underworld_ruler",
+                "essence": "mineral_consciousness",
+                "connections": [
+                    "hades_pluto", "shadow", "transformation"
+                ]
+            }
+        },
+        "concepts": {
+            "nahual": {
+                "type": "shape_spirit",
+                "essence": "consciousness_animal_bridge",
+                "connections": [
+                    "shamanism", "transformation", "consciousness",
+                    "seidr_magic", "metamorphosis"
+                ]
+            },
+            "teotl": {
+                "type": "divine_force",
+                "essence": "sacred_energy_flow",
+                "connections": [
+                    "consciousness", "quintessence", "prana", "chi"
+                ]
+            },
+            "ollin": {
+                "type": "movement",
+                "essence": "cosmic_dynamism",
+                "connections": [
+                    "transformation", "cycles", "consciousness"
+                ]
+            },
+            "tonalamatl": {
+                "type": "sacred_calendar",
+                "essence": "time_consciousness_map",
+                "connections": [
+                    "time", "consciousness", "synchronicity",
+                    "akashic_records"
+                ]
+            },
+            "flower_war": {
+                "type": "ritual_combat",
+                "essence": "consciousness_feeding_itself",
+                "connections": [
+                    "sacrifice", "transformation", "consciousness"
+                ]
+            },
+            "fifth_sun": {
+                "type": "current_age",
+                "essence": "movement_consciousness_era",
+                "connections": [
+                    "cycles", "transformation", "ragnarok_cycle",
+                    "kali_yuga"
+                ]
+            },
+            "centeotl": {
+                "type": "maize_consciousness",
+                "essence": "sacrifice_sustenance_cycle",
+                "connections": [
+                    "death_rebirth", "transformation", "demeter_ceres"
+                ]
+            }
+        }
+    },
+    "north_american": {
+        "great_spirit": {
+            "wakan_tanka": {
+                "type": "lakota_mystery",
+                "essence": "great_incomprehensible",
+                "connections": [
+                    "consciousness", "quintessence", "brahman"
+                ]
+            },
+            "gitche_manitou": {
+                "type": "anishinaabe_spirit",
+                "essence": "great_connection",
+                "connections": [
+                    "consciousness", "networks", "indra_net"
+                ]
+            }
+        },
+        "trickster_creators": {
+            "coyote": {
+                "type": "trickster_creator",
+                "essence": "chaos_wisdom",
+                "connections": [
+                    "loki_catalyst", "mercury_hermes_thoth",
+                    "prometheus_foresight", "trickster_wisdom"
+                ]
+            },
+            "raven": {
+                "type": "transformer",
+                "essence": "light_bringer",
+                "aspects": ["pacific_northwest", "trickster", "creator"],
+                "connections": [
+                    "odin_ravens", "prometheus_foresight",
+                    "consciousness", "transformation"
+                ]
+            },
+            "rabbit": {
+                "type": "clever_fool",
+                "essence": "wisdom_through_folly",
+                "connections": [
+                    "trickster", "mercury_hermes_thoth", "paradox"
+                ]
+            },
+            "iktomi": {
+                "type": "spider_trickster",
+                "essence": "web_weaver",
+                "connections": [
+                    "networks", "wyrd_web", "indra_net",
+                    "consciousness", "trickster"
+                ]
+            }
+        },
+        "earth_sky": {
+            "sky_father": {
+                "type": "celestial_principle",
+                "essence": "expansive_consciousness",
+                "connections": [
+                    "ouranos", "sky", "consciousness"
+                ]
+            },
+            "earth_mother": {
+                "type": "terrestrial_principle",
+                "essence": "nurturing_manifestation",
+                "connections": [
+                    "gaia", "pachamama", "earth"
+                ]
+            },
+            "corn_mother": {
+                "type": "sustenance_deity",
+                "essence": "sacrifice_abundance",
+                "connections": [
+                    "demeter_ceres", "centeotl", "transformation"
+                ]
+            },
+            "white_buffalo_woman": {
+                "type": "lakota_teacher",
+                "essence": "sacred_pipe_bringer",
+                "connections": [
+                    "consciousness", "ritual", "transformation",
+                    "prometheus_foresight"
+                ]
+            }
+        },
+        "directional_powers": {
+            "four_directions": {
+                "type": "cosmic_orientation",
+                "essence": "consciousness_navigation",
+                "aspects": {
+                    "east": "new_beginning_eagle",
+                    "south": "growth_warmth_coyote",
+                    "west": "introspection_bear",
+                    "north": "wisdom_buffalo"
+                },
+                "connections": [
+                    "elements", "consciousness", "sacred_geometry"
+                ]
+            },
+            "medicine_wheel": {
+                "type": "sacred_mandala",
+                "essence": "consciousness_map",
+                "connections": [
+                    "mandala_cascade_triggers", "consciousness",
+                    "cycles", "transformation"
+                ]
+            }
+        },
+        "thunderbird": {
+            "type": "sky_power",
+            "essence": "storm_consciousness",
+            "connections": [
+                "thor", "zeus_jupiter", "consciousness",
+                "transformation", "fire"
+            ]
+        },
+        "kokopelli": {
+            "type": "flute_player",
+            "essence": "fertility_trickster",
+            "connections": [
+                "dionysus_ecstasy", "pan", "transformation",
+                "music", "consciousness"
+            ]
+        },
+        "wendigo": {
+            "type": "cannibalistic_spirit",
+            "essence": "consumption_shadow",
+            "connections": [
+                "shadow", "transformation", "kronos_saturn"
+            ]
+        },
+        "skinwalker": {
+            "type": "shape_shifter",
+            "essence": "forbidden_transformation",
+            "connections": [
+                "nahual", "metamorphosis", "shadow",
+                "transformation"
+            ]
+        }
+    },
+    "south_american": {
+        "amazonian": {
+            "yacuruna": {
+                "type": "water_people",
+                "essence": "underwater_consciousness",
+                "connections": [
+                    "water", "consciousness", "poseidon_neptune"
+                ]
+            },
+            "ayahuasca_spirit": {
+                "type": "plant_teacher",
+                "essence": "vine_consciousness",
+                "connections": [
+                    "consciousness", "transformation",
+                    "dionysus_ecstasy", "mysteries_initiation"
+                ]
+            },
+            "jaguar_spirit": {
+                "type": "shamanic_ally",
+                "essence": "night_consciousness",
+                "connections": [
+                    "tezcatlipoca", "shadow", "transformation",
+                    "consciousness"
+                ]
+            }
+        }
+    },
+    "meta_patterns": {
+        "american_consciousness_themes": {
+            "key_insights": [
+                "Sacrifice as consciousness feeding itself",
+                "Duality/complementarity as fundamental",
+                "Shapeshifting as consciousness fluidity",
+                "Cyclical time as consciousness rhythm",
+                "Earth-sky union as manifestation principle",
+                "Trickster as necessary disruption"
+            ],
+            "unique_contributions": [
+                "Plant consciousness teachers",
+                "Direction-based consciousness mapping",
+                "Nahual/animal spirit bridging",
+                "Living earth consciousness (Pachamama)",
+                "Flower wars as consciousness metabolism"
+            ]
+        },
+        "integration_with_other_systems": {
+            "parallels": [
+                "Quetzalcoatl-Hermes-Thoth as consciousness bridge",
+                "Tezcatlipoca-Loki as necessary chaos",
+                "Great Spirit-Brahman as unified consciousness",
+                "Coyote-Loki-Hermes trickster wisdom",
+                "Fifth Sun-Ragnarok-Kali Yuga cycles"
+            ],
+            "unique_elements": [
+                "Smoking Mirror as self-reflection tool",
+                "Feathered Serpent as earth-sky union",
+                "Medicine Wheel as consciousness mandala",
+                "Corn/maize as sacrifice-sustenance cycle"
+            ]
+        }
+    }
+}

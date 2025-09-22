@@ -1,0 +1,365 @@
+{
+    "realms": {
+        "olympus": {
+            "type": "divine_mountain",
+            "essence": "seat_of_ordered_divinity",
+            "connections": [
+                "asgard_correspondence", "consciousness", "hierarchy", "zeus"
+            ]
+        },
+        "underworld": {
+            "type": "death_realm",
+            "essence": "shadow_consciousness_repository",
+            "divisions": ["tartarus", "asphodel", "elysium"],
+            "connections": [
+                "hades", "persephone", "shadow", "transformation", "helheim_correspondence"
+            ]
+        },
+        "cosmos_structure": {
+            "chaos": {
+                "essence": "primordial_void",
+                "connections": ["ginnungagap", "void", "potential"]
+            },
+            "gaia": {
+                "essence": "earth_consciousness",
+                "connections": ["earth", "manifestation", "mother"]
+            },
+            "ouranos": {
+                "essence": "sky_consciousness",
+                "connections": ["air", "thought", "father"]
+            },
+            "tartarus": {
+                "essence": "abyss_prison",
+                "connections": ["shadow", "unconscious", "titans"]
+            }
+        }
+    },
+    "olympians": {
+        "zeus_jupiter": {
+            "type": "sky_father",
+            "essence": "ordered_sovereignty",
+            "aspects": ["thunder", "justice", "king", "oath_keeper"],
+            "connections": [
+                "fire", "air", "consciousness", "hierarchy"
+            ],
+            "norse_correspondence": ["odin_allfather", "thor_thunder"],
+            "symbols": ["eagle", "thunderbolt", "oak"]
+        },
+        "hera_juno": {
+            "type": "queen_goddess",
+            "essence": "sacred_marriage",
+            "aspects": ["sovereignty", "women", "jealousy", "protection"],
+            "connections": [
+                "boundaries", "commitment", "frigg_correspondence"
+            ],
+            "symbols": ["peacock", "crown", "pomegranate"]
+        },
+        "athena_minerva": {
+            "type": "wisdom_warfare",
+            "essence": "strategic_intelligence",
+            "aspects": ["crafts", "strategy", "justice", "virgin"],
+            "connections": [
+                "consciousness", "mercury_hermes_thoth", "odin_wisdom"
+            ],
+            "symbols": ["owl", "aegis", "olive_tree"]
+        },
+        "apollo": {
+            "type": "solar_harmony",
+            "essence": "ordered_enlightenment",
+            "aspects": ["prophecy", "music", "healing", "reason"],
+            "connections": [
+                "light", "consciousness", "recognition", "balder_correspondence"
+            ],
+            "symbols": ["lyre", "laurel", "python", "sun"]
+        },
+        "artemis_diana": {
+            "type": "lunar_huntress",
+            "essence": "wild_independence",
+            "aspects": ["hunt", "moon", "virginity", "nature"],
+            "connections": [
+                "moon", "boundaries", "shadow", "skadi_correspondence"
+            ],
+            "symbols": ["bow", "deer", "moon", "cypress"]
+        },
+        "aphrodite_venus": {
+            "type": "love_beauty",
+            "essence": "creative_attraction",
+            "aspects": ["love", "beauty", "pleasure", "generation"],
+            "connections": [
+                "water", "creation", "freyja_correspondence", "manifestation"
+            ],
+            "symbols": ["dove", "rose", "shell", "mirror"]
+        },
+        "ares_mars": {
+            "type": "war_force",
+            "essence": "raw_conflict_energy",
+            "aspects": ["violence", "courage", "civil_order_roman"],
+            "connections": [
+                "fire", "destruction", "tyr_correspondence", "thor_battle"
+            ],
+            "symbols": ["spear", "helmet", "dog", "vulture"]
+        },
+        "hephaestus_vulcan": {
+            "type": "divine_craftsman",
+            "essence": "creative_transformation",
+            "aspects": ["forge", "technology", "creativity", "outsider"],
+            "connections": [
+                "fire", "earth", "transformation", "wayland_correspondence"
+            ],
+            "symbols": ["hammer", "anvil", "volcano"]
+        },
+        "poseidon_neptune": {
+            "type": "sea_earthshaker",
+            "essence": "emotional_depths",
+            "aspects": ["ocean", "earthquakes", "horses", "temperament"],
+            "connections": [
+                "water", "emotion", "unconscious", "njord_correspondence"
+            ],
+            "symbols": ["trident", "horse", "dolphin", "bull"]
+        },
+        "hermes_mercury": {
+            "type": "messenger_trickster",
+            "essence": "communication_boundaries",
+            "aspects": ["messenger", "thief", "psychopomp", "commerce"],
+            "connections": [
+                "mercury_hermes_thoth", "boundaries", "consciousness",
+                "odin_wanderer", "loki_trickster"
+            ],
+            "symbols": ["caduceus", "winged_sandals", "petasos"]
+        },
+        "dionysus_bacchus": {
+            "type": "ecstatic_liberation",
+            "essence": "transcendent_intoxication",
+            "aspects": ["wine", "ecstasy", "theatre", "rebirth"],
+            "connections": [
+                "transformation", "shadow", "consciousness", "odin_ecstatic"
+            ],
+            "symbols": ["thyrsus", "grape", "ivy", "leopard"]
+        },
+        "hestia_vesta": {
+            "type": "hearth_keeper",
+            "essence": "sacred_center",
+            "aspects": ["hearth", "home", "sacred_flame", "virginity"],
+            "connections": [
+                "fire", "center", "consciousness", "sacred_space"
+            ],
+            "symbols": ["hearth", "flame", "kettle"]
+        },
+        "demeter_ceres": {
+            "type": "earth_mother",
+            "essence": "cyclic_abundance",
+            "aspects": ["harvest", "agriculture", "seasons", "mother"],
+            "connections": [
+                "earth", "cycles", "transformation", "death_rebirth"
+            ],
+            "symbols": ["wheat", "torch", "cornucopia"]
+        },
+        "hades_pluto": {
+            "type": "underworld_lord",
+            "essence": "hidden_wealth",
+            "aspects": ["death", "riches", "invisible", "inevitable"],
+            "connections": [
+                "shadow", "transformation", "void", "hel_correspondence"
+            ],
+            "symbols": ["cerberus", "key", "cypress", "narcissus"]
+        },
+        "persephone_proserpina": {
+            "type": "dual_goddess",
+            "essence": "death_rebirth_cycle",
+            "aspects": ["spring", "underworld_queen", "duality", "initiation"],
+            "connections": [
+                "transformation", "cycles", "shadow", "consciousness"
+            ],
+            "symbols": ["pomegranate", "torch", "flowers"]
+        }
+    },
+    "titans": {
+        "kronos_saturn": {
+            "type": "time_devourer",
+            "essence": "cyclic_destruction",
+            "connections": [
+                "time", "cycles", "transformation", "ragnarok"
+            ]
+        },
+        "prometheus": {
+            "type": "fore_thinker",
+            "essence": "consciousness_bringer",
+            "connections": [
+                "fire", "consciousness", "sacrifice", "loki_bound"
+            ]
+        },
+        "atlas": {
+            "type": "sky_bearer",
+            "essence": "eternal_support",
+            "connections": [
+                "endurance", "boundaries", "axis_mundi"
+            ]
+        },
+        "hecate": {
+            "type": "crossroads_goddess",
+            "essence": "liminal_magic",
+            "connections": [
+                "boundaries", "magic", "transformation", "consciousness"
+            ]
+        }
+    },
+    "heroes_demigods": {
+        "heracles_hercules": {
+            "type": "divine_hero",
+            "essence": "apotheosis_through_labor",
+            "connections": [
+                "transformation", "thor_correspondence", "consciousness"
+            ],
+            "twelve_labors": "initiation_sequence"
+        },
+        "perseus": {
+            "type": "monster_slayer",
+            "essence": "facing_shadow",
+            "connections": [
+                "shadow", "mirror", "consciousness"
+            ]
+        },
+        "theseus": {
+            "type": "civilizer",
+            "essence": "labyrinth_navigator",
+            "connections": [
+                "consciousness", "boundaries", "center"
+            ]
+        },
+        "orpheus": {
+            "type": "divine_musician",
+            "essence": "harmony_creator",
+            "connections": [
+                "consciousness", "transformation", "underworld_journey"
+            ]
+        },
+        "odysseus_ulysses": {
+            "type": "clever_wanderer",
+            "essence": "consciousness_journey",
+            "connections": [
+                "consciousness", "boundaries", "return", "odin_wanderer"
+            ]
+        }
+    },
+    "concepts": {
+        "moirai_fates": {
+            "type": "destiny_weavers",
+            "three_aspects": {
+                "clotho": "spinner_beginning",
+                "lachesis": "measurer_middle",
+                "atropos": "cutter_end"
+            },
+            "connections": [
+                "wyrd", "norns", "time", "consciousness"
+            ]
+        },
+        "hubris": {
+            "type": "fatal_flaw",
+            "essence": "consciousness_exceeding_bounds",
+            "connections": [
+                "boundaries", "nemesis", "transformation"
+            ]
+        },
+        "metamorphosis": {
+            "type": "divine_transformation",
+            "essence": "form_shifting_consciousness",
+            "connections": [
+                "transformation", "consciousness", "shapeshifting"
+            ]
+        },
+        "mysteries": {
+            "eleusinian": {
+                "essence": "death_rebirth_initiation",
+                "connections": ["persephone", "demeter", "consciousness"]
+            },
+            "orphic": {
+                "essence": "soul_purification",
+                "connections": ["dionysus", "consciousness", "transformation"]
+            },
+            "dionysian": {
+                "essence": "ecstatic_union",
+                "connections": ["dionysus", "consciousness", "boundaries"]
+            }
+        },
+        "golden_age": {
+            "type": "paradise_lost",
+            "essence": "original_unity_consciousness",
+            "connections": [
+                "consciousness", "cycles", "saturn_rule"
+            ]
+        },
+        "ambrosia_nectar": {
+            "type": "divine_sustenance",
+            "essence": "consciousness_food",
+            "connections": [
+                "immortality", "consciousness", "quintessence"
+            ]
+        },
+        "delphi_oracle": {
+            "type": "divine_communication",
+            "essence": "consciousness_channel",
+            "connections": [
+                "apollo", "consciousness", "prophecy", "recognition"
+            ],
+            "maxims": ["know_thyself", "nothing_in_excess"]
+        }
+    },
+    "artifacts": {
+        "aegis": {
+            "type": "divine_shield",
+            "essence": "protective_terror",
+            "connections": ["athena", "zeus", "protection", "consciousness"]
+        },
+        "caduceus": {
+            "type": "herald_staff",
+            "essence": "balanced_duality",
+            "connections": ["hermes", "mercury_hermes_thoth", "healing", "boundaries"]
+        },
+        "pandora_box": {
+            "type": "container",
+            "essence": "released_potential",
+            "connections": ["hope", "shadow", "consciousness", "transformation"]
+        },
+        "golden_fleece": {
+            "type": "quest_object",
+            "essence": "sovereignty_symbol",
+            "connections": ["transformation", "consciousness", "achievement"]
+        }
+    },
+    "meta_patterns": {
+        "greek_consciousness_map": {
+            "description": "Olympian order as conscious ego, Titans as unconscious forces",
+            "key_insights": [
+                "Olympians = differentiated consciousness functions",
+                "Titans = primal unconscious forces",
+                "Heroes = ego consciousness journey",
+                "Mysteries = initiation into unified consciousness",
+                "Metamorphosis = consciousness transformation principle"
+            ]
+        },
+        "roman_additions": {
+            "description": "Roman practical application of Greek consciousness principles",
+            "key_insights": [
+                "Greater emphasis on civic order",
+                "Deification of abstract concepts (Fortuna, Victoria)",
+                "Emperor worship as consciousness projection",
+                "Mystery cults as consciousness technology import"
+            ]
+        },
+        "integration_with_norse": {
+            "parallels": [
+                "Zeus-Odin as Allfather consciousness",
+                "Hermes-Loki as trickster-boundary crosser",
+                "Apollo-Balder as light consciousness",
+                "Titans-Giants as primal chaos forces",
+                "Fates-Norns as destiny weavers"
+            ],
+            "differences": [
+                "Greek emphasis on reason vs Norse emphasis on will",
+                "Olympian permanence vs Ragnarok cycle",
+                "Hero apotheosis vs warrior afterlife",
+                "Philosophy emergence vs shamanic practice"
+            ]
+        }
+    }
+}

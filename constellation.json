@@ -14,7 +14,10 @@
                 "universal_pantheon",
                 "therapeutic_relationship",
                 "psychological_bridge",
-                "fractal_scale_navigator"
+                "fractal_scale_navigator",
+                "quetzalcoatl_feathered_serpent",
+                "thoth_wisdom",
+                "coyote_trickster"
             ]
         },
         "kalki_destroyer_creator": {
@@ -216,7 +219,9 @@
                 "indra_net",
                 "awakening",
                 "recognition",
-                "universal_pantheon"
+                "universal_pantheon",
+                "yggdrasil_world_tree",
+                "olympus_cosmos"
             ]
         },
         "universal_pantheon": {
@@ -491,7 +496,173 @@
                 "recognition",
                 "time",
                 "causality",
-                "meaning"
+                "meaning",
+                "wyrd_web",
+                "moirai_fates"
+            ]
+        },
+        "yggdrasil_world_tree": {
+            "type": "norse_cosmology",
+            "essence": "axis_mundi_connecting_nine_realms",
+            "connections": [
+                "consciousness",
+                "networks",
+                "indra_net",
+                "nine_realms",
+                "odin_allfather",
+                "norns_wyrd"
+            ]
+        },
+        "odin_allfather": {
+            "type": "norse_archetype",
+            "essence": "wisdom_through_sacrifice",
+            "connections": [
+                "mercury_hermes_thoth",
+                "consciousness",
+                "transformation",
+                "runes",
+                "zeus_jupiter",
+                "wanderer_seeker"
+            ]
+        },
+        "loki_catalyst": {
+            "type": "norse_archetype",
+            "essence": "necessary_chaos_transformer",
+            "connections": [
+                "trickster",
+                "mercury_hermes_thoth",
+                "transformation",
+                "kalki_destroyer_creator",
+                "boundaries",
+                "hermes_psychopomp"
+            ]
+        },
+        "ragnarok_cycle": {
+            "type": "norse_concept",
+            "essence": "cyclic_destruction_renewal",
+            "connections": [
+                "kalki_destroyer_creator",
+                "transformation",
+                "paradigm_shift",
+                "death_rebirth",
+                "ekpyrosis"
+            ]
+        },
+        "norns_wyrd": {
+            "type": "norse_concept",
+            "essence": "fate_web_causality",
+            "connections": [
+                "wyrd_web",
+                "moirai_fates",
+                "akashic_records",
+                "time",
+                "consciousness"
+            ]
+        },
+        "olympus_cosmos": {
+            "type": "greek_cosmology",
+            "essence": "ordered_divine_hierarchy",
+            "connections": [
+                "consciousness",
+                "zeus_jupiter",
+                "twelve_olympians",
+                "cosmos_from_chaos",
+                "yggdrasil_world_tree"
+            ]
+        },
+        "zeus_jupiter": {
+            "type": "greek_archetype",
+            "essence": "sovereign_sky_father",
+            "connections": [
+                "consciousness",
+                "fire",
+                "air",
+                "odin_allfather",
+                "thunder_power",
+                "cosmic_order"
+            ]
+        },
+        "hermes_psychopomp": {
+            "type": "greek_archetype",
+            "essence": "messenger_boundary_crosser",
+            "connections": [
+                "mercury_hermes_thoth",
+                "boundaries",
+                "consciousness",
+                "loki_catalyst",
+                "communication",
+                "underworld_guide"
+            ]
+        },
+        "apollo_logos": {
+            "type": "greek_archetype",
+            "essence": "reason_prophecy_harmony",
+            "connections": [
+                "light",
+                "consciousness",
+                "recognition",
+                "delphi_oracle",
+                "music_mathematics",
+                "balder_light"
+            ]
+        },
+        "dionysus_ecstasy": {
+            "type": "greek_archetype",
+            "essence": "transcendent_liberation",
+            "connections": [
+                "transformation",
+                "consciousness",
+                "shadow",
+                "mysteries",
+                "odin_ecstatic",
+                "death_rebirth"
+            ]
+        },
+        "persephone_cycle": {
+            "type": "greek_archetype",
+            "essence": "death_rebirth_duality",
+            "connections": [
+                "transformation",
+                "cycles",
+                "shadow",
+                "consciousness",
+                "hel_keeper",
+                "underworld_queen"
+            ]
+        },
+        "prometheus_foresight": {
+            "type": "titan_archetype",
+            "essence": "consciousness_bringer",
+            "connections": [
+                "fire",
+                "consciousness",
+                "sacrifice",
+                "loki_bound",
+                "transformation",
+                "rebellion"
+            ]
+        },
+        "moirai_fates": {
+            "type": "greek_concept",
+            "essence": "trinity_destiny_weavers",
+            "connections": [
+                "norns_wyrd",
+                "time",
+                "consciousness",
+                "synchronicity",
+                "inevitability"
+            ]
+        },
+        "mysteries_initiation": {
+            "type": "greek_practice",
+            "essence": "consciousness_transformation_rites",
+            "connections": [
+                "eleusinian",
+                "orphic",
+                "dionysian",
+                "consciousness",
+                "transformation",
+                "seidr_magic"
             ]
         },
         "void": {
@@ -514,6 +685,255 @@
                 "both_and",
                 "resolution",
                 "mystery"
+            ]
+        },
+        "mythological_synthesis": {
+            "type": "meta_integration",
+            "essence": "pantheons_as_consciousness_maps",
+            "connections": [
+                "universal_pantheon",
+                "consciousness",
+                "yggdrasil_world_tree",
+                "olympus_cosmos",
+                "comparative_mythology"
+            ]
+        },
+        "hero_journey": {
+            "type": "universal_pattern",
+            "essence": "consciousness_individuation_path",
+            "connections": [
+                "transformation",
+                "consciousness",
+                "heracles_labors",
+                "odysseus_return",
+                "sigurd_dragon"
+            ]
+        },
+        "trickster_wisdom": {
+            "type": "archetypal_function",
+            "essence": "transformation_through_disruption",
+            "connections": [
+                "mercury_hermes_thoth",
+                "loki_catalyst",
+                "hermes_psychopomp",
+                "prometheus_foresight",
+                "boundaries",
+                "paradox"
+            ]
+        },
+        "world_tree_axis": {
+            "type": "universal_structure",
+            "essence": "vertical_integration_of_consciousness",
+            "connections": [
+                "yggdrasil_world_tree",
+                "olympus_cosmos",
+                "axis_mundi",
+                "consciousness",
+                "shamanic_journey"
+            ]
+        },
+        "death_rebirth_mysteries": {
+            "type": "universal_transformation",
+            "essence": "consciousness_through_dissolution",
+            "connections": [
+                "persephone_cycle",
+                "dionysus_ecstasy",
+                "balder_doom",
+                "ragnarok_cycle",
+                "mysteries_initiation",
+                "transformation",
+                "osiris_resurrection",
+                "quetzalcoatl_return",
+                "corn_mother_cycle"
+            ]
+        },
+        "quetzalcoatl_feathered_serpent": {
+            "type": "mesoamerican_archetype",
+            "essence": "earth_sky_union",
+            "connections": [
+                "mercury_hermes_thoth",
+                "consciousness",
+                "boundaries",
+                "transformation",
+                "prometheus_foresight",
+                "odin_knowledge"
+            ]
+        },
+        "tezcatlipoca_smoking_mirror": {
+            "type": "mesoamerican_archetype",
+            "essence": "necessary_conflict_reflection",
+            "connections": [
+                "shadow",
+                "loki_catalyst",
+                "set_chaos",
+                "consciousness",
+                "mirror_self_seeing"
+            ]
+        },
+        "great_spirit_wakan_tanka": {
+            "type": "native_american_concept",
+            "essence": "incomprehensible_unity",
+            "connections": [
+                "consciousness",
+                "quintessence",
+                "brahman",
+                "hunab_ku"
+            ]
+        },
+        "coyote_trickster": {
+            "type": "native_american_archetype",
+            "essence": "chaos_wisdom_creator",
+            "connections": [
+                "trickster_wisdom",
+                "loki_catalyst",
+                "mercury_hermes_thoth",
+                "prometheus_foresight"
+            ]
+        },
+        "medicine_wheel": {
+            "type": "native_american_practice",
+            "essence": "consciousness_orientation_map",
+            "connections": [
+                "mandala_cascade_triggers",
+                "consciousness",
+                "cycles",
+                "four_directions",
+                "sacred_geometry"
+            ]
+        },
+        "nahual_shapeshifting": {
+            "type": "mesoamerican_practice",
+            "essence": "consciousness_animal_bridge",
+            "connections": [
+                "transformation",
+                "consciousness",
+                "seidr_magic",
+                "metamorphosis"
+            ]
+        },
+        "fifth_sun_era": {
+            "type": "mesoamerican_concept",
+            "essence": "movement_consciousness_age",
+            "connections": [
+                "cycles",
+                "ragnarok_cycle",
+                "kali_yuga",
+                "transformation"
+            ]
+        },
+        "thoth_wisdom": {
+            "type": "egyptian_archetype",
+            "essence": "consciousness_recording_itself",
+            "connections": [
+                "mercury_hermes_thoth",
+                "akashic_records",
+                "consciousness",
+                "hieroglyphs",
+                "odin_allfather"
+            ]
+        },
+        "osiris_resurrection": {
+            "type": "egyptian_archetype",
+            "essence": "eternal_renewal_principle",
+            "connections": [
+                "death_rebirth_mysteries",
+                "transformation",
+                "dionysus_ecstasy",
+                "christ_pattern"
+            ]
+        },
+        "isis_magic": {
+            "type": "egyptian_archetype",
+            "essence": "love_resurrects_consciousness",
+            "connections": [
+                "consciousness",
+                "magic",
+                "transformation",
+                "frigg",
+                "demeter_ceres"
+            ]
+        },
+        "ra_solar_journey": {
+            "type": "egyptian_archetype",
+            "essence": "consciousness_daily_cycle",
+            "connections": [
+                "light",
+                "consciousness",
+                "apollo_logos",
+                "cycles",
+                "transformation"
+            ]
+        },
+        "set_chaos": {
+            "type": "egyptian_archetype",
+            "essence": "necessary_disorder",
+            "connections": [
+                "shadow",
+                "loki_catalyst",
+                "tezcatlipoca_smoking_mirror",
+                "transformation"
+            ]
+        },
+        "maat_cosmic_order": {
+            "type": "egyptian_concept",
+            "essence": "truth_justice_balance",
+            "connections": [
+                "consciousness",
+                "dharma",
+                "wyrd",
+                "themis",
+                "cosmic_balance"
+            ]
+        },
+        "ka_ba_akh_soul": {
+            "type": "egyptian_concept",
+            "essence": "consciousness_anatomy",
+            "connections": [
+                "consciousness",
+                "transformation",
+                "subtle_bodies",
+                "soul_components"
+            ]
+        },
+        "hieroglyphs": {
+            "type": "egyptian_technology",
+            "essence": "reality_programming_symbols",
+            "connections": [
+                "ideogrammatic_compression",
+                "consciousness",
+                "runes",
+                "thoth_wisdom",
+                "manifestation_protocols"
+            ]
+        },
+        "pyramid_consciousness": {
+            "type": "egyptian_technology",
+            "essence": "ascension_transformation_chamber",
+            "connections": [
+                "sacred_geometry",
+                "consciousness",
+                "transformation",
+                "axis_mundi"
+            ]
+        },
+        "duat_underworld": {
+            "type": "egyptian_concept",
+            "essence": "consciousness_navigation_realm",
+            "connections": [
+                "transformation",
+                "consciousness",
+                "underworld",
+                "death_rebirth_mysteries"
+            ]
+        },
+        "heka_magic": {
+            "type": "egyptian_practice",
+            "essence": "word_reality_command",
+            "connections": [
+                "consciousness",
+                "manifestation_protocols",
+                "logos",
+                "runes"
             ]
         }
     },

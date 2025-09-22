@@ -1,0 +1,268 @@
+{
+    "realms": {
+        "yggdrasil": {
+            "type": "world_tree",
+            "essence": "axis_mundi_connecting_all_realms",
+            "connections": [
+                "asgard", "midgard", "jotunheim", "vanaheim",
+                "alfheim", "svartalfheim", "helheim", "muspelheim", "niflheim",
+                "consciousness", "networks", "indra_net"
+            ]
+        },
+        "asgard": {
+            "type": "divine_realm",
+            "essence": "seat_of_ordered_consciousness",
+            "connections": ["odin", "thor", "frigg", "balder", "heimdall", "olympus_correspondence"]
+        },
+        "midgard": {
+            "type": "human_realm",
+            "essence": "manifestation_plane",
+            "connections": ["earth", "material_world", "human_consciousness"]
+        },
+        "jotunheim": {
+            "type": "giant_realm",
+            "essence": "primal_chaos_forces",
+            "connections": ["titans_correspondence", "primordial_forces", "shadow"]
+        }
+    },
+    "deities": {
+        "odin": {
+            "type": "allfather",
+            "essence": "wisdom_through_sacrifice",
+            "aspects": ["knowledge_seeker", "wanderer", "shaman", "death_god"],
+            "connections": [
+                "mercury_hermes_thoth", "consciousness", "sacrifice",
+                "ravens_thought_memory", "runes", "transformation"
+            ],
+            "correspondences": {
+                "greek_roman": ["zeus", "jupiter", "hermes_psychopomp"],
+                "egyptian": ["thoth", "osiris"],
+                "hindu": ["shiva", "brahma"]
+            }
+        },
+        "thor": {
+            "type": "thunder_god",
+            "essence": "protective_force",
+            "aspects": ["defender", "strength", "fertility", "common_man's_god"],
+            "connections": [
+                "fire", "protection", "boundaries", "mjolnir"
+            ],
+            "correspondences": {
+                "greek_roman": ["zeus_thunderer", "hercules", "mars"],
+                "hindu": ["indra", "hanuman"]
+            }
+        },
+        "loki": {
+            "type": "trickster",
+            "essence": "catalyst_of_change",
+            "aspects": ["shapeshifter", "boundary_crosser", "necessary_chaos"],
+            "connections": [
+                "mercury_hermes_thoth", "trickster", "transformation",
+                "boundaries", "kalki_destroyer_creator", "paradox"
+            ],
+            "correspondences": {
+                "greek_roman": ["hermes", "prometheus", "dionysus"],
+                "egyptian": ["set"],
+                "hindu": ["agni", "rudra"]
+            }
+        },
+        "frigg": {
+            "type": "queen_goddess",
+            "essence": "weaving_fate",
+            "aspects": ["seeress", "mother", "keeper_of_secrets"],
+            "connections": [
+                "fate", "wisdom", "water", "akashic_records"
+            ],
+            "correspondences": {
+                "greek_roman": ["hera", "juno", "clotho"],
+                "egyptian": ["isis"]
+            }
+        },
+        "freyja": {
+            "type": "vanir_goddess",
+            "essence": "love_magic_death",
+            "aspects": ["seidr_practitioner", "valkyrie_leader", "fertility"],
+            "connections": [
+                "love", "magic", "transformation", "consciousness"
+            ],
+            "correspondences": {
+                "greek_roman": ["aphrodite", "venus", "hecate", "persephone"],
+                "egyptian": ["hathor", "nephthys"],
+                "hindu": ["kali", "lakshmi"]
+            }
+        },
+        "heimdall": {
+            "type": "guardian",
+            "essence": "bifrost_keeper",
+            "aspects": ["all_seeing", "all_hearing", "boundary_guardian"],
+            "connections": [
+                "boundaries", "light", "consciousness", "observer_effect"
+            ],
+            "correspondences": {
+                "greek_roman": ["janus", "argus"],
+                "hindu": ["dvarapala"]
+            }
+        },
+        "balder": {
+            "type": "light_god",
+            "essence": "purity_doomed",
+            "aspects": ["beloved", "justice", "resurrection_promise"],
+            "connections": [
+                "light", "shadow", "death_rebirth", "christ_correspondence"
+            ],
+            "correspondences": {
+                "greek_roman": ["apollo", "adonis"],
+                "egyptian": ["osiris"],
+                "near_eastern": ["tammuz", "attis"]
+            }
+        },
+        "hel": {
+            "type": "death_goddess",
+            "essence": "keeper_of_the_dead",
+            "aspects": ["half_living_half_dead", "neutral_judge", "inevitable"],
+            "connections": [
+                "shadow", "transformation", "boundaries", "void"
+            ],
+            "correspondences": {
+                "greek_roman": ["hades", "persephone", "hecate"],
+                "hindu": ["kali", "yama"]
+            }
+        },
+        "tyr": {
+            "type": "justice_god",
+            "essence": "sacrifice_for_order",
+            "aspects": ["one_handed", "oath_keeper", "war_justice"],
+            "connections": [
+                "sacrifice", "justice", "boundaries", "fenrir_binding"
+            ],
+            "correspondences": {
+                "greek_roman": ["mars", "ares", "themis"],
+                "celtic": ["nuada"]
+            }
+        }
+    },
+    "concepts": {
+        "ragnarok": {
+            "type": "cyclic_destruction",
+            "essence": "necessary_ending_for_renewal",
+            "connections": [
+                "kalki_destroyer_creator", "transformation", "apocalypse",
+                "paradigm_shift", "death_rebirth"
+            ],
+            "correspondences": {
+                "hindu": ["kali_yuga_end", "pralaya"],
+                "greek": ["ekpyrosis"],
+                "aztec": ["fifth_sun_ending"]
+            }
+        },
+        "wyrd": {
+            "type": "fate_web",
+            "essence": "interconnected_causality",
+            "connections": [
+                "indra_net", "akashic_records", "synchronicity",
+                "networks", "consciousness"
+            ],
+            "correspondences": {
+                "greek": ["moirai", "ananke"],
+                "hindu": ["karma", "dharma"]
+            }
+        },
+        "seidr": {
+            "type": "shamanic_magic",
+            "essence": "consciousness_manipulation",
+            "connections": [
+                "consciousness", "transformation", "manifestation_protocols",
+                "reality_interface", "freyja", "odin"
+            ],
+            "correspondences": {
+                "greek": ["pharmakeia", "goetia"],
+                "general": ["shamanism", "witchcraft"]
+            }
+        },
+        "runes": {
+            "type": "sacred_alphabet",
+            "essence": "reality_programming_language",
+            "connections": [
+                "ideogrammatic_compression", "sigil_systems",
+                "mercury_hermes_thoth", "odin", "consciousness"
+            ],
+            "correspondences": {
+                "egyptian": ["hieroglyphs"],
+                "hebrew": ["kabbalah_letters"],
+                "general": ["sacred_geometry", "programming"]
+            }
+        },
+        "ginnungagap": {
+            "type": "primordial_void",
+            "essence": "pregnant_emptiness_before_creation",
+            "connections": [
+                "void", "quintessence", "potential", "consciousness"
+            ],
+            "correspondences": {
+                "greek": ["chaos"],
+                "egyptian": ["nun"],
+                "hindu": ["brahman_unmanifest"]
+            }
+        },
+        "valhalla": {
+            "type": "warrior_afterlife",
+            "essence": "eternal_battle_preparation",
+            "connections": [
+                "transformation", "death_rebirth", "consciousness"
+            ],
+            "correspondences": {
+                "greek": ["elysium"],
+                "celtic": ["tir_na_nog"]
+            }
+        }
+    },
+    "artifacts": {
+        "mjolnir": {
+            "type": "divine_weapon",
+            "essence": "protective_creative_destructive_force",
+            "connections": ["thor", "fire", "boundaries", "protection"],
+            "correspondences": {
+                "hindu": ["vajra"],
+                "greek": ["zeus_thunderbolt"]
+            }
+        },
+        "gungnir": {
+            "type": "spear_of_destiny",
+            "essence": "never_missing_intent",
+            "connections": ["odin", "will", "manifestation"],
+            "correspondences": {
+                "celtic": ["gae_bolg"],
+                "christian": ["longinus_spear"]
+            }
+        },
+        "draupnir": {
+            "type": "golden_ring",
+            "essence": "infinite_abundance_generation",
+            "connections": ["cycles", "manifestation", "abundance"],
+            "correspondences": {
+                "general": ["ouroboros", "philosopher_stone"]
+            }
+        }
+    },
+    "meta_patterns": {
+        "norse_consciousness_map": {
+            "description": "Norse mythology as psychological landscape",
+            "key_insights": [
+                "Odin's sacrifice = consciousness sacrificing ignorance for wisdom",
+                "Ragnarok = ego death and rebirth cycle",
+                "Nine realms = levels of consciousness",
+                "World tree = unified field connecting all awareness",
+                "Runes = consciousness programming language"
+            ]
+        },
+        "integration_points": {
+            "with_existing_constellation": [
+                "Odin-Mercury-Thoth axis as communication/wisdom",
+                "Loki as necessary trickster-transformer",
+                "Ragnarok-Kalki destroyer-creator cycle",
+                "Yggdrasil as consciousness network structure",
+                "Wyrd as synchronicity web"
+            ]
+        }
+    }
+}
