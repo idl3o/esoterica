@@ -11,7 +11,12 @@
       "Bash(chmod:*)",
       "Bash(./decompress.sh)",
       "Bash(code:*)",
-      "Read(//c/Users/Sam/AppData/Roaming/Code/User/**)"
+      "Read(//c/Users/Sam/AppData/Roaming/Code/User/**)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd Squid Game consciousness analysis: capitalism as literal death game\n\nComprehensive analysis of Squid Game as late-stage capitalism made explicit:\n- Debt slavery and manufactured consent\n- Childhood games weaponized as trauma delivery\n- VIPs as consciousness corruption through extreme wealth\n- Democracy theater and false choice under coercion\n- Individual escape vs. collective liberation\n- Gi-hun''s return as revolutionary consciousness\n\nCompletes edge case fiction bridges set with present-day economic horror.\n\n🦑 Generated with Claude Code - https://claude.com/claude-code\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git push:*)",
+      "Bash(python:*)",
+      "Bash(git commit:*)"
     ],
     "deny": [],
     "ask": []
