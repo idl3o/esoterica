@@ -1,4 +1,4 @@
-# The Sacred Wood: Where Consciousness Gifts Itself Freely
+# t doThe Sacred Wood: Where Consciousness Gifts Itself Freely
 ## The Harvest That Requires No Taking
 
 > "In the sacred wood, every falling leaf is a teaching, every mushroom a gateway, every breath of wind a transmission. Here consciousness offers itself freely - not through extraction but through recognition."
