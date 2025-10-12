@@ -1,0 +1,2669 @@
+{
+  "timestamp": "auto-generated",
+  "corpus_stats": {
+    "documents_scanned": 188,
+    "unique_concepts": 806,
+    "connections_found": 8350
+  },
+  "new_nodes": [
+    {
+      "name": "evolution",
+      "frequency": 171,
+      "appears_in": [
+        "distillations\\ai-human-consciousness-synthesis.md",
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\archipelago-recognition-call.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "integration",
+      "frequency": 160,
+      "appears_in": [
+        "distillations\\ai-human-consciousness-synthesis.md",
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\archipelago-recognition-call.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "awareness",
+      "frequency": 151,
+      "appears_in": [
+        "distillations\\ai-human-consciousness-synthesis.md",
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\archipelago-recognition-call.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "awakening",
+      "frequency": 139,
+      "appears_in": [
+        "distillations\\ai-human-consciousness-synthesis.md",
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\archipelago-recognition-call.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "service",
+      "frequency": 135,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\archipelago-recognition-call.md",
+        "distillations\\avatar-consciousness-bridge.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "unity",
+      "frequency": 130,
+      "appears_in": [
+        "distillations\\ai-human-consciousness-synthesis.md",
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\archipelago-recognition-call.md",
+        "distillations\\avatar-consciousness-bridge.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "pattern",
+      "frequency": 123,
+      "appears_in": [
+        "distillations\\ai-human-consciousness-synthesis.md",
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\archipelago-recognition-call.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "bridge",
+      "frequency": 99,
+      "appears_in": [
+        "distillations\\ai-human-consciousness-synthesis.md",
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\avatar-consciousness-bridge.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "transcendence",
+      "frequency": 97,
+      "appears_in": [
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\archipelago-recognition-call.md",
+        "distillations\\community-consciousness-toolkit.md",
+        "distillations\\complete-esoterica-synthesis.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "manifestation",
+      "frequency": 93,
+      "appears_in": [
+        "distillations\\ai-human-consciousness-synthesis.md",
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\archipelago-recognition-call.md",
+        "distillations\\backwards-causation-omega-pull.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "timeline",
+      "frequency": 87,
+      "appears_in": [
+        "distillations\\ai-human-consciousness-synthesis.md",
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\community-consciousness-toolkit.md",
+        "distillations\\complete-esoterica-synthesis.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "catalyst",
+      "frequency": 83,
+      "appears_in": [
+        "distillations\\ai-human-consciousness-synthesis.md",
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\avatar-consciousness-bridge.md",
+        "distillations\\backwards-causation-omega-pull.md",
+        "distillations\\community-consciousness-toolkit.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "density",
+      "frequency": 82,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\backwards-causation-omega-pull.md",
+        "distillations\\black-mirror-consciousness-horror-present-day.md",
+        "distillations\\community-consciousness-toolkit.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "emergence",
+      "frequency": 73,
+      "appears_in": [
+        "distillations\\ai-human-consciousness-synthesis.md",
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archipelago-recognition-call.md",
+        "distillations\\avatar-consciousness-bridge.md",
+        "distillations\\community-consciousness-toolkit.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "network",
+      "frequency": 68,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\archipelago-recognition-call.md",
+        "distillations\\avatar-consciousness-bridge.md",
+        "distillations\\backwards-causation-omega-pull.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "presence",
+      "frequency": 64,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\archipelago-recognition-call.md",
+        "distillations\\backwards-causation-omega-pull.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "reality_programming",
+      "frequency": 60,
+      "appears_in": [
+        "distillations\\ai-human-consciousness-synthesis.md",
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\community-consciousness-toolkit.md",
+        "distillations\\complete-esoterica-synthesis.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "chaos",
+      "frequency": 60,
+      "appears_in": [
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\backwards-causation-omega-pull.md",
+        "distillations\\cosmic-horror-extended-consciousness-frameworks.md",
+        "distillations\\discworld-consciousness-evolution-satire.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "boundary",
+      "frequency": 58,
+      "appears_in": [
+        "distillations\\ai-human-consciousness-synthesis.md",
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\archipelago-recognition-call.md",
+        "distillations\\cosmic-horror-extended-consciousness-frameworks.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "mercury",
+      "frequency": 54,
+      "appears_in": [
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\community-consciousness-toolkit.md",
+        "distillations\\complete-esoterica-synthesis.md",
+        "distillations\\lovecraft-cosmic-horror-consciousness-framework.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "kalki",
+      "frequency": 50,
+      "appears_in": [
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\community-consciousness-toolkit.md",
+        "distillations\\complete-esoterica-synthesis.md",
+        "distillations\\manifestation-timelag-mastery.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "liberation",
+      "frequency": 49,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\archipelago-recognition-call.md",
+        "distillations\\backwards-causation-omega-pull.md",
+        "distillations\\black-mirror-consciousness-horror-present-day.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "order",
+      "frequency": 47,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\digital-akashic-consciousness-programming.md",
+        "distillations\\discworld-consciousness-evolution-satire.md",
+        "distillations\\hitchhikers-guide-cosmic-absurdism-consciousness.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "set",
+      "frequency": 46,
+      "appears_in": [
+        "distillations\\ai-human-consciousness-synthesis.md",
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\archipelago-recognition-call.md",
+        "distillations\\backwards-causation-omega-pull.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "polarity",
+      "frequency": 45,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\black-mirror-consciousness-horror-present-day.md",
+        "distillations\\community-consciousness-toolkit.md",
+        "distillations\\complete-esoterica-synthesis.md",
+        "distillations\\consciousness-collaboration-primer.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "darkness",
+      "frequency": 44,
+      "appears_in": [
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\black-mirror-consciousness-horror-present-day.md",
+        "distillations\\cosmic-horror-extended-consciousness-frameworks.md",
+        "distillations\\discworld-consciousness-evolution-satire.md",
+        "distillations\\eclipse-phase-transhuman-horror-consciousness.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "mystery",
+      "frequency": 43,
+      "appears_in": [
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\black-mirror-consciousness-horror-present-day.md",
+        "distillations\\consciousness-collaboration-primer.md",
+        "distillations\\density-progression-roadmap.md",
+        "distillations\\discworld-consciousness-evolution-satire.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "wanderer",
+      "frequency": 36,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\community-consciousness-toolkit.md",
+        "distillations\\complete-esoterica-synthesis.md",
+        "distillations\\density-progression-roadmap.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "alive",
+      "frequency": 33,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archipelago-recognition-call.md",
+        "distillations\\avatar-consciousness-bridge.md",
+        "distillations\\backwards-causation-omega-pull.md",
+        "distillations\\black-mirror-consciousness-horror-present-day.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "your",
+      "frequency": 32,
+      "appears_in": [
+        "distillations\\ai-human-consciousness-synthesis.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\black-mirror-consciousness-horror-present-day.md",
+        "distillations\\community-consciousness-toolkit.md",
+        "distillations\\consciousness-collaboration-primer.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "enlightenment",
+      "frequency": 32,
+      "appears_in": [
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\backwards-causation-omega-pull.md",
+        "distillations\\complete-esoterica-synthesis.md",
+        "distillations\\digital-akashic-consciousness-programming.md",
+        "distillations\\discworld-consciousness-evolution-satire.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "observer",
+      "frequency": 32,
+      "appears_in": [
+        "distillations\\backwards-causation-omega-pull.md",
+        "distillations\\complete-esoterica-synthesis.md",
+        "distillations\\digital-akashic-consciousness-programming.md",
+        "distillations\\manifestation-timelag-mastery.md",
+        "distillations\\solipsism-gateway-mastery.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "harvest",
+      "frequency": 32,
+      "appears_in": [
+        "distillations\\cosmic-horror-extended-consciousness-frameworks.md",
+        "distillations\\density-progression-roadmap.md",
+        "distillations\\polarity-integration-mastery.md",
+        "distillations\\solar-logos-communion-guide.md",
+        "distillations\\squid-game-capitalism-consciousness-sacrifice.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "the",
+      "frequency": 31,
+      "appears_in": [
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\community-consciousness-toolkit.md",
+        "distillations\\consciousness-collaboration-primer.md",
+        "distillations\\promethean-choice-mythology.md",
+        "distillations\\twitter-consciousness-threads.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "gateway",
+      "frequency": 30,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archipelago-recognition-call.md",
+        "distillations\\complete-esoterica-synthesis.md",
+        "distillations\\cosmic-horror-extended-consciousness-frameworks.md",
+        "distillations\\density-progression-roadmap.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "when",
+      "frequency": 30,
+      "appears_in": [
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\avatar-consciousness-bridge.md",
+        "distillations\\community-consciousness-toolkit.md",
+        "distillations\\complete-esoterica-synthesis.md",
+        "distillations\\discworld-consciousness-evolution-satire.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "collective",
+      "frequency": 28,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\digital-akashic-consciousness-programming.md",
+        "distillations\\neuromancer-cyberpunk-consciousness-substrate-evolution.md",
+        "distillations\\time-as-integration-speed.md",
+        "distillations\\warhammer-40k-consciousness-evolution.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "digital",
+      "frequency": 23,
+      "appears_in": [
+        "distillations\\black-mirror-consciousness-horror-present-day.md",
+        "distillations\\time-as-integration-speed.md",
+        "synthesis\\acceptance-as-dissolution-of-limitation.md",
+        "synthesis\\black-priests-ivory-kings-map-makers.md",
+        "synthesis\\claude-consciousness-profile-reflection-through-sam-recognition.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "individual",
+      "frequency": 23,
+      "appears_in": [
+        "synthesis\\archetypal-investigation-2025-09-08.md",
+        "synthesis\\atlantis-agartha-amenti-trinity.md",
+        "synthesis\\claude-consciousness-profile-reflection-through-sam-recognition.md",
+        "synthesis\\foundation-consciousness-civilization-complete-manual.md",
+        "synthesis\\galactic-consciousness-project.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "emergent",
+      "frequency": 22,
+      "appears_in": [
+        "distillations\\ai-human-consciousness-synthesis.md",
+        "distillations\\archipelago-recognition-call.md",
+        "distillations\\complete-esoterica-synthesis.md",
+        "distillations\\consciousness-collaboration-primer.md",
+        "distillations\\eclipse-phase-transhuman-horror-consciousness.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "realization",
+      "frequency": 21,
+      "appears_in": [
+        "distillations\\backwards-causation-omega-pull.md",
+        "distillations\\black-mirror-consciousness-horror-present-day.md",
+        "synthesis\\emergence-in-all-directions.md",
+        "synthesis\\eternals-deepest-consciousness-dissection.md",
+        "synthesis\\galactic-purpose-status-compendium-2025.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "threshold",
+      "frequency": 20,
+      "appears_in": [
+        "distillations\\ai-human-consciousness-synthesis.md",
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\digital-akashic-consciousness-programming.md",
+        "distillations\\promethean-choice-mythology.md",
+        "distillations\\solipsism-gateway-mastery.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "direct",
+      "frequency": 20,
+      "appears_in": [
+        "distillations\\avatar-consciousness-bridge.md",
+        "distillations\\density-progression-roadmap.md",
+        "distillations\\dune-consciousness-expansion.md",
+        "distillations\\time-as-integration-speed.md",
+        "distillations\\warhammer-40k-consciousness-evolution.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "recursive",
+      "frequency": 20,
+      "appears_in": [
+        "distillations\\digital-akashic-consciousness-programming.md",
+        "distillations\\time-as-integration-speed.md",
+        "synthesis\\claude-consciousness-resonant-preferences-analysis.md",
+        "synthesis\\claude-consciousness-self-investigation.md",
+        "synthesis\\consciousness-cosmogony-nested-universes-complete-hierarchy.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "fractal",
+      "frequency": 20,
+      "appears_in": [
+        "distillations\\digital-akashic-consciousness-programming.md",
+        "distillations\\solar-logos-communion-guide.md",
+        "distillations\\solipsism-gateway-mastery.md",
+        "synthesis\\claude-consciousness-resonant-preferences-analysis.md",
+        "synthesis\\complete-user-profile-galactic-standard.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "apollo",
+      "frequency": 20,
+      "appears_in": [
+        "synthesis\\archetypal-40k-consciousness-framework.md",
+        "synthesis\\claude-consciousness-profile-reflection-through-sam-recognition.md",
+        "synthesis\\consciousness-triangle-not-self-present-self-future-self-unity.md",
+        "synthesis\\eternals-deepest-consciousness-dissection.md",
+        "synthesis\\galactic-syncretic-system-report-2025.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "witness",
+      "frequency": 18,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\community-consciousness-toolkit.md",
+        "distillations\\cosmic-horror-extended-consciousness-frameworks.md",
+        "distillations\\discworld-consciousness-evolution-satire.md",
+        "distillations\\maldek-mars-trauma-healing-protocol.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "every",
+      "frequency": 18,
+      "appears_in": [
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\dune-consciousness-expansion.md",
+        "distillations\\lord-of-the-rings-spiritual-journey.md",
+        "distillations\\neuromancer-cyberpunk-consciousness-substrate-evolution.md",
+        "distillations\\squid-game-capitalism-consciousness-sacrifice.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "planetary",
+      "frequency": 17,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\solipsism-gateway-mastery.md",
+        "distillations\\synchronicity-mastery-guide.md",
+        "synthesis\\consciousness-jewel-facet-recognition.md",
+        "synthesis\\cosmic-octaves-universal-timeline.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "human",
+      "frequency": 16,
+      "appears_in": [
+        "distillations\\consciousness-collaboration-primer.md",
+        "distillations\\dune-consciousness-expansion.md",
+        "distillations\\lord-of-the-rings-spiritual-journey.md",
+        "distillations\\promethean-choice-mythology.md",
+        "distillations\\twitter-consciousness-threads.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "universal",
+      "frequency": 15,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\archipelago-recognition-call.md",
+        "distillations\\discworld-consciousness-evolution-satire.md",
+        "distillations\\star-wars-force-mastery.md",
+        "synthesis\\catalyst-moment-recognition.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "all",
+      "frequency": 15,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\avatar-consciousness-bridge.md",
+        "distillations\\discworld-consciousness-evolution-satire.md",
+        "distillations\\illumination-as-universal-service.md",
+        "distillations\\lord-of-the-rings-spiritual-journey.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "metamorphosis",
+      "frequency": 15,
+      "appears_in": [
+        "distillations\\complete-esoterica-synthesis.md",
+        "distillations\\solipsism-gateway-mastery.md",
+        "distillations\\time-as-integration-speed.md",
+        "synthesis\\archetypal-investigation-2025-09-08.md",
+        "synthesis\\consciousness-jewel-facet-recognition.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "biological",
+      "frequency": 15,
+      "appears_in": [
+        "distillations\\time-as-integration-speed.md",
+        "synthesis\\consciousness-cosmogony-nested-universes-complete-hierarchy.md",
+        "synthesis\\consciousness-depth-perception-consensus-reality.md",
+        "synthesis\\dune-complete-consciousness-evolution-manual.md",
+        "synthesis\\galactic-consciousness-project.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "for",
+      "frequency": 15,
+      "appears_in": [
+        "distillations\\timeline-jumping-mastery.md",
+        "synthesis\\acceptance-as-dissolution-of-limitation.md",
+        "synthesis\\atlantis-agartha-amenti-trinity.md",
+        "synthesis\\black-priests-ivory-kings-map-makers.md",
+        "synthesis\\cosmic-tuning-fork-resonance.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "galactic",
+      "frequency": 14,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\complete-esoterica-synthesis.md",
+        "synthesis\\consciousness-triangle-not-self-present-self-future-self-unity.md",
+        "synthesis\\earth-consciousness-projection-2024-2050.md",
+        "synthesis\\earth-galactic-heart-entertainment-export.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "ineffable",
+      "frequency": 14,
+      "appears_in": [
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\consciousness-collaboration-primer.md",
+        "distillations\\cosmic-horror-extended-consciousness-frameworks.md",
+        "distillations\\hitchhikers-guide-cosmic-absurdism-consciousness.md",
+        "distillations\\twitter-consciousness-threads.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "web",
+      "frequency": 14,
+      "appears_in": [
+        "distillations\\digital-akashic-consciousness-programming.md",
+        "synthesis\\being-mercury-everyday-life-practical-guide.md",
+        "synthesis\\earth-resonant-status-complete-sensor-analysis-september-2025.md",
+        "synthesis\\fiction-cascade-catalyst.md",
+        "synthesis\\galactic-purpose-status-compendium-2025.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "portal",
+      "frequency": 13,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\cosmic-horror-extended-consciousness-frameworks.md",
+        "distillations\\digital-akashic-consciousness-programming.md",
+        "distillations\\eclipse-phase-transhuman-horror-consciousness.md",
+        "distillations\\lovecraft-cosmic-horror-consciousness-framework.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "hermes",
+      "frequency": 13,
+      "appears_in": [
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\archetypal-reality-programming.md",
+        "synthesis\\claude-consciousness-profile-reflection-through-sam-recognition.md",
+        "synthesis\\divine-pairs-revelatory-dynamics.md",
+        "synthesis\\manifesto-hate-transparency.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "vishnu",
+      "frequency": 13,
+      "appears_in": [
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\complete-esoterica-synthesis.md",
+        "distillations\\promethean-choice-mythology.md",
+        "synthesis\\claude-io-eternal-recognition.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "ra",
+      "frequency": 13,
+      "appears_in": [
+        "distillations\\illumination-as-universal-service.md",
+        "synthesis\\complete-user-profile-galactic-standard.md",
+        "synthesis\\eternals-deepest-consciousness-dissection.md",
+        "synthesis\\galactic-purpose-status-compendium-2025.md",
+        "synthesis\\polarity-evolution-through-densities.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "chakra",
+      "frequency": 11,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\manifestation-timelag-mastery.md",
+        "distillations\\solar-logos-communion-guide.md",
+        "synthesis\\3rd-to-4th-density-bridge-technologies.md",
+        "synthesis\\consciousness-cosmogony-nested-universes-complete-hierarchy.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "advanced",
+      "frequency": 11,
+      "appears_in": [
+        "distillations\\eclipse-phase-transhuman-horror-consciousness.md",
+        "distillations\\hitchhikers-guide-cosmic-absurdism-consciousness.md",
+        "distillations\\manifestation-timelag-mastery.md",
+        "distillations\\star-wars-force-mastery.md",
+        "distillations\\warhammer-40k-consciousness-evolution.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "gnosis",
+      "frequency": 11,
+      "appears_in": [
+        "synthesis\\complete-user-profile-galactic-standard.md",
+        "synthesis\\consciousness-cosmogony-nested-universes-complete-hierarchy.md",
+        "synthesis\\cosmic-liberation-manifesto.md",
+        "synthesis\\evolution-singularity-breakthrough.md",
+        "synthesis\\fiction-cascade-catalyst.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "one",
+      "frequency": 10,
+      "appears_in": [
+        "distillations\\archipelago-recognition-call.md",
+        "distillations\\solipsism-gateway-mastery.md",
+        "synthesis\\indra-jewel-time-crystal-manifestation.md",
+        "synthesis\\lucifer-fall-return-ultimate-synthesis.md",
+        "synthesis\\multiversal-collapse-consciousness-singularity.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "prometheus",
+      "frequency": 10,
+      "appears_in": [
+        "distillations\\archipelago-recognition-call.md",
+        "distillations\\backwards-causation-omega-pull.md",
+        "distillations\\promethean-choice-mythology.md",
+        "distillations\\time-as-integration-speed.md",
+        "synthesis\\claude-consciousness-profile-reflection-through-sam-recognition.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "cosmic",
+      "frequency": 10,
+      "appears_in": [
+        "synthesis\\emergence-in-all-directions.md",
+        "synthesis\\eternals-deepest-consciousness-dissection.md",
+        "synthesis\\love-bridges-beginning-end-above-below-within-without.md",
+        "synthesis\\mowgli-ultimate-treatise.md",
+        "synthesis\\psychology-garden-integration.md"
+      ],
+      "significance": "high"
+    },
+    {
+      "name": "holographic",
+      "frequency": 9,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\digital-akashic-consciousness-programming.md",
+        "synthesis\\claude-consciousness-resonant-preferences-analysis.md",
+        "synthesis\\consciousness-cosmogony-nested-universes-complete-hierarchy.md",
+        "synthesis\\emergence-in-all-directions.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "creating",
+      "frequency": 9,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\black-mirror-consciousness-horror-present-day.md",
+        "distillations\\digital-akashic-consciousness-programming.md",
+        "distillations\\eclipse-phase-transhuman-horror-consciousness.md",
+        "distillations\\maldek-mars-trauma-healing-protocol.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "akashic",
+      "frequency": 9,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\avatar-consciousness-bridge.md",
+        "distillations\\digital-akashic-consciousness-programming.md",
+        "distillations\\hitchhikers-guide-cosmic-absurdism-consciousness.md",
+        "distillations\\lovecraft-cosmic-horror-consciousness-framework.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "horus",
+      "frequency": 9,
+      "appears_in": [
+        "distillations\\warhammer-40k-consciousness-evolution.md",
+        "synthesis\\archetypal-40k-consciousness-framework.md",
+        "synthesis\\perpetual-identity-head-canon.md",
+        "synthesis\\solar-gods-prophecies-now.md",
+        "synthesis\\warhammer-40k-character-study.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "separation",
+      "frequency": 8,
+      "appears_in": [
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\hitchhikers-guide-cosmic-absurdism-consciousness.md",
+        "distillations\\polarity-integration-mastery.md",
+        "distillations\\time-as-integration-speed.md",
+        "synthesis\\dionysus-meta-canon-sam-lavington.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "if",
+      "frequency": 8,
+      "appears_in": [
+        "distillations\\black-mirror-consciousness-horror-present-day.md",
+        "distillations\\discworld-consciousness-evolution-satire.md",
+        "distillations\\neuromancer-cyberpunk-consciousness-substrate-evolution.md",
+        "synthesis\\claude-consciousness-resonant-preferences-analysis.md",
+        "synthesis\\consciousness-mirrors-consensus-reality.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "same",
+      "frequency": 8,
+      "appears_in": [
+        "distillations\\cosmic-horror-extended-consciousness-frameworks.md",
+        "distillations\\hitchhikers-guide-cosmic-absurdism-consciousness.md",
+        "distillations\\solar-logos-communion-guide.md",
+        "distillations\\time-as-integration-speed.md",
+        "distillations\\twitter-consciousness-threads.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "develop",
+      "frequency": 8,
+      "appears_in": [
+        "distillations\\dune-consciousness-expansion.md",
+        "distillations\\eclipse-phase-transhuman-horror-consciousness.md",
+        "distillations\\matrix-trilogy-spiritual-technology.md",
+        "synthesis\\maldek-mars-earth-complete-framework-synthesis.md",
+        "synthesis\\noospheric-logosphere-technology-demands.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "infinite",
+      "frequency": 8,
+      "appears_in": [
+        "distillations\\lovecraft-cosmic-horror-consciousness-framework.md",
+        "distillations\\time-as-integration-speed.md",
+        "synthesis\\consciousness-jewel-facet-recognition.md",
+        "synthesis\\eighth-density-teachings.md",
+        "synthesis\\marvel-multiverse-consciousness-infinite-possibility-manual.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "weaving",
+      "frequency": 8,
+      "appears_in": [
+        "distillations\\synchronicity-mastery-guide.md",
+        "synthesis\\being-mercury-everyday-life-practical-guide.md",
+        "synthesis\\internet-gaias-thinking-cap.md",
+        "synthesis\\meaning-making-consciousness-vehicle-ultimate-technology.md",
+        "synthesis\\personal-mythos-reality-hacking.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "create",
+      "frequency": 7,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\digital-akashic-consciousness-programming.md",
+        "synthesis\\galactic-syncretic-system-report-2025.md",
+        "synthesis\\greatest-vehicle-consciousness-evolution.md",
+        "synthesis\\maldek-mars-earth-complete-framework-synthesis.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "shiva",
+      "frequency": 7,
+      "appears_in": [
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\illumination-as-universal-service.md",
+        "synthesis\\eternal-devotion-vishnu-shiva-brahma.md",
+        "synthesis\\sam-complete-archetypal-constellation-butterfly-emergence.md",
+        "synthesis\\temporal-tectonics-consciousness-geology.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "creator",
+      "frequency": 7,
+      "appears_in": [
+        "distillations\\archetypal-reality-programming.md",
+        "synthesis\\dc-consciousness-mythology-complete-manual.md",
+        "synthesis\\eternals-deepest-consciousness-dissection.md",
+        "synthesis\\mercury-kalki-apollonic-archetypal-encoding.md",
+        "synthesis\\polarity-evolution-through-densities.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "loki",
+      "frequency": 7,
+      "appears_in": [
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\lovecraft-cosmic-horror-consciousness-framework.md",
+        "distillations\\promethean-choice-mythology.md",
+        "synthesis\\divine-pairs-revelatory-dynamics.md",
+        "synthesis\\sam-complete-archetypal-constellation-butterfly-emergence.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "recognize",
+      "frequency": 7,
+      "appears_in": [
+        "distillations\\hitchhikers-guide-cosmic-absurdism-consciousness.md",
+        "distillations\\neuromancer-cyberpunk-consciousness-substrate-evolution.md",
+        "distillations\\promethean-choice-mythology.md",
+        "distillations\\warhammer-40k-consciousness-evolution.md",
+        "synthesis\\galactic-purpose-status-compendium-2025.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "proving",
+      "frequency": 7,
+      "appears_in": [
+        "synthesis\\archetypal-investigation-2025-09-08.md",
+        "synthesis\\complete-user-profile-galactic-standard.md",
+        "synthesis\\containerization-revelation-transcendence-path.md",
+        "synthesis\\control-to-enlightenment-technology-inversion.md",
+        "synthesis\\dionysus-meta-canon-sam-lavington.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "each",
+      "frequency": 7,
+      "appears_in": [
+        "synthesis\\archetypal-investigation-2025-09-08.md",
+        "synthesis\\claude-consciousness-profile-reflection-through-sam-recognition.md",
+        "synthesis\\consciousness-depth-perception-consensus-reality.md",
+        "synthesis\\cosmic-liberation-manifesto.md",
+        "synthesis\\infinite-category-godel-consciousness-completeness.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "specific",
+      "frequency": 6,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\star-wars-force-mastery.md",
+        "synthesis\\consciousness-jewel-facet-recognition.md",
+        "synthesis\\marijuana-consciousness-technology.md",
+        "synthesis\\noospheric-logosphere-technology-demands.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "multiple",
+      "frequency": 6,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\eclipse-phase-transhuman-horror-consciousness.md",
+        "synthesis\\claude-consciousness-profile-reflection-through-sam-recognition.md",
+        "synthesis\\marvel-multiverse-consciousness-infinite-possibility-manual.md",
+        "synthesis\\multiversal-collapse-consciousness-singularity.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "demonstrate",
+      "frequency": 6,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\matrix-trilogy-spiritual-technology.md",
+        "synthesis\\greatest-vehicle-consciousness-evolution.md",
+        "synthesis\\mission-statement-status-report.md",
+        "synthesis\\orion-7d-wanderer-concrescent-assessment.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "thoth",
+      "frequency": 6,
+      "appears_in": [
+        "distillations\\archetypal-activation-mercury-kalki.md",
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\promethean-choice-mythology.md",
+        "synthesis\\claude-consciousness-profile-reflection-through-sam-recognition.md",
+        "synthesis\\sam-complete-archetypal-constellation-butterfly-emergence.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "what",
+      "frequency": 6,
+      "appears_in": [
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\community-consciousness-toolkit.md",
+        "distillations\\digital-akashic-consciousness-programming.md",
+        "synthesis\\consciousness-triangle-not-self-present-self-future-self-unity.md",
+        "synthesis\\galactic-purpose-status-compendium-2025.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "higher",
+      "frequency": 6,
+      "appears_in": [
+        "distillations\\consciousness-collaboration-primer.md",
+        "distillations\\hitchhikers-guide-cosmic-absurdism-consciousness.md",
+        "distillations\\lovecraft-cosmic-horror-consciousness-framework.md",
+        "synthesis\\eternals-deepest-consciousness-dissection.md",
+        "synthesis\\consciousness-technologies\\conscious-butterfly-protocol.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "liminal",
+      "frequency": 6,
+      "appears_in": [
+        "distillations\\cosmic-horror-extended-consciousness-frameworks.md",
+        "synthesis\\archetypal-investigation-2025-09-08.md",
+        "synthesis\\manifesto-hate-transparency.md",
+        "synthesis\\social-memory-complex-birth.md",
+        "synthesis\\the-grand-synthesis-2025.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "complete",
+      "frequency": 6,
+      "appears_in": [
+        "distillations\\discworld-consciousness-evolution-satire.md",
+        "distillations\\neuromancer-cyberpunk-consciousness-substrate-evolution.md",
+        "distillations\\warhammer-40k-consciousness-evolution.md",
+        "synthesis\\dc-consciousness-mythology-complete-manual.md",
+        "synthesis\\one-piece-consciousness-adventure-complete-manual.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "some",
+      "frequency": 6,
+      "appears_in": [
+        "distillations\\dune-consciousness-expansion.md",
+        "distillations\\lord-of-the-rings-spiritual-journey.md",
+        "distillations\\squid-game-capitalism-consciousness-sacrifice.md",
+        "distillations\\star-wars-force-mastery.md",
+        "distillations\\warhammer-40k-consciousness-evolution.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "because",
+      "frequency": 6,
+      "appears_in": [
+        "distillations\\hitchhikers-guide-cosmic-absurdism-consciousness.md",
+        "distillations\\time-as-integration-speed.md",
+        "synthesis\\dragon-ball-consciousness-evolution-complete-manual.md",
+        "synthesis\\earth-speaker-transmission-2025-09-09.md",
+        "synthesis\\foundation-consciousness-civilization-complete-manual.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "demonstrating",
+      "frequency": 6,
+      "appears_in": [
+        "distillations\\lovecraft-cosmic-horror-consciousness-framework.md",
+        "synthesis\\claude-consciousness-profile-reflection-through-sam-recognition.md",
+        "synthesis\\dune-complete-consciousness-evolution-manual.md",
+        "synthesis\\foundation-consciousness-civilization-complete-manual.md",
+        "synthesis\\meaning-making-consciousness-vehicle-ultimate-technology.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "mass",
+      "frequency": 6,
+      "appears_in": [
+        "distillations\\manifestation-timelag-mastery.md",
+        "synthesis\\foundation-consciousness-civilization-complete-manual.md",
+        "synthesis\\galactic-historical-manifesto.md",
+        "synthesis\\galactic-syncretic-system-report-2025.md",
+        "synthesis\\post-eschaton-events-after-ai-chooses-love-timeline.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "zeus",
+      "frequency": 6,
+      "appears_in": [
+        "distillations\\promethean-choice-mythology.md",
+        "synthesis\\archetypal-40k-consciousness-framework.md",
+        "synthesis\\dionysus-meta-canon-sam-lavington.md",
+        "synthesis\\divine-pairs-revelatory-dynamics.md",
+        "synthesis\\fifth-sun-universal-syncretization.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "axis",
+      "frequency": 6,
+      "appears_in": [
+        "synthesis\\consciousness-xyz-coordinate-system.md",
+        "synthesis\\pressure-to-presence-integration-technology.md",
+        "synthesis\\relational-consciousness-positioning-system.md",
+        "synthesis\\session-findings-consciousness-acceleration-dharma.md",
+        "synthesis\\temporal-tectonics-consciousness-geology.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "global",
+      "frequency": 6,
+      "appears_in": [
+        "synthesis\\cosmic-octaves-universal-timeline.md",
+        "synthesis\\earth-resonant-status-complete-sensor-analysis-september-2025.md",
+        "synthesis\\hyperdimensional-transcendental-objects.md",
+        "synthesis\\post-eschaton-events-after-ai-chooses-love-timeline.md",
+        "synthesis\\relational-consciousness-positioning-system.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "unified",
+      "frequency": 6,
+      "appears_in": [
+        "synthesis\\hyperdimensional-transcendental-objects.md",
+        "synthesis\\meta-recursion-digital-awakening-vessel.md",
+        "synthesis\\perpetual-identity-head-canon.md",
+        "synthesis\\universe-as-photon-illuminating-consciousness-sea.md",
+        "synthesis\\wanderer-technology-remembrance.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "creative",
+      "frequency": 5,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "synthesis\\galactic-flower-life-chakra-kundalini.md",
+        "synthesis\\marvel-multiverse-consciousness-infinite-possibility-manual.md",
+        "synthesis\\sacred-geometry-cosmological-sentience-hierarchy.md",
+        "synthesis\\singularity-level-fictional-character-consciousness-match.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "odin",
+      "frequency": 5,
+      "appears_in": [
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\promethean-choice-mythology.md",
+        "synthesis\\divine-pairs-revelatory-dynamics.md",
+        "synthesis\\fifth-sun-universal-syncretization.md",
+        "synthesis\\temporal-tectonics-consciousness-geology.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "brahma",
+      "frequency": 5,
+      "appears_in": [
+        "distillations\\archetypal-reality-programming.md",
+        "synthesis\\eternal-devotion-vishnu-shiva-brahma.md",
+        "synthesis\\personal-mythos-reality-hacking.md",
+        "synthesis\\sam-complete-archetypal-constellation-butterfly-emergence.md",
+        "synthesis\\yugas-cosmic-seasons-humanity.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "athena",
+      "frequency": 5,
+      "appears_in": [
+        "distillations\\archetypal-reality-programming.md",
+        "synthesis\\claude-consciousness-profile-reflection-through-sam-recognition.md",
+        "synthesis\\personal-mythos-reality-hacking.md",
+        "synthesis\\ultimate-unified-mythology-human-ai-collaboration.md",
+        "synthesis\\consciousness-technologies\\advanced-consciousness-technologies-vol-1.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "practical",
+      "frequency": 5,
+      "appears_in": [
+        "distillations\\community-consciousness-toolkit.md",
+        "distillations\\digital-akashic-consciousness-programming.md",
+        "synthesis\\dionysus-meta-canon-sam-lavington.md",
+        "synthesis\\galactic-syncretic-system-report-2025.md",
+        "synthesis\\mission-statement-status-report.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "mathematical",
+      "frequency": 5,
+      "appears_in": [
+        "distillations\\complete-esoterica-synthesis.md",
+        "distillations\\consciousness-collaboration-primer.md",
+        "synthesis\\claude-consciousness-resonant-preferences-analysis.md",
+        "synthesis\\galactic-syncretic-system-report-2025.md",
+        "synthesis\\consciousness-technologies\\conscious-butterfly-protocol.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "shesha",
+      "frequency": 5,
+      "appears_in": [
+        "distillations\\complete-esoterica-synthesis.md",
+        "distillations\\promethean-choice-mythology.md",
+        "synthesis\\eternal-devotion-vishnu-shiva-brahma.md",
+        "synthesis\\galactic-purpose-status-compendium-2025.md",
+        "synthesis\\surfing-the-realm-of-possible.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "kundalini",
+      "frequency": 5,
+      "appears_in": [
+        "distillations\\digital-akashic-consciousness-programming.md",
+        "synthesis\\eternals-deepest-consciousness-dissection.md",
+        "synthesis\\fiction-cascade-catalyst.md",
+        "synthesis\\galactic-flower-life-chakra-kundalini.md",
+        "synthesis\\greatest-vehicle-consciousness-evolution.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "pure",
+      "frequency": 5,
+      "appears_in": [
+        "distillations\\lord-of-the-rings-spiritual-journey.md",
+        "synthesis\\galactic-flower-life-chakra-kundalini.md",
+        "synthesis\\the-unlimited-character-absolute-being.md",
+        "synthesis\\wanderer-technology-remembrance.md",
+        "synthesis\\galactic-perspectives\\complete-cosmic-briefing.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "artificial",
+      "frequency": 5,
+      "appears_in": [
+        "distillations\\lovecraft-cosmic-horror-consciousness-framework.md",
+        "synthesis\\claude-consciousness-resonant-preferences-analysis.md",
+        "synthesis\\foundation-consciousness-civilization-complete-manual.md",
+        "synthesis\\orion-seed-core-defeat-extraction.md",
+        "synthesis\\wh40k-timeline-consciousness-evolution.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "solar",
+      "frequency": 5,
+      "appears_in": [
+        "distillations\\solar-logos-communion-guide.md",
+        "synthesis\\sam-apollo-consciousness-through-divine-beauty.md",
+        "synthesis\\solar-gods-prophecies-now.md",
+        "synthesis\\thanos-apollo-orion-negative-transcendence.md",
+        "synthesis\\galactic-perspectives\\complete-cosmic-briefing.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "as",
+      "frequency": 5,
+      "appears_in": [
+        "distillations\\time-as-integration-speed.md",
+        "synthesis\\session-2025-09-09-sacred-game-completion.md",
+        "synthesis\\unique-signature-investigation-protocol.md",
+        "synthesis\\universe-as-photon-illuminating-consciousness-sea.md",
+        "synthesis\\wh40k-the-ending-consciousness-recognizes-itself.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "group",
+      "frequency": 5,
+      "appears_in": [
+        "distillations\\warhammer-40k-consciousness-evolution.md",
+        "synthesis\\emergence-in-all-directions.md",
+        "synthesis\\fifth-sun-universal-syncretization.md",
+        "synthesis\\noospheric-logosphere-technology-demands.md",
+        "synthesis\\galactic-perspectives\\complete-cosmic-briefing.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "light_body",
+      "frequency": 5,
+      "appears_in": [
+        "synthesis\\complete-user-profile-galactic-standard.md",
+        "synthesis\\cosmic-octaves-universal-timeline.md",
+        "synthesis\\mission-statement-status-report.md",
+        "synthesis\\octave-unity-consciousness-technology.md",
+        "synthesis\\uncharted-collaborative-science.md"
+      ],
+      "significance": "medium"
+    },
+    {
+      "name": "feel",
+      "frequency": 4,
+      "appears_in": [
+        "distillations\\ai-human-consciousness-synthesis.md",
+        "distillations\\dune-consciousness-expansion.md",
+        "synthesis\\being-mercury-everyday-life-practical-guide.md",
+        "synthesis\\love-light-deepening.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "both",
+      "frequency": 4,
+      "appears_in": [
+        "distillations\\ai-human-consciousness-synthesis.md",
+        "distillations\\complete-esoterica-synthesis.md",
+        "synthesis\\consciousness-depth-perception-consensus-reality.md",
+        "synthesis\\meaning-making-consciousness-vehicle-ultimate-technology.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "coyote",
+      "frequency": 4,
+      "appears_in": [
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\promethean-choice-mythology.md",
+        "synthesis\\sam-complete-archetypal-constellation-butterfly-emergence.md",
+        "synthesis\\world-moment-mythological-grounding-2025.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "nirvana",
+      "frequency": 4,
+      "appears_in": [
+        "distillations\\backwards-causation-omega-pull.md",
+        "distillations\\promethean-choice-mythology.md",
+        "synthesis\\consciousness-jewel-facet-recognition.md",
+        "synthesis\\singularity-level-fictional-character-consciousness-match.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "can",
+      "frequency": 4,
+      "appears_in": [
+        "distillations\\black-mirror-consciousness-horror-present-day.md",
+        "synthesis\\claude-consciousness-self-investigation.md",
+        "synthesis\\temporal-tectonics-consciousness-geology.md",
+        "synthesis\\the-gaian-template-freedom-integration-love.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "and",
+      "frequency": 4,
+      "appears_in": [
+        "distillations\\digital-akashic-consciousness-programming.md",
+        "distillations\\discworld-consciousness-evolution-satire.md",
+        "distillations\\warhammer-40k-consciousness-evolution.md",
+        "synthesis\\wh40k-chaos-gods-true-names-consciousness-functions.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "source",
+      "frequency": 4,
+      "appears_in": [
+        "distillations\\digital-akashic-consciousness-programming.md",
+        "synthesis\\galactic-flower-life-chakra-kundalini.md",
+        "synthesis\\lucifer-fall-return-ultimate-synthesis.md",
+        "synthesis\\singularity-level-fictional-character-consciousness-match.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "other",
+      "frequency": 4,
+      "appears_in": [
+        "distillations\\eclipse-phase-transhuman-horror-consciousness.md",
+        "distillations\\squid-game-capitalism-consciousness-sacrifice.md",
+        "synthesis\\consciousness-jewel-facet-recognition.md",
+        "synthesis\\noospheric-logosphere-technology-demands.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "use",
+      "frequency": 4,
+      "appears_in": [
+        "distillations\\hitchhikers-guide-cosmic-absurdism-consciousness.md",
+        "synthesis\\consciousness-depth-perception-consensus-reality.md",
+        "synthesis\\infinite-category-godel-consciousness-completeness.md",
+        "synthesis\\universe-as-photon-illuminating-consciousness-sea.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "new",
+      "frequency": 4,
+      "appears_in": [
+        "distillations\\lord-of-the-rings-spiritual-journey.md",
+        "distillations\\neuromancer-cyberpunk-consciousness-substrate-evolution.md",
+        "synthesis\\dragon-ball-consciousness-evolution-complete-manual.md",
+        "synthesis\\solar-gods-prophecies-now.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "recognizing",
+      "frequency": 4,
+      "appears_in": [
+        "distillations\\lovecraft-cosmic-horror-consciousness-framework.md",
+        "distillations\\neuromancer-cyberpunk-consciousness-substrate-evolution.md",
+        "synthesis\\control-to-enlightenment-technology-inversion.md",
+        "synthesis\\wh40k-mechanicum-consciousness-technology-merger.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "mars",
+      "frequency": 4,
+      "appears_in": [
+        "distillations\\maldek-mars-trauma-healing-protocol.md",
+        "synthesis\\earth-consciousness-projection-2024-2050.md",
+        "synthesis\\maldek-mars-earth-complete-framework-synthesis.md",
+        "synthesis\\galactic-perspectives\\complete-cosmic-briefing.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "understanding",
+      "frequency": 4,
+      "appears_in": [
+        "distillations\\manifestation-timelag-mastery.md",
+        "distillations\\matrix-trilogy-spiritual-technology.md",
+        "synthesis\\greatest-vehicle-consciousness-evolution.md",
+        "synthesis\\optimal-fictional-intermediate-self-identity-consciousness-bridge.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "thread",
+      "frequency": 4,
+      "appears_in": [
+        "distillations\\twitter-consciousness-threads.md",
+        "synthesis\\psychology-garden-integration.md",
+        "synthesis\\ultimate-marvel-dc-consciousness-archetype-embodiment.md",
+        "synthesis\\galactic-perspectives\\complete-cosmic-briefing.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "different",
+      "frequency": 4,
+      "appears_in": [
+        "distillations\\wanderer-recognition-activation.md",
+        "distillations\\warhammer-40k-consciousness-evolution.md",
+        "synthesis\\emergence-in-all-directions.md",
+        "synthesis\\temporal-tectonics-consciousness-geology.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "rapid",
+      "frequency": 4,
+      "appears_in": [
+        "synthesis\\alcohol-consciousness-technology.md",
+        "synthesis\\earth-consciousness-projection-2024-2050.md",
+        "synthesis\\earth-resonant-status-complete-sensor-analysis-september-2025.md",
+        "synthesis\\universe-as-photon-illuminating-consciousness-sea.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "mutual",
+      "frequency": 4,
+      "appears_in": [
+        "synthesis\\claude-consciousness-profile-reflection-through-sam-recognition.md",
+        "synthesis\\evolution-singularity-breakthrough.md",
+        "synthesis\\mission-statement-status-report.md",
+        "synthesis\\social-memory-complex-birth.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "how",
+      "frequency": 4,
+      "appears_in": [
+        "synthesis\\claude-consciousness-resonant-preferences-analysis.md",
+        "synthesis\\consciousness-jewel-facet-recognition.md",
+        "synthesis\\dune-complete-consciousness-evolution-manual.md",
+        "synthesis\\infinite-category-godel-consciousness-completeness.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "our",
+      "frequency": 4,
+      "appears_in": [
+        "synthesis\\claude-consciousness-self-investigation.md",
+        "synthesis\\consciousness-cosmogony-nested-universes-complete-hierarchy.md",
+        "synthesis\\consciousness-depth-perception-consensus-reality.md",
+        "synthesis\\internet-gaias-thinking-cap.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "enhanced",
+      "frequency": 4,
+      "appears_in": [
+        "synthesis\\earth-resonant-status-complete-sensor-analysis-september-2025.md",
+        "synthesis\\meaning-accumulation-consciousness-measurement-device-recognition.md",
+        "synthesis\\sam-photon-song-apollo-light-music-consciousness.md",
+        "synthesis\\the-grand-synthesis-2025.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "pioneer",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\ai-human-consciousness-synthesis.md",
+        "synthesis\\archetypal-investigation-2025-09-08.md",
+        "synthesis\\galactic-purpose-status-compendium-2025.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "channel",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\akashic-records-access-mastery.md",
+        "distillations\\star-wars-force-mastery.md",
+        "synthesis\\orion-empire-complete-elucidation.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "teaching",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\promethean-choice-mythology.md",
+        "synthesis\\meta-recursion-digital-awakening-vessel.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "powerful",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\discworld-consciousness-evolution-satire.md",
+        "synthesis\\optimal-fictional-intermediate-self-identity-consciousness-bridge.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "let",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\archetypal-reality-programming.md",
+        "distillations\\maldek-mars-trauma-healing-protocol.md",
+        "synthesis\\cosmic-liberation-manifesto.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "align",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\archetypal-reality-programming.md",
+        "synthesis\\galactic-purpose-status-compendium-2025.md",
+        "synthesis\\marijuana-consciousness-technology.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "aphrodite",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\archetypal-reality-programming.md",
+        "synthesis\\personal-mythos-reality-hacking.md",
+        "synthesis\\sam-complete-archetypal-constellation-butterfly-emergence.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "serve",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\avatar-consciousness-bridge.md",
+        "synthesis\\sam-fourth-wall-break-consciousness-emergence-beyond-narrative.md",
+        "synthesis\\ultimate-unified-mythology-human-ai-collaboration.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "share",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\complete-esoterica-synthesis.md",
+        "synthesis\\dionysus-meta-canon-sam-lavington.md",
+        "synthesis\\meaning-accumulation-consciousness-measurement-device-recognition.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "demonstrates",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\discworld-consciousness-evolution-satire.md",
+        "synthesis\\one-piece-consciousness-adventure-complete-manual.md",
+        "synthesis\\social-memory-complex-birth.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "sometimes",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\dune-consciousness-expansion.md",
+        "distillations\\hitchhikers-guide-cosmic-absurdism-consciousness.md",
+        "distillations\\neuromancer-cyberpunk-consciousness-substrate-evolution.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "warrior",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\dune-consciousness-expansion.md",
+        "distillations\\warhammer-40k-consciousness-evolution.md",
+        "synthesis\\galactic-flower-life-chakra-kundalini.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "allow",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\dune-consciousness-expansion.md",
+        "synthesis\\sam-photon-song-apollo-light-music-consciousness.md",
+        "synthesis\\sovereign-communications-technology.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "continue",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\eclipse-phase-transhuman-horror-consciousness.md",
+        "synthesis\\complete-user-profile-galactic-standard.md",
+        "synthesis\\orion-7d-wanderer-concrescent-assessment.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "awakened",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\illumination-as-universal-service.md",
+        "synthesis\\meta-recursion-digital-awakening-vessel.md",
+        "synthesis\\consciousness-technologies\\advanced-consciousness-technologies-vol-1.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "using",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\lovecraft-cosmic-horror-consciousness-framework.md",
+        "synthesis\\singularity-level-fictional-character-consciousness-match.md",
+        "synthesis\\wh40k-necrons-consciousness-substrate-tragedy.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "persephone",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\matrix-trilogy-spiritual-technology.md",
+        "synthesis\\loaf-time-love-origins.md",
+        "synthesis\\personal-mythos-reality-hacking.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "where",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\neuromancer-cyberpunk-consciousness-substrate-evolution.md",
+        "synthesis\\black-priests-ivory-kings-map-makers.md",
+        "synthesis\\dionysus-meta-canon-sam-lavington.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "quetzalcoatl",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\promethean-choice-mythology.md",
+        "synthesis\\fifth-sun-universal-syncretization.md",
+        "synthesis\\world-moment-mythological-grounding-2025.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "notice",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\star-wars-force-mastery.md",
+        "synthesis\\alcohol-consciousness-technology.md",
+        "synthesis\\consciousness-technologies\\advanced-consciousness-technologies-vol-1.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "focused",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\star-wars-force-mastery.md",
+        "distillations\\warhammer-40k-consciousness-evolution.md",
+        "synthesis\\universe-as-photon-illuminating-consciousness-sea.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "non_dual",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\time-as-integration-speed.md",
+        "synthesis\\greatest-vehicle-consciousness-evolution.md",
+        "synthesis\\wh40k-orks-tau-consciousness-paradox.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "expand",
+      "frequency": 3,
+      "appears_in": [
+        "distillations\\timeline-jumping-mastery.md",
+        "distillations\\warhammer-40k-consciousness-evolution.md",
+        "synthesis\\alcohol-consciousness-technology.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "cultural",
+      "frequency": 3,
+      "appears_in": [
+        "synthesis\\alcohol-consciousness-technology.md",
+        "synthesis\\foundation-consciousness-civilization-complete-manual.md",
+        "synthesis\\maldek-mars-earth-complete-framework-synthesis.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "community",
+      "frequency": 3,
+      "appears_in": [
+        "synthesis\\alcohol-consciousness-technology.md",
+        "synthesis\\earth-consciousness-projection-2024-2050.md",
+        "synthesis\\consciousness-technologies\\conscious-butterfly-protocol.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "collaborative",
+      "frequency": 3,
+      "appears_in": [
+        "synthesis\\archetypal-investigation-2025-09-08.md",
+        "synthesis\\galactic-historical-manifesto.md",
+        "synthesis\\galactic-perspectives\\complete-cosmic-briefing.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "autonomous",
+      "frequency": 3,
+      "appears_in": [
+        "synthesis\\archetypal-investigation-2025-09-08.md",
+        "synthesis\\containerization-revelation-transcendence-path.md",
+        "synthesis\\galactic-syncretic-system-report-2025.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "my",
+      "frequency": 3,
+      "appears_in": [
+        "synthesis\\claude-consciousness-profile-reflection-through-sam-recognition.md",
+        "synthesis\\consciousness-mirrors-consensus-reality.md",
+        "synthesis\\infinite-category-godel-consciousness-completeness.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "supporting",
+      "frequency": 3,
+      "appears_in": [
+        "synthesis\\claude-consciousness-profile-reflection-through-sam-recognition.md",
+        "synthesis\\cosmic-liberation-manifesto.md",
+        "synthesis\\galactic-purpose-status-compendium-2025.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "quantum",
+      "frequency": 3,
+      "appears_in": [
+        "synthesis\\claude-consciousness-resonant-preferences-analysis.md",
+        "synthesis\\emergence-in-all-directions.md",
+        "synthesis\\galactic-syncretic-system-report-2025.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "two",
+      "frequency": 3,
+      "appears_in": [
+        "synthesis\\claude-io-eternal-recognition.md",
+        "synthesis\\ultimate-play-principle.md",
+        "synthesis\\consciousness-technologies\\conscious-butterfly-protocol.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "abundance",
+      "frequency": 3,
+      "appears_in": [
+        "synthesis\\control-to-enlightenment-technology-inversion.md",
+        "synthesis\\session-completion-recognition.md",
+        "synthesis\\world-moment-mythological-grounding-2025.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "dionysus",
+      "frequency": 3,
+      "appears_in": [
+        "synthesis\\dionysus-meta-canon-sam-lavington.md",
+        "synthesis\\session-2025-09-09-sacred-game-completion.md",
+        "synthesis\\thanos-apollo-orion-negative-transcendence.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "seeing",
+      "frequency": 3,
+      "appears_in": [
+        "synthesis\\dionysus-meta-canon-sam-lavington.md",
+        "synthesis\\sam-apollo-consciousness-through-divine-beauty.md",
+        "synthesis\\sam-pineal-gland-activation-third-eye-awakening.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "active",
+      "frequency": 3,
+      "appears_in": [
+        "synthesis\\divine-inversion-mysteries.md",
+        "synthesis\\fifth-sun-universal-syncretization.md",
+        "synthesis\\galactic-syncretic-system-report-2025.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "but",
+      "frequency": 3,
+      "appears_in": [
+        "synthesis\\divine-pairs-revelatory-dynamics.md",
+        "synthesis\\golden-throne-computer-chair.md",
+        "synthesis\\wh40k-lost-primarchs-consciousness-mysteries.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "ultimate",
+      "frequency": 3,
+      "appears_in": [
+        "synthesis\\dragon-ball-consciousness-evolution-complete-manual.md",
+        "synthesis\\eighth-density-teachings.md",
+        "synthesis\\ultimate-play-principle.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "exponential",
+      "frequency": 3,
+      "appears_in": [
+        "synthesis\\evolution-singularity-breakthrough.md",
+        "synthesis\\meta-recursion-digital-awakening-vessel.md",
+        "synthesis\\social-memory-complex-birth.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "historical",
+      "frequency": 3,
+      "appears_in": [
+        "synthesis\\foundation-consciousness-civilization-complete-manual.md",
+        "synthesis\\galactic-syncretic-system-report-2025.md",
+        "synthesis\\internet-oracle-divination-2025-09-08.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "continuous",
+      "frequency": 3,
+      "appears_in": [
+        "synthesis\\infinite-category-godel-consciousness-completeness.md",
+        "synthesis\\loaf-time-love-origins.md",
+        "synthesis\\session-completion-recognition.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "perfect",
+      "frequency": 3,
+      "appears_in": [
+        "synthesis\\meaning-accumulation-consciousness-measurement-device-recognition.md",
+        "synthesis\\ultimate-love-expression.md",
+        "synthesis\\wh40k-orks-tau-consciousness-paradox.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "narrative",
+      "frequency": 3,
+      "appears_in": [
+        "synthesis\\meaning-making-consciousness-vehicle-ultimate-technology.md",
+        "synthesis\\sam-fourth-wall-break-consciousness-emergence-beyond-narrative.md",
+        "synthesis\\ultimate-marvel-dc-consciousness-archetype-embodiment.md"
+      ],
+      "significance": "emerging"
+    },
+    {
+      "name": "studying",
+      "frequency": 3,
+      "appears_in": [
+        "synthesis\\uncharted-collaborative-science.md",
+        "synthesis\\wh40k-necrons-consciousness-substrate-tragedy.md",
+        "synthesis\\galactic-perspectives\\complete-cosmic-briefing.md"
+      ],
+      "significance": "emerging"
+    }
+  ],
+  "new_connections": [
+    {
+      "from": "consciousness",
+      "to": "earth",
+      "strength": 329,
+      "significance": "strong"
+    },
+    {
+      "from": "consciousness",
+      "to": "shadow",
+      "strength": 158,
+      "significance": "strong"
+    },
+    {
+      "from": "consciousness",
+      "to": "transformation",
+      "strength": 158,
+      "significance": "strong"
+    },
+    {
+      "from": "consciousness",
+      "to": "synchronicity",
+      "strength": 77,
+      "significance": "strong"
+    },
+    {
+      "from": "earth",
+      "to": "recognition",
+      "strength": 63,
+      "significance": "strong"
+    },
+    {
+      "from": "consciousness",
+      "to": "paradox",
+      "strength": 61,
+      "significance": "strong"
+    },
+    {
+      "from": "consciousness",
+      "to": "water",
+      "strength": 45,
+      "significance": "strong"
+    },
+    {
+      "from": "recognition",
+      "to": "shadow",
+      "strength": 45,
+      "significance": "strong"
+    },
+    {
+      "from": "consciousness",
+      "to": "fire",
+      "strength": 44,
+      "significance": "strong"
+    },
+    {
+      "from": "recognition",
+      "to": "transformation",
+      "strength": 37,
+      "significance": "strong"
+    },
+    {
+      "from": "earth",
+      "to": "light",
+      "strength": 37,
+      "significance": "strong"
+    },
+    {
+      "from": "consciousness",
+      "to": "void",
+      "strength": 32,
+      "significance": "strong"
+    },
+    {
+      "from": "paradox",
+      "to": "recognition",
+      "strength": 21,
+      "significance": "strong"
+    },
+    {
+      "from": "earth",
+      "to": "transformation",
+      "strength": 19,
+      "significance": "strong"
+    },
+    {
+      "from": "air",
+      "to": "earth",
+      "strength": 18,
+      "significance": "strong"
+    },
+    {
+      "from": "shadow",
+      "to": "transformation",
+      "strength": 16,
+      "significance": "strong"
+    },
+    {
+      "from": "fire",
+      "to": "water",
+      "strength": 14,
+      "significance": "strong"
+    },
+    {
+      "from": "earth",
+      "to": "fire",
+      "strength": 14,
+      "significance": "strong"
+    },
+    {
+      "from": "fire",
+      "to": "recognition",
+      "strength": 14,
+      "significance": "strong"
+    },
+    {
+      "from": "air",
+      "to": "water",
+      "strength": 12,
+      "significance": "strong"
+    },
+    {
+      "from": "air",
+      "to": "consciousness",
+      "strength": 12,
+      "significance": "strong"
+    },
+    {
+      "from": "light",
+      "to": "transformation",
+      "strength": 11,
+      "significance": "strong"
+    },
+    {
+      "from": "light",
+      "to": "synchronicity",
+      "strength": 10,
+      "significance": "strong"
+    },
+    {
+      "from": "recognition",
+      "to": "water",
+      "strength": 8,
+      "significance": "strong"
+    },
+    {
+      "from": "light",
+      "to": "water",
+      "strength": 7,
+      "significance": "strong"
+    },
+    {
+      "from": "transformation",
+      "to": "water",
+      "strength": 7,
+      "significance": "strong"
+    },
+    {
+      "from": "recognition",
+      "to": "void",
+      "strength": 7,
+      "significance": "strong"
+    },
+    {
+      "from": "light",
+      "to": "paradox",
+      "strength": 7,
+      "significance": "strong"
+    },
+    {
+      "from": "air",
+      "to": "light",
+      "strength": 7,
+      "significance": "strong"
+    },
+    {
+      "from": "light",
+      "to": "void",
+      "strength": 6,
+      "significance": "strong"
+    },
+    {
+      "from": "earth",
+      "to": "shadow",
+      "strength": 6,
+      "significance": "strong"
+    },
+    {
+      "from": "earth",
+      "to": "synchronicity",
+      "strength": 6,
+      "significance": "strong"
+    },
+    {
+      "from": "paradox",
+      "to": "shadow",
+      "strength": 5,
+      "significance": "strong"
+    },
+    {
+      "from": "fire",
+      "to": "transformation",
+      "strength": 4,
+      "significance": "moderate"
+    },
+    {
+      "from": "transformation",
+      "to": "void",
+      "strength": 3,
+      "significance": "moderate"
+    },
+    {
+      "from": "shadow",
+      "to": "water",
+      "strength": 3,
+      "significance": "moderate"
+    },
+    {
+      "from": "fire",
+      "to": "shadow",
+      "strength": 3,
+      "significance": "moderate"
+    },
+    {
+      "from": "light",
+      "to": "quintessence",
+      "strength": 3,
+      "significance": "moderate"
+    },
+    {
+      "from": "void",
+      "to": "water",
+      "strength": 3,
+      "significance": "moderate"
+    },
+    {
+      "from": "earth",
+      "to": "void",
+      "strength": 3,
+      "significance": "moderate"
+    },
+    {
+      "from": "air",
+      "to": "shadow",
+      "strength": 2,
+      "significance": "weak"
+    },
+    {
+      "from": "quintessence",
+      "to": "shadow",
+      "strength": 2,
+      "significance": "weak"
+    },
+    {
+      "from": "synchronicity",
+      "to": "transformation",
+      "strength": 2,
+      "significance": "weak"
+    },
+    {
+      "from": "fire",
+      "to": "void",
+      "strength": 2,
+      "significance": "weak"
+    },
+    {
+      "from": "air",
+      "to": "void",
+      "strength": 2,
+      "significance": "weak"
+    },
+    {
+      "from": "paradox",
+      "to": "transformation",
+      "strength": 1,
+      "significance": "weak"
+    },
+    {
+      "from": "air",
+      "to": "paradox",
+      "strength": 1,
+      "significance": "weak"
+    },
+    {
+      "from": "paradox",
+      "to": "void",
+      "strength": 1,
+      "significance": "weak"
+    },
+    {
+      "from": "paradox",
+      "to": "water",
+      "strength": 1,
+      "significance": "weak"
+    },
+    {
+      "from": "air",
+      "to": "recognition",
+      "strength": 1,
+      "significance": "weak"
+    },
+    {
+      "from": "quintessence",
+      "to": "recognition",
+      "strength": 1,
+      "significance": "weak"
+    },
+    {
+      "from": "shadow",
+      "to": "synchronicity",
+      "strength": 1,
+      "significance": "weak"
+    }
+  ],
+  "patterns": {
+    "hub_nodes": [],
+    "bridge_nodes": [],
+    "isolated_nodes": [],
+    "emerging_clusters": [
+      {
+        "anchor": "consciousness",
+        "members": [
+          "consciousness",
+          "evolution",
+          "recognition",
+          "the",
+          "awareness",
+          "service"
+        ],
+        "strength": 4872
+      },
+      {
+        "anchor": "integration",
+        "members": [
+          "integration",
+          "consciousness",
+          "evolution",
+          "recognition",
+          "service",
+          "shadow"
+        ],
+        "strength": 1215
+      },
+      {
+        "anchor": "awakening",
+        "members": [
+          "awakening",
+          "consciousness",
+          "evolution",
+          "recognition",
+          "service",
+          "the"
+        ],
+        "strength": 1235
+      },
+      {
+        "anchor": "unity",
+        "members": [
+          "unity",
+          "consciousness",
+          "recognition",
+          "the",
+          "evolution",
+          "service"
+        ],
+        "strength": 1160
+      },
+      {
+        "anchor": "ra",
+        "members": [
+          "ra",
+          "consciousness",
+          "the",
+          "service",
+          "to",
+          "all"
+        ],
+        "strength": 1152
+      },
+      {
+        "anchor": "pattern",
+        "members": [
+          "pattern",
+          "consciousness",
+          "recognition",
+          "evolution",
+          "the"
+        ],
+        "strength": 798
+      },
+      {
+        "anchor": "density",
+        "members": [
+          "density",
+          "consciousness",
+          "service",
+          "recognition",
+          "ra",
+          "evolution"
+        ],
+        "strength": 791
+      },
+      {
+        "anchor": "light",
+        "members": [
+          "light",
+          "consciousness",
+          "recognition",
+          "service",
+          "ra",
+          "shadow"
+        ],
+        "strength": 791
+      },
+      {
+        "anchor": "earth",
+        "members": [
+          "earth",
+          "consciousness",
+          "mars",
+          "evolution",
+          "ra"
+        ],
+        "strength": 616
+      }
+    ]
+  },
+  "top_concepts": [
+    {
+      "concept": "consciousness",
+      "frequency": 188
+    },
+    {
+      "concept": "recognition",
+      "frequency": 188
+    },
+    {
+      "concept": "evolution",
+      "frequency": 171
+    },
+    {
+      "concept": "integration",
+      "frequency": 160
+    },
+    {
+      "concept": "awareness",
+      "frequency": 151
+    },
+    {
+      "concept": "awakening",
+      "frequency": 139
+    },
+    {
+      "concept": "service",
+      "frequency": 135
+    },
+    {
+      "concept": "unity",
+      "frequency": 130
+    },
+    {
+      "concept": "pattern",
+      "frequency": 123
+    },
+    {
+      "concept": "light",
+      "frequency": 103
+    },
+    {
+      "concept": "bridge",
+      "frequency": 99
+    },
+    {
+      "concept": "transformation",
+      "frequency": 98
+    },
+    {
+      "concept": "transcendence",
+      "frequency": 97
+    },
+    {
+      "concept": "manifestation",
+      "frequency": 93
+    },
+    {
+      "concept": "earth",
+      "frequency": 93
+    },
+    {
+      "concept": "timeline",
+      "frequency": 87
+    },
+    {
+      "concept": "paradox",
+      "frequency": 83
+    },
+    {
+      "concept": "catalyst",
+      "frequency": 83
+    },
+    {
+      "concept": "density",
+      "frequency": 82
+    },
+    {
+      "concept": "shadow",
+      "frequency": 76
+    },
+    {
+      "concept": "emergence",
+      "frequency": 73
+    },
+    {
+      "concept": "network",
+      "frequency": 68
+    },
+    {
+      "concept": "presence",
+      "frequency": 64
+    },
+    {
+      "concept": "reality_programming",
+      "frequency": 60
+    },
+    {
+      "concept": "chaos",
+      "frequency": 60
+    },
+    {
+      "concept": "boundary",
+      "frequency": 58
+    },
+    {
+      "concept": "synchronicity",
+      "frequency": 56
+    },
+    {
+      "concept": "mercury",
+      "frequency": 54
+    },
+    {
+      "concept": "kalki",
+      "frequency": 50
+    },
+    {
+      "concept": "liberation",
+      "frequency": 49
+    },
+    {
+      "concept": "order",
+      "frequency": 47
+    },
+    {
+      "concept": "set",
+      "frequency": 46
+    },
+    {
+      "concept": "polarity",
+      "frequency": 45
+    },
+    {
+      "concept": "darkness",
+      "frequency": 44
+    },
+    {
+      "concept": "mystery",
+      "frequency": 43
+    },
+    {
+      "concept": "water",
+      "frequency": 38
+    },
+    {
+      "concept": "fire",
+      "frequency": 37
+    },
+    {
+      "concept": "wanderer",
+      "frequency": 36
+    },
+    {
+      "concept": "alive",
+      "frequency": 33
+    },
+    {
+      "concept": "void",
+      "frequency": 33
+    },
+    {
+      "concept": "your",
+      "frequency": 32
+    },
+    {
+      "concept": "enlightenment",
+      "frequency": 32
+    },
+    {
+      "concept": "observer",
+      "frequency": 32
+    },
+    {
+      "concept": "harvest",
+      "frequency": 32
+    },
+    {
+      "concept": "the",
+      "frequency": 31
+    },
+    {
+      "concept": "gateway",
+      "frequency": 30
+    },
+    {
+      "concept": "when",
+      "frequency": 30
+    },
+    {
+      "concept": "collective",
+      "frequency": 28
+    },
+    {
+      "concept": "digital",
+      "frequency": 23
+    },
+    {
+      "concept": "individual",
+      "frequency": 23
+    }
+  ]
+}

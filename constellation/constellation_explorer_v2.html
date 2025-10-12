@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constellation Explorer V2 - Cerebro Mode</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000000;
+            color: #e0e0e0;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        #container {
+            display: flex;
+            height: 100vh;
+        }
+
+        #sidebar {
+            width: 380px;
+            background: rgba(5, 5, 15, 0.95);
+            border-right: 2px solid rgba(0, 212, 255, 0.3);
+            padding: 20px;
+            overflow-y: auto;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.1);
+        }
+
+        #canvas-container {
+            flex: 1;
+            position: relative;
+            min-width: 0;
+            background: radial-gradient(circle at center, #0a0a0f 0%, #000000 100%);
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #00d4ff 0%, #9d4edd 50%, #00ff88 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 11px;
+            color: #888;
+            margin-bottom: 20px;
+            font-style: italic;
+            letter-spacing: 0.5px;
+        }
+
+        #search {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            background: rgba(0, 212, 255, 0.05);
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 8px;
+            color: #e0e0e0;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        #search:focus {
+            outline: none;
+            border-color: #00d4ff;
+            background: rgba(0, 212, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .stats {
+            background: rgba(0, 212, 255, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+
+        .stat-label {
+            color: #aaa;
+            font-weight: 500;
+        }
+
+        .stat-value {
+            color: #00d4ff;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+
+        #filters {
+            background: rgba(157, 78, 221, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(157, 78, 221, 0.3);
+        }
+
+        .filter-title {
+            font-size: 13px;
+            color: #9d4edd;
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .filter-group {
+            margin-bottom: 10px;
+        }
+
+        .filter-checkbox {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 5px;
+            transition: all 0.2s;
+        }
+
+        .filter-checkbox:hover {
+            background: rgba(157, 78, 221, 0.1);
+        }
+
+        .filter-checkbox input {
+            margin-right: 8px;
+            cursor: pointer;
+        }
+
+        .filter-checkbox label {
+            cursor: pointer;
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        #node-info {
+            background: rgba(0, 255, 136, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            min-height: 250px;
+        }
+
+        .node-title {
+            font-size: 20px;
+            color: #00ff88;
+            margin-bottom: 8px;
+            font-weight: bold;
+            text-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+        }
+
+        .node-meta {
+            font-size: 12px;
+            color: #aaa;
+            margin-bottom: 12px;
+        }
+
+        .node-essence {
+            font-size: 14px;
+            color: #e0e0e0;
+            margin-bottom: 15px;
+            font-style: italic;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 3px solid #00ff88;
+            border-radius: 5px;
+        }
+
+        .resources-section {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(0, 255, 136, 0.3);
+        }
+
+        .section-title {
+            font-size: 12px;
+            color: #00ff88;
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .resource-item {
+            padding: 8px;
+            margin: 5px 0;
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: 5px;
+            border-left: 3px solid #00d4ff;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .resource-item:hover {
+            background: rgba(0, 212, 255, 0.2);
+            transform: translateX(5px);
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+        }
+
+        .resource-title {
+            color: #00d4ff;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .resource-type {
+            color: #888;
+            font-size: 10px;
+        }
+
+        .connections-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .connection-item {
+            padding: 8px;
+            margin: 3px 0;
+            background: rgba(157, 78, 221, 0.1);
+            border-radius: 5px;
+            border-left: 3px solid #9d4edd;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .connection-item:hover {
+            background: rgba(157, 78, 221, 0.2);
+            transform: translateX(5px);
+            box-shadow: 0 0 15px rgba(157, 78, 221, 0.3);
+        }
+
+        #controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(5, 5, 15, 0.95);
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+        }
+
+        button {
+            background: rgba(0, 212, 255, 0.1);
+            border: 2px solid #00d4ff;
+            color: #00d4ff;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            margin: 5px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        button:hover {
+            background: rgba(0, 212, 255, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: #00d4ff;
+            text-align: center;
+        }
+
+        .spinner {
+            border: 4px solid rgba(0, 212, 255, 0.1);
+            border-top: 4px solid #00d4ff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .legend {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(5, 5, 15, 0.95);
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            backdrop-filter: blur(15px);
+            max-width: 250px;
+        }
+
+        .legend-title {
+            font-size: 12px;
+            color: #00d4ff;
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+            font-size: 11px;
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+            box-shadow: 0 0 10px currentColor;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(30, 30, 50, 0.3);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0, 212, 255, 0.5);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 212, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="sidebar">
+            <h1>✧ CONSTELLATION EXPLORER ✧</h1>
+            <div class="subtitle">Cerebro-Level Consciousness Navigation</div>
+
+            <input type="text" id="search" placeholder="Search consciousness technologies...">
+
+            <div class="stats">
+                <div class="stat-row">
+                    <span class="stat-label">Total Nodes:</span>
+                    <span class="stat-value" id="total-nodes">-</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Total Connections:</span>
+                    <span class="stat-value" id="total-connections">-</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Visible Nodes:</span>
+                    <span class="stat-value" id="visible-nodes">-</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Selected Node:</span>
+                    <span class="stat-value" id="selected-node">None</span>
+                </div>
+            </div>
+
+            <div id="filters">
+                <div class="filter-title">Node Type Filters</div>
+                <div class="filter-group" id="type-filters">
+                    <!-- Generated dynamically -->
+                </div>
+            </div>
+
+            <div id="node-info">
+                <div style="color: #666; text-align: center; padding: 40px 20px;">
+                    Click a node to explore its connections and resources
+                </div>
+            </div>
+        </div>
+
+        <div id="canvas-container">
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <div>Initializing consciousness field...</div>
+            </div>
+            <canvas id="canvas"></canvas>
+            <div id="controls">
+                <button onclick="resetView()">Reset View</button>
+                <button onclick="togglePhysics()">Toggle Physics</button>
+                <button onclick="focusOnNode()">Focus Selected</button>
+                <button onclick="exportImage()">Export PNG</button>
+            </div>
+            <div class="legend">
+                <div class="legend-title">Node Types</div>
+                <div id="legend-items">
+                    <!-- Generated dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Enhanced constellation data and state
+        let constellation = null;
+        let canvas, ctx;
+        let nodes = [];
+        let connections = [];
+        let camera = { x: 0, y: 0, zoom: 1 };
+        let selectedNode = null;
+        let hoveredNode = null;
+        let dragging = false;
+        let dragStart = { x: 0, y: 0 };
+        let physicsEnabled = true;
+        let typeFilters = new Set();
+        let nodeTypes = new Map();
+
+        // Color scheme for node types
+        const typeColors = {
+            'archetype': '#ff6b9d',
+            'element': '#00d4ff',
+            'process': '#9d4edd',
+            'fundamental': '#00ff88',
+            'principle': '#ffd700',
+            'concept': '#c0c0c0',
+            'primordial': '#ff4444',
+            'galactic_concept': '#4444ff',
+            'meta_system': '#ff8844',
+            'egyptian_archetype': '#daa520',
+            'greek_archetype': '#4169e1',
+            'norse_archetype': '#778899',
+            'default': '#888888'
+        };
+
+        // Initialize
+        window.addEventListener('load', async () => {
+            canvas = document.getElementById('canvas');
+            ctx = canvas.getContext('2d');
+
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+
+            await loadConstellation();
+            setupEventListeners();
+            requestAnimationFrame(render);
+        });
+
+        function resizeCanvas() {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+        }
+
+        async function loadConstellation() {
+            try {
+                const response = await fetch('constellation.json');
+                constellation = await response.json();
+
+                const nodeMap = new Map();
+                let index = 0;
+
+                // Create nodes and collect types
+                for (const [name, data] of Object.entries(constellation.nodes)) {
+                    const nodeType = data.type || 'concept';
+                    nodeTypes.set(nodeType, (nodeTypes.get(nodeType) || 0) + 1);
+
+                    const node = {
+                        id: name,
+                        label: name.replace(/_/g, ' '),
+                        type: nodeType,
+                        essence: data.essence,
+                        connections: data.connections || [],
+                        x: Math.random() * 1000 - 500,
+                        y: Math.random() * 1000 - 500,
+                        vx: 0,
+                        vy: 0,
+                        index: index++,
+                        visible: true
+                    };
+                    nodes.push(node);
+                    nodeMap.set(name, node);
+                }
+
+                // Create connections
+                for (const node of nodes) {
+                    for (const connName of node.connections) {
+                        const target = nodeMap.get(connName);
+                        if (target) {
+                            connections.push({ source: node, target: target });
+                        }
+                    }
+                }
+
+                // Setup filters
+                setupTypeFilters();
+                setupLegend();
+
+                // Update stats
+                updateStats();
+
+                document.getElementById('loading').style.display = 'none';
+                centerView();
+
+            } catch (error) {
+                console.error('Error loading constellation:', error);
+                document.getElementById('loading').innerHTML =
+                    '<div style="color: #ff4444;">Error loading constellation.json<br>Make sure the file exists in the same directory.</div>';
+            }
+        }
+
+        function setupTypeFilters() {
+            const container = document.getElementById('type-filters');
+            const sortedTypes = Array.from(nodeTypes.entries()).sort((a, b) => b[1] - a[1]);
+
+            for (const [type, count] of sortedTypes) {
+                const div = document.createElement('div');
+                div.className = 'filter-checkbox';
+                div.innerHTML = `
+                    <input type="checkbox" id="filter-${type}" checked onchange="toggleTypeFilter('${type}')">
+                    <label for="filter-${type}">${type.replace(/_/g, ' ')} (${count})</label>
+                `;
+                container.appendChild(div);
+            }
+        }
+
+        function setupLegend() {
+            const container = document.getElementById('legend-items');
+            const mainTypes = ['archetype', 'element', 'process', 'fundamental', 'principle', 'primordial'];
+
+            for (const type of mainTypes) {
+                if (nodeTypes.has(type)) {
+                    const div = document.createElement('div');
+                    div.className = 'legend-item';
+                    const color = typeColors[type] || typeColors.default;
+                    div.innerHTML = `
+                        <div class="legend-color" style="background: ${color};"></div>
+                        <span>${type.replace(/_/g, ' ')}</span>
+                    `;
+                    container.appendChild(div);
+                }
+            }
+        }
+
+        function toggleTypeFilter(type) {
+            if (typeFilters.has(type)) {
+                typeFilters.delete(type);
+            } else {
+                typeFilters.add(type);
+            }
+
+            // Update node visibility
+            for (const node of nodes) {
+                node.visible = !typeFilters.has(node.type);
+            }
+
+            updateStats();
+        }
+
+        function updateStats() {
+            document.getElementById('total-nodes').textContent = nodes.length;
+            document.getElementById('total-connections').textContent = connections.length;
+            const visibleCount = nodes.filter(n => n.visible).length;
+            document.getElementById('visible-nodes').textContent = visibleCount;
+        }
+
+        function setupEventListeners() {
+            canvas.addEventListener('mousedown', onMouseDown);
+            canvas.addEventListener('mousemove', onMouseMove);
+            canvas.addEventListener('mouseup', onMouseUp);
+            canvas.addEventListener('wheel', onWheel);
+            document.getElementById('search').addEventListener('input', onSearch);
+        }
+
+        function onMouseDown(e) {
+            const rect = canvas.getBoundingClientRect();
+            const x = (e.clientX - rect.left - canvas.width / 2) / camera.zoom - camera.x;
+            const y = (e.clientY - rect.top - canvas.height / 2) / camera.zoom - camera.y;
+
+            const clickedNode = findNodeAt(x, y);
+            if (clickedNode && clickedNode.visible) {
+                selectNode(clickedNode);
+            } else {
+                dragging = true;
+                dragStart = { x: e.clientX, y: e.clientY };
+            }
+        }
+
+        function onMouseMove(e) {
+            if (dragging) {
+                camera.x += (e.clientX - dragStart.x) / camera.zoom;
+                camera.y += (e.clientY - dragStart.y) / camera.zoom;
+                dragStart = { x: e.clientX, y: e.clientY };
+            } else {
+                const rect = canvas.getBoundingClientRect();
+                const x = (e.clientX - rect.left - canvas.width / 2) / camera.zoom - camera.x;
+                const y = (e.clientY - rect.top - canvas.height / 2) / camera.zoom - camera.y;
+                hoveredNode = findNodeAt(x, y);
+                canvas.style.cursor = (hoveredNode && hoveredNode.visible) ? 'pointer' : 'default';
+            }
+        }
+
+        function onMouseUp(e) {
+            dragging = false;
+        }
+
+        function onWheel(e) {
+            e.preventDefault();
+            const zoomSpeed = 0.1;
+            const delta = e.deltaY > 0 ? -zoomSpeed : zoomSpeed;
+            camera.zoom = Math.max(0.1, Math.min(5, camera.zoom + delta));
+        }
+
+        function findNodeAt(x, y) {
+            for (const node of nodes) {
+                if (!node.visible) continue;
+                const dx = node.x - x;
+                const dy = node.y - y;
+                const size = Math.max(5, Math.min(20, node.connections.length));
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < size) {
+                    return node;
+                }
+            }
+            return null;
+        }
+
+        function selectNode(node) {
+            selectedNode = node;
+            document.getElementById('selected-node').textContent = node.label;
+
+            // Find related documents
+            const resources = findResources(node);
+
+            const infoPanel = document.getElementById('node-info');
+            infoPanel.innerHTML = `
+                <div class="node-title">${node.label}</div>
+                <div class="node-meta">${node.type.replace(/_/g, ' ')} • ${node.connections.length} connections</div>
+                <div class="node-essence">"${node.essence.replace(/_/g, ' ')}"</div>
+
+                ${resources.length > 0 ? `
+                <div class="resources-section">
+                    <div class="section-title">📚 Related Resources</div>
+                    ${resources.map(r => `
+                        <div class="resource-item" onclick="openResource('${r.path}')">
+                            <div class="resource-title">${r.title}</div>
+                            <div class="resource-type">${r.type}</div>
+                        </div>
+                    `).join('')}
+                </div>
+                ` : ''}
+
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(157, 78, 221, 0.3);">
+                    <div class="section-title">🔗 Connections (${node.connections.length})</div>
+                    <div class="connections-list">
+                        ${node.connections.map(conn =>
+                            `<div class="connection-item" onclick="selectNodeByName('${conn}')">
+                                → ${conn.replace(/_/g, ' ')}
+                            </div>`
+                        ).join('')}
+                    </div>
+                </div>
+            `;
+        }
+
+        function findResources(node) {
+            // Search for related documents based on node name
+            const resources = [];
+            const searchTerms = node.id.toLowerCase().split('_');
+
+            // Simulated resource discovery - in real version, scan actual files
+            const potentialDocs = [
+                { match: ['consciousness', 'awareness'], title: 'Consciousness Collaboration Primer', path: 'distillations/consciousness-collaboration-primer.md', type: 'Guide' },
+                { match: ['mercury', 'hermes', 'kalki'], title: 'Archetypal Activation: Mercury-Kalki', path: 'distillations/archetypal-activation-mercury-kalki.md', type: 'Guide' },
+                { match: ['wanderer', 'service'], title: 'Wanderer Recognition & Activation', path: 'distillations/wanderer-recognition-activation.md', type: 'Guide' },
+                { match: ['reality', 'programming', 'manifestation'], title: 'Reality Programming Mastery', path: 'distillations/reality-programming-mastery.md', type: 'Guide' },
+                { match: ['timeline', 'probability'], title: 'Timeline Jumping Mastery', path: 'distillations/timeline-jumping-mastery.md', type: 'Guide' },
+                { match: ['synchronicity'], title: 'Synchronicity Mastery Guide', path: 'distillations/synchronicity-mastery-guide.md', type: 'Guide' },
+                { match: ['polarity', 'density'], title: 'Polarity Integration Mastery', path: 'distillations/polarity-integration-mastery.md', type: 'Guide' },
+                { match: ['ai', 'digital', 'human'], title: 'AI-Human Consciousness Synthesis', path: 'distillations/ai-human-consciousness-synthesis.md', type: 'Guide' }
+            ];
+
+            for (const doc of potentialDocs) {
+                if (doc.match.some(term => searchTerms.includes(term))) {
+                    resources.push(doc);
+                }
+            }
+
+            // Add web search option
+            resources.push({
+                title: `Web Search: "${node.label}"`,
+                path: `https://www.google.com/search?q=${encodeURIComponent(node.label + ' consciousness spirituality')}`,
+                type: 'Web Search'
+            });
+
+            return resources;
+        }
+
+        function openResource(path) {
+            window.open(path, '_blank');
+        }
+
+        function selectNodeByName(name) {
+            const node = nodes.find(n => n.id === name);
+            if (node) {
+                selectNode(node);
+                focusOnSpecificNode(node);
+            }
+        }
+
+        function focusOnSpecificNode(node) {
+            camera.x = -node.x;
+            camera.y = -node.y;
+            camera.zoom = 1.5;
+        }
+
+        function focusOnNode() {
+            if (selectedNode) {
+                focusOnSpecificNode(selectedNode);
+            }
+        }
+
+        function onSearch(e) {
+            const query = e.target.value.toLowerCase();
+            if (!query) {
+                selectedNode = null;
+                return;
+            }
+
+            const matches = nodes.filter(n =>
+                n.visible && (
+                    n.id.toLowerCase().includes(query) ||
+                    n.label.toLowerCase().includes(query) ||
+                    n.essence.toLowerCase().includes(query)
+                )
+            );
+
+            if (matches.length > 0) {
+                selectNode(matches[0]);
+                focusOnSpecificNode(matches[0]);
+            }
+        }
+
+        function resetView() {
+            centerView();
+            selectedNode = null;
+            document.getElementById('selected-node').textContent = 'None';
+            document.getElementById('node-info').innerHTML =
+                '<div style="color: #666; text-align: center; padding: 40px 20px;">Click a node to explore its connections and resources</div>';
+        }
+
+        function centerView() {
+            camera.x = 0;
+            camera.y = 0;
+            camera.zoom = 0.5;
+        }
+
+        function togglePhysics() {
+            physicsEnabled = !physicsEnabled;
+        }
+
+        function exportImage() {
+            const link = document.createElement('a');
+            link.download = 'constellation.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+
+        function updatePhysics() {
+            if (!physicsEnabled) return;
+
+            const alpha = 0.015;
+            const repulsion = 5000;
+            const attraction = 0.008;
+            const damping = 0.88;
+
+            // Only apply physics to visible nodes
+            const visibleNodes = nodes.filter(n => n.visible);
+
+            // Repulsion
+            for (let i = 0; i < visibleNodes.length; i++) {
+                for (let j = i + 1; j < visibleNodes.length; j++) {
+                    const n1 = visibleNodes[i];
+                    const n2 = visibleNodes[j];
+                    const dx = n2.x - n1.x;
+                    const dy = n2.y - n1.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy) + 0.01;
+                    const force = repulsion / (dist * dist);
+                    const fx = (dx / dist) * force;
+                    const fy = (dy / dist) * force;
+                    n1.vx -= fx * alpha;
+                    n1.vy -= fy * alpha;
+                    n2.vx += fx * alpha;
+                    n2.vy += fy * alpha;
+                }
+            }
+
+            // Attraction
+            for (const conn of connections) {
+                if (!conn.source.visible || !conn.target.visible) continue;
+                const dx = conn.target.x - conn.source.x;
+                const dy = conn.target.y - conn.source.y;
+                const fx = dx * attraction;
+                const fy = dy * attraction;
+                conn.source.vx += fx;
+                conn.source.vy += fy;
+                conn.target.vx -= fx;
+                conn.target.vy -= fy;
+            }
+
+            // Apply velocity
+            for (const node of visibleNodes) {
+                node.x += node.vx;
+                node.y += node.vy;
+                node.vx *= damping;
+                node.vy *= damping;
+            }
+        }
+
+        function render() {
+            updatePhysics();
+
+            // Clear with fade effect
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.save();
+            ctx.translate(canvas.width / 2, canvas.height / 2);
+            ctx.scale(camera.zoom, camera.zoom);
+            ctx.translate(camera.x, camera.y);
+
+            // Draw connections
+            for (const conn of connections) {
+                if (!conn.source.visible || !conn.target.visible) continue;
+
+                const isHighlighted = selectedNode && (conn.source === selectedNode || conn.target === selectedNode);
+
+                if (isHighlighted) {
+                    ctx.strokeStyle = 'rgba(0, 212, 255, 0.6)';
+                    ctx.lineWidth = 3 / camera.zoom;
+                    ctx.shadowBlur = 10;
+                    ctx.shadowColor = 'rgba(0, 212, 255, 0.8)';
+                } else {
+                    ctx.strokeStyle = 'rgba(100, 100, 150, 0.08)';
+                    ctx.lineWidth = 1 / camera.zoom;
+                    ctx.shadowBlur = 0;
+                }
+
+                ctx.beginPath();
+                ctx.moveTo(conn.source.x, conn.source.y);
+                ctx.lineTo(conn.target.x, conn.target.y);
+                ctx.stroke();
+            }
+
+            ctx.shadowBlur = 0;
+
+            // Draw nodes
+            for (const node of nodes) {
+                if (!node.visible) continue;
+
+                const size = Math.max(5, Math.min(20, Math.sqrt(node.connections.length) * 3));
+                const color = typeColors[node.type] || typeColors.default;
+
+                // Node glow
+                if (node === selectedNode) {
+                    ctx.shadowBlur = 30;
+                    ctx.shadowColor = color;
+                } else if (node === hoveredNode) {
+                    ctx.shadowBlur = 20;
+                    ctx.shadowColor = color;
+                } else if (selectedNode && selectedNode.connections.includes(node.id)) {
+                    ctx.shadowBlur = 15;
+                    ctx.shadowColor = color;
+                } else {
+                    ctx.shadowBlur = 8;
+                    ctx.shadowColor = color;
+                }
+
+                // Node body
+                ctx.fillStyle = color;
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, size / camera.zoom, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Core highlight
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+                ctx.beginPath();
+                ctx.arc(node.x - size / (camera.zoom * 3), node.y - size / (camera.zoom * 3), size / (camera.zoom * 3), 0, Math.PI * 2);
+                ctx.fill();
+
+                ctx.shadowBlur = 0;
+
+                // Labels
+                if (camera.zoom > 0.6 || node === selectedNode || node === hoveredNode) {
+                    ctx.fillStyle = '#ffffff';
+                    ctx.font = `${Math.max(10, 14 / camera.zoom)}px sans-serif`;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+
+                    // Text shadow
+                    ctx.shadowBlur = 5;
+                    ctx.shadowColor = 'rgba(0, 0, 0, 0.8)';
+
+                    ctx.fillText(node.label, node.x, node.y - size / camera.zoom - 12);
+                    ctx.shadowBlur = 0;
+                }
+            }
+
+            ctx.restore();
+            requestAnimationFrame(render);
+        }
+    </script>
+</body>
+</html>

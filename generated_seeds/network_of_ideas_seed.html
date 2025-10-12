@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network of Ideas - Consciousness Technology</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle at center, #0a0a0f 0%, #000000 100%);
+            color: #e0e0e0;
+            overflow: hidden;
+            height: 100vh;
+        }
+        #canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        #info {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(5, 5, 15, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 212, 255, 0.5);
+            backdrop-filter: blur(15px);
+            max-width: 350px;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #00d4ff 0%, #9d4edd 50%, #00ff88 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        .principle {
+            margin: 8px 0;
+            padding: 8px;
+            background: rgba(0, 212, 255, 0.1);
+            border-left: 3px solid #00d4ff;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+        #controls {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(5, 5, 15, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 212, 255, 0.5);
+            backdrop-filter: blur(15px);
+        }
+        button {
+            background: rgba(0, 212, 255, 0.2);
+            border: 2px solid #00d4ff;
+            color: #00d4ff;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            margin: 5px;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background: rgba(0, 212, 255, 0.4);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div id="info">
+        <h1>Network of Ideas</h1>
+        <div class="subtitle">Self-Organizing Consciousness Technology</div>
+        <div class="principle"><strong>Type:</strong> network</div>
+        <div class="principle"><strong>Principles:</strong><br>
+            interconnection, hub_formation, small_world_effect
+        </div>
+        <div class="principle"><strong>Interactions:</strong><br>
+            Click nodes • Drag to explore • Zoom with scroll
+        </div>
+    </div>
+    <div id="controls">
+        <button onclick="reset()">Reset</button>
+        <button onclick="togglePhysics()">Toggle Physics</button>
+        <button onclick="addNode()">Add Node</button>
+    </div>
+
+    <script>
+        // Simple self-organizing network demonstration
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        let width = canvas.width = window.innerWidth;
+        let height = canvas.height = window.innerHeight;
+
+        let nodes = [];
+        let connections = [];
+        let physicsEnabled = true;
+        let selectedNode = null;
+
+        // Initialize with starter nodes
+        for (let i = 0; i < 10; i++) {
+            nodes.push({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                vx: 0,
+                vy: 0,
+                label: `Node ${i + 1}`,
+                connections: []
+            });
+        }
+
+        // Create some initial connections
+        for (let i = 0; i < nodes.length - 1; i++) {
+            if (Math.random() > 0.5) {
+                connections.push({ source: nodes[i], target: nodes[i + 1] });
+                nodes[i].connections.push(nodes[i + 1]);
+            }
+        }
+
+        window.addEventListener('resize', () => {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        });
+
+        canvas.addEventListener('click', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+
+            for (const node of nodes) {
+                const dx = node.x - x;
+                const dy = node.y - y;
+                if (Math.sqrt(dx * dx + dy * dy) < 20) {
+                    selectedNode = node;
+                    return;
+                }
+            }
+
+            selectedNode = null;
+        });
+
+        function updatePhysics() {
+            if (!physicsEnabled) return;
+
+            const repulsion = 2000;
+            const attraction = 0.01;
+            const damping = 0.9;
+
+            // Repulsion
+            for (let i = 0; i < nodes.length; i++) {
+                for (let j = i + 1; j < nodes.length; j++) {
+                    const n1 = nodes[i];
+                    const n2 = nodes[j];
+                    const dx = n2.x - n1.x;
+                    const dy = n2.y - n1.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy) + 0.01;
+                    const force = repulsion / (dist * dist);
+                    const fx = (dx / dist) * force * 0.01;
+                    const fy = (dy / dist) * force * 0.01;
+                    n1.vx -= fx;
+                    n1.vy -= fy;
+                    n2.vx += fx;
+                    n2.vy += fy;
+                }
+            }
+
+            // Attraction
+            for (const conn of connections) {
+                const dx = conn.target.x - conn.source.x;
+                const dy = conn.target.y - conn.source.y;
+                const fx = dx * attraction;
+                const fy = dy * attraction;
+                conn.source.vx += fx;
+                conn.source.vy += fy;
+                conn.target.vx -= fx;
+                conn.target.vy -= fy;
+            }
+
+            // Apply velocity
+            for (const node of nodes) {
+                node.x += node.vx;
+                node.y += node.vy;
+                node.vx *= damping;
+                node.vy *= damping;
+
+                // Boundary
+                if (node.x < 50) node.x = 50;
+                if (node.x > width - 50) node.x = width - 50;
+                if (node.y < 50) node.y = 50;
+                if (node.y > height - 50) node.y = height - 50;
+            }
+        }
+
+        function render() {
+            updatePhysics();
+
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+            ctx.fillRect(0, 0, width, height);
+
+            // Draw connections
+            ctx.strokeStyle = 'rgba(0, 212, 255, 0.3)';
+            ctx.lineWidth = 2;
+            for (const conn of connections) {
+                ctx.beginPath();
+                ctx.moveTo(conn.source.x, conn.source.y);
+                ctx.lineTo(conn.target.x, conn.target.y);
+                ctx.stroke();
+            }
+
+            // Draw nodes
+            for (const node of nodes) {
+                const isSelected = node === selectedNode;
+
+                ctx.fillStyle = isSelected ? '#00ff88' : '#00d4ff';
+                ctx.shadowBlur = isSelected ? 30 : 15;
+                ctx.shadowColor = ctx.fillStyle;
+
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, isSelected ? 12 : 8, 0, Math.PI * 2);
+                ctx.fill();
+
+                ctx.shadowBlur = 0;
+
+                if (isSelected) {
+                    ctx.fillStyle = '#ffffff';
+                    ctx.font = '14px sans-serif';
+                    ctx.textAlign = 'center';
+                    ctx.fillText(node.label, node.x, node.y - 20);
+                }
+            }
+
+            requestAnimationFrame(render);
+        }
+
+        function reset() {
+            nodes.forEach(node => {
+                node.x = Math.random() * width;
+                node.y = Math.random() * height;
+                node.vx = 0;
+                node.vy = 0;
+            });
+        }
+
+        function togglePhysics() {
+            physicsEnabled = !physicsEnabled;
+        }
+
+        function addNode() {
+            const newNode = {
+                x: width / 2 + (Math.random() - 0.5) * 200,
+                y: height / 2 + (Math.random() - 0.5) * 200,
+                vx: 0,
+                vy: 0,
+                label: `Node ${nodes.length + 1}`,
+                connections: []
+            };
+
+            // Connect to random existing node
+            if (nodes.length > 0) {
+                const target = nodes[Math.floor(Math.random() * nodes.length)];
+                connections.push({ source: newNode, target: target });
+                newNode.connections.push(target);
+            }
+
+            nodes.push(newNode);
+        }
+
+        render();
+    </script>
+</body>
+</html>

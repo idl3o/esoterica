@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constellation Explorer - Living Knowledge Graph</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 100%);
+            color: #e0e0e0;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        #container {
+            display: flex;
+            height: 100vh;
+        }
+
+        #sidebar {
+            width: 350px;
+            background: rgba(10, 10, 20, 0.9);
+            border-right: 1px solid rgba(100, 100, 150, 0.3);
+            padding: 20px;
+            overflow-y: auto;
+            backdrop-filter: blur(10px);
+        }
+
+        #canvas-container {
+            flex: 1;
+            position: relative;
+            min-width: 0; /* Fix flex overflow */
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00d4ff, #9d4edd);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 12px;
+            color: #888;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        #search {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            background: rgba(30, 30, 50, 0.8);
+            border: 1px solid rgba(100, 100, 150, 0.3);
+            border-radius: 5px;
+            color: #e0e0e0;
+            font-size: 14px;
+        }
+
+        #search:focus {
+            outline: none;
+            border-color: #00d4ff;
+        }
+
+        .stats {
+            background: rgba(30, 30, 50, 0.6);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(100, 100, 150, 0.2);
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+
+        .stat-label {
+            color: #aaa;
+        }
+
+        .stat-value {
+            color: #00d4ff;
+            font-weight: bold;
+        }
+
+        #node-info {
+            background: rgba(30, 30, 50, 0.6);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(100, 100, 150, 0.2);
+            min-height: 200px;
+        }
+
+        .node-title {
+            font-size: 18px;
+            color: #00d4ff;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        .node-meta {
+            font-size: 12px;
+            color: #aaa;
+            margin-bottom: 12px;
+        }
+
+        .node-essence {
+            font-size: 13px;
+            color: #e0e0e0;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .connections-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .connection-item {
+            padding: 5px;
+            margin: 3px 0;
+            background: rgba(50, 50, 80, 0.4);
+            border-radius: 3px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .connection-item:hover {
+            background: rgba(0, 212, 255, 0.2);
+            transform: translateX(5px);
+        }
+
+        #controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(10, 10, 20, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid rgba(100, 100, 150, 0.3);
+            backdrop-filter: blur(10px);
+        }
+
+        button {
+            background: rgba(0, 212, 255, 0.2);
+            border: 1px solid #00d4ff;
+            color: #00d4ff;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+            margin: 5px;
+            transition: all 0.3s;
+        }
+
+        button:hover {
+            background: rgba(0, 212, 255, 0.4);
+            transform: scale(1.05);
+        }
+
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: #00d4ff;
+            text-align: center;
+        }
+
+        .spinner {
+            border: 4px solid rgba(0, 212, 255, 0.1);
+            border-top: 4px solid #00d4ff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(30, 30, 50, 0.3);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0, 212, 255, 0.5);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 212, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="sidebar">
+            <h1>✨ Constellation Explorer</h1>
+            <div class="subtitle">Living Knowledge Graph Navigation</div>
+
+            <input type="text" id="search" placeholder="Search nodes...">
+
+            <div class="stats">
+                <div class="stat-row">
+                    <span class="stat-label">Total Nodes:</span>
+                    <span class="stat-value" id="total-nodes">-</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Total Connections:</span>
+                    <span class="stat-value" id="total-connections">-</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Selected Node:</span>
+                    <span class="stat-value" id="selected-node">None</span>
+                </div>
+            </div>
+
+            <div id="node-info">
+                <div style="color: #666; text-align: center; padding: 40px 20px;">
+                    Click a node to explore its connections
+                </div>
+            </div>
+        </div>
+
+        <div id="canvas-container">
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <div>Loading consciousness technologies...</div>
+            </div>
+            <canvas id="canvas"></canvas>
+            <div id="controls">
+                <button onclick="resetView()">Reset View</button>
+                <button onclick="togglePhysics()">Toggle Physics</button>
+                <button onclick="exportImage()">Export PNG</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Constellation data and state
+        let constellation = null;
+        let canvas, ctx;
+        let nodes = [];
+        let connections = [];
+        let camera = { x: 0, y: 0, zoom: 1 };
+        let selectedNode = null;
+        let hoveredNode = null;
+        let dragging = false;
+        let dragStart = { x: 0, y: 0 };
+        let physicsEnabled = true;
+
+        // Initialize
+        window.addEventListener('load', async () => {
+            canvas = document.getElementById('canvas');
+            ctx = canvas.getContext('2d');
+
+            // Setup canvas
+            resizeCanvas();
+            window.addEventListener('resize', resizeCanvas);
+
+            // Load constellation data
+            await loadConstellation();
+
+            // Setup event listeners
+            setupEventListeners();
+
+            // Start render loop
+            requestAnimationFrame(render);
+        });
+
+        function resizeCanvas() {
+            canvas.width = canvas.offsetWidth;
+            canvas.height = canvas.offsetHeight;
+        }
+
+        async function loadConstellation() {
+            try {
+                const response = await fetch('constellation.json');
+                constellation = await response.json();
+
+                // Convert to graph structure
+                const nodeMap = new Map();
+                let index = 0;
+
+                // Create nodes
+                for (const [name, data] of Object.entries(constellation.nodes)) {
+                    const node = {
+                        id: name,
+                        label: name.replace(/_/g, ' '),
+                        type: data.type,
+                        essence: data.essence,
+                        connections: data.connections || [],
+                        x: Math.random() * 1000 - 500,
+                        y: Math.random() * 1000 - 500,
+                        vx: 0,
+                        vy: 0,
+                        index: index++
+                    };
+                    nodes.push(node);
+                    nodeMap.set(name, node);
+                }
+
+                // Create connections
+                for (const node of nodes) {
+                    for (const connName of node.connections) {
+                        const target = nodeMap.get(connName);
+                        if (target) {
+                            connections.push({ source: node, target: target });
+                        }
+                    }
+                }
+
+                // Update stats
+                document.getElementById('total-nodes').textContent = nodes.length;
+                document.getElementById('total-connections').textContent = connections.length;
+
+                // Hide loading
+                document.getElementById('loading').style.display = 'none';
+
+                // Center view
+                centerView();
+
+            } catch (error) {
+                console.error('Error loading constellation:', error);
+                document.getElementById('loading').innerHTML =
+                    '<div style="color: #ff4444;">Error loading constellation.json</div>';
+            }
+        }
+
+        function setupEventListeners() {
+            // Mouse events
+            canvas.addEventListener('mousedown', onMouseDown);
+            canvas.addEventListener('mousemove', onMouseMove);
+            canvas.addEventListener('mouseup', onMouseUp);
+            canvas.addEventListener('wheel', onWheel);
+
+            // Search
+            document.getElementById('search').addEventListener('input', onSearch);
+        }
+
+        function onMouseDown(e) {
+            const rect = canvas.getBoundingClientRect();
+            const x = (e.clientX - rect.left - canvas.width / 2) / camera.zoom - camera.x;
+            const y = (e.clientY - rect.top - canvas.height / 2) / camera.zoom - camera.y;
+
+            // Check for node click
+            const clickedNode = findNodeAt(x, y);
+            if (clickedNode) {
+                selectNode(clickedNode);
+            } else {
+                dragging = true;
+                dragStart = { x: e.clientX, y: e.clientY };
+            }
+        }
+
+        function onMouseMove(e) {
+            if (dragging) {
+                camera.x += (e.clientX - dragStart.x) / camera.zoom;
+                camera.y += (e.clientY - dragStart.y) / camera.zoom;
+                dragStart = { x: e.clientX, y: e.clientY };
+            } else {
+                // Check for hover
+                const rect = canvas.getBoundingClientRect();
+                const x = (e.clientX - rect.left - canvas.width / 2) / camera.zoom - camera.x;
+                const y = (e.clientY - rect.top - canvas.height / 2) / camera.zoom - camera.y;
+                hoveredNode = findNodeAt(x, y);
+                canvas.style.cursor = hoveredNode ? 'pointer' : 'default';
+            }
+        }
+
+        function onMouseUp(e) {
+            dragging = false;
+        }
+
+        function onWheel(e) {
+            e.preventDefault();
+            const zoomSpeed = 0.1;
+            const delta = e.deltaY > 0 ? -zoomSpeed : zoomSpeed;
+            camera.zoom = Math.max(0.1, Math.min(3, camera.zoom + delta));
+        }
+
+        function findNodeAt(x, y) {
+            for (const node of nodes) {
+                const dx = node.x - x;
+                const dy = node.y - y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 10) {
+                    return node;
+                }
+            }
+            return null;
+        }
+
+        function selectNode(node) {
+            selectedNode = node;
+            document.getElementById('selected-node').textContent = node.label;
+
+            // Update node info panel
+            const infoPanel = document.getElementById('node-info');
+            infoPanel.innerHTML = `
+                <div class="node-title">${node.label}</div>
+                <div class="node-meta">${node.type} • ${node.connections.length} connections</div>
+                <div class="node-essence">"${node.essence.replace(/_/g, ' ')}"</div>
+                <div style="font-size: 13px; color: #aaa; margin-bottom: 10px;">Connections:</div>
+                <div class="connections-list">
+                    ${node.connections.map(conn =>
+                        `<div class="connection-item" onclick="selectNodeByName('${conn}')">
+                            → ${conn.replace(/_/g, ' ')}
+                        </div>`
+                    ).join('')}
+                </div>
+            `;
+        }
+
+        function selectNodeByName(name) {
+            const node = nodes.find(n => n.id === name);
+            if (node) {
+                selectNode(node);
+                // Center on node
+                camera.x = -node.x;
+                camera.y = -node.y;
+            }
+        }
+
+        function onSearch(e) {
+            const query = e.target.value.toLowerCase();
+            if (!query) {
+                selectedNode = null;
+                return;
+            }
+
+            const matches = nodes.filter(n =>
+                n.id.toLowerCase().includes(query) ||
+                n.label.toLowerCase().includes(query)
+            );
+
+            if (matches.length > 0) {
+                selectNode(matches[0]);
+                camera.x = -matches[0].x;
+                camera.y = -matches[0].y;
+            }
+        }
+
+        function resetView() {
+            centerView();
+            selectedNode = null;
+            document.getElementById('selected-node').textContent = 'None';
+            document.getElementById('node-info').innerHTML =
+                '<div style="color: #666; text-align: center; padding: 40px 20px;">Click a node to explore its connections</div>';
+        }
+
+        function centerView() {
+            camera.x = 0;
+            camera.y = 0;
+            camera.zoom = 0.5;
+        }
+
+        function togglePhysics() {
+            physicsEnabled = !physicsEnabled;
+        }
+
+        function exportImage() {
+            const link = document.createElement('a');
+            link.download = 'constellation.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+
+        function updatePhysics() {
+            if (!physicsEnabled) return;
+
+            const alpha = 0.02;
+            const repulsion = 3000;
+            const attraction = 0.01;
+            const damping = 0.85;
+
+            // Repulsion between all nodes
+            for (let i = 0; i < nodes.length; i++) {
+                for (let j = i + 1; j < nodes.length; j++) {
+                    const n1 = nodes[i];
+                    const n2 = nodes[j];
+                    const dx = n2.x - n1.x;
+                    const dy = n2.y - n1.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy) + 0.01;
+                    const force = repulsion / (dist * dist);
+                    const fx = (dx / dist) * force;
+                    const fy = (dy / dist) * force;
+                    n1.vx -= fx * alpha;
+                    n1.vy -= fy * alpha;
+                    n2.vx += fx * alpha;
+                    n2.vy += fy * alpha;
+                }
+            }
+
+            // Attraction along connections
+            for (const conn of connections) {
+                const dx = conn.target.x - conn.source.x;
+                const dy = conn.target.y - conn.source.y;
+                const fx = dx * attraction;
+                const fy = dy * attraction;
+                conn.source.vx += fx;
+                conn.source.vy += fy;
+                conn.target.vx -= fx;
+                conn.target.vy -= fy;
+            }
+
+            // Apply velocity and damping
+            for (const node of nodes) {
+                node.x += node.vx;
+                node.y += node.vy;
+                node.vx *= damping;
+                node.vy *= damping;
+            }
+        }
+
+        function render() {
+            // Update physics
+            updatePhysics();
+
+            // Clear
+            ctx.fillStyle = 'rgba(10, 10, 15, 0.3)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Apply camera transform
+            ctx.save();
+            ctx.translate(canvas.width / 2, canvas.height / 2);
+            ctx.scale(camera.zoom, camera.zoom);
+            ctx.translate(camera.x, camera.y);
+
+            // Draw connections
+            ctx.strokeStyle = 'rgba(100, 100, 150, 0.2)';
+            ctx.lineWidth = 1 / camera.zoom;
+            for (const conn of connections) {
+                // Highlight if connected to selected node
+                if (selectedNode && (conn.source === selectedNode || conn.target === selectedNode)) {
+                    ctx.strokeStyle = 'rgba(0, 212, 255, 0.4)';
+                    ctx.lineWidth = 2 / camera.zoom;
+                } else {
+                    ctx.strokeStyle = 'rgba(100, 100, 150, 0.1)';
+                    ctx.lineWidth = 1 / camera.zoom;
+                }
+
+                ctx.beginPath();
+                ctx.moveTo(conn.source.x, conn.source.y);
+                ctx.lineTo(conn.target.x, conn.target.y);
+                ctx.stroke();
+            }
+
+            // Draw nodes
+            for (const node of nodes) {
+                // Size based on connections
+                const size = Math.max(3, Math.min(15, node.connections.length));
+
+                // Color based on type
+                let color = '#666';
+                if (node === selectedNode) {
+                    color = '#00d4ff';
+                } else if (node === hoveredNode) {
+                    color = '#9d4edd';
+                } else if (selectedNode && selectedNode.connections.includes(node.id)) {
+                    color = '#00d4ff';
+                }
+
+                ctx.fillStyle = color;
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, size / camera.zoom, 0, Math.PI * 2);
+                ctx.fill();
+
+                // Draw label if zoomed in or selected
+                if (camera.zoom > 0.7 || node === selectedNode || node === hoveredNode) {
+                    ctx.fillStyle = '#e0e0e0';
+                    ctx.font = `${12 / camera.zoom}px sans-serif`;
+                    ctx.textAlign = 'center';
+                    ctx.fillText(node.label, node.x, node.y - size / camera.zoom - 5);
+                }
+            }
+
+            ctx.restore();
+
+            requestAnimationFrame(render);
+        }
+    </script>
+</body>
+</html>
