@@ -18,7 +18,9 @@
       "Bash(python:*)",
       "Bash(git commit:*)",
       "Bash(git pull:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "WebFetch(domain:neildegrassetyson.com)",
+      "WebFetch(domain:time.com)"
     ],
     "deny": [],
     "ask": []
