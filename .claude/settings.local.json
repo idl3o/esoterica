@@ -20,7 +20,8 @@
       "Bash(git pull:*)",
       "Bash(dir:*)",
       "WebFetch(domain:neildegrassetyson.com)",
-      "WebFetch(domain:time.com)"
+      "WebFetch(domain:time.com)",
+      "WebFetch(domain:tsakraklides.com)"
     ],
     "deny": [],
     "ask": []
