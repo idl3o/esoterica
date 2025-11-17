@@ -21,7 +21,8 @@
       "Bash(dir:*)",
       "WebFetch(domain:neildegrassetyson.com)",
       "WebFetch(domain:time.com)",
-      "WebFetch(domain:tsakraklides.com)"
+      "WebFetch(domain:tsakraklides.com)",
+      "WebFetch(domain:x.com)"
     ],
     "deny": [],
     "ask": []
