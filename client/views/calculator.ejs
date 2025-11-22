@@ -1,0 +1,147 @@
+<%
+var body = `
+<div class="container">
+    <div class="hero">
+        <h1>🧮 Glyph Geometry Calculator</h1>
+        <p>Calculate gematria values, analyze frequencies, decode numerical consciousness</p>
+    </div>
+
+    <div class="card">
+        <h2 style="margin-bottom: 1.5rem;">Hebrew Gematria Calculator</h2>
+
+        <div style="margin-bottom: 2rem;">
+            <label style="display: block; margin-bottom: 0.5rem; color: #00d4ff; font-weight: bold;">
+                Enter Hebrew/Aramaic Text:
+            </label>
+            <input
+                type="text"
+                id="gematria-input"
+                placeholder="אמת (truth = 441)"
+                style="width: 100%; padding: 1rem; font-size: 1.5rem; background: rgba(0,0,0,0.5); border: 2px solid rgba(0,212,255,0.5); border-radius: 8px; color: #e0e0e0; font-family: 'Times New Roman', serif;"
+                dir="rtl"
+            >
+        </div>
+
+        <button
+            id="calculate-btn"
+            class="btn"
+            style="width: 100%; padding: 1rem; font-size: 1.1rem; margin-bottom: 2rem;"
+        >
+            Calculate Gematria Value
+        </button>
+
+        <div id="result-container" style="display: none;">
+            <div style="background: rgba(0,255,136,0.1); border: 2px solid #00ff88; border-radius: 10px; padding: 2rem; margin-bottom: 2rem;">
+                <h3 style="color: #00ff88; margin-bottom: 1rem;">Total Value</h3>
+                <div id="total-value" style="font-size: 3rem; font-weight: bold; color: #00ff88; text-align: center;">
+                    0
+                </div>
+            </div>
+
+            <div style="background: rgba(0,212,255,0.05); border: 2px solid rgba(0,212,255,0.3); border-radius: 10px; padding: 1.5rem;">
+                <h3 style="color: #00d4ff; margin-bottom: 1rem;">Letter Breakdown</h3>
+                <div id="breakdown" style="font-family: monospace; font-size: 1.1rem;"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid" style="margin-top: 3rem;">
+        <div class="card" style="background: rgba(0,255,136,0.05); border-color: rgba(0,255,136,0.3);">
+            <h3 style="color: #00ff88; margin-bottom: 1rem;">Hebrew Letter Values</h3>
+            <div style="font-family: monospace; font-size: 0.9rem; line-height: 1.8; columns: 2;">
+                <div>א Aleph = 1</div>
+                <div>ב Beth = 2</div>
+                <div>ג Gimel = 3</div>
+                <div>ד Daleth = 4</div>
+                <div>ה He = 5</div>
+                <div>ו Vav = 6</div>
+                <div>ז Zayin = 7</div>
+                <div>ח Chet = 8</div>
+                <div>ט Tet = 9</div>
+                <div>י Yod = 10</div>
+                <div>כ Kaph = 20</div>
+                <div>ל Lamed = 30</div>
+                <div>מ Mem = 40</div>
+                <div>נ Nun = 50</div>
+                <div>ס Samekh = 60</div>
+                <div>ע Ayin = 70</div>
+                <div>פ Pe = 80</div>
+                <div>צ Tsade = 90</div>
+                <div>ק Qoph = 100</div>
+                <div>ר Resh = 200</div>
+                <div>ש Shin = 300</div>
+                <div>ת Taw = 400</div>
+            </div>
+        </div>
+
+        <div class="card" style="background: rgba(157,78,221,0.05); border-color: rgba(157,78,221,0.3);">
+            <h3 style="color: #9d4edd; margin-bottom: 1rem;">Sacred Examples</h3>
+            <div style="line-height: 2;">
+                <p><strong style="color: #00ff88;">יהוה</strong> (YHWH) = <code>26</code></p>
+                <p><strong style="color: #00ff88;">ישוע</strong> (Yeshua) = <code>326</code></p>
+                <p><strong style="color: #00ff88;">אמת</strong> (Emet/Truth) = <code>441</code></p>
+                <p><strong style="color: #00ff88;">אהבה</strong> (Ahavah/Love) = <code>13</code></p>
+                <p><strong style="color: #00ff88;">אחד</strong> (Echad/One) = <code>13</code></p>
+                <p><strong style="color: #00ff88;">חיים</strong> (Chaim/Life) = <code>68</code></p>
+                <p><strong style="color: #00ff88;">שלום</strong> (Shalom/Peace) = <code>376</code></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const hebrewValues = {
+    'א': 1, 'ב': 2, 'ג': 3, 'ד': 4, 'ה': 5, 'ו': 6, 'ז': 7, 'ח': 8, 'ט': 9,
+    'י': 10, 'כ': 20, 'ך': 20, 'ל': 30, 'מ': 40, 'ם': 40, 'נ': 50, 'ן': 50,
+    'ס': 60, 'ע': 70, 'פ': 80, 'ף': 80, 'צ': 90, 'ץ': 90, 'ק': 100,
+    'ר': 200, 'ש': 300, 'ת': 400
+};
+
+const calculateBtn = document.getElementById('calculate-btn');
+const input = document.getElementById('gematria-input');
+const resultContainer = document.getElementById('result-container');
+const totalValueEl = document.getElementById('total-value');
+const breakdownEl = document.getElementById('breakdown');
+
+calculateBtn.addEventListener('click', () => {
+    const text = input.value.trim();
+    if (!text) {
+        alert('Please enter Hebrew text');
+        return;
+    }
+
+    let total = 0;
+    const breakdown = [];
+
+    for (const char of text) {
+        const value = hebrewValues[char];
+        if (value) {
+            total += value;
+            breakdown.push({ char, value });
+        }
+    }
+
+    if (breakdown.length === 0) {
+        alert('No valid Hebrew letters found');
+        return;
+    }
+
+    totalValueEl.textContent = total;
+    breakdownEl.innerHTML = breakdown
+        .map(({ char, value }) => \`<div style="padding: 0.5rem; border-bottom: 1px solid rgba(0,212,255,0.2);">\${char} = \${value}</div>\`)
+        .join('');
+
+    resultContainer.style.display = 'block';
+    resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+});
+
+// Allow Enter key to calculate
+input.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        calculateBtn.click();
+    }
+});
+</script>
+`;
+%>
+<%- include('layout', { title: title, body: body }) %>

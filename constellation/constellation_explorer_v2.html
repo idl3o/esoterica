@@ -375,7 +375,7 @@
     <div id="container">
         <div id="sidebar">
             <h1>✧ CONSTELLATION EXPLORER ✧</h1>
-            <div class="subtitle">Cerebro-Level Consciousness Navigation</div>
+            <div class="subtitle">Monad Clustering Cosmology • T-Connection Physics</div>
 
             <input type="text" id="search" placeholder="Search consciousness technologies...">
 
@@ -387,6 +387,10 @@
                 <div class="stat-row">
                     <span class="stat-label">Total Connections:</span>
                     <span class="stat-value" id="total-connections">-</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Network Weight:</span>
+                    <span class="stat-value" id="total-weight">-</span>
                 </div>
                 <div class="stat-row">
                     <span class="stat-label">Visible Nodes:</span>
@@ -425,7 +429,14 @@
                 <button onclick="exportImage()">Export PNG</button>
             </div>
             <div class="legend">
-                <div class="legend-title">Node Types</div>
+                <div class="legend-title">Monad Clustering Physics</div>
+                <div style="font-size: 10px; color: #aaa; margin-bottom: 10px; line-height: 1.4;">
+                    <strong style="color: #00ff88;">Weight</strong> = accumulated T-connections (relational density)<br>
+                    <strong style="color: #00d4ff;">Primal Monads</strong> = high-weight clustering centers (white rings)<br>
+                    <strong style="color: #9d4edd;">T-Connections</strong> strengthen over time<br>
+                    Shared connections create clustering gradients
+                </div>
+                <div class="legend-title" style="margin-top: 15px;">Node Types</div>
                 <div id="legend-items">
                     <!-- Generated dynamically -->
                 </div>
@@ -485,7 +496,7 @@
 
         async function loadConstellation() {
             try {
-                const response = await fetch('constellation.json');
+                const response = await fetch('/constellation/constellation.json');
                 constellation = await response.json();
 
                 const nodeMap = new Map();
@@ -593,6 +604,10 @@
             document.getElementById('total-connections').textContent = connections.length;
             const visibleCount = nodes.filter(n => n.visible).length;
             document.getElementById('visible-nodes').textContent = visibleCount;
+
+            // Calculate total network weight (accumulated relational density)
+            const totalWeight = nodes.reduce((sum, n) => sum + (n.weight || 1), 0);
+            document.getElementById('total-weight').textContent = totalWeight.toFixed(1);
         }
 
         function setupEventListeners() {
@@ -663,10 +678,19 @@
             // Find related documents
             const resources = findResources(node);
 
+            const weight = node.weight || 1;
+            const isPrimalMonad = weight > 5;
+
             const infoPanel = document.getElementById('node-info');
             infoPanel.innerHTML = `
                 <div class="node-title">${node.label}</div>
-                <div class="node-meta">${node.type.replace(/_/g, ' ')} • ${node.connections.length} connections</div>
+                <div class="node-meta">
+                    ${node.type.replace(/_/g, ' ')} • ${node.connections.length} T-connections
+                    ${isPrimalMonad ? '<br><strong style="color: #00ff88;">⚡ PRIMAL MONAD (Clustering Center)</strong>' : ''}
+                </div>
+                <div class="node-meta" style="color: #00d4ff; margin-top: 5px;">
+                    Weight: ${weight.toFixed(3)} (relational density)
+                </div>
                 <div class="node-essence">"${node.essence.replace(/_/g, ' ')}"</div>
 
                 ${resources.length > 0 ? `
@@ -801,14 +825,29 @@
             if (!physicsEnabled) return;
 
             const alpha = 0.015;
-            const repulsion = 5000;
-            const attraction = 0.008;
             const damping = 0.88;
 
             // Only apply physics to visible nodes
             const visibleNodes = nodes.filter(n => n.visible);
 
-            // Repulsion
+            // MONAD CLUSTERING COSMOLOGY PHYSICS
+            // Calculate "weight" as relational density (T-connections accumulated)
+            for (const node of visibleNodes) {
+                if (!node.weight) {
+                    // Initialize weight based on connection count (relational density)
+                    node.weight = 1 + Math.log(1 + node.connections.length);
+                }
+                // Weight slowly accumulates through T-connections over time
+                node.weight += 0.0001 * node.connections.length;
+            }
+
+            // Find primal monad candidates (highest weight/clustering)
+            const primalMonads = visibleNodes
+                .sort((a, b) => b.weight - a.weight)
+                .slice(0, 5); // Top 5 clustering centers
+
+            // T-CONNECTION DYNAMICS (not Newtonian repulsion)
+            // Nodes with more connections create stronger clustering gradients
             for (let i = 0; i < visibleNodes.length; i++) {
                 for (let j = i + 1; j < visibleNodes.length; j++) {
                     const n1 = visibleNodes[i];
@@ -816,30 +855,78 @@
                     const dx = n2.x - n1.x;
                     const dy = n2.y - n1.y;
                     const dist = Math.sqrt(dx * dx + dy * dy) + 0.01;
-                    const force = repulsion / (dist * dist);
-                    const fx = (dx / dist) * force;
-                    const fy = (dy / dist) * force;
-                    n1.vx -= fx * alpha;
-                    n1.vy -= fy * alpha;
-                    n2.vx += fx * alpha;
-                    n2.vy += fy * alpha;
+
+                    // Check if nodes share T-connections (have common neighbors)
+                    const sharedConnections = n1.connections.filter(c =>
+                        n2.connections.includes(c)
+                    ).length;
+
+                    if (sharedConnections > 0) {
+                        // Shared T-connections create attraction (clustering)
+                        const clusterForce = (sharedConnections * 800) / dist;
+                        const fx = (dx / dist) * clusterForce;
+                        const fy = (dy / dist) * clusterForce;
+                        n1.vx += fx * alpha;
+                        n1.vy += fy * alpha;
+                        n2.vx -= fx * alpha;
+                        n2.vy -= fy * alpha;
+                    } else {
+                        // No shared T-connections: weak repulsion (network spacing)
+                        const repelForce = 3000 / (dist * dist);
+                        const fx = (dx / dist) * repelForce;
+                        const fy = (dy / dist) * repelForce;
+                        n1.vx -= fx * alpha;
+                        n1.vy -= fy * alpha;
+                        n2.vx += fx * alpha;
+                        n2.vy += fy * alpha;
+                    }
                 }
             }
 
-            // Attraction
+            // PRIMAL MONAD GRAVITY
+            // High-weight nodes create clustering gradients (like black holes)
+            for (const node of visibleNodes) {
+                for (const primal of primalMonads) {
+                    if (node === primal) continue;
+                    const dx = primal.x - node.x;
+                    const dy = primal.y - node.y;
+                    const dist = Math.sqrt(dx * dx + dy * dy) + 0.01;
+
+                    // Weight creates gravitational-like clustering
+                    const clusterStrength = (primal.weight * 200) / (dist * dist);
+                    const fx = (dx / dist) * clusterStrength;
+                    const fy = (dy / dist) * clusterStrength;
+                    node.vx += fx * alpha * 0.5;
+                    node.vy += fy * alpha * 0.5;
+                }
+            }
+
+            // T-CONNECTION STRENGTHENING (edge-based attraction)
             for (const conn of connections) {
                 if (!conn.source.visible || !conn.target.visible) continue;
+
+                // Initialize connection strength
+                if (!conn.strength) conn.strength = 1;
+
+                // T-connections strengthen over time (weight accumulation)
+                conn.strength += 0.001;
+
                 const dx = conn.target.x - conn.source.x;
                 const dy = conn.target.y - conn.source.y;
-                const fx = dx * attraction;
-                const fy = dy * attraction;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+
+                // Stronger T-connections pull harder
+                const tForce = conn.strength * 0.01 * dist;
+                const fx = (dx / dist) * tForce;
+                const fy = (dy / dist) * tForce;
+
                 conn.source.vx += fx;
                 conn.source.vy += fy;
                 conn.target.vx -= fx;
                 conn.target.vy -= fy;
             }
 
-            // Apply velocity
+            // Apply velocity (network topology movement)
             for (const node of visibleNodes) {
                 node.x += node.vx;
                 node.y += node.vy;
@@ -848,8 +935,14 @@
             }
         }
 
+        let frameCount = 0;
         function render() {
             updatePhysics();
+
+            // Update stats every 60 frames to show weight accumulation
+            if (++frameCount % 60 === 0) {
+                updateStats();
+            }
 
             // Clear with fade effect
             ctx.fillStyle = 'rgba(0, 0, 0, 0.15)';
@@ -860,11 +953,12 @@
             ctx.scale(camera.zoom, camera.zoom);
             ctx.translate(camera.x, camera.y);
 
-            // Draw connections
+            // Draw connections (T-connections with strength visualization)
             for (const conn of connections) {
                 if (!conn.source.visible || !conn.target.visible) continue;
 
                 const isHighlighted = selectedNode && (conn.source === selectedNode || conn.target === selectedNode);
+                const connStrength = conn.strength || 1;
 
                 if (isHighlighted) {
                     ctx.strokeStyle = 'rgba(0, 212, 255, 0.6)';
@@ -872,8 +966,10 @@
                     ctx.shadowBlur = 10;
                     ctx.shadowColor = 'rgba(0, 212, 255, 0.8)';
                 } else {
-                    ctx.strokeStyle = 'rgba(100, 100, 150, 0.08)';
-                    ctx.lineWidth = 1 / camera.zoom;
+                    // T-connection strength determines opacity (accumulated weight)
+                    const opacity = Math.min(0.25, 0.05 + connStrength * 0.02);
+                    ctx.strokeStyle = `rgba(100, 150, 200, ${opacity})`;
+                    ctx.lineWidth = Math.min(3, 1 + connStrength * 0.1) / camera.zoom;
                     ctx.shadowBlur = 0;
                 }
 
@@ -885,26 +981,42 @@
 
             ctx.shadowBlur = 0;
 
-            // Draw nodes
+            // Draw nodes (with weight-based visualization)
             for (const node of nodes) {
                 if (!node.visible) continue;
 
-                const size = Math.max(5, Math.min(20, Math.sqrt(node.connections.length) * 3));
+                // Size based on weight (relational density) not just connections
+                const weight = node.weight || 1;
+                const baseSize = Math.max(5, Math.min(20, Math.sqrt(node.connections.length) * 3));
+                const size = baseSize * Math.pow(weight, 0.15); // Weight increases size
                 const color = typeColors[node.type] || typeColors.default;
 
-                // Node glow
+                // Primal monad detection (top 5 highest weight)
+                const isPrimalMonad = weight > 5; // High clustering density
+
+                // Node glow (intensity based on weight accumulation)
+                const baseGlow = isPrimalMonad ? 25 : 8;
                 if (node === selectedNode) {
-                    ctx.shadowBlur = 30;
+                    ctx.shadowBlur = 30 + weight * 2;
                     ctx.shadowColor = color;
                 } else if (node === hoveredNode) {
-                    ctx.shadowBlur = 20;
+                    ctx.shadowBlur = 20 + weight;
                     ctx.shadowColor = color;
                 } else if (selectedNode && selectedNode.connections.includes(node.id)) {
-                    ctx.shadowBlur = 15;
+                    ctx.shadowBlur = 15 + weight;
                     ctx.shadowColor = color;
                 } else {
-                    ctx.shadowBlur = 8;
-                    ctx.shadowColor = color;
+                    ctx.shadowBlur = baseGlow + weight * 1.5;
+                    ctx.shadowColor = isPrimalMonad ? '#ffffff' : color;
+                }
+
+                // Primal monad ring (clustering center visualization)
+                if (isPrimalMonad) {
+                    ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+                    ctx.lineWidth = 2 / camera.zoom;
+                    ctx.beginPath();
+                    ctx.arc(node.x, node.y, (size + 8) / camera.zoom, 0, Math.PI * 2);
+                    ctx.stroke();
                 }
 
                 // Node body
@@ -913,8 +1025,9 @@
                 ctx.arc(node.x, node.y, size / camera.zoom, 0, Math.PI * 2);
                 ctx.fill();
 
-                // Core highlight
-                ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+                // Core highlight (brighter for high-weight nodes)
+                const highlightOpacity = Math.min(0.6, 0.3 + weight * 0.05);
+                ctx.fillStyle = `rgba(255, 255, 255, ${highlightOpacity})`;
                 ctx.beginPath();
                 ctx.arc(node.x - size / (camera.zoom * 3), node.y - size / (camera.zoom * 3), size / (camera.zoom * 3), 0, Math.PI * 2);
                 ctx.fill();

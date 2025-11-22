@@ -1,0 +1,148 @@
+<%
+var body = `
+<div class="container">
+    <div style="margin-bottom: 2rem;">
+        <a href="/library" style="color: #00d4ff; text-decoration: none; font-size: 0.95rem;">
+            ← Back to Library
+        </a>
+    </div>
+
+    <div class="card" style="max-width: 900px; margin: 0 auto;">
+        <article class="document-content" style="line-height: 1.8; color: #e0e0e0;">
+            ${content}
+        </article>
+    </div>
+
+    <div style="text-align: center; margin: 3rem 0;">
+        <a href="/library" class="btn">Browse All Documents</a>
+        <a href="/explorer" class="btn" style="margin-left: 1rem;">Explore Constellation</a>
+    </div>
+</div>
+
+<style>
+.document-content h1 {
+    color: #00ff88;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #00d4ff 0%, #9d4edd 50%, #00ff88 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.document-content h2 {
+    color: #00d4ff;
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(0,212,255,0.3);
+}
+
+.document-content h3 {
+    color: #9d4edd;
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.document-content h4 {
+    color: #00ff88;
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.document-content p {
+    margin-bottom: 1rem;
+}
+
+.document-content ul,
+.document-content ol {
+    margin: 1rem 0 1rem 2rem;
+    line-height: 1.8;
+}
+
+.document-content li {
+    margin-bottom: 0.5rem;
+}
+
+.document-content code {
+    background: rgba(0,0,0,0.5);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    color: #00ff88;
+    font-family: 'Courier New', monospace;
+}
+
+.document-content pre {
+    background: rgba(0,0,0,0.5);
+    border: 2px solid rgba(0,212,255,0.3);
+    border-radius: 8px;
+    padding: 1.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.document-content pre code {
+    background: none;
+    padding: 0;
+}
+
+.document-content blockquote {
+    border-left: 4px solid #00ff88;
+    background: rgba(0,255,136,0.05);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #aaa;
+}
+
+.document-content a {
+    color: #00d4ff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,212,255,0.3);
+    transition: all 0.3s;
+}
+
+.document-content a:hover {
+    color: #00ff88;
+    border-bottom-color: #00ff88;
+}
+
+.document-content strong {
+    color: #00ff88;
+    font-weight: 600;
+}
+
+.document-content em {
+    color: #9d4edd;
+}
+
+.document-content hr {
+    border: none;
+    border-top: 2px solid rgba(0,212,255,0.3);
+    margin: 2rem 0;
+}
+
+.document-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.document-content th,
+.document-content td {
+    padding: 0.75rem;
+    border: 1px solid rgba(0,212,255,0.3);
+}
+
+.document-content th {
+    background: rgba(0,212,255,0.1);
+    color: #00d4ff;
+    font-weight: bold;
+}
+</style>
+`;
+%>
+<%- include('layout', { title: title, body: body }) %>

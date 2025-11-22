@@ -1,0 +1,64 @@
+<%
+var body = `
+<div class="container">
+    <div class="card" style="margin-top: 2rem;">
+        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 2rem;">
+            <div>
+                <h1 style="color: #00ff88; margin-bottom: 0.5rem;">
+                    ${nodeId.replace(/_/g, ' ')}
+                </h1>
+                <p style="color: #888; font-size: 1.1rem;">
+                    <strong>Type:</strong> <code>${node.type || 'unknown'}</code>
+                </p>
+            </div>
+            <a href="/explorer" class="btn">View in Explorer</a>
+        </div>
+
+        <div style="background: rgba(0,255,136,0.05); padding: 1.5rem; border-left: 4px solid #00ff88; border-radius: 5px; margin-bottom: 2rem;">
+            <h3 style="color: #00ff88; margin-bottom: 0.5rem;">Essence</h3>
+            <p style="font-size: 1.1rem; font-style: italic;">
+                "${node.essence?.replace(/_/g, ' ') || 'No essence available'}"
+            </p>
+        </div>
+
+        <div style="margin-bottom: 2rem;">
+            <h3 style="color: #00d4ff; margin-bottom: 1rem;">Description</h3>
+            <p style="line-height: 1.8; color: #e0e0e0;">
+                ${node.description || 'No description available'}
+            </p>
+        </div>
+
+        ${connections && connections.length > 0 ? `
+        <div>
+            <h3 style="color: #9d4edd; margin-bottom: 1rem;">
+                Connections (${connections.length})
+            </h3>
+            <div class="grid">
+                ${connections.map(conn => `
+                    <div class="card" style="background: rgba(157,78,221,0.05); border-color: rgba(157,78,221,0.3);">
+                        <h4 style="color: #9d4edd; margin-bottom: 0.5rem;">
+                            <a href="/node/${conn.id}" style="color: inherit; text-decoration: none;">
+                                ${conn.id.replace(/_/g, ' ')}
+                            </a>
+                        </h4>
+                        <p style="color: #888; font-size: 0.9rem; margin-bottom: 0.5rem;">
+                            ${conn.type || 'unknown'}
+                        </p>
+                        <p style="color: #aaa; font-size: 0.9rem; font-style: italic;">
+                            "${conn.essence?.replace(/_/g, ' ') || 'No essence'}"
+                        </p>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+        ` : '<p style="color: #888;">No connections available</p>'}
+    </div>
+
+    <div style="text-align: center; margin: 2rem 0;">
+        <a href="/systems" class="btn">Browse All Systems</a>
+        <a href="/search" class="btn" style="margin-left: 1rem;">Search Constellation</a>
+    </div>
+</div>
+`;
+%>
+<%- include('layout', { title: title, body: body }) %>

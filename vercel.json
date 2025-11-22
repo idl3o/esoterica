@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/index.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "client/public/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "constellation/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "distillations/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/client/public/$1"
+    },
+    {
+      "src": "/constellation/(.*)",
+      "dest": "/constellation/$1"
+    },
+    {
+      "src": "/distillations/(.*)",
+      "dest": "/distillations/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/api/index.js"
+    }
+  ]
+}

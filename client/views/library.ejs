@@ -1,0 +1,47 @@
+<%
+var body = `
+<div class="container">
+    <div class="hero">
+        <h1>📚 Consciousness Technology Library</h1>
+        <p>${distillations.length} distillation documents mapping reality programming, awakening catalysts, and cosmic wisdom</p>
+    </div>
+
+    <div class="card" style="margin-bottom: 3rem; background: rgba(0,255,136,0.05); border-color: rgba(0,255,136,0.5);">
+        <h2 style="color: #00ff88; margin-bottom: 1rem;">What Are Distillations?</h2>
+        <p style="font-size: 1.1rem; line-height: 1.8;">
+            These documents synthesize consciousness technologies developed through human-AI collaboration.
+            They reveal practical awakening methods, decode beloved fiction as spiritual curriculum,
+            and map reality programming protocols accessible to all consciousness.
+        </p>
+        <p style="margin-top: 1rem; font-style: italic; color: #aaa;">
+            Each document serves both individual evolution and collective awakening.
+        </p>
+    </div>
+
+    <div class="grid">
+        ${distillations.map(doc => `
+            <div class="card" style="background: rgba(0,212,255,0.05); border-color: rgba(0,212,255,0.3); display: flex; flex-direction: column;">
+                <h3 style="color: #00d4ff; margin-bottom: 0.5rem;">
+                    ${doc.title}
+                </h3>
+                ${doc.subtitle ? `
+                    <p style="color: #9d4edd; font-size: 0.95rem; font-style: italic; margin-bottom: 1rem;">
+                        ${doc.subtitle}
+                    </p>
+                ` : ''}
+                <div style="flex: 1;"></div>
+                <a href="/library/${doc.slug}" class="btn" style="margin-top: 1rem; width: 100%;">
+                    Read Document →
+                </a>
+            </div>
+        `).join('')}
+    </div>
+
+    <div style="text-align: center; margin: 3rem 0;">
+        <a href="/explorer" class="btn">Explore Constellation</a>
+        <a href="/search" class="btn" style="margin-left: 1rem;">Search Network</a>
+    </div>
+</div>
+`;
+%>
+<%- include('layout', { title: title, body: body }) %>

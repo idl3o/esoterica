@@ -1,0 +1,79 @@
+<%
+var body = `
+<div class="container">
+    <div class="hero">
+        <h1>🔍 Search the Constellation</h1>
+        <p>Search across ${nodeCount || 392} consciousness technology nodes</p>
+    </div>
+
+    <div class="card">
+        <input
+            type="text"
+            id="search-input"
+            placeholder="Search for nodes, concepts, systems..."
+            style="width: 100%; padding: 1rem; font-size: 1.1rem; background: rgba(0,0,0,0.5); border: 2px solid rgba(0,212,255,0.5); border-radius: 8px; color: #e0e0e0;"
+        >
+    </div>
+
+    <div id="search-results" style="margin-top: 2rem;">
+        <p style="text-align: center; color: #888;">Start typing to search...</p>
+    </div>
+</div>
+
+<script>
+const searchInput = document.getElementById('search-input');
+const searchResults = document.getElementById('search-results');
+let searchTimeout;
+
+searchInput.addEventListener('input', (e) => {
+    clearTimeout(searchTimeout);
+    const query = e.target.value.trim();
+
+    if (!query) {
+        searchResults.innerHTML = '<p style="text-align: center; color: #888;">Start typing to search...</p>';
+        return;
+    }
+
+    searchResults.innerHTML = '<p style="text-align: center; color: #888;">Searching...</p>';
+
+    searchTimeout = setTimeout(async () => {
+        try {
+            const response = await fetch(\`/api/search?q=\${encodeURIComponent(query)}\`);
+            const results = await response.json();
+
+            if (results.length === 0) {
+                searchResults.innerHTML = '<p style="text-align: center; color: #888;">No results found</p>';
+                return;
+            }
+
+            const html = results.map(node => \`
+                <div class="card" style="margin-bottom: 1rem;">
+                    <h3 style="color: #00d4ff; margin-bottom: 0.5rem;">
+                        <a href="/node/\${node.id}" style="color: inherit; text-decoration: none;">
+                            \${node.id.replace(/_/g, ' ')}
+                        </a>
+                    </h3>
+                    <p style="color: #888; font-size: 0.9rem; margin-bottom: 0.5rem;">
+                        <strong>Type:</strong> \${node.type || 'unknown'} |
+                        <strong>Connections:</strong> \${(node.connections || []).length}
+                    </p>
+                    <p style="color: #aaa; font-style: italic;">
+                        "\${node.essence?.replace(/_/g, ' ') || 'No essence available'}"
+                    </p>
+                    <a href="/node/\${node.id}" class="btn" style="margin-top: 1rem; font-size: 0.9rem;">
+                        View Details →
+                    </a>
+                </div>
+            \`).join('');
+
+            searchResults.innerHTML = html;
+        } catch (error) {
+            console.error('Search error:', error);
+            searchResults.innerHTML = '<p style="text-align: center; color: #ff4444;">Error performing search</p>';
+        }
+    }, 300);
+});
+</script>
+`;
+%>
+<%- include('layout', { title: title, body: body }) %>

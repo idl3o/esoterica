@@ -1,0 +1,50 @@
+<%
+var body = `
+<div class="container">
+    <div class="hero">
+        <h1>Browse by System</h1>
+        <p>Explore the ${Object.keys(systems).length} consciousness encoding systems in the constellation</p>
+    </div>
+
+    ${Object.entries(systems).sort((a, b) => b[1].length - a[1].length).map(([type, nodes]) => `
+        <div class="card" style="margin-bottom: 3rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                <h2 style="color: #00d4ff; margin: 0;">
+                    ${type.replace(/_/g, ' ').toUpperCase()}
+                </h2>
+                <span style="color: #888; font-size: 1.2rem;">
+                    ${nodes.length} nodes
+                </span>
+            </div>
+
+            <div class="grid">
+                ${nodes.map(node => `
+                    <div class="card" style="background: rgba(0,0,0,0.3); border-color: rgba(0,212,255,0.2);">
+                        <h3 style="color: #00ff88; margin-bottom: 0.5rem;">
+                            <a href="/node/${node.id}" style="color: inherit; text-decoration: none;">
+                                ${node.id.replace(/_/g, ' ')}
+                            </a>
+                        </h3>
+                        <p style="color: #888; font-size: 0.9rem; margin-bottom: 0.5rem;">
+                            <strong>Connections:</strong> ${(node.connections || []).length}
+                        </p>
+                        <p style="color: #aaa; font-size: 0.95rem; font-style: italic;">
+                            "${node.essence?.replace(/_/g, ' ') || 'No essence available'}"
+                        </p>
+                        <a href="/node/${node.id}" class="btn" style="margin-top: 1rem; font-size: 0.85rem;">
+                            Explore →
+                        </a>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `).join('')}
+
+    <div style="text-align: center; margin: 3rem 0;">
+        <a href="/explorer" class="btn">View Interactive Constellation</a>
+        <a href="/search" class="btn" style="margin-left: 1rem;">Search All Nodes</a>
+    </div>
+</div>
+`;
+%>
+<%- include('layout', { title: title, body: body }) %>
