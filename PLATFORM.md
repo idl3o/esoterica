@@ -2,7 +2,9 @@
 
 **Interactive consciousness technology network explorer**
 
-The Esoterica Web Platform is a full-stack Node.js application providing an interactive interface to explore the Global Glyph Geometry Network—392 consciousness technologies mapped across six mystical systems.
+🌐 **Live Platform**: https://esoterica.vercel.app/
+
+The Esoterica Web Platform is a full-stack Node.js application providing an interactive interface to explore the Global Glyph Geometry Network—274+ consciousness technologies mapped across six mystical systems.
 
 ## 🚀 Quick Start
 
