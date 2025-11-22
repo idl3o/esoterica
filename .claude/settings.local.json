@@ -22,7 +22,15 @@
       "WebFetch(domain:neildegrassetyson.com)",
       "WebFetch(domain:time.com)",
       "WebFetch(domain:tsakraklides.com)",
-      "WebFetch(domain:x.com)"
+      "WebFetch(domain:x.com)",
+      "Bash(start constellation_explorer_v2.html)",
+      "Bash(npm install:*)",
+      "Bash(npm start)",
+      "Bash(start http://localhost:3000)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill:*)",
+      "Bash(start http://localhost:3000/explorer)"
     ],
     "deny": [],
     "ask": []
