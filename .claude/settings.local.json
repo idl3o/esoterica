@@ -30,7 +30,11 @@
       "Bash(netstat:*)",
       "Bash(findstr:*)",
       "Bash(taskkill:*)",
-      "Bash(start http://localhost:3000/explorer)"
+      "Bash(start http://localhost:3000/explorer)",
+      "WebFetch(domain:docs.ipfs.tech)",
+      "WebFetch(domain:github.com)",
+      "Bash(mkdir:*)",
+      "WebFetch(domain:camelot.wiki)"
     ],
     "deny": [],
     "ask": []
