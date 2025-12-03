@@ -9,7 +9,9 @@
   "scripts": {
     "start": "node server/app.js",
     "dev": "nodemon server/app.js",
-    "test": "echo \"Tests coming soon\" && exit 0"
+    "test": "echo \"Tests coming soon\" && exit 0",
+    "build": "node build-synthesis-index.js",
+    "vercel-build": "node build-synthesis-index.js"
   },
   "keywords": [
     "consciousness",
