@@ -36,7 +36,8 @@
       "Bash(mkdir:*)",
       "WebFetch(domain:camelot.wiki)",
       "Bash(node build-synthesis-index.js)",
-      "Bash(open synthesis-library.html)"
+      "Bash(open synthesis-library.html)",
+      "Bash(open synthesis-library-v2.html)"
     ],
     "deny": [],
     "ask": []
