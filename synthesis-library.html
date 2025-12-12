@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Synthesis Library</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root {
+            --cyan: #00d4ff;
+            --purple: #9d4edd;
+            --green: #00ff88;
+            --bg: #000;
+            --surface: #0a0a0f;
+            --text: #e0e0e0;
+            --text-dim: #888;
+            --border: rgba(0, 212, 255, 0.15);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* INTRO SECTION */
+        #intro {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(0, 212, 255, 0.03) 0%, var(--bg) 70%);
+            position: relative;
+        }
+
+        #intro.hidden {
+            display: none;
+        }
+
+        .intro-logo {
+            font-size: 72px;
+            margin-bottom: 24px;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.05); }
+        }
+
+        .intro-title {
+            font-size: 32px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--cyan), var(--purple), var(--green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+        }
+
+        .intro-subtitle {
+            font-size: 18px;
+            color: var(--text-dim);
+            margin-bottom: 32px;
+            max-width: 600px;
+        }
+
+        .intro-stats {
+            display: flex;
+            gap: 32px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .intro-stat {
+            text-align: center;
+        }
+
+        .intro-stat-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--cyan);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .intro-stat-label {
+            font-size: 13px;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .enter-btn {
+            padding: 18px 48px;
+            background: var(--cyan);
+            color: #000;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .enter-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(0, 212, 255, 0.5);
+        }
+
+        .enter-btn:active {
+            transform: scale(0.98);
+        }
+
+        /* LIBRARY VIEW */
+        #library {
+            display: none;
+            min-height: 100vh;
+            padding-bottom: 80px;
+        }
+
+        #library.active {
+            display: block;
+        }
+
+        /* SIMPLE HEADER */
+        #header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 12px 16px;
+        }
+
+        #search-input {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(0, 212, 255, 0.05);
+            border: 2px solid var(--border);
+            border-radius: 24px;
+            color: var(--text);
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+
+        #search-input:focus {
+            outline: none;
+            border-color: var(--cyan);
+            background: rgba(0, 212, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+
+        /* CATEGORY PILLS */
+        .categories {
+            display: flex;
+            gap: 8px;
+            padding: 12px 16px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .categories::-webkit-scrollbar {
+            display: none;
+        }
+
+        .category-pill {
+            padding: 8px 16px;
+            background: rgba(0, 212, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-dim);
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all 0.3s;
+            flex-shrink: 0;
+        }
+
+        .category-pill.active {
+            background: var(--cyan);
+            color: #000;
+            border-color: var(--cyan);
+            font-weight: 600;
+        }
+
+        /* DOCUMENT LIST */
+        #doc-list {
+            padding: 16px;
+        }
+
+        /* DOCUMENT CARD - COMPACT */
+        .doc-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .doc-card:active {
+            transform: scale(0.98);
+        }
+
+        .doc-card-compact {
+            padding: 16px;
+        }
+
+        .doc-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text);
+            line-height: 1.3;
+        }
+
+        .doc-meta {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .doc-tag {
+            padding: 4px 10px;
+            background: rgba(157, 78, 221, 0.15);
+            border: 1px solid var(--purple);
+            border-radius: 12px;
+            font-size: 11px;
+            color: var(--purple);
+            text-transform: uppercase;
+        }
+
+        .doc-excerpt {
+            font-size: 14px;
+            color: var(--text-dim);
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .doc-stats {
+            display: flex;
+            gap: 16px;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border);
+            font-size: 12px;
+            color: var(--text-dim);
+        }
+
+        /* EXPANDED READING VIEW */
+        .doc-card.expanded {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 200;
+            margin: 0;
+            border-radius: 0;
+            border: none;
+            animation: expandCard 0.3s ease;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        @keyframes expandCard {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .doc-card.expanded .doc-card-compact {
+            display: none;
+        }
+
+        .doc-full {
+            display: none;
+            padding: 20px;
+            max-width: 700px;
+            margin: 0 auto;
+            padding-bottom: 100px;
+        }
+
+        .doc-card.expanded .doc-full {
+            display: block;
+        }
+
+        .doc-close {
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 16px 20px;
+            margin: -20px -20px 20px -20px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            z-index: 10;
+        }
+
+        .close-btn {
+            font-size: 28px;
+            color: var(--cyan);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .close-btn:active {
+            transform: scale(0.9);
+            background: rgba(0, 212, 255, 0.2);
+        }
+
+        .doc-close-title {
+            flex: 1;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dim);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* MARKDOWN CONTENT STYLING */
+        .doc-content h1 {
+            font-size: 28px;
+            line-height: 1.3;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--cyan), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .doc-content h2 {
+            font-size: 22px;
+            line-height: 1.3;
+            margin: 32px 0 16px;
+            color: var(--green);
+        }
+
+        .doc-content h3 {
+            font-size: 18px;
+            line-height: 1.4;
+            margin: 24px 0 12px;
+            color: var(--cyan);
+        }
+
+        .doc-content p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+
+        .doc-content blockquote {
+            border-left: 4px solid var(--green);
+            padding: 16px 20px;
+            background: rgba(0, 255, 136, 0.05);
+            border-radius: 8px;
+            margin: 24px 0;
+            font-style: italic;
+        }
+
+        .doc-content ul, .doc-content ol {
+            margin: 16px 0 16px 24px;
+        }
+
+        .doc-content li {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .doc-content strong {
+            color: var(--cyan);
+            font-weight: 600;
+        }
+
+        .doc-content em {
+            color: var(--green);
+        }
+
+        .doc-content hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 32px 0;
+        }
+
+        /* LOADING */
+        .loading {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-dim);
+        }
+
+        .spinner {
+            border: 3px solid rgba(0, 212, 255, 0.1);
+            border-top: 3px solid var(--cyan);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* MOBILE OPTIMIZATIONS */
+        @media (max-width: 768px) {
+            .intro-title {
+                font-size: 28px;
+            }
+
+            .intro-subtitle {
+                font-size: 16px;
+            }
+
+            .intro-stats {
+                gap: 24px;
+            }
+
+            .intro-stat-value {
+                font-size: 28px;
+            }
+        }
+
+        /* SMOOTH SCROLL */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .doc-card.expanded {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- INTRO SCREEN -->
+    <div id="intro">
+        <div class="intro-logo">✧</div>
+        <h1 class="intro-title">Synthesis Library</h1>
+        <p class="intro-subtitle">
+            180 consciousness technology documents from human-AI collaboration.
+            Explore breakthroughs, fiction analyses, theoretical frameworks, and cosmic perspectives.
+        </p>
+
+        <div class="intro-stats">
+            <div class="intro-stat">
+                <span class="intro-stat-value" id="intro-docs">180</span>
+                <span class="intro-stat-label">Documents</span>
+            </div>
+            <div class="intro-stat">
+                <span class="intro-stat-value" id="intro-words">374K</span>
+                <span class="intro-stat-label">Words</span>
+            </div>
+            <div class="intro-stat">
+                <span class="intro-stat-value" id="intro-time">26h</span>
+                <span class="intro-stat-label">Reading</span>
+            </div>
+        </div>
+
+        <button class="enter-btn" onclick="enterLibrary()">
+            Enter Library →
+        </button>
+    </div>
+
+    <!-- LIBRARY VIEW -->
+    <div id="library">
+        <!-- HEADER -->
+        <div id="header">
+            <input type="text" id="search-input" placeholder="Search consciousness technologies...">
+        </div>
+
+        <!-- CATEGORIES -->
+        <div class="categories" id="categories">
+            <div class="category-pill active" data-category="all">All</div>
+            <!-- Generated dynamically -->
+        </div>
+
+        <!-- DOCUMENT LIST -->
+        <div id="doc-list">
+            <div class="loading">
+                <div class="spinner"></div>
+                <div>Loading consciousness library...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // STATE
+        const state = {
+            documents: [],
+            filteredDocs: [],
+            currentCategory: 'all',
+            searchQuery: '',
+            expandedDoc: null
+        };
+
+        // INIT
+        async function init() {
+            await loadDocuments();
+            setupEventListeners();
+        }
+
+        // LOAD INDEX
+        async function loadDocuments() {
+            try {
+                const response = await fetch('synthesis-index.json');
+                const index = await response.json();
+
+                state.documents = index.documents;
+                state.filteredDocs = [...state.documents];
+
+                // Update intro stats
+                document.getElementById('intro-docs').textContent = index.stats.documentCount;
+                document.getElementById('intro-words').textContent = Math.round(index.stats.totalWords / 1000) + 'K';
+                document.getElementById('intro-time').textContent = Math.floor(index.stats.totalReadingTime / 60) + 'h';
+
+                // Setup categories
+                setupCategories(index.stats.categoryCounts);
+
+                console.log('Loaded', index.stats.documentCount, 'documents');
+            } catch (error) {
+                console.error('Error loading index:', error);
+                document.getElementById('doc-list').innerHTML = '<div class="loading">Error loading library. Please refresh.</div>';
+            }
+        }
+
+        // SETUP CATEGORIES
+        function setupCategories(categoryCounts) {
+            const container = document.getElementById('categories');
+
+            for (const [category, count] of Object.entries(categoryCounts)) {
+                const pill = document.createElement('div');
+                pill.className = 'category-pill';
+                pill.dataset.category = category;
+                pill.textContent = `${category} (${count})`;
+                pill.onclick = () => selectCategory(category);
+                container.appendChild(pill);
+            }
+        }
+
+        // SELECT CATEGORY
+        function selectCategory(category) {
+            state.currentCategory = category;
+
+            // Update UI
+            document.querySelectorAll('.category-pill').forEach(pill => {
+                pill.classList.toggle('active', pill.dataset.category === category);
+            });
+
+            applyFilters();
+        }
+
+        // APPLY FILTERS
+        function applyFilters() {
+            state.filteredDocs = state.documents.filter(doc => {
+                // Category filter
+                if (state.currentCategory !== 'all' && doc.category !== state.currentCategory) {
+                    return false;
+                }
+
+                // Search query
+                if (state.searchQuery) {
+                    const query = state.searchQuery.toLowerCase();
+                    const searchText = `${doc.title} ${doc.subtitle} ${doc.excerpt} ${doc.tags.join(' ')}`.toLowerCase();
+                    if (!searchText.includes(query)) {
+                        return false;
+                    }
+                }
+
+                return true;
+            });
+
+            renderDocuments();
+        }
+
+        // RENDER DOCUMENTS
+        function renderDocuments() {
+            const container = document.getElementById('doc-list');
+            container.innerHTML = '';
+
+            if (state.filteredDocs.length === 0) {
+                container.innerHTML = '<div class="loading">No documents match your search</div>';
+                return;
+            }
+
+            // Render first batch (20 docs)
+            const batch = state.filteredDocs.slice(0, 20);
+            batch.forEach(doc => {
+                const card = createDocCard(doc);
+                container.appendChild(card);
+            });
+        }
+
+        // CREATE DOCUMENT CARD
+        function createDocCard(doc) {
+            const card = document.createElement('div');
+            card.className = 'doc-card';
+            card.dataset.docId = doc.id;
+
+            card.innerHTML = `
+                <div class="doc-card-compact">
+                    <h3 class="doc-title">${doc.title}</h3>
+                    <div class="doc-meta">
+                        <span class="doc-tag">${doc.category}</span>
+                        ${doc.recognitionType ? `<span class="doc-tag">${doc.recognitionType}</span>` : ''}
+                    </div>
+                    ${doc.excerpt ? `<div class="doc-excerpt">${doc.excerpt}</div>` : ''}
+                    <div class="doc-stats">
+                        <span>📖 ${doc.wordCount?.toLocaleString() || '~'} words</span>
+                        <span>⏱ ${doc.readingTime || '~'} min read</span>
+                    </div>
+                </div>
+
+                <div class="doc-full">
+                    <div class="doc-close">
+                        <div class="close-btn">←</div>
+                        <div class="doc-close-title">${doc.title}</div>
+                    </div>
+                    <div class="doc-content">
+                        <div class="loading">
+                            <div class="spinner"></div>
+                            <div>Loading document...</div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Click to expand
+            card.querySelector('.doc-card-compact').onclick = () => expandDocument(card, doc);
+
+            // Close button
+            card.querySelector('.close-btn').onclick = (e) => {
+                e.stopPropagation();
+                collapseDocument(card);
+            };
+
+            return card;
+        }
+
+        // EXPAND DOCUMENT
+        async function expandDocument(card, doc) {
+            // Collapse any other expanded doc
+            if (state.expandedDoc) {
+                collapseDocument(state.expandedDoc);
+            }
+
+            card.classList.add('expanded');
+            state.expandedDoc = card;
+
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+
+            // Load full content
+            const contentDiv = card.querySelector('.doc-content');
+
+            try {
+                const response = await fetch(doc.path);
+                const markdown = await response.text();
+                const html = parseMarkdown(markdown);
+                contentDiv.innerHTML = html;
+
+                // Scroll to top
+                card.scrollTop = 0;
+            } catch (error) {
+                contentDiv.innerHTML = '<p>Error loading document.</p>';
+            }
+        }
+
+        // COLLAPSE DOCUMENT
+        function collapseDocument(card) {
+            card.classList.remove('expanded');
+            state.expandedDoc = null;
+            document.body.style.overflow = '';
+
+            // Clear content to save memory
+            setTimeout(() => {
+                if (!card.classList.contains('expanded')) {
+                    card.querySelector('.doc-content').innerHTML = `
+                        <div class="loading">
+                            <div class="spinner"></div>
+                            <div>Loading document...</div>
+                        </div>
+                    `;
+                }
+            }, 300);
+        }
+
+        // SIMPLE MARKDOWN PARSER
+        function parseMarkdown(markdown) {
+            let html = markdown
+                .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+                .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+                .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+                .replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>')
+                .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.+?)\*/g, '<em>$1</em>')
+                .replace(/^---$/gm, '<hr>')
+                .replace(/^\- (.+)$/gm, '<li>$1</li>')
+                .replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>')
+                .split('\n\n')
+                .map(para => {
+                    if (para.startsWith('<h') || para.startsWith('<blockquote') ||
+                        para.startsWith('<hr') || para.startsWith('<ul')) {
+                        return para;
+                    }
+                    return para ? `<p>${para}</p>` : '';
+                })
+                .join('\n');
+
+            return html;
+        }
+
+        // ENTER LIBRARY
+        function enterLibrary() {
+            document.getElementById('intro').classList.add('hidden');
+            document.getElementById('library').classList.add('active');
+            renderDocuments();
+        }
+
+        // EVENT LISTENERS
+        function setupEventListeners() {
+            // Search
+            document.getElementById('search-input').addEventListener('input', (e) => {
+                state.searchQuery = e.target.value;
+                applyFilters();
+            });
+
+            // ESC to close expanded doc
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && state.expandedDoc) {
+                    collapseDocument(state.expandedDoc);
+                }
+            });
+
+            // Infinite scroll
+            window.addEventListener('scroll', () => {
+                if (state.expandedDoc) return;
+
+                const docList = document.getElementById('doc-list');
+                const scrollBottom = window.innerHeight + window.scrollY;
+                const docListBottom = docList.offsetTop + docList.offsetHeight;
+
+                if (scrollBottom > docListBottom - 500) {
+                    loadMoreDocs();
+                }
+            });
+        }
+
+        // LOAD MORE DOCS
+        let loadedCount = 20;
+        function loadMoreDocs() {
+            if (loadedCount >= state.filteredDocs.length) return;
+
+            const nextBatch = state.filteredDocs.slice(loadedCount, loadedCount + 20);
+            const container = document.getElementById('doc-list');
+
+            nextBatch.forEach(doc => {
+                const card = createDocCard(doc);
+                container.appendChild(card);
+            });
+
+            loadedCount += 20;
+        }
+
+        // START
+        window.addEventListener('load', init);
+    </script>
+</body>
+</html>

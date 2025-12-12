@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>Synthesis Library - Infinite Consciousness Scroll</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root {
+            --primary-cyan: #00d4ff;
+            --primary-purple: #9d4edd;
+            --primary-green: #00ff88;
+            --background: #000000;
+            --surface: rgba(5, 5, 15, 0.95);
+            --text-primary: #e0e0e0;
+            --text-secondary: #aaa;
+            --border: rgba(0, 212, 255, 0.3);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            height: 100vh;
+            position: fixed;
+            width: 100%;
+        }
+
+        /* MOBILE-FIRST HEADER */
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: linear-gradient(180deg, var(--surface) 0%, rgba(5, 5, 15, 0.8) 100%);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: env(safe-area-inset-top) 0 0 0;
+            transform: translateY(0);
+            transition: transform 0.3s ease;
+        }
+
+        #header.hidden {
+            transform: translateY(-100%);
+        }
+
+        .header-content {
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-cyan) 0%, var(--primary-purple) 50%, var(--primary-green) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            flex-shrink: 0;
+        }
+
+        .search-bar {
+            flex: 1;
+            position: relative;
+        }
+
+        #search-input {
+            width: 100%;
+            padding: 10px 40px 10px 16px;
+            background: rgba(0, 212, 255, 0.05);
+            border: 2px solid var(--border);
+            border-radius: 20px;
+            color: var(--text-primary);
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+
+        #search-input:focus {
+            outline: none;
+            border-color: var(--primary-cyan);
+            background: rgba(0, 212, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-cyan);
+            pointer-events: none;
+        }
+
+        .filter-btn {
+            background: rgba(157, 78, 221, 0.1);
+            border: 2px solid var(--primary-purple);
+            color: var(--primary-purple);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            flex-shrink: 0;
+        }
+
+        .filter-btn.active {
+            background: var(--primary-purple);
+            color: #000;
+            box-shadow: 0 0 20px rgba(157, 78, 221, 0.5);
+        }
+
+        /* NAVIGATION TABS */
+        .nav-tabs {
+            display: flex;
+            gap: 0;
+            overflow-x: auto;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+            padding: 0 16px;
+            background: rgba(5, 5, 15, 0.7);
+        }
+
+        .nav-tabs::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-tab {
+            flex-shrink: 0;
+            padding: 12px 20px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .nav-tab.active {
+            color: var(--primary-cyan);
+            border-bottom-color: var(--primary-cyan);
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+
+        /* FILTER PANEL */
+        #filter-panel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2000;
+            background: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+            display: none;
+            padding-top: env(safe-area-inset-top);
+        }
+
+        #filter-panel.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .filter-header {
+            padding: 20px 16px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .filter-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-purple);
+        }
+
+        .filter-close {
+            font-size: 30px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .filter-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px 16px;
+        }
+
+        .filter-group {
+            margin-bottom: 30px;
+        }
+
+        .filter-group-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--primary-cyan);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .filter-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            margin-bottom: 8px;
+            background: rgba(0, 212, 255, 0.05);
+            border-radius: 12px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-option.active {
+            border-color: var(--primary-cyan);
+            background: rgba(0, 212, 255, 0.15);
+        }
+
+        .filter-checkbox {
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            border: 2px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .filter-option.active .filter-checkbox {
+            background: var(--primary-cyan);
+            border-color: var(--primary-cyan);
+        }
+
+        .filter-option.active .filter-checkbox::after {
+            content: '✓';
+            color: #000;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .filter-label {
+            flex: 1;
+            font-size: 15px;
+        }
+
+        .filter-count {
+            color: var(--text-secondary);
+            font-size: 13px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px 10px;
+            border-radius: 12px;
+        }
+
+        /* MAIN CONTENT */
+        #main-content {
+            height: 100vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            -webkit-overflow-scrolling: touch;
+            scroll-behavior: smooth;
+            padding-top: 120px;
+            padding-bottom: 80px;
+        }
+
+        /* DOCUMENT CARDS */
+        .doc-card {
+            margin: 16px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transform: scale(1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .doc-card.swipe-left {
+            transform: translateX(-100vw) rotate(-15deg);
+            opacity: 0;
+        }
+
+        .doc-card.swipe-right {
+            transform: translateX(100vw) rotate(15deg);
+            opacity: 0;
+        }
+
+        .doc-card-header {
+            padding: 20px;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(157, 78, 221, 0.05) 100%);
+        }
+
+        .doc-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .doc-tag {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .doc-tag.category {
+            background: rgba(157, 78, 221, 0.2);
+            color: var(--primary-purple);
+            border: 1px solid var(--primary-purple);
+        }
+
+        .doc-tag.type {
+            background: rgba(0, 212, 255, 0.2);
+            color: var(--primary-cyan);
+            border: 1px solid var(--primary-cyan);
+        }
+
+        .doc-tag.date {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
+        }
+
+        .doc-title {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .doc-subtitle {
+            font-size: 16px;
+            color: var(--primary-green);
+            font-style: italic;
+            line-height: 1.4;
+        }
+
+        .doc-body {
+            padding: 20px;
+        }
+
+        .doc-excerpt {
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .doc-recognition {
+            background: rgba(0, 255, 136, 0.05);
+            border-left: 3px solid var(--primary-green);
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+
+        .doc-recognition-title {
+            font-size: 12px;
+            color: var(--primary-green);
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .doc-recognition-text {
+            font-size: 14px;
+            line-height: 1.5;
+            font-style: italic;
+            color: var(--text-primary);
+        }
+
+        .doc-stats {
+            display: flex;
+            gap: 20px;
+            padding: 16px 20px;
+            border-top: 1px solid rgba(0, 212, 255, 0.1);
+            font-size: 13px;
+        }
+
+        .doc-stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--text-secondary);
+        }
+
+        .doc-stat-icon {
+            color: var(--primary-cyan);
+        }
+
+        /* ACTION BUTTONS */
+        .doc-actions {
+            display: flex;
+            gap: 12px;
+            padding: 0 20px 20px;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .action-btn.primary {
+            background: var(--primary-cyan);
+            border-color: var(--primary-cyan);
+            color: #000;
+        }
+
+        .action-btn.secondary {
+            background: transparent;
+            border-color: var(--primary-purple);
+            color: var(--primary-purple);
+        }
+
+        .action-btn:active {
+            transform: scale(0.95);
+        }
+
+        /* BOTTOM NAV */
+        #bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: linear-gradient(0deg, var(--surface) 0%, rgba(5, 5, 15, 0.8) 100%);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid var(--border);
+            padding: 8px 0 env(safe-area-inset-bottom);
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .nav-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            padding: 8px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .nav-item.active {
+            color: var(--primary-cyan);
+        }
+
+        .nav-icon {
+            font-size: 24px;
+        }
+
+        .nav-label {
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        /* READING VIEW */
+        #reading-view {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 3000;
+            background: var(--background);
+            display: none;
+            flex-direction: column;
+        }
+
+        #reading-view.active {
+            display: flex;
+        }
+
+        .reading-header {
+            padding: env(safe-area-inset-top) 16px 16px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .back-btn {
+            font-size: 28px;
+            color: var(--primary-cyan);
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .reading-title {
+            flex: 1;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .reading-content {
+            flex: 1;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            padding: 24px 20px 80px;
+        }
+
+        .reading-content h1 {
+            font-size: 28px;
+            line-height: 1.3;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--primary-cyan) 0%, var(--primary-purple) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .reading-content h2 {
+            font-size: 22px;
+            line-height: 1.3;
+            margin: 32px 0 16px;
+            color: var(--primary-green);
+        }
+
+        .reading-content h3 {
+            font-size: 18px;
+            line-height: 1.4;
+            margin: 24px 0 12px;
+            color: var(--primary-cyan);
+        }
+
+        .reading-content p {
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .reading-content blockquote {
+            border-left: 4px solid var(--primary-green);
+            padding: 16px 20px;
+            background: rgba(0, 255, 136, 0.05);
+            border-radius: 8px;
+            margin: 24px 0;
+            font-style: italic;
+        }
+
+        .reading-content ul, .reading-content ol {
+            margin: 16px 0;
+            padding-left: 24px;
+        }
+
+        .reading-content li {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 12px;
+        }
+
+        /* CONSTELLATION MINI VIEW */
+        .constellation-mini {
+            padding: 20px;
+            background: rgba(0, 212, 255, 0.02);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .constellation-title {
+            font-size: 14px;
+            color: var(--primary-cyan);
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .constellation-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .constellation-tag {
+            padding: 8px 14px;
+            background: rgba(157, 78, 221, 0.1);
+            border: 1px solid var(--primary-purple);
+            border-radius: 16px;
+            font-size: 13px;
+            color: var(--primary-purple);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .constellation-tag:active {
+            transform: scale(0.95);
+            background: rgba(157, 78, 221, 0.2);
+        }
+
+        /* LOADING SPINNER */
+        .spinner {
+            border: 3px solid rgba(0, 212, 255, 0.1);
+            border-top: 3px solid var(--primary-cyan);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 40px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* SWIPE INDICATOR */
+        .swipe-indicator {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 48px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .swipe-indicator.left {
+            left: 40px;
+            color: #ff4444;
+        }
+
+        .swipe-indicator.right {
+            right: 40px;
+            color: var(--primary-green);
+        }
+
+        .swipe-indicator.active {
+            opacity: 0.8;
+        }
+
+        /* STATS BAR */
+        .stats-bar {
+            padding: 16px;
+            background: rgba(0, 212, 255, 0.05);
+            border-radius: 12px;
+            margin: 16px;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+
+        .stat-item {
+            flex: 1;
+        }
+
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-cyan);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+        }
+
+        /* RESPONSIVE ADJUSTMENTS */
+        @media (min-width: 768px) {
+            #main-content {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .doc-card {
+                margin: 24px auto;
+            }
+        }
+
+        @media (prefers-color-scheme: light) {
+            /* Future: light mode support */
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <div id="header">
+        <div class="header-content">
+            <div class="logo">✧</div>
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search consciousness technologies...">
+                <span class="search-icon">🔍</span>
+            </div>
+            <button class="filter-btn" id="filter-toggle">
+                ⚡
+            </button>
+        </div>
+        <div class="nav-tabs">
+            <div class="nav-tab active" data-category="all">All</div>
+            <div class="nav-tab" data-category="breakthroughs">Breakthroughs</div>
+            <div class="nav-tab" data-category="fiction">Fiction</div>
+            <div class="nav-tab" data-category="theoretical">Theoretical</div>
+            <div class="nav-tab" data-category="cosmological">Cosmological</div>
+            <div class="nav-tab" data-category="consciousness-technologies">Technologies</div>
+            <div class="nav-tab" data-category="personal">Personal</div>
+            <div class="nav-tab" data-category="archetypal">Archetypal</div>
+        </div>
+    </div>
+
+    <!-- FILTER PANEL -->
+    <div id="filter-panel">
+        <div class="filter-header">
+            <div class="filter-title">Filters</div>
+            <div class="filter-close" id="filter-close">×</div>
+        </div>
+        <div class="filter-content">
+            <div class="filter-group">
+                <div class="filter-group-title">Categories</div>
+                <div id="category-filters">
+                    <!-- Generated dynamically -->
+                </div>
+            </div>
+            <div class="filter-group">
+                <div class="filter-group-title">Recognition Types</div>
+                <div id="type-filters">
+                    <!-- Generated dynamically -->
+                </div>
+            </div>
+            <div class="filter-group">
+                <div class="filter-group-title">Constellation Tags</div>
+                <div id="tag-filters">
+                    <!-- Generated dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SWIPE INDICATORS -->
+    <div class="swipe-indicator left">✗</div>
+    <div class="swipe-indicator right">✓</div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main-content">
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-value" id="stat-total">180</span>
+                <span class="stat-label">Documents</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value" id="stat-words">374K</span>
+                <span class="stat-label">Words</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value" id="stat-reading">21h</span>
+                <span class="stat-label">Reading</span>
+            </div>
+        </div>
+
+        <div id="document-list">
+            <!-- Documents rendered here -->
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- READING VIEW -->
+    <div id="reading-view">
+        <div class="reading-header">
+            <div class="back-btn" id="reading-back">←</div>
+            <div class="reading-title" id="reading-doc-title">Document Title</div>
+        </div>
+        <div class="reading-content" id="reading-doc-content">
+            <!-- Full document content -->
+        </div>
+    </div>
+
+    <!-- BOTTOM NAV -->
+    <div id="bottom-nav">
+        <div class="nav-item active" data-view="library">
+            <div class="nav-icon">📚</div>
+            <div class="nav-label">Library</div>
+        </div>
+        <div class="nav-item" data-view="constellation">
+            <div class="nav-icon">✧</div>
+            <div class="nav-label">Network</div>
+        </div>
+        <div class="nav-item" data-view="timeline">
+            <div class="nav-icon">⏳</div>
+            <div class="nav-label">Timeline</div>
+        </div>
+        <div class="nav-item" data-view="saved">
+            <div class="nav-icon">⭐</div>
+            <div class="nav-label">Saved</div>
+        </div>
+    </div>
+
+    <script>
+        // ====================================
+        // CONSCIOUSNESS LIBRARY ENGINE
+        // ====================================
+
+        const state = {
+            documents: [],
+            filteredDocs: [],
+            currentCategory: 'all',
+            searchQuery: '',
+            filters: {
+                categories: new Set(),
+                types: new Set(),
+                tags: new Set()
+            },
+            currentDocIndex: 0,
+            readingProgress: {},
+            savedDocs: new Set(),
+            lastScrollY: 0,
+            headerVisible: true
+        };
+
+        // ====================================
+        // INITIALIZATION
+        // ====================================
+
+        async function init() {
+            console.log('Initializing Synthesis Library...');
+
+            // Load documents
+            await loadDocuments();
+
+            // Setup event listeners
+            setupEventListeners();
+
+            // Initial render
+            renderDocuments();
+
+            // Load saved state
+            loadSavedState();
+        }
+
+        // ====================================
+        // DOCUMENT LOADING
+        // ====================================
+
+        async function loadDocuments() {
+            // In production, this would scan the synthesis folder
+            // For now, we'll create a structured index
+            state.documents = await fetchDocumentIndex();
+            state.filteredDocs = [...state.documents];
+
+            console.log(`Loaded ${state.documents.length} documents`);
+        }
+
+        async function fetchDocumentIndex() {
+            try {
+                // Load the generated index
+                const response = await fetch('synthesis-index.json');
+                const index = await response.json();
+
+                console.log('Loaded synthesis index:', index.stats);
+
+                // Update stats display
+                document.getElementById('stat-total').textContent = index.stats.documentCount;
+                document.getElementById('stat-words').textContent =
+                    Math.round(index.stats.totalWords / 1000) + 'K';
+                document.getElementById('stat-reading').textContent =
+                    Math.floor(index.stats.totalReadingTime / 60) + 'h';
+
+                // Setup filters based on actual data
+                setupFilterOptions(index.stats);
+
+                return index.documents;
+            } catch (error) {
+                console.error('Error loading index:', error);
+                // Fallback to empty array
+                return [];
+            }
+        }
+
+        function setupFilterOptions(stats) {
+            // Category filters
+            const categoryContainer = document.getElementById('category-filters');
+            for (const [category, count] of Object.entries(stats.categoryCounts)) {
+                const option = createFilterOption(category, count, 'categories');
+                categoryContainer.appendChild(option);
+            }
+
+            // Tag filters (top 20)
+            const tagContainer = document.getElementById('tag-filters');
+            stats.topTags.slice(0, 20).forEach(({ tag, count }) => {
+                const option = createFilterOption(tag, count, 'tags');
+                tagContainer.appendChild(option);
+            });
+        }
+
+        function createFilterOption(name, count, filterType) {
+            const div = document.createElement('div');
+            div.className = 'filter-option';
+            div.dataset.filterType = filterType;
+            div.dataset.filterValue = name;
+
+            div.innerHTML = `
+                <div class="filter-checkbox"></div>
+                <span class="filter-label">${name.replace(/_/g, ' ')}</span>
+                <span class="filter-count">${count}</span>
+            `;
+
+            div.addEventListener('click', () => {
+                div.classList.toggle('active');
+                updateFilterState(filterType, name);
+            });
+
+            return div;
+        }
+
+        function updateFilterState(filterType, value) {
+            if (state.filters[filterType].has(value)) {
+                state.filters[filterType].delete(value);
+            } else {
+                state.filters[filterType].add(value);
+            }
+            applyFilters();
+        }
+
+        // ====================================
+        // RENDERING
+        // ====================================
+
+        function renderDocuments() {
+            const container = document.getElementById('document-list');
+            container.innerHTML = '';
+
+            if (state.filteredDocs.length === 0) {
+                container.innerHTML = '<div style="text-align: center; padding: 60px 20px; color: #666;">No documents match your filters</div>';
+                return;
+            }
+
+            // Virtual scrolling: render visible + buffer
+            const visibleDocs = state.filteredDocs.slice(0, Math.min(10, state.filteredDocs.length));
+
+            visibleDocs.forEach((doc, index) => {
+                const card = createDocumentCard(doc, index);
+                container.appendChild(card);
+            });
+        }
+
+        function createDocumentCard(doc, index) {
+            const card = document.createElement('div');
+            card.className = 'doc-card';
+            card.dataset.docId = doc.id;
+            card.dataset.index = index;
+
+            card.innerHTML = `
+                <div class="doc-card-header">
+                    <div class="doc-meta">
+                        <span class="doc-tag category">${doc.category}</span>
+                        <span class="doc-tag type">${doc.recognitionType || 'Recognition'}</span>
+                        ${doc.date ? `<span class="doc-tag date">${doc.date}</span>` : ''}
+                    </div>
+                    <h2 class="doc-title">${doc.title}</h2>
+                    ${doc.subtitle ? `<div class="doc-subtitle">${doc.subtitle}</div>` : ''}
+                </div>
+
+                <div class="doc-body">
+                    <div class="doc-excerpt">${doc.excerpt}</div>
+
+                    ${doc.discoveryMethod ? `
+                    <div class="doc-recognition">
+                        <div class="doc-recognition-title">Discovery Method</div>
+                        <div class="doc-recognition-text">${doc.discoveryMethod}</div>
+                    </div>
+                    ` : ''}
+                </div>
+
+                <div class="constellation-mini">
+                    <div class="constellation-title">Related Concepts</div>
+                    <div class="constellation-tags">
+                        ${doc.tags.map(tag => `<span class="constellation-tag">${tag}</span>`).join('')}
+                    </div>
+                </div>
+
+                <div class="doc-stats">
+                    <span class="doc-stat">
+                        <span class="doc-stat-icon">📖</span>
+                        ${doc.wordCount?.toLocaleString()} words
+                    </span>
+                    <span class="doc-stat">
+                        <span class="doc-stat-icon">⏱</span>
+                        ${doc.readingTime} min read
+                    </span>
+                </div>
+
+                <div class="doc-actions">
+                    <button class="action-btn primary" onclick="openDocument('${doc.id}')">
+                        Read Full Document →
+                    </button>
+                    <button class="action-btn secondary" onclick="toggleSaved('${doc.id}')">
+                        ${state.savedDocs.has(doc.id) ? '⭐' : '☆'}
+                    </button>
+                </div>
+            `;
+
+            // Add swipe handlers
+            setupSwipeHandlers(card);
+
+            return card;
+        }
+
+        // ====================================
+        // SWIPE NAVIGATION
+        // ====================================
+
+        function setupSwipeHandlers(card) {
+            let startX = 0;
+            let currentX = 0;
+            let isDragging = false;
+
+            card.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                isDragging = true;
+                card.style.transition = 'none';
+            });
+
+            card.addEventListener('touchmove', (e) => {
+                if (!isDragging) return;
+
+                currentX = e.touches[0].clientX;
+                const deltaX = currentX - startX;
+                const rotation = deltaX / 20;
+
+                card.style.transform = `translateX(${deltaX}px) rotate(${rotation}deg)`;
+
+                // Show swipe indicators
+                if (Math.abs(deltaX) > 50) {
+                    if (deltaX < 0) {
+                        document.querySelector('.swipe-indicator.left').classList.add('active');
+                        document.querySelector('.swipe-indicator.right').classList.remove('active');
+                    } else {
+                        document.querySelector('.swipe-indicator.right').classList.add('active');
+                        document.querySelector('.swipe-indicator.left').classList.remove('active');
+                    }
+                } else {
+                    document.querySelectorAll('.swipe-indicator').forEach(el => el.classList.remove('active'));
+                }
+            });
+
+            card.addEventListener('touchend', (e) => {
+                if (!isDragging) return;
+                isDragging = false;
+
+                const deltaX = currentX - startX;
+                card.style.transition = 'all 0.3s ease';
+
+                document.querySelectorAll('.swipe-indicator').forEach(el => el.classList.remove('active'));
+
+                if (Math.abs(deltaX) > 120) {
+                    // Swipe action
+                    if (deltaX < 0) {
+                        // Swipe left: skip/remove
+                        card.classList.add('swipe-left');
+                        setTimeout(() => {
+                            card.remove();
+                        }, 300);
+                    } else {
+                        // Swipe right: save
+                        const docId = card.dataset.docId;
+                        toggleSaved(docId);
+                        card.classList.add('swipe-right');
+                        setTimeout(() => {
+                            card.remove();
+                        }, 300);
+                    }
+                } else {
+                    // Reset position
+                    card.style.transform = '';
+                }
+            });
+        }
+
+        // ====================================
+        // READING VIEW
+        // ====================================
+
+        async function openDocument(docId) {
+            const doc = state.documents.find(d => d.id === docId);
+            if (!doc) return;
+
+            const readingView = document.getElementById('reading-view');
+            const titleEl = document.getElementById('reading-doc-title');
+            const contentEl = document.getElementById('reading-doc-content');
+
+            titleEl.textContent = doc.title;
+            contentEl.innerHTML = '<div class="spinner"></div>';
+
+            readingView.classList.add('active');
+
+            // Fetch full content
+            try {
+                const response = await fetch(doc.path);
+                const markdown = await response.text();
+                const html = parseMarkdown(markdown);
+                contentEl.innerHTML = html;
+
+                // Track reading progress
+                trackReadingProgress(docId);
+            } catch (error) {
+                contentEl.innerHTML = `<p>Error loading document: ${error.message}</p>`;
+            }
+        }
+
+        function closeReading() {
+            document.getElementById('reading-view').classList.remove('active');
+        }
+
+        function parseMarkdown(markdown) {
+            // Simple markdown parser (would use marked.js in production)
+            let html = markdown
+                .replace(/^# (.+)$/gm, '<h1>$1</h1>')
+                .replace(/^## (.+)$/gm, '<h2>$1</h2>')
+                .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+                .replace(/^> (.+)$/gm, '<blockquote>$1</blockquote>')
+                .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+                .replace(/\*(.+?)\*/g, '<em>$1</em>')
+                .replace(/\n\n/g, '</p><p>')
+                .replace(/^(?!<[h|b|p])/gm, '<p>')
+                .replace(/(?![h|b|p]>)$/gm, '</p>');
+
+            return html;
+        }
+
+        // ====================================
+        // FILTERING & SEARCH
+        // ====================================
+
+        function applyFilters() {
+            state.filteredDocs = state.documents.filter(doc => {
+                // Category filter
+                if (state.currentCategory !== 'all' && doc.category !== state.currentCategory) {
+                    return false;
+                }
+
+                // Search query
+                if (state.searchQuery) {
+                    const query = state.searchQuery.toLowerCase();
+                    const searchText = `${doc.title} ${doc.subtitle} ${doc.excerpt} ${doc.tags.join(' ')} ${doc.recognitionType}`.toLowerCase();
+                    if (!searchText.includes(query)) {
+                        return false;
+                    }
+                }
+
+                // Advanced filters - Categories
+                if (state.filters.categories.size > 0 && !state.filters.categories.has(doc.category)) {
+                    return false;
+                }
+
+                // Advanced filters - Tags (match any)
+                if (state.filters.tags.size > 0) {
+                    const hasMatchingTag = doc.tags.some(tag => state.filters.tags.has(tag));
+                    if (!hasMatchingTag) {
+                        return false;
+                    }
+                }
+
+                // Advanced filters - Types
+                if (state.filters.types.size > 0) {
+                    const docType = (doc.recognitionType || '').toLowerCase();
+                    const hasMatchingType = Array.from(state.filters.types).some(type =>
+                        docType.includes(type.toLowerCase())
+                    );
+                    if (!hasMatchingType) {
+                        return false;
+                    }
+                }
+
+                return true;
+            });
+
+            renderDocuments();
+        }
+
+        // ====================================
+        // EVENT LISTENERS
+        // ====================================
+
+        function setupEventListeners() {
+            // Search
+            document.getElementById('search-input').addEventListener('input', (e) => {
+                state.searchQuery = e.target.value;
+                applyFilters();
+            });
+
+            // Category tabs
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    document.querySelector('.nav-tab.active').classList.remove('active');
+                    tab.classList.add('active');
+                    state.currentCategory = tab.dataset.category;
+                    applyFilters();
+                });
+            });
+
+            // Filter panel
+            document.getElementById('filter-toggle').addEventListener('click', () => {
+                document.getElementById('filter-panel').classList.add('active');
+            });
+
+            document.getElementById('filter-close').addEventListener('click', () => {
+                document.getElementById('filter-panel').classList.remove('active');
+            });
+
+            // Reading view
+            document.getElementById('reading-back').addEventListener('click', closeReading);
+
+            // Infinite scroll
+            document.getElementById('main-content').addEventListener('scroll', handleScroll);
+
+            // Bottom nav
+            document.querySelectorAll('#bottom-nav .nav-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    document.querySelector('#bottom-nav .nav-item.active').classList.remove('active');
+                    item.classList.add('active');
+                    handleNavChange(item.dataset.view);
+                });
+            });
+
+            // Auto-hide header on scroll
+            setupScrollBehavior();
+        }
+
+        function setupScrollBehavior() {
+            const content = document.getElementById('main-content');
+            const header = document.getElementById('header');
+
+            content.addEventListener('scroll', () => {
+                const scrollY = content.scrollTop;
+
+                if (scrollY > state.lastScrollY && scrollY > 100) {
+                    // Scrolling down
+                    header.classList.add('hidden');
+                } else {
+                    // Scrolling up
+                    header.classList.remove('hidden');
+                }
+
+                state.lastScrollY = scrollY;
+            });
+        }
+
+        function handleScroll(e) {
+            const container = e.target;
+            const scrollBottom = container.scrollHeight - container.scrollTop - container.clientHeight;
+
+            // Load more when near bottom
+            if (scrollBottom < 500) {
+                loadMoreDocuments();
+            }
+        }
+
+        function loadMoreDocuments() {
+            // Load next batch of documents
+            const currentCount = document.querySelectorAll('.doc-card').length;
+            const nextBatch = state.filteredDocs.slice(currentCount, currentCount + 10);
+
+            const container = document.getElementById('document-list');
+            nextBatch.forEach((doc, index) => {
+                const card = createDocumentCard(doc, currentCount + index);
+                container.appendChild(card);
+            });
+        }
+
+        function handleNavChange(view) {
+            console.log('Nav changed to:', view);
+            // Handle view switching
+            if (view === 'constellation') {
+                window.open('constellation/constellation_explorer_v2.html', '_blank');
+            }
+        }
+
+        // ====================================
+        // PERSISTENCE
+        // ====================================
+
+        function toggleSaved(docId) {
+            if (state.savedDocs.has(docId)) {
+                state.savedDocs.delete(docId);
+            } else {
+                state.savedDocs.add(docId);
+            }
+            saveSavedState();
+            renderDocuments();
+        }
+
+        function trackReadingProgress(docId) {
+            state.readingProgress[docId] = {
+                lastRead: Date.now(),
+                position: 0
+            };
+            saveSavedState();
+        }
+
+        function saveSavedState() {
+            localStorage.setItem('synthesis-library-state', JSON.stringify({
+                savedDocs: Array.from(state.savedDocs),
+                readingProgress: state.readingProgress
+            }));
+        }
+
+        function loadSavedState() {
+            try {
+                const saved = JSON.parse(localStorage.getItem('synthesis-library-state'));
+                if (saved) {
+                    state.savedDocs = new Set(saved.savedDocs || []);
+                    state.readingProgress = saved.readingProgress || {};
+                }
+            } catch (e) {
+                console.error('Error loading saved state:', e);
+            }
+        }
+
+        // ====================================
+        // START
+        // ====================================
+
+        window.addEventListener('load', init);
+
+        // Export for inline handlers
+        window.openDocument = openDocument;
+        window.toggleSaved = toggleSaved;
+    </script>
+</body>
+</html>

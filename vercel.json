@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "buildCommand": "npm run build",
   "builds": [
     {
       "src": "api/index.js",
@@ -16,9 +17,37 @@
     {
       "src": "distillations/**",
       "use": "@vercel/static"
+    },
+    {
+      "src": "synthesis/**/*.md",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "synthesis-library.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "synthesis-index.json",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
+    {
+      "src": "/library",
+      "dest": "/synthesis-library.html"
+    },
+    {
+      "src": "/synthesis-library",
+      "dest": "/synthesis-library.html"
+    },
+    {
+      "src": "/synthesis-index.json",
+      "dest": "/synthesis-index.json"
+    },
+    {
+      "src": "/synthesis/(.*)",
+      "dest": "/synthesis/$1"
+    },
     {
       "src": "/static/(.*)",
       "dest": "/client/public/$1"
