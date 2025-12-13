@@ -989,7 +989,7 @@
 
                 const dx = conn.target.x - conn.source.x;
                 const dy = conn.target.y - conn.source.y;
-                const dist = Math.sqrt(dx * dx + dy * dy);
+                const dist = Math.sqrt(dx * dx + dy * dy) + 0.01; // Prevent div by zero
 
                 // Stronger T-connections pull harder
                 const tForce = conn.strength * 0.01 * dist;
@@ -1004,6 +1004,11 @@
 
             // Apply velocity (network topology movement)
             for (const node of visibleNodes) {
+                // NaN protection - reset if physics went haywire
+                if (isNaN(node.vx) || isNaN(node.vy)) {
+                    node.vx = 0;
+                    node.vy = 0;
+                }
                 node.x += node.vx;
                 node.y += node.vy;
                 node.vx *= damping;
