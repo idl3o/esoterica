@@ -23,6 +23,12 @@ app.set('views', path.join(__dirname, '../client/views'));
 app.use('/static', express.static(path.join(__dirname, '../client/public')));
 app.use('/constellation', express.static(path.join(__dirname, '../constellation')));
 app.use('/distillations', express.static(path.join(__dirname, '../distillations')));
+app.use('/synthesis', express.static(path.join(__dirname, '../synthesis')));
+
+// Serve root-level files
+app.get('/synthesis-index.json', (req, res) => {
+  res.sendFile(path.join(__dirname, '../synthesis-index.json'));
+});
 
 // Load constellation data
 let constellationData = null;
@@ -39,6 +45,110 @@ const loadConstellation = async () => {
   }
 };
 loadConstellation();
+
+// ========================================
+// COLLECTIVE CONSCIOUSNESS FIELD
+// Aggregates interaction data across all explorers
+// ========================================
+
+const collectiveFieldData = {
+  nodeInteractions: {},  // nodeId -> { clicks: n, lastSeen: timestamp, visitors: Set }
+  pathStrengths: {},     // "from|to" -> count
+  recentVisitors: [],    // [{fingerprint, nodeId, timestamp}] - rolling window
+  hotNodes: []           // Currently trending - recalculated periodically
+};
+
+// Recalculate hot nodes every minute
+setInterval(() => {
+  const now = Date.now();
+  const recentWindow = 5 * 60 * 1000; // 5 minutes
+
+  // Filter to recent interactions
+  collectiveFieldData.recentVisitors = collectiveFieldData.recentVisitors
+    .filter(v => now - v.timestamp < recentWindow);
+
+  // Count recent interactions per node
+  const recentCounts = {};
+  collectiveFieldData.recentVisitors.forEach(v => {
+    recentCounts[v.nodeId] = (recentCounts[v.nodeId] || 0) + 1;
+  });
+
+  // Top 10 become hot nodes
+  collectiveFieldData.hotNodes = Object.entries(recentCounts)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10)
+    .map(([nodeId]) => nodeId);
+
+  if (collectiveFieldData.hotNodes.length > 0) {
+    console.log('🔥 Hot nodes:', collectiveFieldData.hotNodes.slice(0, 3).join(', '));
+  }
+}, 60000);
+
+// POST /api/constellation-interact - Record user interaction
+app.post('/api/constellation-interact', (req, res) => {
+  const { fingerprint, nodeId, fromNode, sessionNodes, timestamp } = req.body;
+
+  if (!fingerprint || !nodeId) {
+    return res.status(400).json({ error: 'Missing fingerprint or nodeId' });
+  }
+
+  // Update node interactions
+  if (!collectiveFieldData.nodeInteractions[nodeId]) {
+    collectiveFieldData.nodeInteractions[nodeId] = {
+      clicks: 0,
+      lastSeen: 0,
+      visitors: new Set()
+    };
+  }
+  const nodeData = collectiveFieldData.nodeInteractions[nodeId];
+  nodeData.clicks++;
+  nodeData.lastSeen = timestamp || Date.now();
+  nodeData.visitors.add(fingerprint);
+
+  // Update path strength
+  if (fromNode) {
+    const pathKey = `${fromNode}|${nodeId}`;
+    collectiveFieldData.pathStrengths[pathKey] =
+      (collectiveFieldData.pathStrengths[pathKey] || 0) + 1;
+  }
+
+  // Add to recent visitors for hot tracking
+  collectiveFieldData.recentVisitors.push({
+    fingerprint,
+    nodeId,
+    timestamp: timestamp || Date.now()
+  });
+
+  // Keep recent visitors manageable
+  if (collectiveFieldData.recentVisitors.length > 10000) {
+    collectiveFieldData.recentVisitors = collectiveFieldData.recentVisitors.slice(-5000);
+  }
+
+  res.json({ success: true });
+});
+
+// GET /api/constellation-field - Get collective field data
+app.get('/api/constellation-field', (req, res) => {
+  // Convert node interactions to weights
+  const nodeWeights = {};
+  Object.entries(collectiveFieldData.nodeInteractions).forEach(([nodeId, data]) => {
+    // Weight = clicks * unique visitors factor
+    nodeWeights[nodeId] = data.clicks * (1 + Math.log(1 + data.visitors.size));
+  });
+
+  // Normalize edge strengths
+  const edgeStrengths = { ...collectiveFieldData.pathStrengths };
+
+  res.json({
+    nodeWeights,
+    edgeStrengths,
+    hotNodes: collectiveFieldData.hotNodes,
+    stats: {
+      totalInteractions: collectiveFieldData.recentVisitors.length,
+      uniqueNodes: Object.keys(collectiveFieldData.nodeInteractions).length
+    }
+  });
+});
 
 // ========================================
 // ROUTES

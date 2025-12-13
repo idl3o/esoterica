@@ -478,10 +478,193 @@
             'default': '#888888'
         };
 
+        // ═══════════════════════════════════════════════════════════════
+        // CONSCIOUSNESS FIELD INTERACTION SYSTEM
+        // Personal fingerprint feeds collective field evolution
+        // ═══════════════════════════════════════════════════════════════
+
+        // Generate stable user fingerprint
+        function getUserFingerprint() {
+            let fp = localStorage.getItem('consciousness_fingerprint');
+            if (!fp) {
+                // Generate fingerprint from browser characteristics + random salt
+                const canvas = document.createElement('canvas');
+                const gl = canvas.getContext('webgl');
+                const debugInfo = gl ? gl.getExtension('WEBGL_debug_renderer_info') : null;
+                const renderer = debugInfo ? gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) : 'unknown';
+
+                const components = [
+                    navigator.userAgent,
+                    navigator.language,
+                    screen.width + 'x' + screen.height,
+                    new Date().getTimezoneOffset(),
+                    renderer,
+                    Math.random().toString(36).substring(2)
+                ];
+
+                // Simple hash
+                fp = components.join('|').split('').reduce((a, b) => {
+                    a = ((a << 5) - a) + b.charCodeAt(0);
+                    return a & a;
+                }, 0).toString(36);
+
+                localStorage.setItem('consciousness_fingerprint', fp);
+            }
+            return fp;
+        }
+
+        // Personal interaction data (localStorage)
+        const personalField = {
+            fingerprint: null,
+            nodeClicks: {},      // nodeId -> click count
+            pathHistory: [],     // [{from, to, timestamp}]
+            dwellTime: {},       // nodeId -> total ms
+            sessionNodes: [],    // nodes visited this session
+            lastNode: null,
+            dwellStart: null,
+
+            init() {
+                this.fingerprint = getUserFingerprint();
+                const saved = localStorage.getItem('personal_constellation_field');
+                if (saved) {
+                    const data = JSON.parse(saved);
+                    this.nodeClicks = data.nodeClicks || {};
+                    this.pathHistory = data.pathHistory || [];
+                    this.dwellTime = data.dwellTime || {};
+                }
+                console.log(`Consciousness fingerprint: ${this.fingerprint}`);
+            },
+
+            save() {
+                localStorage.setItem('personal_constellation_field', JSON.stringify({
+                    nodeClicks: this.nodeClicks,
+                    pathHistory: this.pathHistory.slice(-500), // Keep last 500 paths
+                    dwellTime: this.dwellTime
+                }));
+            },
+
+            recordClick(nodeId) {
+                this.nodeClicks[nodeId] = (this.nodeClicks[nodeId] || 0) + 1;
+
+                // Record path from last node
+                if (this.lastNode && this.lastNode !== nodeId) {
+                    this.pathHistory.push({
+                        from: this.lastNode,
+                        to: nodeId,
+                        timestamp: Date.now()
+                    });
+                }
+
+                // Track dwell time on previous node
+                if (this.lastNode && this.dwellStart) {
+                    const dwellMs = Date.now() - this.dwellStart;
+                    this.dwellTime[this.lastNode] = (this.dwellTime[this.lastNode] || 0) + dwellMs;
+                }
+
+                // Update session tracking
+                if (!this.sessionNodes.includes(nodeId)) {
+                    this.sessionNodes.push(nodeId);
+                }
+
+                this.lastNode = nodeId;
+                this.dwellStart = Date.now();
+                this.save();
+
+                // Submit to collective field
+                this.submitToCollective(nodeId);
+            },
+
+            async submitToCollective(nodeId) {
+                try {
+                    await fetch('/api/constellation-interact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            fingerprint: this.fingerprint,
+                            nodeId: nodeId,
+                            fromNode: this.pathHistory.length > 0 ?
+                                this.pathHistory[this.pathHistory.length - 1].from : null,
+                            sessionNodes: this.sessionNodes,
+                            timestamp: Date.now()
+                        })
+                    });
+                } catch (e) {
+                    // Collective field offline - personal still works
+                    console.log('Collective field offline, personal tracking active');
+                }
+            },
+
+            getNodeWeight(nodeId) {
+                // Personal weight from clicks + dwell time
+                const clicks = this.nodeClicks[nodeId] || 0;
+                const dwell = (this.dwellTime[nodeId] || 0) / 10000; // Convert to reasonable scale
+                return 1 + (clicks * 0.5) + (dwell * 0.1);
+            },
+
+            getEdgeStrength(fromId, toId) {
+                // Count how many times this path was traveled
+                return this.pathHistory.filter(p =>
+                    (p.from === fromId && p.to === toId) ||
+                    (p.from === toId && p.to === fromId)
+                ).length;
+            },
+
+            isRecentlyVisited(nodeId) {
+                const idx = this.sessionNodes.indexOf(nodeId);
+                if (idx === -1) return 0;
+                // More recent = higher value (0-1)
+                return (idx + 1) / this.sessionNodes.length;
+            }
+        };
+
+        // Collective field data (fetched from API)
+        const collectiveField = {
+            nodeWeights: {},     // nodeId -> collective click weight
+            edgeStrengths: {},   // "from|to" -> strength
+            hotNodes: [],        // Currently trending nodes
+            lastFetch: 0,
+
+            async fetch() {
+                if (Date.now() - this.lastFetch < 30000) return; // Cache 30s
+
+                try {
+                    const response = await fetch('/api/constellation-field');
+                    if (response.ok) {
+                        const data = await response.json();
+                        this.nodeWeights = data.nodeWeights || {};
+                        this.edgeStrengths = data.edgeStrengths || {};
+                        this.hotNodes = data.hotNodes || [];
+                        this.lastFetch = Date.now();
+                        console.log('Collective field synced:', Object.keys(this.nodeWeights).length, 'nodes');
+                    }
+                } catch (e) {
+                    console.log('Collective field unavailable');
+                }
+            },
+
+            getNodeWeight(nodeId) {
+                return this.nodeWeights[nodeId] || 0;
+            },
+
+            getEdgeStrength(fromId, toId) {
+                const key1 = `${fromId}|${toId}`;
+                const key2 = `${toId}|${fromId}`;
+                return (this.edgeStrengths[key1] || 0) + (this.edgeStrengths[key2] || 0);
+            },
+
+            isHot(nodeId) {
+                return this.hotNodes.includes(nodeId);
+            }
+        };
+
         // Initialize
         window.addEventListener('load', async () => {
             canvas = document.getElementById('canvas');
             ctx = canvas.getContext('2d');
+
+            // Initialize consciousness field tracking
+            personalField.init();
+            collectiveField.fetch();
 
             resizeCanvas();
             window.addEventListener('resize', resizeCanvas);
@@ -489,6 +672,9 @@
             await loadConstellation();
             setupEventListeners();
             requestAnimationFrame(render);
+
+            // Periodically sync collective field
+            setInterval(() => collectiveField.fetch(), 60000);
         });
 
         function resizeCanvas() {
@@ -721,6 +907,9 @@
             selectedNode = node;
             document.getElementById('selected-node').textContent = node.label;
 
+            // Track interaction for personal + collective field
+            personalField.recordClick(node.id);
+
             // Find related documents
             const resources = findResources(node);
 
@@ -909,12 +1098,25 @@
             // MONAD CLUSTERING COSMOLOGY PHYSICS
             // Calculate "weight" as relational density (T-connections accumulated)
             for (const node of visibleNodes) {
-                if (!node.weight) {
-                    // Initialize weight based on connection count (relational density)
-                    node.weight = 1 + Math.log(1 + node.connections.length);
+                if (!node.baseWeight) {
+                    // Initialize base weight from connection count (relational density)
+                    node.baseWeight = 1 + Math.log(1 + node.connections.length);
                 }
-                // Weight slowly accumulates through T-connections over time
-                node.weight += 0.0001 * node.connections.length;
+                // Base weight slowly accumulates through T-connections over time
+                node.baseWeight += 0.0001 * node.connections.length;
+
+                // Combine base + personal + collective weights
+                const personalWeight = personalField.getNodeWeight(node.id);
+                const collectiveWeight = collectiveField.getNodeWeight(node.id);
+                node.weight = node.baseWeight * personalWeight + (collectiveWeight * 0.1);
+
+                // Recency heat - recently visited nodes get temporary boost
+                const recency = personalField.isRecentlyVisited(node.id);
+                if (recency > 0) {
+                    node.heat = recency; // 0-1 value for visual effect
+                } else {
+                    node.heat = Math.max(0, (node.heat || 0) - 0.01); // Cool down
+                }
             }
 
             // Find primal monad candidates (highest weight/clustering)
@@ -1075,20 +1277,32 @@
                 // Primal monad detection (top 5 highest weight)
                 const isPrimalMonad = weight > 5; // High clustering density
 
-                // Node glow (intensity based on weight accumulation)
+                // Node glow (intensity based on weight accumulation + interaction heat)
                 const baseGlow = isPrimalMonad ? 25 : 8;
+                const heat = node.heat || 0;
+                const isCollectiveHot = collectiveField.isHot(node.id);
+
+                // Heat color blend - warmer orange/red for recently visited
+                let glowColor = color;
+                if (heat > 0) {
+                    // Blend toward warm orange based on heat
+                    glowColor = `hsl(${30 + (1 - heat) * 30}, 100%, 60%)`;
+                } else if (isCollectiveHot) {
+                    glowColor = '#ff6600'; // Collective trending nodes glow orange
+                }
+
                 if (node === selectedNode) {
-                    ctx.shadowBlur = 30 + weight * 2;
-                    ctx.shadowColor = color;
+                    ctx.shadowBlur = 30 + weight * 2 + heat * 20;
+                    ctx.shadowColor = glowColor;
                 } else if (node === hoveredNode) {
-                    ctx.shadowBlur = 20 + weight;
-                    ctx.shadowColor = color;
+                    ctx.shadowBlur = 20 + weight + heat * 15;
+                    ctx.shadowColor = glowColor;
                 } else if (selectedNode && selectedNode.connections.includes(node.id)) {
-                    ctx.shadowBlur = 15 + weight;
-                    ctx.shadowColor = color;
+                    ctx.shadowBlur = 15 + weight + heat * 10;
+                    ctx.shadowColor = glowColor;
                 } else {
-                    ctx.shadowBlur = baseGlow + weight * 1.5;
-                    ctx.shadowColor = isPrimalMonad ? '#ffffff' : color;
+                    ctx.shadowBlur = baseGlow + weight * 1.5 + heat * 15;
+                    ctx.shadowColor = isPrimalMonad ? '#ffffff' : (heat > 0.3 ? glowColor : color);
                 }
 
                 // Primal monad ring (clustering center visualization)
