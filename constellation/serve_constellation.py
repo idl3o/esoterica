@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Quick web server for constellation explorer
-Run this and open http://localhost:8000/constellation_explorer.html
+Run this and open http://localhost:8000/constellation_explorer_v2.html
 """
 
 import http.server
@@ -35,7 +35,7 @@ if __name__ == "__main__":
     print(f"   Press Ctrl+C to stop\n")
 
     # Open browser
-    webbrowser.open(f'http://localhost:{PORT}/constellation_explorer.html')
+    webbrowser.open(f'http://localhost:{PORT}/constellation_explorer_v2.html')
 
     # Start server
     with socketserver.TCPServer(("", PORT), Handler) as httpd:

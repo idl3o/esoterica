@@ -33,6 +33,14 @@
   ],
   "routes": [
     {
+      "src": "/explorer",
+      "dest": "/constellation/constellation_explorer_v2.html"
+    },
+    {
+      "src": "/constellation-explorer",
+      "dest": "/constellation/constellation_explorer_v2.html"
+    },
+    {
       "src": "/library",
       "dest": "/synthesis-library.html"
     },

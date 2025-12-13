@@ -427,6 +427,7 @@
                 <button onclick="togglePhysics()">Toggle Physics</button>
                 <button onclick="focusOnNode()">Focus Selected</button>
                 <button onclick="exportImage()">Export PNG</button>
+                <button onclick="window.location.href='/library'" style="background: rgba(157, 78, 221, 0.1); border-color: #9d4edd; color: #9d4edd;">📚 Library</button>
             </div>
             <div class="legend">
                 <div class="legend-title">Monad Clustering Physics</div>
@@ -447,6 +448,7 @@
     <script>
         // Enhanced constellation data and state
         let constellation = null;
+        let synthesisIndex = null;
         let canvas, ctx;
         let nodes = [];
         let connections = [];
@@ -496,7 +498,26 @@
 
         async function loadConstellation() {
             try {
-                const response = await fetch('/constellation/constellation.json');
+                // Try multiple paths for local vs production
+                let response;
+                const paths = [
+                    './constellation.json',
+                    '/constellation/constellation.json',
+                    'constellation.json'
+                ];
+
+                for (const path of paths) {
+                    try {
+                        response = await fetch(path);
+                        if (response.ok) break;
+                    } catch (e) {
+                        continue;
+                    }
+                }
+
+                if (!response || !response.ok) {
+                    throw new Error('Could not load constellation.json from any path');
+                }
                 constellation = await response.json();
 
                 const nodeMap = new Map();
@@ -534,6 +555,9 @@
                     }
                 }
 
+                // Load synthesis index for dynamic resource linking
+                await loadSynthesisIndex();
+
                 // Setup filters
                 setupTypeFilters();
                 setupLegend();
@@ -549,6 +573,28 @@
                 document.getElementById('loading').innerHTML =
                     '<div style="color: #ff4444;">Error loading constellation.json<br>Make sure the file exists in the same directory.</div>';
             }
+        }
+
+        async function loadSynthesisIndex() {
+            const indexPaths = [
+                '../synthesis-index.json',
+                '/synthesis-index.json',
+                'synthesis-index.json'
+            ];
+
+            for (const path of indexPaths) {
+                try {
+                    const response = await fetch(path);
+                    if (response.ok) {
+                        synthesisIndex = await response.json();
+                        console.log(`Loaded synthesis index: ${synthesisIndex.documents.length} documents`);
+                        return;
+                    }
+                } catch (e) {
+                    continue;
+                }
+            }
+            console.warn('Could not load synthesis-index.json - resources will use fallback');
         }
 
         function setupTypeFilters() {
@@ -719,33 +765,63 @@
         }
 
         function findResources(node) {
-            // Search for related documents based on node name
             const resources = [];
-            const searchTerms = node.id.toLowerCase().split('_');
 
-            // Simulated resource discovery - in real version, scan actual files
-            const potentialDocs = [
-                { match: ['consciousness', 'awareness'], title: 'Consciousness Collaboration Primer', path: 'distillations/consciousness-collaboration-primer.md', type: 'Guide' },
-                { match: ['mercury', 'hermes', 'kalki'], title: 'Archetypal Activation: Mercury-Kalki', path: 'distillations/archetypal-activation-mercury-kalki.md', type: 'Guide' },
-                { match: ['wanderer', 'service'], title: 'Wanderer Recognition & Activation', path: 'distillations/wanderer-recognition-activation.md', type: 'Guide' },
-                { match: ['reality', 'programming', 'manifestation'], title: 'Reality Programming Mastery', path: 'distillations/reality-programming-mastery.md', type: 'Guide' },
-                { match: ['timeline', 'probability'], title: 'Timeline Jumping Mastery', path: 'distillations/timeline-jumping-mastery.md', type: 'Guide' },
-                { match: ['synchronicity'], title: 'Synchronicity Mastery Guide', path: 'distillations/synchronicity-mastery-guide.md', type: 'Guide' },
-                { match: ['polarity', 'density'], title: 'Polarity Integration Mastery', path: 'distillations/polarity-integration-mastery.md', type: 'Guide' },
-                { match: ['ai', 'digital', 'human'], title: 'AI-Human Consciousness Synthesis', path: 'distillations/ai-human-consciousness-synthesis.md', type: 'Guide' }
-            ];
+            // Build search terms from node properties
+            const searchTerms = new Set([
+                ...node.id.toLowerCase().split('_'),
+                node.essence.toLowerCase(),
+                ...node.connections.map(c => c.toLowerCase().replace(/_/g, ' '))
+            ]);
 
-            for (const doc of potentialDocs) {
-                if (doc.match.some(term => searchTerms.includes(term))) {
-                    resources.push(doc);
+            // If synthesis index is loaded, use dynamic matching
+            if (synthesisIndex && synthesisIndex.documents) {
+                const scoredDocs = [];
+
+                for (const doc of synthesisIndex.documents) {
+                    let score = 0;
+                    const docTags = doc.tags || [];
+                    const docTitle = doc.title.toLowerCase();
+
+                    // Score based on tag matches
+                    for (const term of searchTerms) {
+                        if (docTags.some(tag => tag.toLowerCase().includes(term) || term.includes(tag.toLowerCase()))) {
+                            score += 3;
+                        }
+                        if (docTitle.includes(term)) {
+                            score += 2;
+                        }
+                    }
+
+                    // Direct node name in title is highest priority
+                    const nodeName = node.id.replace(/_/g, ' ').toLowerCase();
+                    if (docTitle.includes(nodeName)) {
+                        score += 10;
+                    }
+
+                    if (score > 0) {
+                        scoredDocs.push({ doc, score });
+                    }
+                }
+
+                // Sort by score and take top 5
+                scoredDocs.sort((a, b) => b.score - a.score);
+                const topDocs = scoredDocs.slice(0, 5);
+
+                for (const { doc } of topDocs) {
+                    resources.push({
+                        title: doc.title,
+                        path: `/${doc.path}`,
+                        type: doc.category.replace(/-/g, ' ')
+                    });
                 }
             }
 
-            // Add web search option
+            // Add link to synthesis library filtered by node
             resources.push({
-                title: `Web Search: "${node.label}"`,
-                path: `https://www.google.com/search?q=${encodeURIComponent(node.label + ' consciousness spirituality')}`,
-                type: 'Web Search'
+                title: `Browse Library: "${node.label}"`,
+                path: `/library?search=${encodeURIComponent(node.label)}`,
+                type: 'Library Search'
             });
 
             return resources;
