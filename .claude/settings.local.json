@@ -38,7 +38,9 @@
       "Bash(node build-synthesis-index.js)",
       "Bash(open synthesis-library.html)",
       "Bash(open synthesis-library-v2.html)",
-      "Bash(vercel:*)"
+      "Bash(vercel:*)",
+      "Bash(start http://localhost:8000/constellation_explorer_v2.html)",
+      "Bash(start http://localhost:8000/constellation/constellation_explorer_v2.html)"
     ],
     "deny": [],
     "ask": []
