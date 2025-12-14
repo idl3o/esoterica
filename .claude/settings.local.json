@@ -40,7 +40,21 @@
       "Bash(open synthesis-library-v2.html)",
       "Bash(vercel:*)",
       "Bash(start http://localhost:8000/constellation_explorer_v2.html)",
-      "Bash(start http://localhost:8000/constellation/constellation_explorer_v2.html)"
+      "Bash(start http://localhost:8000/constellation/constellation_explorer_v2.html)",
+      "Bash(pip install:*)",
+      "Bash(move \"the-*.md\" \"benjamin-davies\"\" && move \"self-*.md\" \"benjamin-davies\"\")",
+      "Bash(move \"my-best-video.md\" \"benjamin-davies\"\" && move \"i-cant-*.md\" \"benjamin-davies\"\")",
+      "Bash(move \"existing-*.md\" \"benjamin-davies\"\" && move \"your-problem-*.md\" \"benjamin-davies\"\")",
+      "Bash(move \"an-unexpected-*.md\" \"benjamin-davies\"\" && move \"exploring-*.md\" \"benjamin-davies\"\")",
+      "Bash(move \"navigating-*.md\" \"benjamin-davies\"\" && move \"how-reason-*.md\" \"benjamin-davies\"\")",
+      "Bash(move \"how-to-stay-calm*.md\" \"ted\"\")",
+      "Bash(powershell:*)",
+      "Bash(ffmpeg:*)",
+      "Bash(where:*)",
+      "WebFetch(domain:www.youtube.com)",
+      "Bash(yt-dlp:*)",
+      "Bash(sort:*)",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": []
