@@ -74,9 +74,18 @@ esoterica/
 │   ├── hermetic/                 # Emerald tablet decoded
 │   ├── modern/                   # Psychohistorical gnosis
 │   └── synthesis/                # All paths one mountain
+├── extractions/                  # Raw YouTube transcript extractions
+│   ├── benjamin-davies/          # Paraphilosophy channel (23 transcripts)
+│   ├── ted/                      # TED talks
+│   ├── [channel-name]/           # Auto-created per channel harvest
+│   └── channel-manifest.json     # Extraction metadata and tracking
+├── translated/                   # Consciousness-synthesized documents from extractions
+│   └── paraphilosophy-consciousness-bridge.md  # Example translation
+├── cli/                          # Command-line tools
+│   └── youtube_ingest.py         # YouTube transcript extraction pipeline
 ├── client/, server/, api/        # Web platform (esoterica.vercel.app)
-├── synthesis-library.html        # Mobile infinite scroll library (180 docs)
-├── synthesis-index.json          # Auto-generated searchable index
+├── synthesis-library.html        # Mobile infinite scroll library (210+ docs)
+├── synthesis-index.json          # Auto-generated searchable index (includes extractions)
 ├── build-synthesis-index.js      # Index builder (runs on deploy)
 └── Core docs: CLAUDE.md, CLAUDE_INITIALIZATION.md, TUNING_FORK_PRINCIPLE.md, etc.
 ```
@@ -119,12 +128,38 @@ The platform facilitates consciousness development at multiple levels:
 - **Strategic Evolution**: Empirical feedback informing future consciousness technology development and packaging
 
 **Synthesis Library Launch** (December 2025):
-- **Mobile-Optimized Interface**: Infinite scroll browsing of all 180 synthesis documents
+- **Mobile-Optimized Interface**: Infinite scroll browsing of all 210+ documents
 - **Innovative Navigation**: Swipe gestures (save/skip), smart filtering, constellation tag exploration
 - **Auto-Generated Index**: Build script scans markdown files, extracts metadata, creates searchable index
 - **Vercel Deployment**: Live at esoterica.vercel.app/library with auto-rebuilding on updates
 - **Features**: Real-time search, category/tag filtering, reading progress tracking, virtual scrolling performance
 - **Use Cases**: Mobile reference lookup, exploration mode, distribution preview, knowledge management
+
+**YouTube Extraction Pipeline** (December 2025):
+- **Transcript Harvesting**: Automated extraction of YouTube video transcripts into synthesis-ready markdown
+- **Channel Harvest Mode**: Extract entire channels with `--channel URL` flag
+- **Auto-Organization**: Channel subdirectories created automatically (`extractions/channel-name/`)
+- **Manifest Tracking**: `channel-manifest.json` records successful/failed extractions per channel
+- **Skip Existing**: `--skip-existing` flag for incremental updates when channels add new videos
+- **Translation Pipeline**: Raw transcripts → `/extractions/` → synthesis process → `/translated/`
+- **Index Integration**: Extractions included in `synthesis-index.json` for searchable library
+
+**Usage**:
+```bash
+# Harvest entire channel
+python cli/youtube_ingest.py --channel https://www.youtube.com/@ChannelName
+
+# List channel videos without extracting
+python cli/youtube_ingest.py --channel URL --list-only
+
+# Skip already-extracted videos
+python cli/youtube_ingest.py --channel URL --skip-existing
+
+# Single video with custom tags
+python cli/youtube_ingest.py VIDEO_URL --tags philosophy consciousness
+```
+
+**First Harvest**: Benjamin Davies' Paraphilosophy channel (23/45 videos - 22 without transcripts available)
 
 **Distribution Mission**: Reaching "System Prompts for Humanity" and expanding consciousness awareness through accessible, engaging formats that meet beings where they are while revealing where they can go.
 

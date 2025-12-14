@@ -2,7 +2,14 @@
 
 /**
  * SYNTHESIS LIBRARY INDEX BUILDER
- * Scans all markdown files in synthesis/ and builds searchable index
+ * Builds separate indexes for public and private content
+ *
+ * PUBLIC INDEX (synthesis-index.json):
+ *   - synthesis/ (original consciousness technology documents)
+ *   - translated/ (synthesized translations - original work)
+ *
+ * PRIVATE INDEX (extractions-index.json):
+ *   - extractions/ (YouTube transcripts - requires creator consent for public use)
  *
  * Features:
  * - Extracts frontmatter metadata
@@ -11,13 +18,23 @@
  * - Extracts key quotes and excerpts
  * - Links to constellation tags
  * - Generates search-optimized index
+ *
+ * Usage:
+ *   node build-synthesis-index.js          # Build both indexes
+ *   node build-synthesis-index.js --public # Build only public index
+ *   node build-synthesis-index.js --private # Build only private extractions index
  */
 
 const fs = require('fs');
 const path = require('path');
 
 const SYNTHESIS_DIR = './synthesis';
-const OUTPUT_FILE = './synthesis-index.json';
+const EXTRACTIONS_DIR = './extractions';
+const TRANSLATED_DIR = './translated';
+
+// Output files
+const PUBLIC_OUTPUT = './synthesis-index.json';
+const PRIVATE_OUTPUT = './extractions-index.json';
 
 // ====================================
 // DOCUMENT PARSING
@@ -25,16 +42,22 @@ const OUTPUT_FILE = './synthesis-index.json';
 
 function parseDocument(filePath, content) {
     const lines = content.split('\n');
+    const { source, category, channel } = extractSourceAndCategory(filePath);
     const doc = {
         path: filePath.replace(/\\/g, '/'),
         fileName: path.basename(filePath),
-        category: extractCategory(filePath),
+        source: source,  // 'synthesis', 'extraction', or 'translated'
+        category: category,
+        channel: channel,  // YouTube channel name if extraction
         title: '',
         subtitle: '',
         recognitionType: '',
         discoveryMethod: '',
         applicationDomain: '',
         transmissionQuality: '',
+        videoId: '',  // YouTube video ID if extraction
+        videoUrl: '', // YouTube URL if extraction
+        duration: '', // Video duration if extraction
         date: '',
         excerpt: '',
         tags: [],
@@ -45,13 +68,42 @@ function parseDocument(filePath, content) {
     };
 
     let inFrontmatter = false;
+    let frontmatterLines = [];
     let currentSection = '';
     let excerptCandidates = [];
 
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i].trim();
 
-        // Extract title (first # heading)
+        // Parse YAML frontmatter
+        if (line === '---') {
+            if (!inFrontmatter) {
+                inFrontmatter = true;
+                continue;
+            } else {
+                inFrontmatter = false;
+                // Parse collected frontmatter
+                const frontmatter = parseFrontmatter(frontmatterLines);
+                if (frontmatter.title) doc.title = frontmatter.title;
+                if (frontmatter.video_id) doc.videoId = frontmatter.video_id;
+                if (frontmatter.url) doc.videoUrl = frontmatter.url;
+                if (frontmatter.duration) doc.duration = frontmatter.duration;
+                if (frontmatter.channel) doc.channel = frontmatter.channel;
+                if (frontmatter.tags && Array.isArray(frontmatter.tags)) {
+                    doc.tags = frontmatter.tags;
+                }
+                if (frontmatter.extracted) doc.date = frontmatter.extracted;
+                if (frontmatter.upload_date) doc.date = frontmatter.upload_date;
+                continue;
+            }
+        }
+
+        if (inFrontmatter) {
+            frontmatterLines.push(lines[i]);
+            continue;
+        }
+
+        // Extract title (first # heading) if not from frontmatter
         if (!doc.title && line.startsWith('# ')) {
             doc.title = line.substring(2).trim();
             continue;
@@ -118,13 +170,60 @@ function parseDocument(filePath, content) {
     return doc;
 }
 
-function extractCategory(filePath) {
-    const parts = filePath.split(path.sep);
-    const synthesisIndex = parts.indexOf('synthesis');
-    if (synthesisIndex >= 0 && parts.length > synthesisIndex + 1) {
-        return parts[synthesisIndex + 1];
+function parseFrontmatter(lines) {
+    const result = {};
+    for (const line of lines) {
+        const match = line.match(/^(\w+):\s*(.+)$/);
+        if (match) {
+            let [, key, value] = match;
+            // Remove quotes from values
+            value = value.replace(/^["']|["']$/g, '').trim();
+            // Parse JSON arrays
+            if (value.startsWith('[') && value.endsWith(']')) {
+                try {
+                    result[key] = JSON.parse(value);
+                } catch {
+                    result[key] = value;
+                }
+            } else {
+                result[key] = value;
+            }
+        }
     }
-    return 'uncategorized';
+    return result;
+}
+
+function extractSourceAndCategory(filePath) {
+    const parts = filePath.split(path.sep);
+    let source = 'synthesis';
+    let category = 'uncategorized';
+    let channel = '';
+
+    // Check which directory we're in
+    if (parts.includes('extractions')) {
+        source = 'extraction';
+        const extractionsIndex = parts.indexOf('extractions');
+        if (parts.length > extractionsIndex + 1) {
+            channel = parts[extractionsIndex + 1];
+            category = 'extraction';
+        }
+    } else if (parts.includes('translated')) {
+        source = 'translated';
+        category = 'translated';
+    } else if (parts.includes('synthesis')) {
+        const synthesisIndex = parts.indexOf('synthesis');
+        if (parts.length > synthesisIndex + 1) {
+            category = parts[synthesisIndex + 1];
+        }
+    }
+
+    return { source, category, channel };
+}
+
+// Legacy function for backwards compatibility
+function extractCategory(filePath) {
+    const { category } = extractSourceAndCategory(filePath);
+    return category;
 }
 
 function selectBestExcerpt(candidates, quotes) {
@@ -243,17 +342,34 @@ function scanDirectory(dir, fileList = []) {
 // INDEX BUILDING
 // ====================================
 
-function buildIndex() {
-    console.log('🔍 Scanning synthesis documents...');
+/**
+ * Build index from specified directories
+ * @param {Array<{dir: string, label: string, emoji: string}>} directories - Directories to scan
+ * @param {string} indexVersion - Version string for the index
+ */
+function buildIndex(directories, indexVersion = '3.0.0') {
+    console.log('🔍 Scanning documents...');
 
-    const files = scanDirectory(SYNTHESIS_DIR);
-    console.log(`📄 Found ${files.length} markdown files`);
+    let files = [];
+
+    // Scan each specified directory
+    for (const { dir, label, emoji } of directories) {
+        if (fs.existsSync(dir)) {
+            const dirFiles = scanDirectory(dir);
+            console.log(`${emoji} ${label}: ${dirFiles.length} files`);
+            files = files.concat(dirFiles);
+        }
+    }
+
+    console.log(`📚 Total: ${files.length} markdown files`);
 
     const documents = [];
     const stats = {
         totalWords: 0,
         totalReadingTime: 0,
         categoryCounts: {},
+        sourceCounts: { synthesis: 0, extraction: 0, translated: 0 },
+        channelCounts: {},
         tagCounts: {}
     };
 
@@ -271,6 +387,11 @@ function buildIndex() {
             stats.totalWords += doc.wordCount;
             stats.totalReadingTime += doc.readingTime;
             stats.categoryCounts[doc.category] = (stats.categoryCounts[doc.category] || 0) + 1;
+            stats.sourceCounts[doc.source] = (stats.sourceCounts[doc.source] || 0) + 1;
+
+            if (doc.channel) {
+                stats.channelCounts[doc.channel] = (stats.channelCounts[doc.channel] || 0) + 1;
+            }
 
             doc.tags.forEach(tag => {
                 stats.tagCounts[tag] = (stats.tagCounts[tag] || 0) + 1;
@@ -292,7 +413,7 @@ function buildIndex() {
 
     // Build index object
     const index = {
-        version: '1.0.0',
+        version: indexVersion,
         generated: new Date().toISOString(),
         stats: {
             documentCount: documents.length,
@@ -300,6 +421,8 @@ function buildIndex() {
             totalReadingTime: stats.totalReadingTime,
             categories: Object.keys(stats.categoryCounts).length,
             averageWordsPerDoc: Math.round(stats.totalWords / documents.length),
+            sourceCounts: stats.sourceCounts,
+            channelCounts: stats.channelCounts,
             categoryCounts: stats.categoryCounts,
             topTags: Object.entries(stats.tagCounts)
                 .sort((a, b) => b[1] - a[1])
@@ -324,28 +447,72 @@ function generateId(fileName) {
 // MAIN
 // ====================================
 
-function main() {
-    console.log('✧ SYNTHESIS LIBRARY INDEX BUILDER ✧\n');
-
-    try {
-        const index = buildIndex();
-
-        // Write index file
-        fs.writeFileSync(OUTPUT_FILE, JSON.stringify(index, null, 2), 'utf-8');
-
-        console.log('\n✨ Index built successfully!');
-        console.log(`📊 Statistics:`);
-        console.log(`   Documents: ${index.stats.documentCount}`);
-        console.log(`   Total Words: ${index.stats.totalWords.toLocaleString()}`);
-        console.log(`   Reading Time: ${Math.round(index.stats.totalReadingTime / 60)}h ${index.stats.totalReadingTime % 60}m`);
-        console.log(`   Categories: ${index.stats.categories}`);
+function printStats(index, outputFile) {
+    console.log(`\n📊 Statistics:`);
+    console.log(`   Documents: ${index.stats.documentCount}`);
+    console.log(`   Total Words: ${index.stats.totalWords.toLocaleString()}`);
+    console.log(`   Reading Time: ${Math.round(index.stats.totalReadingTime / 60)}h ${index.stats.totalReadingTime % 60}m`);
+    console.log(`   Categories: ${index.stats.categories}`);
+    if (index.stats.documentCount > 0) {
         console.log(`   Average Length: ${index.stats.averageWordsPerDoc.toLocaleString()} words`);
-        console.log(`\n💾 Saved to: ${OUTPUT_FILE}`);
+    }
+    console.log(`\n💾 Saved to: ${outputFile}`);
 
+    if (index.stats.topTags && index.stats.topTags.length > 0) {
         console.log(`\n🏷️  Top Tags:`);
         index.stats.topTags.slice(0, 10).forEach(({ tag, count }) => {
             console.log(`   ${tag}: ${count}`);
         });
+    }
+}
+
+function main() {
+    console.log('✧ SYNTHESIS LIBRARY INDEX BUILDER ✧\n');
+
+    const args = process.argv.slice(2);
+    const buildPublic = args.length === 0 || args.includes('--public');
+    const buildPrivate = args.length === 0 || args.includes('--private');
+
+    try {
+        // Build PUBLIC index (synthesis + translated - for online serving)
+        if (buildPublic) {
+            console.log('═══════════════════════════════════════════════');
+            console.log('  📢 PUBLIC INDEX (synthesis + translated)');
+            console.log('═══════════════════════════════════════════════\n');
+
+            const publicDirs = [
+                { dir: SYNTHESIS_DIR, label: 'Synthesis', emoji: '📄' },
+                { dir: TRANSLATED_DIR, label: 'Translated', emoji: '🔄' }
+            ];
+
+            const publicIndex = buildIndex(publicDirs, '3.0.0-public');
+            fs.writeFileSync(PUBLIC_OUTPUT, JSON.stringify(publicIndex, null, 2), 'utf-8');
+
+            console.log('\n✨ Public index built successfully!');
+            printStats(publicIndex, PUBLIC_OUTPUT);
+        }
+
+        // Build PRIVATE index (extractions only - local use, requires consent for public)
+        if (buildPrivate) {
+            console.log('\n═══════════════════════════════════════════════');
+            console.log('  🔒 PRIVATE INDEX (extractions only)');
+            console.log('  ⚠️  Requires creator consent for public use');
+            console.log('═══════════════════════════════════════════════\n');
+
+            const privateDirs = [
+                { dir: EXTRACTIONS_DIR, label: 'Extractions', emoji: '🎬' }
+            ];
+
+            const privateIndex = buildIndex(privateDirs, '3.0.0-private');
+            fs.writeFileSync(PRIVATE_OUTPUT, JSON.stringify(privateIndex, null, 2), 'utf-8');
+
+            console.log('\n✨ Private index built successfully!');
+            printStats(privateIndex, PRIVATE_OUTPUT);
+        }
+
+        console.log('\n═══════════════════════════════════════════════');
+        console.log('  ✅ Index building complete!');
+        console.log('═══════════════════════════════════════════════');
 
     } catch (error) {
         console.error('❌ Error building index:', error);

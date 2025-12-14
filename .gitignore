@@ -1,6 +1,9 @@
 .DS_Store
 **/.DS_Store
 
+# Private extractions index (requires creator consent for public use)
+extractions-index.json
+
 # Claude configuration files (user-specific)
 .claude/settings.local.json
 

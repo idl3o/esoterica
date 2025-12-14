@@ -1,0 +1,242 @@
+{
+  "channel": {
+    "name": "Benjamin Davies",
+    "slug": "benjamin-davies",
+    "url": "https://www.youtube.com/channel/UCSYASbIUXhLAuiibnAzD1Sw"
+  },
+  "extraction": {
+    "date": "2025-12-14T13:18:14.732928",
+    "total_found": 44,
+    "successful": 44,
+    "failed": 0,
+    "tags": [
+      "paraphilosophy",
+      "benjamin-davies"
+    ]
+  },
+  "videos": {
+    "extracted": [
+      {
+        "url": "https://www.youtube.com/watch?v=g5qsc9CiAy4",
+        "file": "an-unexpected-end-to-an-adventure-in-search-of-my-soul.md",
+        "video_id": "g5qsc9CiAy4"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=XIDOLQC9Xas",
+        "file": "existing-is-a-skill-how-to-do-it-well-an-insight.md",
+        "video_id": "XIDOLQC9Xas"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=XhbxvVQOHuo",
+        "file": "exploring-london-in-a-straight-line-in-search-of-my-soul.md",
+        "video_id": "XhbxvVQOHuo"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=GoUK8Q45et0",
+        "file": "how-reason-limits-creativity-ego-limits-freedom.md",
+        "video_id": "GoUK8Q45et0"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=t3vqkzl5cBM",
+        "file": "i-cant-put-it-more-simply-than-this.md",
+        "video_id": "t3vqkzl5cBM"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=C1kk3aIGNMc",
+        "file": "my-best-video.md",
+        "video_id": "C1kk3aIGNMc"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=dmXWnyh3x7s",
+        "file": "navigating-bath-city-in-a-circle-in-search-of-my-soul.md",
+        "video_id": "dmXWnyh3x7s"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=1LaXMY3L19I",
+        "file": "self-or-no-self-vedanta-vs-buddhism-fully-explained.md",
+        "video_id": "1LaXMY3L19I"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=2SXr_Qzq3Ks",
+        "file": "the-actual-secret-to-perfecting-the-game-of-life.md",
+        "video_id": "2SXr_Qzq3Ks"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=IbBpLZXC4ko",
+        "file": "the-desire-for-desirelessness.md",
+        "video_id": "IbBpLZXC4ko"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=Opu1YsNcDOk",
+        "file": "the-duality-of-desire-the-middle-way-between.md",
+        "video_id": "Opu1YsNcDOk"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=Tsrm3O69z0E",
+        "file": "the-essence-of-mystical-experience.md",
+        "video_id": "Tsrm3O69z0E"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=jvj9OhUNi-U",
+        "file": "the-ineffable-insight-of-all-traditions-a-paraphilosophical-.md",
+        "video_id": "jvj9OhUNi-U"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=TTMlHTsev4A",
+        "file": "the-limits-of-thought-kant-vs-nagarjuna.md",
+        "video_id": "TTMlHTsev4A"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=VBT68QgMuAA",
+        "file": "the-most-profound-experience-of-my-life.md",
+        "video_id": "VBT68QgMuAA"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=CZ9QgkaHKbM",
+        "file": "the-paradox-of-knowing-by-not-knowing.md",
+        "video_id": "CZ9QgkaHKbM"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=nn6geqjev4k",
+        "file": "the-path-to-wisdom-is-delusion.md",
+        "video_id": "nn6geqjev4k"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=aKwhIMFzdyk",
+        "file": "the-problem-with-advaita-vedanta-brahman-maya.md",
+        "video_id": "aKwhIMFzdyk"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=_eCrZ5guTEs",
+        "file": "the-problem-with-buddhism-emptiness.md",
+        "video_id": "_eCrZ5guTEs"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=M9WCwNsV1wA",
+        "file": "the-secret-of-sudden-awakening.md",
+        "video_id": "M9WCwNsV1wA"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=_4SIx5vBOlI",
+        "file": "the-simplest-solution-to-the-mind-body-problem.md",
+        "video_id": "_4SIx5vBOlI"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=s-xm4zcQLjk",
+        "file": "the-simplest-solution-to-the-origin-of-reality.md",
+        "video_id": "s-xm4zcQLjk"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=sZ2XRUV6xpA",
+        "file": "your-problem-is-that-youre-looking-for-a-solution.md",
+        "video_id": "sZ2XRUV6xpA"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=XyuM8Qh7yIc",
+        "file": "the-hidden-alternative-to-sensory-addictions.md",
+        "video_id": "XyuM8Qh7yIc"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=aY_n6q2jOQ4",
+        "file": "the-simple-solution-to-all-philosophical-questions.md",
+        "video_id": "aY_n6q2jOQ4"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=_ololelbl8Q",
+        "file": "rené-descartes-philosophy-full-summary-score.md",
+        "video_id": "_ololelbl8Q"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=UgDSXV3dJV4",
+        "file": "the-dual-aspect-solution-to-strife-its-simpler-than-you-thin.md",
+        "video_id": "UgDSXV3dJV4"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=T9t-rV1ocGg",
+        "file": "the-mind-as-mirror-a-bridge-between-worlds.md",
+        "video_id": "T9t-rV1ocGg"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=jWWlJqIHrrI",
+        "file": "the-fractal-void-number-noumenon-in-jung-lacan.md",
+        "video_id": "jWWlJqIHrrI"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=yUMxd5Mknfc",
+        "file": "does-free-will-exist.md",
+        "video_id": "yUMxd5Mknfc"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=vhSLKw_CrmI",
+        "file": "is-panpsychism-true.md",
+        "video_id": "vhSLKw_CrmI"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=0cSMl09B61k",
+        "file": "the-hidden-structure-of-belief-a-new-philosophical-breakthro.md",
+        "video_id": "0cSMl09B61k"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=wclr149frCM",
+        "file": "the-paradox-of-truth-consciousness-complementarity.md",
+        "video_id": "wclr149frCM"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=Td4vA24nkE4",
+        "file": "how-to-create-yourself-through-knowledge-fulfil-your-purpose.md",
+        "video_id": "Td4vA24nkE4"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=3-UDK8hNTzc",
+        "file": "this-video-may-shatter-your-worldview.md",
+        "video_id": "3-UDK8hNTzc"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=tg1RuUXAsIg",
+        "file": "the-simplified-truth-of-everything-animated.md",
+        "video_id": "tg1RuUXAsIg"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=P4gvxs3jAHQ",
+        "file": "the-truth-of-everything-animated.md",
+        "video_id": "P4gvxs3jAHQ"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=02oZ0GvsJo8",
+        "file": "paraphilosophy-a-meta-theory-of-everything.md",
+        "video_id": "02oZ0GvsJo8"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=kMwhjcT_NLo",
+        "file": "the-self-creation-of-truth-a-revolutionary-solution-to-every.md",
+        "video_id": "kMwhjcT_NLo"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=X-7affl5PGY",
+        "file": "on-self-ownership-libertarian-collectivism.md",
+        "video_id": "X-7affl5PGY"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=sgFy1h2lYSw",
+        "file": "on-self-love-subjective-absolutism.md",
+        "video_id": "sgFy1h2lYSw"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=kEeO3vyOz3M",
+        "file": "on-self-consciousness-the-concrete-universal.md",
+        "video_id": "kEeO3vyOz3M"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=WUlYS7zooXs",
+        "file": "on-self-knowledge-the-analytic-a-posteriori.md",
+        "video_id": "WUlYS7zooXs"
+      },
+      {
+        "url": "https://www.youtube.com/watch?v=wJvJ6UXDAUE",
+        "file": "how-to-build-a-philosophical-science.md",
+        "video_id": "wJvJ6UXDAUE"
+      }
+    ],
+    "failed": []
+  }
+}
