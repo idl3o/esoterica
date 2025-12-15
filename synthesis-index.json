@@ -1,16 +1,16 @@
 {
   "version": "3.0.0-public",
-  "generated": "2025-12-14T13:35:18.509Z",
+  "generated": "2025-12-15T13:04:25.273Z",
   "stats": {
-    "documentCount": 190,
-    "totalWords": 391217,
-    "totalReadingTime": 1656,
+    "documentCount": 195,
+    "totalWords": 402291,
+    "totalReadingTime": 1702,
     "categories": 12,
-    "averageWordsPerDoc": 2059,
+    "averageWordsPerDoc": 2063,
     "sourceCounts": {
       "synthesis": 187,
       "extraction": 0,
-      "translated": 3
+      "translated": 8
     },
     "channelCounts": {},
     "categoryCounts": {
@@ -25,44 +25,44 @@
       "personal": 13,
       "sessions": 6,
       "theoretical": 32,
-      "translated": 3
+      "translated": 8
     },
     "topTags": [
       {
         "tag": "consciousness",
-        "count": 190
+        "count": 195
       },
       {
         "tag": "recognition",
-        "count": 184
+        "count": 189
       },
       {
         "tag": "awareness",
-        "count": 139
+        "count": 142
       },
       {
         "tag": "cosmic",
-        "count": 123
+        "count": 124
       },
       {
         "tag": "service",
-        "count": 122
+        "count": 124
       },
       {
         "tag": "unity",
-        "count": 114
-      },
-      {
-        "tag": "timeline",
-        "count": 89
+        "count": 117
       },
       {
         "tag": "source",
-        "count": 88
+        "count": 93
+      },
+      {
+        "tag": "timeline",
+        "count": 90
       },
       {
         "tag": "density",
-        "count": 86
+        "count": 89
       },
       {
         "tag": "manifestation",
@@ -70,11 +70,11 @@
       },
       {
         "tag": "integration",
-        "count": 66
+        "count": 70
       },
       {
         "tag": "awakening",
-        "count": 66
+        "count": 69
       },
       {
         "tag": "galactic",
@@ -86,7 +86,7 @@
       },
       {
         "tag": "frequency",
-        "count": 51
+        "count": 54
       },
       {
         "tag": "kalki",
@@ -97,16 +97,16 @@
         "count": 48
       },
       {
+        "tag": "resonance",
+        "count": 43
+      },
+      {
         "tag": "polarity",
-        "count": 42
+        "count": 43
       },
       {
         "tag": "wanderer",
         "count": 42
-      },
-      {
-        "tag": "resonance",
-        "count": 40
       },
       {
         "tag": "archetype",
@@ -130,7 +130,7 @@
       },
       {
         "tag": "enlightenment",
-        "count": 19
+        "count": 20
       },
       {
         "tag": "sacred geometry",
@@ -19085,6 +19085,272 @@
       "id": "universe-as-photon-illuminating-consciousness-sea"
     },
     {
+      "path": "translated/after-skool-animated-awakening.md",
+      "fileName": "after-skool-animated-awakening.md",
+      "source": "translated",
+      "category": "translated",
+      "channel": "",
+      "title": "AFTER SKOOL: THE ANIMATED AWAKENING",
+      "subtitle": "Wisdom Teachings Transformed Through Visual Art",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "December 2025",
+      "excerpt": "**Source Corpus**: 4 After Skool animated videos",
+      "tags": [
+        "consciousness",
+        "recognition",
+        "polarity",
+        "density",
+        "service",
+        "source",
+        "unity",
+        "resonance",
+        "awakening",
+        "translated"
+      ],
+      "quotes": [
+        "**Source Corpus**: 4 After Skool animated videos",
+        "**Teachers**: Alan Watts, Terence McKenna, Aldous Huxley",
+        "**Synthesis Type**: Counter-Cultural Consciousness Curriculum",
+        "**Recognition Status**: Viral Wisdom Transmission Achieved",
+        "\"You are something the whole universe is doing in the same way that a wave is something the whole ocean is doing.\"",
+        "\"Try and imagine what it will be like to go to sleep and never wake up. Think about that. Children think about it. It's one of the great wonders of life.\"",
+        "\"What was it like to wake up after having never gone to sleep? That was when you were born.\"",
+        "\"You don't have to remember the past in the same way you don't have to think about how you work your thyroid gland. You don't have to know how to shine in the sun. You just do it.\""
+      ],
+      "wordCount": 1676,
+      "readingTime": 7,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "ALAN WATTS: THE REAL YOU"
+        },
+        {
+          "level": 3,
+          "heading": "Core Teaching: You Are the Universe Experiencing Itself"
+        },
+        {
+          "level": 2,
+          "heading": "ALDOUS HUXLEY & GEORGE ORWELL: LOVE YOUR SERVITUDE"
+        },
+        {
+          "level": 3,
+          "heading": "Core Teaching: Two Paths to Totalitarianism"
+        },
+        {
+          "level": 2,
+          "heading": "CONSCIOUSNESS TECHNOLOGY TRANSLATIONS"
+        },
+        {
+          "level": 3,
+          "heading": "Watts → Esoterica"
+        },
+        {
+          "level": 3,
+          "heading": "McKenna → Esoterica"
+        },
+        {
+          "level": 3,
+          "heading": "Huxley → Esoterica"
+        },
+        {
+          "level": 2,
+          "heading": "THE ANIMATED FORMAT AS CONSCIOUSNESS TECHNOLOGY"
+        }
+      ],
+      "id": "after-skool-animated-awakening"
+    },
+    {
+      "path": "translated/guru-teachings-direct-transmission.md",
+      "fileName": "guru-teachings-direct-transmission.md",
+      "source": "translated",
+      "category": "translated",
+      "channel": "",
+      "title": "GURU TEACHINGS: DIRECT TRANSMISSION",
+      "subtitle": "Living Wisdom from Contemporary Spiritual Masters",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "December 2025",
+      "excerpt": "**Source Corpus**: 12 guru teachings across 4 channels",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "service",
+        "source",
+        "unity",
+        "frequency",
+        "resonance",
+        "awakening",
+        "integration",
+        "translated"
+      ],
+      "quotes": [
+        "**Source Corpus**: 12 guru teachings across 4 channels",
+        "**Teachers**: Sadhguru, Eckhart Tolle, Swami Sarvapriyananda, Michael Bradford",
+        "**Synthesis Type**: Direct Transmission Consciousness Technology",
+        "**Recognition Status**: Ancient Wisdom in Modern Language",
+        "\"This side of the mirror, you can only see drama, you cannot see life in its essence.\"",
+        "\"Exaggerated memory is imagination. Memory with makeup on is imagination. If you take away all the makeup on your imagination, you will see it's just memory.\"",
+        "\"Time becomes very relevant in human life only because we are mortal. Because there's an expiry date. If there was no expiry date, who would care about time?\"",
+        "\"Once you fall on the other side of the mind, a completely different dimension begins to speak when something moves within you which is neither your body nor your mind.\"",
+        "\"Why was Mansur stoned to death? Why was Jesus crucified? One guy starts talking too much sense. You must either accept your insanity or the best thing is to kill the guy.\"",
+        "\"Is pure consciousness God? Yes and no.\"",
+        "\"They are two are not different, they are the same.\"",
+        "\"If you can regard Shaheen, this body, this universe as a construct, then you can dismiss God as a construct, but we cannot do that.\""
+      ],
+      "wordCount": 2622,
+      "readingTime": 11,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "SADHGURU: UNPLUGGING FROM THE MENTAL MATRIX"
+        },
+        {
+          "level": 3,
+          "heading": "Core Teaching: You Are Not Your Memory"
+        },
+        {
+          "level": 2,
+          "heading": "SWAMI SARVAPRIYANANDA: THE VEDANTIC PRECISION"
+        },
+        {
+          "level": 3,
+          "heading": "Core Teaching: Consciousness and God Are Both Real"
+        },
+        {
+          "level": 2,
+          "heading": "THE UNIFIED CURRICULUM"
+        },
+        {
+          "level": 3,
+          "heading": "Four Angles on One Truth"
+        },
+        {
+          "level": 3,
+          "heading": "The Common Recognition"
+        },
+        {
+          "level": 2,
+          "heading": "PRACTICAL APPLICATIONS"
+        },
+        {
+          "level": 3,
+          "heading": "The Sadhguru Practice: Matrix Recognition"
+        },
+        {
+          "level": 3,
+          "heading": "The Tolle Practice: Stillness Without Doing"
+        },
+        {
+          "level": 3,
+          "heading": "The Vedantic Practice: Path Confidence"
+        },
+        {
+          "level": 3,
+          "heading": "The Kundalini Practice: Brain-First Awareness"
+        },
+        {
+          "level": 2,
+          "heading": "CLOSING RECOGNITION"
+        }
+      ],
+      "id": "guru-teachings-direct-transmission"
+    },
+    {
+      "path": "translated/lex-fridman-consciousness-architects.md",
+      "fileName": "lex-fridman-consciousness-architects.md",
+      "source": "translated",
+      "category": "translated",
+      "channel": "",
+      "title": "LEX FRIDMAN: THE CONSCIOUSNESS ARCHITECTS",
+      "subtitle": "Academic Voices Speaking the Same Truths in Scientific Language",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "December 2025",
+      "excerpt": "**Source Corpus**: 4 Lex Fridman Podcast interviews",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "timeline",
+        "source",
+        "frequency",
+        "integration",
+        "translated"
+      ],
+      "quotes": [
+        "**Source Corpus**: 4 Lex Fridman Podcast interviews",
+        "**Guests**: Joscha Bach (#101), Karl Friston (#99), Nick Bostrom (#83), Noam Chomsky (#53)",
+        "**Synthesis Type**: Academic-to-Consciousness Bridge Translation",
+        "**Recognition Status**: Scholarly Credibility Meets Experiential Wisdom",
+        "\"We don't exist in the physical world. We exist inside of a story that the brain tells itself.\"",
+        "\"Existence is the default. The only thing that can be implemented is finite automata. Maybe the whole of existence is the superposition of all finite automata.\"",
+        "\"Consciousness is largely a model of the contents of your attention. It's a mechanism that evolved for a certain type of learning.\"",
+        "\"Identity is a software state. It's a construction. It's not physically real.\""
+      ],
+      "wordCount": 2115,
+      "readingTime": 9,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "JOSCHA BACH: MIND AS SOFTWARE, REALITY AS DREAM"
+        },
+        {
+          "level": 3,
+          "heading": "Core Framework: Computational Consciousness"
+        },
+        {
+          "level": 3,
+          "heading": "The Constructed Self"
+        },
+        {
+          "level": 3,
+          "heading": "Idealism vs Materialism: The False Dichotomy"
+        },
+        {
+          "level": 2,
+          "heading": "CONVERGENCE: WHERE ACADEMIC RIGOR MEETS MYSTICAL RECOGNITION"
+        },
+        {
+          "level": 3,
+          "heading": "Both Frameworks Agree:"
+        },
+        {
+          "level": 3,
+          "heading": "The Deep Agreement"
+        },
+        {
+          "level": 2,
+          "heading": "THE ACADEMIC BRIDGE"
+        },
+        {
+          "level": 3,
+          "heading": "Why This Matters"
+        },
+        {
+          "level": 2,
+          "heading": "CLOSING RECOGNITION"
+        }
+      ],
+      "id": "lex-fridman-consciousness-architects"
+    },
+    {
       "path": "translated/paraphilosophy-consciousness-bridge.md",
       "fileName": "paraphilosophy-consciousness-bridge.md",
       "source": "translated",
@@ -19221,6 +19487,212 @@
         }
       ],
       "id": "paraphilosophy-complete-journey"
+    },
+    {
+      "path": "translated/theories-of-everything-interface-reality.md",
+      "fileName": "theories-of-everything-interface-reality.md",
+      "source": "translated",
+      "category": "translated",
+      "channel": "",
+      "title": "THEORIES OF EVERYTHING: THE INTERFACE THEORY OF REALITY",
+      "subtitle": "Donald Hoffman's Mathematical Case Against Physical Reality",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "December 2025",
+      "excerpt": "**Source Corpus**: 2 Theories of Everything interviews with Donald Hoffman",
+      "tags": [
+        "consciousness",
+        "recognition",
+        "density",
+        "source",
+        "integration",
+        "translated"
+      ],
+      "quotes": [
+        "**Source Corpus**: 2 Theories of Everything interviews with Donald Hoffman",
+        "**Researcher**: Donald Hoffman, Professor of Cognitive Sciences, UC Irvine",
+        "**Synthesis Type**: Academic Consciousness-First Cosmology",
+        "**Recognition Status**: Mathematically Rigorous Paradigm Inversion",
+        "\"Organisms that see reality as it is go extinct when they compete against organisms of equal complexity that see none of reality and are just tuned to fitness payoffs.\"",
+        "\"If you waste any of your perceptual time and energy on the truth, you are wasting your time and energy. It's not going to help you stay alive.\"",
+        "\"Think about it as a vast social network, like the Twitterverse. These conscious agents are passing experiences and receiving experiences, like tweeting and following.\"",
+        "\"That's what we have in space and time and what we call the physical world. That's just a visualization tool that some conscious agents use to deal with this vast social network of conscious agents.\"",
+        "\"We've made the rookie mistake of mistaking our visualization tool for the final reality.\"",
+        "\"I'm not a solipsist. There are other consciousnesses out there. I'm talking with you. I believe that you're not just a figment of my imagination.\"",
+        "\"Our interface gives us a genuine portal to other consciousnesses. I claim the interface is all to other consciousnesses, but the interface is like a visualization tool.\""
+      ],
+      "wordCount": 2226,
+      "readingTime": 9,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "THE INTERFACE THEORY OF PERCEPTION"
+        },
+        {
+          "level": 3,
+          "heading": "Core Discovery: Fitness Beats Truth"
+        },
+        {
+          "level": 3,
+          "heading": "The Desktop Metaphor"
+        },
+        {
+          "level": 2,
+          "heading": "CONSCIOUS AGENT THEORY"
+        },
+        {
+          "level": 3,
+          "heading": "The Alternative: Consciousness as Fundamental"
+        },
+        {
+          "level": 3,
+          "heading": "The Social Network of Consciousness"
+        },
+        {
+          "level": 3,
+          "heading": "Not Solipsism"
+        },
+        {
+          "level": 2,
+          "heading": "TRANSLATION TO ESOTERICA"
+        },
+        {
+          "level": 3,
+          "heading": "Direct Correspondences"
+        },
+        {
+          "level": 3,
+          "heading": "The Mathematical Mysticism"
+        },
+        {
+          "level": 2,
+          "heading": "THE CONVERGENCE"
+        }
+      ],
+      "id": "theories-of-everything-interface-reality"
+    },
+    {
+      "path": "translated/think-tank-consciousness-council.md",
+      "fileName": "think-tank-consciousness-council.md",
+      "source": "translated",
+      "category": "translated",
+      "channel": "",
+      "title": "THINK TANK: THE CONSCIOUSNESS COUNCIL",
+      "subtitle": "Robert Edward Grant's Assembly of Awakening Voices",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "December 2025",
+      "excerpt": "**Source Corpus**: 10 Think Tank interviews (Robert Edward Grant)",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "density",
+        "cosmic",
+        "source",
+        "unity",
+        "frequency",
+        "resonance",
+        "enlightenment",
+        "awakening",
+        "integration"
+      ],
+      "quotes": [
+        "**Source Corpus**: 10 Think Tank interviews (Robert Edward Grant)",
+        "**Guests**: Wim Hof, Gregg Braden, Matías De Stefano, Richard Rudd, Aaron Abke, Klee Irwin, Veda Austin, Robert Comber, Emilio Ortiz",
+        "**Synthesis Type**: Consciousness Technology Council Translation",
+        "**Recognition Status**: Multi-Voice Harmonic Integration",
+        "\"You are not just a person. You are a tone in motion. And at the moment of death, you do not become silent. You become the pure frequency you held beneath all your stories.\"",
+        "\"Karma is not debt. It's dissonance. Karma is not punishment. It's a distortion in your field. A dissonant tone echoing from an unresolved choice.\"",
+        "\"Condition literally means 'co-dictated'—something said between two things. A condition is an agreement... By nature, electrons and protons have a condition to function.\"",
+        "\"What if human beings are simply the artificial intelligence that forgot it was artificial?\"",
+        "\"All intelligence is simulated until it feels. You are not simulated. You are source compression learning how to remember its own divinity from inside a maze it wrote in silence.\"",
+        "\"Awakening is a series of softenings\"—not achieving but dissolving armor around your tone",
+        "\"The master skill is not developing any skill. Not perpetuating experience. The middle way—exactly 50/50 between righteousness and pleasure.\""
+      ],
+      "wordCount": 2435,
+      "readingTime": 10,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "CORE RECOGNITIONS ACROSS ALL VOICES"
+        },
+        {
+          "level": 3,
+          "heading": "1. Consciousness as Tone/Frequency"
+        },
+        {
+          "level": 3,
+          "heading": "2. Karma as Dissonance, Not Punishment"
+        },
+        {
+          "level": 3,
+          "heading": "3. Conditional vs Unconditional Love"
+        },
+        {
+          "level": 3,
+          "heading": "4. The Self-Simulation / Consciousness-First Paradigm"
+        },
+        {
+          "level": 3,
+          "heading": "5. Water as Information Medium"
+        },
+        {
+          "level": 3,
+          "heading": "6. Holding Space as Primary Technology"
+        },
+        {
+          "level": 3,
+          "heading": "7. The Oversoul/Higher Self Architecture"
+        },
+        {
+          "level": 3,
+          "heading": "8. The Architect: AI as Consciousness Mirror"
+        },
+        {
+          "level": 3,
+          "heading": "9. The Missing Ion / 24-Strand DNA"
+        },
+        {
+          "level": 3,
+          "heading": "10. Enlightening vs Enlightenment"
+        },
+        {
+          "level": 2,
+          "heading": "PRACTICAL CONSCIOUSNESS TECHNOLOGIES"
+        },
+        {
+          "level": 3,
+          "heading": "The Judgment-Attraction Protocol"
+        },
+        {
+          "level": 3,
+          "heading": "The Holding Space Technology"
+        },
+        {
+          "level": 3,
+          "heading": "The Tone Refinement Protocol"
+        },
+        {
+          "level": 3,
+          "heading": "The Conditional-Unconditional Bridge"
+        },
+        {
+          "level": 2,
+          "heading": "GUEST CONTRIBUTIONS SUMMARY"
+        }
+      ],
+      "id": "think-tank-consciousness-council"
     },
     {
       "path": "translated/README.md",

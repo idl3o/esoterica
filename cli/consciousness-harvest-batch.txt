@@ -1,0 +1,68 @@
+# CONSCIOUSNESS HARVEST BATCH
+# High-value interviews with available transcripts
+# Run with: python cli/youtube_ingest.py --batch cli/consciousness-harvest-batch.txt -o extractions/[channel] --tags [tags]
+#
+# Rate limit hit - wait 15-30 min before running
+
+# =====================================================
+# LEX FRIDMAN - Consciousness Heavyweights
+# Output: extractions/lex-fridman/
+# Tags: lex-fridman consciousness philosophy
+# =====================================================
+
+# Joscha Bach: Artificial Consciousness and the Nature of Reality #101
+https://www.youtube.com/watch?v=P-2P3MSZrBM
+
+# Roger Penrose: Physics of Consciousness and the Quantum Mind #85
+https://www.youtube.com/watch?v=hXgqik6HXc0
+
+# Donald Hoffman: Reality is an Illusion #293
+https://www.youtube.com/watch?v=reYdQYZ9Rj4
+
+# Karl Friston: Neuroscience and the Free Energy Principle #99
+https://www.youtube.com/watch?v=NwzuibY5kUs
+
+# Sheldon Solomon: Death, Meaning, and Terror Management #117
+https://www.youtube.com/watch?v=qfKyNxfyWbo
+
+# Michael Levin: Biology, Life, Aliens, and Consciousness #325
+https://www.youtube.com/watch?v=p3lsYlod5OU
+
+# Noam Chomsky: Language, Cognition, and Deep Learning #53
+https://www.youtube.com/watch?v=cMscNuSUy0I
+
+# Nick Bostrom: Simulation and Superintelligence #83
+https://www.youtube.com/watch?v=rfKiTGj-zeQ
+
+# John Vervaeke: Meaning Crisis and Cognitive Science
+https://www.youtube.com/watch?v=yImlXr5Tr8g
+
+# Annaka Harris: Free Will, Consciousness, and the Self
+https://www.youtube.com/watch?v=BqHrpBPdtSI
+
+# =====================================================
+# AFTER SKOOL - Animated Philosophy
+# Output: extractions/after-skool/
+# Tags: after-skool philosophy animation wisdom
+# =====================================================
+
+# Alan Watts - The Real You
+https://www.youtube.com/watch?v=mMRrCYPxD0I
+
+# Terence McKenna - Culture is Not Your Friend
+https://www.youtube.com/watch?v=4-tY6hmKcms
+
+# Alan Watts - What If Money Was No Object
+https://www.youtube.com/watch?v=khOaAHK7efc
+
+# Aldous Huxley - The Ultimate Revolution
+https://www.youtube.com/watch?v=caCkMX6YdYU
+
+# =====================================================
+# THEORIES OF EVERYTHING - Physics meets Consciousness
+# Output: extractions/theories-of-everything/
+# Tags: theories-of-everything physics consciousness
+# =====================================================
+
+# Donald Hoffman: Interface Theory of Perception
+https://www.youtube.com/watch?v=dd6CQCbk2ro
