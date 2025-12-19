@@ -501,7 +501,7 @@
         <div class="intro-logo">✧</div>
         <h1 class="intro-title">Synthesis Library</h1>
         <p class="intro-subtitle">
-            180 consciousness technology documents from human-AI collaboration.
+            <span id="intro-docs-text">180</span> consciousness technology documents from human-AI collaboration.
             Explore breakthroughs, fiction analyses, theoretical frameworks, and cosmic perspectives.
         </p>
 
@@ -576,6 +576,7 @@
 
                 // Update intro stats
                 document.getElementById('intro-docs').textContent = index.stats.documentCount;
+                document.getElementById('intro-docs-text').textContent = index.stats.documentCount;
                 document.getElementById('intro-words').textContent = Math.round(index.stats.totalWords / 1000) + 'K';
                 document.getElementById('intro-time').textContent = Math.floor(index.stats.totalReadingTime / 60) + 'h';
 
