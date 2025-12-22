@@ -167,6 +167,11 @@ app.get('/explorer', (req, res) => {
   res.sendFile(path.join(__dirname, '../constellation/constellation_explorer_v2.html'));
 });
 
+// Constellation explorer 3D (Three.js version)
+app.get('/explorer-3d', (req, res) => {
+  res.sendFile(path.join(__dirname, '../constellation/constellation_explorer_v3.html'));
+});
+
 // Search interface
 app.get('/search', (req, res) => {
   res.render('search', {

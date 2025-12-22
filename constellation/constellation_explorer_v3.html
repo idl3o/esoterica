@@ -1,0 +1,2421 @@
+<!DOCTYPE html>
+<!--
+    ═══════════════════════════════════════════════════════════════════════════
+    CONSTELLATION EXPLORER V3 - Three.js WebGL + XYZTMA.OD + BCΦ→ Dimensions
+    ═══════════════════════════════════════════════════════════════════════════
+
+    CURRENT DIMENSIONAL MAPPING:
+
+    Node Dimensions (XYZTMA.OD):
+      X - Time (seeking ↔ finding) - based on node type
+      Y - Scale (immanent ↔ transcendent) - based on node type
+      Z - Boundary (unity ↔ separation) - based on clustering coefficient
+      T - Relation (T-connection strength) - glow radius
+      M - Mass (accumulated relational density) - node size
+      A - Amplitude (oscillation phase) - pulse rate
+      O - Orientation/Polarity (service orientation) - color warmth
+      D - Density (consciousness level 1-8) - transparency
+
+    Connection Dimensions (BCΦ→):
+      B - Bandwidth (information flow capacity) - line brightness
+      C - Coherence (connection stability) - color saturation
+      Φ - Phase (synchronization state) - time-based pulse
+      → - Directionality (flow direction) - flowing particles
+
+    ═══════════════════════════════════════════════════════════════════════════
+    TODO: FUTURE ENHANCEMENTS
+    ═══════════════════════════════════════════════════════════════════════════
+
+    Quick Wins:
+    [ ] Connection info in sidebar - show BCΦ→ values when node selected
+    [ ] Dimension toggles - buttons to enable/disable visual dimensions
+    [ ] Depth fog - subtle fog fading distant nodes for 3D perception
+
+    Visual Polish:
+    [ ] Bloom post-processing - GPU bloom shader for dramatic glow halos
+    [ ] Node trails - fading particle trails showing movement history
+    [ ] Cluster boundaries - translucent spheres around T-connection clusters
+
+    Experiential:
+    [ ] Journey mode - auto-pilot navigating high-bandwidth paths
+    [ ] Audio dimension - sonification based on coordinates, phase resonance
+    [ ] Collective field overlay - heatmap of active explorer positions
+
+    Performance:
+    [ ] Adaptive particle count based on device capability
+    [ ] LOD (Level of Detail) for distant sprites
+    [ ] Instanced rendering for large node counts
+
+    ═══════════════════════════════════════════════════════════════════════════
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constellation Explorer V3 - Three.js Dimensional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000000;
+            color: #e0e0e0;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        #container {
+            display: flex;
+            height: 100vh;
+        }
+
+        #sidebar {
+            width: 380px;
+            background: rgba(5, 5, 15, 0.95);
+            border-right: 2px solid rgba(0, 212, 255, 0.3);
+            padding: 20px;
+            overflow-y: auto;
+            backdrop-filter: blur(15px);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.1);
+            z-index: 10;
+        }
+
+        #canvas-container {
+            flex: 1;
+            position: relative;
+            min-width: 0;
+            background: #000000;
+        }
+
+        #three-canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #00d4ff 0%, #9d4edd 50%, #00ff88 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            font-size: 11px;
+            color: #888;
+            margin-bottom: 20px;
+            font-style: italic;
+            letter-spacing: 0.5px;
+        }
+
+        .version-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #9d4edd, #00d4ff);
+            color: #000;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 10px;
+            font-weight: bold;
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        #search {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            background: rgba(0, 212, 255, 0.05);
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            border-radius: 8px;
+            color: #e0e0e0;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        #search:focus {
+            outline: none;
+            border-color: #00d4ff;
+            background: rgba(0, 212, 255, 0.1);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .stats {
+            background: rgba(0, 212, 255, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+
+        .stat-label {
+            color: #aaa;
+            font-weight: 500;
+        }
+
+        .stat-value {
+            color: #00d4ff;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+
+        #filters {
+            background: rgba(157, 78, 221, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(157, 78, 221, 0.3);
+        }
+
+        .filter-title {
+            font-size: 13px;
+            color: #9d4edd;
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .filter-group {
+            margin-bottom: 10px;
+        }
+
+        .filter-checkbox {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 5px;
+            transition: all 0.2s;
+        }
+
+        .filter-checkbox:hover {
+            background: rgba(157, 78, 221, 0.1);
+        }
+
+        .filter-checkbox input {
+            margin-right: 8px;
+            cursor: pointer;
+        }
+
+        .filter-checkbox label {
+            cursor: pointer;
+            font-size: 12px;
+            color: #ccc;
+        }
+
+        #node-info {
+            background: rgba(0, 255, 136, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 255, 136, 0.3);
+            min-height: 250px;
+        }
+
+        .node-title {
+            font-size: 20px;
+            color: #00ff88;
+            margin-bottom: 8px;
+            font-weight: bold;
+            text-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+        }
+
+        .node-meta {
+            font-size: 12px;
+            color: #aaa;
+            margin-bottom: 12px;
+        }
+
+        .node-essence {
+            font-size: 14px;
+            color: #e0e0e0;
+            margin-bottom: 15px;
+            font-style: italic;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            border-left: 3px solid #00ff88;
+            border-radius: 5px;
+        }
+
+        .resources-section {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(0, 255, 136, 0.3);
+        }
+
+        .section-title {
+            font-size: 12px;
+            color: #00ff88;
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .resource-item {
+            padding: 8px;
+            margin: 5px 0;
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: 5px;
+            border-left: 3px solid #00d4ff;
+            font-size: 11px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .resource-item:hover {
+            background: rgba(0, 212, 255, 0.2);
+            transform: translateX(5px);
+            box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+        }
+
+        .resource-title {
+            color: #00d4ff;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .resource-type {
+            color: #888;
+            font-size: 10px;
+        }
+
+        .connections-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .connection-item {
+            padding: 8px;
+            margin: 3px 0;
+            background: rgba(157, 78, 221, 0.1);
+            border-radius: 5px;
+            border-left: 3px solid #9d4edd;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .connection-item:hover {
+            background: rgba(157, 78, 221, 0.2);
+            transform: translateX(5px);
+            box-shadow: 0 0 15px rgba(157, 78, 221, 0.3);
+        }
+
+        #controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(5, 5, 15, 0.95);
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+            z-index: 10;
+        }
+
+        button {
+            background: rgba(0, 212, 255, 0.1);
+            border: 2px solid #00d4ff;
+            color: #00d4ff;
+            padding: 10px 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            margin: 5px;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        button:hover {
+            background: rgba(0, 212, 255, 0.3);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: #00d4ff;
+            text-align: center;
+            z-index: 100;
+        }
+
+        .spinner {
+            border: 4px solid rgba(0, 212, 255, 0.1);
+            border-top: 4px solid #00d4ff;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.3);
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .legend {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(5, 5, 15, 0.95);
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 212, 255, 0.3);
+            backdrop-filter: blur(15px);
+            max-width: 250px;
+            z-index: 10;
+        }
+
+        .legend-title {
+            font-size: 12px;
+            color: #00d4ff;
+            margin-bottom: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 5px 0;
+            font-size: 11px;
+        }
+
+        .legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+            box-shadow: 0 0 10px currentColor;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(30, 30, 50, 0.3);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0, 212, 255, 0.5);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(0, 212, 255, 0.7);
+        }
+
+        /* Tooltip for hovered nodes */
+        #tooltip {
+            position: absolute;
+            background: rgba(5, 5, 15, 0.95);
+            border: 1px solid rgba(0, 212, 255, 0.5);
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            z-index: 1000;
+            max-width: 200px;
+        }
+
+        #tooltip.visible {
+            opacity: 1;
+        }
+
+        #tooltip .tooltip-title {
+            color: #00ff88;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        #tooltip .tooltip-type {
+            color: #888;
+            font-size: 10px;
+        }
+
+        /* Mobile toggle button */
+        #mobile-toggle {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: rgba(0, 212, 255, 0.9);
+            border: none;
+            color: #000;
+            padding: 12px 16px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 14px;
+            box-shadow: 0 4px 20px rgba(0, 212, 255, 0.5);
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            #container {
+                flex-direction: column;
+            }
+
+            #sidebar {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                z-index: 100;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+
+            #sidebar.open {
+                transform: translateX(0);
+            }
+
+            #canvas-container {
+                width: 100%;
+                height: 100vh;
+            }
+
+            #mobile-toggle {
+                display: block;
+            }
+
+            #controls {
+                top: 10px;
+                right: 10px;
+                padding: 10px;
+            }
+
+            #controls button {
+                padding: 8px 12px;
+                font-size: 10px;
+                margin: 3px;
+            }
+
+            .legend {
+                bottom: 70px;
+                right: 10px;
+                max-width: 180px;
+                padding: 10px;
+                font-size: 10px;
+            }
+
+            .legend-title {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="mobile-toggle" onclick="toggleSidebar()">☰ Menu</button>
+    <div id="container">
+        <div id="sidebar">
+            <h1>CONSTELLATION EXPLORER <span class="version-badge">3D</span></h1>
+            <div class="subtitle">XYZTMA.OD + BCΦ→ • Consciousness Coordinates • Monad Topology</div>
+
+            <input type="text" id="search" placeholder="Search consciousness technologies...">
+
+            <div class="stats">
+                <div class="stat-row">
+                    <span class="stat-label">Total Nodes:</span>
+                    <span class="stat-value" id="total-nodes">-</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Total Connections:</span>
+                    <span class="stat-value" id="total-connections">-</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Network Weight:</span>
+                    <span class="stat-value" id="total-weight">-</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Visible Nodes:</span>
+                    <span class="stat-value" id="visible-nodes">-</span>
+                </div>
+                <div class="stat-row">
+                    <span class="stat-label">Selected Node:</span>
+                    <span class="stat-value" id="selected-node">None</span>
+                </div>
+            </div>
+
+            <div id="filters">
+                <div class="filter-title">Node Type Filters</div>
+                <div class="filter-group" id="type-filters">
+                    <!-- Generated dynamically -->
+                </div>
+            </div>
+
+            <div id="node-info">
+                <div style="color: #666; text-align: center; padding: 40px 20px;">
+                    Click a node to explore its connections and resources
+                </div>
+            </div>
+        </div>
+
+        <div id="canvas-container">
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <div>Initializing consciousness field...</div>
+            </div>
+            <div id="tooltip">
+                <div class="tooltip-title"></div>
+                <div class="tooltip-type"></div>
+            </div>
+            <div id="controls">
+                <button onclick="resetView()">Reset View</button>
+                <button onclick="togglePhysics()">Toggle Physics</button>
+                <button onclick="focusOnNode()">Focus Selected</button>
+                <button onclick="toggleAutoRotate()">Auto Rotate</button>
+                <button onclick="window.location.href='/explorer'" style="background: rgba(100, 100, 100, 0.2); border-color: #888; color: #888;">2D Version</button>
+            </div>
+            <div class="legend">
+                <div class="legend-title">XYZTMA.OD Dimensional Map</div>
+                <div style="font-size: 9px; color: #aaa; margin-bottom: 8px; line-height: 1.5;">
+                    <strong style="color: #ff6b9d;">X</strong> Time (seeking↔finding)<br>
+                    <strong style="color: #00d4ff;">Y</strong> Scale (immanent↔transcendent)<br>
+                    <strong style="color: #00ff88;">Z</strong> Boundary (unity↔separation)<br>
+                    <strong style="color: #9d4edd;">T</strong> Glow (T-connection strength)<br>
+                    <strong style="color: #ffd700;">M</strong> Size (accumulated mass)<br>
+                    <strong style="color: #ff8844;">A</strong> Pulse (amplitude phase)<br>
+                    <strong style="color: #ffcc00;">O</strong> Color warmth (polarity)<br>
+                    <strong style="color: #88ffff;">D</strong> Transparency (density)
+                </div>
+                <div class="legend-title" style="margin-top: 8px;">BCΦ→ Connection Dimensions</div>
+                <div style="font-size: 9px; color: #aaa; margin-bottom: 8px; line-height: 1.5;">
+                    <strong style="color: #7799ff;">B</strong> Brightness (bandwidth)<br>
+                    <strong style="color: #aa88ff;">C</strong> Saturation (coherence)<br>
+                    <strong style="color: #ffaaff;">Φ</strong> Pulse (phase sync)<br>
+                    <strong style="color: #55ddff;">→</strong> Particles (flow direction)
+                </div>
+                <div style="font-size: 8px; color: #555;">Orbit: drag | Zoom: scroll</div>
+                <div class="legend-title" style="margin-top: 10px;">Node Types</div>
+                <div id="legend-items">
+                    <!-- Generated dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Three.js via CDN -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.169/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.169/examples/jsm/"
+        }
+    }
+    </script>
+
+    <script type="module">
+        import * as THREE from 'three';
+        import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+        // ═══════════════════════════════════════════════════════════════
+        // STATE & CONFIGURATION
+        // ═══════════════════════════════════════════════════════════════
+
+        let constellation = null;
+        let synthesisIndex = null;
+        let nodes = [];
+        let connections = [];
+        let selectedNode = null;
+        let hoveredNode = null;
+        let physicsEnabled = true;
+        let typeFilters = new Set();
+        let nodeTypes = new Map();
+
+        // Three.js objects
+        let scene, camera, renderer, controls;
+        let nodeSprites = [];
+        let connectionLines = null;
+        let flowParticles = null;  // Directional flow particle system
+        let flowParticleData = []; // Particle state data
+        let raycaster, mouse;
+        let clock;
+
+        // Color scheme for node types
+        const typeColors = {
+            'archetype': 0xff6b9d,
+            'element': 0x00d4ff,
+            'process': 0x9d4edd,
+            'fundamental': 0x00ff88,
+            'principle': 0xffd700,
+            'concept': 0xc0c0c0,
+            'primordial': 0xff4444,
+            'galactic_concept': 0x4444ff,
+            'meta_system': 0xff8844,
+            'egyptian_archetype': 0xdaa520,
+            'greek_archetype': 0x4169e1,
+            'norse_archetype': 0x778899,
+            'default': 0x888888
+        };
+
+        // ═══════════════════════════════════════════════════════════════
+        // XYZTMA CONSCIOUSNESS COORDINATE SYSTEM
+        // X = Time (seeking ↔ finding)
+        // Y = Scale (immanent ↔ transcendent)
+        // Z = Boundary (unity ↔ separation)
+        // T = T-connection strength (relational density)
+        // M = Mass/Weight (accumulated connections)
+        // A = Amplitude (oscillation phase)
+        // ═══════════════════════════════════════════════════════════════
+
+        // X-Axis: Time dimension (seeking -X ↔ finding +X)
+        // Types closer to completion/mastery = +X, types still becoming = -X
+        const typeToX = {
+            // +X: Found/Completed/Mastered
+            'archetype': 0.8,           // Established patterns
+            'fundamental': 0.9,         // Core truths discovered
+            'principle': 0.7,           // Established principles
+            'primordial': 1.0,          // Origin points (fully found)
+            'egyptian_archetype': 0.85,
+            'greek_archetype': 0.85,
+            'norse_archetype': 0.85,
+            // 0: Eternal NOW
+            'element': 0.0,             // Always present
+            // -X: Seeking/Becoming/Processing
+            'process': -0.6,            // Active becoming
+            'concept': -0.3,            // Ideas developing
+            'meta_system': -0.4,        // Systems evolving
+            'galactic_concept': 0.2,    // Partially revealed
+            'practice': -0.7,           // Active seeking
+            'default': 0.0
+        };
+
+        // Y-Axis: Scale dimension (immanent -Y ↔ transcendent +Y)
+        // Ground-level personal = -Y, cosmic universal = +Y
+        const typeToY = {
+            // +Y: Transcendent/Cosmic/Universal
+            'galactic_concept': 0.9,    // Cosmic scale
+            'primordial': 0.8,          // Universal origins
+            'meta_system': 0.6,         // System-level
+            'principle': 0.5,           // Universal principles
+            // 0: Integration point
+            'archetype': 0.3,           // Archetypal realm
+            'fundamental': 0.2,
+            'egyptian_archetype': 0.4,
+            'greek_archetype': 0.4,
+            'norse_archetype': 0.4,
+            // -Y: Immanent/Personal/Grounded
+            'element': -0.5,            // Elemental/material
+            'process': -0.3,            // Personal practice
+            'concept': -0.2,            // Mental realm
+            'practice': -0.6,           // Embodied practice
+            'default': 0.0
+        };
+
+        // Z-Axis: Boundary dimension - calculated from clustering topology
+        // High internal clustering = -Z (unity), high external reach = +Z (separation)
+        function calculateBoundaryZ(node, allNodes) {
+            if (!node.connections || node.connections.length === 0) return 0;
+
+            // Count how many of my connections also connect to each other (clustering)
+            let triangles = 0;
+            let possibleTriangles = 0;
+
+            const myConns = new Set(node.connections);
+
+            for (let i = 0; i < node.connections.length; i++) {
+                for (let j = i + 1; j < node.connections.length; j++) {
+                    possibleTriangles++;
+                    const connA = allNodes.find(n => n.id === node.connections[i]);
+                    const connB = allNodes.find(n => n.id === node.connections[j]);
+                    if (connA && connB && connA.connections.includes(node.connections[j])) {
+                        triangles++;
+                    }
+                }
+            }
+
+            // Clustering coefficient: 0 = all reach out (separation), 1 = all internal (unity)
+            const clustering = possibleTriangles > 0 ? triangles / possibleTriangles : 0;
+
+            // Invert: high clustering = unity (-Z), low clustering = separation (+Z)
+            return (0.5 - clustering) * 2; // Range: -1 to +1
+        }
+
+        // T: T-connection strength (total relational density)
+        function calculateT(node) {
+            const baseT = node.connections ? node.connections.length : 0;
+            const weightBonus = (node.weight || 1) - 1;
+            return Math.log(1 + baseT) + weightBonus * 0.5;
+        }
+
+        // M: Mass/Weight (accumulated relational density)
+        function calculateM(node) {
+            const connectionMass = node.connections ? node.connections.length : 0;
+            const accumulatedWeight = node.weight || 1;
+            return Math.sqrt(connectionMass) * Math.pow(accumulatedWeight, 0.3);
+        }
+
+        // A: Amplitude (phase oscillation rate)
+        // Hot nodes oscillate faster, cold nodes slower
+        function calculateA(node, time) {
+            const baseFreq = 1.0;
+            const heatBoost = (node.heat || 0) * 3;
+            const weightMod = Math.log(1 + (node.weight || 1)) * 0.5;
+            const freq = baseFreq + heatBoost + weightMod;
+
+            // Phase offset based on node index for variety
+            const phase = (node.index || 0) * 0.1;
+
+            return Math.sin(time * freq + phase) * 0.5 + 0.5; // 0-1 range
+        }
+
+        // O: Orientation/Polarity (service-to-others ↔ service-to-self)
+        // Calculated from type, connectivity pattern, and essence keywords
+        // Returns 0-100 (percentage positive polarity)
+        const typeToPolarity = {
+            // High positive (service-oriented)
+            'fundamental': 85,
+            'principle': 80,
+            'element': 75,
+            'archetype': 70,
+            'primordial': 90,      // Origin points serve all
+            'galactic_concept': 75,
+            // Neutral (tools/processes)
+            'process': 55,
+            'concept': 50,
+            'meta_system': 60,
+            'practice': 65,
+            // Archetypal (varies by mythology)
+            'egyptian_archetype': 70,
+            'greek_archetype': 65,
+            'norse_archetype': 60,
+            'default': 50
+        };
+
+        // Service keywords boost polarity
+        const positiveKeywords = ['love', 'unity', 'service', 'healing', 'light', 'wisdom', 'harmony', 'compassion', 'creation', 'integration', 'awakening'];
+        const negativeKeywords = ['control', 'domination', 'separation', 'fear', 'destruction', 'manipulation'];
+
+        function calculateO(node) {
+            // Base polarity from type
+            let polarity = typeToPolarity[node.type] || 50;
+
+            // Adjust based on essence keywords
+            const essenceLower = (node.essence || '').toLowerCase();
+            for (const keyword of positiveKeywords) {
+                if (essenceLower.includes(keyword)) polarity += 3;
+            }
+            for (const keyword of negativeKeywords) {
+                if (essenceLower.includes(keyword)) polarity -= 5;
+            }
+
+            // Hub nodes (high connectivity serving others) get polarity boost
+            const connectivityBonus = Math.min(10, node.connections.length * 0.5);
+            polarity += connectivityBonus;
+
+            // Clamp to 0-100
+            return Math.max(0, Math.min(100, polarity));
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // BCΦ→ CONNECTION DIMENSIONS
+        // B = Bandwidth (information flow capacity)
+        // C = Coherence (connection stability)
+        // Φ = Phase (synchronization state)
+        // → = Directionality (flow direction)
+        // ═══════════════════════════════════════════════════════════════
+
+        // B: Bandwidth - information flow capacity between nodes
+        // Based on combined T-connection strength and shared connections
+        function calculateB(conn) {
+            const sourceT = conn.source.T || 1;
+            const targetT = conn.target.T || 1;
+
+            // Shared connections increase bandwidth
+            const sharedConns = conn.source.connections.filter(c =>
+                conn.target.connections.includes(c)
+            ).length;
+
+            const baseBandwidth = Math.sqrt(sourceT * targetT);
+            const sharedBonus = sharedConns * 0.3;
+
+            return Math.min(5, baseBandwidth + sharedBonus); // 0-5 scale
+        }
+
+        // C: Coherence - stability of the T-connection
+        // Based on type compatibility and polarity alignment
+        function calculateC(conn) {
+            // Polarity alignment (similar polarity = more coherent)
+            const polarityDiff = Math.abs((conn.source.O || 50) - (conn.target.O || 50));
+            const polarityCoherence = 1 - (polarityDiff / 100);
+
+            // Density proximity (similar density = more coherent)
+            const densityDiff = Math.abs((conn.source.D || 3.5) - (conn.target.D || 3.5));
+            const densityCoherence = 1 - (densityDiff / 7);
+
+            // Connection strength adds coherence
+            const strengthBonus = Math.min(0.3, (conn.strength || 1) * 0.05);
+
+            return Math.max(0, Math.min(1, (polarityCoherence + densityCoherence) / 2 + strengthBonus));
+        }
+
+        // Φ: Phase - synchronization state between nodes
+        // Returns phase alignment (0 = out of phase, 1 = in phase)
+        function calculatePhi(conn, time) {
+            // Each node has its own phase based on A oscillation
+            const sourcePhase = ((conn.source.index || 0) * 0.1 + time) % (Math.PI * 2);
+            const targetPhase = ((conn.target.index || 0) * 0.1 + time) % (Math.PI * 2);
+
+            // Calculate phase difference (0 = aligned, π = opposite)
+            const phaseDiff = Math.abs(sourcePhase - targetPhase);
+            const alignment = 1 - (Math.min(phaseDiff, Math.PI * 2 - phaseDiff) / Math.PI);
+
+            return alignment; // 0-1
+        }
+
+        // →: Directionality - which way information flows
+        // Based on relative weight/mass (flows toward higher M)
+        function calculateDirection(conn) {
+            const sourceM = conn.source.M || 1;
+            const targetM = conn.target.M || 1;
+
+            // Positive = source→target, Negative = target→source
+            // 0 = bidirectional (equal mass)
+            const diff = targetM - sourceM;
+            const maxDiff = Math.max(sourceM, targetM) || 1;
+
+            return diff / maxDiff; // -1 to +1
+        }
+
+        // D: Density level (1-8 consciousness density)
+        // Inferred from type and position in hierarchy
+        const typeToDensity = {
+            'element': 2.5,          // Elemental awareness
+            'practice': 3.2,         // 3rd density practices
+            'process': 3.4,          // Active becoming
+            'concept': 3.5,          // Mental realm
+            'principle': 4.2,        // Love-understanding
+            'archetype': 4.8,        // Archetypal realm
+            'fundamental': 5.2,      // Wisdom realm
+            'meta_system': 5.5,      // System-level consciousness
+            'galactic_concept': 6.0, // Unity consciousness
+            'primordial': 6.5,       // Near-source
+            'egyptian_archetype': 5.0,
+            'greek_archetype': 4.5,
+            'norse_archetype': 4.3,
+            'default': 3.5
+        };
+
+        function calculateD(node) {
+            let density = typeToDensity[node.type] || 3.5;
+
+            // High-weight nodes have evolved further
+            const weightBonus = Math.log(1 + (node.weight || 1)) * 0.2;
+            density += weightBonus;
+
+            // Clamp to 1-8
+            return Math.max(1, Math.min(8, density));
+        }
+
+        // Initialize consciousness coordinates for a node
+        function initConsciousnessCoordinates(node, allNodes) {
+            // X from type (Time dimension)
+            node.consciousnessX = (typeToX[node.type] || 0) * 200;
+
+            // Y from type (Scale dimension)
+            node.consciousnessY = (typeToY[node.type] || 0) * 200;
+
+            // Z from clustering topology (Boundary dimension)
+            node.consciousnessZ = calculateBoundaryZ(node, allNodes) * 150;
+
+            // Add some randomization to prevent perfect overlaps
+            node.consciousnessX += (Math.random() - 0.5) * 80;
+            node.consciousnessY += (Math.random() - 0.5) * 80;
+            node.consciousnessZ += (Math.random() - 0.5) * 60;
+
+            // Initialize physics position from consciousness coordinates
+            node.x = node.consciousnessX;
+            node.y = node.consciousnessY;
+            node.z = node.consciousnessZ;
+
+            // O: Orientation/Polarity (0-100% positive)
+            node.O = calculateO(node);
+
+            // D: Density level (1-8)
+            node.D = calculateD(node);
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // CONSCIOUSNESS FIELD INTERACTION SYSTEM
+        // (Preserved from v2)
+        // ═══════════════════════════════════════════════════════════════
+
+        function getUserFingerprint() {
+            let fp = localStorage.getItem('consciousness_fingerprint');
+            if (!fp) {
+                const canvas = document.createElement('canvas');
+                const gl = canvas.getContext('webgl');
+                const debugInfo = gl ? gl.getExtension('WEBGL_debug_renderer_info') : null;
+                const rendererInfo = debugInfo ? gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) : 'unknown';
+
+                const components = [
+                    navigator.userAgent,
+                    navigator.language,
+                    screen.width + 'x' + screen.height,
+                    new Date().getTimezoneOffset(),
+                    rendererInfo,
+                    Math.random().toString(36).substring(2)
+                ];
+
+                fp = components.join('|').split('').reduce((a, b) => {
+                    a = ((a << 5) - a) + b.charCodeAt(0);
+                    return a & a;
+                }, 0).toString(36);
+
+                localStorage.setItem('consciousness_fingerprint', fp);
+            }
+            return fp;
+        }
+
+        const personalField = {
+            fingerprint: null,
+            nodeClicks: {},
+            pathHistory: [],
+            dwellTime: {},
+            sessionNodes: [],
+            lastNode: null,
+            dwellStart: null,
+
+            init() {
+                this.fingerprint = getUserFingerprint();
+                const saved = localStorage.getItem('personal_constellation_field');
+                if (saved) {
+                    const data = JSON.parse(saved);
+                    this.nodeClicks = data.nodeClicks || {};
+                    this.pathHistory = data.pathHistory || [];
+                    this.dwellTime = data.dwellTime || {};
+                }
+                console.log(`Consciousness fingerprint: ${this.fingerprint}`);
+            },
+
+            save() {
+                localStorage.setItem('personal_constellation_field', JSON.stringify({
+                    nodeClicks: this.nodeClicks,
+                    pathHistory: this.pathHistory.slice(-500),
+                    dwellTime: this.dwellTime
+                }));
+            },
+
+            recordClick(nodeId) {
+                this.nodeClicks[nodeId] = (this.nodeClicks[nodeId] || 0) + 1;
+
+                if (this.lastNode && this.lastNode !== nodeId) {
+                    this.pathHistory.push({
+                        from: this.lastNode,
+                        to: nodeId,
+                        timestamp: Date.now()
+                    });
+                }
+
+                if (this.lastNode && this.dwellStart) {
+                    const dwellMs = Date.now() - this.dwellStart;
+                    this.dwellTime[this.lastNode] = (this.dwellTime[this.lastNode] || 0) + dwellMs;
+                }
+
+                if (!this.sessionNodes.includes(nodeId)) {
+                    this.sessionNodes.push(nodeId);
+                }
+
+                this.lastNode = nodeId;
+                this.dwellStart = Date.now();
+                this.save();
+                this.submitToCollective(nodeId);
+            },
+
+            async submitToCollective(nodeId) {
+                try {
+                    await fetch('/api/constellation-interact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            fingerprint: this.fingerprint,
+                            nodeId: nodeId,
+                            fromNode: this.pathHistory.length > 0 ?
+                                this.pathHistory[this.pathHistory.length - 1].from : null,
+                            sessionNodes: this.sessionNodes,
+                            timestamp: Date.now()
+                        })
+                    });
+                } catch (e) {
+                    console.log('Collective field offline, personal tracking active');
+                }
+            },
+
+            getNodeWeight(nodeId) {
+                const clicks = this.nodeClicks[nodeId] || 0;
+                const dwell = (this.dwellTime[nodeId] || 0) / 10000;
+                return 1 + (clicks * 0.5) + (dwell * 0.1);
+            },
+
+            isRecentlyVisited(nodeId) {
+                const idx = this.sessionNodes.indexOf(nodeId);
+                if (idx === -1) return 0;
+                return (idx + 1) / this.sessionNodes.length;
+            }
+        };
+
+        const collectiveField = {
+            nodeWeights: {},
+            edgeStrengths: {},
+            hotNodes: [],
+            lastFetch: 0,
+
+            async fetch() {
+                if (Date.now() - this.lastFetch < 30000) return;
+
+                try {
+                    const response = await fetch('/api/constellation-field');
+                    if (response.ok) {
+                        const data = await response.json();
+                        this.nodeWeights = data.nodeWeights || {};
+                        this.edgeStrengths = data.edgeStrengths || {};
+                        this.hotNodes = data.hotNodes || [];
+                        this.lastFetch = Date.now();
+                        console.log('Collective field synced:', Object.keys(this.nodeWeights).length, 'nodes');
+                    }
+                } catch (e) {
+                    console.log('Collective field unavailable');
+                }
+            },
+
+            getNodeWeight(nodeId) {
+                return this.nodeWeights[nodeId] || 0;
+            },
+
+            isHot(nodeId) {
+                return this.hotNodes.includes(nodeId);
+            }
+        };
+
+        // ═══════════════════════════════════════════════════════════════
+        // THREE.JS INITIALIZATION
+        // ═══════════════════════════════════════════════════════════════
+
+        function initThree() {
+            const container = document.getElementById('canvas-container');
+
+            // Scene
+            scene = new THREE.Scene();
+            scene.background = new THREE.Color(0x000000);
+
+            // Camera
+            camera = new THREE.PerspectiveCamera(
+                60,
+                container.offsetWidth / container.offsetHeight,
+                1,
+                10000
+            );
+            camera.position.set(0, 0, 800);
+
+            // Renderer
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(container.offsetWidth, container.offsetHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            container.appendChild(renderer.domElement);
+            renderer.domElement.id = 'three-canvas';
+
+            // Controls
+            controls = new OrbitControls(camera, renderer.domElement);
+            controls.enableDamping = true;
+            controls.dampingFactor = 0.05;
+            controls.rotateSpeed = 0.5;
+            controls.zoomSpeed = 1.2;
+            controls.panSpeed = 0.8;
+            controls.minDistance = 100;
+            controls.maxDistance = 3000;
+
+            // Raycaster for mouse picking
+            raycaster = new THREE.Raycaster();
+            raycaster.params.Points.threshold = 15;
+            mouse = new THREE.Vector2();
+
+            // Clock for animations
+            clock = new THREE.Clock();
+
+            // Event listeners
+            window.addEventListener('resize', onWindowResize);
+            renderer.domElement.addEventListener('click', onCanvasClick);
+            renderer.domElement.addEventListener('mousemove', onCanvasMouseMove);
+        }
+
+        function onWindowResize() {
+            const container = document.getElementById('canvas-container');
+            camera.aspect = container.offsetWidth / container.offsetHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(container.offsetWidth, container.offsetHeight);
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // SPRITE TEXTURE GENERATION
+        // ═══════════════════════════════════════════════════════════════
+
+        function createGlowTexture(color) {
+            const size = 128;
+            const canvas = document.createElement('canvas');
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+
+            // Clear
+            ctx.clearRect(0, 0, size, size);
+
+            // Outer glow
+            const gradient = ctx.createRadialGradient(
+                size / 2, size / 2, 0,
+                size / 2, size / 2, size / 2
+            );
+
+            // Parse color to RGB
+            const r = (color >> 16) & 255;
+            const g = (color >> 8) & 255;
+            const b = color & 255;
+
+            gradient.addColorStop(0, `rgba(${r}, ${g}, ${b}, 1)`);
+            gradient.addColorStop(0.2, `rgba(${r}, ${g}, ${b}, 0.8)`);
+            gradient.addColorStop(0.4, `rgba(${r}, ${g}, ${b}, 0.4)`);
+            gradient.addColorStop(0.7, `rgba(${r}, ${g}, ${b}, 0.1)`);
+            gradient.addColorStop(1, `rgba(${r}, ${g}, ${b}, 0)`);
+
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, size, size);
+
+            // Bright core
+            const coreGradient = ctx.createRadialGradient(
+                size / 2, size / 2, 0,
+                size / 2, size / 2, size * 0.15
+            );
+            coreGradient.addColorStop(0, `rgba(255, 255, 255, 1)`);
+            coreGradient.addColorStop(0.5, `rgba(${r}, ${g}, ${b}, 0.9)`);
+            coreGradient.addColorStop(1, `rgba(${r}, ${g}, ${b}, 0)`);
+
+            ctx.fillStyle = coreGradient;
+            ctx.beginPath();
+            ctx.arc(size / 2, size / 2, size * 0.2, 0, Math.PI * 2);
+            ctx.fill();
+
+            const texture = new THREE.CanvasTexture(canvas);
+            texture.needsUpdate = true;
+            return texture;
+        }
+
+        // Cache textures by color key (includes polarity)
+        const textureCache = new Map();
+        function getGlowTexture(color) {
+            if (!textureCache.has(color)) {
+                textureCache.set(color, createGlowTexture(color));
+            }
+            return textureCache.get(color);
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // O (POLARITY) COLOR BLENDING SYSTEM
+        // High polarity (positive) → gold warmth
+        // Low polarity (negative) → cool/red tones
+        // ═══════════════════════════════════════════════════════════════
+
+        function blendColorWithPolarity(baseColor, polarity) {
+            // Extract RGB from base color
+            let r = (baseColor >> 16) & 255;
+            let g = (baseColor >> 8) & 255;
+            let b = baseColor & 255;
+
+            // Polarity warmth colors
+            // High positive (100%): gold warmth (255, 215, 100)
+            // Neutral (50%): no change
+            // Low positive / negative (0%): cool red (200, 80, 80)
+
+            const polarityNorm = polarity / 100; // 0-1
+
+            if (polarityNorm > 0.5) {
+                // Blend toward gold for high positive
+                const blendAmount = (polarityNorm - 0.5) * 0.6; // 0-0.3 blend
+                r = Math.round(r + (255 - r) * blendAmount);
+                g = Math.round(g + (215 - g) * blendAmount * 0.7);
+                b = Math.round(b + (100 - b) * blendAmount * 0.3);
+            } else {
+                // Blend toward cool red for low/negative
+                const blendAmount = (0.5 - polarityNorm) * 0.5; // 0-0.25 blend
+                r = Math.round(r + (200 - r) * blendAmount);
+                g = Math.round(g * (1 - blendAmount * 0.5));
+                b = Math.round(b * (1 - blendAmount * 0.3));
+            }
+
+            return (r << 16) | (g << 8) | b;
+        }
+
+        // Get polarity-adjusted color for a node
+        function getNodeColor(node) {
+            const baseColor = typeColors[node.type] || typeColors.default;
+            const polarity = node.O || 50;
+            return blendColorWithPolarity(baseColor, polarity);
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // NODE & CONNECTION CREATION
+        // ═══════════════════════════════════════════════════════════════
+
+        function createNodeSprites() {
+            // Clear existing sprites
+            nodeSprites.forEach(sprite => scene.remove(sprite));
+            nodeSprites = [];
+
+            for (const node of nodes) {
+                // Color blended with polarity (O dimension)
+                const color = getNodeColor(node);
+                const texture = getGlowTexture(color);
+
+                // Calculate base opacity from density (D dimension)
+                // Higher density = more ethereal/translucent
+                const density = node.D || 3.5;
+                const densityOpacity = 1.0 - (density - 1) * 0.08; // 3rd density ~0.8, 6th ~0.6
+
+                const material = new THREE.SpriteMaterial({
+                    map: texture,
+                    transparent: true,
+                    blending: THREE.AdditiveBlending,
+                    depthWrite: false,
+                    opacity: Math.max(0.4, densityOpacity)
+                });
+
+                const sprite = new THREE.Sprite(material);
+                sprite.userData = { node: node, baseOpacity: densityOpacity };
+
+                // Initial position from consciousness coordinates
+                sprite.position.set(node.x, node.y, node.z);
+
+                // Size based on M (mass)
+                const M = node.M || 1;
+                const baseSize = 12 + M * 8;
+                sprite.scale.set(baseSize, baseSize, 1);
+
+                scene.add(sprite);
+                nodeSprites.push(sprite);
+                node.sprite = sprite;
+            }
+        }
+
+        function createConnectionLines() {
+            // Remove existing lines
+            if (connectionLines) {
+                scene.remove(connectionLines);
+                connectionLines.geometry.dispose();
+                connectionLines.material.dispose();
+            }
+
+            const positions = [];
+            const colors = [];
+
+            // Initialize BCΦ→ for each connection
+            for (const conn of connections) {
+                conn.B = calculateB(conn);
+                conn.C = calculateC(conn);
+                conn.direction = calculateDirection(conn);
+            }
+
+            for (const conn of connections) {
+                if (!conn.source.visible || !conn.target.visible) continue;
+
+                // Source position
+                positions.push(conn.source.x, conn.source.y, conn.source.z || 0);
+                // Target position
+                positions.push(conn.target.x, conn.target.y, conn.target.z || 0);
+
+                // ═══ B DIMENSION: Bandwidth → Base brightness ═══
+                const B = conn.B || 1;
+                const bandwidthAlpha = Math.min(0.8, 0.15 + B * 0.12);
+
+                // ═══ C DIMENSION: Coherence → Color saturation ═══
+                const C = conn.C || 0.5;
+                // Coherent (C→1): saturated purple-blue, Incoherent (C→0): desaturated gray
+                const baseR = 0.3 + (1 - C) * 0.3; // Gray shift for low coherence
+                const baseG = 0.4 + C * 0.2;
+                const baseB = 0.7 + C * 0.2;
+
+                // ═══ → DIMENSION: Directionality → Gradient coloring ═══
+                // Positive direction: target has more mass (flows toward target)
+                // Source end gets one color, target end gets another
+                const dir = conn.direction || 0;
+
+                // Source vertex color
+                let sourceR = baseR, sourceG = baseG, sourceBlue = baseB;
+                // Target vertex color
+                let targetR = baseR, targetG = baseG, targetBlue = baseB;
+
+                if (dir > 0.2) {
+                    // Flow toward target: source = cooler, target = warmer
+                    sourceR -= 0.1;
+                    sourceG += 0.1;
+                    targetR += 0.15;
+                    targetG += 0.1;
+                } else if (dir < -0.2) {
+                    // Flow toward source: source = warmer, target = cooler
+                    sourceR += 0.15;
+                    sourceG += 0.1;
+                    targetR -= 0.1;
+                    targetG += 0.1;
+                }
+                // Near zero = bidirectional (no gradient change)
+
+                colors.push(sourceR, sourceG, sourceBlue, bandwidthAlpha);
+                colors.push(targetR, targetG, targetBlue, bandwidthAlpha);
+            }
+
+            const geometry = new THREE.BufferGeometry();
+            geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+            geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 4));
+
+            const material = new THREE.LineBasicMaterial({
+                vertexColors: true,
+                transparent: true,
+                blending: THREE.AdditiveBlending,
+                depthWrite: false,
+                opacity: 0.6
+            });
+
+            connectionLines = new THREE.LineSegments(geometry, material);
+            scene.add(connectionLines);
+        }
+
+        function updateConnectionPositions() {
+            if (!connectionLines) return;
+
+            const time = clock.getElapsedTime();
+            const positions = connectionLines.geometry.attributes.position.array;
+            const colors = connectionLines.geometry.attributes.color.array;
+            let idx = 0;
+            let colorIdx = 0;
+
+            for (const conn of connections) {
+                if (!conn.source.visible || !conn.target.visible) continue;
+
+                // Source
+                positions[idx++] = conn.source.x;
+                positions[idx++] = conn.source.y;
+                positions[idx++] = conn.source.z || 0;
+
+                // Target
+                positions[idx++] = conn.target.x;
+                positions[idx++] = conn.target.y;
+                positions[idx++] = conn.target.z || 0;
+
+                // Highlight connections to selected node
+                const isHighlighted = selectedNode &&
+                    (conn.source === selectedNode || conn.target === selectedNode);
+
+                if (isHighlighted) {
+                    // Bright cyan for selected connections
+                    colors[colorIdx++] = 0.0; colors[colorIdx++] = 0.8; colors[colorIdx++] = 1.0; colors[colorIdx++] = 0.85;
+                    colors[colorIdx++] = 0.0; colors[colorIdx++] = 0.8; colors[colorIdx++] = 1.0; colors[colorIdx++] = 0.85;
+                } else {
+                    // ═══ BCΦ→ DIMENSIONAL RENDERING ═══
+
+                    // B: Bandwidth → opacity
+                    const B = conn.B || 1;
+                    const bandwidthAlpha = Math.min(0.7, 0.12 + B * 0.1);
+
+                    // C: Coherence → saturation
+                    const C = conn.C || 0.5;
+                    const baseR = 0.3 + (1 - C) * 0.25;
+                    const baseG = 0.4 + C * 0.15;
+                    const baseB = 0.65 + C * 0.2;
+
+                    // Φ: Phase → hue cycling
+                    // When nodes are in phase, connection glows brighter
+                    // When out of phase, connection dims
+                    const phi = calculatePhi(conn, time);
+                    const phaseBoost = phi * 0.3; // 0-0.3 brightness boost when in phase
+
+                    // → : Directionality → gradient
+                    const dir = conn.direction || 0;
+
+                    // Source vertex
+                    let sR = baseR + phaseBoost;
+                    let sG = baseG + phaseBoost * 0.5;
+                    let sB = baseB;
+
+                    // Target vertex
+                    let tR = baseR + phaseBoost;
+                    let tG = baseG + phaseBoost * 0.5;
+                    let tB = baseB;
+
+                    // Apply directionality gradient
+                    if (dir > 0.2) {
+                        // Flowing toward target
+                        sR -= 0.08;
+                        sG += 0.08;
+                        tR += 0.12;
+                        tG += 0.08;
+                    } else if (dir < -0.2) {
+                        // Flowing toward source
+                        sR += 0.12;
+                        sG += 0.08;
+                        tR -= 0.08;
+                        tG += 0.08;
+                    }
+
+                    // Apply phase pulsing to alpha
+                    const phaseAlpha = bandwidthAlpha + phi * 0.15;
+
+                    colors[colorIdx++] = sR;
+                    colors[colorIdx++] = sG;
+                    colors[colorIdx++] = sB;
+                    colors[colorIdx++] = phaseAlpha;
+
+                    colors[colorIdx++] = tR;
+                    colors[colorIdx++] = tG;
+                    colors[colorIdx++] = tB;
+                    colors[colorIdx++] = phaseAlpha;
+                }
+            }
+
+            connectionLines.geometry.attributes.position.needsUpdate = true;
+            connectionLines.geometry.attributes.color.needsUpdate = true;
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // → DIRECTIONAL FLOW PARTICLE SYSTEM
+        // Particles flow along connections showing information direction
+        // ═══════════════════════════════════════════════════════════════
+
+        const MAX_FLOW_PARTICLES = 800; // Limit for performance
+
+        function createFlowParticles() {
+            if (flowParticles) {
+                scene.remove(flowParticles);
+                flowParticles.geometry.dispose();
+                flowParticles.material.dispose();
+            }
+
+            flowParticleData = [];
+
+            // Create particles for connections with significant directionality
+            const directionalConns = connections.filter(c =>
+                c.source.visible && c.target.visible && Math.abs(c.direction || 0) > 0.15
+            );
+
+            // Distribute particles across connections based on bandwidth
+            let totalBandwidth = directionalConns.reduce((sum, c) => sum + (c.B || 1), 0);
+
+            for (const conn of directionalConns) {
+                // More particles for higher bandwidth connections
+                const particleCount = Math.max(1, Math.floor((conn.B || 1) / totalBandwidth * MAX_FLOW_PARTICLES));
+
+                for (let i = 0; i < particleCount; i++) {
+                    flowParticleData.push({
+                        conn: conn,
+                        t: Math.random(),  // Position along connection (0-1)
+                        speed: 0.003 + Math.random() * 0.004,  // Movement speed
+                        size: 2 + Math.random() * 3,
+                        brightness: 0.5 + Math.random() * 0.5
+                    });
+                }
+            }
+
+            // Limit total particles
+            if (flowParticleData.length > MAX_FLOW_PARTICLES) {
+                flowParticleData = flowParticleData.slice(0, MAX_FLOW_PARTICLES);
+            }
+
+            // Create geometry
+            const positions = new Float32Array(flowParticleData.length * 3);
+            const colors = new Float32Array(flowParticleData.length * 3);
+            const sizes = new Float32Array(flowParticleData.length);
+
+            for (let i = 0; i < flowParticleData.length; i++) {
+                const p = flowParticleData[i];
+                const conn = p.conn;
+
+                // Initial position along connection
+                positions[i * 3] = conn.source.x + (conn.target.x - conn.source.x) * p.t;
+                positions[i * 3 + 1] = conn.source.y + (conn.target.y - conn.source.y) * p.t;
+                positions[i * 3 + 2] = (conn.source.z || 0) + ((conn.target.z || 0) - (conn.source.z || 0)) * p.t;
+
+                // Color based on direction (cyan for flow, purple for reverse)
+                const dir = conn.direction || 0;
+                if (dir > 0) {
+                    // Flow toward target: cyan particles
+                    colors[i * 3] = 0.2 * p.brightness;
+                    colors[i * 3 + 1] = 0.8 * p.brightness;
+                    colors[i * 3 + 2] = 1.0 * p.brightness;
+                } else {
+                    // Flow toward source: magenta particles
+                    colors[i * 3] = 0.8 * p.brightness;
+                    colors[i * 3 + 1] = 0.3 * p.brightness;
+                    colors[i * 3 + 2] = 0.9 * p.brightness;
+                }
+
+                sizes[i] = p.size;
+            }
+
+            const geometry = new THREE.BufferGeometry();
+            geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+            geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+            geometry.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+
+            // Shader material for point particles with glow
+            const material = new THREE.ShaderMaterial({
+                uniforms: {
+                    time: { value: 0 }
+                },
+                vertexShader: `
+                    attribute float size;
+                    attribute vec3 color;
+                    varying vec3 vColor;
+                    varying float vAlpha;
+
+                    void main() {
+                        vColor = color;
+                        vAlpha = 0.8;
+                        vec4 mvPosition = modelViewMatrix * vec4(position, 1.0);
+                        gl_PointSize = size * (300.0 / -mvPosition.z);
+                        gl_Position = projectionMatrix * mvPosition;
+                    }
+                `,
+                fragmentShader: `
+                    varying vec3 vColor;
+                    varying float vAlpha;
+
+                    void main() {
+                        float dist = length(gl_PointCoord - vec2(0.5));
+                        if (dist > 0.5) discard;
+                        float alpha = vAlpha * (1.0 - dist * 2.0);
+                        gl_FragColor = vec4(vColor, alpha);
+                    }
+                `,
+                transparent: true,
+                blending: THREE.AdditiveBlending,
+                depthWrite: false
+            });
+
+            flowParticles = new THREE.Points(geometry, material);
+            scene.add(flowParticles);
+        }
+
+        function updateFlowParticles() {
+            if (!flowParticles || flowParticleData.length === 0) return;
+
+            const positions = flowParticles.geometry.attributes.position.array;
+
+            for (let i = 0; i < flowParticleData.length; i++) {
+                const p = flowParticleData[i];
+                const conn = p.conn;
+
+                // Skip if connection nodes are not visible
+                if (!conn.source.visible || !conn.target.visible) continue;
+
+                // Move particle along connection in flow direction
+                const dir = conn.direction || 0;
+                if (dir > 0) {
+                    // Flow toward target
+                    p.t += p.speed;
+                    if (p.t > 1) p.t = 0;
+                } else {
+                    // Flow toward source
+                    p.t -= p.speed;
+                    if (p.t < 0) p.t = 1;
+                }
+
+                // Update position
+                positions[i * 3] = conn.source.x + (conn.target.x - conn.source.x) * p.t;
+                positions[i * 3 + 1] = conn.source.y + (conn.target.y - conn.source.y) * p.t;
+                positions[i * 3 + 2] = (conn.source.z || 0) + ((conn.target.z || 0) - (conn.source.z || 0)) * p.t;
+            }
+
+            flowParticles.geometry.attributes.position.needsUpdate = true;
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // MONAD CLUSTERING PHYSICS - FULL 3D XYZTMA
+        // Physics operates in consciousness coordinate space
+        // ═══════════════════════════════════════════════════════════════
+
+        function updatePhysics() {
+            if (!physicsEnabled) return;
+
+            const alpha = 0.012;
+            const damping = 0.85;
+            const anchorStrength = 0.002; // Pull toward consciousness coordinates
+
+            const visibleNodes = nodes.filter(n => n.visible);
+
+            // Update weights and heat
+            for (const node of visibleNodes) {
+                if (!node.baseWeight) {
+                    node.baseWeight = 1 + Math.log(1 + node.connections.length);
+                }
+                node.baseWeight += 0.0001 * node.connections.length;
+
+                const personalWeight = personalField.getNodeWeight(node.id);
+                const collectiveWeight = collectiveField.getNodeWeight(node.id);
+                node.weight = node.baseWeight * personalWeight + (collectiveWeight * 0.1);
+
+                // Update T and M dimensions
+                node.T = calculateT(node);
+                node.M = calculateM(node);
+
+                const recency = personalField.isRecentlyVisited(node.id);
+                if (recency > 0) {
+                    node.heat = recency;
+                } else {
+                    node.heat = Math.max(0, (node.heat || 0) - 0.01);
+                }
+
+                // Anchor force: gently pull toward consciousness coordinates
+                // This maintains the XYZ consciousness structure while allowing T-connection dynamics
+                const anchorDx = node.consciousnessX - node.x;
+                const anchorDy = node.consciousnessY - node.y;
+                const anchorDz = node.consciousnessZ - node.z;
+                node.vx += anchorDx * anchorStrength;
+                node.vy += anchorDy * anchorStrength;
+                node.vz += anchorDz * anchorStrength;
+            }
+
+            // Find primal monads (highest M - mass/weight)
+            const primalMonads = [...visibleNodes]
+                .sort((a, b) => b.M - a.M)
+                .slice(0, 5);
+
+            // T-connection dynamics in 3D
+            for (let i = 0; i < visibleNodes.length; i++) {
+                for (let j = i + 1; j < visibleNodes.length; j++) {
+                    const n1 = visibleNodes[i];
+                    const n2 = visibleNodes[j];
+                    const dx = n2.x - n1.x;
+                    const dy = n2.y - n1.y;
+                    const dz = n2.z - n1.z;
+                    const dist = Math.sqrt(dx * dx + dy * dy + dz * dz) + 0.01;
+
+                    const sharedConnections = n1.connections.filter(c =>
+                        n2.connections.includes(c)
+                    ).length;
+
+                    if (sharedConnections > 0) {
+                        // Shared T-connections create attraction (clustering)
+                        const clusterForce = (sharedConnections * 600) / dist;
+                        const fx = (dx / dist) * clusterForce;
+                        const fy = (dy / dist) * clusterForce;
+                        const fz = (dz / dist) * clusterForce;
+                        n1.vx += fx * alpha;
+                        n1.vy += fy * alpha;
+                        n1.vz += fz * alpha;
+                        n2.vx -= fx * alpha;
+                        n2.vy -= fy * alpha;
+                        n2.vz -= fz * alpha;
+                    } else {
+                        // No shared T-connections: weak repulsion (spacing)
+                        const repelForce = 2500 / (dist * dist);
+                        const fx = (dx / dist) * repelForce;
+                        const fy = (dy / dist) * repelForce;
+                        const fz = (dz / dist) * repelForce;
+                        n1.vx -= fx * alpha;
+                        n1.vy -= fy * alpha;
+                        n1.vz -= fz * alpha;
+                        n2.vx += fx * alpha;
+                        n2.vy += fy * alpha;
+                        n2.vz += fz * alpha;
+                    }
+                }
+            }
+
+            // Primal monad gravity in 3D
+            for (const node of visibleNodes) {
+                for (const primal of primalMonads) {
+                    if (node === primal) continue;
+                    const dx = primal.x - node.x;
+                    const dy = primal.y - node.y;
+                    const dz = primal.z - node.z;
+                    const dist = Math.sqrt(dx * dx + dy * dy + dz * dz) + 0.01;
+
+                    const clusterStrength = (primal.M * 150) / (dist * dist);
+                    const fx = (dx / dist) * clusterStrength;
+                    const fy = (dy / dist) * clusterStrength;
+                    const fz = (dz / dist) * clusterStrength;
+                    node.vx += fx * alpha * 0.4;
+                    node.vy += fy * alpha * 0.4;
+                    node.vz += fz * alpha * 0.4;
+                }
+            }
+
+            // T-connection strengthening (edge-based attraction) in 3D
+            for (const conn of connections) {
+                if (!conn.source.visible || !conn.target.visible) continue;
+
+                if (!conn.strength) conn.strength = 1;
+                conn.strength += 0.001;
+
+                const dx = conn.target.x - conn.source.x;
+                const dy = conn.target.y - conn.source.y;
+                const dz = conn.target.z - conn.source.z;
+                const dist = Math.sqrt(dx * dx + dy * dy + dz * dz) + 0.01;
+
+                const tForce = conn.strength * 0.008 * dist;
+                const fx = (dx / dist) * tForce;
+                const fy = (dy / dist) * tForce;
+                const fz = (dz / dist) * tForce;
+
+                conn.source.vx += fx;
+                conn.source.vy += fy;
+                conn.source.vz += fz;
+                conn.target.vx -= fx;
+                conn.target.vy -= fy;
+                conn.target.vz -= fz;
+            }
+
+            // Apply velocity in 3D
+            for (const node of visibleNodes) {
+                if (isNaN(node.vx) || isNaN(node.vy) || isNaN(node.vz)) {
+                    node.vx = 0;
+                    node.vy = 0;
+                    node.vz = 0;
+                }
+                node.x += node.vx;
+                node.y += node.vy;
+                node.z += node.vz;
+                node.vx *= damping;
+                node.vy *= damping;
+                node.vz *= damping;
+            }
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // SPRITE POSITION & APPEARANCE UPDATE - FULL DIMENSIONAL VISUALIZATION
+        // T = glow radius, M = size, A = amplitude/pulse, D = transparency
+        // ═══════════════════════════════════════════════════════════════
+
+        function updateSpritePositions() {
+            const time = clock.getElapsedTime();
+
+            for (const sprite of nodeSprites) {
+                const node = sprite.userData.node;
+                if (!node.visible) {
+                    sprite.visible = false;
+                    continue;
+                }
+
+                sprite.visible = true;
+
+                // Update 3D position from physics
+                sprite.position.set(node.x, node.y, node.z);
+
+                // ═══ M DIMENSION: Mass/Weight → Size ═══
+                const M = node.M || 1;
+                const baseSize = 12 + M * 8;
+                const clampedSize = Math.max(15, Math.min(60, baseSize));
+
+                // ═══ T DIMENSION: T-connections → Glow Radius ═══
+                const T = node.T || 0;
+                const glowMultiplier = 1 + T * 0.15;
+
+                // ═══ A DIMENSION: Amplitude → Pulse/Oscillation ═══
+                const A = calculateA(node, time);
+
+                // Pulse effect combines A dimension with selection state
+                let pulseScale = 1;
+                if (node === selectedNode) {
+                    pulseScale = 1 + 0.2 * A;
+                } else if (node.heat > 0.3 || collectiveField.isHot(node.id)) {
+                    pulseScale = 1 + 0.12 * A;
+                } else {
+                    pulseScale = 1 + 0.04 * A;
+                }
+
+                // Final size = M * T * A
+                const finalSize = clampedSize * glowMultiplier * pulseScale;
+                sprite.scale.set(finalSize, finalSize, 1);
+
+                // ═══ D DIMENSION: Density → Transparency ═══
+                // Higher density = more ethereal/translucent (approaching source)
+                const D = node.D || 3.5;
+                const densityOpacity = sprite.userData.baseOpacity || (1.0 - (D - 1) * 0.08);
+
+                // Combine D opacity with selection state and A modulation
+                let finalOpacity;
+                if (node === selectedNode) {
+                    finalOpacity = 1.0;
+                } else if (node === hoveredNode) {
+                    finalOpacity = Math.min(1.0, densityOpacity + 0.2);
+                } else {
+                    finalOpacity = densityOpacity + A * 0.1;
+                }
+                sprite.material.opacity = Math.max(0.3, Math.min(1.0, finalOpacity));
+
+                // Update node's A value for info display
+                node.A = A;
+            }
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // MOUSE INTERACTION
+        // ═══════════════════════════════════════════════════════════════
+
+        function onCanvasClick(event) {
+            const container = document.getElementById('canvas-container');
+            const rect = container.getBoundingClientRect();
+
+            mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+            mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+
+            raycaster.setFromCamera(mouse, camera);
+
+            const intersects = raycaster.intersectObjects(nodeSprites);
+            if (intersects.length > 0) {
+                const clickedSprite = intersects[0].object;
+                const node = clickedSprite.userData.node;
+                if (node && node.visible) {
+                    selectNode(node);
+                }
+            }
+        }
+
+        function onCanvasMouseMove(event) {
+            const container = document.getElementById('canvas-container');
+            const rect = container.getBoundingClientRect();
+
+            mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+            mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+
+            raycaster.setFromCamera(mouse, camera);
+
+            const intersects = raycaster.intersectObjects(nodeSprites);
+            const tooltip = document.getElementById('tooltip');
+
+            if (intersects.length > 0) {
+                const sprite = intersects[0].object;
+                const node = sprite.userData.node;
+                if (node && node.visible) {
+                    hoveredNode = node;
+                    renderer.domElement.style.cursor = 'pointer';
+
+                    // Update tooltip
+                    tooltip.querySelector('.tooltip-title').textContent = node.label;
+                    tooltip.querySelector('.tooltip-type').textContent = node.type.replace(/_/g, ' ');
+                    tooltip.style.left = (event.clientX - rect.left + 15) + 'px';
+                    tooltip.style.top = (event.clientY - rect.top + 15) + 'px';
+                    tooltip.classList.add('visible');
+                } else {
+                    hoveredNode = null;
+                    renderer.domElement.style.cursor = 'default';
+                    tooltip.classList.remove('visible');
+                }
+            } else {
+                hoveredNode = null;
+                renderer.domElement.style.cursor = 'default';
+                tooltip.classList.remove('visible');
+            }
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // DATA LOADING
+        // ═══════════════════════════════════════════════════════════════
+
+        async function loadConstellation() {
+            try {
+                let response;
+                const paths = [
+                    './constellation.json',
+                    '/constellation/constellation.json',
+                    'constellation.json'
+                ];
+
+                for (const path of paths) {
+                    try {
+                        response = await fetch(path);
+                        if (response.ok) break;
+                    } catch (e) {
+                        continue;
+                    }
+                }
+
+                if (!response || !response.ok) {
+                    throw new Error('Could not load constellation.json');
+                }
+                constellation = await response.json();
+
+                const nodeMap = new Map();
+                let index = 0;
+
+                for (const [name, data] of Object.entries(constellation.nodes)) {
+                    const nodeType = data.type || 'concept';
+                    nodeTypes.set(nodeType, (nodeTypes.get(nodeType) || 0) + 1);
+
+                    const node = {
+                        id: name,
+                        label: name.replace(/_/g, ' '),
+                        type: nodeType,
+                        essence: data.essence,
+                        connections: data.connections || [],
+                        x: 0,
+                        y: 0,
+                        z: 0,
+                        vx: 0,
+                        vy: 0,
+                        vz: 0,  // 3D velocity
+                        index: index++,
+                        visible: true,
+                        // XYZTMA dimensions (calculated after all nodes loaded)
+                        consciousnessX: 0,
+                        consciousnessY: 0,
+                        consciousnessZ: 0,
+                        T: 0,  // T-connection strength
+                        M: 0,  // Mass/weight
+                        A: 0   // Amplitude phase
+                    };
+                    nodes.push(node);
+                    nodeMap.set(name, node);
+                }
+
+                // Build connections
+                for (const node of nodes) {
+                    for (const connName of node.connections) {
+                        const target = nodeMap.get(connName);
+                        if (target) {
+                            connections.push({ source: node, target: target });
+                        }
+                    }
+                }
+
+                // Initialize XYZTMA consciousness coordinates for all nodes
+                console.log('Initializing XYZTMA consciousness coordinates...');
+                for (const node of nodes) {
+                    initConsciousnessCoordinates(node, nodes);
+                    node.T = calculateT(node);
+                    node.M = calculateM(node);
+                }
+                console.log('XYZTMA coordinates initialized for', nodes.length, 'nodes');
+
+                await loadSynthesisIndex();
+                setupTypeFilters();
+                setupLegend();
+                updateStats();
+
+                // Create Three.js objects
+                createNodeSprites();
+                createConnectionLines();
+                createFlowParticles();
+
+                document.getElementById('loading').style.display = 'none';
+
+            } catch (error) {
+                console.error('Error loading constellation:', error);
+                document.getElementById('loading').innerHTML =
+                    '<div style="color: #ff4444;">Error loading constellation.json</div>';
+            }
+        }
+
+        async function loadSynthesisIndex() {
+            const indexPaths = [
+                '../synthesis-index.json',
+                '/synthesis-index.json',
+                'synthesis-index.json'
+            ];
+
+            for (const path of indexPaths) {
+                try {
+                    const response = await fetch(path);
+                    if (response.ok) {
+                        synthesisIndex = await response.json();
+                        console.log(`Loaded synthesis index: ${synthesisIndex.documents.length} documents`);
+                        return;
+                    }
+                } catch (e) {
+                    continue;
+                }
+            }
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // UI FUNCTIONS
+        // ═══════════════════════════════════════════════════════════════
+
+        function setupTypeFilters() {
+            const container = document.getElementById('type-filters');
+            const sortedTypes = Array.from(nodeTypes.entries()).sort((a, b) => b[1] - a[1]);
+
+            for (const [type, count] of sortedTypes) {
+                const div = document.createElement('div');
+                div.className = 'filter-checkbox';
+                div.innerHTML = `
+                    <input type="checkbox" id="filter-${type}" checked>
+                    <label for="filter-${type}">${type.replace(/_/g, ' ')} (${count})</label>
+                `;
+                div.querySelector('input').addEventListener('change', () => toggleTypeFilter(type));
+                container.appendChild(div);
+            }
+        }
+
+        function setupLegend() {
+            const container = document.getElementById('legend-items');
+            const mainTypes = ['archetype', 'element', 'process', 'fundamental', 'principle', 'primordial'];
+
+            for (const type of mainTypes) {
+                if (nodeTypes.has(type)) {
+                    const div = document.createElement('div');
+                    div.className = 'legend-item';
+                    const color = typeColors[type] || typeColors.default;
+                    const hexColor = '#' + color.toString(16).padStart(6, '0');
+                    div.innerHTML = `
+                        <div class="legend-color" style="background: ${hexColor};"></div>
+                        <span>${type.replace(/_/g, ' ')}</span>
+                    `;
+                    container.appendChild(div);
+                }
+            }
+        }
+
+        function toggleTypeFilter(type) {
+            if (typeFilters.has(type)) {
+                typeFilters.delete(type);
+            } else {
+                typeFilters.add(type);
+            }
+
+            for (const node of nodes) {
+                node.visible = !typeFilters.has(node.type);
+            }
+
+            createConnectionLines();
+            createFlowParticles();
+            updateStats();
+        }
+
+        function updateStats() {
+            document.getElementById('total-nodes').textContent = nodes.length;
+            document.getElementById('total-connections').textContent = connections.length;
+            const visibleCount = nodes.filter(n => n.visible).length;
+            document.getElementById('visible-nodes').textContent = visibleCount;
+
+            const totalWeight = nodes.reduce((sum, n) => sum + (n.weight || 1), 0);
+            document.getElementById('total-weight').textContent = totalWeight.toFixed(1);
+        }
+
+        // Helper: Get human-readable density label
+        function getDensityLabel(d) {
+            if (d < 2) return '1st - Elemental';
+            if (d < 3) return '2nd - Growth';
+            if (d < 4) return '3rd - Choice';
+            if (d < 5) return '4th - Love';
+            if (d < 6) return '5th - Wisdom';
+            if (d < 7) return '6th - Unity';
+            if (d < 8) return '7th - Gateway';
+            return '8th - Creator';
+        }
+
+        function selectNode(node) {
+            selectedNode = node;
+            document.getElementById('selected-node').textContent = node.label;
+
+            personalField.recordClick(node.id);
+
+            const resources = findResources(node);
+            const M = node.M || 1;
+            const isPrimalMonad = M > 3;
+
+            // Interpret XYZ coordinates
+            const xLabel = node.x > 50 ? 'finding' : node.x < -50 ? 'seeking' : 'present';
+            const yLabel = node.y > 50 ? 'transcendent' : node.y < -50 ? 'immanent' : 'integrated';
+            const zLabel = node.z > 50 ? 'separation' : node.z < -50 ? 'unity' : 'balanced';
+
+            const infoPanel = document.getElementById('node-info');
+            infoPanel.innerHTML = `
+                <div class="node-title">${node.label}</div>
+                <div class="node-meta">
+                    ${node.type.replace(/_/g, ' ')} • ${node.connections.length} T-connections
+                    ${isPrimalMonad ? '<br><strong style="color: #00ff88;">⚡ PRIMAL MONAD (High Relational Density)</strong>' : ''}
+                </div>
+
+                <div style="background: rgba(0,0,0,0.3); padding: 10px; border-radius: 8px; margin: 10px 0; font-size: 11px;">
+                    <div style="color: #9d4edd; font-weight: bold; margin-bottom: 8px;">CONSCIOUSNESS COORDINATES (XYZTMA.OD)</div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px;">
+                        <span style="color: #ff6b9d;">X (Time):</span>
+                        <span>${node.x.toFixed(0)} <span style="color:#666">(${xLabel})</span></span>
+                        <span style="color: #00d4ff;">Y (Scale):</span>
+                        <span>${node.y.toFixed(0)} <span style="color:#666">(${yLabel})</span></span>
+                        <span style="color: #00ff88;">Z (Boundary):</span>
+                        <span>${node.z.toFixed(0)} <span style="color:#666">(${zLabel})</span></span>
+                        <span style="color: #9d4edd;">T (Relation):</span>
+                        <span>${(node.T || 0).toFixed(2)}</span>
+                        <span style="color: #ffd700;">M (Mass):</span>
+                        <span>${M.toFixed(2)}</span>
+                        <span style="color: #ff8844;">A (Amplitude):</span>
+                        <span>${((node.A || 0) * 100).toFixed(0)}%</span>
+                    </div>
+                    <div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(157,78,221,0.2);">
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4px;">
+                            <span style="color: #ffcc00;">O (Polarity):</span>
+                            <span>${(node.O || 50).toFixed(0)}% <span style="color:#666">(${(node.O || 50) >= 70 ? 'positive' : (node.O || 50) <= 30 ? 'negative' : 'mixed'})</span></span>
+                            <span style="color: #88ffff;">D (Density):</span>
+                            <span>${(node.D || 3.5).toFixed(1)} <span style="color:#666">(${getDensityLabel(node.D || 3.5)})</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="node-essence">"${node.essence.replace(/_/g, ' ')}"</div>
+
+                ${resources.length > 0 ? `
+                <div class="resources-section">
+                    <div class="section-title">📚 Related Resources</div>
+                    ${resources.map(r => `
+                        <div class="resource-item" data-path="${r.path}">
+                            <div class="resource-title">${r.title}</div>
+                            <div class="resource-type">${r.type}</div>
+                        </div>
+                    `).join('')}
+                </div>
+                ` : ''}
+
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid rgba(157, 78, 221, 0.3);">
+                    <div class="section-title">🔗 Connections (${node.connections.length})</div>
+                    <div class="connections-list">
+                        ${node.connections.map(conn =>
+                            `<div class="connection-item" data-node="${conn}">
+                                → ${conn.replace(/_/g, ' ')}
+                            </div>`
+                        ).join('')}
+                    </div>
+                </div>
+            `;
+
+            // Add click handlers
+            infoPanel.querySelectorAll('.resource-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    window.open(item.dataset.path, '_blank');
+                });
+            });
+
+            infoPanel.querySelectorAll('.connection-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    selectNodeByName(item.dataset.node);
+                });
+            });
+
+            updateConnectionPositions();
+        }
+
+        function findResources(node) {
+            const resources = [];
+
+            const searchTerms = new Set([
+                ...node.id.toLowerCase().split('_'),
+                node.essence.toLowerCase(),
+                ...node.connections.map(c => c.toLowerCase().replace(/_/g, ' '))
+            ]);
+
+            if (synthesisIndex && synthesisIndex.documents) {
+                const scoredDocs = [];
+
+                for (const doc of synthesisIndex.documents) {
+                    let score = 0;
+                    const docTags = doc.tags || [];
+                    const docTitle = doc.title.toLowerCase();
+
+                    for (const term of searchTerms) {
+                        if (docTags.some(tag => tag.toLowerCase().includes(term) || term.includes(tag.toLowerCase()))) {
+                            score += 3;
+                        }
+                        if (docTitle.includes(term)) {
+                            score += 2;
+                        }
+                    }
+
+                    const nodeName = node.id.replace(/_/g, ' ').toLowerCase();
+                    if (docTitle.includes(nodeName)) {
+                        score += 10;
+                    }
+
+                    if (score > 0) {
+                        scoredDocs.push({ doc, score });
+                    }
+                }
+
+                scoredDocs.sort((a, b) => b.score - a.score);
+                const topDocs = scoredDocs.slice(0, 5);
+
+                for (const { doc } of topDocs) {
+                    resources.push({
+                        title: doc.title,
+                        path: `/${doc.path}`,
+                        type: doc.category.replace(/-/g, ' ')
+                    });
+                }
+            }
+
+            resources.push({
+                title: `Browse Library: "${node.label}"`,
+                path: `/library?search=${encodeURIComponent(node.label)}`,
+                type: 'Library Search'
+            });
+
+            return resources;
+        }
+
+        function selectNodeByName(name) {
+            const node = nodes.find(n => n.id === name);
+            if (node) {
+                selectNode(node);
+                focusOnSpecificNode(node);
+                closeSidebarOnMobile();
+            }
+        }
+
+        function focusOnSpecificNode(node) {
+            const targetPos = new THREE.Vector3(node.x, node.y, node.z || 0);
+            const offset = new THREE.Vector3(0, 0, 300);
+            camera.position.copy(targetPos).add(offset);
+            controls.target.copy(targetPos);
+            controls.update();
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // GLOBAL CONTROL FUNCTIONS
+        // ═══════════════════════════════════════════════════════════════
+
+        window.resetView = function() {
+            camera.position.set(0, 0, 800);
+            controls.target.set(0, 0, 0);
+            controls.update();
+            selectedNode = null;
+            document.getElementById('selected-node').textContent = 'None';
+            document.getElementById('node-info').innerHTML =
+                '<div style="color: #666; text-align: center; padding: 40px 20px;">Click a node to explore its connections and resources</div>';
+        };
+
+        window.togglePhysics = function() {
+            physicsEnabled = !physicsEnabled;
+        };
+
+        window.focusOnNode = function() {
+            if (selectedNode) {
+                focusOnSpecificNode(selectedNode);
+            }
+        };
+
+        window.toggleAutoRotate = function() {
+            controls.autoRotate = !controls.autoRotate;
+            controls.autoRotateSpeed = 0.5;
+        };
+
+        window.toggleSidebar = function() {
+            const sidebar = document.getElementById('sidebar');
+            const toggle = document.getElementById('mobile-toggle');
+            sidebar.classList.toggle('open');
+            toggle.textContent = sidebar.classList.contains('open') ? '✕ Close' : '☰ Menu';
+        };
+
+        function closeSidebarOnMobile() {
+            if (window.innerWidth <= 768) {
+                const sidebar = document.getElementById('sidebar');
+                const toggle = document.getElementById('mobile-toggle');
+                sidebar.classList.remove('open');
+                toggle.textContent = '☰ Menu';
+            }
+        }
+
+        // Search
+        document.getElementById('search').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            if (!query) {
+                selectedNode = null;
+                return;
+            }
+
+            const matches = nodes.filter(n =>
+                n.visible && (
+                    n.id.toLowerCase().includes(query) ||
+                    n.label.toLowerCase().includes(query) ||
+                    n.essence.toLowerCase().includes(query)
+                )
+            );
+
+            if (matches.length > 0) {
+                selectNode(matches[0]);
+                focusOnSpecificNode(matches[0]);
+            }
+        });
+
+        // ═══════════════════════════════════════════════════════════════
+        // RENDER LOOP
+        // ═══════════════════════════════════════════════════════════════
+
+        let frameCount = 0;
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // Physics update
+            updatePhysics();
+
+            // Update sprites
+            updateSpritePositions();
+
+            // Update flow particles every frame
+            updateFlowParticles();
+
+            // Update connections every few frames
+            if (frameCount++ % 3 === 0) {
+                updateConnectionPositions();
+            }
+
+            // Stats update
+            if (frameCount % 60 === 0) {
+                updateStats();
+            }
+
+            // Update controls
+            controls.update();
+
+            // Render
+            renderer.render(scene, camera);
+        }
+
+        // ═══════════════════════════════════════════════════════════════
+        // INITIALIZATION
+        // ═══════════════════════════════════════════════════════════════
+
+        window.addEventListener('load', async () => {
+            personalField.init();
+            collectiveField.fetch();
+
+            initThree();
+            await loadConstellation();
+            animate();
+
+            setInterval(() => collectiveField.fetch(), 60000);
+        });
+
+    </script>
+</body>
+</html>

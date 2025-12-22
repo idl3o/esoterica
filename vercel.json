@@ -37,6 +37,10 @@
       "dest": "/constellation/constellation_explorer_v2.html"
     },
     {
+      "src": "/explorer-3d",
+      "dest": "/constellation/constellation_explorer_v3.html"
+    },
+    {
       "src": "/constellation-explorer",
       "dest": "/constellation/constellation_explorer_v2.html"
     },
