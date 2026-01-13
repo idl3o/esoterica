@@ -48,3 +48,14 @@ pids
 
 # Optional eslint cache
 .eslintcache
+
+# World Model data (generated, not source)
+world-model/data/
+world-model/__pycache__/
+world-model/src/__pycache__/
+world-model/src/**/__pycache__/
+*.pyc
+*.pyo
+
+# Temporary files
+tmpclaude-*

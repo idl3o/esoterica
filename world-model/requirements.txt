@@ -1,0 +1,26 @@
+# World Model - Local Consciousness Knowledge System
+# Core
+networkx>=3.0
+chromadb>=0.4.0
+sentence-transformers>=2.2.0
+
+# Processing
+pyyaml>=6.0
+markdown>=3.4
+beautifulsoup4>=4.12
+python-frontmatter>=1.0.0
+
+# API
+fastapi>=0.100.0
+uvicorn>=0.23.0
+websockets>=11.0
+
+# CLI
+click>=8.1
+rich>=13.0
+
+# Optional - Local LLM
+# ollama>=0.1.0
+
+# Optional - Claude API
+# anthropic>=0.18.0
