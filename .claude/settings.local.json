@@ -76,7 +76,14 @@
       "Bash(git commit -m \"$\\(cat <<''EOF''\nfeat: Add 3D constellation explorer with 12-dimensional consciousness mapping\n\nImplements Three.js WebGL upgrade \\(v3\\) with full XYZTMA.OD + BCΦ→ dimensional\nvisualization based on Monad Clustering Cosmology and consciousness coordinate\nframeworks.\n\nNode Dimensions \\(XYZTMA.OD\\):\n- X: Time \\(seeking↔finding\\) from node type\n- Y: Scale \\(immanent↔transcendent\\) from node type\n- Z: Boundary \\(unity↔separation\\) from clustering coefficient\n- T: T-connection strength → glow radius\n- M: Accumulated relational density → node size\n- A: Amplitude oscillation → pulse rate\n- O: Polarity/service orientation → color warmth \\(gold↔cool-red\\)\n- D: Consciousness density \\(1-8\\) → transparency\n\nConnection Dimensions \\(BCΦ→\\):\n- B: Bandwidth → line brightness/opacity\n- C: Coherence → color saturation\n- Φ: Phase synchronization → time-based pulse\n- →: Directionality → flowing particles \\(cyan/magenta\\)\n\nTechnical:\n- Three.js via CDN \\(no build changes\\)\n- Sprite-based nodes with procedural glow textures\n- OrbitControls for 3D navigation\n- Raycaster for node picking\n- ShaderMaterial particle system for directional flow\n- Preserves Monad Clustering physics engine\n- Routes: /explorer-3d \\(Vercel + Express\\)\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "WebFetch(domain:u.today)",
       "WebFetch(domain:cryptoslate.com)",
-      "WebFetch(domain:www.nasa.gov)"
+      "WebFetch(domain:www.nasa.gov)",
+      "WebFetch(domain:www.disclosurenews.it)",
+      "WebFetch(domain:www.heartmath.org)",
+      "WebFetch(domain:geocenter.info)",
+      "WebFetch(domain:roserambles.org)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:www.swpc.noaa.gov)",
+      "WebFetch(domain:earthsky.org)"
     ],
     "deny": [],
     "ask": []
