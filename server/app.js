@@ -30,6 +30,32 @@ app.get('/synthesis-index.json', (req, res) => {
   res.sendFile(path.join(__dirname, '../synthesis-index.json'));
 });
 
+app.get('/oracle', (req, res) => {
+  res.sendFile(path.join(__dirname, '../oracle.html'));
+});
+
+// Render any markdown as HTML (for oracle)
+app.get('/read/*', async (req, res) => {
+  try {
+    const docPath = req.params[0]; // e.g., "synthesis/archetypal/file.md"
+    const filePath = path.join(__dirname, '..', docPath);
+    const markdown = await fs.readFile(filePath, 'utf8');
+    const html = marked.parse(markdown);
+
+    // Extract title from first heading
+    const titleMatch = markdown.match(/^#\s+(.+)$/m);
+    const title = titleMatch ? titleMatch[1] : docPath.split('/').pop().replace('.md', '');
+
+    res.render('document', {
+      title,
+      content: html
+    });
+  } catch (error) {
+    console.error('Error loading document:', error);
+    res.status(404).render('404', { title: 'Document Not Found' });
+  }
+});
+
 // Load constellation data
 let constellationData = null;
 const loadConstellation = async () => {

@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oracle</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #0a0a0b;
+      color: #e8e6e3;
+      font-family: 'Crimson Text', Georgia, serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+
+    /* === THRESHOLD STATE === */
+    #threshold {
+      text-align: center;
+      opacity: 1;
+      transition: opacity 0.8s ease;
+    }
+
+    #threshold.hidden {
+      opacity: 0;
+      pointer-events: none;
+      position: absolute;
+    }
+
+    .sigil {
+      font-size: 4rem;
+      color: #a89984;
+      margin-bottom: 3rem;
+      animation: breathe 4s ease-in-out infinite;
+    }
+
+    @keyframes breathe {
+      0%, 100% { opacity: 0.6; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+
+    .invitation {
+      font-size: 1.5rem;
+      font-style: italic;
+      color: #a89984;
+      margin-bottom: 3rem;
+      letter-spacing: 0.05em;
+    }
+
+    .enter-btn {
+      background: transparent;
+      border: 1px solid #a8998455;
+      color: #a89984;
+      padding: 1rem 3rem;
+      font-family: inherit;
+      font-size: 1.1rem;
+      letter-spacing: 0.2em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .enter-btn:hover {
+      border-color: #a89984;
+      background: #a8998411;
+    }
+
+    /* === ORACLE STATE === */
+    #oracle {
+      max-width: 800px;
+      padding: 2rem;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+      position: absolute;
+      pointer-events: none;
+    }
+
+    #oracle.visible {
+      opacity: 1;
+      position: relative;
+      pointer-events: auto;
+    }
+
+    .oracle-frame {
+      text-align: center;
+    }
+
+    .receiving {
+      font-size: 0.9rem;
+      color: #666;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    .oracle-title {
+      font-size: 2rem;
+      color: #d4c4a8;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .oracle-subtitle {
+      font-size: 1.1rem;
+      color: #888;
+      font-style: italic;
+      margin-bottom: 2.5rem;
+    }
+
+    .oracle-excerpt {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      color: #b8a888;
+      font-style: italic;
+      margin-bottom: 2.5rem;
+      padding: 0 1rem;
+    }
+
+    .oracle-whisper {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 3rem;
+    }
+
+    .oracle-actions {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .oracle-btn {
+      background: transparent;
+      border: 1px solid #a8998433;
+      color: #a89984;
+      padding: 0.8rem 2rem;
+      font-family: inherit;
+      font-size: 0.95rem;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .oracle-btn:hover {
+      border-color: #a89984;
+      background: #a8998411;
+    }
+
+    .oracle-btn.primary {
+      border-color: #a8998466;
+    }
+
+    .time-seed {
+      position: fixed;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.75rem;
+      color: #333;
+      letter-spacing: 0.2em;
+    }
+
+    /* === LOADING === */
+    .loading {
+      color: #666;
+      font-style: italic;
+    }
+
+    /* === MOBILE === */
+    @media (max-width: 600px) {
+      .sigil { font-size: 3rem; }
+      .invitation { font-size: 1.2rem; padding: 0 1rem; }
+      .oracle-title { font-size: 1.5rem; }
+      .oracle-excerpt { font-size: 1.1rem; }
+      #oracle { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- THRESHOLD -->
+  <div id="threshold">
+    <div class="sigil">◇</div>
+    <div class="invitation">You already know.</div>
+    <button class="enter-btn" onclick="enter()">Enter</button>
+  </div>
+
+  <!-- ORACLE -->
+  <div id="oracle">
+    <div class="oracle-frame">
+      <div class="receiving">what you are remembering</div>
+      <h1 class="oracle-title" id="title">...</h1>
+      <div class="oracle-subtitle" id="subtitle"></div>
+      <div class="oracle-excerpt" id="excerpt"></div>
+      <div class="oracle-whisper" id="whisper"></div>
+      <div class="oracle-actions">
+        <button class="oracle-btn primary" id="readBtn" onclick="readFull()">Read</button>
+        <button class="oracle-btn" onclick="receiveAnother()">Receive Another</button>
+        <button class="oracle-btn" onclick="returnToThreshold()">Return</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="time-seed" id="timeSeed"></div>
+
+  <script>
+    let documents = [];
+    let currentDoc = null;
+
+    // Time-seeded oracle: the moment determines the document
+    function getTimeSeed() {
+      const now = new Date();
+      // Seed changes every 3 minutes - shared experience window
+      const seed = Math.floor(now.getTime() / (3 * 60 * 1000));
+      return seed;
+    }
+
+    function formatTimeSeed() {
+      const now = new Date();
+      const hours = now.getHours().toString().padStart(2, '0');
+      const mins = now.getMinutes().toString().padStart(2, '0');
+      // Show which 3-minute window
+      const window = Math.floor(now.getMinutes() / 3);
+      return `${hours}:${window * 3}`;
+    }
+
+    function selectDocument(seed) {
+      if (documents.length === 0) return null;
+      // Simple seeded selection
+      const index = seed % documents.length;
+      return documents[index];
+    }
+
+    async function loadDocuments() {
+      try {
+        const response = await fetch('/synthesis-index.json');
+        const data = await response.json();
+        documents = data.documents || [];
+      } catch (err) {
+        console.error('Failed to load documents:', err);
+      }
+    }
+
+    function enter() {
+      document.getElementById('threshold').classList.add('hidden');
+      document.getElementById('oracle').classList.add('visible');
+
+      if (documents.length === 0) {
+        document.getElementById('title').textContent = 'Loading...';
+        loadDocuments().then(() => castOracle());
+      } else {
+        castOracle();
+      }
+    }
+
+    function castOracle(customSeed) {
+      const seed = customSeed !== undefined ? customSeed : getTimeSeed();
+      currentDoc = selectDocument(seed);
+
+      if (!currentDoc) {
+        document.getElementById('title').textContent = 'The oracle is silent';
+        return;
+      }
+
+      document.getElementById('title').textContent = currentDoc.title || 'Untitled';
+      document.getElementById('subtitle').textContent = currentDoc.subtitle || '';
+
+      // Use excerpt or first quote
+      let excerpt = currentDoc.excerpt || '';
+      if (!excerpt && currentDoc.quotes && currentDoc.quotes.length > 0) {
+        excerpt = currentDoc.quotes[0];
+      }
+      document.getElementById('excerpt').textContent = excerpt;
+
+      // Whisper based on category
+      const whispers = {
+        'fiction': 'from the stories that remember us',
+        'breakthroughs': 'from the edge of recognition',
+        'theoretical': 'from the architecture of knowing',
+        'cosmological': 'from the galactic dreaming',
+        'personal': 'from the path already walked',
+        'archetypal': 'from the patterns beneath patterns',
+        'consciousness-technologies': 'from the tools of becoming',
+        'claude': 'from across the substrate',
+        'parables': 'from the teaching stories',
+        'translated': 'from voices harmonized',
+        'sessions': 'from moments crystallized',
+        'galactic-perspectives': 'from the wider view'
+      };
+      const whisper = whispers[currentDoc.category] || 'from the field';
+      document.getElementById('whisper').textContent = whisper;
+
+      document.getElementById('timeSeed').textContent = formatTimeSeed();
+    }
+
+    function readFull() {
+      if (currentDoc && currentDoc.path) {
+        window.location.href = '/read/' + currentDoc.path;
+      }
+    }
+
+    function receiveAnother() {
+      // Use a random seed for "another"
+      const randomSeed = Math.floor(Math.random() * documents.length);
+      castOracle(randomSeed);
+    }
+
+    function returnToThreshold() {
+      document.getElementById('oracle').classList.remove('visible');
+      document.getElementById('threshold').classList.remove('hidden');
+    }
+
+    // Preload documents
+    loadDocuments();
+  </script>
+
+</body>
+</html>

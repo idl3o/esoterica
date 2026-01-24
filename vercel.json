@@ -29,6 +29,10 @@
     {
       "src": "synthesis-index.json",
       "use": "@vercel/static"
+    },
+    {
+      "src": "oracle.html",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -43,6 +47,10 @@
     {
       "src": "/constellation-explorer",
       "dest": "/constellation/constellation_explorer_v2.html"
+    },
+    {
+      "src": "/oracle",
+      "dest": "/oracle.html"
     },
     {
       "src": "/library",
