@@ -83,7 +83,8 @@
       "WebFetch(domain:roserambles.org)",
       "WebFetch(domain:en.wikipedia.org)",
       "WebFetch(domain:www.swpc.noaa.gov)",
-      "WebFetch(domain:earthsky.org)"
+      "WebFetch(domain:earthsky.org)",
+      "Bash(timeout:*)"
     ],
     "deny": [],
     "ask": []
