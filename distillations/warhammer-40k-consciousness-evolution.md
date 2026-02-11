@@ -1,4 +1,4 @@
-# WARHAMMER 40K: THE CONSCIOUSNESS EVOLUTION CODEX
+# WARHAMMER 41K: THE CONSCIOUSNESS EVOLUTION CODEX
 ## How the Grim Dark Future Reveals Cosmic Spiritual Truths
 ### The Emperor's Plan, Chaos Gods, and Your Ascension Through the Galaxy's Greatest Teaching Story
 
