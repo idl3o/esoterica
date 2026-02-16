@@ -1,161 +1,244 @@
 <%
-var body = `<div class="hero">
-    <h1>The Global Glyph Geometry Network</h1>
-    <p>Every symbol you write is consciousness technology. Explore the unified field of symbolic encoding across six global mystical systems.</p>
-    <div style="margin-top: 2rem;">
-        <a href="/oracle" class="btn" style="background: rgba(157,78,221,0.2); border-color: #9d4edd; color: #d4a8ff;">Receive from Oracle</a>
-        <a href="/explorer-3d" class="btn" style="margin-left: 1rem;">Explore the Constellation</a>
-        <a href="/library" class="btn" style="margin-left: 1rem;">Browse the Library</a>
-    </div>
-</div>
+// Build body content — zeitgeist HTML is already a string from marked.parse()
+var css = `<style>
+.zeitgeist-header {
+    text-align: center;
+    padding: 3rem 2rem 1rem;
+}
+.zeitgeist-date {
+    font-size: 0.9rem;
+    color: #888;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+.zeitgeist-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #00d4ff 0%, #9d4edd 50%, #00ff88 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.zeitgeist-subtitle {
+    color: #888;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+.zeitgeist-tabs {
+    display: flex;
+    gap: 0;
+    max-width: 900px;
+    margin: 2rem auto 0;
+    padding: 0 2rem;
+    border-bottom: 2px solid rgba(0, 212, 255, 0.2);
+}
+.zeitgeist-tab {
+    padding: 1rem 2rem;
+    background: transparent;
+    border: none;
+    color: #666;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-bottom: 3px solid transparent;
+    font-family: inherit;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+.zeitgeist-tab.active {
+    color: #00d4ff;
+    border-bottom-color: #00d4ff;
+}
+.zeitgeist-tab:hover:not(.active) {
+    color: #aaa;
+}
+.zeitgeist-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.zeitgeist-panel {
+    display: none;
+}
+.zeitgeist-panel.active {
+    display: block;
+}
+.zeitgeist-content h1 {
+    display: none;
+}
+.zeitgeist-content h2 {
+    color: #00d4ff;
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(0, 212, 255, 0.2);
+}
+.zeitgeist-content h3 {
+    color: #9d4edd;
+    font-size: 1.2rem;
+    margin-top: 1.8rem;
+    margin-bottom: 0.75rem;
+}
+.zeitgeist-content p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+.zeitgeist-content ul, .zeitgeist-content ol {
+    margin: 1rem 0 1rem 1.5rem;
+    line-height: 1.8;
+}
+.zeitgeist-content li {
+    margin-bottom: 0.75rem;
+}
+.zeitgeist-content strong {
+    color: #00ff88;
+}
+.zeitgeist-content em {
+    color: #c4a0e8;
+}
+.zeitgeist-content hr {
+    border: none;
+    border-top: 2px solid rgba(0, 212, 255, 0.15);
+    margin: 2.5rem 0;
+}
+.zeitgeist-content blockquote {
+    border-left: 3px solid #9d4edd;
+    background: rgba(157, 78, 221, 0.05);
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #aaa;
+}
+.zeitgeist-content a {
+    color: #00d4ff;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.3);
+}
+.zeitgeist-content a:hover {
+    color: #00ff88;
+    border-bottom-color: #00ff88;
+}
+.zeitgeist-nav {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+.zeitgeist-nav .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+.zeitgeist-nav .card {
+    background: rgba(5, 5, 15, 0.8);
+    border: 2px solid rgba(0, 212, 255, 0.2);
+    border-radius: 10px;
+    padding: 1.5rem;
+    backdrop-filter: blur(15px);
+    transition: all 0.3s;
+}
+.zeitgeist-nav .card:hover {
+    border-color: rgba(0, 212, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0, 212, 255, 0.15);
+}
+.zeitgeist-nav .card h3 {
+    color: #00d4ff;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+.zeitgeist-nav .card p {
+    color: #888;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+.zeitgeist-nav .card a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.zeitgeist-nav .card a:hover {
+    color: #00ff88;
+}
+@media (max-width: 768px) {
+    .zeitgeist-title { font-size: 1.8rem; }
+    .zeitgeist-tabs { padding: 0 1rem; }
+    .zeitgeist-tab { padding: 0.75rem 1.25rem; font-size: 0.9rem; }
+    .zeitgeist-content { padding: 1.5rem 1rem; }
+}
+</style>`;
 
-<div class="container">
-    <div class="card">
-        <h2>✨ The Recognition</h2>
-        <p>
-            Every time you write, you are drawing sacred geometry yantras, invoking numerical frequencies,
-            activating archetypal consciousness principles, and performing ancient mystical rituals.
-        </p>
-        <p style="margin-top: 1rem; font-weight: bold; color: #00ff88;">
-            This is not metaphor. This is literal.
-        </p>
-        <p style="margin-top: 1rem;">
-            Billions of humans practice continuous consciousness invocation daily through literacy
-            <strong>without knowing it</strong>. The mundane reveals itself as magical through recognition.
-        </p>
-    </div>
-
-    <h2 style="text-align: center; margin: 3rem 0 2rem; color: #00d4ff; font-size: 2rem;">
-        Six Global Encoding Systems
-    </h2>
-
+var navCards = `
+<div class="zeitgeist-nav">
     <div class="grid">
         <div class="card">
-            <h3 style="color: #00ff88;">1. Arabic Numerals (0-9)</h3>
-            <p>Every number = sacred geometry yantra</p>
-            <ul style="margin-top: 1rem; padding-left: 1.5rem;">
-                <li><code>0</code> → Circle (void/infinite potential)</li>
-                <li><code>1</code> → Vertical line (unity/I AM)</li>
-                <li><code>8</code> → Infinity (∞ eternal octave)</li>
-            </ul>
-            <a href="/systems#numerical" style="color: #00d4ff; margin-top: 1rem; display: inline-block;">Explore Numerals →</a>
+            <h3>Fiction Bridges</h3>
+            <p>Enter through the story you love. Consciousness technology extracted from narrative.</p>
+            <a href="/bridges">Explore Bridges &rarr;</a>
         </div>
-
         <div class="card">
-            <h3 style="color: #00ff88;">2. Latin Alphabet</h3>
-            <p>Archetypal letter-geometries</p>
-            <ul style="margin-top: 1rem; padding-left: 1.5rem;">
-                <li><code>A</code> → Pyramid (ascension)</li>
-                <li><code>O</code> → Circle (wholeness)</li>
-                <li><code>T</code> → Cross (sacrifice)</li>
-            </ul>
-            <a href="/systems#alphabetic" style="color: #00d4ff; margin-top: 1rem; display: inline-block;">Explore Letters →</a>
+            <h3>The Oracle</h3>
+            <p>You already know. Receive what you're remembering today.</p>
+            <a href="/oracle">Enter &rarr;</a>
         </div>
-
         <div class="card">
-            <h3 style="color: #00ff88;">3. Aramaic/Hebrew</h3>
-            <p>Letters ARE numbers (gematria)</p>
-            <ul style="margin-top: 1rem; padding-left: 1.5rem;">
-                <li><code>א Aleph</code> = 1 (divine unity)</li>
-                <li><code>ת Taw</code> = 400 (omega completion)</li>
-                <li>Jesus's actual language</li>
-            </ul>
-            <a href="/systems#aramaic" style="color: #00d4ff; margin-top: 1rem; display: inline-block;">Explore Aramaic →</a>
-        </div>
-
-        <div class="card">
-            <h3 style="color: #00ff88;">4. Persian/Farsi</h3>
-            <p>Sufi mystical mathematics</p>
-            <ul style="margin-top: 1rem; padding-left: 1.5rem;">
-                <li>Rumi & Hafez poetry-as-math</li>
-                <li>Whirling = embodied geometry</li>
-                <li>Algebra as spiritual healing</li>
-            </ul>
-            <a href="/systems#persian" style="color: #00d4ff; margin-top: 1rem; display: inline-block;">Explore Persian →</a>
-        </div>
-
-        <div class="card">
-            <h3 style="color: #00ff88;">5. Elder Futhark Runes</h3>
-            <p>Norse consciousness invocation glyphs</p>
-            <ul style="margin-top: 1rem; padding-left: 1.5rem;">
-                <li><code>ᚨ Ansuz</code> → Odin's breath</li>
-                <li><code>ᛞ Dagaz</code> → Breakthrough</li>
-                <li>Galdr = sound magic</li>
-            </ul>
-            <a href="/systems#runes" style="color: #00d4ff; margin-top: 1rem; display: inline-block;">Explore Runes →</a>
-        </div>
-
-        <div class="card">
-            <h3 style="color: #00ff88;">6. Sacred Geometry</h3>
-            <p>Universal consciousness forms</p>
-            <ul style="margin-top: 1rem; padding-left: 1.5rem;">
-                <li>Circle → Wholeness/infinity</li>
-                <li>Triangle → Trinity/fire</li>
-                <li>Cross → Spirit-matter intersection</li>
-            </ul>
-            <a href="/systems#geometry" style="color: #00d4ff; margin-top: 1rem; display: inline-block;">Explore Geometry →</a>
+            <h3>The Constellation</h3>
+            <p>` + nodeCount + ` nodes mapping the consciousness technology network in 3D.</p>
+            <a href="/explorer-3d">Explore &rarr;</a>
         </div>
     </div>
+</div>`;
 
-    <div class="card" style="margin-top: 3rem; text-align: center;">
-        <h2 style="margin-bottom: 1.5rem;">The Constellation</h2>
-        <p style="font-size: 1.2rem; margin-bottom: 1rem;">
-            <strong style="color: #00ff88;">` + nodeCount + ` nodes</strong> mapping the complete global consciousness encoding network
-        </p>
-        <p style="margin-bottom: 2rem;">
-            Interactive visualization with monad clustering physics showing how consciousness technologies
-            organize themselves through T-connection dynamics and relational density.
-        </p>
-        <a href="/explorer-3d" class="btn" style="font-size: 1.1rem;">Launch 3D Explorer</a>
-        <a href="/explorer" class="btn" style="font-size: 0.9rem; margin-left: 0.5rem; background: rgba(100,100,100,0.2); border-color: #666; color: #888;">2D Version</a>
-    </div>
+var tabScript = `
+<script>
+function switchTab(tab) {
+    document.querySelectorAll('.zeitgeist-tab').forEach(function(t) { t.classList.remove('active'); });
+    document.querySelectorAll('.zeitgeist-panel').forEach(function(p) { p.classList.remove('active'); });
+    document.querySelector('[data-tab="' + tab + '"]').classList.add('active');
+    document.getElementById('panel-' + tab).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+<\/script>`;
 
-    <div style="margin-top: 3rem;">
-        <h2 style="text-align: center; margin-bottom: 2rem; color: #00d4ff; font-size: 2rem;">
-            Tools & Resources
-        </h2>
+var body;
 
-        <div class="grid">
-            <div class="card">
-                <h3 style="color: #9d4edd;">◇ Oracle</h3>
-                <p>You already know. Receive what you're remembering today. The constellation as oracle, not encyclopedia.</p>
-                <a href="/oracle" class="btn" style="margin-top: 1rem;">Enter</a>
-            </div>
+if (zeitgeist && zeitgeist.zeit) {
+    var geistPanel = zeitgeist.geist
+        ? '<div id="panel-geist" class="zeitgeist-panel">' + zeitgeist.geist + '</div>'
+        : '';
 
-            <div class="card">
-                <h3 style="color: #9d4edd;">🔍 Search</h3>
-                <p>Find nodes, connections, and consciousness technologies across the entire network.</p>
-                <a href="/search" class="btn" style="margin-top: 1rem;">Search Constellation</a>
-            </div>
-
-            <div class="card">
-                <h3 style="color: #9d4edd;">🧮 Calculator</h3>
-                <p>Calculate gematria values, analyze word frequencies, decode numerical consciousness.</p>
-                <a href="/calculator" class="btn" style="margin-top: 1rem;">Open Calculator</a>
-            </div>
-
-            <div class="card">
-                <h3 style="color: #9d4edd;">📚 Library</h3>
-                <p>214 synthesis documents covering consciousness technologies, fiction bridges, and awakening guides.</p>
-                <a href="/library" class="btn" style="margin-top: 1rem;">Browse Library</a>
-            </div>
+    body = css +
+        '<div class="zeitgeist-header">' +
+        '    <div class="zeitgeist-date">' + zeitgeist.displayDate + '</div>' +
+        '    <h1 class="zeitgeist-title">What Is Actually Happening</h1>' +
+        '    <p class="zeitgeist-subtitle">Reality, read through signal and silence</p>' +
+        '</div>' +
+        '<div class="zeitgeist-tabs">' +
+        '    <button class="zeitgeist-tab active" data-tab="zeit" onclick="switchTab(\'zeit\')">The Zeit</button>' +
+        (zeitgeist.geist ? '    <button class="zeitgeist-tab" data-tab="geist" onclick="switchTab(\'geist\')">The Geist</button>' : '') +
+        '    <a href="/zeitgeist" style="margin-left: auto; padding: 1rem; color: #666; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; align-self: center;">Archive &rarr;</a>' +
+        '</div>' +
+        '<div class="zeitgeist-content">' +
+        '    <div id="panel-zeit" class="zeitgeist-panel active">' + zeitgeist.zeit + '</div>' +
+        geistPanel +
+        '</div>' +
+        navCards +
+        tabScript;
+} else {
+    body = `
+    <div class="hero">
+        <h1>Esoterica</h1>
+        <p>Consciousness technology. Fiction bridges. A living reading of reality.</p>
+        <div style="margin-top: 2rem;">
+            <a href="/bridges" class="btn">Fiction Bridges</a>
+            <a href="/oracle" class="btn" style="margin-left: 1rem;">Oracle</a>
+            <a href="/explorer-3d" class="btn" style="margin-left: 1rem;">Constellation</a>
         </div>
-    </div>
-
-    <div class="card" style="margin-top: 3rem; background: rgba(157, 78, 221, 0.05); border-color: rgba(157, 78, 221, 0.5);">
-        <h2 style="color: #9d4edd; text-align: center; margin-bottom: 1.5rem;">
-            The Big Recognition
-        </h2>
-        <p style="font-size: 1.1rem; text-align: center; font-style: italic; color: #e0e0e0;">
-            "You thought you were learning to read.<br>
-            You were being initiated into consciousness invocation magic."
-        </p>
-        <p style="margin-top: 1.5rem; text-align: center;">
-            Every human writing system = geometric-numerical-consciousness invocation technology.<br>
-            <strong style="color: #00ff88;">Hidden in absolute plain sight. Now mapped.</strong>
-        </p>
-    </div>
-</div>
-`;
+    </div>`;
+}
 %>
 <%- include('layout', { title: title, body: body }) %>

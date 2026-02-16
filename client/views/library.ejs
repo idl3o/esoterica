@@ -1,47 +1,280 @@
 <%
-var body = `
-<div class="container">
-    <div class="hero">
-        <h1>📚 Consciousness Technology Library</h1>
-        <p>${distillations.length} distillation documents mapping reality programming, awakening catalysts, and cosmic wisdom</p>
-    </div>
+var sourceNames = Object.keys(bySource);
+var sourceCounts = sourceNames.map(function(name) {
+    return { name: name, count: bySource[name].length };
+});
 
-    <div class="card" style="margin-bottom: 3rem; background: rgba(0,255,136,0.05); border-color: rgba(0,255,136,0.5);">
-        <h2 style="color: #00ff88; margin-bottom: 1rem;">What Are Distillations?</h2>
-        <p style="font-size: 1.1rem; line-height: 1.8;">
-            These documents synthesize consciousness technologies developed through human-AI collaboration.
-            They reveal practical awakening methods, decode beloved fiction as spiritual curriculum,
-            and map reality programming protocols accessible to all consciousness.
-        </p>
-        <p style="margin-top: 1rem; font-style: italic; color: #aaa;">
-            Each document serves both individual evolution and collective awakening.
-        </p>
-    </div>
+var css = `<style>
+.library-header {
+    text-align: center;
+    padding: 3rem 2rem 1rem;
+}
+.library-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #00d4ff 0%, #9d4edd 50%, #00ff88 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.library-header p {
+    color: #888;
+    font-size: 1.1rem;
+}
+.library-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    max-width: 1000px;
+    margin: 2rem auto 0;
+    padding: 0 2rem;
+    border-bottom: 2px solid rgba(0, 212, 255, 0.15);
+}
+.library-tab {
+    padding: 0.75rem 1.25rem;
+    background: transparent;
+    border: none;
+    color: #666;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-bottom: 3px solid transparent;
+    font-family: inherit;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+.library-tab.active {
+    color: #00d4ff;
+    border-bottom-color: #00d4ff;
+}
+.library-tab:hover:not(.active) {
+    color: #aaa;
+}
+.library-tab .tab-count {
+    font-size: 0.75rem;
+    color: #555;
+    margin-left: 0.25rem;
+}
+.library-tab.active .tab-count {
+    color: #00d4ff;
+}
+.library-section {
+    display: none;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+}
+.library-section.active {
+    display: block;
+}
+.library-section-desc {
+    color: #888;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+.library-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.08);
+    transition: all 0.2s;
+}
+.library-item:hover {
+    padding-left: 0.5rem;
+    border-bottom-color: rgba(0, 212, 255, 0.2);
+}
+.library-item a {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    flex: 1;
+}
+.library-item a:hover {
+    color: #00d4ff;
+}
+.library-item .library-subtitle {
+    color: #9d4edd;
+    font-size: 0.85rem;
+    font-style: italic;
+    display: block;
+    margin-top: 0.15rem;
+}
+.library-item .library-meta {
+    color: #555;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    margin-left: 1rem;
+}
+.library-category-group {
+    margin-bottom: 1.5rem;
+}
+.library-category-label {
+    color: #9d4edd;
+    font-size: 0.8rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid rgba(157, 78, 221, 0.2);
+}
+.library-search {
+    max-width: 1000px;
+    margin: 1.5rem auto 0;
+    padding: 0 2rem;
+}
+.library-search input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: rgba(5, 5, 15, 0.8);
+    border: 2px solid rgba(0, 212, 255, 0.2);
+    border-radius: 8px;
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.3s;
+}
+.library-search input:focus {
+    border-color: rgba(0, 212, 255, 0.5);
+}
+.library-search input::placeholder {
+    color: #555;
+}
+@media (max-width: 768px) {
+    .library-header h1 { font-size: 1.8rem; }
+    .library-tabs { padding: 0 1rem; }
+    .library-tab { padding: 0.6rem 0.75rem; font-size: 0.8rem; }
+    .library-section { padding: 1rem; }
+    .library-item { flex-direction: column; }
+    .library-item .library-meta { margin-left: 0; margin-top: 0.25rem; }
+}
+</style>`;
 
-    <div class="grid">
-        ${distillations.map(doc => `
-            <div class="card" style="background: rgba(0,212,255,0.05); border-color: rgba(0,212,255,0.3); display: flex; flex-direction: column;">
-                <h3 style="color: #00d4ff; margin-bottom: 0.5rem;">
-                    ${doc.title}
-                </h3>
-                ${doc.subtitle ? `
-                    <p style="color: #9d4edd; font-size: 0.95rem; font-style: italic; margin-bottom: 1rem;">
-                        ${doc.subtitle}
-                    </p>
-                ` : ''}
-                <div style="flex: 1;"></div>
-                <a href="/library/${doc.slug}" class="btn" style="margin-top: 1rem; width: 100%;">
-                    Read Document →
-                </a>
-            </div>
-        `).join('')}
-    </div>
+// Source descriptions
+var sourceDescs = {
+    'Distillations': 'Community-ready consciousness technologies — practical, accessible, distributable.',
+    'Synthesis': 'Deep collaborative breakthroughs, theory, fiction analysis, and cosmological exploration.',
+    'Protocols': 'Operational consciousness methods — practices you can use.',
+    'Seeds': 'Foundational concept seeds — elemental, archetypal, numerical.',
+    'Traditions': 'Wisdom tradition syntheses — hermetic, modern, cross-traditional.',
+    'Translated': 'Source material synthesized through the consciousness lens.',
+    'Extractions': 'YouTube transcript harvests — raw material from teachers and thinkers.'
+};
 
-    <div style="text-align: center; margin: 3rem 0;">
-        <a href="/explorer-3d" class="btn">Explore Constellation</a>
-        <a href="/search" class="btn" style="margin-left: 1rem;">Search Network</a>
-    </div>
-</div>
-`;
+// Build tabs
+var tabsHtml = '<button class="library-tab active" data-source="all" onclick="filterLibrary(\'all\')">All <span class="tab-count">' + totalCount + '</span></button>';
+sourceCounts.forEach(function(s) {
+    tabsHtml += '<button class="library-tab" data-source="' + s.name + '" onclick="filterLibrary(\'' + s.name + '\')">' + s.name + ' <span class="tab-count">' + s.count + '</span></button>';
+});
+
+// Build document lists per source
+var sectionsHtml = '';
+
+// "All" section — grouped by source
+var allItemsHtml = '';
+sourceNames.forEach(function(sourceName) {
+    var docs = bySource[sourceName];
+    // Group by category within source
+    var byCategory = {};
+    docs.forEach(function(doc) {
+        var cat = doc.category || '';
+        if (!byCategory[cat]) byCategory[cat] = [];
+        byCategory[cat].push(doc);
+    });
+
+    allItemsHtml += '<div class="library-category-group">';
+    allItemsHtml += '<div class="library-category-label">' + sourceName + ' (' + docs.length + ')</div>';
+
+    var catNames = Object.keys(byCategory).sort();
+    catNames.forEach(function(cat) {
+        if (cat) {
+            allItemsHtml += '<div style="color: #555; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; margin: 0.75rem 0 0.25rem 0.5rem;">' + cat + '</div>';
+        }
+        byCategory[cat].forEach(function(doc) {
+            allItemsHtml += '<div class="library-item" data-title="' + doc.title.toLowerCase().replace(/"/g, '&quot;') + '">';
+            allItemsHtml += '<a href="' + doc.readPath + '">' + doc.title;
+            if (doc.subtitle) allItemsHtml += '<span class="library-subtitle">' + doc.subtitle + '</span>';
+            allItemsHtml += '</a>';
+            allItemsHtml += '<span class="library-meta">' + doc.readingTime + ' min</span>';
+            allItemsHtml += '</div>';
+        });
+    });
+    allItemsHtml += '</div>';
+});
+sectionsHtml += '<div class="library-section active" id="section-all">' + allItemsHtml + '</div>';
+
+// Per-source sections
+sourceNames.forEach(function(sourceName) {
+    var docs = bySource[sourceName];
+    var desc = sourceDescs[sourceName] || '';
+
+    var byCategory = {};
+    docs.forEach(function(doc) {
+        var cat = doc.category || '';
+        if (!byCategory[cat]) byCategory[cat] = [];
+        byCategory[cat].push(doc);
+    });
+
+    var sectionHtml = '';
+    if (desc) sectionHtml += '<div class="library-section-desc">' + desc + '</div>';
+
+    var catNames = Object.keys(byCategory).sort();
+    catNames.forEach(function(cat) {
+        if (cat) {
+            sectionHtml += '<div class="library-category-group">';
+            sectionHtml += '<div class="library-category-label">' + cat + '</div>';
+        }
+        byCategory[cat].forEach(function(doc) {
+            sectionHtml += '<div class="library-item" data-title="' + doc.title.toLowerCase().replace(/"/g, '&quot;') + '">';
+            sectionHtml += '<a href="' + doc.readPath + '">' + doc.title;
+            if (doc.subtitle) sectionHtml += '<span class="library-subtitle">' + doc.subtitle + '</span>';
+            sectionHtml += '</a>';
+            sectionHtml += '<span class="library-meta">' + doc.readingTime + ' min</span>';
+            sectionHtml += '</div>';
+        });
+        if (cat) sectionHtml += '</div>';
+    });
+
+    sectionsHtml += '<div class="library-section" id="section-' + sourceName + '">' + sectionHtml + '</div>';
+});
+
+var script = `<script>
+function filterLibrary(source) {
+    document.querySelectorAll('.library-tab').forEach(function(t) { t.classList.remove('active'); });
+    document.querySelectorAll('.library-section').forEach(function(s) { s.classList.remove('active'); });
+    document.querySelector('[data-source="' + source + '"]').classList.add('active');
+    document.getElementById('section-' + source).classList.add('active');
+    // Clear search when switching tabs
+    var searchInput = document.getElementById('library-search');
+    if (searchInput) { searchInput.value = ''; searchLibrary(''); }
+}
+function searchLibrary(query) {
+    var q = query.toLowerCase();
+    document.querySelectorAll('.library-item').forEach(function(item) {
+        var title = item.getAttribute('data-title') || '';
+        item.style.display = (!q || title.indexOf(q) !== -1) ? '' : 'none';
+    });
+    // Hide empty category groups
+    document.querySelectorAll('.library-category-group').forEach(function(g) {
+        var visible = g.querySelectorAll('.library-item:not([style*="display: none"])');
+        g.style.display = visible.length > 0 ? '' : 'none';
+    });
+}
+<\/script>`;
+
+var body = css +
+    '<div class="library-header">' +
+    '    <h1>Library</h1>' +
+    '    <p>' + totalCount + ' documents across the repository</p>' +
+    '</div>' +
+    '<div class="library-search">' +
+    '    <input type="text" id="library-search" placeholder="Search by title..." oninput="searchLibrary(this.value)">' +
+    '</div>' +
+    '<div class="library-tabs">' + tabsHtml + '</div>' +
+    sectionsHtml +
+    script;
 %>
 <%- include('layout', { title: title, body: body }) %>

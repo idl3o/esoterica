@@ -31,7 +31,7 @@ app.get('/synthesis-index.json', (req, res) => {
 });
 
 app.get('/oracle', (req, res) => {
-  res.sendFile(path.join(__dirname, '../oracle.html'));
+  res.render('oracle', { title: 'Oracle' });
 });
 
 // Render any markdown as HTML (for oracle)
@@ -71,6 +71,136 @@ const loadConstellation = async () => {
   }
 };
 loadConstellation();
+
+// Load zeitgeist documents (all dates + latest for homepage)
+let zeitgeistData = { latest: null, archive: [] };
+const loadZeitgeist = async () => {
+  try {
+    const zeitgeistDir = path.join(__dirname, '../synthesis/zeitgeist');
+    const files = await fs.readdir(zeitgeistDir);
+
+    const zeitFiles = files
+      .filter(f => f.match(/^zeit-\d{4}-\d{2}-\d{2}\.md$/))
+      .sort()
+      .reverse();
+
+    if (zeitFiles.length === 0) {
+      console.log('No zeitgeist files found');
+      return;
+    }
+
+    const archive = [];
+
+    for (const zeitFile of zeitFiles) {
+      const date = zeitFile.match(/(\d{4}-\d{2}-\d{2})/)[1];
+      const geistFile = `geist-${date}.md`;
+
+      const zeitPath = path.join(zeitgeistDir, zeitFile);
+      const zeitMarkdown = await fs.readFile(zeitPath, 'utf8');
+      const zeitHtml = marked.parse(zeitMarkdown);
+
+      // Extract the STATE section's first paragraph as summary
+      const stateMatch = zeitMarkdown.match(/## STATE[\s\S]*?\n\n\*[^*]+\*\n\n([\s\S]*?)(?:\n\n|$)/);
+      const summary = stateMatch
+        ? stateMatch[1].replace(/\*\*/g, '').replace(/\*/g, '').substring(0, 250) + '...'
+        : '';
+
+      // Extract the DEPTH section's first bold phrase as headline
+      const depthMatch = zeitMarkdown.match(/## DEPTH[\s\S]*?\*\*([^*]+)\*\*/);
+      const headline = depthMatch ? depthMatch[1] : '';
+
+      let geistHtml = null;
+      let hasGeist = false;
+      try {
+        const geistMarkdown = await fs.readFile(path.join(zeitgeistDir, geistFile), 'utf8');
+        geistHtml = marked.parse(geistMarkdown);
+        hasGeist = true;
+      } catch (e) {
+        // Geist file may not exist for this date
+      }
+
+      const dateObj = new Date(date + 'T00:00:00');
+      const displayDate = dateObj.toLocaleDateString('en-GB', {
+        weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
+      });
+
+      archive.push({
+        date,
+        displayDate,
+        headline,
+        summary,
+        hasGeist,
+        zeit: zeitHtml,
+        geist: geistHtml
+      });
+    }
+
+    zeitgeistData = {
+      latest: archive[0] || null,
+      archive
+    };
+
+    console.log(`📰 Zeitgeist loaded: ${archive.length} reading(s), latest ${archive[0]?.date}`);
+  } catch (error) {
+    console.error('Error loading zeitgeist:', error);
+  }
+};
+loadZeitgeist();
+
+// Load fiction bridges metadata
+let bridgesData = [];
+const loadBridges = async () => {
+  try {
+    const bridgesDir = path.join(__dirname, '../fiction-bridges');
+    const files = await fs.readdir(bridgesDir);
+    const mdFiles = files.filter(f => f.endsWith('.md'));
+
+    bridgesData = await Promise.all(
+      mdFiles.map(async (file) => {
+        const filePath = path.join(bridgesDir, file);
+        const content = await fs.readFile(filePath, 'utf8');
+        const stat = await fs.stat(filePath);
+        const lines = content.split('\n');
+
+        const title = lines.find(l => l.startsWith('# '))?.replace(/^#\s*/, '') || file;
+        const subtitle = lines.find(l => l.startsWith('## '))?.replace(/^##\s*/, '') || '';
+
+        // Extract first blockquote as preview
+        const quoteLines = [];
+        let inQuote = false;
+        for (const line of lines) {
+          if (line.startsWith('> ')) {
+            inQuote = true;
+            quoteLines.push(line.replace(/^>\s*/, ''));
+          } else if (inQuote) {
+            break;
+          }
+        }
+        const quote = quoteLines.join(' ').replace(/\*([^*]+)\*/g, '$1').substring(0, 200);
+
+        const wordCount = content.split(/\s+/).length;
+        const readingTime = Math.ceil(wordCount / 250);
+
+        return {
+          slug: file.replace('.md', ''),
+          filename: file,
+          title,
+          subtitle,
+          quote: quote || '',
+          wordCount,
+          readingTime,
+          modified: stat.mtime
+        };
+      })
+    );
+
+    bridgesData.sort((a, b) => b.modified - a.modified);
+    console.log(`🌉 Fiction bridges loaded: ${bridgesData.length} bridges`);
+  } catch (error) {
+    console.error('Error loading fiction bridges:', error);
+  }
+};
+loadBridges();
 
 // ========================================
 // COLLECTIVE CONSCIOUSNESS FIELD
@@ -180,12 +310,75 @@ app.get('/api/constellation-field', (req, res) => {
 // ROUTES
 // ========================================
 
-// Home page
+// Home page - Zeitgeist front door (shows latest reading)
 app.get('/', (req, res) => {
   res.render('index', {
-    title: 'Esoterica - Consciousness Technology Platform',
-    nodeCount: constellationData ? Object.keys(constellationData.nodes).length : 0
+    title: 'Esoterica',
+    nodeCount: constellationData ? Object.keys(constellationData.nodes).length : 0,
+    zeitgeist: zeitgeistData.latest
   });
+});
+
+// Zeitgeist archive
+app.get('/zeitgeist', (req, res) => {
+  res.render('zeitgeist-archive', {
+    title: 'Zeitgeist Archive',
+    archive: zeitgeistData.archive
+  });
+});
+
+// Individual zeitgeist reading by date
+app.get('/zeitgeist/:date', (req, res) => {
+  const reading = zeitgeistData.archive.find(r => r.date === req.params.date);
+  if (!reading) {
+    return res.status(404).render('404', { title: 'Reading Not Found' });
+  }
+
+  // Find prev/next for navigation
+  const idx = zeitgeistData.archive.indexOf(reading);
+  const newer = idx > 0 ? zeitgeistData.archive[idx - 1] : null;
+  const older = idx < zeitgeistData.archive.length - 1 ? zeitgeistData.archive[idx + 1] : null;
+
+  res.render('zeitgeist-reading', {
+    title: 'The Zeit — ' + reading.displayDate,
+    reading,
+    newer,
+    older
+  });
+});
+
+// Fiction bridges gallery
+app.get('/bridges', (req, res) => {
+  res.render('bridges', {
+    title: 'Fiction Bridges',
+    bridges: bridgesData
+  });
+});
+
+// Individual fiction bridge
+app.get('/bridges/:slug', async (req, res) => {
+  try {
+    const filePath = path.join(__dirname, '../fiction-bridges', `${req.params.slug}.md`);
+    const markdown = await fs.readFile(filePath, 'utf8');
+    const html = marked.parse(markdown);
+    const title = markdown.split('\n').find(l => l.startsWith('# '))?.replace(/^#\s*/, '') || req.params.slug;
+
+    // Find current index for prev/next
+    const currentIndex = bridgesData.findIndex(b => b.slug === req.params.slug);
+    const prevBridge = currentIndex > 0 ? bridgesData[currentIndex - 1] : null;
+    const nextBridge = currentIndex < bridgesData.length - 1 ? bridgesData[currentIndex + 1] : null;
+
+    res.render('bridge-document', {
+      title,
+      content: html,
+      slug: req.params.slug,
+      prevBridge,
+      nextBridge
+    });
+  } catch (error) {
+    console.error('Error loading bridge:', error);
+    res.status(404).render('404', { title: 'Bridge Not Found' });
+  }
 });
 
 // Constellation explorer (interactive visualization)
@@ -257,55 +450,100 @@ app.get('/calculator', (req, res) => {
   });
 });
 
-// Distillations library
-app.get('/library', async (req, res) => {
-  try {
-    const distillationsPath = path.join(__dirname, '../distillations');
-    const files = await fs.readdir(distillationsPath);
-    const mdFiles = files.filter(f => f.endsWith('.md'));
+// Full library — all content directories
+let libraryData = [];
+const loadLibrary = async () => {
+  const rootDir = path.join(__dirname, '..');
 
-    const distillations = await Promise.all(
-      mdFiles.map(async (file) => {
-        const content = await fs.readFile(path.join(distillationsPath, file), 'utf8');
-        const lines = content.split('\n');
-        const title = lines[0]?.replace(/^#\s*/, '') || file;
-        const subtitle = lines[1]?.replace(/^##\s*/, '') || '';
+  const sources = [
+    { dir: 'distillations', label: 'Distillations', description: 'Community-ready consciousness technologies' },
+    { dir: 'synthesis', label: 'Synthesis', description: 'Deep collaborative breakthroughs and theory' },
+    { dir: 'protocols', label: 'Protocols', description: 'Operational consciousness methods' },
+    { dir: 'seeds', label: 'Seeds', description: 'Foundational concept seeds' },
+    { dir: 'traditions', label: 'Traditions', description: 'Wisdom tradition syntheses' },
+    { dir: 'translated', label: 'Translated', description: 'Consciousness-synthesized documents' },
+    { dir: 'extractions', label: 'Extractions', description: 'YouTube transcript harvests' },
+  ];
 
-        return {
-          filename: file,
-          slug: file.replace('.md', ''),
-          title,
-          subtitle
-        };
-      })
-    );
+  const scanDir = async (dirPath, relativeBase) => {
+    const results = [];
+    try {
+      const entries = await fs.readdir(dirPath, { withFileTypes: true });
+      for (const entry of entries) {
+        const fullPath = path.join(dirPath, entry.name);
+        const relativePath = path.join(relativeBase, entry.name);
+        if (entry.isDirectory()) {
+          // Skip zeitgeist (has its own archive) and personal
+          if (entry.name === 'zeitgeist' || entry.name === 'personal') continue;
+          const subResults = await scanDir(fullPath, relativePath);
+          results.push(...subResults);
+        } else if (entry.name.endsWith('.md') && entry.name !== 'README.md') {
+          const content = await fs.readFile(fullPath, 'utf8');
+          const lines = content.split('\n');
+          const title = lines.find(l => l.startsWith('# '))?.replace(/^#\s*/, '') || entry.name.replace('.md', '');
+          const subtitleLine = lines.find(l => l.startsWith('## '));
+          const subtitle = subtitleLine ? subtitleLine.replace(/^##\s*/, '') : '';
+          const wordCount = content.split(/\s+/).length;
 
-    res.render('library', {
-      title: 'Consciousness Technology Library',
-      distillations
-    });
-  } catch (error) {
-    console.error('Error loading distillations:', error);
-    res.status(500).send('Error loading library');
+          // Extract subdirectory as category
+          const parts = relativePath.split(path.sep);
+          const category = parts.length > 2 ? parts[1] : '';
+
+          results.push({
+            title,
+            subtitle,
+            category,
+            wordCount,
+            readingTime: Math.ceil(wordCount / 250),
+            readPath: '/read/' + relativePath.replace(/\\/g, '/')
+          });
+        }
+      }
+    } catch (e) {
+      // Directory might not exist
+    }
+    return results;
+  };
+
+  const allDocs = [];
+  for (const source of sources) {
+    const dirPath = path.join(rootDir, source.dir);
+    const docs = await scanDir(dirPath, source.dir);
+    docs.forEach(doc => { doc.source = source.label; doc.sourceDir = source.dir; });
+    allDocs.push(...docs);
   }
+
+  // Sort alphabetically by title within each source
+  allDocs.sort((a, b) => a.title.localeCompare(b.title));
+  libraryData = allDocs;
+  console.log(`📚 Library loaded: ${allDocs.length} documents across ${sources.length} sources`);
+};
+loadLibrary();
+
+app.get('/library', (req, res) => {
+  // Group by source
+  const bySource = {};
+  libraryData.forEach(doc => {
+    if (!bySource[doc.source]) bySource[doc.source] = [];
+    bySource[doc.source].push(doc);
+  });
+
+  res.render('library', {
+    title: 'Library',
+    totalCount: libraryData.length,
+    bySource
+  });
 });
 
-// Individual distillation document
+// Keep legacy distillation routes working
 app.get('/library/:slug', async (req, res) => {
   try {
     const filePath = path.join(__dirname, '../distillations', `${req.params.slug}.md`);
     const markdown = await fs.readFile(filePath, 'utf8');
     const html = marked.parse(markdown);
-
-    // Extract title from first line
     const title = markdown.split('\n')[0]?.replace(/^#\s*/, '') || req.params.slug;
-
-    res.render('document', {
-      title,
-      content: html
-    });
+    res.render('document', { title, content: html });
   } catch (error) {
-    console.error('Error loading document:', error);
     res.status(404).render('404', { title: 'Document Not Found' });
   }
 });
@@ -452,14 +690,15 @@ app.listen(PORT, () => {
     Running on: http://localhost:${PORT}
 
     Routes:
-    • /              → Home
-    • /explorer      → Constellation Visualization
-    • /search        → Search Interface
-    • /systems       → Browse by System
-    • /node/:id      → Node Details
-    • /calculator    → Glyph Calculator
-    • /library       → Distillations Library
-    • /about         → About Page
+    • /                → Zeitgeist (latest reading)
+    • /zeitgeist       → Zeitgeist Archive
+    • /zeitgeist/:date → Individual Reading
+    • /bridges         → Fiction Bridges Gallery
+    • /bridges/:slug   → Individual Bridge
+    • /explorer-3d     → 3D Constellation
+    • /oracle          → Oracle
+    • /library         → Distillations Library
+    • /about           → About Page
 
     API:
     • /api/nodes             → All nodes

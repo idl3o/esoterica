@@ -23,6 +23,30 @@
       "use": "@vercel/static"
     },
     {
+      "src": "protocols/**/*.md",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "seeds/**/*.md",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "traditions/**/*.md",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "translated/**/*.md",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "extractions/**/*.md",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "fiction-bridges/**",
+      "use": "@vercel/static"
+    },
+    {
       "src": "synthesis-library.html",
       "use": "@vercel/static"
     },
@@ -49,14 +73,6 @@
       "dest": "/constellation/constellation_explorer_v2.html"
     },
     {
-      "src": "/oracle",
-      "dest": "/oracle.html"
-    },
-    {
-      "src": "/library",
-      "dest": "/synthesis-library.html"
-    },
-    {
       "src": "/synthesis-library",
       "dest": "/synthesis-library.html"
     },
@@ -65,20 +81,12 @@
       "dest": "/synthesis-index.json"
     },
     {
-      "src": "/synthesis/(.*)",
-      "dest": "/synthesis/$1"
-    },
-    {
       "src": "/static/(.*)",
       "dest": "/client/public/$1"
     },
     {
       "src": "/constellation/(.*)",
       "dest": "/constellation/$1"
-    },
-    {
-      "src": "/distillations/(.*)",
-      "dest": "/distillations/$1"
     },
     {
       "src": "/(.*)",
