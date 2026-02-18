@@ -135,7 +135,17 @@
       "Bash(__NEW_LINE_51aea51360f9d01d__ echo \"=== Individual reading has back link ===\")",
       "Bash(__NEW_LINE_1c131495fe9de214__ echo \"\")",
       "Bash(__NEW_LINE_b73b11b0253444f7__ echo \"\")",
-      "Bash(__NEW_LINE_54dfcf82ffc4169e__ echo \"\")"
+      "Bash(__NEW_LINE_54dfcf82ffc4169e__ echo \"\")",
+      "Bash(git fetch:*)",
+      "Bash(echo:*)",
+      "Bash(printenv:*)",
+      "Bash(env:*)",
+      "WebFetch(domain:www.rudraksha-ratna.com)",
+      "WebFetch(domain:norse-mythology.org)",
+      "WebFetch(domain:theconversation.com)",
+      "WebFetch(domain:jessicadavidson.co.uk)",
+      "WebFetch(domain:spokenpast.com)",
+      "WebFetch(domain:vikingr.org)"
     ],
     "deny": [],
     "ask": []
