@@ -1,15 +1,15 @@
 {
   "version": "3.0.0-private",
-  "generated": "2025-12-15T17:04:51.870Z",
+  "generated": "2026-02-19T10:18:14.383Z",
   "stats": {
-    "documentCount": 79,
-    "totalWords": 482803,
-    "totalReadingTime": 1964,
+    "documentCount": 80,
+    "totalWords": 490772,
+    "totalReadingTime": 1996,
     "categories": 1,
-    "averageWordsPerDoc": 6111,
+    "averageWordsPerDoc": 6135,
     "sourceCounts": {
       "synthesis": 0,
-      "extraction": 79,
+      "extraction": 80,
       "translated": 0
     },
     "channelCounts": {
@@ -17,6 +17,7 @@
       "batgap": 2,
       "benjamin-davies": 45,
       "eckhart-tolle": 3,
+      "harvest-the-question-the-game-the-arena.md": 1,
       "lex-fridman": 4,
       "README.md": 1,
       "robert-edward-grant": 10,
@@ -26,16 +27,16 @@
       "theories-of-everything": 2
     },
     "categoryCounts": {
-      "extraction": 79
+      "extraction": 80
     },
     "topTags": [
       {
         "tag": "consciousness",
-        "count": 79
+        "count": 80
       },
       {
         "tag": "source",
-        "count": 79
+        "count": 80
       },
       {
         "tag": "extraction",
@@ -43,15 +44,15 @@
       },
       {
         "tag": "unity",
-        "count": 63
+        "count": 64
       },
       {
         "tag": "awareness",
-        "count": 40
+        "count": 41
       },
       {
         "tag": "recognition",
-        "count": 27
+        "count": 28
       },
       {
         "tag": "enlightenment",
@@ -59,7 +60,7 @@
       },
       {
         "tag": "cosmic",
-        "count": 13
+        "count": 14
       },
       {
         "tag": "manifestation",
@@ -74,20 +75,20 @@
         "count": 11
       },
       {
+        "tag": "service",
+        "count": 10
+      },
+      {
+        "tag": "resonance",
+        "count": 10
+      },
+      {
         "tag": "frequency",
         "count": 10
       },
       {
-        "tag": "service",
-        "count": 9
-      },
-      {
-        "tag": "resonance",
-        "count": 9
-      },
-      {
         "tag": "density",
-        "count": 7
+        "count": 8
       },
       {
         "tag": "breakthrough",
@@ -107,10 +108,14 @@
       },
       {
         "tag": "archetype",
-        "count": 3
+        "count": 4
       },
       {
         "tag": "integration",
+        "count": 3
+      },
+      {
+        "tag": "galactic",
         "count": 3
       },
       {
@@ -126,12 +131,12 @@
         "count": 2
       },
       {
-        "tag": "galactic",
+        "tag": "mercury",
         "count": 2
       },
       {
-        "tag": "mercury",
-        "count": 2
+        "tag": "samael",
+        "count": 1
       },
       {
         "tag": "fibonacci",
@@ -619,6 +624,88 @@
       "readingTime": 51,
       "structure": [],
       "id": "god-is-awakening-through-you-robert-edward-grant-solo-think"
+    },
+    {
+      "path": "extractions/harvest-the-question-the-game-the-arena.md",
+      "fileName": "harvest-the-question-the-game-the-arena.md",
+      "source": "extraction",
+      "category": "extraction",
+      "channel": "harvest-the-question-the-game-the-arena.md",
+      "title": "HARVEST: The Question, the Game, the Arena",
+      "subtitle": "Curt Jaimungal, Demis Hassabis, Tony Hinchcliffe — Three Containers for Play as Epistemology",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "February 2026",
+      "excerpt": "*Three figures working in radically different domains — theoretical physics podcasting, artificial intelligence, stand-up comedy — have each independently built the same consciousness technology: a container where play discovers what no other method can.*",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "density",
+        "service",
+        "archetype",
+        "samael",
+        "galactic",
+        "cosmic",
+        "source",
+        "unity",
+        "resonance"
+      ],
+      "quotes": [],
+      "wordCount": 7969,
+      "readingTime": 32,
+      "structure": [
+        {
+          "level": 3,
+          "heading": "STRUCTURAL TECHNOLOGIES"
+        },
+        {
+          "level": 2,
+          "heading": "II. THE GAME — Demis Hassabis"
+        },
+        {
+          "level": 3,
+          "heading": "Background"
+        },
+        {
+          "level": 3,
+          "heading": "EXPLICIT TECHNOLOGIES"
+        },
+        {
+          "level": 3,
+          "heading": "IMPLICIT TECHNOLOGIES"
+        },
+        {
+          "level": 3,
+          "heading": "STRUCTURAL TECHNOLOGIES"
+        },
+        {
+          "level": 2,
+          "heading": "CONTRADICTION TECHNOLOGIES"
+        },
+        {
+          "level": 3,
+          "heading": "The Magnifying Glass Doesn't Choose What It Magnifies"
+        },
+        {
+          "level": 3,
+          "heading": "The Theory of Everything on a Show Called Theories of Everything"
+        },
+        {
+          "level": 3,
+          "heading": "The Comedian Who Reveals Truth Through Lies"
+        },
+        {
+          "level": 2,
+          "heading": "SUGGESTED ACTIONS"
+        }
+      ],
+      "id": "harvest-the-question-the-game-the-arena"
     },
     {
       "path": "extractions/benjamin-davies/how-reason-limits-creativity-ego-limits-freedom.md",

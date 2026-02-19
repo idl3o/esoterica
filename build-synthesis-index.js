@@ -35,6 +35,7 @@ const TRANSLATED_DIR = './translated';
 // Output files
 const PUBLIC_OUTPUT = './synthesis-index.json';
 const PRIVATE_OUTPUT = './extractions-index.json';
+const LIBRARY_OUTPUT = './library-index.json';
 
 // ====================================
 // DOCUMENT PARSING
@@ -510,6 +511,9 @@ function main() {
             printStats(privateIndex, PRIVATE_OUTPUT);
         }
 
+        // Build LIBRARY index (all sources, lightweight metadata for /library page)
+        buildLibraryIndex();
+
         console.log('\n═══════════════════════════════════════════════');
         console.log('  ✅ Index building complete!');
         console.log('═══════════════════════════════════════════════');
@@ -520,9 +524,105 @@ function main() {
     }
 }
 
+// ====================================
+// LIBRARY INDEX (for Vercel deployment)
+// ====================================
+
+/**
+ * Build a lightweight library index for the /library page.
+ * This runs at build time so the serverless function doesn't need
+ * filesystem access to the content directories.
+ */
+function buildLibraryIndex() {
+    console.log('\n═══════════════════════════════════════════════');
+    console.log('  📚 LIBRARY INDEX (all content directories)');
+    console.log('═══════════════════════════════════════════════\n');
+
+    const sources = [
+        { dir: './distillations', label: 'Distillations', sourceDir: 'distillations' },
+        { dir: './synthesis', label: 'Synthesis', sourceDir: 'synthesis' },
+        { dir: './protocols', label: 'Protocols', sourceDir: 'protocols' },
+        { dir: './seeds', label: 'Seeds', sourceDir: 'seeds' },
+        { dir: './traditions', label: 'Traditions', sourceDir: 'traditions' },
+        { dir: './translated', label: 'Translated', sourceDir: 'translated' },
+        { dir: './extractions', label: 'Extractions', sourceDir: 'extractions' },
+    ];
+
+    const allDocs = [];
+
+    for (const source of sources) {
+        if (!fs.existsSync(source.dir)) {
+            console.log(`  ⏭ ${source.label}: directory not found, skipping`);
+            continue;
+        }
+
+        const docs = scanLibraryDir(source.dir, source.sourceDir);
+        docs.forEach(doc => {
+            doc.source = source.label;
+            doc.sourceDir = source.sourceDir;
+        });
+        allDocs.push(...docs);
+        console.log(`  📁 ${source.label}: ${docs.length} documents`);
+    }
+
+    allDocs.sort((a, b) => a.title.localeCompare(b.title));
+
+    fs.writeFileSync(LIBRARY_OUTPUT, JSON.stringify(allDocs, null, 2), 'utf-8');
+    console.log(`\n📚 Library index: ${allDocs.length} documents → ${LIBRARY_OUTPUT}`);
+}
+
+function scanLibraryDir(dirPath, relativeBase) {
+    const results = [];
+
+    let entries;
+    try {
+        entries = fs.readdirSync(dirPath, { withFileTypes: true });
+    } catch (e) {
+        return results;
+    }
+
+    for (const entry of entries) {
+        const fullPath = path.join(dirPath, entry.name);
+        const relativePath = path.join(relativeBase, entry.name);
+
+        if (entry.isDirectory()) {
+            // Skip zeitgeist (has its own archive) and personal
+            if (entry.name === 'zeitgeist' || entry.name === 'personal') continue;
+            const subResults = scanLibraryDir(fullPath, relativePath);
+            results.push(...subResults);
+        } else if (entry.name.endsWith('.md') && entry.name !== 'README.md') {
+            try {
+                const content = fs.readFileSync(fullPath, 'utf8');
+                const lines = content.split('\n').map(l => l.replace(/\r$/, ''));
+                const title = (lines.find(l => l.startsWith('# ')) || '').replace(/^#\s*/, '') || entry.name.replace('.md', '');
+                const subtitleLine = lines.find(l => l.startsWith('## '));
+                const subtitle = subtitleLine ? subtitleLine.replace(/^##\s*/, '') : '';
+                const wordCount = content.split(/\s+/).length;
+
+                // Extract subdirectory as category
+                const parts = relativePath.split(path.sep);
+                const category = parts.length > 2 ? parts[1] : '';
+
+                results.push({
+                    title,
+                    subtitle,
+                    category,
+                    wordCount,
+                    readingTime: Math.ceil(wordCount / 250),
+                    readPath: '/read/' + relativePath.replace(/\\/g, '/')
+                });
+            } catch (e) {
+                console.error(`  ✗ Error reading ${fullPath}: ${e.message}`);
+            }
+        }
+    }
+
+    return results;
+}
+
 // Run if called directly
 if (require.main === module) {
     main();
 }
 
-module.exports = { buildIndex, parseDocument };
+module.exports = { buildIndex, parseDocument, buildLibraryIndex };
