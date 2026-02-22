@@ -83,6 +83,11 @@ var body = `
     color: #9d4edd;
     border: 1px solid rgba(157, 78, 221, 0.3);
 }
+.archive-badge-integrated {
+    background: rgba(0, 255, 136, 0.1);
+    color: #00ff88;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+}
 @media (max-width: 768px) {
     .archive-header h1 { font-size: 1.8rem; }
     .archive-list { padding: 0 1rem; }
@@ -104,8 +109,10 @@ var body = `
         (reading.headline ? '<div class="archive-issue-headline">' + reading.headline + '</div>' : '') +
         (reading.summary ? '<div class="archive-issue-summary">' + reading.summary + '</div>' : '') +
         '<div class="archive-issue-badges">' +
-        '    <span class="archive-badge archive-badge-zeit">zeit</span>' +
-        (reading.hasGeist ? '    <span class="archive-badge archive-badge-geist">geist</span>' : '') +
+        (reading.isIntegrated
+          ? '    <span class="archive-badge archive-badge-integrated">integrated</span>'
+          : '    <span class="archive-badge archive-badge-zeit">zeit</span>' +
+            (reading.hasGeist ? '    <span class="archive-badge archive-badge-geist">geist</span>' : '')) +
         '</div>' +
         '</a>';
   }).join('\\n')

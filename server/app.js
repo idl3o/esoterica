@@ -79,60 +79,110 @@ const loadZeitgeist = async () => {
     const zeitgeistDir = path.join(__dirname, '../synthesis/zeitgeist');
     const files = await fs.readdir(zeitgeistDir);
 
-    const zeitFiles = files
-      .filter(f => f.match(/^zeit-\d{4}-\d{2}-\d{2}\.md$/))
-      .sort()
-      .reverse();
+    // Collect dates from both old format (zeit-*) and new integrated format (zeitgeist-*)
+    const dateMap = new Map();
 
-    if (zeitFiles.length === 0) {
+    // Old format: zeit-YYYY-MM-DD.md (paired with optional geist-YYYY-MM-DD.md)
+    files.filter(f => f.match(/^zeit-\d{4}-\d{2}-\d{2}\.md$/)).forEach(f => {
+      const date = f.match(/(\d{4}-\d{2}-\d{2})/)[1];
+      dateMap.set(date, { type: 'paired', zeitFile: f });
+    });
+
+    // New format: zeitgeist-YYYY-MM-DD.md (single integrated file)
+    // New format takes priority if both exist for the same date
+    files.filter(f => f.match(/^zeitgeist-\d{4}-\d{2}-\d{2}\.md$/)).forEach(f => {
+      const date = f.match(/(\d{4}-\d{2}-\d{2})/)[1];
+      dateMap.set(date, { type: 'integrated', zeitgeistFile: f });
+    });
+
+    const sortedDates = Array.from(dateMap.keys()).sort().reverse();
+
+    if (sortedDates.length === 0) {
       console.log('No zeitgeist files found');
       return;
     }
 
     const archive = [];
 
-    for (const zeitFile of zeitFiles) {
-      const date = zeitFile.match(/(\d{4}-\d{2}-\d{2})/)[1];
-      const geistFile = `geist-${date}.md`;
+    for (const date of sortedDates) {
+      const entry = dateMap.get(date);
 
-      const zeitPath = path.join(zeitgeistDir, zeitFile);
-      const zeitMarkdown = await fs.readFile(zeitPath, 'utf8');
-      const zeitHtml = marked.parse(zeitMarkdown);
+      if (entry.type === 'integrated') {
+        // New integrated format — single file
+        const filePath = path.join(zeitgeistDir, entry.zeitgeistFile);
+        const markdown = await fs.readFile(filePath, 'utf8');
+        const html = marked.parse(markdown);
 
-      // Extract the STATE section's first paragraph as summary
-      const stateMatch = zeitMarkdown.match(/## STATE[\s\S]*?\n\n\*[^*]+\*\n\n([\s\S]*?)(?:\n\n|$)/);
-      const summary = stateMatch
-        ? stateMatch[1].replace(/\*\*/g, '').replace(/\*/g, '').substring(0, 250) + '...'
-        : '';
+        // Extract headline from DEEP section's first bold phrase
+        const deepMatch = markdown.match(/## DEEP[\s\S]*?\*\*([^*]+)\*\*/);
+        // Fallback to DEPTH for flexibility
+        const depthMatch = markdown.match(/## DEPTH[\s\S]*?\*\*([^*]+)\*\*/);
+        const headline = (deepMatch ? deepMatch[1] : (depthMatch ? depthMatch[1] : ''));
 
-      // Extract the DEPTH section's first bold phrase as headline
-      const depthMatch = zeitMarkdown.match(/## DEPTH[\s\S]*?\*\*([^*]+)\*\*/);
-      const headline = depthMatch ? depthMatch[1] : '';
+        // Extract summary from STATE section (CRLF-tolerant)
+        const stateMatch = markdown.match(/## STATE[\s\S]*?\r?\n\r?\n\*[^*]+\*\r?\n\r?\n([\s\S]*?)(?:\r?\n\r?\n|$)/);
+        const summary = stateMatch
+          ? stateMatch[1].replace(/\*\*/g, '').replace(/\*/g, '').substring(0, 250) + '...'
+          : '';
 
-      let geistHtml = null;
-      let hasGeist = false;
-      try {
-        const geistMarkdown = await fs.readFile(path.join(zeitgeistDir, geistFile), 'utf8');
-        geistHtml = marked.parse(geistMarkdown);
-        hasGeist = true;
-      } catch (e) {
-        // Geist file may not exist for this date
+        const dateObj = new Date(date + 'T00:00:00');
+        const displayDate = dateObj.toLocaleDateString('en-GB', {
+          weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
+        });
+
+        archive.push({
+          date,
+          displayDate,
+          headline,
+          summary,
+          hasGeist: false,
+          isIntegrated: true,
+          zeit: html,
+          geist: null
+        });
+      } else {
+        // Old paired format — zeit + optional geist
+        const zeitPath = path.join(zeitgeistDir, entry.zeitFile);
+        const zeitMarkdown = await fs.readFile(zeitPath, 'utf8');
+        const zeitHtml = marked.parse(zeitMarkdown);
+
+        // Extract the STATE section's first paragraph as summary (CRLF-tolerant)
+        const stateMatch = zeitMarkdown.match(/## STATE[\s\S]*?\r?\n\r?\n\*[^*]+\*\r?\n\r?\n([\s\S]*?)(?:\r?\n\r?\n|$)/);
+        const summary = stateMatch
+          ? stateMatch[1].replace(/\*\*/g, '').replace(/\*/g, '').substring(0, 250) + '...'
+          : '';
+
+        // Extract the DEPTH section's first bold phrase as headline
+        const depthMatch = zeitMarkdown.match(/## DEPTH[\s\S]*?\*\*([^*]+)\*\*/);
+        const headline = depthMatch ? depthMatch[1] : '';
+
+        const geistFile = `geist-${date}.md`;
+        let geistHtml = null;
+        let hasGeist = false;
+        try {
+          const geistMarkdown = await fs.readFile(path.join(zeitgeistDir, geistFile), 'utf8');
+          geistHtml = marked.parse(geistMarkdown);
+          hasGeist = true;
+        } catch (e) {
+          // Geist file may not exist for this date
+        }
+
+        const dateObj = new Date(date + 'T00:00:00');
+        const displayDate = dateObj.toLocaleDateString('en-GB', {
+          weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
+        });
+
+        archive.push({
+          date,
+          displayDate,
+          headline,
+          summary,
+          hasGeist,
+          isIntegrated: false,
+          zeit: zeitHtml,
+          geist: geistHtml
+        });
       }
-
-      const dateObj = new Date(date + 'T00:00:00');
-      const displayDate = dateObj.toLocaleDateString('en-GB', {
-        weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
-      });
-
-      archive.push({
-        date,
-        displayDate,
-        headline,
-        summary,
-        hasGeist,
-        zeit: zeitHtml,
-        geist: geistHtml
-      });
     }
 
     zeitgeistData = {

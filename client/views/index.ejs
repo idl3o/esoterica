@@ -207,27 +207,45 @@ function switchTab(tab) {
 var body;
 
 if (zeitgeist && zeitgeist.zeit) {
-    var geistPanel = zeitgeist.geist
-        ? '<div id="panel-geist" class="zeitgeist-panel">' + zeitgeist.geist + '</div>'
-        : '';
+    if (zeitgeist.isIntegrated) {
+        // New integrated format — single reading, no tabs
+        body = css +
+            '<div class="zeitgeist-header">' +
+            '    <div class="zeitgeist-date">' + zeitgeist.displayDate + '</div>' +
+            '    <h1 class="zeitgeist-title">What Is Actually Happening</h1>' +
+            '    <p class="zeitgeist-subtitle">Reality, read through signal and silence</p>' +
+            '</div>' +
+            '<div style="max-width: 900px; margin: 1rem auto 0; padding: 0 2rem; border-bottom: 2px solid rgba(0, 212, 255, 0.2); display: flex;">' +
+            '    <a href="/zeitgeist" style="margin-left: auto; padding: 1rem; color: #666; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;">Archive &rarr;</a>' +
+            '</div>' +
+            '<div class="zeitgeist-content">' +
+            zeitgeist.zeit +
+            '</div>' +
+            navCards;
+    } else {
+        // Old paired format — tabs for zeit/geist
+        var geistPanel = zeitgeist.geist
+            ? '<div id="panel-geist" class="zeitgeist-panel">' + zeitgeist.geist + '</div>'
+            : '';
 
-    body = css +
-        '<div class="zeitgeist-header">' +
-        '    <div class="zeitgeist-date">' + zeitgeist.displayDate + '</div>' +
-        '    <h1 class="zeitgeist-title">What Is Actually Happening</h1>' +
-        '    <p class="zeitgeist-subtitle">Reality, read through signal and silence</p>' +
-        '</div>' +
-        '<div class="zeitgeist-tabs">' +
-        '    <button class="zeitgeist-tab active" data-tab="zeit" onclick="switchTab(\'zeit\')">The Zeit</button>' +
-        (zeitgeist.geist ? '    <button class="zeitgeist-tab" data-tab="geist" onclick="switchTab(\'geist\')">The Geist</button>' : '') +
-        '    <a href="/zeitgeist" style="margin-left: auto; padding: 1rem; color: #666; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; align-self: center;">Archive &rarr;</a>' +
-        '</div>' +
-        '<div class="zeitgeist-content">' +
-        '    <div id="panel-zeit" class="zeitgeist-panel active">' + zeitgeist.zeit + '</div>' +
-        geistPanel +
-        '</div>' +
-        navCards +
-        tabScript;
+        body = css +
+            '<div class="zeitgeist-header">' +
+            '    <div class="zeitgeist-date">' + zeitgeist.displayDate + '</div>' +
+            '    <h1 class="zeitgeist-title">What Is Actually Happening</h1>' +
+            '    <p class="zeitgeist-subtitle">Reality, read through signal and silence</p>' +
+            '</div>' +
+            '<div class="zeitgeist-tabs">' +
+            '    <button class="zeitgeist-tab active" data-tab="zeit" onclick="switchTab(\'zeit\')">The Zeit</button>' +
+            (zeitgeist.geist ? '    <button class="zeitgeist-tab" data-tab="geist" onclick="switchTab(\'geist\')">The Geist</button>' : '') +
+            '    <a href="/zeitgeist" style="margin-left: auto; padding: 1rem; color: #666; text-decoration: none; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase; align-self: center;">Archive &rarr;</a>' +
+            '</div>' +
+            '<div class="zeitgeist-content">' +
+            '    <div id="panel-zeit" class="zeitgeist-panel active">' + zeitgeist.zeit + '</div>' +
+            geistPanel +
+            '</div>' +
+            navCards +
+            tabScript;
+    }
 } else {
     body = `
     <div class="hero">

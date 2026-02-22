@@ -117,14 +117,6 @@ var css = `<style>
 }
 </style>`;
 
-var geistPanel = reading.geist
-    ? '<div id="panel-geist" class="reading-panel">' + reading.geist + '</div>'
-    : '';
-
-var geistTab = reading.hasGeist
-    ? '<button class="reading-tab" data-tab="geist" onclick="switchReadingTab(\'geist\')">The Geist</button>'
-    : '';
-
 var newerLink = newer
     ? '<a href="/zeitgeist/' + newer.date + '">&larr; ' + newer.displayDate + '</a>'
     : '<span></span>';
@@ -132,26 +124,54 @@ var olderLink = older
     ? '<a href="/zeitgeist/' + older.date + '">' + older.displayDate + ' &rarr;</a>'
     : '<span></span>';
 
-var body = css +
-    '<div class="reading-nav-top"><a href="/zeitgeist">&larr; Archive</a></div>' +
-    '<div class="reading-header">' +
-    '    <div class="reading-date">' + reading.displayDate + '</div>' +
-    '    <h1 class="reading-title">The Zeitgeist</h1>' +
-    '</div>' +
-    '<div class="reading-tabs">' +
-    '    <button class="reading-tab active" data-tab="zeit" onclick="switchReadingTab(\'zeit\')">The Zeit</button>' +
-    geistTab +
-    '</div>' +
-    '<div class="reading-content">' +
-    '    <div id="panel-zeit" class="reading-panel active">' + reading.zeit + '</div>' +
-    geistPanel +
-    '</div>' +
-    '<div class="reading-nav-bottom">' +
-    '    <div>' + olderLink + '</div>' +
-    '    <div><a href="/zeitgeist" style="color: #888;">Archive</a></div>' +
-    '    <div>' + newerLink + '</div>' +
-    '</div>' +
-    `<script>
+var body;
+
+if (reading.isIntegrated) {
+    // New integrated format — single reading, no tabs
+    body = css +
+        '<div class="reading-nav-top"><a href="/zeitgeist">&larr; Archive</a></div>' +
+        '<div class="reading-header">' +
+        '    <div class="reading-date">' + reading.displayDate + '</div>' +
+        '    <h1 class="reading-title">The Zeitgeist</h1>' +
+        '</div>' +
+        '<div class="reading-content">' +
+        reading.zeit +
+        '</div>' +
+        '<div class="reading-nav-bottom">' +
+        '    <div>' + olderLink + '</div>' +
+        '    <div><a href="/zeitgeist" style="color: #888;">Archive</a></div>' +
+        '    <div>' + newerLink + '</div>' +
+        '</div>';
+} else {
+    // Old paired format — tabs for zeit/geist
+    var geistPanel = reading.geist
+        ? '<div id="panel-geist" class="reading-panel">' + reading.geist + '</div>'
+        : '';
+
+    var geistTab = reading.hasGeist
+        ? '<button class="reading-tab" data-tab="geist" onclick="switchReadingTab(\'geist\')">The Geist</button>'
+        : '';
+
+    body = css +
+        '<div class="reading-nav-top"><a href="/zeitgeist">&larr; Archive</a></div>' +
+        '<div class="reading-header">' +
+        '    <div class="reading-date">' + reading.displayDate + '</div>' +
+        '    <h1 class="reading-title">The Zeitgeist</h1>' +
+        '</div>' +
+        '<div class="reading-tabs">' +
+        '    <button class="reading-tab active" data-tab="zeit" onclick="switchReadingTab(\'zeit\')">The Zeit</button>' +
+        geistTab +
+        '</div>' +
+        '<div class="reading-content">' +
+        '    <div id="panel-zeit" class="reading-panel active">' + reading.zeit + '</div>' +
+        geistPanel +
+        '</div>' +
+        '<div class="reading-nav-bottom">' +
+        '    <div>' + olderLink + '</div>' +
+        '    <div><a href="/zeitgeist" style="color: #888;">Archive</a></div>' +
+        '    <div>' + newerLink + '</div>' +
+        '</div>' +
+        `<script>
 function switchReadingTab(tab) {
     document.querySelectorAll('.reading-tab').forEach(function(t) { t.classList.remove('active'); });
     document.querySelectorAll('.reading-panel').forEach(function(p) { p.classList.remove('active'); });
@@ -159,5 +179,6 @@ function switchReadingTab(tab) {
     document.getElementById('panel-' + tab).classList.add('active');
 }
 <\/script>`;
+}
 %>
 <%- include('layout', { title: title, body: body }) %>
