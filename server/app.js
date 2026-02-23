@@ -265,7 +265,7 @@ const loadZeitgeist = async () => {
     console.error('Error loading zeitgeist:', error);
   }
 };
-loadZeitgeist();
+// loadZeitgeist() called in startup sequence below
 
 // Load fiction bridges metadata
 let bridgesData = [];
@@ -320,7 +320,7 @@ const loadBridges = async () => {
     console.error('Error loading fiction bridges:', error);
   }
 };
-loadBridges();
+// loadBridges() called in startup sequence below
 
 // ========================================
 // COLLECTIVE CONSCIOUSNESS FIELD
@@ -984,11 +984,18 @@ app.use((err, req, res, next) => {
 // START SERVER
 // ========================================
 
-app.listen(PORT, () => {
-  console.log(`
+// Ensure all async data is loaded before accepting requests
+const startServer = async () => {
+  await Promise.all([
+    loadZeitgeist(),
+    loadBridges()
+  ]);
+
+  app.listen(PORT, () => {
+    console.log(`
   ✧═══════════════════════════════════════════✧
 
-    🌟 ESOTERICA CONSTELLATION PLATFORM 🌟
+    ESOTERICA CONSTELLATION PLATFORM
 
     Consciousness Technology Web App
     Running on: http://localhost:${PORT}
@@ -1014,7 +1021,10 @@ app.listen(PORT, () => {
     • /api/node-documents/:id → Node's documents
 
   ✧═══════════════════════════════════════════✧
-  `);
-});
+    `);
+  });
+};
+
+startServer();
 
 module.exports = app;
