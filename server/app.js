@@ -144,6 +144,7 @@ const buildDocumentLinks = () => {
 
 // Load zeitgeist documents (all dates + latest for homepage)
 let zeitgeistData = { latest: null, archive: [] };
+let zeitgeistReady; // Promise that resolves when zeitgeist is loaded
 const loadZeitgeist = async () => {
   try {
     const zeitgeistDir = path.join(__dirname, '../synthesis/zeitgeist');
@@ -265,7 +266,7 @@ const loadZeitgeist = async () => {
     console.error('Error loading zeitgeist:', error);
   }
 };
-// loadZeitgeist() called in startup sequence below
+zeitgeistReady = loadZeitgeist(); // Start loading immediately, await in routes
 
 // Load fiction bridges metadata
 let bridgesData = [];
@@ -431,7 +432,8 @@ app.get('/api/constellation-field', (req, res) => {
 // ========================================
 
 // Home page - Arrival with multiple entry portals
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
+  await zeitgeistReady; // Ensure zeitgeist loaded before rendering
   res.render('arrival', {
     title: 'Esoterica',
     nodeCount: constellationData ? Object.keys(constellationData.nodes).length : 0,
@@ -442,7 +444,8 @@ app.get('/', (req, res) => {
 });
 
 // Legacy zeitgeist homepage (keep for backwards compatibility)
-app.get('/home-legacy', (req, res) => {
+app.get('/home-legacy', async (req, res) => {
+  await zeitgeistReady;
   res.render('index', {
     title: 'Esoterica',
     nodeCount: constellationData ? Object.keys(constellationData.nodes).length : 0,
@@ -527,7 +530,8 @@ app.get('/wander', (req, res) => {
 });
 
 // Zeitgeist archive
-app.get('/zeitgeist', (req, res) => {
+app.get('/zeitgeist', async (req, res) => {
+  await zeitgeistReady;
   res.render('zeitgeist-archive', {
     title: 'Zeitgeist Archive',
     archive: zeitgeistData.archive
@@ -535,7 +539,8 @@ app.get('/zeitgeist', (req, res) => {
 });
 
 // Individual zeitgeist reading by date
-app.get('/zeitgeist/:date', (req, res) => {
+app.get('/zeitgeist/:date', async (req, res) => {
+  await zeitgeistReady;
   const reading = zeitgeistData.archive.find(r => r.date === req.params.date);
   if (!reading) {
     return res.status(404).render('404', { title: 'Reading Not Found' });
