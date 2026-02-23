@@ -1,43 +1,192 @@
 <%
 var body = `
+<style>
+    .node-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: start;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    .node-title {
+        color: #00ff88;
+        margin-bottom: 0.5rem;
+        text-transform: capitalize;
+    }
+    .node-meta {
+        color: #888;
+        font-size: 1.1rem;
+    }
+    .node-meta code {
+        color: #9d4edd;
+    }
+    .essence-box {
+        background: rgba(0,255,136,0.05);
+        padding: 1.5rem;
+        border-left: 4px solid #00ff88;
+        border-radius: 5px;
+        margin-bottom: 2rem;
+    }
+    .essence-box h3 {
+        color: #00ff88;
+        margin-bottom: 0.5rem;
+    }
+    .essence-text {
+        font-size: 1.1rem;
+        font-style: italic;
+    }
+    .section-title {
+        color: #9d4edd;
+        margin-bottom: 1rem;
+    }
+    .section-title.cyan {
+        color: #00d4ff;
+    }
+    .connection-card {
+        background: rgba(157,78,221,0.05);
+        border-color: rgba(157,78,221,0.3);
+    }
+    .connection-card h4 {
+        color: #9d4edd;
+        margin-bottom: 0.5rem;
+    }
+    .connection-card h4 a {
+        color: inherit;
+        text-decoration: none;
+    }
+    .connection-card h4 a:hover {
+        color: #00d4ff;
+    }
+    .document-card {
+        background: rgba(0,212,255,0.05);
+        border-color: rgba(0,212,255,0.3);
+        transition: all 0.3s;
+    }
+    .document-card:hover {
+        border-color: rgba(0,212,255,0.6);
+        transform: translateY(-2px);
+    }
+    .document-card h4 {
+        color: #00d4ff;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+    .document-card h4 a {
+        color: inherit;
+        text-decoration: none;
+    }
+    .document-card h4 a:hover {
+        color: #00ff88;
+    }
+    .document-meta {
+        color: #888;
+        font-size: 0.85rem;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .document-meta .source {
+        color: #9d4edd;
+    }
+    .document-meta .primary-badge {
+        color: #00ff88;
+        font-weight: bold;
+    }
+    .domain-badge {
+        display: inline-block;
+        padding: 0.25rem 0.75rem;
+        background: rgba(157,78,221,0.1);
+        border: 1px solid rgba(157,78,221,0.3);
+        border-radius: 20px;
+        font-size: 0.85rem;
+        color: #9d4edd;
+        margin-left: 1rem;
+    }
+    .nav-buttons {
+        text-align: center;
+        margin: 2rem 0;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+</style>
+
 <div class="container">
     <div class="card" style="margin-top: 2rem;">
-        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 2rem;">
+        <div class="node-header">
             <div>
-                <h1 style="color: #00ff88; margin-bottom: 0.5rem;">
+                <h1 class="node-title">
                     ${nodeId.replace(/_/g, ' ')}
                 </h1>
-                <p style="color: #888; font-size: 1.1rem;">
+                <p class="node-meta">
                     <strong>Type:</strong> <code>${node.type || 'unknown'}</code>
+                    ${domain ? `<a href="/domains/${domain.id}" class="domain-badge">${domain.icon || ''} ${domain.label}</a>` : ''}
                 </p>
             </div>
             <a href="/explorer-3d" class="btn">View in Explorer</a>
         </div>
 
-        <div style="background: rgba(0,255,136,0.05); padding: 1.5rem; border-left: 4px solid #00ff88; border-radius: 5px; margin-bottom: 2rem;">
-            <h3 style="color: #00ff88; margin-bottom: 0.5rem;">Essence</h3>
-            <p style="font-size: 1.1rem; font-style: italic;">
+        <div class="essence-box">
+            <h3>Essence</h3>
+            <p class="essence-text">
                 "${node.essence?.replace(/_/g, ' ') || 'No essence available'}"
             </p>
         </div>
 
+        ${node.description ? `
         <div style="margin-bottom: 2rem;">
-            <h3 style="color: #00d4ff; margin-bottom: 1rem;">Description</h3>
+            <h3 class="section-title cyan">Description</h3>
             <p style="line-height: 1.8; color: #e0e0e0;">
-                ${node.description || 'No description available'}
+                ${node.description}
             </p>
         </div>
+        ` : ''}
+
+        ${linkedDocuments && linkedDocuments.length > 0 ? `
+        <div style="margin-bottom: 2rem;">
+            <h3 class="section-title cyan">
+                Documents (${linkedDocuments.length})
+            </h3>
+            <p style="color: #888; margin-bottom: 1rem; font-size: 0.9rem;">
+                Content that touches this node in the constellation
+            </p>
+            <div class="grid">
+                ${linkedDocuments.slice(0, 12).map(doc => `
+                    <div class="card document-card">
+                        <h4>
+                            <a href="/read/${doc.path}">
+                                ${doc.title}
+                            </a>
+                        </h4>
+                        <div class="document-meta">
+                            <span class="source">${doc.source}</span>
+                            ${doc.category ? `<span>${doc.category}</span>` : ''}
+                            <span>${doc.readingTime} min read</span>
+                            ${doc.isPrimary ? '<span class="primary-badge">Primary</span>' : ''}
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+            ${linkedDocuments.length > 12 ? `
+            <p style="color: #888; margin-top: 1rem; text-align: center;">
+                + ${linkedDocuments.length - 12} more documents
+            </p>
+            ` : ''}
+        </div>
+        ` : ''}
 
         ${connections && connections.length > 0 ? `
         <div>
-            <h3 style="color: #9d4edd; margin-bottom: 1rem;">
+            <h3 class="section-title">
                 Connections (${connections.length})
             </h3>
             <div class="grid">
                 ${connections.map(conn => `
-                    <div class="card" style="background: rgba(157,78,221,0.05); border-color: rgba(157,78,221,0.3);">
-                        <h4 style="color: #9d4edd; margin-bottom: 0.5rem;">
-                            <a href="/node/${conn.id}" style="color: inherit; text-decoration: none;">
+                    <div class="card connection-card">
+                        <h4>
+                            <a href="/node/${conn.id}">
                                 ${conn.id.replace(/_/g, ' ')}
                             </a>
                         </h4>
@@ -54,9 +203,10 @@ var body = `
         ` : '<p style="color: #888;">No connections available</p>'}
     </div>
 
-    <div style="text-align: center; margin: 2rem 0;">
+    <div class="nav-buttons">
+        <a href="/domains" class="btn">Browse Domains</a>
         <a href="/systems" class="btn">Browse All Systems</a>
-        <a href="/search" class="btn" style="margin-left: 1rem;">Search Constellation</a>
+        <a href="/search" class="btn">Search Constellation</a>
     </div>
 </div>
 `;

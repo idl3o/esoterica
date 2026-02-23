@@ -145,7 +145,11 @@
       "WebFetch(domain:theconversation.com)",
       "WebFetch(domain:jessicadavidson.co.uk)",
       "WebFetch(domain:spokenpast.com)",
-      "WebFetch(domain:vikingr.org)"
+      "WebFetch(domain:vikingr.org)",
+      "Bash(grep:*)",
+      "Bash(node -e:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nConstellation as webway: document-node linking, domains, wander, zeitgeist homepage\n\n- New arrival page with zeitgeist hero + entry portals\n- Document-node bidirectional linking \\(214 docs ↔ 213 nodes\\)\n- Domain browser organizing 383 nodes into 12 territories\n- Wander mode for random graph walking\n- Oracle shows constellation position after reveal\n- Documents show primary/related nodes + related documents\n- Nodes show linked documents\n- /zeitgeist command now rebuilds index and pushes live\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git rebase:*)"
     ],
     "deny": [],
     "ask": []

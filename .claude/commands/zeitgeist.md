@@ -6,7 +6,7 @@ description: Produce a complete zeitgeist reading and save to the archive
 
 You are producing an integrated zeitgeist reading — what's happening AND how it's being processed, woven together, organised by temporal scale. One document. Signal and processing in the same breath. Silence embedded, not appended.
 
-The output is a single dated markdown file in `synthesis/zeitgeist/` that the web platform automatically serves.
+The output is a single dated markdown file in `synthesis/zeitgeist/` that goes live immediately on esoterica.vercel.app as the homepage.
 
 ## Step 1: Gather Signal (Parallel)
 
@@ -100,13 +100,26 @@ Create the file `synthesis/zeitgeist/zeitgeist-YYYY-MM-DD.md` (use today's date)
 Sources: [list URLs used]
 ```
 
-## Step 4: Confirm
+## Step 4: Rebuild Index and Deploy
 
-After the file is saved, report:
+After saving the reading, run the full deploy sequence:
+
+```bash
+node build-synthesis-index.js --public
+git add synthesis/zeitgeist/zeitgeist-YYYY-MM-DD.md synthesis-index.json library-index.json
+git commit -m "Add zeitgeist reading DD Mon YYYY: [headline from DEEP section]"
+git push
+```
+
+Vercel auto-deploys on push. The homepage will show the new reading within ~60 seconds.
+
+## Step 5: Confirm
+
+After push completes, report:
 - The date of the reading
 - The headline from DEEP (first bold phrase in that section)
 - The edge (one sentence from THE EDGE)
-- Confirmation that the file is saved and will appear in the web archive
+- Confirmation that changes are pushed and deploying to esoterica.vercel.app
 
 ## Principles
 
@@ -118,3 +131,4 @@ After the file is saved, report:
 - **Breathing architecture.** The section breaks are refractory periods. The italic subheadings are invitations to breathe. Design the silence between sections as carefully as the sections themselves.
 - **The archive is the product.** Each reading becomes a permanent record. Write as if someone will read this a year from now to understand what this moment felt like — not just what happened, but how consciousness was relating to what happened.
 - **Fidelity first.** Report what's actually happening. Don't bend events to fit a narrative. The pattern will emerge from honest observation or it won't emerge at all.
+- **Live on save.** The reading goes live immediately. This is the front door of esoterica — treat it with the gravity it deserves.

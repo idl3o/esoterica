@@ -6,6 +6,10 @@ const morgan = require('morgan');
 const cors = require('cors');
 require('dotenv').config();
 
+// Document-node linking infrastructure
+const { buildDocumentNodeLinks, getNodeWithDocumentCount } = require('./lib/document-links');
+const { DOMAINS, getDomainsWithCounts, getNodesInDomain, getDomainForType } = require('./config/domains');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -34,7 +38,7 @@ app.get('/oracle', (req, res) => {
   res.render('oracle', { title: 'Oracle' });
 });
 
-// Render any markdown as HTML (for oracle)
+// Render any markdown as HTML (for oracle and library)
 app.get('/read/*', async (req, res) => {
   try {
     const docPath = req.params[0]; // e.g., "synthesis/archetypal/file.md"
@@ -46,9 +50,43 @@ app.get('/read/*', async (req, res) => {
     const titleMatch = markdown.match(/^#\s+(.+)$/m);
     const title = titleMatch ? titleMatch[1] : docPath.split('/').pop().replace('.md', '');
 
+    // Get document ID from filename
+    const docId = docPath.split('/').pop().replace('.md', '');
+
+    // Get linked nodes for this document
+    const nodeLinks = documentLinks?.documentToNodes[docId] || { primary: [], related: [] };
+
+    // Enrich nodes with details
+    const enrichNodes = (nodeIds) => nodeIds.map(nodeId => {
+      const node = constellationData?.nodes[nodeId];
+      return node ? {
+        id: nodeId,
+        type: node.type,
+        essence: node.essence,
+        domain: getDomainForType(node.type)
+      } : { id: nodeId };
+    });
+
+    // Get related documents via shared nodes
+    const relatedDocuments = [];
+    const seenDocs = new Set([docId]);
+    for (const nodeId of nodeLinks.primary.slice(0, 3)) {
+      const nodeDocs = documentLinks?.nodeToDocuments[nodeId] || [];
+      for (const doc of nodeDocs) {
+        if (!seenDocs.has(doc.id) && relatedDocuments.length < 6) {
+          seenDocs.add(doc.id);
+          relatedDocuments.push({ ...doc, viaNode: nodeId });
+        }
+      }
+    }
+
     res.render('document', {
       title,
-      content: html
+      content: html,
+      docPath,
+      primaryNodes: enrichNodes(nodeLinks.primary),
+      relatedNodes: enrichNodes(nodeLinks.related.slice(0, 10)),
+      relatedDocuments
     });
   } catch (error) {
     console.error('Error loading document:', error);
@@ -66,11 +104,43 @@ const loadConstellation = async () => {
     );
     constellationData = JSON.parse(data);
     console.log(`✨ Constellation loaded: ${Object.keys(constellationData.nodes).length} nodes`);
+
+    // Build document-node links after constellation loads
+    buildDocumentLinks();
   } catch (error) {
     console.error('Error loading constellation:', error);
   }
 };
 loadConstellation();
+
+// Document-node linking data
+let documentLinks = null;
+let synthesisIndex = null;
+
+const loadSynthesisIndex = async () => {
+  try {
+    const data = await fs.readFile(
+      path.join(__dirname, '../synthesis-index.json'),
+      'utf8'
+    );
+    synthesisIndex = JSON.parse(data);
+    console.log(`📑 Synthesis index loaded: ${synthesisIndex.documents?.length || 0} documents`);
+
+    // Build links if constellation is already loaded
+    buildDocumentLinks();
+  } catch (error) {
+    console.error('Error loading synthesis index:', error);
+  }
+};
+loadSynthesisIndex();
+
+const buildDocumentLinks = () => {
+  if (!constellationData || !synthesisIndex) return;
+
+  documentLinks = buildDocumentNodeLinks(synthesisIndex, constellationData);
+  console.log(`🔗 Document-node links built: ${documentLinks.stats.documentsWithLinks} docs → ${documentLinks.stats.nodesWithDocuments} nodes`);
+  console.log(`   Average ${documentLinks.stats.averageNodesPerDocument.toFixed(1)} nodes/doc, ${documentLinks.stats.averageDocumentsPerNode.toFixed(1)} docs/node`);
+};
 
 // Load zeitgeist documents (all dates + latest for homepage)
 let zeitgeistData = { latest: null, archive: [] };
@@ -360,12 +430,99 @@ app.get('/api/constellation-field', (req, res) => {
 // ROUTES
 // ========================================
 
-// Home page - Zeitgeist front door (shows latest reading)
+// Home page - Arrival with multiple entry portals
 app.get('/', (req, res) => {
+  res.render('arrival', {
+    title: 'Esoterica',
+    nodeCount: constellationData ? Object.keys(constellationData.nodes).length : 0,
+    documentCount: synthesisIndex?.documents?.length || 0,
+    bridgeCount: bridgesData.length,
+    zeitgeist: zeitgeistData.latest
+  });
+});
+
+// Legacy zeitgeist homepage (keep for backwards compatibility)
+app.get('/home-legacy', (req, res) => {
   res.render('index', {
     title: 'Esoterica',
     nodeCount: constellationData ? Object.keys(constellationData.nodes).length : 0,
     zeitgeist: zeitgeistData.latest
+  });
+});
+
+// Domains browser
+app.get('/domains', (req, res) => {
+  if (!constellationData) {
+    return res.status(500).send('Constellation data not loaded');
+  }
+
+  const domains = getDomainsWithCounts(constellationData.nodes);
+
+  res.render('domains', {
+    title: 'Domains',
+    domains
+  });
+});
+
+// Domain detail page
+app.get('/domain/:domainId', (req, res) => {
+  if (!constellationData) {
+    return res.status(500).send('Constellation data not loaded');
+  }
+
+  const domain = DOMAINS[req.params.domainId];
+  if (!domain) {
+    return res.status(404).render('404', { title: 'Domain Not Found' });
+  }
+
+  const nodes = getNodesInDomain(req.params.domainId, constellationData.nodes);
+
+  // Enrich with document counts
+  const enrichedNodes = nodes.map(node => ({
+    ...node,
+    documentCount: documentLinks?.nodeToDocuments[node.id]?.length || 0
+  }));
+
+  // Calculate total documents in this domain
+  const totalDocuments = enrichedNodes.reduce((sum, n) => sum + n.documentCount, 0);
+
+  res.render('domain-detail', {
+    title: domain.label,
+    domain,
+    nodes: enrichedNodes,
+    totalDocuments
+  });
+});
+
+// Random walk / wander
+app.get('/wander', (req, res) => {
+  if (!constellationData) {
+    return res.status(500).send('Constellation data not loaded');
+  }
+
+  const nodeIds = Object.keys(constellationData.nodes);
+  let nodeId = req.query.start;
+
+  // Validate or pick random
+  if (!nodeId || !constellationData.nodes[nodeId]) {
+    nodeId = nodeIds[Math.floor(Math.random() * nodeIds.length)];
+  }
+
+  const node = { id: nodeId, ...constellationData.nodes[nodeId] };
+
+  // Get connections
+  const connections = (node.connections || [])
+    .filter(cId => constellationData.nodes[cId])
+    .map(cId => ({ id: cId, ...constellationData.nodes[cId] }));
+
+  // Get linked documents
+  const linkedDocuments = documentLinks?.nodeToDocuments[nodeId] || [];
+
+  res.render('wander', {
+    title: 'Wander - ' + nodeId.replace(/_/g, ' '),
+    node,
+    connections,
+    linkedDocuments
   });
 });
 
@@ -485,11 +642,19 @@ app.get('/node/:id', (req, res) => {
     ...constellationData.nodes[connId]
   })).filter(n => n.type); // Filter out missing connections
 
+  // Get linked documents
+  const linkedDocuments = documentLinks?.nodeToDocuments[req.params.id] || [];
+
+  // Get domain for this node
+  const domain = getDomainForType(node.type);
+
   res.render('node', {
     title: `${req.params.id.replace(/_/g, ' ')}`,
     nodeId: req.params.id,
     node,
-    connections
+    connections,
+    linkedDocuments,
+    domain: DOMAINS[domain]
   });
 });
 
@@ -696,6 +861,82 @@ app.get('/api/meta', (req, res) => {
   });
 });
 
+// ========================================
+// DOCUMENT-NODE LINKING API
+// ========================================
+
+// Get linked nodes for a document
+app.get('/api/document-links/:docId', (req, res) => {
+  if (!documentLinks) {
+    return res.status(500).json({ error: 'Document links not loaded' });
+  }
+
+  const links = documentLinks.documentToNodes[req.params.docId];
+  if (!links) {
+    return res.json({ primary: [], related: [] });
+  }
+
+  // Enrich with node details
+  const enrichNode = (nodeId) => {
+    const node = constellationData?.nodes[nodeId];
+    return node ? { id: nodeId, type: node.type, essence: node.essence } : { id: nodeId };
+  };
+
+  res.json({
+    primary: links.primary.map(enrichNode),
+    related: links.related.map(enrichNode)
+  });
+});
+
+// Get documents linked to a node
+app.get('/api/node-documents/:nodeId', (req, res) => {
+  if (!documentLinks) {
+    return res.status(500).json({ error: 'Document links not loaded' });
+  }
+
+  const docs = documentLinks.nodeToDocuments[req.params.nodeId] || [];
+  res.json({ documents: docs });
+});
+
+// Get all domains with counts
+app.get('/api/domains', (req, res) => {
+  if (!constellationData) {
+    return res.status(500).json({ error: 'Constellation not loaded' });
+  }
+
+  const domains = getDomainsWithCounts(constellationData.nodes);
+  res.json(domains);
+});
+
+// Get nodes in a specific domain
+app.get('/api/domains/:domainId/nodes', (req, res) => {
+  if (!constellationData) {
+    return res.status(500).json({ error: 'Constellation not loaded' });
+  }
+
+  const nodes = getNodesInDomain(req.params.domainId, constellationData.nodes);
+
+  // Enrich with document counts
+  const enrichedNodes = nodes.map(node => ({
+    ...node,
+    documentCount: documentLinks?.nodeToDocuments[node.id]?.length || 0
+  }));
+
+  res.json({
+    domain: DOMAINS[req.params.domainId] || null,
+    nodes: enrichedNodes
+  });
+});
+
+// Get linking stats
+app.get('/api/linking-stats', (req, res) => {
+  if (!documentLinks) {
+    return res.status(500).json({ error: 'Document links not loaded' });
+  }
+
+  res.json(documentLinks.stats);
+});
+
 // Gematria calculator endpoint
 app.post('/api/calculate/gematria', (req, res) => {
   const { text, system } = req.body;
@@ -753,22 +994,24 @@ app.listen(PORT, () => {
     Running on: http://localhost:${PORT}
 
     Routes:
-    • /                → Zeitgeist (latest reading)
+    • /                → Arrival (entry portals)
+    • /domains         → Domain Browser
+    • /domain/:id      → Domain Detail
+    • /wander          → Random Walk
     • /zeitgeist       → Zeitgeist Archive
     • /zeitgeist/:date → Individual Reading
     • /bridges         → Fiction Bridges Gallery
-    • /bridges/:slug   → Individual Bridge
-    • /explorer-3d     → 3D Constellation
     • /oracle          → Oracle
-    • /library         → Distillations Library
-    • /about           → About Page
+    • /library         → Library
+    • /explorer-3d     → 3D Constellation
 
     API:
     • /api/nodes             → All nodes
     • /api/nodes/:id         → Specific node
-    • /api/search?q=term     → Search
-    • /api/nodes/type/:type  → Filter by type
-    • /api/meta              → Constellation metadata
+    • /api/search?q=term     → Search nodes
+    • /api/domains           → Domain groupings
+    • /api/document-links/:id → Document's nodes
+    • /api/node-documents/:id → Node's documents
 
   ✧═══════════════════════════════════════════✧
   `);

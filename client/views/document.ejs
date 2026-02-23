@@ -1,26 +1,141 @@
 <%
 var body = `
-<div class="container">
-    <div style="margin-bottom: 2rem;">
-        <a href="/library" style="color: #00d4ff; text-decoration: none; font-size: 0.95rem;">
-            ← Back to Library
-        </a>
-    </div>
-
-    <div class="card" style="max-width: 900px; margin: 0 auto;">
-        <article class="document-content" style="line-height: 1.8; color: #e0e0e0;">
-            ${content}
-        </article>
-    </div>
-
-    <div style="text-align: center; margin: 3rem 0;">
-        <a href="/oracle" class="btn">Receive Another</a>
-        <a href="/library" class="btn" style="margin-left: 1rem;">Browse Library</a>
-        <a href="/explorer-3d" class="btn" style="margin-left: 1rem;">Explore Constellation</a>
-    </div>
-</div>
-
 <style>
+.doc-layout {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .doc-layout {
+        grid-template-columns: 1fr;
+    }
+    .constellation-sidebar {
+        order: -1;
+    }
+}
+
+.doc-main {
+    min-width: 0;
+}
+
+.constellation-sidebar {
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+}
+
+.sidebar-section {
+    background: rgba(5, 5, 15, 0.8);
+    border: 2px solid rgba(0, 212, 255, 0.2);
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(15px);
+}
+
+.sidebar-title {
+    color: #00d4ff;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sidebar-title::before {
+    content: "◇";
+    color: #00ff88;
+}
+
+.node-tag {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    margin: 0.2rem;
+    background: rgba(157, 78, 221, 0.1);
+    border: 1px solid rgba(157, 78, 221, 0.3);
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: #9d4edd;
+    text-decoration: none;
+    transition: all 0.3s;
+    text-transform: capitalize;
+}
+
+.node-tag:hover {
+    background: rgba(157, 78, 221, 0.2);
+    border-color: rgba(157, 78, 221, 0.6);
+    color: #00d4ff;
+}
+
+.node-tag.primary {
+    background: rgba(0, 255, 136, 0.1);
+    border-color: rgba(0, 255, 136, 0.3);
+    color: #00ff88;
+}
+
+.node-tag.primary:hover {
+    background: rgba(0, 255, 136, 0.2);
+    border-color: rgba(0, 255, 136, 0.6);
+}
+
+.related-doc {
+    display: block;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-left: 3px solid rgba(0, 212, 255, 0.3);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.related-doc:hover {
+    background: rgba(0, 212, 255, 0.05);
+    border-left-color: #00d4ff;
+}
+
+.related-doc-title {
+    color: #e0e0e0;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 0.3rem;
+}
+
+.related-doc-meta {
+    color: #666;
+    font-size: 0.75rem;
+}
+
+.related-doc-via {
+    color: #9d4edd;
+}
+
+.expand-toggle {
+    color: #888;
+    font-size: 0.8rem;
+    cursor: pointer;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+.expand-toggle:hover {
+    color: #00d4ff;
+}
+
+.hidden-nodes {
+    display: none;
+}
+
+.hidden-nodes.expanded {
+    display: block;
+}
+
+/* Document content styles */
 .document-content h1 {
     color: #00ff88;
     font-size: 2.5rem;
@@ -143,7 +258,96 @@ var body = `
     color: #00d4ff;
     font-weight: bold;
 }
+
+.doc-nav {
+    text-align: center;
+    margin: 3rem 0;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 </style>
+
+<div class="container">
+    <div style="margin-bottom: 2rem;">
+        <a href="/library" style="color: #00d4ff; text-decoration: none; font-size: 0.95rem;">
+            ← Back to Library
+        </a>
+    </div>
+
+    <div class="doc-layout">
+        <div class="doc-main">
+            <div class="card">
+                <article class="document-content" style="line-height: 1.8; color: #e0e0e0;">
+                    ${content}
+                </article>
+            </div>
+        </div>
+
+        <aside class="constellation-sidebar">
+            ${(primaryNodes && primaryNodes.length > 0) || (relatedNodes && relatedNodes.length > 0) ? \`
+            <div class="sidebar-section">
+                <div class="sidebar-title">Constellation Position</div>
+                ${primaryNodes && primaryNodes.length > 0 ? \`
+                <div style="margin-bottom: 0.75rem;">
+                    <div style="color: #888; font-size: 0.75rem; margin-bottom: 0.5rem;">PRIMARY</div>
+                    ${primaryNodes.map(n => \`
+                        <a href="/node/\${n.id}" class="node-tag primary">\${n.id.replace(/_/g, ' ')}</a>
+                    \`).join('')}
+                </div>
+                \` : ''}
+                ${relatedNodes && relatedNodes.length > 0 ? \`
+                <div>
+                    <div style="color: #888; font-size: 0.75rem; margin-bottom: 0.5rem;">RELATED</div>
+                    <div id="visible-nodes">
+                        ${relatedNodes.slice(0, 5).map(n => \`
+                            <a href="/node/\${n.id}" class="node-tag">\${n.id.replace(/_/g, ' ')}</a>
+                        \`).join('')}
+                    </div>
+                    ${relatedNodes.length > 5 ? \`
+                    <div id="hidden-nodes" class="hidden-nodes">
+                        ${relatedNodes.slice(5).map(n => \`
+                            <a href="/node/\${n.id}" class="node-tag">\${n.id.replace(/_/g, ' ')}</a>
+                        \`).join('')}
+                    </div>
+                    <div class="expand-toggle" onclick="document.getElementById('hidden-nodes').classList.toggle('expanded'); this.textContent = this.textContent.includes('+') ? 'Show less' : '+ \${relatedNodes.length - 5} more';">
+                        + \${relatedNodes.length - 5} more
+                    </div>
+                    \` : ''}
+                </div>
+                \` : ''}
+            </div>
+            \` : ''}
+
+            ${relatedDocuments && relatedDocuments.length > 0 ? \`
+            <div class="sidebar-section">
+                <div class="sidebar-title">Continue Exploring</div>
+                ${relatedDocuments.map(doc => \`
+                    <a href="/read/\${doc.path}" class="related-doc">
+                        <div class="related-doc-title">\${doc.title}</div>
+                        <div class="related-doc-meta">
+                            \${doc.readingTime} min · via <span class="related-doc-via">\${doc.viaNode?.replace(/_/g, ' ')}</span>
+                        </div>
+                    </a>
+                \`).join('')}
+            </div>
+            \` : ''}
+
+            <div class="sidebar-section" style="text-align: center;">
+                <a href="/explorer-3d" class="btn" style="width: 100%; display: block;">
+                    View in Explorer
+                </a>
+            </div>
+        </aside>
+    </div>
+
+    <div class="doc-nav">
+        <a href="/oracle" class="btn">Receive Another</a>
+        <a href="/library" class="btn">Browse Library</a>
+        <a href="/domains" class="btn">Browse Domains</a>
+    </div>
+</div>
 `;
 %>
 <%- include('layout', { title: title, body: body }) %>

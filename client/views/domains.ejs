@@ -1,0 +1,123 @@
+<%
+var css = `<style>
+.domains-header {
+    text-align: center;
+    padding: 3rem 2rem 2rem;
+}
+
+.domains-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #00d4ff 0%, #9d4edd 50%, #00ff88 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.domains-subtitle {
+    color: #888;
+    font-size: 1.1rem;
+}
+
+.domains-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.domain-card {
+    background: rgba(5, 5, 15, 0.8);
+    border: 2px solid rgba(157, 78, 221, 0.2);
+    border-radius: 12px;
+    padding: 1.75rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: block;
+}
+
+.domain-card:hover {
+    border-color: rgba(157, 78, 221, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(157, 78, 221, 0.2);
+}
+
+.domain-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.domain-icon {
+    font-size: 2rem;
+}
+
+.domain-title {
+    color: #9d4edd;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.domain-description {
+    color: #888;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.domain-stats {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.85rem;
+}
+
+.domain-stat {
+    color: #666;
+}
+
+.domain-stat strong {
+    color: #00d4ff;
+}
+
+.domains-nav {
+    text-align: center;
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+</style>`;
+
+// Build domain cards
+var domainsHtml = '';
+domains.forEach(function(domain) {
+    domainsHtml += '<a href="/domain/' + domain.id + '" class="domain-card">' +
+        '<div class="domain-header">' +
+        '<span class="domain-icon">' + (domain.icon || '◇') + '</span>' +
+        '<span class="domain-title">' + domain.label + '</span>' +
+        '</div>' +
+        '<div class="domain-description">' + domain.description + '</div>' +
+        '<div class="domain-stats">' +
+        '<span class="domain-stat"><strong>' + domain.nodeCount + '</strong> nodes</span>' +
+        '<span class="domain-stat"><strong>' + domain.typeCount + '</strong> types</span>' +
+        '</div>' +
+        '</a>';
+});
+
+var body = css +
+'<div class="domains-header">' +
+'    <h1 class="domains-title">Domains</h1>' +
+'    <p class="domains-subtitle">Browse the constellation by territory</p>' +
+'</div>' +
+'<div class="domains-grid">' + domainsHtml + '</div>' +
+'<div class="domains-nav">' +
+'    <a href="/" class="btn">Back to Arrival</a>' +
+'    <a href="/search" class="btn">Search Constellation</a>' +
+'    <a href="/explorer-3d" class="btn">3D Explorer</a>' +
+'</div>';
+%>
+<%- include('layout', { title: title, body: body }) %>

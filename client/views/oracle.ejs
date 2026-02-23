@@ -114,7 +114,7 @@ var css = `<style>
     line-height: 1.8;
     color: #aaa;
     font-style: italic;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     padding: 1.5rem 2rem;
     background: rgba(5, 5, 15, 0.6);
     border-left: 3px solid rgba(157, 78, 221, 0.4);
@@ -122,16 +122,74 @@ var css = `<style>
     text-align: left;
 }
 
+/* Constellation context */
+.constellation-context {
+    margin-bottom: 2rem;
+    padding: 1rem 1.5rem;
+    background: rgba(0, 212, 255, 0.03);
+    border-radius: 8px;
+    display: none;
+}
+
+.constellation-context.visible {
+    display: block;
+}
+
+.constellation-label {
+    font-size: 0.75rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.75rem;
+}
+
+.node-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.node-tag {
+    display: inline-block;
+    padding: 0.3rem 0.75rem;
+    background: rgba(157, 78, 221, 0.1);
+    border: 1px solid rgba(157, 78, 221, 0.3);
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: #9d4edd;
+    text-decoration: none;
+    transition: all 0.3s;
+    text-transform: capitalize;
+}
+
+.node-tag:hover {
+    background: rgba(157, 78, 221, 0.2);
+    border-color: rgba(157, 78, 221, 0.6);
+    color: #00d4ff;
+}
+
+.node-tag.primary {
+    background: rgba(0, 255, 136, 0.1);
+    border-color: rgba(0, 255, 136, 0.3);
+    color: #00ff88;
+}
+
+.node-tag.primary:hover {
+    background: rgba(0, 255, 136, 0.2);
+    border-color: rgba(0, 255, 136, 0.6);
+}
+
 .oracle-whisper {
     font-size: 0.95rem;
     color: #9d4edd;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     letter-spacing: 0.05em;
 }
 
 .oracle-actions {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -147,6 +205,7 @@ var css = `<style>
     cursor: pointer;
     transition: all 0.3s ease;
     border-radius: 8px;
+    text-decoration: none;
 }
 
 .oracle-btn:hover {
@@ -181,6 +240,7 @@ var css = `<style>
     .oracle-title { font-size: 1.5rem; }
     .oracle-excerpt { font-size: 1.05rem; padding: 1rem; }
     #oracle { padding: 1.5rem; }
+    .oracle-actions { flex-direction: column; align-items: center; }
 }
 </style>`;
 
@@ -215,6 +275,17 @@ async function loadDocuments() {
     }
 }
 
+async function loadConstellationContext(docId) {
+    try {
+        const response = await fetch('/api/document-links/' + docId);
+        const data = await response.json();
+        return data;
+    } catch (err) {
+        console.error('Failed to load constellation context:', err);
+        return { primary: [], related: [] };
+    }
+}
+
 function oracleEnter() {
     document.getElementById('threshold').classList.add('hidden');
     document.getElementById('oracle').classList.add('visible');
@@ -226,7 +297,7 @@ function oracleEnter() {
     }
 }
 
-function castOracle(customSeed) {
+async function castOracle(customSeed) {
     var seed = customSeed !== undefined ? customSeed : getTimeSeed();
     currentDoc = selectDocument(seed);
 
@@ -261,6 +332,27 @@ function castOracle(customSeed) {
     var whisper = whispers[currentDoc.category] || 'from the field';
     document.getElementById('whisper').textContent = whisper;
     document.getElementById('timeSeed').textContent = formatTimeSeed();
+
+    // Load and display constellation context
+    var docId = currentDoc.fileName ? currentDoc.fileName.replace('.md', '') : currentDoc.id;
+    var context = await loadConstellationContext(docId);
+
+    var nodeTags = document.getElementById('nodeTags');
+    nodeTags.innerHTML = '';
+
+    var allNodes = [...(context.primary || []), ...(context.related || []).slice(0, 3)];
+    if (allNodes.length > 0) {
+        allNodes.forEach(function(node, idx) {
+            var a = document.createElement('a');
+            a.href = '/node/' + node.id;
+            a.className = 'node-tag' + (idx < (context.primary || []).length ? ' primary' : '');
+            a.textContent = node.id.replace(/_/g, ' ');
+            nodeTags.appendChild(a);
+        });
+        document.getElementById('constellationContext').classList.add('visible');
+    } else {
+        document.getElementById('constellationContext').classList.remove('visible');
+    }
 }
 
 function readFull() {
@@ -277,6 +369,7 @@ function receiveAnother() {
 function returnToThreshold() {
     document.getElementById('oracle').classList.remove('visible');
     document.getElementById('threshold').classList.remove('hidden');
+    document.getElementById('constellationContext').classList.remove('visible');
 }
 
 loadDocuments();
@@ -295,6 +388,10 @@ var body = css +
     '      <h1 class="oracle-title" id="title">...</h1>' +
     '      <div class="oracle-subtitle" id="subtitle"></div>' +
     '      <div class="oracle-excerpt" id="excerpt"></div>' +
+    '      <div class="constellation-context" id="constellationContext">' +
+    '        <div class="constellation-label">constellation position</div>' +
+    '        <div class="node-tags" id="nodeTags"></div>' +
+    '      </div>' +
     '      <div class="oracle-whisper" id="whisper"></div>' +
     '      <div class="oracle-actions">' +
     '        <button class="oracle-btn primary" id="readBtn" onclick="readFull()">Read</button>' +

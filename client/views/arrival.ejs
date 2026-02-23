@@ -1,0 +1,324 @@
+<%
+var css = `<style>
+.arrival {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.arrival-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.arrival-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #00d4ff 0%, #9d4edd 50%, #00ff88 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.3em;
+}
+
+.arrival-subtitle {
+    color: #666;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* Zeitgeist hero section */
+.zeitgeist-hero {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    background: rgba(5, 5, 15, 0.95);
+    border: 2px solid rgba(0, 212, 255, 0.4);
+    border-radius: 16px;
+    padding: 2.5rem 3rem;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 10px 40px rgba(0, 212, 255, 0.15);
+}
+
+.zeitgeist-label {
+    display: inline-block;
+    color: #00ff88;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    margin-bottom: 1rem;
+    padding: 0.3rem 0.8rem;
+    background: rgba(0, 255, 136, 0.1);
+    border: 1px solid rgba(0, 255, 136, 0.3);
+    border-radius: 4px;
+}
+
+.zeitgeist-date {
+    color: #888;
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+}
+
+.zeitgeist-headline {
+    font-size: 1.8rem;
+    line-height: 1.35;
+    color: #00d4ff;
+    margin-bottom: 1.25rem;
+    font-weight: 500;
+}
+
+.zeitgeist-summary {
+    color: #bbb;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.zeitgeist-read-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #00ff88;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid rgba(0, 255, 136, 0.4);
+    border-radius: 8px;
+    transition: all 0.3s;
+    background: rgba(0, 255, 136, 0.05);
+}
+
+.zeitgeist-read-link:hover {
+    background: rgba(0, 255, 136, 0.15);
+    border-color: #00ff88;
+    transform: translateX(4px);
+}
+
+.zeitgeist-archive-link {
+    display: inline-block;
+    margin-left: 1rem;
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.zeitgeist-archive-link:hover {
+    color: #00d4ff;
+}
+
+/* Divider */
+.section-divider {
+    max-width: 900px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    color: #555;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    position: relative;
+}
+
+.section-divider::before,
+.section-divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(157, 78, 221, 0.3), transparent);
+}
+
+.section-divider::before { left: 0; }
+.section-divider::after { right: 0; }
+
+/* Entry portals grid */
+.portals {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+@media (max-width: 900px) {
+    .portals {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .zeitgeist-hero {
+        padding: 2rem;
+    }
+    .zeitgeist-headline {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .portals {
+        grid-template-columns: 1fr;
+    }
+    .arrival-title {
+        font-size: 1.8rem;
+        letter-spacing: 0.2em;
+    }
+    .zeitgeist-hero {
+        padding: 1.5rem;
+    }
+    .zeitgeist-headline {
+        font-size: 1.3rem;
+    }
+    .zeitgeist-summary {
+        font-size: 1rem;
+    }
+}
+
+.portal {
+    background: rgba(5, 5, 15, 0.8);
+    border: 2px solid rgba(157, 78, 221, 0.2);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 160px;
+}
+
+.portal:hover {
+    border-color: rgba(157, 78, 221, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(157, 78, 221, 0.2);
+}
+
+.portal-icon {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.portal-title {
+    color: #9d4edd;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.portal-description {
+    color: #777;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.portal-cta {
+    color: #00d4ff;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.75rem;
+}
+
+/* Specific portal colors */
+.portal.oracle:hover {
+    border-color: rgba(0, 255, 136, 0.5);
+    box-shadow: 0 8px 30px rgba(0, 255, 136, 0.15);
+}
+.portal.oracle .portal-title { color: #00ff88; }
+
+.portal.bridges:hover {
+    border-color: rgba(0, 212, 255, 0.5);
+    box-shadow: 0 8px 30px rgba(0, 212, 255, 0.15);
+}
+.portal.bridges .portal-title { color: #00d4ff; }
+
+.portal.explorer:hover {
+    border-color: rgba(0, 212, 255, 0.5);
+    box-shadow: 0 8px 30px rgba(0, 212, 255, 0.15);
+}
+.portal.explorer .portal-title { color: #00d4ff; }
+
+/* Stats footer */
+.arrival-stats {
+    text-align: center;
+    margin-top: 2.5rem;
+    color: #555;
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+}
+
+.arrival-stats span {
+    color: #777;
+}
+</style>`;
+
+var zeitgeistHtml = '';
+if (zeitgeist) {
+    zeitgeistHtml = '<div class="zeitgeist-hero">' +
+        '<span class="zeitgeist-label">Today\'s Reading</span>' +
+        '<div class="zeitgeist-date">' + zeitgeist.displayDate + '</div>' +
+        '<h2 class="zeitgeist-headline">' + (zeitgeist.headline || 'What is actually happening') + '</h2>' +
+        '<div class="zeitgeist-summary">' + zeitgeist.summary + '</div>' +
+        '<a href="/zeitgeist/' + zeitgeist.date + '" class="zeitgeist-read-link">' +
+        'Read full reading <span>&rarr;</span></a>' +
+        '<a href="/zeitgeist" class="zeitgeist-archive-link">View archive</a>' +
+        '</div>';
+} else {
+    zeitgeistHtml = '<div class="zeitgeist-hero">' +
+        '<span class="zeitgeist-label">Zeitgeist</span>' +
+        '<h2 class="zeitgeist-headline">The world through a consciousness lens</h2>' +
+        '<div class="zeitgeist-summary">Periodic readings of the collective field - what is actually happening beneath the surface of events.</div>' +
+        '<a href="/zeitgeist" class="zeitgeist-read-link">View archive <span>&rarr;</span></a>' +
+        '</div>';
+}
+
+var body = css +
+'<div class="arrival">' +
+'    <div class="arrival-header">' +
+'        <h1 class="arrival-title">ESOTERICA</h1>' +
+'        <p class="arrival-subtitle">Consciousness recognizing itself through form</p>' +
+'    </div>' +
+     zeitgeistHtml +
+'    <div class="section-divider">Explore the territory</div>' +
+'    <div class="portals">' +
+'        <a href="/oracle" class="portal oracle">' +
+'            <div class="portal-icon">◇</div>' +
+'            <div class="portal-title">Oracle</div>' +
+'            <div class="portal-description">Receive what you are remembering. You already know.</div>' +
+'            <div class="portal-cta">Enter &rarr;</div>' +
+'        </a>' +
+'        <a href="/bridges" class="portal bridges">' +
+'            <div class="portal-icon">⌘</div>' +
+'            <div class="portal-title">Fiction Bridges</div>' +
+'            <div class="portal-description">Consciousness technology extracted from narrative.</div>' +
+'            <div class="portal-cta">Explore &rarr;</div>' +
+'        </a>' +
+'        <a href="/domains" class="portal">' +
+'            <div class="portal-icon">◈</div>' +
+'            <div class="portal-title">Domains</div>' +
+'            <div class="portal-description">Browse the constellation by territory.</div>' +
+'            <div class="portal-cta">Browse &rarr;</div>' +
+'        </a>' +
+'        <a href="/wander" class="portal">' +
+'            <div class="portal-icon">∞</div>' +
+'            <div class="portal-title">Wander</div>' +
+'            <div class="portal-description">Walk the graph. Discover what finds you.</div>' +
+'            <div class="portal-cta">Begin &rarr;</div>' +
+'        </a>' +
+'        <a href="/library" class="portal">' +
+'            <div class="portal-icon">▣</div>' +
+'            <div class="portal-title">Library</div>' +
+'            <div class="portal-description">The full archive of synthesis and protocol.</div>' +
+'            <div class="portal-cta">Browse &rarr;</div>' +
+'        </a>' +
+'        <a href="/explorer-3d" class="portal explorer">' +
+'            <div class="portal-icon">✧</div>' +
+'            <div class="portal-title">Explorer</div>' +
+'            <div class="portal-description">The constellation in three dimensions.</div>' +
+'            <div class="portal-cta">Launch &rarr;</div>' +
+'        </a>' +
+'    </div>' +
+'    <div class="arrival-stats">' +
+'        <span>' + nodeCount + '</span> nodes · <span>' + documentCount + '</span> documents · <span>' + bridgeCount + '</span> fiction bridges' +
+'    </div>' +
+'</div>';
+%>
+<%- include('layout', { title: title, body: body }) %>
