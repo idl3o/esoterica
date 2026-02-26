@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-02-23T14:05:58.054Z",
+  "generated": "2026-02-26T10:29:16.748Z",
   "stats": {
-    "documentCount": 248,
-    "totalWords": 561333,
-    "totalReadingTime": 2364,
+    "documentCount": 249,
+    "totalWords": 563498,
+    "totalReadingTime": 2373,
     "categories": 16,
     "averageWordsPerDoc": 2263,
     "sourceCounts": {
-      "synthesis": 232,
+      "synthesis": 233,
       "extraction": 0,
       "translated": 16
     },
@@ -28,7 +28,7 @@
       "sessions": 6,
       "theoretical": 37,
       "time-as-consciousness-technology.md": 1,
-      "zeitgeist": 8,
+      "zeitgeist": 9,
       "translated": 16
     },
     "topTags": [
@@ -46,19 +46,19 @@
       },
       {
         "tag": "cosmic",
-        "count": 151
+        "count": 152
       },
       {
         "tag": "unity",
-        "count": 148
+        "count": 149
       },
       {
         "tag": "service",
-        "count": 141
+        "count": 142
       },
       {
         "tag": "source",
-        "count": 132
+        "count": 133
       },
       {
         "tag": "density",
@@ -117,11 +117,11 @@
         "count": 45
       },
       {
-        "tag": "singularity",
-        "count": 38
+        "tag": "breakthrough",
+        "count": 39
       },
       {
-        "tag": "breakthrough",
+        "tag": "singularity",
         "count": 38
       },
       {
@@ -24811,6 +24811,46 @@
         }
       ],
       "id": "zeitgeist-2026-02-23"
+    },
+    {
+      "path": "synthesis/zeitgeist/zeitgeist-2026-02-26.md",
+      "fileName": "zeitgeist-2026-02-26.md",
+      "source": "synthesis",
+      "category": "zeitgeist",
+      "channel": "",
+      "title": "ZEITGEIST — 26 February 2026",
+      "subtitle": "CURRENT",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "February 2026",
+      "excerpt": "*A reading of the present moment. Signal and processing integrated. Silence embedded. Scale honoured.*",
+      "tags": [
+        "service",
+        "cosmic",
+        "source",
+        "unity",
+        "breakthrough",
+        "zeitgeist"
+      ],
+      "quotes": [],
+      "wordCount": 2165,
+      "readingTime": 9,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "TECTONIC"
+        },
+        {
+          "level": 2,
+          "heading": "STATE"
+        }
+      ],
+      "id": "zeitgeist-2026-02-26"
     }
   ]
 }
