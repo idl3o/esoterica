@@ -72,6 +72,10 @@
     {
       "src": "oracle.html",
       "use": "@vercel/static"
+    },
+    {
+      "src": "library-index.json",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
@@ -102,6 +106,42 @@
     {
       "src": "/constellation/(.*)",
       "dest": "/constellation/$1"
+    },
+    {
+      "src": "/raw/distillations/(.*\\.md)",
+      "dest": "/distillations/$1"
+    },
+    {
+      "src": "/raw/synthesis/(.*\\.md)",
+      "dest": "/synthesis/$1"
+    },
+    {
+      "src": "/raw/protocols/(.*\\.md)",
+      "dest": "/protocols/$1"
+    },
+    {
+      "src": "/raw/seeds/(.*\\.md)",
+      "dest": "/seeds/$1"
+    },
+    {
+      "src": "/raw/traditions/(.*\\.md)",
+      "dest": "/traditions/$1"
+    },
+    {
+      "src": "/raw/translated/(.*\\.md)",
+      "dest": "/translated/$1"
+    },
+    {
+      "src": "/raw/extractions/(.*\\.md)",
+      "dest": "/extractions/$1"
+    },
+    {
+      "src": "/raw/fiction-bridges/(.*\\.md)",
+      "dest": "/fiction-bridges/$1"
+    },
+    {
+      "src": "/library-index.json",
+      "dest": "/library-index.json"
     },
     {
       "src": "/(.*)",

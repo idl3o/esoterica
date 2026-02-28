@@ -15,8 +15,8 @@ var body = `
     </div>
 
     <div class="card" style="max-width: 900px; margin: 0 auto;">
-        <article class="document-content" style="line-height: 1.8; color: #e0e0e0;">
-            ` + content + `
+        <article class="document-content" style="line-height: 1.8; color: #e0e0e0;" id="bridge-content">
+            <div style="text-align: center; padding: 3rem; color: #555;">Loading...</div>
         </article>
     </div>
 
@@ -136,6 +136,29 @@ var body = `
     font-weight: bold;
 }
 </style>
+
+<script src="https://cdn.jsdelivr.net/npm/marked@11/marked.min.js"></script>
+<script>
+(function() {
+    var slug = ${JSON.stringify(slug)};
+    var rawUrl = '/raw/fiction-bridges/' + slug + '.md';
+    var el = document.getElementById('bridge-content');
+
+    fetch(rawUrl)
+        .then(function(res) {
+            if (!res.ok) throw new Error('Not found');
+            return res.text();
+        })
+        .then(function(md) {
+            el.innerHTML = marked.parse(md);
+            var h1 = el.querySelector('h1');
+            if (h1) document.title = h1.textContent + ' | Esoterica';
+        })
+        .catch(function() {
+            el.innerHTML = '<div style="text-align:center;padding:3rem;"><h2 style="color:#ff6b6b;">Bridge Not Found</h2><p style="color:#888;">This bridge could not be loaded.</p><a href="/bridges" class="btn" style="margin-top:1rem;display:inline-block;">All Bridges</a></div>';
+        });
+})();
+</script>
 `;
 %>
 <%- include('layout', { title: title, body: body }) %>

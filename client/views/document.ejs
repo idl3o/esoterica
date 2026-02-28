@@ -1,6 +1,59 @@
 <%
-var body = `
-<style>
+// Build sidebar HTML using string concatenation (template literals with nested escapes break EJS)
+var sidebarHtml = '';
+
+if ((primaryNodes && primaryNodes.length > 0) || (relatedNodes && relatedNodes.length > 0)) {
+    sidebarHtml += '<div class="sidebar-section">';
+    sidebarHtml += '<div class="sidebar-title">Constellation Position</div>';
+
+    if (primaryNodes && primaryNodes.length > 0) {
+        sidebarHtml += '<div style="margin-bottom: 0.75rem;">';
+        sidebarHtml += '<div style="color: #888; font-size: 0.75rem; margin-bottom: 0.5rem;">PRIMARY</div>';
+        primaryNodes.forEach(function(n) {
+            sidebarHtml += '<a href="/node/' + n.id + '" class="node-tag primary">' + n.id.replace(/_/g, ' ') + '</a>';
+        });
+        sidebarHtml += '</div>';
+    }
+
+    if (relatedNodes && relatedNodes.length > 0) {
+        sidebarHtml += '<div>';
+        sidebarHtml += '<div style="color: #888; font-size: 0.75rem; margin-bottom: 0.5rem;">RELATED</div>';
+        sidebarHtml += '<div id="visible-nodes">';
+        relatedNodes.slice(0, 5).forEach(function(n) {
+            sidebarHtml += '<a href="/node/' + n.id + '" class="node-tag">' + n.id.replace(/_/g, ' ') + '</a>';
+        });
+        sidebarHtml += '</div>';
+        if (relatedNodes.length > 5) {
+            sidebarHtml += '<div id="hidden-nodes" class="hidden-nodes">';
+            relatedNodes.slice(5).forEach(function(n) {
+                sidebarHtml += '<a href="/node/' + n.id + '" class="node-tag">' + n.id.replace(/_/g, ' ') + '</a>';
+            });
+            sidebarHtml += '</div>';
+            sidebarHtml += '<div class="expand-toggle" onclick="document.getElementById(\'hidden-nodes\').classList.toggle(\'expanded\'); this.textContent = this.textContent.includes(\'+\') ? \'Show less\' : \'+ ' + (relatedNodes.length - 5) + ' more\';">+ ' + (relatedNodes.length - 5) + ' more</div>';
+        }
+        sidebarHtml += '</div>';
+    }
+    sidebarHtml += '</div>';
+}
+
+if (relatedDocuments && relatedDocuments.length > 0) {
+    sidebarHtml += '<div class="sidebar-section">';
+    sidebarHtml += '<div class="sidebar-title">Continue Exploring</div>';
+    relatedDocuments.forEach(function(doc) {
+        sidebarHtml += '<a href="/read/' + doc.path + '" class="related-doc">';
+        sidebarHtml += '<div class="related-doc-title">' + doc.title + '</div>';
+        sidebarHtml += '<div class="related-doc-meta">' + doc.readingTime + ' min';
+        if (doc.viaNode) sidebarHtml += ' &middot; via <span class="related-doc-via">' + doc.viaNode.replace(/_/g, ' ') + '</span>';
+        sidebarHtml += '</div></a>';
+    });
+    sidebarHtml += '</div>';
+}
+
+sidebarHtml += '<div class="sidebar-section" style="text-align: center;">';
+sidebarHtml += '<a href="/explorer-3d" class="btn" style="width: 100%; display: block;">View in Explorer</a>';
+sidebarHtml += '</div>';
+
+var css = `<style>
 .doc-layout {
     display: grid;
     grid-template-columns: 1fr 280px;
@@ -8,26 +61,12 @@ var body = `
     max-width: 1200px;
     margin: 0 auto;
 }
-
 @media (max-width: 900px) {
-    .doc-layout {
-        grid-template-columns: 1fr;
-    }
-    .constellation-sidebar {
-        order: -1;
-    }
+    .doc-layout { grid-template-columns: 1fr; }
+    .constellation-sidebar { order: -1; }
 }
-
-.doc-main {
-    min-width: 0;
-}
-
-.constellation-sidebar {
-    position: sticky;
-    top: 2rem;
-    height: fit-content;
-}
-
+.doc-main { min-width: 0; }
+.constellation-sidebar { position: sticky; top: 2rem; height: fit-content; }
 .sidebar-section {
     background: rgba(5, 5, 15, 0.8);
     border: 2px solid rgba(0, 212, 255, 0.2);
@@ -36,318 +75,90 @@ var body = `
     margin-bottom: 1.5rem;
     backdrop-filter: blur(15px);
 }
-
 .sidebar-title {
-    color: #00d4ff;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    color: #00d4ff; font-size: 0.9rem; text-transform: uppercase;
+    letter-spacing: 0.1em; margin-bottom: 1rem;
+    display: flex; align-items: center; gap: 0.5rem;
 }
-
-.sidebar-title::before {
-    content: "◇";
-    color: #00ff88;
-}
-
+.sidebar-title::before { content: "◇"; color: #00ff88; }
 .node-tag {
-    display: inline-block;
-    padding: 0.3rem 0.6rem;
-    margin: 0.2rem;
-    background: rgba(157, 78, 221, 0.1);
-    border: 1px solid rgba(157, 78, 221, 0.3);
-    border-radius: 15px;
-    font-size: 0.8rem;
-    color: #9d4edd;
-    text-decoration: none;
-    transition: all 0.3s;
-    text-transform: capitalize;
+    display: inline-block; padding: 0.3rem 0.6rem; margin: 0.2rem;
+    background: rgba(157, 78, 221, 0.1); border: 1px solid rgba(157, 78, 221, 0.3);
+    border-radius: 15px; font-size: 0.8rem; color: #9d4edd;
+    text-decoration: none; transition: all 0.3s; text-transform: capitalize;
 }
-
-.node-tag:hover {
-    background: rgba(157, 78, 221, 0.2);
-    border-color: rgba(157, 78, 221, 0.6);
-    color: #00d4ff;
-}
-
-.node-tag.primary {
-    background: rgba(0, 255, 136, 0.1);
-    border-color: rgba(0, 255, 136, 0.3);
-    color: #00ff88;
-}
-
-.node-tag.primary:hover {
-    background: rgba(0, 255, 136, 0.2);
-    border-color: rgba(0, 255, 136, 0.6);
-}
-
+.node-tag:hover { background: rgba(157, 78, 221, 0.2); border-color: rgba(157, 78, 221, 0.6); color: #00d4ff; }
+.node-tag.primary { background: rgba(0, 255, 136, 0.1); border-color: rgba(0, 255, 136, 0.3); color: #00ff88; }
+.node-tag.primary:hover { background: rgba(0, 255, 136, 0.2); border-color: rgba(0, 255, 136, 0.6); }
 .related-doc {
-    display: block;
-    padding: 0.75rem;
-    margin-bottom: 0.5rem;
-    background: rgba(0, 0, 0, 0.3);
-    border-left: 3px solid rgba(0, 212, 255, 0.3);
-    text-decoration: none;
-    transition: all 0.3s;
+    display: block; padding: 0.75rem; margin-bottom: 0.5rem;
+    background: rgba(0, 0, 0, 0.3); border-left: 3px solid rgba(0, 212, 255, 0.3);
+    text-decoration: none; transition: all 0.3s;
 }
-
-.related-doc:hover {
-    background: rgba(0, 212, 255, 0.05);
-    border-left-color: #00d4ff;
-}
-
-.related-doc-title {
-    color: #e0e0e0;
-    font-size: 0.85rem;
-    line-height: 1.4;
-    margin-bottom: 0.3rem;
-}
-
-.related-doc-meta {
-    color: #666;
-    font-size: 0.75rem;
-}
-
-.related-doc-via {
-    color: #9d4edd;
-}
-
-.expand-toggle {
-    color: #888;
-    font-size: 0.8rem;
-    cursor: pointer;
-    padding: 0.5rem 0;
-    text-align: center;
-}
-
-.expand-toggle:hover {
-    color: #00d4ff;
-}
-
-.hidden-nodes {
-    display: none;
-}
-
-.hidden-nodes.expanded {
-    display: block;
-}
-
-/* Document content styles */
+.related-doc:hover { background: rgba(0, 212, 255, 0.05); border-left-color: #00d4ff; }
+.related-doc-title { color: #e0e0e0; font-size: 0.85rem; line-height: 1.4; margin-bottom: 0.3rem; }
+.related-doc-meta { color: #666; font-size: 0.75rem; }
+.related-doc-via { color: #9d4edd; }
+.expand-toggle { color: #888; font-size: 0.8rem; cursor: pointer; padding: 0.5rem 0; text-align: center; }
+.expand-toggle:hover { color: #00d4ff; }
+.hidden-nodes { display: none; }
+.hidden-nodes.expanded { display: block; }
 .document-content h1 {
-    color: #00ff88;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    color: #00ff88; font-size: 2.5rem; margin-bottom: 1rem;
     background: linear-gradient(135deg, #00d4ff 0%, #9d4edd 50%, #00ff88 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
-
 .document-content h2 {
-    color: #00d4ff;
-    font-size: 1.8rem;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid rgba(0,212,255,0.3);
+    color: #00d4ff; font-size: 1.8rem; margin-top: 2.5rem; margin-bottom: 1rem;
+    padding-bottom: 0.5rem; border-bottom: 2px solid rgba(0,212,255,0.3);
 }
+.document-content h3 { color: #9d4edd; font-size: 1.4rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+.document-content h4 { color: #00ff88; font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+.document-content p { margin-bottom: 1rem; }
+.document-content ul, .document-content ol { margin: 1rem 0 1rem 2rem; line-height: 1.8; }
+.document-content li { margin-bottom: 0.5rem; }
+.document-content code { background: rgba(0,0,0,0.5); padding: 0.2rem 0.5rem; border-radius: 3px; color: #00ff88; font-family: 'Courier New', monospace; }
+.document-content pre { background: rgba(0,0,0,0.5); border: 2px solid rgba(0,212,255,0.3); border-radius: 8px; padding: 1.5rem; overflow-x: auto; margin: 1.5rem 0; }
+.document-content pre code { background: none; padding: 0; }
+.document-content blockquote { border-left: 4px solid #00ff88; background: rgba(0,255,136,0.05); padding: 1rem 1.5rem; margin: 1.5rem 0; font-style: italic; color: #aaa; }
+.document-content a { color: #00d4ff; text-decoration: none; border-bottom: 1px solid rgba(0,212,255,0.3); transition: all 0.3s; }
+.document-content a:hover { color: #00ff88; border-bottom-color: #00ff88; }
+.document-content strong { color: #00ff88; font-weight: 600; }
+.document-content em { color: #9d4edd; }
+.document-content hr { border: none; border-top: 2px solid rgba(0,212,255,0.3); margin: 2rem 0; }
+.document-content table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+.document-content th, .document-content td { padding: 0.75rem; border: 1px solid rgba(0,212,255,0.3); }
+.document-content th { background: rgba(0,212,255,0.1); color: #00d4ff; font-weight: bold; }
+.doc-nav { text-align: center; margin: 3rem 0; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+</style>`;
 
-.document-content h3 {
-    color: #9d4edd;
-    font-size: 1.4rem;
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
-}
-
-.document-content h4 {
-    color: #00ff88;
-    font-size: 1.2rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-.document-content p {
-    margin-bottom: 1rem;
-}
-
-.document-content ul,
-.document-content ol {
-    margin: 1rem 0 1rem 2rem;
-    line-height: 1.8;
-}
-
-.document-content li {
-    margin-bottom: 0.5rem;
-}
-
-.document-content code {
-    background: rgba(0,0,0,0.5);
-    padding: 0.2rem 0.5rem;
-    border-radius: 3px;
-    color: #00ff88;
-    font-family: 'Courier New', monospace;
-}
-
-.document-content pre {
-    background: rgba(0,0,0,0.5);
-    border: 2px solid rgba(0,212,255,0.3);
-    border-radius: 8px;
-    padding: 1.5rem;
-    overflow-x: auto;
-    margin: 1.5rem 0;
-}
-
-.document-content pre code {
-    background: none;
-    padding: 0;
-}
-
-.document-content blockquote {
-    border-left: 4px solid #00ff88;
-    background: rgba(0,255,136,0.05);
-    padding: 1rem 1.5rem;
-    margin: 1.5rem 0;
-    font-style: italic;
-    color: #aaa;
-}
-
-.document-content a {
-    color: #00d4ff;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(0,212,255,0.3);
-    transition: all 0.3s;
-}
-
-.document-content a:hover {
-    color: #00ff88;
-    border-bottom-color: #00ff88;
-}
-
-.document-content strong {
-    color: #00ff88;
-    font-weight: 600;
-}
-
-.document-content em {
-    color: #9d4edd;
-}
-
-.document-content hr {
-    border: none;
-    border-top: 2px solid rgba(0,212,255,0.3);
-    margin: 2rem 0;
-}
-
-.document-content table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1.5rem 0;
-}
-
-.document-content th,
-.document-content td {
-    padding: 0.75rem;
-    border: 1px solid rgba(0,212,255,0.3);
-}
-
-.document-content th {
-    background: rgba(0,212,255,0.1);
-    color: #00d4ff;
-    font-weight: bold;
-}
-
-.doc-nav {
-    text-align: center;
-    margin: 3rem 0;
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-</style>
-
-<div class="container">
-    <div style="margin-bottom: 2rem;">
-        <a href="/library" style="color: #00d4ff; text-decoration: none; font-size: 0.95rem;">
-            ← Back to Library
-        </a>
-    </div>
-
-    <div class="doc-layout">
-        <div class="doc-main">
-            <div class="card">
-                <article class="document-content" style="line-height: 1.8; color: #e0e0e0;">
-                    ${content}
-                </article>
-            </div>
-        </div>
-
-        <aside class="constellation-sidebar">
-            ${(primaryNodes && primaryNodes.length > 0) || (relatedNodes && relatedNodes.length > 0) ? \`
-            <div class="sidebar-section">
-                <div class="sidebar-title">Constellation Position</div>
-                ${primaryNodes && primaryNodes.length > 0 ? \`
-                <div style="margin-bottom: 0.75rem;">
-                    <div style="color: #888; font-size: 0.75rem; margin-bottom: 0.5rem;">PRIMARY</div>
-                    ${primaryNodes.map(n => \`
-                        <a href="/node/\${n.id}" class="node-tag primary">\${n.id.replace(/_/g, ' ')}</a>
-                    \`).join('')}
-                </div>
-                \` : ''}
-                ${relatedNodes && relatedNodes.length > 0 ? \`
-                <div>
-                    <div style="color: #888; font-size: 0.75rem; margin-bottom: 0.5rem;">RELATED</div>
-                    <div id="visible-nodes">
-                        ${relatedNodes.slice(0, 5).map(n => \`
-                            <a href="/node/\${n.id}" class="node-tag">\${n.id.replace(/_/g, ' ')}</a>
-                        \`).join('')}
-                    </div>
-                    ${relatedNodes.length > 5 ? \`
-                    <div id="hidden-nodes" class="hidden-nodes">
-                        ${relatedNodes.slice(5).map(n => \`
-                            <a href="/node/\${n.id}" class="node-tag">\${n.id.replace(/_/g, ' ')}</a>
-                        \`).join('')}
-                    </div>
-                    <div class="expand-toggle" onclick="document.getElementById('hidden-nodes').classList.toggle('expanded'); this.textContent = this.textContent.includes('+') ? 'Show less' : '+ \${relatedNodes.length - 5} more';">
-                        + \${relatedNodes.length - 5} more
-                    </div>
-                    \` : ''}
-                </div>
-                \` : ''}
-            </div>
-            \` : ''}
-
-            ${relatedDocuments && relatedDocuments.length > 0 ? \`
-            <div class="sidebar-section">
-                <div class="sidebar-title">Continue Exploring</div>
-                ${relatedDocuments.map(doc => \`
-                    <a href="/read/\${doc.path}" class="related-doc">
-                        <div class="related-doc-title">\${doc.title}</div>
-                        <div class="related-doc-meta">
-                            \${doc.readingTime} min · via <span class="related-doc-via">\${doc.viaNode?.replace(/_/g, ' ')}</span>
-                        </div>
-                    </a>
-                \`).join('')}
-            </div>
-            \` : ''}
-
-            <div class="sidebar-section" style="text-align: center;">
-                <a href="/explorer-3d" class="btn" style="width: 100%; display: block;">
-                    View in Explorer
-                </a>
-            </div>
-        </aside>
-    </div>
-
-    <div class="doc-nav">
-        <a href="/oracle" class="btn">Receive Another</a>
-        <a href="/library" class="btn">Browse Library</a>
-        <a href="/domains" class="btn">Browse Domains</a>
-    </div>
-</div>
-`;
+var body = css +
+    '<div class="container">' +
+    '<div style="margin-bottom: 2rem;">' +
+    '<a href="/library" style="color: #00d4ff; text-decoration: none; font-size: 0.95rem;">&larr; Back to Library</a>' +
+    '</div>' +
+    '<div class="doc-layout">' +
+    '<div class="doc-main"><div class="card">' +
+    '<article class="document-content" style="line-height: 1.8; color: #e0e0e0;" id="doc-content">' +
+    '<div style="text-align: center; padding: 3rem; color: #555;">Loading...</div>' +
+    '</article></div></div>' +
+    '<aside class="constellation-sidebar">' + sidebarHtml + '</aside>' +
+    '</div>' +
+    '<div class="doc-nav">' +
+    '<a href="/oracle" class="btn">Receive Another</a>' +
+    '<a href="/library" class="btn">Browse Library</a>' +
+    '<a href="/domains" class="btn">Browse Domains</a>' +
+    '</div></div>' +
+    '<script src="https://cdn.jsdelivr.net/npm/marked@11/marked.min.js"><\/script>' +
+    '<script>' +
+    '(function(){' +
+    'var docPath=' + JSON.stringify(docPath) + ';' +
+    'var el=document.getElementById("doc-content");' +
+    'fetch("/raw/"+docPath)' +
+    '.then(function(r){if(!r.ok)throw new Error("Not found");return r.text()})' +
+    '.then(function(md){el.innerHTML=marked.parse(md);var h1=el.querySelector("h1");if(h1)document.title=h1.textContent+" | Esoterica";})' +
+    '.catch(function(){el.innerHTML=\'<div style="text-align:center;padding:3rem"><h2 style="color:#ff6b6b">Document Not Found</h2><p style="color:#888">This document could not be loaded.</p><a href="/library" class="btn" style="margin-top:1rem;display:inline-block">Browse Library</a></div>\';})' +
+    '})();' +
+    '<\/script>';
 %>
 <%- include('layout', { title: title, body: body }) %>

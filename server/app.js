@@ -29,6 +29,10 @@ app.use('/constellation', express.static(path.join(__dirname, '../constellation'
 app.use('/distillations', express.static(path.join(__dirname, '../distillations')));
 app.use('/synthesis', express.static(path.join(__dirname, '../synthesis')));
 
+// Raw markdown access — serves content files for client-side rendering
+// On Vercel, this is handled by vercel.json routes to static file builds
+app.use('/raw', express.static(path.join(__dirname, '..')));
+
 // Serve root-level files
 app.get('/synthesis-index.json', (req, res) => {
   res.sendFile(path.join(__dirname, '../synthesis-index.json'));
@@ -38,60 +42,49 @@ app.get('/oracle', (req, res) => {
   res.render('oracle', { title: 'Oracle' });
 });
 
-// Render any markdown as HTML (for oracle and library)
-app.get('/read/*', async (req, res) => {
-  try {
-    const docPath = req.params[0]; // e.g., "synthesis/archetypal/file.md"
-    const filePath = path.join(__dirname, '..', docPath);
-    const markdown = await fs.readFile(filePath, 'utf8');
-    const html = marked.parse(markdown);
+// Document reader — content loaded client-side from /raw/ static files
+// Sidebar data (constellation nodes, related docs) computed server-side from in-memory indexes
+app.get('/read/*', (req, res) => {
+  const docPath = req.params[0]; // e.g., "synthesis/archetypal/file.md"
+  const title = docPath.split('/').pop().replace('.md', '').replace(/-/g, ' ');
 
-    // Extract title from first heading
-    const titleMatch = markdown.match(/^#\s+(.+)$/m);
-    const title = titleMatch ? titleMatch[1] : docPath.split('/').pop().replace('.md', '');
+  // Get document ID from filename
+  const docId = docPath.split('/').pop().replace('.md', '');
 
-    // Get document ID from filename
-    const docId = docPath.split('/').pop().replace('.md', '');
+  // Get linked nodes for this document
+  const nodeLinks = documentLinks?.documentToNodes[docId] || { primary: [], related: [] };
 
-    // Get linked nodes for this document
-    const nodeLinks = documentLinks?.documentToNodes[docId] || { primary: [], related: [] };
+  // Enrich nodes with details
+  const enrichNodes = (nodeIds) => nodeIds.map(nodeId => {
+    const node = constellationData?.nodes[nodeId];
+    return node ? {
+      id: nodeId,
+      type: node.type,
+      essence: node.essence,
+      domain: getDomainForType(node.type)
+    } : { id: nodeId };
+  });
 
-    // Enrich nodes with details
-    const enrichNodes = (nodeIds) => nodeIds.map(nodeId => {
-      const node = constellationData?.nodes[nodeId];
-      return node ? {
-        id: nodeId,
-        type: node.type,
-        essence: node.essence,
-        domain: getDomainForType(node.type)
-      } : { id: nodeId };
-    });
-
-    // Get related documents via shared nodes
-    const relatedDocuments = [];
-    const seenDocs = new Set([docId]);
-    for (const nodeId of nodeLinks.primary.slice(0, 3)) {
-      const nodeDocs = documentLinks?.nodeToDocuments[nodeId] || [];
-      for (const doc of nodeDocs) {
-        if (!seenDocs.has(doc.id) && relatedDocuments.length < 6) {
-          seenDocs.add(doc.id);
-          relatedDocuments.push({ ...doc, viaNode: nodeId });
-        }
+  // Get related documents via shared nodes
+  const relatedDocuments = [];
+  const seenDocs = new Set([docId]);
+  for (const nodeId of nodeLinks.primary.slice(0, 3)) {
+    const nodeDocs = documentLinks?.nodeToDocuments[nodeId] || [];
+    for (const doc of nodeDocs) {
+      if (!seenDocs.has(doc.id) && relatedDocuments.length < 6) {
+        seenDocs.add(doc.id);
+        relatedDocuments.push({ ...doc, viaNode: nodeId });
       }
     }
-
-    res.render('document', {
-      title,
-      content: html,
-      docPath,
-      primaryNodes: enrichNodes(nodeLinks.primary),
-      relatedNodes: enrichNodes(nodeLinks.related.slice(0, 10)),
-      relatedDocuments
-    });
-  } catch (error) {
-    console.error('Error loading document:', error);
-    res.status(404).render('404', { title: 'Document Not Found' });
   }
+
+  res.render('document', {
+    title,
+    docPath,
+    primaryNodes: enrichNodes(nodeLinks.primary),
+    relatedNodes: enrichNodes(nodeLinks.related.slice(0, 10)),
+    relatedDocuments
+  });
 });
 
 // Load constellation data
@@ -568,29 +561,20 @@ app.get('/bridges', (req, res) => {
 });
 
 // Individual fiction bridge
-app.get('/bridges/:slug', async (req, res) => {
-  try {
-    const filePath = path.join(__dirname, '../fiction-bridges', `${req.params.slug}.md`);
-    const markdown = await fs.readFile(filePath, 'utf8');
-    const html = marked.parse(markdown);
-    const title = markdown.split('\n').find(l => l.startsWith('# '))?.replace(/^#\s*/, '') || req.params.slug;
+app.get('/bridges/:slug', (req, res) => {
+  const slug = req.params.slug;
+  const currentIndex = bridgesData.findIndex(b => b.slug === slug);
+  const bridge = bridgesData[currentIndex];
+  const title = bridge ? bridge.title : slug.replace(/-/g, ' ');
+  const prevBridge = currentIndex > 0 ? bridgesData[currentIndex - 1] : null;
+  const nextBridge = currentIndex < bridgesData.length - 1 ? bridgesData[currentIndex + 1] : null;
 
-    // Find current index for prev/next
-    const currentIndex = bridgesData.findIndex(b => b.slug === req.params.slug);
-    const prevBridge = currentIndex > 0 ? bridgesData[currentIndex - 1] : null;
-    const nextBridge = currentIndex < bridgesData.length - 1 ? bridgesData[currentIndex + 1] : null;
-
-    res.render('bridge-document', {
-      title,
-      content: html,
-      slug: req.params.slug,
-      prevBridge,
-      nextBridge
-    });
-  } catch (error) {
-    console.error('Error loading bridge:', error);
-    res.status(404).render('404', { title: 'Bridge Not Found' });
-  }
+  res.render('bridge-document', {
+    title,
+    slug,
+    prevBridge,
+    nextBridge
+  });
 });
 
 // Constellation explorer (interactive visualization)
@@ -671,87 +655,14 @@ app.get('/calculator', (req, res) => {
 });
 
 // Full library — all content directories
-// Prefers build-time library-index.json (required for Vercel), falls back to filesystem scan
+// Uses require() for the pre-built index so Vercel's NFT traces it into the bundle
 let libraryData = [];
-const loadLibrary = async () => {
-  // Try pre-built index first (generated by build-synthesis-index.js)
-  const indexPath = path.join(__dirname, '../library-index.json');
-  try {
-    const indexContent = await fs.readFile(indexPath, 'utf8');
-    libraryData = JSON.parse(indexContent);
-    console.log(`📚 Library loaded from index: ${libraryData.length} documents`);
-    return;
-  } catch (e) {
-    console.log('📚 No library-index.json found, scanning filesystem...');
-  }
-
-  // Fallback: scan filesystem (works for local dev)
-  const rootDir = path.join(__dirname, '..');
-
-  const sources = [
-    { dir: 'distillations', label: 'Distillations' },
-    { dir: 'synthesis', label: 'Synthesis' },
-    { dir: 'protocols', label: 'Protocols' },
-    { dir: 'seeds', label: 'Seeds' },
-    { dir: 'traditions', label: 'Traditions' },
-    { dir: 'translated', label: 'Translated' },
-    { dir: 'extractions', label: 'Extractions' },
-  ];
-
-  const scanDir = async (dirPath, relativeBase) => {
-    const results = [];
-    let entries;
-    try {
-      entries = await fs.readdir(dirPath, { withFileTypes: true });
-    } catch (e) {
-      return results; // Directory doesn't exist
-    }
-    for (const entry of entries) {
-      const fullPath = path.join(dirPath, entry.name);
-      const relativePath = path.join(relativeBase, entry.name);
-      if (entry.isDirectory()) {
-        if (entry.name === 'zeitgeist' || entry.name === 'personal') continue;
-        const subResults = await scanDir(fullPath, relativePath);
-        results.push(...subResults);
-      } else if (entry.name.endsWith('.md') && entry.name !== 'README.md') {
-        try {
-          const content = await fs.readFile(fullPath, 'utf8');
-          const lines = content.split('\n');
-          const title = lines.find(l => l.startsWith('# '))?.replace(/^#\s*/, '') || entry.name.replace('.md', '');
-          const subtitleLine = lines.find(l => l.startsWith('## '));
-          const subtitle = subtitleLine ? subtitleLine.replace(/^##\s*/, '') : '';
-          const wordCount = content.split(/\s+/).length;
-          const parts = relativePath.split(path.sep);
-          const category = parts.length > 2 ? parts[1] : '';
-          results.push({
-            title,
-            subtitle,
-            category,
-            wordCount,
-            readingTime: Math.ceil(wordCount / 250),
-            readPath: '/read/' + relativePath.replace(/\\/g, '/')
-          });
-        } catch (e) {
-          console.error(`📚 Error reading ${fullPath}: ${e.message}`);
-        }
-      }
-    }
-    return results;
-  };
-
-  const allDocs = [];
-  for (const source of sources) {
-    const dirPath = path.join(rootDir, source.dir);
-    const docs = await scanDir(dirPath, source.dir);
-    docs.forEach(doc => { doc.source = source.label; doc.sourceDir = source.dir; });
-    allDocs.push(...docs);
-  }
-
-  allDocs.sort((a, b) => a.title.localeCompare(b.title));
-  libraryData = allDocs;
-  console.log(`📚 Library loaded: ${allDocs.length} documents across ${sources.length} sources`);
-};
-loadLibrary();
+try {
+  libraryData = require('../library-index.json');
+  console.log(`📚 Library loaded: ${libraryData.length} documents`);
+} catch (e) {
+  console.log('📚 No library-index.json found — library will be empty');
+}
 
 app.get('/library', (req, res) => {
   // Group by source
@@ -768,17 +679,9 @@ app.get('/library', (req, res) => {
   });
 });
 
-// Keep legacy distillation routes working
-app.get('/library/:slug', async (req, res) => {
-  try {
-    const filePath = path.join(__dirname, '../distillations', `${req.params.slug}.md`);
-    const markdown = await fs.readFile(filePath, 'utf8');
-    const html = marked.parse(markdown);
-    const title = markdown.split('\n')[0]?.replace(/^#\s*/, '') || req.params.slug;
-    res.render('document', { title, content: html });
-  } catch (error) {
-    res.status(404).render('404', { title: 'Document Not Found' });
-  }
+// Keep legacy distillation routes working — redirect to /read/ path
+app.get('/library/:slug', (req, res) => {
+  res.redirect(301, `/read/distillations/${req.params.slug}.md`);
 });
 
 // About page
