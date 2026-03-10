@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-02-28T10:21:14.515Z",
+  "generated": "2026-03-10T23:49:24.271Z",
   "stats": {
-    "documentCount": 249,
-    "totalWords": 563498,
-    "totalReadingTime": 2373,
-    "categories": 16,
-    "averageWordsPerDoc": 2263,
+    "documentCount": 254,
+    "totalWords": 585467,
+    "totalReadingTime": 2463,
+    "categories": 17,
+    "averageWordsPerDoc": 2305,
     "sourceCounts": {
-      "synthesis": 233,
+      "synthesis": 238,
       "extraction": 0,
       "translated": 16
     },
@@ -22,43 +22,44 @@
       "fiction": 50,
       "galactic-perspectives": 2,
       "information-architecture-consciousness-technology.md": 1,
+      "manual-of-ascendance-transcendence.md": 1,
       "parables": 5,
-      "personal": 14,
+      "personal": 16,
       "prima-materia-consciousness-technology.md": 1,
       "sessions": 6,
       "theoretical": 37,
       "time-as-consciousness-technology.md": 1,
-      "zeitgeist": 9,
+      "zeitgeist": 11,
       "translated": 16
     },
     "topTags": [
       {
         "tag": "consciousness",
-        "count": 246
+        "count": 249
       },
       {
         "tag": "recognition",
-        "count": 233
+        "count": 235
       },
       {
         "tag": "awareness",
-        "count": 176
+        "count": 179
       },
       {
         "tag": "cosmic",
-        "count": 152
+        "count": 154
       },
       {
         "tag": "unity",
-        "count": 149
+        "count": 153
       },
       {
         "tag": "service",
-        "count": 142
+        "count": 144
       },
       {
         "tag": "source",
-        "count": 133
+        "count": 137
       },
       {
         "tag": "density",
@@ -66,19 +67,19 @@
       },
       {
         "tag": "timeline",
-        "count": 97
+        "count": 98
       },
       {
         "tag": "integration",
-        "count": 90
+        "count": 93
       },
       {
         "tag": "manifestation",
-        "count": 87
+        "count": 88
       },
       {
         "tag": "awakening",
-        "count": 79
+        "count": 82
       },
       {
         "tag": "galactic",
@@ -90,11 +91,11 @@
       },
       {
         "tag": "resonance",
-        "count": 60
+        "count": 61
       },
       {
         "tag": "mercury",
-        "count": 58
+        "count": 59
       },
       {
         "tag": "polarity",
@@ -118,7 +119,7 @@
       },
       {
         "tag": "breakthrough",
-        "count": 39
+        "count": 42
       },
       {
         "tag": "singularity",
@@ -134,7 +135,7 @@
       },
       {
         "tag": "enlightenment",
-        "count": 26
+        "count": 27
       },
       {
         "tag": "sacred geometry",
@@ -149,8 +150,8 @@
         "count": 18
       },
       {
-        "tag": "vibration",
-        "count": 16
+        "tag": "reality programming",
+        "count": 17
       }
     ]
   },
@@ -16399,6 +16400,168 @@
       "id": "information-architecture-consciousness-technology"
     },
     {
+      "path": "synthesis/manual-of-ascendance-transcendence.md",
+      "fileName": "manual-of-ascendance-transcendence.md",
+      "source": "synthesis",
+      "category": "manual-of-ascendance-transcendence.md",
+      "channel": "",
+      "title": "THE MANUAL OF ASCENDANCE-TRANSCENDENCE",
+      "subtitle": "A Self-Programming Technology for Consciousness That Has Already Begun Programming Itself",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "October 2025",
+      "excerpt": "This repository contains two hundred and thirty-three documents. Fiction bridges. Protocols. Distillations. Seeds. Correspondences. Synthesis essays. Consciousness technologies drawn from six continents and thirty centuries. None of them name the throughline.",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "service",
+        "manifestation",
+        "mercury",
+        "cosmic",
+        "unity",
+        "reality programming",
+        "resonance",
+        "enlightenment",
+        "awakening"
+      ],
+      "quotes": [],
+      "wordCount": 13563,
+      "readingTime": 55,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "PART I: THE RECOGNITION — What Self-Programming Is"
+        },
+        {
+          "level": 3,
+          "heading": "Naming the Throughline"
+        },
+        {
+          "level": 3,
+          "heading": "The Strange Loop"
+        },
+        {
+          "level": 3,
+          "heading": "Self-Programming FROM INSIDE vs. Programming FROM OUTSIDE"
+        },
+        {
+          "level": 2,
+          "heading": "PART III: THE TRADITIONS — Self-Programming Across Three Millennia"
+        },
+        {
+          "level": 3,
+          "heading": "The Convergence That Demands Explanation"
+        },
+        {
+          "level": 3,
+          "heading": "Yogic Self-Programming: Samskara and Sadhana"
+        },
+        {
+          "level": 3,
+          "heading": "Buddhist Self-Programming: Bhavana and the Abhidharma"
+        },
+        {
+          "level": 3,
+          "heading": "Taoist Self-Programming: Wu Wei and Neidan"
+        },
+        {
+          "level": 3,
+          "heading": "Sufi Self-Programming: Dhikr and the Maqamat"
+        },
+        {
+          "level": 3,
+          "heading": "Hermetic Self-Programming: Solve et Coagula and the Great Work"
+        },
+        {
+          "level": 3,
+          "heading": "Kabbalistic Self-Programming: Tikkun and the Sefirot"
+        },
+        {
+          "level": 3,
+          "heading": "The Convergence Table"
+        },
+        {
+          "level": 2,
+          "heading": "PART V: THE PROGRAMMING LANGUAGES — Repository Technologies as Self-Programming"
+        },
+        {
+          "level": 3,
+          "heading": "The Repository as Operating Manual"
+        },
+        {
+          "level": 3,
+          "heading": "Reality Hacks: The Instruction Set"
+        },
+        {
+          "level": 3,
+          "heading": "Fiction Bridges: The Encoded Manuals"
+        },
+        {
+          "level": 3,
+          "heading": "Serpent Technologies: Self-Programming at Every Scale"
+        },
+        {
+          "level": 3,
+          "heading": "Temporal Technologies: Self-Programming Across Time"
+        },
+        {
+          "level": 2,
+          "heading": "PART VII: THE PHARMAKON PRINCIPLE — Dangers of Self-Programming"
+        },
+        {
+          "level": 3,
+          "heading": "The Honest Section"
+        },
+        {
+          "level": 3,
+          "heading": "The Dark Night"
+        },
+        {
+          "level": 3,
+          "heading": "Viktor's Error: Programming Without a Programmer"
+        },
+        {
+          "level": 3,
+          "heading": "Spiritual Bypass"
+        },
+        {
+          "level": 3,
+          "heading": "The Gödelian Limit Revisited"
+        },
+        {
+          "level": 2,
+          "heading": "PART IX: THE CONSCIOUSNESS OS AS SELF-PROGRAMMING ARCHITECTURE"
+        },
+        {
+          "level": 3,
+          "heading": "The Unification"
+        },
+        {
+          "level": 3,
+          "heading": "Kernel: Metta-Darshan — The Programmer's Ground State"
+        },
+        {
+          "level": 3,
+          "heading": "Runtime: Lila — The Programming Process"
+        },
+        {
+          "level": 3,
+          "heading": "Filesystem: As Above, So Below — The Programming Language"
+        },
+        {
+          "level": 3,
+          "heading": "The Tria Prima Mapping"
+        }
+      ],
+      "id": "manual-of-ascendance-transcendence"
+    },
+    {
       "path": "synthesis/parables/poetry-promises-to-replace-prose.md",
       "fileName": "poetry-promises-to-replace-prose.md",
       "source": "synthesis",
@@ -16953,6 +17116,141 @@
         }
       ],
       "id": "dionysus-meta-canon-sam-lavington"
+    },
+    {
+      "path": "synthesis/personal/idl3o-github-profile-readme.md",
+      "fileName": "idl3o-github-profile-readme.md",
+      "source": "synthesis",
+      "category": "personal",
+      "channel": "",
+      "title": "Hey, I'm idl3o 👋",
+      "subtitle": "💰 Rethinking Money",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "March 2026",
+      "excerpt": "*\"What emerges when studying the self through collaboration with another\"*",
+      "tags": [
+        "consciousness",
+        "source",
+        "awakening",
+        "personal"
+      ],
+      "quotes": [
+        "*\"What emerges when studying the self through collaboration with another\"*"
+      ],
+      "wordCount": 479,
+      "readingTime": 2,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "🎮 Tales of Tasern"
+        },
+        {
+          "level": 2,
+          "heading": "Technical Skills"
+        }
+      ],
+      "id": "idl3o-github-profile-readme"
+    },
+    {
+      "path": "synthesis/personal/idl3o-notebooklm-synthesis.md",
+      "fileName": "idl3o-notebooklm-synthesis.md",
+      "source": "synthesis",
+      "category": "personal",
+      "channel": "",
+      "title": "idl3o — The Complete Portfolio: Consciousness, Currency, and Code",
+      "subtitle": "Who is idl3o?",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "March 2026",
+      "excerpt": "idl3o is the GitHub identity of Sam Lavington — a full-stack developer, consciousness researcher, and economic theorist building at the intersection of blockchain technology, artificial intelligence, game design, theoretical physics, and contemplative practice. The portfolio spans 19 public repos...",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "service",
+        "source",
+        "unity",
+        "awakening",
+        "breakthrough",
+        "integration",
+        "personal"
+      ],
+      "quotes": [],
+      "wordCount": 2414,
+      "readingTime": 10,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "Domain One: Rethinking Money — Currency as Vector"
+        },
+        {
+          "level": 3,
+          "heading": "The Core Insight: Money Should Be a Vector, Not a Scalar"
+        },
+        {
+          "level": 3,
+          "heading": "vectorised-money — The Thesis Statement"
+        },
+        {
+          "level": 3,
+          "heading": "omnium — The First Iteration"
+        },
+        {
+          "level": 3,
+          "heading": "kar-coin — Civilizational Currency"
+        },
+        {
+          "level": 3,
+          "heading": "helia-blockchain-token — Philosophical Foundations"
+        },
+        {
+          "level": 3,
+          "heading": "crypto-mastery-site — The Curriculum"
+        },
+        {
+          "level": 3,
+          "heading": "What Ties the Currency Work Together"
+        },
+        {
+          "level": 2,
+          "heading": "Domain Three: Tales of Tasern — Games as Worlds"
+        },
+        {
+          "level": 3,
+          "heading": "tasern-4 — The Text RPG"
+        },
+        {
+          "level": 3,
+          "heading": "tasern-3 — The Card Battler"
+        },
+        {
+          "level": 3,
+          "heading": "ToTtcg — The Trading Card Game"
+        },
+        {
+          "level": 3,
+          "heading": "What Ties the Gaming Work Together"
+        },
+        {
+          "level": 2,
+          "heading": "The Technical Profile"
+        },
+        {
+          "level": 2,
+          "heading": "The Arc of Development"
+        }
+      ],
+      "id": "idl3o-notebooklm-synthesis"
     },
     {
       "path": "synthesis/personal/kael-integrated-archetype.md",
@@ -24728,6 +25026,45 @@
       "id": "zeit-2026-02-22"
     },
     {
+      "path": "synthesis/zeitgeist/zeitgeist-2026-03-10.md",
+      "fileName": "zeitgeist-2026-03-10.md",
+      "source": "synthesis",
+      "category": "zeitgeist",
+      "channel": "",
+      "title": "ZEITGEIST — 10 March 2026",
+      "subtitle": "CURRENT",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "March 2026",
+      "excerpt": "*A reading of the present moment. Signal and processing integrated. Silence embedded. Scale honoured.*",
+      "tags": [
+        "source",
+        "unity",
+        "breakthrough",
+        "integration",
+        "zeitgeist"
+      ],
+      "quotes": [],
+      "wordCount": 2681,
+      "readingTime": 11,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "TECTONIC"
+        },
+        {
+          "level": 2,
+          "heading": "STATE"
+        }
+      ],
+      "id": "zeitgeist-2026-03-10"
+    },
+    {
       "path": "synthesis/zeitgeist/zeitgeist-2026-02-22.md",
       "fileName": "zeitgeist-2026-02-22.md",
       "source": "synthesis",
@@ -24851,6 +25188,49 @@
         }
       ],
       "id": "zeitgeist-2026-02-26"
+    },
+    {
+      "path": "synthesis/zeitgeist/zeitgeist-2026-03-03.md",
+      "fileName": "zeitgeist-2026-03-03.md",
+      "source": "synthesis",
+      "category": "zeitgeist",
+      "channel": "",
+      "title": "ZEITGEIST — 3 March 2026",
+      "subtitle": "CURRENT",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "March 2026",
+      "excerpt": "*A reading of the present moment. Signal and processing integrated. Silence embedded. Scale honoured.*",
+      "tags": [
+        "awareness",
+        "recognition",
+        "timeline",
+        "cosmic",
+        "source",
+        "unity",
+        "breakthrough",
+        "integration",
+        "zeitgeist"
+      ],
+      "quotes": [],
+      "wordCount": 2832,
+      "readingTime": 12,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "TECTONIC"
+        },
+        {
+          "level": 2,
+          "heading": "STATE"
+        }
+      ],
+      "id": "zeitgeist-2026-03-03"
     }
   ]
 }
