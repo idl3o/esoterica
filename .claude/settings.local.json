@@ -148,7 +148,12 @@
       "WebFetch(domain:vikingr.org)",
       "WebFetch(domain:esoterica.vercel.app)",
       "Bash(cd:*)",
-      "Bash(tail:*)"
+      "Bash(tail:*)",
+      "Bash(grep:*)",
+      "Bash(which whisper:*)",
+      "Bash(whisper \"/c/Users/Sam/Music/notebook lms/From_scalar_money_to_multidimensional_vectors.m4a\" --model medium --output_format txt --output_dir \"/c/Users/Sam/Music/notebook lms/\" --language en 2>&1)",
+      "Bash(whisper \"/c/Users/Sam/Music/notebook lms/From_scalar_money_to_multidimensional_vectors.m4a\" --model small --output_format txt --output_dir \"/c/Users/Sam/Music/notebook lms/\" --language en 2>&1)",
+      "Bash(gh api:*)"
     ],
     "deny": [],
     "ask": []
