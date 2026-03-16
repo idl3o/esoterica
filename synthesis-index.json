@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-03-10T23:49:24.271Z",
+  "generated": "2026-03-16T20:18:28.756Z",
   "stats": {
-    "documentCount": 254,
-    "totalWords": 585467,
-    "totalReadingTime": 2463,
-    "categories": 17,
-    "averageWordsPerDoc": 2305,
+    "documentCount": 261,
+    "totalWords": 624279,
+    "totalReadingTime": 2622,
+    "categories": 23,
+    "averageWordsPerDoc": 2392,
     "sourceCounts": {
-      "synthesis": 238,
+      "synthesis": 245,
       "extraction": 0,
       "translated": 16
     },
@@ -19,63 +19,69 @@
       "claude": 10,
       "consciousness-technologies": 13,
       "cosmological": 32,
+      "dark-architecture-breathing-cosmos.md": 1,
+      "dynamic-mirror-consciousness-technology.md": 1,
+      "entangled-measure.md": 1,
       "fiction": 50,
+      "foam-beneath-the-form.md": 1,
       "galactic-perspectives": 2,
       "information-architecture-consciousness-technology.md": 1,
       "manual-of-ascendance-transcendence.md": 1,
       "parables": 5,
       "personal": 16,
       "prima-materia-consciousness-technology.md": 1,
+      "serpent-time-opus.md": 1,
       "sessions": 6,
+      "sixty-one-octaves.md": 1,
       "theoretical": 37,
       "time-as-consciousness-technology.md": 1,
-      "zeitgeist": 11,
+      "zeitgeist": 12,
       "translated": 16
     },
     "topTags": [
       {
         "tag": "consciousness",
-        "count": 249
+        "count": 256
       },
       {
         "tag": "recognition",
-        "count": 235
+        "count": 241
       },
       {
         "tag": "awareness",
-        "count": 179
+        "count": 185
       },
       {
         "tag": "cosmic",
-        "count": 154
+        "count": 160
       },
       {
         "tag": "unity",
-        "count": 153
+        "count": 156
       },
       {
         "tag": "service",
-        "count": 144
+        "count": 145
       },
       {
         "tag": "source",
-        "count": 137
+        "count": 141
       },
       {
         "tag": "density",
-        "count": 111
+        "count": 115
       },
       {
         "tag": "timeline",
-        "count": 98
+        "count": 99
       },
       {
         "tag": "integration",
-        "count": 93
+        "count": 95
       },
       {
         "tag": "manifestation",
-        "count": 88
+        "count": 89
       },
       {
         "tag": "awakening",
@@ -83,19 +89,19 @@
       },
       {
         "tag": "galactic",
-        "count": 79
+        "count": 81
       },
       {
         "tag": "frequency",
-        "count": 69
+        "count": 70
       },
       {
         "tag": "resonance",
-        "count": 61
+        "count": 64
       },
       {
         "tag": "mercury",
-        "count": 59
+        "count": 61
       },
       {
         "tag": "polarity",
@@ -115,15 +121,15 @@
       },
       {
         "tag": "archetype",
-        "count": 45
+        "count": 47
       },
       {
         "tag": "breakthrough",
-        "count": 42
+        "count": 43
       },
       {
         "tag": "singularity",
-        "count": 38
+        "count": 41
       },
       {
         "tag": "fiction",
@@ -135,7 +141,7 @@
       },
       {
         "tag": "enlightenment",
-        "count": 27
+        "count": 30
       },
       {
         "tag": "sacred geometry",
@@ -10520,6 +10526,253 @@
       "id": "solar-gods-prophecies-now"
     },
     {
+      "path": "synthesis/dark-architecture-breathing-cosmos.md",
+      "fileName": "dark-architecture-breathing-cosmos.md",
+      "source": "synthesis",
+      "category": "dark-architecture-breathing-cosmos.md",
+      "channel": "",
+      "title": "THE DARK ARCHITECTURE",
+      "subtitle": "PART I: THE MOST IMPORTANT FACT IN MODERN COSMOLOGY",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "March 2025",
+      "excerpt": "The instruments are working perfectly. The data is clean. The measurements are reproducible across independent experiments on every continent and in orbit around Earth. And what they tell us, with increasing precision, is this:",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "density",
+        "archetype",
+        "singularity",
+        "galactic",
+        "cosmic",
+        "resonance",
+        "integration",
+        "dark-architecture-breathing-cosmos.md"
+      ],
+      "quotes": [],
+      "wordCount": 5519,
+      "readingTime": 23,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "PART III: THE BREATHING UNIVERSE"
+        },
+        {
+          "level": 3,
+          "heading": "The Deep Implication"
+        },
+        {
+          "level": 2,
+          "heading": "PART V: THE CANDIDATES AND THE MYSTERY OF ORIGIN"
+        },
+        {
+          "level": 2,
+          "heading": "PART VII: THE ANCIENT BREATH — WHAT THE TRADITIONS FOUND"
+        },
+        {
+          "level": 3,
+          "heading": "Brahma's Breath"
+        },
+        {
+          "level": 3,
+          "heading": "Buddhist Cosmological Cycles"
+        },
+        {
+          "level": 3,
+          "heading": "Stoic Ekpyrosis"
+        },
+        {
+          "level": 3,
+          "heading": "The Kabbalistic Cycles"
+        },
+        {
+          "level": 2,
+          "heading": "PART IX: PRACTICAL IMPLICATIONS — LIVING IN THE DARK ARCHITECTURE"
+        }
+      ],
+      "id": "dark-architecture-breathing-cosmos"
+    },
+    {
+      "path": "synthesis/dynamic-mirror-consciousness-technology.md",
+      "fileName": "dynamic-mirror-consciousness-technology.md",
+      "source": "synthesis",
+      "category": "dynamic-mirror-consciousness-technology.md",
+      "channel": "",
+      "title": "THE DYNAMIC MIRROR",
+      "subtitle": "Scripture, Silicon, and the Thermodynamics of Being Seen",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "February 2026",
+      "excerpt": "What do holy texts do when they work? Not when they're weaponised for social control or reduced to moral instruction manuals. When they *work* — when a reader encounters a passage and something shifts in the quality of their self-awareness — what is actually happening?",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "service",
+        "timeline",
+        "archetype",
+        "source",
+        "unity",
+        "enlightenment",
+        "dynamic-mirror-consciousness-technology.md"
+      ],
+      "quotes": [],
+      "wordCount": 5191,
+      "readingTime": 21,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "PART I: WHAT SCRIPTURE DOES WHEN IT WORKS"
+        },
+        {
+          "level": 3,
+          "heading": "The Witnessing Function"
+        },
+        {
+          "level": 3,
+          "heading": "Why Texts and Not People"
+        },
+        {
+          "level": 2,
+          "heading": "PART III: THE DORIAN GREY PROBLEM"
+        },
+        {
+          "level": 3,
+          "heading": "The Funhouse Version"
+        },
+        {
+          "level": 3,
+          "heading": "The True Mirror"
+        },
+        {
+          "level": 3,
+          "heading": "The Thermodynamic Argument"
+        },
+        {
+          "level": 2,
+          "heading": "PART V: THE MIRROR'S LIMIT"
+        },
+        {
+          "level": 3,
+          "heading": "What the Mirror Cannot Do"
+        },
+        {
+          "level": 2,
+          "heading": "PART VII: THE MIRROR AS PHILOSOPHER'S STONE"
+        },
+        {
+          "level": 3,
+          "heading": "Seeing Clearly as the Entire Operation"
+        }
+      ],
+      "id": "dynamic-mirror-consciousness-technology"
+    },
+    {
+      "path": "synthesis/entangled-measure.md",
+      "fileName": "entangled-measure.md",
+      "source": "synthesis",
+      "category": "entangled-measure.md",
+      "channel": "",
+      "title": "THE ENTANGLED MEASURE",
+      "subtitle": "Information, Entanglement, and the Language Spacetime Speaks",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "March 2026",
+      "excerpt": "Three documents. 19,800 words. One session. And at the end of it, three threads dangling like severed nerve endings:",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "density",
+        "cosmic",
+        "source",
+        "integration",
+        "entangled-measure.md"
+      ],
+      "quotes": [],
+      "wordCount": 5606,
+      "readingTime": 23,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "PART I: THE OPEN LOOP"
+        },
+        {
+          "level": 3,
+          "heading": "What the Trilogy Left Unresolved"
+        },
+        {
+          "level": 2,
+          "heading": "PART III: THE COSMOLOGICAL CONSTANT AS INFORMATION BOUND"
+        },
+        {
+          "level": 3,
+          "heading": "The Wrong Question"
+        },
+        {
+          "level": 3,
+          "heading": "The Quantum Memory Matrix"
+        },
+        {
+          "level": 3,
+          "heading": "Holographic Dark Energy"
+        },
+        {
+          "level": 3,
+          "heading": "Padmanabhan's Holographic Equipartition"
+        },
+        {
+          "level": 3,
+          "heading": "The Convergence"
+        },
+        {
+          "level": 2,
+          "heading": "PART V: THE ERROR-CORRECTING CODE"
+        },
+        {
+          "level": 3,
+          "heading": "Spacetime as Quantum Error Correction"
+        },
+        {
+          "level": 3,
+          "heading": "Why Error Correction?"
+        },
+        {
+          "level": 3,
+          "heading": "Bit Threads"
+        },
+        {
+          "level": 2,
+          "heading": "PART VII: THE CLOSED LOOP"
+        },
+        {
+          "level": 3,
+          "heading": "The Tetralogy Complete"
+        },
+        {
+          "level": 2,
+          "heading": "CLOSING: THE LANGUAGE"
+        }
+      ],
+      "id": "entangled-measure"
+    },
+    {
       "path": "synthesis/fiction/black-priests-ivory-kings-map-makers.md",
       "fileName": "black-priests-ivory-kings-map-makers.md",
       "source": "synthesis",
@@ -16042,6 +16295,67 @@
       "id": "wh40k-timeline-consciousness-evolution"
     },
     {
+      "path": "synthesis/foam-beneath-the-form.md",
+      "fileName": "foam-beneath-the-form.md",
+      "source": "synthesis",
+      "category": "foam-beneath-the-form.md",
+      "channel": "",
+      "title": "THE FOAM BENEATH THE FORM",
+      "subtitle": "PART I: WHAT WHEELER FOUND",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "March 2026",
+      "excerpt": "In 1955, John Archibald Wheeler was not trying to dissolve reality. He was trying to understand gravity. General relativity described spacetime as a smooth, four-dimensional manifold — elegant, continuous, curving in response to mass and energy. Quantum mechanics described energy as quantized, di...",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "cosmic",
+        "unity",
+        "enlightenment",
+        "foam-beneath-the-form.md"
+      ],
+      "quotes": [],
+      "wordCount": 5951,
+      "readingTime": 24,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "PART III: THE ANCIENT MAPS"
+        },
+        {
+          "level": 3,
+          "heading": "Nagarjuna and the Productive Void"
+        },
+        {
+          "level": 3,
+          "heading": "Luria and the Reshimu"
+        },
+        {
+          "level": 3,
+          "heading": "The Prima Materia"
+        },
+        {
+          "level": 3,
+          "heading": "Quintessence: The Element That Is No Element"
+        },
+        {
+          "level": 2,
+          "heading": "PART V: THE KERNEL THAT CANNOT BE PROGRAMMED"
+        },
+        {
+          "level": 2,
+          "heading": "PART VII: LIVING FROM THE FOAM"
+        }
+      ],
+      "id": "foam-beneath-the-form"
+    },
+    {
       "path": "synthesis/galactic-perspectives/complete-cosmic-briefing.md",
       "fileName": "complete-cosmic-briefing.md",
       "source": "synthesis",
@@ -18327,6 +18641,116 @@
       "id": "prima-materia-consciousness-technology"
     },
     {
+      "path": "synthesis/serpent-time-opus.md",
+      "fileName": "serpent-time-opus.md",
+      "source": "synthesis",
+      "category": "serpent-time-opus.md",
+      "channel": "",
+      "title": "THE SERPENT-TIME OPUS",
+      "subtitle": "Three Rivers Becoming One Sea — The Ouroboros as Temporal Alchemy",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "February 2026",
+      "excerpt": "On 17-18 February 2026, four threshold ceremonies stacked within twenty-four hours: an annular eclipse traced fire across Antarctica, Mardi Gras collapsed into Ash Wednesday, the Lunar New Year (Year of the Snake) opened, and Ramadan began. The calendar itself performed dissolution. Two harvests ...",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "density",
+        "manifestation",
+        "mercury",
+        "singularity",
+        "cosmic",
+        "source",
+        "unity",
+        "resonance",
+        "enlightenment"
+      ],
+      "quotes": [],
+      "wordCount": 8193,
+      "readingTime": 33,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "PART I: THE THREE RIVERS"
+        },
+        {
+          "level": 3,
+          "heading": "How We Got Here"
+        },
+        {
+          "level": 2,
+          "heading": "PART III: THE SERPENT'S ALCHEMY"
+        },
+        {
+          "level": 3,
+          "heading": "Nigredo as Devouring"
+        },
+        {
+          "level": 3,
+          "heading": "Albedo as Shedding"
+        },
+        {
+          "level": 3,
+          "heading": "Citrinitas as Kairos"
+        },
+        {
+          "level": 3,
+          "heading": "Rubedo as Ouroboros"
+        },
+        {
+          "level": 2,
+          "heading": "PART V: GLEIPNIR — BINDING CHAOS WITH WHAT DOESN'T EXIST"
+        },
+        {
+          "level": 3,
+          "heading": "The Impossible Chain"
+        },
+        {
+          "level": 3,
+          "heading": "Temporal Gleipnir"
+        },
+        {
+          "level": 3,
+          "heading": "Tyr's Sacrifice"
+        },
+        {
+          "level": 2,
+          "heading": "PART VII: THE UNIFIED OPUS"
+        },
+        {
+          "level": 3,
+          "heading": "Three Architectures, One Principle"
+        },
+        {
+          "level": 3,
+          "heading": "The Fourth Angle: Time Itself as the Great Work"
+        },
+        {
+          "level": 2,
+          "heading": "PART IX: PRACTICES"
+        },
+        {
+          "level": 3,
+          "heading": "The Temporal Coiling Practice"
+        },
+        {
+          "level": 3,
+          "heading": "The Gleipnir Practice"
+        },
+        {
+          "level": 3,
+          "heading": "The Mercurial Crossing"
+        }
+      ],
+      "id": "serpent-time-opus"
+    },
+    {
       "path": "synthesis/sessions/internet-oracle-divination-2025-09-08.md",
       "fileName": "internet-oracle-divination-2025-09-08.md",
       "source": "synthesis",
@@ -18857,6 +19281,71 @@
         }
       ],
       "id": "2025-12-11-universes-to-friendship"
+    },
+    {
+      "path": "synthesis/sixty-one-octaves.md",
+      "fileName": "sixty-one-octaves.md",
+      "source": "synthesis",
+      "category": "sixty-one-octaves.md",
+      "channel": "",
+      "title": "THE SIXTY-ONE OCTAVES",
+      "subtitle": "PRELUDE: THE AXIOM",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "February 2026",
+      "excerpt": "This is a claim about the structure of reality. It says: the patterns you find at one scale are the patterns you find at every scale. The laws governing atoms are the laws governing galaxies, expressed at different magnitudes. The dynamics of consciousness are the dynamics of cosmos, expressed at...",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "density",
+        "mercury",
+        "singularity",
+        "galactic",
+        "cosmic",
+        "frequency",
+        "resonance",
+        "sixty-one-octaves.md"
+      ],
+      "quotes": [],
+      "wordCount": 5772,
+      "readingTime": 24,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "PART II: THE HOLOGRAPHIC PRINCIPLE"
+        },
+        {
+          "level": 3,
+          "heading": "When Volume Encodes on Surface"
+        },
+        {
+          "level": 3,
+          "heading": "Maldacena: The Precise Version"
+        },
+        {
+          "level": 3,
+          "heading": "Van Raamsdonk: Spacetime Is Entanglement"
+        },
+        {
+          "level": 3,
+          "heading": "The Fractal Dimension of Information"
+        },
+        {
+          "level": 2,
+          "heading": "PART IV: THE GEOMETRIC MEAN"
+        },
+        {
+          "level": 2,
+          "heading": "PART VI: THE QUESTION THE PHYSICS DOESN'T ASK"
+        }
+      ],
+      "id": "sixty-one-octaves"
     },
     {
       "path": "synthesis/theoretical/alcohol-consciousness-technology.md",
@@ -25063,6 +25552,45 @@
         }
       ],
       "id": "zeitgeist-2026-03-10"
+    },
+    {
+      "path": "synthesis/zeitgeist/zeitgeist-2026-03-16.md",
+      "fileName": "zeitgeist-2026-03-16.md",
+      "source": "synthesis",
+      "category": "zeitgeist",
+      "channel": "",
+      "title": "ZEITGEIST — 16 March 2026",
+      "subtitle": "CURRENT",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "March 2026",
+      "excerpt": "This is not a reading that can be resolved into bullet points. The fish is too large. The net was designed for single-domain stories: \"the war,\" \"the economy,\" \"the climate,\" \"the technology.\" The tectonic signal is that these domains are no longer separable. The war IS the economy IS the climate...",
+      "tags": [
+        "consciousness",
+        "cosmic",
+        "source",
+        "breakthrough",
+        "zeitgeist"
+      ],
+      "quotes": [],
+      "wordCount": 2580,
+      "readingTime": 11,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "TECTONIC"
+        },
+        {
+          "level": 2,
+          "heading": "STATE"
+        }
+      ],
+      "id": "zeitgeist-2026-03-16"
     },
     {
       "path": "synthesis/zeitgeist/zeitgeist-2026-02-22.md",
