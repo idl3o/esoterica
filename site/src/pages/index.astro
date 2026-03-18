@@ -1,10 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
-import ZeitgeistCard from '../components/ZeitgeistCard.astro';
-import { getLatestZeitgeist } from '../lib/zeitgeist';
+import { loadZeitgeist } from '../lib/zeitgeist';
 import { loadLibraryIndex } from '../lib/content';
 
-const latest = getLatestZeitgeist();
+const readings = loadZeitgeist();
 
 // Oracle document list
 const docs = loadLibraryIndex().map(d => ({
@@ -67,10 +66,29 @@ const docs = loadLibraryIndex().map(d => ({
       </div>
     </div>
 
-    <!-- Zeitgeist pulse (always visible below) -->
-    {latest && (
+    <!-- Zeitgeist archive -->
+    {readings.length > 0 && (
       <div class="w-full max-w-2xl mt-12 animate-fade-in">
-        <ZeitgeistCard reading={latest} />
+        <div class="text-xs uppercase tracking-label text-green mb-4 text-center">Zeitgeist Archive</div>
+        <div class="flex flex-col gap-2">
+          {readings.map((r, i) => (
+            <a href={`/zeitgeist/${r.date}`}
+               class="glass px-5 py-3 transition-lift hover:border-cyan-glow group flex items-baseline gap-3">
+              <span class="text-xs text-text-muted shrink-0 tabular-nums">{r.date}</span>
+              <span class:list={[
+                "text-sm transition-colors duration-300 truncate",
+                i === 0 ? "text-cyan group-hover:text-green" : "text-text-secondary group-hover:text-cyan"
+              ]}>
+                {r.headline || r.displayDate}
+              </span>
+            </a>
+          ))}
+        </div>
+        <div class="text-center mt-4">
+          <a href="/zeitgeist" class="text-xs text-text-muted hover:text-cyan transition-colors duration-300 uppercase tracking-label">
+            Full Archive
+          </a>
+        </div>
       </div>
     )}
   </div>
