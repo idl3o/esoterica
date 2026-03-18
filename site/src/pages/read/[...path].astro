@@ -1,0 +1,105 @@
+---
+import Base from '../../layouts/Base.astro';
+import ThreadSidebar from '../../components/ThreadSidebar.astro';
+import { getAllContentPaths, readContent, loadDocumentLinks, loadSynthesisIndex } from '../../lib/content';
+import { getNode } from '../../lib/constellation';
+import { getDomainForType } from '../../lib/domains';
+import { marked } from 'marked';
+
+export function getStaticPaths() {
+  const paths = getAllContentPaths();
+  const synthIndex = loadSynthesisIndex();
+
+  // Build a lookup: filename-slug → doc ID (handles potential mismatches)
+  const idByPath = new Map<string, string>();
+  for (const doc of synthIndex) {
+    // Map both the full path and just the filename to the doc ID
+    idByPath.set(doc.path, doc.id);
+    const filename = doc.path.split('/').pop()?.replace('.md', '') || '';
+    const slug = filename.replace(/[^a-z0-9]+/gi, '-').toLowerCase().replace(/^-|-$/g, '');
+    idByPath.set(slug, doc.id);
+  }
+
+  return paths.map(p => {
+    // Try full path match first, then filename slug
+    const fullPathMatch = idByPath.get(p.path);
+    const filename = p.path.split('/').pop()?.replace('.md', '') || '';
+    const slug = filename.replace(/[^a-z0-9]+/gi, '-').toLowerCase().replace(/^-|-$/g, '');
+    const docId = fullPathMatch || idByPath.get(slug) || slug;
+
+    return {
+      params: { path: p.path },
+      props: { contentPath: p.path, sourceDir: p.sourceDir, docId },
+    };
+  });
+}
+
+const { contentPath, sourceDir, docId } = Astro.props;
+const markdown = readContent(contentPath);
+const html = markdown ? marked.parse(markdown) : '<p>Document not found.</p>';
+
+// Extract title from markdown
+const titleMatch = markdown?.match(/^#\s+(.+)$/m);
+const title = titleMatch ? titleMatch[1] : contentPath.split('/').pop()?.replace('.md', '') || 'Document';
+
+// Get document links using the pre-resolved doc ID
+const links = loadDocumentLinks();
+const nodeLinks = links.documentToNodes[docId] || { primary: [], related: [] };
+
+// Build related documents via shared nodes
+const relatedDocuments: any[] = [];
+const seenDocs = new Set([docId]);
+for (const nodeId of nodeLinks.primary.slice(0, 3)) {
+  const nodeDocs = links.nodeToDocuments[nodeId] || [];
+  for (const doc of nodeDocs) {
+    if (!seenDocs.has(doc.id) && relatedDocuments.length < 6) {
+      seenDocs.add(doc.id);
+      relatedDocuments.push({ ...doc, viaNode: nodeId });
+    }
+  }
+}
+
+// Reading time
+const wordCount = markdown?.split(/\s+/).length || 0;
+const readingTime = Math.ceil(wordCount / 250);
+
+// Source label
+const sourceLabels: Record<string, string> = {
+  synthesis: 'Synthesis', distillations: 'Distillations', protocols: 'Protocols',
+  seeds: 'Seeds', traditions: 'Traditions', translated: 'Translated', extractions: 'Extractions',
+  'fiction-bridges': 'Fiction Bridges',
+};
+const sourceLabel = sourceLabels[sourceDir] || sourceDir;
+---
+
+<Base title={title}>
+  <div class="max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-12">
+    <!-- Breadcrumb -->
+    <div class="mb-6 md:mb-8">
+      <a href="/library" class="text-text-muted hover:text-cyan text-sm transition-colors duration-300">
+        &larr; Library
+      </a>
+      <span class="text-text-muted text-sm mx-2">/</span>
+      <span class="text-text-muted text-sm">{sourceLabel}</span>
+    </div>
+
+    <div class="flex flex-col lg:flex-row gap-8">
+      <!-- Content -->
+      <article class="flex-1 min-w-0">
+        <div class="mb-4 text-xs text-text-muted">
+          {readingTime} min · {wordCount.toLocaleString()} words
+        </div>
+        <div class="prose" set:html={html} />
+      </article>
+
+      <!-- Thread Sidebar -->
+      <div class="lg:w-72 lg:sticky lg:top-20 lg:self-start shrink-0 mt-8 lg:mt-0">
+        <ThreadSidebar
+          primaryNodes={nodeLinks.primary}
+          relatedNodes={nodeLinks.related.slice(0, 10)}
+          relatedDocuments={relatedDocuments}
+        />
+      </div>
+    </div>
+  </div>
+</Base>

@@ -1,0 +1,59 @@
+---
+import NodePill from './NodePill.astro';
+import { formatNodeName } from '../lib/constellation';
+import type { NodeDocument } from '../lib/document-links';
+
+interface Props {
+  primaryNodes: string[];
+  relatedNodes: string[];
+  relatedDocuments: (NodeDocument & { viaNode: string })[];
+}
+
+const { primaryNodes, relatedNodes, relatedDocuments } = Astro.props;
+---
+
+<aside class="space-y-5 lg:max-h-[calc(100vh-6rem)] lg:overflow-y-auto lg:pr-2 border-t border-cyan-dim pt-6 lg:border-t-0 lg:pt-0">
+  {primaryNodes.length > 0 && (
+    <div>
+      <h3 class="text-xs uppercase tracking-label text-text-muted mb-3">This document touches</h3>
+      <div class="flex flex-wrap gap-2">
+        {primaryNodes.map(nodeId => (
+          <NodePill nodeId={nodeId} variant="primary" />
+        ))}
+      </div>
+    </div>
+  )}
+
+  {relatedNodes.length > 0 && (
+    <div>
+      <h3 class="text-xs uppercase tracking-label text-text-muted mb-3">Related threads</h3>
+      <div class="flex flex-wrap gap-2">
+        {relatedNodes.slice(0, 8).map(nodeId => (
+          <NodePill nodeId={nodeId} variant="related" />
+        ))}
+      </div>
+    </div>
+  )}
+
+  {relatedDocuments.length > 0 && (
+    <div>
+      <h3 class="text-xs uppercase tracking-label text-text-muted mb-3">Continue exploring</h3>
+      <div class="space-y-3">
+        {relatedDocuments.map(doc => (
+          <a
+            href={`/read/${doc.path}`}
+            class="block glass p-3 transition-lift hover:border-cyan-glow group"
+          >
+            <div class="text-sm text-text-primary group-hover:text-cyan transition-colors duration-300">
+              {doc.title}
+            </div>
+            <div class="flex items-center gap-2 mt-1">
+              <span class="text-xs text-text-muted">{doc.readingTime} min</span>
+              <span class="text-xs text-purple">via {formatNodeName(doc.viaNode)}</span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  )}
+</aside>

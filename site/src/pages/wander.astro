@@ -1,0 +1,203 @@
+---
+import Base from '../layouts/Base.astro';
+import { getAllNodes } from '../lib/constellation';
+import { loadDocumentLinks } from '../lib/content';
+import { getDomainForType } from '../lib/domains';
+
+// Serialize nodes for client
+const nodes = Object.entries(getAllNodes()).map(([id, node]) => ({
+  id,
+  type: node.type,
+  essence: node.essence,
+  connections: node.connections || [],
+  domain: getDomainForType(node.type),
+}));
+
+// Serialize node→documents for client
+const links = loadDocumentLinks();
+const nodeDocs: Record<string, { id: string; title: string; path: string; readingTime: number }[]> = {};
+for (const [nodeId, docs] of Object.entries(links.nodeToDocuments)) {
+  nodeDocs[nodeId] = docs.slice(0, 4).map(d => ({
+    id: d.id, title: d.title, path: d.path, readingTime: d.readingTime,
+  }));
+}
+---
+
+<Base title="Wander" description="Random walk through the constellation">
+  <div class="min-h-[85vh] flex items-center justify-center px-6 py-12">
+    <div id="wander" class="max-w-2xl w-full">
+
+      <!-- Path breadcrumb -->
+      <div id="wander-path" class="flex flex-wrap items-center gap-1 justify-center mb-8 min-h-[1.5rem]"></div>
+
+      <!-- Current node -->
+      <div class="text-center mb-8">
+        <div class="text-4xl mb-4 select-none animate-breathe" aria-hidden="true">&#9674;</div>
+        <p id="wander-domain" class="text-xs uppercase tracking-sigil text-text-muted mb-2"></p>
+        <h1 id="wander-name" class="gradient-text text-3xl font-light mb-2"></h1>
+        <p id="wander-essence" class="text-purple italic text-lg mb-1"></p>
+        <p id="wander-type" class="text-text-muted text-xs uppercase tracking-label"></p>
+      </div>
+
+      <!-- Connected nodes (the paths forward) -->
+      <div class="mb-8">
+        <h3 class="text-xs uppercase tracking-label text-text-muted text-center mb-3">Follow a thread</h3>
+        <div id="wander-connections" class="flex flex-wrap justify-center gap-2"></div>
+      </div>
+
+      <!-- Documents at this node -->
+      <div id="wander-docs-section" class="mb-8 hidden">
+        <h3 class="text-xs uppercase tracking-label text-text-muted text-center mb-3">Documents here</h3>
+        <div id="wander-docs" class="space-y-2 max-w-md mx-auto"></div>
+      </div>
+
+      <!-- Actions -->
+      <div class="flex justify-center gap-4">
+        <a id="wander-visit" href="#"
+          class="px-5 py-2 border border-cyan rounded-lg text-cyan text-sm uppercase tracking-label
+                 hover:bg-cyan/10 transition-all duration-300 transition-lift">
+          Visit Node
+        </a>
+        <button id="wander-next"
+          class="px-5 py-2 border border-purple rounded-lg text-purple text-sm uppercase tracking-label
+                 hover:bg-purple/10 transition-all duration-300 transition-lift">
+          Random Leap
+        </button>
+        <button id="wander-back"
+          class="px-5 py-2 border border-text-muted/30 rounded-lg text-text-muted text-sm uppercase tracking-label
+                 hover:bg-text-muted/10 transition-all duration-300 transition-lift hidden">
+          Back
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script define:vars={{ nodes, nodeDocs }}>
+    const path = [];
+    let current = null;
+
+    function fmt(id) {
+      return id.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    }
+
+    function renderPath() {
+      const container = document.getElementById('wander-path');
+      container.innerHTML = '';
+      const show = path.slice(-5); // show last 5 steps
+      if (path.length > 5) {
+        const ellipsis = document.createElement('span');
+        ellipsis.textContent = '...';
+        ellipsis.className = 'text-text-muted text-xs';
+        container.appendChild(ellipsis);
+      }
+      show.forEach((nodeId, i) => {
+        if (i > 0 || path.length > 5) {
+          const arrow = document.createElement('span');
+          arrow.textContent = '\u2192';
+          arrow.className = 'text-text-muted text-xs mx-1';
+          container.appendChild(arrow);
+        }
+        const btn = document.createElement('button');
+        btn.textContent = fmt(nodeId);
+        btn.className = 'text-xs text-cyan/60 hover:text-cyan transition-colors duration-200';
+        btn.addEventListener('click', () => {
+          // Jump back to this node in the path
+          const idx = path.lastIndexOf(nodeId);
+          path.length = idx + 1;
+          wander(nodeId, true);
+        });
+        container.appendChild(btn);
+      });
+      // Current node
+      if (current) {
+        const arrow = document.createElement('span');
+        arrow.textContent = '\u2192';
+        arrow.className = 'text-text-muted text-xs mx-1';
+        container.appendChild(arrow);
+        const cur = document.createElement('span');
+        cur.textContent = fmt(current.id);
+        cur.className = 'text-xs text-green font-medium';
+        container.appendChild(cur);
+      }
+    }
+
+    function wander(nodeId, isBacktrack) {
+      const node = nodeId
+        ? nodes.find(n => n.id === nodeId)
+        : nodes[Math.floor(Math.random() * nodes.length)];
+
+      if (!node) return;
+
+      // Track path
+      if (current && !isBacktrack) {
+        path.push(current.id);
+      }
+      current = node;
+
+      // Update display
+      document.getElementById('wander-name').textContent = fmt(node.id);
+      document.getElementById('wander-essence').textContent = node.essence;
+      document.getElementById('wander-type').textContent = node.type.replace(/_/g, ' ');
+      document.getElementById('wander-domain').textContent = node.domain.replace(/_/g, ' ');
+      document.getElementById('wander-visit').href = '/node/' + node.id;
+
+      // Back button
+      const backBtn = document.getElementById('wander-back');
+      if (path.length > 0) {
+        backBtn.classList.remove('hidden');
+      } else {
+        backBtn.classList.add('hidden');
+      }
+
+      // Connections
+      const connContainer = document.getElementById('wander-connections');
+      connContainer.innerHTML = '';
+      const conns = node.connections.slice(0, 8);
+      for (const connId of conns) {
+        const connNode = nodes.find(n => n.id === connId);
+        const btn = document.createElement('button');
+        btn.textContent = fmt(connId);
+        btn.className = 'px-3 py-1.5 rounded-full text-xs border border-purple-glow text-purple bg-purple-dim hover:bg-purple/20 hover:border-purple hover:text-white transition-all duration-300';
+        if (connNode) {
+          btn.title = connNode.essence;
+        }
+        btn.addEventListener('click', () => wander(connId));
+        connContainer.appendChild(btn);
+      }
+
+      // Documents
+      const docsSection = document.getElementById('wander-docs-section');
+      const docsContainer = document.getElementById('wander-docs');
+      const docs = nodeDocs[node.id] || [];
+      if (docs.length > 0) {
+        docsSection.classList.remove('hidden');
+        docsContainer.innerHTML = '';
+        for (const doc of docs) {
+          const a = document.createElement('a');
+          a.href = '/read/' + doc.path;
+          a.className = 'block glass p-3 transition-lift hover:border-cyan-glow group';
+          a.innerHTML = '<div class="text-sm text-text-primary group-hover:text-cyan transition-colors duration-300">'
+            + doc.title + '</div>'
+            + '<div class="text-xs text-text-muted mt-1">' + doc.readingTime + ' min</div>';
+          docsContainer.appendChild(a);
+        }
+      } else {
+        docsSection.classList.add('hidden');
+      }
+
+      // Path breadcrumb
+      renderPath();
+    }
+
+    document.getElementById('wander-next').addEventListener('click', () => wander());
+    document.getElementById('wander-back').addEventListener('click', () => {
+      if (path.length > 0) {
+        const prev = path.pop();
+        wander(prev, true);
+      }
+    });
+
+    // Start
+    wander();
+  </script>
+</Base>

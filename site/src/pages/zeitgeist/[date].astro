@@ -1,0 +1,58 @@
+---
+import Base from '../../layouts/Base.astro';
+import { loadZeitgeist } from '../../lib/zeitgeist';
+
+export function getStaticPaths() {
+  const archive = loadZeitgeist();
+  return archive.map((reading, i) => ({
+    params: { date: reading.date },
+    props: {
+      reading,
+      prev: archive[i + 1]?.date || null,
+      next: archive[i - 1]?.date || null,
+    },
+  }));
+}
+
+const { reading, prev, next } = Astro.props;
+---
+
+<Base title={`Zeitgeist — ${reading.displayDate}`} description={reading.headline}>
+  <div class="max-w-3xl mx-auto px-4 md:px-6 py-8 md:py-12">
+    <!-- Navigation -->
+    <div class="flex items-center justify-between mb-8">
+      {prev ? (
+        <a href={`/zeitgeist/${prev}`} class="text-text-muted hover:text-cyan text-sm transition-colors duration-300">&larr; Previous</a>
+      ) : <span />}
+      <a href="/zeitgeist" class="text-text-muted hover:text-cyan text-sm transition-colors duration-300">Archive</a>
+      {next ? (
+        <a href={`/zeitgeist/${next}`} class="text-text-muted hover:text-cyan text-sm transition-colors duration-300">Next &rarr;</a>
+      ) : <span />}
+    </div>
+
+    <!-- Reading -->
+    <article class="glass p-8">
+      <div class="mb-6">
+        <span class="text-xs uppercase tracking-label text-green">Zeitgeist Reading</span>
+        <p class="text-text-muted text-sm mt-1">{reading.displayDate}</p>
+        {reading.headline && (
+          <h1 class="text-2xl text-cyan mt-3">{reading.headline}</h1>
+        )}
+      </div>
+
+      {reading.isIntegrated ? (
+        <div class="prose" set:html={reading.zeitHtml} />
+      ) : (
+        <div>
+          <div class="prose" set:html={reading.zeitHtml} />
+          {reading.geistHtml && (
+            <div class="mt-8 pt-8 border-t border-cyan-dim">
+              <h2 class="text-xl text-purple mb-4">Geist</h2>
+              <div class="prose" set:html={reading.geistHtml} />
+            </div>
+          )}
+        </div>
+      )}
+    </article>
+  </div>
+</Base>

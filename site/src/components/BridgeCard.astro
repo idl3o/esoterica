@@ -1,0 +1,51 @@
+---
+import type { BridgeMeta } from '../lib/bridges';
+
+interface Props {
+  bridge: BridgeMeta;
+}
+
+const { bridge } = Astro.props;
+
+// Franchise-specific accent colors
+const franchiseColors: Record<string, string> = {
+  'Star Trek': 'border-cyan-glow hover:shadow-[0_8px_30px_rgba(0,212,255,0.2)]',
+  'Elden Ring': 'border-purple-glow hover:shadow-[0_8px_30px_rgba(157,78,221,0.2)]',
+  'Dragon Ball': 'border-green-glow hover:shadow-[0_8px_30px_rgba(0,255,136,0.2)]',
+  'Sailor Moon': 'border-purple-glow hover:shadow-[0_8px_30px_rgba(157,78,221,0.2)]',
+  'Arcane': 'border-cyan-glow hover:shadow-[0_8px_30px_rgba(0,212,255,0.2)]',
+  'Marvel': 'border-green-glow hover:shadow-[0_8px_30px_rgba(0,255,136,0.2)]',
+  'One Piece': 'border-cyan-glow hover:shadow-[0_8px_30px_rgba(0,212,255,0.2)]',
+  'Naruto': 'border-green-glow hover:shadow-[0_8px_30px_rgba(0,255,136,0.2)]',
+  'Journey to the West': 'border-purple-glow hover:shadow-[0_8px_30px_rgba(157,78,221,0.2)]',
+  'Forgotten Realms': 'border-purple-glow hover:shadow-[0_8px_30px_rgba(157,78,221,0.2)]',
+};
+
+const colorClass = franchiseColors[bridge.franchise] || 'border-cyan-glow hover:shadow-[0_8px_30px_rgba(0,212,255,0.2)]';
+---
+
+<a
+  href={`/bridges/${bridge.slug}`}
+  class:list={[
+    'block glass p-6 transition-lift group',
+    colorClass
+  ]}
+>
+  <div class="text-xs uppercase tracking-sigil text-text-muted mb-2">
+    {bridge.franchise}
+  </div>
+  <h3 class="text-lg text-text-primary group-hover:text-cyan transition-colors duration-300 mb-1">
+    {bridge.title}
+  </h3>
+  {bridge.subtitle && (
+    <p class="text-sm text-purple mb-3">{bridge.subtitle}</p>
+  )}
+  {bridge.quote && (
+    <p class="text-sm italic text-text-secondary line-clamp-2 mb-3">
+      "{bridge.quote}"
+    </p>
+  )}
+  <div class="text-xs text-text-muted">
+    {bridge.readingTime} min · {bridge.wordCount.toLocaleString()} words
+  </div>
+</a>

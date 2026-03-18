@@ -1,0 +1,32 @@
+---
+import Base from '../../layouts/Base.astro';
+import { loadZeitgeist } from '../../lib/zeitgeist';
+
+const archive = loadZeitgeist();
+---
+
+<Base title="Zeitgeist Archive" description="How the world is processing reality right now">
+  <div class="max-w-3xl mx-auto px-4 md:px-6 py-8 md:py-12">
+    <div class="text-center mb-12">
+      <h1 class="gradient-text text-3xl font-light tracking-wide mb-3">Zeitgeist</h1>
+      <p class="text-text-secondary">The living pulse — how the world is processing reality</p>
+    </div>
+
+    <div class="space-y-4">
+      {archive.map(reading => (
+        <a href={`/zeitgeist/${reading.date}`} class="block glass p-5 transition-lift hover:border-cyan-glow group">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs text-text-muted">{reading.displayDate}</span>
+            {reading.isIntegrated && <span class="text-xs text-green uppercase tracking-label">Integrated</span>}
+          </div>
+          {reading.headline && (
+            <h3 class="text-cyan group-hover:text-green transition-colors duration-300">{reading.headline}</h3>
+          )}
+          {reading.summary && (
+            <p class="text-sm text-text-secondary mt-2 line-clamp-2">{reading.summary}</p>
+          )}
+        </a>
+      ))}
+    </div>
+  </div>
+</Base>

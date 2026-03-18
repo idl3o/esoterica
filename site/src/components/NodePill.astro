@@ -1,0 +1,26 @@
+---
+import { formatNodeName } from '../lib/constellation';
+
+interface Props {
+  nodeId: string;
+  variant?: 'primary' | 'related';
+}
+
+const { nodeId, variant = 'primary' } = Astro.props;
+const name = formatNodeName(nodeId);
+
+const styles = {
+  primary: 'bg-green-dim border-green-glow text-green',
+  related: 'bg-purple-dim border-purple-glow text-purple',
+};
+---
+
+<a
+  href={`/node/${nodeId}`}
+  class:list={[
+    'inline-block px-3 py-1 rounded-full text-xs border transition-all duration-300 hover:brightness-125',
+    styles[variant]
+  ]}
+>
+  {name}
+</a>

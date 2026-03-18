@@ -1,0 +1,107 @@
+---
+import Base from '../layouts/Base.astro';
+import ZeitgeistCard from '../components/ZeitgeistCard.astro';
+import { getLatestZeitgeist } from '../lib/zeitgeist';
+import { loadLibraryIndex } from '../lib/content';
+
+const latest = getLatestZeitgeist();
+
+// Oracle document list
+const docs = loadLibraryIndex().map(d => ({
+  title: d.title,
+  subtitle: d.subtitle,
+  readPath: d.readPath,
+  readingTime: d.readingTime,
+  source: d.source,
+}));
+---
+
+<Base title="Esoterica" description="Consciousness technologies extracted from the stories that remember us">
+  <div class="min-h-[80vh] flex flex-col items-center justify-center px-6">
+    <!-- Oracle threshold -->
+    <div id="oracle-container" class="text-center max-w-xl w-full">
+      <div id="oracle-threshold">
+        <div class="text-5xl animate-breathe mb-8 select-none" aria-hidden="true">◈</div>
+        <h1 class="gradient-text text-3xl md:text-4xl font-light tracking-wide text-center mb-4">
+          Esoterica
+        </h1>
+        <p class="text-text-secondary text-center max-w-md mx-auto mb-8">
+          Something is waiting for you.
+        </p>
+        <button
+          id="oracle-enter"
+          class="px-8 py-3 border border-green rounded-lg text-green uppercase tracking-label text-sm
+                 hover:bg-green/10 hover:shadow-[0_5px_20px_rgba(0,255,136,0.3)] transition-all duration-300 transition-lift"
+        >
+          Receive
+        </button>
+      </div>
+
+      <!-- Oracle result -->
+      <div id="oracle-result" class="hidden">
+        <div class="text-3xl mb-6 select-none" aria-hidden="true">◈</div>
+        <div class="glass p-8 text-left mb-8">
+          <div class="text-xs uppercase tracking-label text-green mb-4">Receiving</div>
+          <h2 id="oracle-title" class="gradient-text text-2xl mb-2"></h2>
+          <p id="oracle-subtitle" class="text-purple text-sm mb-4"></p>
+          <p id="oracle-source" class="text-text-muted text-xs italic mb-6"></p>
+
+          <div class="flex flex-wrap gap-3">
+            <a id="oracle-read" href="#" class="px-5 py-2 border border-cyan rounded-lg text-cyan text-sm uppercase tracking-label
+                    hover:bg-cyan/10 transition-all duration-300 transition-lift">
+              Read
+            </a>
+            <button
+              id="oracle-again"
+              class="px-5 py-2 border border-purple rounded-lg text-purple text-sm uppercase tracking-label
+                     hover:bg-purple/10 transition-all duration-300 transition-lift"
+            >
+              Receive Another
+            </button>
+            <a href="/bridges" class="px-5 py-2 border border-text-muted/30 rounded-lg text-text-muted text-sm uppercase tracking-label
+                    hover:bg-text-muted/10 transition-all duration-300 transition-lift">
+              Explore Bridges
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zeitgeist pulse (always visible below) -->
+    {latest && (
+      <div class="w-full max-w-2xl mt-12 animate-fade-in">
+        <ZeitgeistCard reading={latest} />
+      </div>
+    )}
+  </div>
+
+  <script define:vars={{ docs }}>
+    function selectDocument() {
+      const now = Date.now();
+      const w = Math.floor(now / (3 * 60 * 1000));
+      const seed = w % docs.length;
+      const hash = (seed * 2654435761) >>> 0;
+      return docs[hash % docs.length];
+    }
+
+    function showOracle() {
+      const doc = selectDocument();
+      document.getElementById('oracle-title').textContent = doc.title;
+      document.getElementById('oracle-subtitle').textContent = doc.subtitle || '';
+      document.getElementById('oracle-source').textContent = `from ${doc.source} \u00b7 ${doc.readingTime} min`;
+      document.getElementById('oracle-read').href = doc.readPath;
+
+      document.getElementById('oracle-threshold').classList.add('hidden');
+      document.getElementById('oracle-result').classList.remove('hidden');
+    }
+
+    document.getElementById('oracle-enter').addEventListener('click', showOracle);
+    document.getElementById('oracle-again').addEventListener('click', () => {
+      const doc = docs[Math.floor(Math.random() * docs.length)];
+      document.getElementById('oracle-title').textContent = doc.title;
+      document.getElementById('oracle-subtitle').textContent = doc.subtitle || '';
+      document.getElementById('oracle-source').textContent = `from ${doc.source} \u00b7 ${doc.readingTime} min`;
+      document.getElementById('oracle-read').href = doc.readPath;
+    });
+  </script>
+</Base>

@@ -1,0 +1,37 @@
+---
+import Base from '../../layouts/Base.astro';
+import BridgeCard from '../../components/BridgeCard.astro';
+import { loadBridges } from '../../lib/bridges';
+
+const bridges = loadBridges();
+
+// Group by franchise for visual grouping
+const franchises = new Map<string, typeof bridges>();
+for (const bridge of bridges) {
+  const group = franchises.get(bridge.franchise) || [];
+  group.push(bridge);
+  franchises.set(bridge.franchise, group);
+}
+---
+
+<Base title="Fiction Bridges" description="Consciousness technologies hidden in the stories you already love">
+  <div class="max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-12">
+    <div class="text-center mb-8 md:mb-12">
+      <h1 class="gradient-text text-3xl md:text-4xl font-light tracking-wide mb-3">
+        Fiction Bridges
+      </h1>
+      <p class="text-text-secondary max-w-lg mx-auto">
+        Every great story is a consciousness technology in disguise.
+        These bridges extract what the narrative encoded.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+      {bridges.map(bridge => (
+        <div class="animate-fade-in">
+          <BridgeCard bridge={bridge} />
+        </div>
+      ))}
+    </div>
+  </div>
+</Base>

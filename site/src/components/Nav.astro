@@ -1,0 +1,82 @@
+---
+const currentPath = Astro.url.pathname;
+
+const links = [
+  { href: '/', label: 'Oracle' },
+  { href: '/bridges', label: 'Bridges' },
+  { href: '/zeitgeist', label: 'Zeitgeist' },
+  { href: '/library', label: 'Library' },
+  { href: '/wander', label: 'Wander' },
+];
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-void/70 border-b border-cyan-dim">
+  <div class="max-w-6xl mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
+    <a href="/" class="text-sm tracking-sigil uppercase text-cyan hover:text-green transition-all duration-300 shrink-0">
+      Esoterica
+    </a>
+
+    <!-- Desktop nav -->
+    <div class="hidden md:flex gap-6">
+      {links.map(link => (
+        <a
+          href={link.href}
+          class:list={[
+            'text-sm tracking-label uppercase transition-all duration-300',
+            currentPath === link.href
+              ? 'text-green'
+              : 'text-text-muted hover:text-cyan'
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+
+    <!-- Mobile nav toggle -->
+    <button
+      id="nav-toggle"
+      class="md:hidden text-text-muted hover:text-cyan transition-colors duration-300 p-1"
+      aria-label="Toggle menu"
+    >
+      <svg id="nav-icon-open" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="3" y1="5" x2="17" y2="5" /><line x1="3" y1="10" x2="17" y2="10" /><line x1="3" y1="15" x2="17" y2="15" />
+      </svg>
+      <svg id="nav-icon-close" class="hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5">
+        <line x1="4" y1="4" x2="16" y2="16" /><line x1="16" y1="4" x2="4" y2="16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile dropdown -->
+  <div id="nav-mobile" class="hidden md:hidden border-t border-cyan-dim bg-void/95 backdrop-blur-md">
+    <div class="px-4 py-3 flex flex-col gap-3">
+      {links.map(link => (
+        <a
+          href={link.href}
+          class:list={[
+            'text-sm tracking-label uppercase transition-all duration-300 py-1',
+            currentPath === link.href
+              ? 'text-green'
+              : 'text-text-muted hover:text-cyan'
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('nav-mobile');
+  const iconOpen = document.getElementById('nav-icon-open');
+  const iconClose = document.getElementById('nav-icon-close');
+
+  toggle?.addEventListener('click', () => {
+    const open = menu?.classList.toggle('hidden') === false;
+    iconOpen?.classList.toggle('hidden', open);
+    iconClose?.classList.toggle('hidden', !open);
+  });
+</script>

@@ -1,0 +1,92 @@
+---
+import Base from '../../layouts/Base.astro';
+import NodePill from '../../components/NodePill.astro';
+import { getAllNodes, getNode, formatNodeName } from '../../lib/constellation';
+import { loadDocumentLinks } from '../../lib/content';
+import { getDomainForType, DOMAINS } from '../../lib/domains';
+
+export function getStaticPaths() {
+  const nodes = getAllNodes();
+  return Object.keys(nodes).map(id => ({
+    params: { id },
+    props: { nodeId: id },
+  }));
+}
+
+const { nodeId } = Astro.props;
+const node = getNode(nodeId)!;
+const name = formatNodeName(nodeId);
+const domain = getDomainForType(node.type);
+const domainInfo = DOMAINS[domain];
+
+// Get linked documents
+const links = loadDocumentLinks();
+const nodeDocs = links.nodeToDocuments[nodeId] || [];
+const primaryDocs = nodeDocs.filter(d => d.isPrimary);
+const relatedDocs = nodeDocs.filter(d => !d.isPrimary);
+
+// Connected nodes
+const connectedNodes = node.connections || [];
+---
+
+<Base title={name} description={`${name} — ${node.essence}`}>
+  <div class="max-w-4xl mx-auto px-4 md:px-6 py-8 md:py-12">
+    <!-- Header -->
+    <div class="mb-8">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-xs uppercase tracking-label text-text-muted">{node.type.replace(/_/g, ' ')}</span>
+        {domainInfo && <span class="text-xs text-purple">· {domainInfo.label}</span>}
+      </div>
+      <h1 class="gradient-text text-3xl font-light tracking-wide">{name}</h1>
+      <p class="text-text-secondary mt-2 italic">{node.essence}</p>
+    </div>
+
+    <!-- Connected Nodes -->
+    {connectedNodes.length > 0 && (
+      <section class="mb-10">
+        <h2 class="text-sm uppercase tracking-label text-text-muted mb-3">Connected to</h2>
+        <div class="flex flex-wrap gap-2">
+          {connectedNodes.map((id: string) => (
+            <NodePill nodeId={id} variant="related" />
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Primary Documents -->
+    {primaryDocs.length > 0 && (
+      <section class="mb-10">
+        <h2 class="text-sm uppercase tracking-label text-text-muted mb-3">
+          Primary documents
+          <span class="text-green ml-1">{primaryDocs.length}</span>
+        </h2>
+        <div class="space-y-3">
+          {primaryDocs.map(doc => (
+            <a href={`/read/${doc.path}`} class="block glass p-4 transition-lift hover:border-green-glow group">
+              <div class="text-text-primary group-hover:text-green transition-colors duration-300">{doc.title}</div>
+              <div class="text-xs text-text-muted mt-1">{doc.readingTime} min · {doc.source}</div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Related Documents -->
+    {relatedDocs.length > 0 && (
+      <section class="mb-10">
+        <h2 class="text-sm uppercase tracking-label text-text-muted mb-3">
+          Related documents
+          <span class="text-purple ml-1">{relatedDocs.length}</span>
+        </h2>
+        <div class="space-y-3">
+          {relatedDocs.map(doc => (
+            <a href={`/read/${doc.path}`} class="block glass p-4 transition-lift hover:border-purple-glow group">
+              <div class="text-text-primary group-hover:text-purple transition-colors duration-300">{doc.title}</div>
+              <div class="text-xs text-text-muted mt-1">{doc.readingTime} min · {doc.source}</div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+  </div>
+</Base>

@@ -1,0 +1,16 @@
+{
+  "name": "esoterica",
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.1",
+    "astro": "^6.0.5",
+    "marked": "^17.0.4",
+    "tailwindcss": "^4.2.1"
+  }
+}

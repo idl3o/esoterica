@@ -57,5 +57,9 @@ world-model/src/**/__pycache__/
 *.pyc
 *.pyo
 
+# Astro build output
+dist/
+.astro/
+
 # Temporary files
 tmpclaude-*

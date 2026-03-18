@@ -1,0 +1,78 @@
+---
+import Base from '../../layouts/Base.astro';
+import ThreadSidebar from '../../components/ThreadSidebar.astro';
+import { loadBridges, readBridgeContent } from '../../lib/bridges';
+import { loadDocumentLinks } from '../../lib/content';
+import { getNode } from '../../lib/constellation';
+import { getDomainForType } from '../../lib/domains';
+import { marked } from 'marked';
+
+export function getStaticPaths() {
+  const bridges = loadBridges();
+  return bridges.map(bridge => ({
+    params: { slug: bridge.slug },
+    props: { bridge },
+  }));
+}
+
+const { bridge } = Astro.props;
+const markdown = readBridgeContent(bridge.slug);
+const html = markdown ? marked.parse(markdown) : '';
+
+// Get constellation links for this bridge
+const links = loadDocumentLinks();
+const docId = bridge.slug;
+const nodeLinks = links.documentToNodes[docId] || { primary: [], related: [] };
+
+// Build related documents via shared nodes
+const relatedDocuments: any[] = [];
+const seenDocs = new Set([docId]);
+for (const nodeId of nodeLinks.primary.slice(0, 3)) {
+  const nodeDocs = links.nodeToDocuments[nodeId] || [];
+  for (const doc of nodeDocs) {
+    if (!seenDocs.has(doc.id) && relatedDocuments.length < 6) {
+      seenDocs.add(doc.id);
+      relatedDocuments.push({ ...doc, viaNode: nodeId });
+    }
+  }
+}
+
+// Enrich node data
+const enrichNode = (nodeId: string) => {
+  const node = getNode(nodeId);
+  return node ? { id: nodeId, type: node.type, essence: node.essence, domain: getDomainForType(node.type) } : { id: nodeId };
+};
+---
+
+<Base title={bridge.title} description={bridge.subtitle || `A fiction bridge: ${bridge.franchise}`}>
+  <div class="max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-12">
+    <!-- Breadcrumb -->
+    <div class="mb-8">
+      <a href="/bridges" class="text-text-muted hover:text-cyan text-sm transition-colors duration-300">
+        &larr; Fiction Bridges
+      </a>
+    </div>
+
+    <div class="flex flex-col lg:flex-row gap-8">
+      <!-- Content -->
+      <article class="flex-1 min-w-0">
+        <div class="mb-6">
+          <span class="text-xs uppercase tracking-sigil text-text-muted">{bridge.franchise}</span>
+          <div class="text-xs text-text-muted mt-2">
+            {bridge.readingTime} min · {bridge.wordCount.toLocaleString()} words
+          </div>
+        </div>
+        <div class="prose" set:html={html} />
+      </article>
+
+      <!-- Thread Sidebar -->
+      <div class="lg:w-72 lg:sticky lg:top-20 lg:self-start shrink-0 mt-8 lg:mt-0">
+        <ThreadSidebar
+          primaryNodes={nodeLinks.primary}
+          relatedNodes={nodeLinks.related.slice(0, 10)}
+          relatedDocuments={relatedDocuments}
+        />
+      </div>
+    </div>
+  </div>
+</Base>
