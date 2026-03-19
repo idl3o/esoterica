@@ -1,0 +1,174 @@
+---
+/**
+ * Timescale View - all items at a specific timescale.
+ */
+
+import Base from '../../../layouts/Base.astro';
+import MetaItemCard from '../../../components/MetaItemCard.astro';
+import {
+  loadZeitgeistItems,
+  getItemsByTimescale,
+  type Timescale,
+} from '../../../lib/zeitgeist-index';
+
+export function getStaticPaths() {
+  return [
+    { params: { timescale: 'surface' } },
+    { params: { timescale: 'current' } },
+    { params: { timescale: 'deep' } },
+    { params: { timescale: 'tectonic' } },
+  ];
+}
+
+const { timescale } = Astro.params;
+const timescaleKey = timescale!.toUpperCase() as Timescale;
+
+const index = loadZeitgeistItems();
+const items = getItemsByTimescale(timescaleKey);
+
+// Timescale metadata
+const timescaleInfo: Record<Timescale, { label: string; description: string; colour: string; longDescription: string }> = {
+  SURFACE: {
+    label: 'Surface',
+    description: 'Events that metabolise in days',
+    colour: 'text-text-secondary',
+    longDescription: 'The headlines, the breaking news, the daily weather of civilisation. These items appear, are processed, and pass within days. Their persistence indicates something unusual — a story that refuses to resolve, a wound that won\'t close.',
+  },
+  CURRENT: {
+    label: 'Current',
+    description: 'Trends that metabolise in weeks to months',
+    colour: 'text-cyan',
+    longDescription: 'The rivers beneath the surface. Market rotations, cultural shifts, technological deployments. These items are tracked across multiple readings as they develop. Their movement — deepening, surfacing, or dissolving — maps the collective\'s processing capacity.',
+  },
+  DEEP: {
+    label: 'Deep',
+    description: 'Phase transitions that metabolise in years',
+    colour: 'text-purple',
+    longDescription: 'The slow earthquakes. Climate drift, constitutional realignment, the infrastructure of attention itself. Items that appear here repeatedly without evolution signal the collective\'s processing failure — the fish too large for the net, returning to the same waters undiminished.',
+  },
+  TECTONIC: {
+    label: 'Tectonic',
+    description: 'Epoch markers — the fish too big for the net',
+    colour: 'text-green',
+    longDescription: 'What exceeds any single reading\'s capacity to contain. These items are named, pointed at, and honestly acknowledged as overwhelming. Their persistence across readings is not failure to metabolise — it is the mark of civilisational-scale signal. The recurrence IS the data.',
+  },
+};
+
+const info = timescaleInfo[timescaleKey];
+
+// Group by status
+const activeItems = items.filter(i => i.status === 'active');
+const dormantItems = items.filter(i => i.status === 'dormant');
+const metabolisedItems = items.filter(i => i.status === 'metabolised');
+---
+
+<Base title={`${info.label} | Meta-Zeitgeist`} description={info.description}>
+  <div class="max-w-4xl mx-auto px-6 py-12">
+    <!-- Header -->
+    <div class="mb-8">
+      <a
+        href="/zeitgeist/meta"
+        class="text-xs uppercase tracking-label text-text-muted hover:text-cyan transition-colors duration-300 mb-4 inline-block"
+      >
+        ← Meta-Zeitgeist
+      </a>
+
+      <h1 class:list={["text-3xl md:text-4xl font-light tracking-wide", info.colour]}>
+        {info.label}
+      </h1>
+      <p class="text-text-muted italic mt-2 mb-4">
+        {info.description}
+      </p>
+      <p class="text-text-secondary text-sm leading-relaxed max-w-2xl">
+        {info.longDescription}
+      </p>
+    </div>
+
+    <!-- Stats -->
+    <div class="flex gap-4 mb-8 text-sm">
+      <span class="text-cyan">{activeItems.length} active</span>
+      <span class="text-purple">{dormantItems.length} dormant</span>
+      <span class="text-text-muted">{metabolisedItems.length} metabolised</span>
+    </div>
+
+    <!-- Active Items -->
+    {activeItems.length > 0 && (
+      <section class="mb-10">
+        <h2 class="text-lg font-light text-cyan mb-4">Active</h2>
+        <div class="space-y-2">
+          {activeItems.map(item => (
+            <MetaItemCard
+              item={item}
+              allDates={index.allDates}
+              showTimescale={false}
+            />
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Dormant Items -->
+    {dormantItems.length > 0 && (
+      <section class="mb-10">
+        <h2 class="text-lg font-light text-purple mb-4">Dormant</h2>
+        <p class="text-xs text-text-muted italic mb-4">
+          Appeared multiple times, now quiet — but not resolved.
+        </p>
+        <div class="space-y-2">
+          {dormantItems.map(item => (
+            <MetaItemCard
+              item={item}
+              allDates={index.allDates}
+              showTimescale={false}
+            />
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Metabolised Items -->
+    {metabolisedItems.length > 0 && (
+      <section class="mb-10">
+        <h2 class="text-lg font-light text-text-secondary mb-4">Metabolised</h2>
+        <p class="text-xs text-text-muted italic mb-4">
+          Appeared once, processed, and passed.
+        </p>
+        <div class="space-y-2">
+          {metabolisedItems.map(item => (
+            <MetaItemCard
+              item={item}
+              allDates={index.allDates}
+              showTimescale={false}
+            />
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Empty State -->
+    {items.length === 0 && (
+      <div class="glass p-8 text-center">
+        <p class="text-text-muted">No items at this timescale yet.</p>
+      </div>
+    )}
+
+    <!-- Navigation -->
+    <div class="mt-12 pt-8 border-t border-white/10">
+      <div class="flex flex-wrap gap-3 justify-center">
+        {(['surface', 'current', 'deep', 'tectonic'] as const).map(ts => (
+          <a
+            href={`/zeitgeist/meta/${ts}`}
+            class:list={[
+              "px-4 py-2 text-xs uppercase tracking-label rounded-lg border transition-all duration-300",
+              ts === timescale
+                ? `${timescaleInfo[ts.toUpperCase() as Timescale].colour} border-current bg-current/10`
+                : "text-text-muted border-text-muted/30 hover:border-cyan hover:text-cyan"
+            ]}
+          >
+            {ts}
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+</Base>

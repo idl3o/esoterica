@@ -1,0 +1,173 @@
+---
+/**
+ * Meta-Zeitgeist Dashboard
+ * Overview of items tracked across readings, organised by timescale.
+ */
+
+import Base from '../../../layouts/Base.astro';
+import MetaItemCard from '../../../components/MetaItemCard.astro';
+import {
+  loadZeitgeistItems,
+  getStats,
+  getItemsByTimescale,
+  type Timescale,
+} from '../../../lib/zeitgeist-index';
+
+const index = loadZeitgeistItems();
+const stats = getStats();
+
+// Get top items per timescale
+const timescales: { key: Timescale; label: string; description: string; colour: string }[] = [
+  {
+    key: 'SURFACE',
+    label: 'Surface',
+    description: 'Events that metabolise in days',
+    colour: 'text-text-secondary',
+  },
+  {
+    key: 'CURRENT',
+    label: 'Current',
+    description: 'Trends that metabolise in weeks to months',
+    colour: 'text-cyan',
+  },
+  {
+    key: 'DEEP',
+    label: 'Deep',
+    description: 'Phase transitions that metabolise in years',
+    colour: 'text-purple',
+  },
+  {
+    key: 'TECTONIC',
+    label: 'Tectonic',
+    description: 'Epoch markers — the fish too big for the net',
+    colour: 'text-green',
+  },
+];
+
+// Get top 3 most persistent items per timescale
+const itemsByTimescale = timescales.map(ts => ({
+  ...ts,
+  items: getItemsByTimescale(ts.key).slice(0, 3),
+  count: stats.byTimescale[ts.key],
+}));
+
+// Recent correspondences (last 5)
+const recentCorrespondences = index.correspondences.slice(0, 5);
+---
+
+<Base title="Meta-Zeitgeist | Esoterica" description="What persists. What metabolises. Tracking patterns across readings.">
+  <div class="max-w-4xl mx-auto px-6 py-12">
+    <!-- Header -->
+    <div class="text-center mb-12">
+      <div class="text-3xl mb-4 select-none" aria-hidden="true">◈</div>
+      <h1 class="gradient-text text-3xl md:text-4xl font-light tracking-wide mb-4">
+        Meta-Zeitgeist
+      </h1>
+      <p class="text-text-secondary max-w-lg mx-auto">
+        What persists. What metabolises. Items tracked across <span class="text-cyan">{index.meta.readingsCount}</span> readings
+        from <span class="text-text-muted">{index.meta.dateRange.first}</span> to <span class="text-text-muted">{index.meta.dateRange.last}</span>.
+      </p>
+    </div>
+
+    <!-- Stats Row -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+      <div class="glass p-4 text-center">
+        <div class="text-2xl text-cyan font-light">{stats.total}</div>
+        <div class="text-xs uppercase tracking-label text-text-muted mt-1">Total Items</div>
+      </div>
+      <div class="glass p-4 text-center">
+        <div class="text-2xl text-cyan font-light">{stats.active}</div>
+        <div class="text-xs uppercase tracking-label text-text-muted mt-1">Active</div>
+      </div>
+      <div class="glass p-4 text-center">
+        <div class="text-2xl text-purple font-light">{stats.dormant}</div>
+        <div class="text-xs uppercase tracking-label text-text-muted mt-1">Dormant</div>
+      </div>
+      <div class="glass p-4 text-center">
+        <div class="text-2xl text-text-secondary font-light">{stats.metabolised}</div>
+        <div class="text-xs uppercase tracking-label text-text-muted mt-1">Metabolised</div>
+      </div>
+    </div>
+
+    <!-- Timescale Sections -->
+    <div class="space-y-10 mb-12">
+      {itemsByTimescale.map(ts => (
+        <section>
+          <div class="flex items-baseline justify-between mb-4">
+            <div>
+              <h2 class:list={["text-xl font-light", ts.colour]}>
+                {ts.label}
+              </h2>
+              <p class="text-xs text-text-muted italic mt-1">
+                {ts.description}
+              </p>
+            </div>
+            <a
+              href={`/zeitgeist/meta/${ts.key.toLowerCase()}`}
+              class="text-xs uppercase tracking-label text-text-muted hover:text-cyan transition-colors duration-300"
+            >
+              All {ts.count} →
+            </a>
+          </div>
+
+          {ts.items.length > 0 ? (
+            <div class="space-y-2">
+              {ts.items.map(item => (
+                <MetaItemCard
+                  item={item}
+                  allDates={index.allDates}
+                  showTimescale={false}
+                />
+              ))}
+            </div>
+          ) : (
+            <p class="text-text-muted text-sm italic glass p-4">
+              No items at this timescale yet.
+            </p>
+          )}
+        </section>
+      ))}
+    </div>
+
+    <!-- Correspondences -->
+    {recentCorrespondences.length > 0 && (
+      <section class="mb-12">
+        <h2 class="text-xl font-light text-green mb-4">
+          Recent Correspondences
+        </h2>
+        <p class="text-xs text-text-muted italic mb-4">
+          The same pattern at every scale
+        </p>
+
+        <div class="space-y-2">
+          {recentCorrespondences.map(corr => (
+            <a
+              href={`/zeitgeist/${corr.date}`}
+              class="glass p-4 block transition-lift hover:border-green/50 group"
+            >
+              <div class="flex items-baseline justify-between gap-4">
+                <span class="text-green font-medium group-hover:text-white transition-colors duration-300">
+                  {corr.pattern}
+                </span>
+                <span class="text-xs text-text-muted shrink-0">
+                  {corr.date}
+                </span>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Navigation -->
+    <div class="text-center space-y-4">
+      <a
+        href="/zeitgeist"
+        class="inline-block px-6 py-2 border border-text-muted/30 rounded-lg text-text-muted text-sm uppercase tracking-label
+               hover:bg-text-muted/10 transition-all duration-300 transition-lift"
+      >
+        ← Zeitgeist Archive
+      </a>
+    </div>
+  </div>
+</Base>

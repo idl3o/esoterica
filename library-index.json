@@ -2640,6 +2640,16 @@
     "sourceDir": "extractions"
   },
   {
+    "title": "THE AGE OF STARS",
+    "subtitle": "The Fermi Paradox, the Interior Frontier, and the Direction That Has No End",
+    "category": "",
+    "wordCount": 4575,
+    "readingTime": 19,
+    "readPath": "/read/synthesis/the-age-of-stars.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "The Archetypal 40K Consciousness Framework",
     "subtitle": "Where Myth Becomes Consciousness Technology",
     "category": "fiction",
@@ -2836,6 +2846,16 @@
     "wordCount": 3793,
     "readingTime": 16,
     "readPath": "/read/synthesis/consciousness-technologies/consciousness-reality-field-equations.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE CONSENSUAL HALLUCINATION",
+    "subtitle": "Cyberspace, Nested Universes, and the Boundary That Means",
+    "category": "",
+    "wordCount": 4588,
+    "readingTime": 19,
+    "readPath": "/read/synthesis/the-consensual-hallucination.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },

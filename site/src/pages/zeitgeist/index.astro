@@ -7,10 +7,25 @@ const archive = loadZeitgeist();
 
 <Base title="Zeitgeist Archive" description="How the world is processing reality right now">
   <div class="max-w-3xl mx-auto px-4 md:px-6 py-8 md:py-12">
-    <div class="text-center mb-12">
+    <div class="text-center mb-8">
       <h1 class="gradient-text text-3xl font-light tracking-wide mb-3">Zeitgeist</h1>
       <p class="text-text-secondary">The living pulse — how the world is processing reality</p>
     </div>
+
+    <!-- Meta-Zeitgeist Link -->
+    <a href="/zeitgeist/meta" class="glass p-5 mb-8 block transition-lift hover:border-purple group">
+      <div class="flex items-center justify-between">
+        <div>
+          <h2 class="text-purple group-hover:text-cyan transition-colors duration-300 text-lg font-light">
+            Meta-Zeitgeist
+          </h2>
+          <p class="text-sm text-text-muted mt-1">
+            What persists. What metabolises. Patterns across readings.
+          </p>
+        </div>
+        <span class="text-purple group-hover:text-cyan transition-colors duration-300 text-2xl">→</span>
+      </div>
+    </a>
 
     <div class="space-y-4">
       {archive.map(reading => (
