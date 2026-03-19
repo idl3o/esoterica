@@ -1,0 +1,63 @@
+---
+/**
+ * Sparkline component - inline SVG showing item appearance pattern across readings.
+ *
+ * Props:
+ * - appearances: boolean[] - one entry per reading (oldest first), true = present
+ * - timescale: string - determines colour (SURFACE/CURRENT/DEEP/TECTONIC)
+ * - width: number - SVG width in pixels (default: 100)
+ * - height: number - SVG height in pixels (default: 16)
+ */
+
+interface Props {
+  appearances: boolean[];
+  timescale: 'SURFACE' | 'CURRENT' | 'DEEP' | 'TECTONIC';
+  width?: number;
+  height?: number;
+}
+
+const { appearances, timescale, width = 100, height = 16 } = Astro.props;
+
+// Timescale colours matching the site palette
+const colours: Record<string, { fill: string; empty: string }> = {
+  SURFACE: { fill: '#9ca3af', empty: '#374151' },    // grey
+  CURRENT: { fill: '#00ffff', empty: '#0a3d3d' },    // cyan
+  DEEP: { fill: '#bf5af2', empty: '#3d1a4d' },       // purple
+  TECTONIC: { fill: '#00ff88', empty: '#0a3d2d' },   // green
+};
+
+const colour = colours[timescale] || colours.CURRENT;
+
+// Calculate bar dimensions
+const count = appearances.length;
+const gap = 2;
+const barWidth = count > 0 ? Math.max(4, (width - (count - 1) * gap) / count) : 4;
+const barHeight = height - 4; // Leave some padding
+---
+
+<svg
+  width={width}
+  height={height}
+  viewBox={`0 0 ${width} ${height}`}
+  class="sparkline"
+  aria-label={`Appeared in ${appearances.filter(Boolean).length} of ${count} readings`}
+>
+  {appearances.map((present, i) => (
+    <rect
+      x={i * (barWidth + gap)}
+      y={2}
+      width={barWidth}
+      height={barHeight}
+      rx={1}
+      fill={present ? colour.fill : colour.empty}
+      opacity={present ? 1 : 0.3}
+    />
+  ))}
+</svg>
+
+<style>
+  .sparkline {
+    display: inline-block;
+    vertical-align: middle;
+  }
+</style>

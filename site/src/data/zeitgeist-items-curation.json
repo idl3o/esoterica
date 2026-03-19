@@ -1,0 +1,86 @@
+{
+  "merges": [
+    {
+      "canonical": "iran-war",
+      "canonicalTitle": "The Iran War",
+      "variants": [
+        "war-without-a-name",
+        "the-war-is-sixteen-days-old",
+        "the-war-is-three-days-old",
+        "day-19-the-war-acquires-geometry",
+        "day-three-of-the-war",
+        "day-11-the-war-unnamed"
+      ]
+    },
+    {
+      "canonical": "oil-shock",
+      "canonicalTitle": "The Oil Shock",
+      "variants": [
+        "oil-shock-repricing-civilisations-floor",
+        "the-oil-shock-is-repricing-the-world",
+        "the-oil-shock-has-repriced-civilisations-floor"
+      ]
+    },
+    {
+      "canonical": "social-exit",
+      "canonicalTitle": "The Social Exit",
+      "variants": [
+        "the-social-exit-deepens",
+        "the-social-exit-deepens-into-structural-withdrawal",
+        "the-social-exit-deepens-into-structural-architecture"
+      ]
+    },
+    {
+      "canonical": "strait-of-hormuz",
+      "canonicalTitle": "The Strait of Hormuz",
+      "variants": [
+        "the-strait-of-hormuz-as-civilisational-chokepoint",
+        "strait-of-hormuz-crisis"
+      ]
+    },
+    {
+      "canonical": "inference-economy",
+      "canonicalTitle": "The Inference Economy",
+      "variants": [
+        "the-inference-economy-declared-itself",
+        "ai-capital-expenditure-enters-the-absurd",
+        "ai-capex"
+      ]
+    },
+    {
+      "canonical": "gulf-stream-drift",
+      "canonicalTitle": "The Gulf Stream Drift",
+      "variants": [
+        "the-gulf-stream-is-drifting-north",
+        "amoc-drift",
+        "gulf-stream-drifting"
+      ]
+    },
+    {
+      "canonical": "species-turnover-slowdown",
+      "canonicalTitle": "Species Turnover Slowdown",
+      "variants": [
+        "the-species-turnover-slowdown",
+        "biosphere-regenerative-slowdown",
+        "the-biospheres-self-renewal-machinery-is-slowing"
+      ]
+    },
+    {
+      "canonical": "cuba-crisis",
+      "canonicalTitle": "The Cuba Crisis",
+      "variants": [
+        "cubas-grid-collapsed",
+        "cuba-blackout"
+      ]
+    },
+    {
+      "canonical": "cascade-structure",
+      "canonicalTitle": "The Cascade",
+      "variants": [
+        "the-cascade-is-the-structure",
+        "the-cascade-that-cannot-be-named"
+      ]
+    }
+  ],
+  "timescaleOverrides": {}
+}

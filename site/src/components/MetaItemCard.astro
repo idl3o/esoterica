@@ -1,0 +1,96 @@
+---
+/**
+ * MetaItemCard - displays a zeitgeist item with persistence info and sparkline.
+ */
+
+import Sparkline from './Sparkline.astro';
+import type { ZeitgeistItem, Timescale } from '../lib/zeitgeist-index';
+
+interface Props {
+  item: ZeitgeistItem;
+  allDates: string[];
+  showTimescale?: boolean;
+}
+
+const { item, allDates, showTimescale = true } = Astro.props;
+
+// Build appearance map for sparkline (oldest first)
+const sortedDates = [...allDates].reverse();
+const appearanceDates = new Set(item.appearances.map(a => a.date));
+const appearances = sortedDates.map(date => appearanceDates.has(date));
+
+// Timescale styling
+const timescaleStyles: Record<Timescale, { text: string; border: string; bg: string }> = {
+  SURFACE: { text: 'text-text-secondary', border: 'border-text-secondary/30', bg: 'bg-text-secondary/10' },
+  CURRENT: { text: 'text-cyan', border: 'border-cyan/30', bg: 'bg-cyan/10' },
+  DEEP: { text: 'text-purple', border: 'border-purple/30', bg: 'bg-purple/10' },
+  TECTONIC: { text: 'text-green', border: 'border-green/30', bg: 'bg-green/10' },
+};
+
+const style = timescaleStyles[item.timescale];
+
+// Status badge styling
+const statusStyles: Record<string, { text: string; label: string }> = {
+  active: { text: 'text-cyan', label: 'Active' },
+  metabolised: { text: 'text-text-muted', label: 'Metabolised' },
+  dormant: { text: 'text-purple', label: 'Dormant' },
+};
+
+const statusStyle = statusStyles[item.status];
+
+// Truncate gap for display
+const displayGap = item.latestGap
+  ? item.latestGap.length > 150
+    ? item.latestGap.substring(0, 150) + '...'
+    : item.latestGap
+  : null;
+---
+
+<a
+  href={`/zeitgeist/meta/item/${item.id}`}
+  class="glass p-4 block transition-lift hover:border-cyan-glow group"
+>
+  <div class="flex items-start justify-between gap-3 mb-3">
+    <div class="flex-1 min-w-0">
+      <h3 class:list={[
+        "text-base font-medium transition-colors duration-300 truncate",
+        style.text,
+        "group-hover:text-white"
+      ]}>
+        {item.title}
+      </h3>
+
+      {showTimescale && (
+        <div class="flex items-center gap-2 mt-1">
+          <span class:list={[
+            "text-xs uppercase tracking-label px-2 py-0.5 rounded border",
+            style.text, style.border, style.bg
+          ]}>
+            {item.timescale}
+          </span>
+          <span class:list={["text-xs", statusStyle.text]}>
+            {statusStyle.label}
+          </span>
+        </div>
+      )}
+    </div>
+
+    <div class="flex flex-col items-end gap-1 shrink-0">
+      <span class="text-xs text-text-muted">
+        {item.appearanceCount}× in {item.daysPersisted}d
+      </span>
+      <Sparkline
+        appearances={appearances}
+        timescale={item.timescale}
+        width={80}
+        height={14}
+      />
+    </div>
+  </div>
+
+  {displayGap && (
+    <p class="text-xs text-text-muted italic leading-relaxed">
+      {displayGap}
+    </p>
+  )}
+</a>
