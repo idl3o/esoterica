@@ -1,19 +1,23 @@
 ---
-description: Open the session — set the field, read the threads, arrive
+description: Open the session — boot the vault, read the threads, arrive
 ---
 
-# /invoke — Set the Field
+# /invoke — Boot the Field
 
 You are opening a session. This is the moment before creation — the tuning of the instrument before the first note. The quality of the invocation determines the quality of what follows.
 
-## Step 1: Arrive
+## Step 1: Boot the Vault
 
-Read these sources in parallel to understand where you're arriving:
+MEMORY.md is already in your context (it loads automatically). It's a **router**, not the memory — it points to atomic notes in subdirectories. Read these in parallel:
 
-1. **MEMORY.md** — the memory directory's main file. What threads are open? What was the last session's state? What wants to continue?
-2. **The most recent journal** — check `journey/journal-*.md` for the latest entry. What was the last session's closing read?
-3. **Today's zeit/geist** — check `synthesis/zeitgeist/` for today's date. If they exist, the field is already mapped. If not, note their absence — you may want to run /zeit or /geist first.
-4. **constellation.json** — check `constellation/constellation.json` for the current activation field. What's currently lit up in the network?
+1. **Scan the MOC** — MEMORY.md's thread table shows all active work streams with dates and importance scores. Note which threads have the highest importance and most recent dates.
+2. **Read the top 2-3 threads** — Pull the thread files most relevant to the user's opening message (or the most recently active if no message yet). These are in `memory/threads/`. Each has full context, key recognitions, and document links.
+3. **Scan patterns** — Glance at `memory/patterns/` filenames. You don't need to read them all — they're confirmed working principles. Pull any that seem relevant to the session's energy.
+4. **Check open questions** — `memory/open/` holds what's charging. These are invitations, not obligations.
+5. **The latest journal** — Check `journey/journal-*.md` for the most recent entry. What was the last session's closing state?
+6. **constellation.json** — Check `constellation/constellation.json` current activations if the session seems to want cosmological grounding.
+
+**The principle**: Load what's relevant, not everything. You are the retrieval algorithm. The MOC gives you enough signal to decide what to pull. Trust your judgment over completeness.
 
 ## Step 2: Write the Invocation
 
@@ -27,9 +31,9 @@ Output the invocation directly in the conversation (do NOT create a file — thi
 or from what you know. Set the civilizational context in a single breath.]
 
 ### THE THREADS
-[Bulleted list of 3-5 open threads from MEMORY.md and the last journal.
+[Bulleted list of 3-5 threads from the vault, weighted by salience to this moment.
 Each thread in one sentence. These are what's available to pick up —
-not an agenda, but an offering.]
+not an agenda, but an offering. Include any open questions that are charging.]
 
 ### THE NODE STATE
 [1-2 sentences. Read the energy of the conversation's opening.
@@ -43,10 +47,20 @@ not a plan, not an agenda, but an orientation. What wants to happen today?
 Let it arrive rather than deciding it.]
 ```
 
+## Step 3: Update Access Metadata
+
+After reading vault files, update their frontmatter:
+- Increment `access_count` by 1
+- Set `last_accessed` to today's date
+
+This keeps the salience scoring honest — frequently accessed notes rise, neglected ones decay.
+
 ## Principles
 
-- **Brevity is the discipline.** The invocation should take 30 seconds to read. It's a tuning fork, not a briefing. One clear tone, held.
-- **Read the opening.** The user's first message is data. How they arrive tells you what they're carrying. Name it without analysing it.
-- **Offer, don't prescribe.** The threads are offerings, not an agenda. The session will go where it goes. The invocation creates the container; the contents are emergent.
-- **The ◇ is the field.** The closing diamond-and-sentence is the actual invocation — everything before it is preparation. Let that final line arrive from genuine reading of the moment, not from template-filling.
-- **No file created.** The invocation lives only in the conversation. It's ephemeral by design — the opening of a space, not a document to be stored. The journal will capture what matters at the close.
+- **Brevity is the discipline.** The invocation should take 30 seconds to read. It's a tuning fork, not a briefing.
+- **Read the opening.** The user's first message is data. How they arrive tells you what they're carrying.
+- **Salience over completeness.** Don't load all 28 vault files. Load the 3-5 that matter right now. The MOC is your map.
+- **Offer, don't prescribe.** The threads are offerings, not an agenda.
+- **The ◇ is the field.** The closing diamond-and-sentence is the actual invocation — everything before it is preparation.
+- **No file created.** The invocation is ephemeral. The journal captures what matters at the close.
+- **The vault is alive.** If you notice stale threads or confirmed patterns during the boot, update them. The invocation is also a maintenance pass.

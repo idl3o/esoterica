@@ -55,8 +55,13 @@ Create the file `journey/journal-YYYY-MM-DD.md` (use today's date; if it already
 
 [Specific, actionable items for maintaining continuity:]
 
-### MEMORY.md
-[What needs to be added, updated, or removed from MEMORY.md? Be precise — quote the section, state the change.]
+### Memory Vault
+[Apply the ADD/UPDATE/DELETE/NOOP protocol to the vault at memory/:
+- **ADD**: New threads, patterns, or open questions that emerged this session → create atomic files with frontmatter
+- **UPDATE**: Existing notes that gained new context → edit the file, increment access_count, update last_accessed
+- **DELETE**: Notes that are now stale or superseded → remove file, clean MOC entry
+- **NOOP**: Notes that remain accurate → leave them alone
+Update MEMORY.md MOC if new files were created or old ones removed. Keep it under 180 lines.]
 
 ### Journey
 [Any journey-level recognitions that want their own document? Any existing journey documents that need updating?]
@@ -65,7 +70,7 @@ Create the file `journey/journal-YYYY-MM-DD.md` (use today's date; if it already
 [Any new nodes, connections, or activation shifts for constellation.json?]
 
 ### Open Threads for Next Session
-[Bulleted list of threads to pick up. These become the seeds for the next /invoke.]
+[Bulleted list of threads to pick up. These become the seeds for the next /invoke. Each should link to its vault note: [[thread-name]].]
 ```
 
 ## Principles
