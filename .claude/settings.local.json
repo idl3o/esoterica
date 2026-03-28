@@ -170,9 +170,40 @@
       "Bash(npm run:*)",
       "Bash(2)",
       "Bash(schtasks /query /fo LIST /v)",
-      "Bash(schtasks /query /fo CSV /v)"
+      "Bash(schtasks /query /fo CSV /v)",
+      "Skill(update-config)",
+      "Bash(bash \".claude/hooks/pre-compact.sh\")",
+      "Bash(bash \".claude/hooks/post-compact.sh\")",
+      "Bash(git:*)"
     ],
     "deny": [],
     "ask": []
+  },
+  "hooks": {
+    "PreCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/pre-compact.sh\"",
+            "timeout": 10,
+            "statusMessage": "Extracting session learnings to memory vault..."
+          }
+        ]
+      }
+    ],
+    "PostCompact": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/post-compact.sh\"",
+            "statusMessage": "Restoring memory vault context..."
+          }
+        ]
+      }
+    ]
   }
 }

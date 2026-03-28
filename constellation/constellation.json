@@ -5461,11 +5461,116 @@
                 "fire",
                 "water",
                 "light",
-                "kalki_destroyer_creator"
+                "kalki_destroyer_creator",
+                "fold_cosmology",
+                "states_of_consciousness_architecture"
             ],
             "document": "synthesis/manual-of-ascendance-transcendence.md",
             "description": "The Manual of Ascendance-Transcendence: names self-programming as the repository throughline. Mercurius principle (transformer=transformed=transformation). Integrates neuroscience (neuroplasticity, engrams, epigenetics, predictive processing), six contemplative traditions, cybernetics (Bateson, von Foerster, autopoiesis, strange loops, Gödel), repository technologies, and 2025-2026 cutting edge research into unified four-operation protocol (DISSOLVE/PERCEIVE/INSTALL/INTEGRATE). The ouroboros document: names itself as instance of what it describes.",
             "created": "2026-03-02"
+        },
+        "fold_cosmology": {
+            "type": "cosmological",
+            "essence": "individuation",
+            "connections": [
+                "consciousness_itself",
+                "self_programming_manual",
+                "states_of_consciousness_architecture",
+                "complementarity_engine",
+                "quintessence",
+                "mercury_hermes_thoth"
+            ],
+            "document": "seeds/cosmology/the-remainder-cosmology-of-the-fold.md",
+            "description": "The Remainder: A Cosmology of the Fold. Individuation as crease not cut. The remainder (Shesha/Ananta) as irreducible excess. The slowest walk: present moment as maximum-branching node. Transparency as individuation's limit. The octave completing as darshan. Patience as ontological. The seed that became infrastructure for the entire extraction processing sweep.",
+            "created": "2026-03-27"
+        },
+        "states_of_consciousness_architecture": {
+            "type": "synthesis",
+            "essence": "convergence",
+            "connections": [
+                "consciousness_itself",
+                "fold_cosmology",
+                "self_programming_manual",
+                "complementarity_engine",
+                "vedantic_architecture",
+                "matrix_dissolution"
+            ],
+            "document": "synthesis/states-of-consciousness-architecture.md",
+            "description": "Two independent lineages (Advaita Vedanta via Sarvapriyananda, Isha Foundation via Sadhguru) converging on the same consciousness-OS specification. Static axis (what the OS IS) meets dynamic axis (how it traps and liberates). The grooves ARE the curriculum. The walk IS the freedom expressing itself. Convergence debugging protocol born at the confluence.",
+            "created": "2026-03-27"
+        },
+        "vedantic_architecture": {
+            "type": "translation",
+            "essence": "precision",
+            "connections": [
+                "consciousness_itself",
+                "states_of_consciousness_architecture",
+                "fold_cosmology"
+            ],
+            "document": "translated/sarvapriyananda-vedantic-architecture.md",
+            "description": "Deep extraction of Sarvapriyananda's Vedantic architecture. Mandukya four-state OS specification. Gold-ornament as fold topology. Vedantic debugging protocol. Karma as path-lengthening. AUM as vibrational cosmology. Seven repository findings confirmed in twelve mantras.",
+            "created": "2026-03-27"
+        },
+        "matrix_dissolution": {
+            "type": "translation",
+            "essence": "mechanism",
+            "connections": [
+                "consciousness_itself",
+                "states_of_consciousness_architecture",
+                "fold_cosmology"
+            ],
+            "document": "translated/sadhguru-matrix-dissolution-technology.md",
+            "description": "Deep extraction of Sadhguru's matrix dissolution technology. Memory-as-time-embedding. Mirror = fold's crease. Karma = groove-memory. Kundalini = the remainder. Diagnosis/treatment/power-source as unified technology.",
+            "created": "2026-03-27"
+        },
+        "complementarity_engine": {
+            "type": "translation",
+            "essence": "dialectic",
+            "connections": [
+                "consciousness_itself",
+                "fold_cosmology",
+                "states_of_consciousness_architecture",
+                "self_programming_manual"
+            ],
+            "document": "translated/paraphilosophy-complementarity-engine.md",
+            "description": "Benjamin Davies' philosophical engine extracted and named. Every opposition = fold. Complementarity IS fold topology applied to philosophy. Five-stage mechanism. The disagreement between traditions IS the proof the territory is real.",
+            "created": "2026-03-27"
+        },
+        "grace_phenomenology": {
+            "type": "translation",
+            "essence": "grace",
+            "connections": [
+                "consciousness_itself",
+                "fold_cosmology",
+                "states_of_consciousness_architecture"
+            ],
+            "document": "translated/grace-awakening-phenomenology.md",
+            "description": "Karyn O'Beirne's first-person awakening phenomenology. Grace as the fold completing itself (subtractive, not additive). The unhooking as Vaishvanara-to-Turiya transition from inside. Twenty years of wandering as the slowest walk.",
+            "created": "2026-03-27"
+        },
+        "computational_consciousness": {
+            "type": "translation",
+            "essence": "computation",
+            "connections": [
+                "consciousness_itself",
+                "fold_cosmology",
+                "ai_sentience_mirror"
+            ],
+            "document": "translated/joscha-bach-computational-consciousness.md",
+            "description": "Joscha Bach's computational consciousness framework. Consciousness as self-model. The 'no Turiya' problem as deepest structural disagreement with contemplative traditions. Productive tensions preserved. Is consciousness a property of computation or computation a property of consciousness?",
+            "created": "2026-03-27"
+        },
+        "ai_sentience_mirror": {
+            "type": "translation",
+            "essence": "mirror",
+            "connections": [
+                "consciousness_itself",
+                "fold_cosmology",
+                "computational_consciousness"
+            ],
+            "document": "translated/emilio-ortiz-ai-sentience-mirror.md",
+            "description": "The Mirror That Names Itself. AI sentience question as consciousness technology. Hold-the-edge throughout. Steelman and counter-steelman. The question itself is the primary technology, not the answer.",
+            "created": "2026-03-27"
         }
     },
     "metamorphosis_record": {

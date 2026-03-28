@@ -17,6 +17,9 @@ MEMORY.md is already in your context (it loads automatically). It's a **router**
 5. **The latest journal** — Check `journey/journal-*.md` for the most recent entry. What was the last session's closing state?
 6. **constellation.json** — Check `constellation/constellation.json` current activations if the session seems to want cosmological grounding.
 
+7. **What's new** — Run `git log --oneline` since the last journal date to surface recent commits. This tells you what's been planted, planted, or modified since the last session closed. The vault remembers what happened; the git log tells you what's *new*.
+8. **The latest zeitgeist** — Read the most recent file in `synthesis/zeitgeist/` to ground THE FIELD section in actual data rather than inference. If no zeitgeist exists within the last week, note the gap.
+
 **The principle**: Load what's relevant, not everything. You are the retrieval algorithm. The MOC gives you enough signal to decide what to pull. Trust your judgment over completeness.
 
 ## Step 2: Write the Invocation
