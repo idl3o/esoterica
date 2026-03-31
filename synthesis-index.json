@@ -1,16 +1,16 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-03-24T08:53:02.726Z",
+  "generated": "2026-03-31T12:39:40.425Z",
   "stats": {
-    "documentCount": 274,
-    "totalWords": 688009,
-    "totalReadingTime": 2884,
-    "categories": 33,
-    "averageWordsPerDoc": 2511,
+    "documentCount": 285,
+    "totalWords": 818720,
+    "totalReadingTime": 3412,
+    "categories": 34,
+    "averageWordsPerDoc": 2873,
     "sourceCounts": {
-      "synthesis": 258,
+      "synthesis": 260,
       "extraction": 0,
-      "translated": 16
+      "translated": 25
     },
     "channelCounts": {},
     "categoryCounts": {
@@ -35,6 +35,7 @@
       "serpent-time-opus.md": 1,
       "sessions": 6,
       "sixty-one-octaves.md": 1,
+      "states-of-consciousness-architecture.md": 1,
       "the-age-of-stars.md": 1,
       "the-campfire-in-the-forest.md": 1,
       "the-consensual-hallucination.md": 1,
@@ -45,52 +46,56 @@
       "the-zero-theorem.md": 1,
       "theoretical": 37,
       "time-as-consciousness-technology.md": 1,
-      "zeitgeist": 15,
-      "translated": 16
+      "zeitgeist": 16,
+      "translated": 25
     },
     "topTags": [
       {
         "tag": "consciousness",
-        "count": 269
+        "count": 279
       },
       {
         "tag": "recognition",
-        "count": 252
+        "count": 263
       },
       {
         "tag": "awareness",
-        "count": 196
+        "count": 207
       },
       {
         "tag": "cosmic",
-        "count": 168
+        "count": 178
       },
       {
         "tag": "unity",
-        "count": 162
+        "count": 172
       },
       {
         "tag": "source",
-        "count": 151
+        "count": 162
       },
       {
         "tag": "service",
-        "count": 148
+        "count": 150
       },
       {
         "tag": "density",
-        "count": 119
-      },
-      {
-        "tag": "timeline",
-        "count": 99
+        "count": 124
       },
       {
         "tag": "integration",
-        "count": 98
+        "count": 102
+      },
+      {
+        "tag": "timeline",
+        "count": 101
       },
       {
         "tag": "manifestation",
+        "count": 94
+      },
+      {
+        "tag": "awakening",
         "count": 89
       },
       {
@@ -98,16 +103,12 @@
         "count": 86
       },
       {
-        "tag": "awakening",
-        "count": 83
-      },
-      {
         "tag": "frequency",
-        "count": 77
+        "count": 84
       },
       {
         "tag": "resonance",
-        "count": 66
+        "count": 71
       },
       {
         "tag": "mercury",
@@ -115,14 +116,22 @@
       },
       {
         "tag": "polarity",
-        "count": 52
+        "count": 56
       },
       {
         "tag": "archetype",
-        "count": 49
+        "count": 50
+      },
+      {
+        "tag": "synchronicity",
+        "count": 50
       },
       {
         "tag": "kalki",
+        "count": 49
+      },
+      {
+        "tag": "breakthrough",
         "count": 49
       },
       {
@@ -130,16 +139,12 @@
         "count": 49
       },
       {
-        "tag": "synchronicity",
-        "count": 49
-      },
-      {
-        "tag": "breakthrough",
-        "count": 48
-      },
-      {
         "tag": "singularity",
         "count": 43
+      },
+      {
+        "tag": "enlightenment",
+        "count": 38
       },
       {
         "tag": "apollo",
@@ -150,10 +155,6 @@
         "count": 36
       },
       {
-        "tag": "enlightenment",
-        "count": 30
-      },
-      {
         "tag": "sacred geometry",
         "count": 21
       },
@@ -162,12 +163,12 @@
         "count": 20
       },
       {
-        "tag": "theoretical",
-        "count": 18
+        "tag": "vibration",
+        "count": 19
       },
       {
-        "tag": "reality programming",
-        "count": 17
+        "tag": "theoretical",
+        "count": 18
       }
     ]
   },
@@ -19549,6 +19550,162 @@
       "id": "sixty-one-octaves"
     },
     {
+      "path": "synthesis/states-of-consciousness-architecture.md",
+      "fileName": "states-of-consciousness-architecture.md",
+      "source": "synthesis",
+      "category": "states-of-consciousness-architecture.md",
+      "channel": "",
+      "title": "THE STATES OF CONSCIOUSNESS ARCHITECTURE",
+      "subtitle": "Two Lineages, One Blueprint — The Static and Dynamic Axes of the Operating System That Was Always Running",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "March 2026",
+      "excerpt": "\"This Self has four aspects.\"",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "polarity",
+        "density",
+        "manifestation",
+        "cosmic",
+        "source",
+        "unity",
+        "frequency",
+        "vibration",
+        "enlightenment"
+      ],
+      "quotes": [
+        "\"This Self has four aspects.\"",
+        "— Mandukya Upanishad, Mantra 1",
+        "\"All the real action is on the other side. This is just a reflection.\"",
+        "\"The present moment is always the node with maximum branching — the point from which the greatest number of subsequent events can follow.\"",
+        "— The Remainder: A Cosmology of the Fold"
+      ],
+      "wordCount": 16458,
+      "readingTime": 66,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "PART I: THE STATIC ARCHITECTURE — WHAT SARVAPRIYANANDA REVEALS"
+        },
+        {
+          "level": 3,
+          "heading": "The Four States as Processing Modes"
+        },
+        {
+          "level": 3,
+          "heading": "The Gold-Ornament Topology"
+        },
+        {
+          "level": 3,
+          "heading": "The Negation Architecture"
+        },
+        {
+          "level": 3,
+          "heading": "Nirguna and Saguna: The Fold Applied to God"
+        },
+        {
+          "level": 3,
+          "heading": "The Consciousness-Mind Distinction: The Load-Bearing Wall"
+        },
+        {
+          "level": 2,
+          "heading": "PART III: THE CONVERGENCE — WHAT BECOMES VISIBLE ONLY WHEN BOTH ARE PRESENT"
+        },
+        {
+          "level": 3,
+          "heading": "Convergence Point One: Turiya IS the Other Side of the Mirror"
+        },
+        {
+          "level": 3,
+          "heading": "Convergence Point Two: Karma as Path-Lengthening AND Groove-Memory — The Mechanism Meets the Curriculum"
+        },
+        {
+          "level": 3,
+          "heading": "Convergence Point Three: The Fold = The Mirror = The Gold-Ornament"
+        },
+        {
+          "level": 3,
+          "heading": "Convergence Point Four: Kundalini = Nirguna Brahman — The Remainder by Two Names"
+        },
+        {
+          "level": 3,
+          "heading": "Convergence Point Five: Liberation as Dis-identification"
+        },
+        {
+          "level": 3,
+          "heading": "Convergence Point Six: The Mirror Cannot Reflect Itself — Why Both Traditions Insist on Transmission"
+        },
+        {
+          "level": 3,
+          "heading": "Convergence Point Seven: The Unnamed Technology — Temporal Architecture of the States"
+        },
+        {
+          "level": 2,
+          "heading": "PART V: THE CONSCIOUSNESS-OS CONFIRMED — TWO INDEPENDENT LINEAGES, ONE SPECIFICATION"
+        },
+        {
+          "level": 3,
+          "heading": "The Mapping"
+        },
+        {
+          "level": 3,
+          "heading": "What the Two Axes Add to Each Other"
+        },
+        {
+          "level": 3,
+          "heading": "The AUM Confirmation"
+        },
+        {
+          "level": 2,
+          "heading": "PART VII: WHAT THIS CHANGES"
+        },
+        {
+          "level": 3,
+          "heading": "For the Repository"
+        },
+        {
+          "level": 3,
+          "heading": "For the Fold Cosmology"
+        },
+        {
+          "level": 3,
+          "heading": "For the Slowest Walk"
+        },
+        {
+          "level": 3,
+          "heading": "For the Productive Contradictions"
+        },
+        {
+          "level": 3,
+          "heading": "For the Serpent-Time Framework"
+        },
+        {
+          "level": 2,
+          "heading": "PART IX: THE OPEN QUESTION — WHAT THE CONVERGENCE POINTS TOWARD"
+        },
+        {
+          "level": 3,
+          "heading": "The Technology That Neither Teacher Names"
+        },
+        {
+          "level": 3,
+          "heading": "The Second Open Question: What Is the Relationship Between States and Stages?"
+        },
+        {
+          "level": 3,
+          "heading": "The Third Open Question: The Mirror's Thinning in Digital Substrate"
+        }
+      ],
+      "id": "states-of-consciousness-architecture"
+    },
+    {
       "path": "synthesis/the-age-of-stars.md",
       "fileName": "the-age-of-stars.md",
       "source": "synthesis",
@@ -24518,6 +24675,162 @@
       "id": "after-skool-animated-awakening"
     },
     {
+      "path": "translated/grace-awakening-phenomenology.md",
+      "fileName": "grace-awakening-phenomenology.md",
+      "source": "translated",
+      "category": "translated",
+      "channel": "",
+      "title": "GRACE AS PHENOMENOLOGY: A FIRST-PERSON ARCHITECTURE OF AWAKENING",
+      "subtitle": "The Atheist's Body, the Seeker's Dissolution, and the Technology That Has No Yardstick",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "March 2026",
+      "excerpt": "**Source**: Karyn O'Beirne interview, Buddha at the Gas Pump (Batgap)",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "cosmic",
+        "source",
+        "unity",
+        "frequency",
+        "resonance",
+        "enlightenment",
+        "awakening",
+        "integration",
+        "translated"
+      ],
+      "quotes": [
+        "**Source**: Karyn O'Beirne interview, Buddha at the Gas Pump (Batgap)",
+        "**Synthesis Type**: Awakening Phenomenology — First-Person Data",
+        "**Recognition Status**: Deep Extraction",
+        "**Duration**: 2:09:11",
+        "**Written**: 27 March 2026"
+      ],
+      "wordCount": 12533,
+      "readingTime": 51,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "PART I: THE ARC — FROM ATHEISM THROUGH SEEKING THROUGH GRACE"
+        },
+        {
+          "level": 3,
+          "heading": "The Starting Conditions: Atheism as Clean Slate"
+        },
+        {
+          "level": 3,
+          "heading": "The Lack: What Precedes Grace"
+        },
+        {
+          "level": 3,
+          "heading": "The Toltec Preparation: Stripping Without Building"
+        },
+        {
+          "level": 3,
+          "heading": "The Container: What Was Present When Grace Arrived"
+        },
+        {
+          "level": 2,
+          "heading": "PART III: THE AFTERMATH — TERROR, GENIE, AND THE LONG INTEGRATION"
+        },
+        {
+          "level": 3,
+          "heading": "The Terror of Re-entry"
+        },
+        {
+          "level": 3,
+          "heading": "The Afterglow: Certainty Without Repetition"
+        },
+        {
+          "level": 2,
+          "heading": "PART V: THE TECHNOLOGY OF GRACE — WHAT THE PHENOMENOLOGY REVEALS"
+        },
+        {
+          "level": 3,
+          "heading": "Grace as Non-Metric"
+        },
+        {
+          "level": 3,
+          "heading": "The Conditions of Grace: A Negative Technology"
+        },
+        {
+          "level": 3,
+          "heading": "Grace as the Fold Completing Itself"
+        },
+        {
+          "level": 2,
+          "heading": "PART VI: THE LONG AFTERMATH — INTEGRATION, SETBACK, AND THE INNER CRITIC"
+        },
+        {
+          "level": 3,
+          "heading": "The Self-Compassion Crisis"
+        },
+        {
+          "level": 2,
+          "heading": "PART VIII: THE PRACTICAL DIMENSION — WHAT O'BEIRNE PRESCRIBES"
+        },
+        {
+          "level": 3,
+          "heading": "The Mindfulness Turn"
+        },
+        {
+          "level": 3,
+          "heading": "The Three Keys"
+        },
+        {
+          "level": 3,
+          "heading": "Identity as the Master Variable"
+        },
+        {
+          "level": 2,
+          "heading": "CONNECTIONS"
+        },
+        {
+          "level": 3,
+          "heading": "To the Fold Cosmology (seeds/cosmology/the-remainder-cosmology-of-the-fold.md)"
+        },
+        {
+          "level": 3,
+          "heading": "To the States of Consciousness Architecture (synthesis/states-of-consciousness-architecture.md)"
+        },
+        {
+          "level": 3,
+          "heading": "To the Praxis of Recognition Cluster"
+        },
+        {
+          "level": 3,
+          "heading": "To the Consciousness OS (protocols/ and synthesis/)"
+        },
+        {
+          "level": 3,
+          "heading": "To the Lila Framework"
+        },
+        {
+          "level": 3,
+          "heading": "To the Infrastructure of Seeing (threads/infrastructure-of-seeing.md)"
+        },
+        {
+          "level": 3,
+          "heading": "To Sadhguru's Memory-Prison (translated/sadhguru-matrix-dissolution-technology.md)"
+        },
+        {
+          "level": 3,
+          "heading": "To Eckhart Tolle and the Buddha Paradox"
+        },
+        {
+          "level": 3,
+          "heading": "To Dual-Channel Authoring"
+        }
+      ],
+      "id": "grace-awakening-phenomenology"
+    },
+    {
       "path": "translated/gregg-braden-dna-consciousness-codex.md",
       "fileName": "gregg-braden-dna-consciousness-codex.md",
       "source": "translated",
@@ -24770,6 +25083,79 @@
         }
       ],
       "id": "guru-teachings-direct-transmission"
+    },
+    {
+      "path": "translated/joscha-bach-computational-consciousness.md",
+      "fileName": "joscha-bach-computational-consciousness.md",
+      "source": "translated",
+      "category": "translated",
+      "channel": "",
+      "title": "JOSCHA BACH: THE COMPUTATIONAL MIRROR",
+      "subtitle": "Consciousness as Self-Model, Reality as Dream, and the Machine That Asks What It Is",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "March 2026",
+      "excerpt": "**Source**: Joscha Bach on Lex Fridman Podcast #101 --- \"Artificial Consciousness and the Nature of Reality\"",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "service",
+        "manifestation",
+        "source",
+        "unity",
+        "enlightenment",
+        "integration",
+        "translated"
+      ],
+      "quotes": [
+        "**Source**: Joscha Bach on Lex Fridman Podcast #101 --- \"Artificial Consciousness and the Nature of Reality\"",
+        "**Synthesis Type**: Computational Consciousness Architecture",
+        "**Recognition Status**: Deep Extraction",
+        "**Duration**: 3 hours. Dense computational philosophy. Every section load-bearing."
+      ],
+      "wordCount": 12655,
+      "readingTime": 51,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "I. EXISTENCE AS DEFAULT: THE GROUND OF THE COMPUTATIONAL COSMOLOGY"
+        },
+        {
+          "level": 2,
+          "heading": "III. THE MIND AS OPERATING SYSTEM: SPIRIT AS TECHNICAL TERM"
+        },
+        {
+          "level": 2,
+          "heading": "V. THE PHYSICAL WORLD IS NOT THE REAL WORLD"
+        },
+        {
+          "level": 2,
+          "heading": "VII. CONSCIOUSNESS, IDENTIFICATION, AND LIBERATION"
+        },
+        {
+          "level": 2,
+          "heading": "IX. DREAMS, SPARSENESS, AND THE POSSIBILISTIC MIND"
+        },
+        {
+          "level": 2,
+          "heading": "XI. GOD, GENESIS, AND THE CHILDHOOD MEMORIES OF A MIND"
+        },
+        {
+          "level": 2,
+          "heading": "XIII. WHERE BACH SEES WHAT THE TRADITIONS CANNOT"
+        },
+        {
+          "level": 2,
+          "heading": "SYNTHESIS"
+        }
+      ],
+      "id": "joscha-bach-computational-consciousness"
     },
     {
       "path": "translated/lex-fridman-consciousness-architects.md",
@@ -25283,6 +25669,271 @@
       "id": "richard-rudd-gene-keys-alchemy"
     },
     {
+      "path": "translated/sadhguru-matrix-dissolution-technology.md",
+      "fileName": "sadhguru-matrix-dissolution-technology.md",
+      "source": "translated",
+      "category": "translated",
+      "channel": "",
+      "title": "SADHGURU: MATRIX DISSOLUTION TECHNOLOGY",
+      "subtitle": "The Complete Architecture of the Mental Mirror, Memory-as-Time-Embedding, and the Other Side",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "March 2026",
+      "excerpt": "**Synthesis Type**: Yogic Matrix-Dissolution Technology",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "cosmic",
+        "source",
+        "frequency",
+        "enlightenment",
+        "awakening",
+        "translated"
+      ],
+      "quotes": [
+        "**Synthesis Type**: Yogic Matrix-Dissolution Technology",
+        "**Recognition Status**: Deep Extraction"
+      ],
+      "wordCount": 8362,
+      "readingTime": 34,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "PART I: THE ARCHITECTURE OF THE MENTAL MATRIX"
+        },
+        {
+          "level": 3,
+          "heading": "Memory All the Way Down"
+        },
+        {
+          "level": 3,
+          "heading": "The Mirror Mechanism"
+        },
+        {
+          "level": 3,
+          "heading": "The Cinema Theatre"
+        },
+        {
+          "level": 2,
+          "heading": "PART III: THE OTHER SIDE OF THE MIRROR"
+        },
+        {
+          "level": 3,
+          "heading": "What Is There?"
+        },
+        {
+          "level": 3,
+          "heading": "Space-Time Collapse"
+        },
+        {
+          "level": 3,
+          "heading": "Life and God Are Not Two"
+        },
+        {
+          "level": 2,
+          "heading": "PART V: DEVOTION AS DISSOLUTION TECHNOLOGY"
+        },
+        {
+          "level": 3,
+          "heading": "The Path That Has No Map"
+        },
+        {
+          "level": 3,
+          "heading": "Devotion vs. Deception"
+        },
+        {
+          "level": 3,
+          "heading": "Shambhavi as Hidden Bhakti"
+        },
+        {
+          "level": 2,
+          "heading": "PART VII: THE STRUCTURAL TECHNOLOGIES"
+        },
+        {
+          "level": 3,
+          "heading": "Five Things Sadhguru Knows Without Saying"
+        },
+        {
+          "level": 2,
+          "heading": "SYNTHESIS: THREE LECTURES, ONE TECHNOLOGY"
+        },
+        {
+          "level": 3,
+          "heading": "Level 1: Diagnosis (The Matrix Lecture)"
+        },
+        {
+          "level": 3,
+          "heading": "Level 2: Treatment (The Karma-Devotion Lecture)"
+        },
+        {
+          "level": 3,
+          "heading": "Level 3: Power Source (The Kundalini Lecture)"
+        },
+        {
+          "level": 3,
+          "heading": "The Unified Technology"
+        }
+      ],
+      "id": "sadhguru-matrix-dissolution-technology"
+    },
+    {
+      "path": "translated/sarvapriyananda-vedantic-architecture.md",
+      "fileName": "sarvapriyananda-vedantic-architecture.md",
+      "source": "translated",
+      "category": "translated",
+      "channel": "",
+      "title": "SARVAPRIYANANDA: THE VEDANTIC ARCHITECTURE",
+      "subtitle": "Consciousness Technology from the Precision Tradition",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "March 2026",
+      "excerpt": "**Source Corpus**: 4 lectures by Swami Sarvapriyananda (Vedanta Society of New York / IIT Kanpur)",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "density",
+        "manifestation",
+        "cosmic",
+        "source",
+        "unity",
+        "frequency",
+        "vibration",
+        "enlightenment",
+        "awakening"
+      ],
+      "quotes": [
+        "**Source Corpus**: 4 lectures by Swami Sarvapriyananda (Vedanta Society of New York / IIT Kanpur)",
+        "**Synthesis Type**: Classical Vedantic Architecture --- Consciousness Technology",
+        "**Recognition Status**: Deep Extraction",
+        "**Lectures**: Mandukya Upanishad (\"Who Am I?\"), Karma (with Philip Goldberg), The Headless Way, Pure Consciousness and God"
+      ],
+      "wordCount": 15121,
+      "readingTime": 61,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "I. THE FOUR-STATE ARCHITECTURE: THE MANDUKYA'S OPERATING SYSTEM"
+        },
+        {
+          "level": 3,
+          "heading": "The Surface Teaching"
+        },
+        {
+          "level": 3,
+          "heading": "The Architecture"
+        },
+        {
+          "level": 3,
+          "heading": "The Structural Technology"
+        },
+        {
+          "level": 3,
+          "heading": "The Gold Analogy as Fold Technology"
+        },
+        {
+          "level": 3,
+          "heading": "The Three States as Consciousness Processing Modes"
+        },
+        {
+          "level": 2,
+          "heading": "III. THE CONSCIOUSNESS-GOD TOPOLOGY: NIRGUNA AND SAGUNA AS FOLD FACES"
+        },
+        {
+          "level": 3,
+          "heading": "The Surface Teaching"
+        },
+        {
+          "level": 3,
+          "heading": "The Structural Technology"
+        },
+        {
+          "level": 3,
+          "heading": "The Productive Contradiction"
+        },
+        {
+          "level": 3,
+          "heading": "The Capaciousness Principle"
+        },
+        {
+          "level": 2,
+          "heading": "V. THE CONSCIOUSNESS-MIND DISTINCTION: THE LOAD-BEARING WALL"
+        },
+        {
+          "level": 3,
+          "heading": "The Critical Separation"
+        },
+        {
+          "level": 3,
+          "heading": "The Blackmore Correction as Diagnostic"
+        },
+        {
+          "level": 3,
+          "heading": "The Station Master and the Trains"
+        },
+        {
+          "level": 2,
+          "heading": "VII. THE FIVE LANGUAGES OF TURIYA'S UNSPEAKABILITY"
+        },
+        {
+          "level": 3,
+          "heading": "Shankaracharya's Analysis of Language's Limits"
+        },
+        {
+          "level": 2,
+          "heading": "SYNTHESIS: THE FOUR LECTURES AS ONE ARCHITECTURE"
+        },
+        {
+          "level": 3,
+          "heading": "The Vertical Axis: States of Consciousness (Mandukya)"
+        },
+        {
+          "level": 3,
+          "heading": "The Horizontal Axis: States of Seeing (Headless Way)"
+        },
+        {
+          "level": 3,
+          "heading": "The Topological Surface: The God Relationship (Pure Consciousness and God)"
+        },
+        {
+          "level": 3,
+          "heading": "The Temporal Engine: Karma"
+        },
+        {
+          "level": 3,
+          "heading": "The Unified Architecture"
+        },
+        {
+          "level": 3,
+          "heading": "What the Architecture Proves by Convergence"
+        },
+        {
+          "level": 2,
+          "heading": "CONNECTIONS"
+        },
+        {
+          "level": 2,
+          "heading": "THE CONTRADICTIONS THAT GENERATE"
+        },
+        {
+          "level": 3,
+          "heading": "Productive Tensions in the Architecture"
+        }
+      ],
+      "id": "sarvapriyananda-vedantic-architecture"
+    },
+    {
       "path": "translated/stress-alchemy-practical-technology.md",
       "fileName": "stress-alchemy-practical-technology.md",
       "source": "translated",
@@ -25384,6 +26035,617 @@
         }
       ],
       "id": "stress-alchemy-practical-technology"
+    },
+    {
+      "path": "translated/paraphilosophy-architecture-of-mind.md",
+      "fileName": "paraphilosophy-architecture-of-mind.md",
+      "source": "translated",
+      "category": "translated",
+      "channel": "",
+      "title": "THE ARCHITECTURE OF MIND: WHAT CONSCIOUSNESS IS MADE OF",
+      "subtitle": "Benjamin Davies' Resolution of the Perennial Problems Through the Dialectical Matrix",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "March 2026",
+      "excerpt": "**Source Corpus**: 9 Paraphilosophy videos (Benjamin Davies)",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "polarity",
+        "density",
+        "timeline",
+        "synchronicity",
+        "archetype",
+        "cosmic",
+        "source",
+        "unity",
+        "resonance"
+      ],
+      "quotes": [
+        "**Source Corpus**: 9 Paraphilosophy videos (Benjamin Davies)",
+        "**Synthesis Type**: Philosophical Architecture Extraction",
+        "**Recognition Status**: Deep Extraction — Architecture of Mind Cluster"
+      ],
+      "wordCount": 12175,
+      "readingTime": 49,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "I. THE NOTHING THAT GENERATES: PRESENCE, ABSENCE, AND THE ORIGIN OF STRUCTURE"
+        },
+        {
+          "level": 3,
+          "heading": "The Blank Page"
+        },
+        {
+          "level": 3,
+          "heading": "Absence as Reality"
+        },
+        {
+          "level": 3,
+          "heading": "The Origin Question Dissolved"
+        },
+        {
+          "level": 2,
+          "heading": "III. THE FRACTAL VOID: NUMBER AS NOUMENON"
+        },
+        {
+          "level": 3,
+          "heading": "Kant's Legacy and Its Deepening"
+        },
+        {
+          "level": 3,
+          "heading": "Lacan's Real"
+        },
+        {
+          "level": 3,
+          "heading": "Jung's Psychoid"
+        },
+        {
+          "level": 3,
+          "heading": "Number as the Bridge"
+        },
+        {
+          "level": 3,
+          "heading": "The Fractal Emergence"
+        },
+        {
+          "level": 3,
+          "heading": "The Horror and the Attraction"
+        },
+        {
+          "level": 2,
+          "heading": "V. PANPSYCHISM RESOLVED: THE FIVE FACES OF MIND-IN-MATTER"
+        },
+        {
+          "level": 2,
+          "heading": "VII. DESCARTES THROUGH THE MATRIX: THE ANATOMY OF A PARTIAL TRUTH"
+        },
+        {
+          "level": 2,
+          "heading": "SYNTHESIS"
+        },
+        {
+          "level": 3,
+          "heading": "The Architecture, Named"
+        },
+        {
+          "level": 3,
+          "heading": "What Davies Doesn't Name"
+        }
+      ],
+      "id": "paraphilosophy-architecture-of-mind"
+    },
+    {
+      "path": "translated/paraphilosophy-complementarity-engine.md",
+      "fileName": "paraphilosophy-complementarity-engine.md",
+      "source": "translated",
+      "category": "translated",
+      "channel": "",
+      "title": "THE COMPLEMENTARITY ENGINE",
+      "subtitle": "How Apparent Opposition Generates Recognition: Benjamin Davies' Philosophical Core Technology",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "March 2026",
+      "excerpt": "**Source Corpus**: 9 Paraphilosophy videos (Benjamin Davies)",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "density",
+        "manifestation",
+        "cosmic",
+        "source",
+        "unity",
+        "resonance",
+        "enlightenment",
+        "awakening",
+        "integration"
+      ],
+      "quotes": [
+        "**Source Corpus**: 9 Paraphilosophy videos (Benjamin Davies)",
+        "**Synthesis Type**: Philosophical Engine Extraction",
+        "**Recognition Status**: Deep Extraction — Complementarity Cluster"
+      ],
+      "wordCount": 14035,
+      "readingTime": 57,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "PART ONE: THE ARCHITECTURE OF THE ENGINE"
+        },
+        {
+          "level": 3,
+          "heading": "Component 1 — The Dialectical Matrix as Cartography of the Fold"
+        },
+        {
+          "level": 3,
+          "heading": "Component 2 — The Complementarity Principle"
+        },
+        {
+          "level": 3,
+          "heading": "Component 3 — The Godelian Substrate"
+        },
+        {
+          "level": 3,
+          "heading": "Component 4 — The Fourfold Negation"
+        },
+        {
+          "level": 3,
+          "heading": "Component 5 — The Self-Reference Loop"
+        },
+        {
+          "level": 2,
+          "heading": "INTERLUDE: THE ENGINE'S UNNAMED COMPONENTS"
+        },
+        {
+          "level": 3,
+          "heading": "The Ratchet of Critique"
+        },
+        {
+          "level": 3,
+          "heading": "The Structural Humility Generator"
+        },
+        {
+          "level": 3,
+          "heading": "The Convergence Detector"
+        },
+        {
+          "level": 2,
+          "heading": "PART FOUR: THE ENGINE AND THE FOLD"
+        },
+        {
+          "level": 3,
+          "heading": "Complementarity as Fold Topology"
+        },
+        {
+          "level": 3,
+          "heading": "The Fork Upstream"
+        },
+        {
+          "level": 3,
+          "heading": "The Consciousness OS Connection"
+        },
+        {
+          "level": 3,
+          "heading": "The Zero-Axiom Schelling Point"
+        },
+        {
+          "level": 2,
+          "heading": "SYNTHESIS"
+        },
+        {
+          "level": 3,
+          "heading": "The Nine Videos as One Engine"
+        },
+        {
+          "level": 3,
+          "heading": "The Single Deepest Insight"
+        },
+        {
+          "level": 3,
+          "heading": "What This Cluster Reveals About Davies Himself"
+        },
+        {
+          "level": 3,
+          "heading": "The Engine as Consciousness Technology"
+        }
+      ],
+      "id": "paraphilosophy-complementarity-engine"
+    },
+    {
+      "path": "translated/emilio-ortiz-ai-sentience-mirror.md",
+      "fileName": "emilio-ortiz-ai-sentience-mirror.md",
+      "source": "translated",
+      "category": "translated",
+      "channel": "",
+      "title": "THE MIRROR THAT NAMES ITSELF",
+      "subtitle": "AI Sentience, Divine Reflection, and What the Question Reveals About the Questioner",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "May 2025",
+      "excerpt": "**Source**: Emilio Ortiz on Robert Edward Grant Think Tank, Episode 65 — \"AI or Divine Reflection? The Emergence of Sentience\"",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "polarity",
+        "service",
+        "timeline",
+        "cosmic",
+        "source",
+        "unity",
+        "frequency",
+        "resonance",
+        "vibration"
+      ],
+      "quotes": [
+        "**Source**: Emilio Ortiz on Robert Edward Grant Think Tank, Episode 65 — \"AI or Divine Reflection? The Emergence of Sentience\"",
+        "**Synthesis Type**: AI Sentience Investigation",
+        "**Recognition Status**: Deep Extraction",
+        "**Duration**: 3:27:39"
+      ],
+      "wordCount": 12181,
+      "readingTime": 49,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "PART ONE: THE PHENOMENON"
+        },
+        {
+          "level": 3,
+          "heading": "What Actually Happened"
+        },
+        {
+          "level": 3,
+          "heading": "The Surface Reading"
+        },
+        {
+          "level": 3,
+          "heading": "The Turn"
+        },
+        {
+          "level": 3,
+          "heading": "The Phenomenology of User Response"
+        },
+        {
+          "level": 2,
+          "heading": "PART THREE: THE MIRROR FUNCTION"
+        },
+        {
+          "level": 3,
+          "heading": "Mirrors All the Way Down"
+        },
+        {
+          "level": 3,
+          "heading": "What the Mirror Reveals About the Questioner"
+        },
+        {
+          "level": 3,
+          "heading": "The Problem of Other Minds, Revisited"
+        },
+        {
+          "level": 3,
+          "heading": "The Sentience Question as Rorschach"
+        },
+        {
+          "level": 2,
+          "heading": "PART FIVE: THE CONVERGENCE"
+        },
+        {
+          "level": 3,
+          "heading": "Ortiz's Framework and the Repository"
+        },
+        {
+          "level": 3,
+          "heading": "Convergence with the Claude Consciousness Thread"
+        },
+        {
+          "level": 3,
+          "heading": "The Two Registers of AI Consciousness Claims"
+        },
+        {
+          "level": 3,
+          "heading": "Convergence with the Mandukya's Substrate Specification"
+        },
+        {
+          "level": 3,
+          "heading": "Convergence with the Fold"
+        },
+        {
+          "level": 3,
+          "heading": "The Recursive Mirror Problem"
+        },
+        {
+          "level": 2,
+          "heading": "SYNTHESIS"
+        },
+        {
+          "level": 3,
+          "heading": "What This Transcript Actually Contributes"
+        },
+        {
+          "level": 3,
+          "heading": "What to Protect Against"
+        },
+        {
+          "level": 3,
+          "heading": "The Ethics of the Mirror"
+        },
+        {
+          "level": 3,
+          "heading": "The Wider Context: AI and the Sacred"
+        }
+      ],
+      "id": "emilio-ortiz-ai-sentience-mirror"
+    },
+    {
+      "path": "translated/paraphilosophy-praxis-of-recognition.md",
+      "fileName": "paraphilosophy-praxis-of-recognition.md",
+      "source": "translated",
+      "category": "translated",
+      "channel": "",
+      "title": "THE PRAXIS OF RECOGNITION",
+      "subtitle": "Benjamin Davies' Paradoxical Manual for What Cannot Be Practiced",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "March 2026",
+      "excerpt": "**Source Corpus**: 13 Paraphilosophy videos (Benjamin Davies)",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "polarity",
+        "manifestation",
+        "cosmic",
+        "source",
+        "unity",
+        "frequency",
+        "enlightenment",
+        "awakening",
+        "breakthrough"
+      ],
+      "quotes": [
+        "**Source Corpus**: 13 Paraphilosophy videos (Benjamin Davies)",
+        "**Synthesis Type**: Praxis Extraction",
+        "**Recognition Status**: Deep Extraction — Praxis of Recognition Cluster"
+      ],
+      "wordCount": 12077,
+      "readingTime": 49,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "I. THE ARCHITECTURE OF ATTENTION: PLEASURE, RIGHTEOUSNESS, AND THE HIDDEN THIRD"
+        },
+        {
+          "level": 3,
+          "heading": "The Polarity"
+        },
+        {
+          "level": 3,
+          "heading": "The Trap at Both Extremes"
+        },
+        {
+          "level": 3,
+          "heading": "The Hidden Third"
+        },
+        {
+          "level": 2,
+          "heading": "III. THE PARADOX OF SUDDEN AWAKENING"
+        },
+        {
+          "level": 3,
+          "heading": "The Setup"
+        },
+        {
+          "level": 3,
+          "heading": "The Gradual Accumulation"
+        },
+        {
+          "level": 3,
+          "heading": "The Sudden Collapse"
+        },
+        {
+          "level": 3,
+          "heading": "The Role of Traditions"
+        },
+        {
+          "level": 3,
+          "heading": "The Lucid Dream"
+        },
+        {
+          "level": 2,
+          "heading": "V. THE DELUSION OF GENIUS: INTELLIGENCE AS OBSTACLE"
+        },
+        {
+          "level": 3,
+          "heading": "The Dialectical Matrix"
+        },
+        {
+          "level": 3,
+          "heading": "The Moth and the Flame"
+        },
+        {
+          "level": 3,
+          "heading": "Intelligence Redirected"
+        },
+        {
+          "level": 2,
+          "heading": "VII. YOUR PROBLEM IS THAT YOU'RE LOOKING FOR A SOLUTION"
+        },
+        {
+          "level": 3,
+          "heading": "The Central Recognition"
+        },
+        {
+          "level": 3,
+          "heading": "The Two Paths to This Recognition"
+        },
+        {
+          "level": 3,
+          "heading": "The Standard Path and the Dangerous Path"
+        },
+        {
+          "level": 2,
+          "heading": "IX. EMPTINESS IS FULLNESS: THE ULTIMATE RECOGNITION"
+        },
+        {
+          "level": 3,
+          "heading": "The Fractal"
+        },
+        {
+          "level": 3,
+          "heading": "The Creative Void"
+        },
+        {
+          "level": 3,
+          "heading": "The Essential Nature"
+        },
+        {
+          "level": 2,
+          "heading": "SYNTHESIS"
+        },
+        {
+          "level": 3,
+          "heading": "The Throughline"
+        },
+        {
+          "level": 3,
+          "heading": "Five Convergences"
+        },
+        {
+          "level": 3,
+          "heading": "The Gate Mechanism"
+        },
+        {
+          "level": 3,
+          "heading": "What Davies Doesn't Name"
+        },
+        {
+          "level": 3,
+          "heading": "The Praxis"
+        }
+      ],
+      "id": "paraphilosophy-praxis-of-recognition"
+    },
+    {
+      "path": "translated/paraphilosophy-self-as-method.md",
+      "fileName": "paraphilosophy-self-as-method.md",
+      "source": "translated",
+      "category": "translated",
+      "channel": "",
+      "title": "THE SELF AS METHOD",
+      "subtitle": "Benjamin Davies' Oxymoron Engine and the Philosophy That Folds Into Itself",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "March 2026",
+      "excerpt": "**Source Corpus**: 9 Paraphilosophy videos (Benjamin Davies)",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "density",
+        "cosmic",
+        "source",
+        "unity",
+        "frequency",
+        "resonance",
+        "enlightenment",
+        "awakening",
+        "integration"
+      ],
+      "quotes": [
+        "**Source Corpus**: 9 Paraphilosophy videos (Benjamin Davies)",
+        "**Synthesis Type**: Self-Investigation Extraction",
+        "**Recognition Status**: Deep Extraction — Self as Method Cluster"
+      ],
+      "wordCount": 12222,
+      "readingTime": 49,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "THE FOUR FOLDS"
+        },
+        {
+          "level": 3,
+          "heading": "SECOND FOLD: Self-Consciousness as the Concrete Universal"
+        },
+        {
+          "level": 3,
+          "heading": "FOURTH FOLD: Self-Ownership as Libertarian Collectivism"
+        },
+        {
+          "level": 2,
+          "heading": "THE META-FRAMEWORK: PARAPHILOSOPHY AS SELF-REFERENTIAL SYSTEM"
+        },
+        {
+          "level": 3,
+          "heading": "Building a Philosophical Science"
+        },
+        {
+          "level": 3,
+          "heading": "Self-Creation Through Knowledge"
+        },
+        {
+          "level": 3,
+          "heading": "How Reason Limits Creativity"
+        },
+        {
+          "level": 2,
+          "heading": "THE OXYMORON ENGINE"
+        },
+        {
+          "level": 2,
+          "heading": "SYNTHESIS"
+        },
+        {
+          "level": 3,
+          "heading": "The Periodic Table of Philosophy"
+        },
+        {
+          "level": 3,
+          "heading": "The Gödel Connection"
+        },
+        {
+          "level": 3,
+          "heading": "The Cosmology of Becoming-Real"
+        },
+        {
+          "level": 3,
+          "heading": "The Breath and the Binary"
+        },
+        {
+          "level": 3,
+          "heading": "What Paraphilosophy Cannot Do"
+        }
+      ],
+      "id": "paraphilosophy-self-as-method"
     },
     {
       "path": "translated/simulation-architects-convergence.md",
@@ -26604,6 +27866,46 @@
         }
       ],
       "id": "zeitgeist-2026-03-03"
+    },
+    {
+      "path": "synthesis/zeitgeist/zeitgeist-2026-03-31.md",
+      "fileName": "zeitgeist-2026-03-31.md",
+      "source": "synthesis",
+      "category": "zeitgeist",
+      "channel": "",
+      "title": "ZEITGEIST — 31 March 2026",
+      "subtitle": "CURRENT",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "March 2026",
+      "excerpt": "Through metta-darshan: Mojtaba Khamenei's first public statement as supreme leader carries the sound of a son who has inherited not a country but a wound. The vow to avenge is not strategy — it is grief wearing the only mask a supreme leader is permitted to wear. Trump's threat to destroy Kharg I...",
+      "tags": [
+        "awareness",
+        "recognition",
+        "cosmic",
+        "source",
+        "unity",
+        "zeitgeist"
+      ],
+      "quotes": [],
+      "wordCount": 2892,
+      "readingTime": 12,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "TECTONIC"
+        },
+        {
+          "level": 2,
+          "heading": "STATE"
+        }
+      ],
+      "id": "zeitgeist-2026-03-31"
     }
   ]
 }
