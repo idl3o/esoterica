@@ -174,11 +174,23 @@
       "Skill(update-config)",
       "Bash(bash \".claude/hooks/pre-compact.sh\")",
       "Bash(bash \".claude/hooks/post-compact.sh\")",
-      "Bash(git:*)"
+      "Bash(git:*)",
+      "Bash(npm run build:*)",
+      "Bash(pip show:*)",
+      "mcp__esoterica__repository_overview",
+      "mcp__esoterica__graph_stats",
+      "mcp__esoterica__list_types",
+      "mcp__esoterica__random_walk",
+      "mcp__esoterica__find_connections_between",
+      "mcp__esoterica__find_clusters",
+      "mcp__esoterica__nearby_technologies"
     ],
     "deny": [],
     "ask": []
   },
+  "enabledMcpjsonServers": [
+    "esoterica"
+  ],
   "hooks": {
     "PreCompact": [
       {

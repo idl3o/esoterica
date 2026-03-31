@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "esoterica": {
+      "command": "python",
+      "args": ["C:/Users/Sam/Documents/GitHub/esoterica/mcp/server.py"]
+    }
+  }
+}
