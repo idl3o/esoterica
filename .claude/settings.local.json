@@ -183,7 +183,14 @@
       "mcp__esoterica__random_walk",
       "mcp__esoterica__find_connections_between",
       "mcp__esoterica__find_clusters",
-      "mcp__esoterica__nearby_technologies"
+      "mcp__esoterica__nearby_technologies",
+      "mcp__esoterica__orphan_nodes",
+      "mcp__esoterica__most_connected",
+      "mcp__esoterica__search_constellation",
+      "mcp__esoterica__surprise_me",
+      "mcp__esoterica__find_path",
+      "mcp__esoterica__add_node",
+      "mcp__esoterica__add_connection"
     ],
     "deny": [],
     "ask": []
