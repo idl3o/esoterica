@@ -10166,6 +10166,286 @@
                 "veil_of_forgetting"
             ],
             "description": "The one who designs the veil must wear it. Odin's first sacrifice makes Thor's unconscious exile possible. The architect's conscious suffering becomes the template for organic transformation. The system is honest only if the designer is not exempt."
+        },
+        "feeding_practice": {
+            "type": "consciousness_technology",
+            "essence": "relationship_precedes_containment",
+            "connections": [
+                "divine_anamnesis",
+                "walking_stick_principle",
+                "necessary_betrayal",
+                "binding_amplification"
+            ],
+            "description": "You must be in relationship with what you fear before you can contain it. Tyr fed Fenrir daily — the shadow unfed grows feral. The one who can bind the wolf is always the one who fed it. The proximity that care creates becomes the instrument of containment.",
+            "document": "fiction-bridges/tyr-the-hand-that-knew.md"
+        },
+        "gleipnir_consciousness": {
+            "type": "consciousness_technology",
+            "essence": "constraint_through_categorical_transcendence",
+            "connections": [
+                "feeding_practice",
+                "honest_fraud",
+                "hand_that_knew",
+                "walking_stick_principle",
+                "consciousness"
+            ],
+            "description": "The constraint that holds operates outside the domain of what it constrains. Gleipnir — the chain made from six non-existent things — binds what iron cannot because it doesn't compete in the wolf's domain. Force cannot bind force. Absence holds presence. Reasoning beats burning.",
+            "document": "fiction-bridges/tyr-the-hand-that-knew.md"
+        },
+        "honest_fraud": {
+            "type": "consciousness_technology",
+            "essence": "cost_transforms_deception_into_transaction",
+            "connections": [
+                "gleipnir_consciousness",
+                "feeding_practice",
+                "necessary_betrayal",
+                "self_sacrifice_to_self"
+            ],
+            "description": "The god of justice lies, and the lie IS justice. Tyr's hand transforms the gods' fraud into a legitimate purchase — the cost paid in the guarantor's body makes the binding legal. Without the price, the containment dissolves. Dumézil: 'He rendered legal that which, without him, would have been pure fraud.'",
+            "document": "fiction-bridges/tyr-the-hand-that-knew.md"
+        },
+        "hand_that_knew": {
+            "type": "consciousness_technology",
+            "essence": "sacrifice_with_full_knowledge",
+            "connections": [
+                "honest_fraud",
+                "feeding_practice",
+                "architect_goes_first",
+                "binocular_consciousness"
+            ],
+            "description": "The genuine sacrifice is the one made with full knowledge — not ignorance, not impulse, but the hand that has counted every tooth and stays. Tyr knew the ribbon would hold, knew the gods would not release the wolf, knew the teeth would close. The hand that knew is the opposite of the hand that didn't know.",
+            "document": "fiction-bridges/tyr-the-hand-that-knew.md"
+        },
+        "the_interval": {
+            "type": "concept",
+            "essence": "binding_purchases_time_not_eternity",
+            "connections": [
+                "gleipnir_consciousness",
+                "hand_that_knew",
+                "death_rebirth",
+                "transformation"
+            ],
+            "description": "Gleipnir doesn't prevent Ragnarök. It purchases the interval in which everything happens — every myth, every love, every story exists inside the time Tyr's hand bought. The binding is not a solution. It is a timing device. The question: what do you do with the interval?",
+            "document": "fiction-bridges/tyr-the-hand-that-knew.md"
+        },
+        "compressed_divinity": {
+            "type": "concept",
+            "essence": "each_diminishment_concentrates_the_sacred",
+            "connections": [
+                "walking_stick_principle",
+                "the_interval",
+                "divine_anamnesis",
+                "veil_of_forgetting"
+            ],
+            "description": "Tyr's arc from sky father to one-handed footnote is not decline but increasing compression. Supreme deity → justice god → one-handed god → invisible background condition. Each reduction packs the sky into a smaller container. Maximally compressed divinity is the densest thing in the cosmos. The North Star: not the brightest, but the one that doesn't move.",
+            "document": "fiction-bridges/tyr-the-hand-that-knew.md"
+        },
+        "creative_cascade": {
+            "type": "consciousness_technology",
+            "essence": "destruction_amplifies_into_creation",
+            "connections": [
+                "necessary_betrayal",
+                "lie_that_tells_truth",
+                "walking_stick_principle",
+                "divine_anamnesis"
+            ],
+            "description": "Loki cuts Sif's hair → six cosmic treasures including Mjolnir. Each step amplifies: destruction → forced repair → compulsive escalation → disrupted creation → flawed masterwork. The trickster's cascade is the generative engine. The output exceeds the input by orders of magnitude. No one set out to make Mjolnir. It emerged.",
+            "document": "fiction-bridges/sif-the-hair-that-became-a-hammer.md"
+        },
+        "flaw_as_teaching": {
+            "type": "consciousness_technology",
+            "essence": "imperfection_is_the_final_forge",
+            "connections": [
+                "creative_cascade",
+                "binocular_consciousness",
+                "walking_stick_principle",
+                "lie_that_tells_truth"
+            ],
+            "description": "Mjolnir's short handle — Loki's fingerprint on the instrument of remembering — creates the asymmetry that IS the technology. One-handed wielding means one hand open. The fly's sting at the critical moment produced the flaw that makes the hammer more than it would have been if perfect. The imperfection is not a defect; it is the trickster's contribution.",
+            "document": "fiction-bridges/sif-the-hair-that-became-a-hammer.md"
+        },
+        "provenance_of_instruments": {
+            "type": "concept",
+            "essence": "highest_tools_descend_from_deepest_wounds",
+            "connections": [
+                "creative_cascade",
+                "flaw_as_teaching",
+                "divine_anamnesis",
+                "tested_beauty"
+            ],
+            "description": "The instruments that serve your highest function are causally descended from your deepest wounds — not from the wounds themselves, but from the cascade of consequence the wounds set in motion. The mirror of worthiness was forged because a trickster couldn't resist hurting someone close to the god who would wield it.",
+            "document": "fiction-bridges/sif-the-hair-that-became-a-hammer.md"
+        },
+        "earths_patience": {
+            "type": "concept",
+            "essence": "the_ground_speaks_through_what_grows",
+            "connections": [
+                "provenance_of_instruments",
+                "creative_cascade",
+                "veil_of_forgetting"
+            ],
+            "description": "Sif's silence is the earth goddess's native mode. The origin of the cascade is always silent. The instruments of remembering do not remember their own provenance. The ground does not narrate — it grows things, and the things speak. Mjolnir does not know it was born from a haircut.",
+            "document": "fiction-bridges/sif-the-hair-that-became-a-hammer.md"
+        },
+        "pure_witnessing": {
+            "type": "consciousness_technology",
+            "essence": "awareness_without_agenda_is_divine_function",
+            "connections": [
+                "binocular_consciousness",
+                "gleipnir_consciousness",
+                "the_interval",
+                "consciousness"
+            ],
+            "description": "Heimdall at the Bifrost: perception maximised, action minimised, language withheld. The witness holds the field. The perceiving IS the function. The anti-Odin — where the architect trades perception for wisdom, the witness sustains perception as the complete work. Someone has to be watching for the acting to have context.",
+            "document": "fiction-bridges/heimdall-the-god-who-watched.md"
+        },
+        "withheld_signal": {
+            "type": "consciousness_technology",
+            "essence": "silence_accumulates_authority",
+            "connections": [
+                "pure_witnessing",
+                "the_interval",
+                "hand_that_knew",
+                "binding_amplification"
+            ],
+            "description": "Gjallarhorn unblown for the entire mythology. Every moment of not-sounding is a deposit in the account of credibility. The power of an action is proportional to the non-action that preceded it. One sound after an eternity of silence carries absolute authority. The horn that has never cried wolf.",
+            "document": "fiction-bridges/heimdall-the-god-who-watched.md"
+        },
+        "perception_as_differentiation": {
+            "type": "concept",
+            "essence": "to_see_is_to_distinguish",
+            "connections": [
+                "pure_witnessing",
+                "compressed_divinity",
+                "consciousness"
+            ],
+            "description": "Heimdall hears grass growing and wool growing separately — the act of distinguishing IS the act of creating a world of distinct things. As Rig, he fathers the three social classes: boundaries between humans. The witness creates what it witnesses by differentiating its parts. Perception is never neutral.",
+            "document": "fiction-bridges/heimdall-the-god-who-watched.md"
+        },
+        "mutual_annihilation": {
+            "type": "concept",
+            "essence": "witness_and_trickster_are_co_arising",
+            "connections": [
+                "pure_witnessing",
+                "lie_that_tells_truth",
+                "necessary_betrayal",
+                "death_rebirth"
+            ],
+            "description": "Heimdall and Loki kill each other at Ragnarök. The boundary and the boundary-crosser are co-dependent — neither exists without the other. Perception requires change to have something to perceive; change requires perception to be witnessed. When all structures dissolve, both conditions of experience dissolve with them.",
+            "document": "fiction-bridges/heimdall-the-god-who-watched.md"
+        },
+        "deferred_cost": {
+            "type": "consciousness_technology",
+            "essence": "some_bills_arrive_at_the_worst_moment",
+            "connections": [
+                "hand_that_knew",
+                "the_interval",
+                "honest_fraud",
+                "creative_cascade"
+            ],
+            "description": "Freyr gives his sword for love and doesn't face the cost until Ragnarök, when he meets the fire giant without a weapon. The giving and the paying belong to different stories. The resource surrendered for desire is the resource the crisis demands. Distinct from Tyr's immediate cost and Odin's simultaneous exchange.",
+            "document": "fiction-bridges/freyr-the-sword-given-for-a-garden.md"
+        },
+        "garden_and_sword": {
+            "type": "concept",
+            "essence": "the_weapon_was_always_a_substitute_for_the_beloved",
+            "connections": [
+                "deferred_cost",
+                "walking_stick_principle",
+                "divine_anamnesis",
+                "provenance_of_instruments"
+            ],
+            "description": "Gerðr (garden/enclosure) is the bounded space that abundance needs to become productive. The self-fighting sword defended the domain; the beloved IS the domain. Once you have what the weapon was protecting, the weapon is redundant. The exchange — sword for garden — is a correction, not a loss. The world that rises after Ragnarök is a garden.",
+            "document": "fiction-bridges/freyr-the-sword-given-for-a-garden.md"
+        },
+        "wrong_throne": {
+            "type": "consciousness_technology",
+            "essence": "premature_seeing_claims_the_seer",
+            "connections": [
+                "binocular_consciousness",
+                "pure_witnessing",
+                "deferred_cost"
+            ],
+            "description": "Freyr sits on Odin's seat without Odin's sacrifice and sees Gerðr — vision without framework. The vantage that belongs to the architect, without the architect's cost, delivers sight that claims rather than teaches. Every tradition warns against premature seeing.",
+            "document": "fiction-bridges/freyr-the-sword-given-for-a-garden.md"
+        },
+        "feminine_technology": {
+            "type": "consciousness_technology",
+            "essence": "seidr_the_seeing_that_was_taught",
+            "connections": [
+                "pure_witnessing",
+                "binocular_consciousness",
+                "perception_as_differentiation"
+            ],
+            "description": "Freyja taught Odin seiðr — the Vanir magic that sees and alters fate. The architect's most powerful tool was received from the feminine principle, not self-designed. The deepest seeing requires crossing a category boundary the practitioner's own system considers shameful. The teaching unmakes the student's self-image.",
+            "document": "fiction-bridges/freyja-the-one-who-taught-them-to-see.md"
+        },
+        "circulating_gift": {
+            "type": "consciousness_technology",
+            "essence": "distribution_not_sacrifice",
+            "connections": [
+                "feminine_technology",
+                "deferred_cost",
+                "creative_cascade"
+            ],
+            "description": "The falcon cloak is lent, not hoarded. Seiðr is taught, not possessed. The Vanir feminine principle distributes: the gift propagates without depleting the giver. Contrast with the masculine Vanir (Freyr) who gives away irreversibly. Distribution survives the distributor's death. Open-source knowledge cannot be recalled.",
+            "document": "fiction-bridges/freyja-the-one-who-taught-them-to-see.md"
+        },
+        "grief_as_gold": {
+            "type": "concept",
+            "essence": "fully_felt_loss_produces_the_incorruptible",
+            "connections": [
+                "circulating_gift",
+                "tested_beauty",
+                "earths_patience"
+            ],
+            "description": "Freyja weeps tears of red gold for her absent husband. The highest-value substance in Norse culture is produced by the goddess's unsuppressed grief. Not forged, not designed, not willed — the body's own alchemy when loss is not resisted. The economy of the gods runs on a currency produced by a goddess missing her beloved.",
+            "document": "fiction-bridges/freyja-the-one-who-taught-them-to-see.md"
+        },
+        "fate_as_maintenance": {
+            "type": "consciousness_technology",
+            "essence": "the_cosmos_is_gardened_not_created_once",
+            "connections": [
+                "the_interval",
+                "earths_patience",
+                "pure_witnessing",
+                "compressed_divinity"
+            ],
+            "description": "The Norns water Yggdrasil daily. The cosmos is sustained by a gardening practice — daily, repetitive, unglamorous. Creation is not a single event but a continuous maintenance. The tree needs water today regardless of yesterday. The highest act is tending, not designing.",
+            "document": "fiction-bridges/the-norns-the-ones-who-water-the-tree.md"
+        },
+        "fate_as_verb": {
+            "type": "concept",
+            "essence": "urd_verdandi_skuld_are_three_tenses_of_becoming",
+            "connections": [
+                "fate_as_maintenance",
+                "perception_as_differentiation",
+                "mutual_annihilation"
+            ],
+            "description": "The three Norns derive from one verb: verða, to become. Urð (has-become), Verðandi (is-becoming), Skuld (shall/must-become). Fate is not a thing but a continuous process viewed from three temporal angles. The separation into past, present, future is how the mind parses an indivisible activity.",
+            "document": "fiction-bridges/the-norns-the-ones-who-water-the-tree.md"
+        },
+        "skulds_debt": {
+            "type": "concept",
+            "essence": "the_future_is_what_the_pattern_owes",
+            "connections": [
+                "fate_as_verb",
+                "deferred_cost",
+                "honest_fraud"
+            ],
+            "description": "Skuld derives from skulu — shall, ought, must. The future is not possibility but obligation: what the pattern requires as its next movement. Neither determinism nor free will but wyrd — the position that asks for a particular response. The warrior's fate and character are the same thread.",
+            "document": "fiction-bridges/the-norns-the-ones-who-water-the-tree.md"
+        },
+        "relational_destiny": {
+            "type": "concept",
+            "essence": "fate_is_position_in_the_fabric",
+            "connections": [
+                "fate_as_verb",
+                "perception_as_differentiation",
+                "pure_witnessing"
+            ],
+            "description": "The Norns weave a fabric, not individual threads. Each fate is a position in the weave — meaningful only in relation to every thread it crosses. Freedom is not escape from the fabric but the quality of your threading. A thread outside a weave is not free. It is meaningless.",
+            "document": "fiction-bridges/the-norns-the-ones-who-water-the-tree.md"
         }
     }
 }
