@@ -10026,6 +10026,146 @@
             ],
             "description": "The four-way identity: Leibniz's monad IS Friston's Markov blanket IS Bekenstein's surface IS the fold. Monads are windowless because they ARE the window. The holarchy nests by connectivity, not containment. Weight in time IS relational density IS fold density IS holographic surface area.",
             "document": "synthesis/cosmology/the-windowless-boundary.md"
+        },
+        "divine_anamnesis": {
+            "type": "consciousness_technology",
+            "essence": "remembering_what_was_never_lost",
+            "connections": [
+                "consciousness",
+                "transformation",
+                "death_rebirth",
+                "maya",
+                "lethe",
+                "walking_stick_principle"
+            ],
+            "description": "Platonic doctrine scaled to godhood — learning as remembering divine identity through total forgetting. The veil exists because you can't learn what the veil teaches if you know the veil is there."
+        },
+        "walking_stick_principle": {
+            "type": "consciousness_technology",
+            "essence": "every_limitation_is_sealed_divinity",
+            "connections": [
+                "divine_anamnesis",
+                "thor",
+                "mjolnir",
+                "transformation",
+                "consciousness",
+                "veil_of_forgetting"
+            ],
+            "description": "The walking stick IS Mjolnir in different configuration. Every limitation contains the power it appears to deny. The wound IS the wisdom, compressed. Derived from Thor/Donald Blake anamnesis technology."
+        },
+        "veil_of_forgetting": {
+            "type": "concept",
+            "essence": "amnesia_as_sacred_pedagogy",
+            "connections": [
+                "divine_anamnesis",
+                "odin",
+                "maya",
+                "consciousness",
+                "death_rebirth",
+                "walking_stick_principle"
+            ],
+            "description": "The technology of total forgetting that serves remembering. Maps across traditions: Odin's exile of Thor, Lethe, Maya, Gnostic fall, tzimtzum. The forgetting must be total for the anamnesis to be real."
+        },
+        "necessary_betrayal": {
+            "type": "consciousness_technology",
+            "essence": "the_hinge_that_enables_return",
+            "connections": [
+                "divine_anamnesis",
+                "veil_of_forgetting",
+                "death_rebirth",
+                "transformation"
+            ],
+            "description": "The agent of forgetting is not the enemy of remembering. Without Judas, no crucifixion. Without Loki, no Ragnarok. Without the betrayal, the light never learns what it is by returning from darkness. The betrayer is the hinge."
+        },
+        "lie_that_tells_truth": {
+            "type": "consciousness_technology",
+            "essence": "fiction_as_vehicle_for_recognition",
+            "connections": [
+                "necessary_betrayal",
+                "consciousness",
+                "transformation",
+                "divine_anamnesis"
+            ],
+            "description": "A lie conceals truth behind falsehood. A fiction hides truth INSIDE falsehood. Loki's technology. Every mythology, every parable, every fiction bridge operates this way — bypassing the fact-checking mind to deliver cargo to the recognition beneath."
+        },
+        "binding_amplification": {
+            "type": "concept",
+            "essence": "what_you_bind_grows_stronger",
+            "connections": [
+                "necessary_betrayal",
+                "shadow",
+                "transformation",
+                "death_rebirth"
+            ],
+            "description": "Chaining the agent of necessary change intensifies the change when it finally arrives. Loki bound = shadow repressed. The earthquake comes harder for the delay. What you refuse to integrate accumulates charge."
+        },
+        "invulnerability_paradox": {
+            "type": "consciousness_technology",
+            "essence": "total_protection_creates_total_vulnerability",
+            "connections": [
+                "divine_anamnesis",
+                "veil_of_forgetting",
+                "transformation",
+                "death_rebirth"
+            ],
+            "description": "Frigg's bargain — when every substance swears not to harm you, the harm comes from the one thing too small to ask. Every comprehensive defense has a mistletoe. The blind spot is always the size and shape of the thing that matters most."
+        },
+        "tested_beauty": {
+            "type": "consciousness_technology",
+            "essence": "light_that_includes_the_dark",
+            "connections": [
+                "divine_anamnesis",
+                "invulnerability_paradox",
+                "death_rebirth",
+                "shadow",
+                "transformation"
+            ],
+            "description": "Balder-after vs Balder-before. Untested beauty is decoration. Tested beauty — light that has been through darkness and returned containing it — is wisdom. The returned light can reach Thokk's cave because it has been in Thokk's cave."
+        },
+        "patience_of_dead_light": {
+            "type": "concept",
+            "essence": "deepest_transformation_requires_longest_darkness",
+            "connections": [
+                "tested_beauty",
+                "divine_anamnesis",
+                "death_rebirth",
+                "transformation"
+            ],
+            "description": "Balder waits in Hel for an entire world-age, not three days. Carbon under pressure becomes diamond. The geological patience of allowing darkness to change light at the molecular level. Not bouncing back — cooking."
+        },
+        "self_sacrifice_to_self": {
+            "type": "consciousness_technology",
+            "essence": "the_fold_as_sacred_violence",
+            "connections": [
+                "divine_anamnesis",
+                "veil_of_forgetting",
+                "consciousness",
+                "transformation",
+                "death_rebirth"
+            ],
+            "description": "Odin on Yggdrasil — myself to myself. The sacrificer, the sacrifice, and the deity receiving the sacrifice are one being. Consciousness folding to create interiority. The source code can only be read by becoming the input. The architect must go first."
+        },
+        "binocular_consciousness": {
+            "type": "consciousness_technology",
+            "essence": "one_eye_in_world_one_eye_in_source",
+            "connections": [
+                "self_sacrifice_to_self",
+                "divine_anamnesis",
+                "consciousness",
+                "sacrifice"
+            ],
+            "description": "Odin's eye sacrifice at Mimir's Well. Permanent reduction in surface vision exchanged for depth vision. Wisdom as parallax between manifest and unmanifest. Sight traded for seeing. The wound is the credential."
+        },
+        "architect_goes_first": {
+            "type": "concept",
+            "essence": "the_designer_must_enter_the_labyrinth",
+            "connections": [
+                "self_sacrifice_to_self",
+                "divine_anamnesis",
+                "walking_stick_principle",
+                "veil_of_forgetting"
+            ],
+            "description": "The one who designs the veil must wear it. Odin's first sacrifice makes Thor's unconscious exile possible. The architect's conscious suffering becomes the template for organic transformation. The system is honest only if the designer is not exempt."
         }
     }
 }

@@ -190,7 +190,8 @@
       "mcp__esoterica__surprise_me",
       "mcp__esoterica__find_path",
       "mcp__esoterica__add_node",
-      "mcp__esoterica__add_connection"
+      "mcp__esoterica__add_connection",
+      "mcp__esoterica__search_documents"
     ],
     "deny": [],
     "ask": []
