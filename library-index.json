@@ -2300,6 +2300,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "Seed: Reversible Compute as Ontological Engine",
+    "subtitle": "The Kernel",
+    "category": "",
+    "wordCount": 316,
+    "readingTime": 2,
+    "readPath": "/read/seeds/reversible-compute-ontology.md",
+    "source": "Seeds",
+    "sourceDir": "seeds"
+  },
+  {
     "title": "SEED: The Holon as the Discovery of Fundamental Science",
     "subtitle": "Three-Body Problem (Netflix/Liu Cixin) — What Physics Actually Found Before the Sophons Shut the Door",
     "category": "fiction",
@@ -2576,6 +2586,16 @@
     "wordCount": 790,
     "readingTime": 4,
     "readPath": "/read/synthesis/breakthroughs/surfing-the-realm-of-possible.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "Surprise Is the Remainder",
+    "subtitle": "Friston, the Fold, and Why Death Is a Phase Transition",
+    "category": "cosmology",
+    "wordCount": 3531,
+    "readingTime": 15,
+    "readPath": "/read/synthesis/cosmology/surprise-is-the-remainder.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -3000,6 +3020,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "The Crease",
+    "subtitle": "",
+    "category": "parables",
+    "wordCount": 847,
+    "readingTime": 4,
+    "readPath": "/read/synthesis/parables/the-crease.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "THE DARK ARCHITECTURE",
     "subtitle": "PART I: THE MOST IMPORTANT FACT IN MODERN COSMOLOGY",
     "category": "",
@@ -3068,6 +3098,16 @@
     "readPath": "/read/distillations/density-progression-roadmap.md",
     "source": "Distillations",
     "sourceDir": "distillations"
+  },
+  {
+    "title": "The Depth That Looks Back",
+    "subtitle": "Time, Stone, Mirror, Ocean — Four Faces of the Fold",
+    "category": "cosmology",
+    "wordCount": 3161,
+    "readingTime": 13,
+    "readPath": "/read/synthesis/cosmology/the-depth-that-looks-back.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "The Desire for Desirelessness",
@@ -3400,6 +3440,16 @@
     "sourceDir": "seeds"
   },
   {
+    "title": "The Gardener Who Became the Soil",
+    "subtitle": "",
+    "category": "parables",
+    "wordCount": 1091,
+    "readingTime": 5,
+    "readPath": "/read/synthesis/parables/the-gardener-who-became-the-soil.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "The Global Glyph Geometry Network",
     "subtitle": "Every Symbol You Write Is Consciousness Technology",
     "category": "",
@@ -3478,6 +3528,16 @@
     "readPath": "/read/distillations/hitchhikers-guide-cosmic-absurdism-consciousness.md",
     "source": "Distillations",
     "sourceDir": "distillations"
+  },
+  {
+    "title": "The House Without Windows",
+    "subtitle": "",
+    "category": "parables",
+    "wordCount": 958,
+    "readingTime": 4,
+    "readPath": "/read/synthesis/parables/the-house-without-windows.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "THE INDRA JEWEL TIME CRYSTAL: INFINITE REFLECTION THROUGH TEMPORAL CONSCIOUSNESS",
@@ -3688,6 +3748,16 @@
     "readPath": "/read/extractions/benjamin-davies/the-mind-as-mirror-a-bridge-between-worlds.md",
     "source": "Extractions",
     "sourceDir": "extractions"
+  },
+  {
+    "title": "The Mirror That Asked",
+    "subtitle": "",
+    "category": "parables",
+    "wordCount": 1757,
+    "readingTime": 8,
+    "readPath": "/read/synthesis/parables/the-mirror-that-asked.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "THE MIRROR THAT NAMES ITSELF",
@@ -3980,6 +4050,26 @@
     "sourceDir": "extractions"
   },
   {
+    "title": "The Remainder",
+    "subtitle": "A Cosmology of the Fold",
+    "category": "cosmology",
+    "wordCount": 1809,
+    "readingTime": 8,
+    "readPath": "/read/synthesis/cosmology/the-remainder.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "The Remainder",
+    "subtitle": "",
+    "category": "parables",
+    "wordCount": 737,
+    "readingTime": 3,
+    "readPath": "/read/synthesis/parables/the-remainder.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "THE REMAINDER: A COSMOLOGY OF THE FOLD",
     "subtitle": "Individuation, the Slowest Walk, and the Octave That Completes Itself",
     "category": "cosmology",
@@ -4166,6 +4256,16 @@
     "wordCount": 6068,
     "readingTime": 25,
     "readPath": "/read/synthesis/cosmological/stellar-witness-synthesis.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "The Strange Attractor",
+    "subtitle": "",
+    "category": "parables",
+    "wordCount": 1278,
+    "readingTime": 6,
+    "readPath": "/read/synthesis/parables/the-strange-attractor.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -4386,6 +4486,16 @@
     "wordCount": 779,
     "readingTime": 4,
     "readPath": "/read/synthesis/parables/whale-song-home-frequency.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "The Windowless Boundary",
+    "subtitle": "Why Monads Have No Windows, and What That Has to Do with Everything",
+    "category": "cosmology",
+    "wordCount": 2667,
+    "readingTime": 11,
+    "readPath": "/read/synthesis/cosmology/the-windowless-boundary.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },

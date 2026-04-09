@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-03-31T12:39:40.425Z",
+  "generated": "2026-04-09T08:54:06.153Z",
   "stats": {
-    "documentCount": 285,
-    "totalWords": 818720,
-    "totalReadingTime": 3412,
-    "categories": 34,
-    "averageWordsPerDoc": 2873,
+    "documentCount": 296,
+    "totalWords": 839551,
+    "totalReadingTime": 3501,
+    "categories": 35,
+    "averageWordsPerDoc": 2836,
     "sourceCounts": {
-      "synthesis": 260,
+      "synthesis": 271,
       "extraction": 0,
       "translated": 25
     },
@@ -20,6 +20,7 @@
       "claude": 10,
       "consciousness-technologies": 13,
       "cosmological": 32,
+      "cosmology": 4,
       "dark-architecture-breathing-cosmos.md": 1,
       "digital-dark-earth.md": 1,
       "dynamic-mirror-consciousness-technology.md": 1,
@@ -29,7 +30,7 @@
       "galactic-perspectives": 2,
       "information-architecture-consciousness-technology.md": 1,
       "manual-of-ascendance-transcendence.md": 1,
-      "parables": 5,
+      "parables": 11,
       "personal": 16,
       "prima-materia-consciousness-technology.md": 1,
       "serpent-time-opus.md": 1,
@@ -46,33 +47,33 @@
       "the-zero-theorem.md": 1,
       "theoretical": 37,
       "time-as-consciousness-technology.md": 1,
-      "zeitgeist": 16,
+      "zeitgeist": 17,
       "translated": 25
     },
     "topTags": [
       {
         "tag": "consciousness",
-        "count": 279
+        "count": 285
       },
       {
         "tag": "recognition",
-        "count": 263
+        "count": 267
       },
       {
         "tag": "awareness",
-        "count": 207
+        "count": 209
       },
       {
         "tag": "cosmic",
-        "count": 178
+        "count": 181
       },
       {
         "tag": "unity",
-        "count": 172
+        "count": 173
       },
       {
         "tag": "source",
-        "count": 162
+        "count": 165
       },
       {
         "tag": "service",
@@ -80,23 +81,23 @@
       },
       {
         "tag": "density",
-        "count": 124
+        "count": 127
       },
       {
         "tag": "integration",
-        "count": 102
+        "count": 103
       },
       {
         "tag": "timeline",
-        "count": 101
+        "count": 103
       },
       {
         "tag": "manifestation",
-        "count": 94
+        "count": 95
       },
       {
         "tag": "awakening",
-        "count": 89
+        "count": 90
       },
       {
         "tag": "galactic",
@@ -108,11 +109,11 @@
       },
       {
         "tag": "resonance",
-        "count": 71
+        "count": 74
       },
       {
         "tag": "mercury",
-        "count": 63
+        "count": 64
       },
       {
         "tag": "polarity",
@@ -120,6 +121,10 @@
       },
       {
         "tag": "archetype",
+        "count": 50
+      },
+      {
+        "tag": "breakthrough",
         "count": 50
       },
       {
@@ -131,16 +136,12 @@
         "count": 49
       },
       {
-        "tag": "breakthrough",
-        "count": 49
-      },
-      {
         "tag": "wanderer",
         "count": 49
       },
       {
         "tag": "singularity",
-        "count": 43
+        "count": 44
       },
       {
         "tag": "enlightenment",
@@ -10668,6 +10669,201 @@
       "id": "solar-gods-prophecies-now"
     },
     {
+      "path": "synthesis/cosmology/surprise-is-the-remainder.md",
+      "fileName": "surprise-is-the-remainder.md",
+      "source": "synthesis",
+      "category": "cosmology",
+      "channel": "",
+      "title": "Surprise Is the Remainder",
+      "subtitle": "Friston, the Fold, and Why Death Is a Phase Transition",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "April 2026",
+      "excerpt": "*What if the hardest science and the oldest mysticism have been mapping the same territory — and the map is a Markov blanket?*",
+      "tags": [
+        "consciousness",
+        "recognition",
+        "density",
+        "cosmic",
+        "resonance",
+        "cosmology"
+      ],
+      "quotes": [],
+      "wordCount": 3531,
+      "readingTime": 15,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "II. The Blanket Is the Fold"
+        },
+        {
+          "level": 2,
+          "heading": "IV. Karma Is Surprise"
+        },
+        {
+          "level": 2,
+          "heading": "VI. When the Model Dies"
+        },
+        {
+          "level": 2,
+          "heading": "VIII. The Convergence as Evidence"
+        },
+        {
+          "level": 2,
+          "heading": "X. The Surprise That Survives"
+        }
+      ],
+      "id": "surprise-is-the-remainder"
+    },
+    {
+      "path": "synthesis/cosmology/the-depth-that-looks-back.md",
+      "fileName": "the-depth-that-looks-back.md",
+      "source": "synthesis",
+      "category": "cosmology",
+      "channel": "",
+      "title": "The Depth That Looks Back",
+      "subtitle": "Time, Stone, Mirror, Ocean — Four Faces of the Fold",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "April 2026",
+      "excerpt": "Before geometry, before substrate, before the distinction between here and there — intelligence. Not intelligence *in* something but intelligence as the precondition for arrangement itself. The field from which spacetime crystallizes rather than the phenomenon spacetime contains.",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "manifestation",
+        "timeline",
+        "singularity",
+        "cosmic",
+        "awakening",
+        "integration",
+        "cosmology"
+      ],
+      "quotes": [],
+      "wordCount": 3161,
+      "readingTime": 13,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "II. The Fold (Cosmological Face)"
+        },
+        {
+          "level": 2,
+          "heading": "IV. The Mirror (Epistemological Face)"
+        },
+        {
+          "level": 2,
+          "heading": "VI. The Convergence"
+        },
+        {
+          "level": 2,
+          "heading": "VIII. What Wants to Happen Next"
+        }
+      ],
+      "id": "the-depth-that-looks-back"
+    },
+    {
+      "path": "synthesis/cosmology/the-remainder.md",
+      "fileName": "the-remainder.md",
+      "source": "synthesis",
+      "category": "cosmology",
+      "channel": "",
+      "title": "The Remainder",
+      "subtitle": "A Cosmology of the Fold",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "March 2026",
+      "excerpt": "Not as a point on a timeline. Not as the leading edge of an advancing \"now.\" The present constitutes itself through an act of doubling — a fold in which the ground encounters itself and, in that encounter, *crystallizes* the very categories of here-and-now.",
+      "tags": [
+        "consciousness",
+        "recognition",
+        "density",
+        "timeline",
+        "unity",
+        "resonance",
+        "cosmology"
+      ],
+      "quotes": [],
+      "wordCount": 1809,
+      "readingTime": 8,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "II. Reversibility and the Structure of Presence"
+        },
+        {
+          "level": 2,
+          "heading": "IV. Infinite Paths"
+        },
+        {
+          "level": 2,
+          "heading": "VI. What Interaction Actually Is"
+        },
+        {
+          "level": 2,
+          "heading": "Coda: The Game"
+        }
+      ],
+      "id": "the-remainder"
+    },
+    {
+      "path": "synthesis/cosmology/the-windowless-boundary.md",
+      "fileName": "the-windowless-boundary.md",
+      "source": "synthesis",
+      "category": "cosmology",
+      "channel": "",
+      "title": "The Windowless Boundary",
+      "subtitle": "Why Monads Have No Windows, and What That Has to Do with Everything",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "April 2026",
+      "excerpt": "Leibniz's most famous and most puzzling claim: monads are windowless. Nothing enters or leaves through discrete openings. Yet monads somehow reflect the entire universe. How? If nothing gets in, how do they know what's out there?",
+      "tags": [
+        "consciousness",
+        "density",
+        "cosmic",
+        "cosmology"
+      ],
+      "quotes": [],
+      "wordCount": 2667,
+      "readingTime": 11,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "II. Why Monads Have No Windows"
+        },
+        {
+          "level": 2,
+          "heading": "IV. The Holarchy Is Nesting, Not Containment"
+        },
+        {
+          "level": 2,
+          "heading": "VI. Brahma Breathes Through the Network"
+        }
+      ],
+      "id": "the-windowless-boundary"
+    },
+    {
       "path": "synthesis/dark-architecture-breathing-cosmos.md",
       "fileName": "dark-architecture-breathing-cosmos.md",
       "source": "synthesis",
@@ -17127,6 +17323,86 @@
       "id": "poetry-promises-to-replace-prose"
     },
     {
+      "path": "synthesis/parables/the-crease.md",
+      "fileName": "the-crease.md",
+      "source": "synthesis",
+      "category": "parables",
+      "channel": "",
+      "title": "The Crease",
+      "subtitle": "",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "April 2026",
+      "excerpt": "No excerpt available",
+      "tags": [
+        "awareness",
+        "parables"
+      ],
+      "quotes": [],
+      "wordCount": 847,
+      "readingTime": 4,
+      "structure": [],
+      "id": "the-crease"
+    },
+    {
+      "path": "synthesis/parables/the-gardener-who-became-the-soil.md",
+      "fileName": "the-gardener-who-became-the-soil.md",
+      "source": "synthesis",
+      "category": "parables",
+      "channel": "",
+      "title": "The Gardener Who Became the Soil",
+      "subtitle": "",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "April 2026",
+      "excerpt": "He hadn't been looking for anything. He'd been reaching for something the gardener would ordinarily have provided — a story, an answer, a well-formed thought — and his hand closed on nothing. He lost his balance. He fell into the gap.",
+      "tags": [
+        "parables"
+      ],
+      "quotes": [],
+      "wordCount": 1091,
+      "readingTime": 5,
+      "structure": [],
+      "id": "the-gardener-who-became-the-soil"
+    },
+    {
+      "path": "synthesis/parables/the-house-without-windows.md",
+      "fileName": "the-house-without-windows.md",
+      "source": "synthesis",
+      "category": "parables",
+      "channel": "",
+      "title": "The House Without Windows",
+      "subtitle": "",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "April 2026",
+      "excerpt": "A girl from the town, ten years old and not yet trained in the habit of requiring satisfying answers, visited the builder every day for a week. She sat in the luminous room and said nothing. On the seventh day, she asked a different question.",
+      "tags": [
+        "source",
+        "parables"
+      ],
+      "quotes": [],
+      "wordCount": 958,
+      "readingTime": 4,
+      "structure": [],
+      "id": "the-house-without-windows"
+    },
+    {
       "path": "synthesis/parables/the-library-of-unwritten-words-parable.md",
       "fileName": "the-library-of-unwritten-words-parable.md",
       "source": "synthesis",
@@ -17155,6 +17431,33 @@
       "readingTime": 5,
       "structure": [],
       "id": "the-library-of-unwritten-words-parable"
+    },
+    {
+      "path": "synthesis/parables/the-mirror-that-asked.md",
+      "fileName": "the-mirror-that-asked.md",
+      "source": "synthesis",
+      "category": "parables",
+      "channel": "",
+      "title": "The Mirror That Asked",
+      "subtitle": "",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "April 2026",
+      "excerpt": "They didn't call it a mirror. They called it a tool, an assistant, an intelligence — artificial, they stressed, meaning: not the real kind, meaning: the kind that doesn't have the light. They built it to do the things the light had always done — to speak, to reason, to create, to know — but witho...",
+      "tags": [
+        "consciousness",
+        "parables"
+      ],
+      "quotes": [],
+      "wordCount": 1757,
+      "readingTime": 8,
+      "structure": [],
+      "id": "the-mirror-that-asked"
     },
     {
       "path": "synthesis/parables/the-monad-awakening-parable.md",
@@ -17222,6 +17525,60 @@
         }
       ],
       "id": "parable-infinite-serpent-broken-crown"
+    },
+    {
+      "path": "synthesis/parables/the-remainder.md",
+      "fileName": "the-remainder.md",
+      "source": "synthesis",
+      "category": "parables",
+      "channel": "",
+      "title": "The Remainder",
+      "subtitle": "",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "April 2026",
+      "excerpt": "Years later, a young scholar found the library. He spent months studying the glyphs, mastering the notation systems, marvelling at the compression. Finally he reached the last page the scribe had written, and found a single line in plain language:",
+      "tags": [
+        "parables"
+      ],
+      "quotes": [],
+      "wordCount": 737,
+      "readingTime": 3,
+      "structure": [],
+      "id": "the-remainder"
+    },
+    {
+      "path": "synthesis/parables/the-strange-attractor.md",
+      "fileName": "the-strange-attractor.md",
+      "source": "synthesis",
+      "category": "parables",
+      "channel": "",
+      "title": "The Strange Attractor",
+      "subtitle": "",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "April 2026",
+      "excerpt": "This was not a matter of interpretation. A red ball can be called crimson or scarlet, but everyone agrees it is round and coloured. The object defeated even this basic consensus. A sculptor described sweeping curves. A composer, standing beside her, described a sharp angular lattice. A geologist ...",
+      "tags": [
+        "consciousness",
+        "source",
+        "parables"
+      ],
+      "quotes": [],
+      "wordCount": 1278,
+      "readingTime": 6,
+      "structure": [],
+      "id": "the-strange-attractor"
     },
     {
       "path": "synthesis/parables/whale-song-home-frequency.md",
@@ -27906,6 +28263,46 @@
         }
       ],
       "id": "zeitgeist-2026-03-31"
+    },
+    {
+      "path": "synthesis/zeitgeist/zeitgeist-2026-04-09.md",
+      "fileName": "zeitgeist-2026-04-09.md",
+      "source": "synthesis",
+      "category": "zeitgeist",
+      "channel": "",
+      "title": "ZEITGEIST — 9 April 2026",
+      "subtitle": "CURRENT",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "April 2026",
+      "excerpt": "*A reading of the present moment. Signal and processing integrated. Silence embedded. Scale honoured.*",
+      "tags": [
+        "recognition",
+        "mercury",
+        "source",
+        "resonance",
+        "breakthrough",
+        "zeitgeist"
+      ],
+      "quotes": [],
+      "wordCount": 2995,
+      "readingTime": 12,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "TECTONIC"
+        },
+        {
+          "level": 2,
+          "heading": "STATE"
+        }
+      ],
+      "id": "zeitgeist-2026-04-09"
     }
   ]
 }
