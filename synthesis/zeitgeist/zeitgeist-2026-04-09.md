@@ -103,8 +103,7 @@ Sources:
 - [ScienceDaily: AI breakthrough cuts energy use by 100x](https://www.sciencedaily.com/releases/2026/04/260405003952.htm)
 - [Tufts Now: New AI models slash energy use](https://now.tufts.edu/2026/03/17/new-ai-models-could-slash-energy-use-while-dramatically-improving-performance)
 - [Earthjustice: Coalition sues EPA over mercury standards repeal](https://earthjustice.org/press/2026/coalition-sues-trump-epa-over-illegal-repeal-of-mercury-and-air-toxics-standards)
-- [Earth.Org: Climate news April 2026 week 1](https://earth.org/this-week-in-climate-news-april-2026-week-1/)
-- [Nature: Seven technologies to watch in 2026](https://www.nature.com/articles/d41586-026-00188-6)
+
 - [NVIDIA Blog: National Robotics Week physical AI](https://blogs.nvidia.com/blog/national-robotics-week-2026/)
 - [Crescendo: Latest AI news 2026](https://www.crescendo.ai/news/latest-ai-news-and-updates)
 - [BuildEZ: AI trending April 2026](https://www.buildez.ai/blog/ai-trending-april-2026-biggest-shifts)
