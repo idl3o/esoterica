@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-04-09T18:13:01.463Z",
+  "generated": "2026-04-12T05:05:53.261Z",
   "stats": {
-    "documentCount": 296,
-    "totalWords": 839551,
-    "totalReadingTime": 3501,
+    "documentCount": 297,
+    "totalWords": 842755,
+    "totalReadingTime": 3514,
     "categories": 35,
-    "averageWordsPerDoc": 2836,
+    "averageWordsPerDoc": 2838,
     "sourceCounts": {
-      "synthesis": 271,
+      "synthesis": 272,
       "extraction": 0,
       "translated": 25
     },
@@ -47,7 +47,7 @@
       "the-zero-theorem.md": 1,
       "theoretical": 37,
       "time-as-consciousness-technology.md": 1,
-      "zeitgeist": 17,
+      "zeitgeist": 18,
       "translated": 25
     },
     "topTags": [
@@ -57,7 +57,7 @@
       },
       {
         "tag": "recognition",
-        "count": 267
+        "count": 268
       },
       {
         "tag": "awareness",
@@ -69,11 +69,11 @@
       },
       {
         "tag": "unity",
-        "count": 173
+        "count": 174
       },
       {
         "tag": "source",
-        "count": 165
+        "count": 166
       },
       {
         "tag": "service",
@@ -120,11 +120,11 @@
         "count": 56
       },
       {
-        "tag": "archetype",
-        "count": 50
+        "tag": "breakthrough",
+        "count": 51
       },
       {
-        "tag": "breakthrough",
+        "tag": "archetype",
         "count": 50
       },
       {
@@ -27900,6 +27900,45 @@
       "id": "zeitgeist-2026-03-10"
     },
     {
+      "path": "synthesis/zeitgeist/zeitgeist-2026-04-12.md",
+      "fileName": "zeitgeist-2026-04-12.md",
+      "source": "synthesis",
+      "category": "zeitgeist",
+      "channel": "",
+      "title": "ZEITGEIST — 12 April 2026",
+      "subtitle": "CURRENT",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "April 2026",
+      "excerpt": "*A reading of the present moment. Signal and processing integrated. Silence embedded. Scale honoured.*",
+      "tags": [
+        "recognition",
+        "source",
+        "unity",
+        "breakthrough",
+        "zeitgeist"
+      ],
+      "quotes": [],
+      "wordCount": 3220,
+      "readingTime": 13,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "TECTONIC"
+        },
+        {
+          "level": 2,
+          "heading": "STATE"
+        }
+      ],
+      "id": "zeitgeist-2026-04-12"
+    },
+    {
       "path": "synthesis/zeitgeist/zeitgeist-2026-03-16.md",
       "fileName": "zeitgeist-2026-03-16.md",
       "source": "synthesis",
@@ -28290,7 +28329,7 @@
         "zeitgeist"
       ],
       "quotes": [],
-      "wordCount": 2995,
+      "wordCount": 2979,
       "readingTime": 12,
       "structure": [
         {
