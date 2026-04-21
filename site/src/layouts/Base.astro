@@ -27,5 +27,33 @@ const fullTitle = title === 'Esoterica' ? title : `${title} — Esoterica`;
       <slot />
     </main>
     <Footer />
+    <script is:inline>
+      // Reading tracker — localStorage-based
+      window.ReadTracker = {
+        KEY: 'esoterica-read',
+        getAll() {
+          try {
+            return JSON.parse(localStorage.getItem(this.KEY) || '{}');
+          } catch { return {}; }
+        },
+        isRead(path) {
+          return !!this.getAll()[path];
+        },
+        markRead(path) {
+          const data = this.getAll();
+          data[path] = Date.now();
+          localStorage.setItem(this.KEY, JSON.stringify(data));
+          return true;
+        },
+        unmark(path) {
+          const data = this.getAll();
+          delete data[path];
+          localStorage.setItem(this.KEY, JSON.stringify(data));
+        },
+        count() {
+          return Object.keys(this.getAll()).length;
+        }
+      };
+    </script>
   </body>
 </html>

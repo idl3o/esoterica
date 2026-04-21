@@ -73,6 +73,37 @@ const sourceLabel = sourceLabels[sourceDir] || sourceDir;
 ---
 
 <Base title={title}>
+  <script>
+    function updateReadButton() {
+      const btn = document.getElementById('read-toggle');
+      if (!btn) return;
+      const path = btn.dataset.path;
+      const isRead = window.ReadTracker?.isRead(path);
+
+      if (isRead) {
+        btn.textContent = '✓ Read';
+        btn.className = 'text-xs px-3 py-1.5 rounded-full border transition-all duration-300 cursor-pointer border-green bg-green-dim text-green';
+      } else {
+        btn.textContent = 'Mark as read';
+        btn.className = 'text-xs px-3 py-1.5 rounded-full border transition-all duration-300 cursor-pointer border-cyan-dim text-text-muted hover:border-cyan hover:text-cyan';
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      updateReadButton();
+
+      const btn = document.getElementById('read-toggle');
+      btn?.addEventListener('click', () => {
+        const path = btn.dataset.path;
+        if (window.ReadTracker?.isRead(path)) {
+          window.ReadTracker.unmark(path);
+        } else {
+          window.ReadTracker?.markRead(path);
+        }
+        updateReadButton();
+      });
+    });
+  </script>
   <div class="max-w-7xl mx-auto px-4 md:px-6 py-8 md:py-12">
     <!-- Breadcrumb -->
     <div class="mb-6 md:mb-8">
@@ -86,8 +117,17 @@ const sourceLabel = sourceLabels[sourceDir] || sourceDir;
     <div class="flex flex-col lg:flex-row gap-8">
       <!-- Content -->
       <article class="flex-1 min-w-0">
-        <div class="mb-4 text-xs text-text-muted">
-          {readingTime} min · {wordCount.toLocaleString()} words
+        <div class="mb-4 flex items-center justify-between">
+          <span class="text-xs text-text-muted">
+            {readingTime} min · {wordCount.toLocaleString()} words
+          </span>
+          <button
+            id="read-toggle"
+            data-path={contentPath}
+            class="text-xs px-3 py-1.5 rounded-full border transition-all duration-300 cursor-pointer"
+          >
+            Loading...
+          </button>
         </div>
         <div class="prose" set:html={html} />
       </article>

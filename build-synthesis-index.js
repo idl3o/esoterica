@@ -545,7 +545,7 @@ function buildLibraryIndex() {
         { dir: './seeds', label: 'Seeds', sourceDir: 'seeds' },
         { dir: './traditions', label: 'Traditions', sourceDir: 'traditions' },
         { dir: './translated', label: 'Translated', sourceDir: 'translated' },
-        { dir: './extractions', label: 'Extractions', sourceDir: 'extractions' },
+        // extractions excluded — YouTube transcripts requiring creator consent for public listing
     ];
 
     const allDocs = [];

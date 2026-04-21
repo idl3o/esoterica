@@ -17,12 +17,35 @@ const totalTime = docs.reduce((sum, d) => sum + d.readingTime, 0);
 ---
 
 <Base title="Library" description="The full archive — all consciousness technologies">
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      if (!window.ReadTracker) return;
+
+      // Update read count in header
+      const countEl = document.getElementById('read-count');
+      const totalEl = document.getElementById('total-count');
+      if (countEl && totalEl) {
+        const readCount = window.ReadTracker.count();
+        countEl.textContent = readCount.toString();
+      }
+
+      // Mark read items
+      document.querySelectorAll('[data-doc-path]').forEach(el => {
+        const path = el.dataset.docPath;
+        if (window.ReadTracker.isRead(path)) {
+          el.classList.add('is-read');
+          const indicator = el.querySelector('.read-indicator');
+          if (indicator) indicator.classList.remove('hidden');
+        }
+      });
+    });
+  </script>
   <div class="max-w-5xl mx-auto px-4 md:px-6 py-8 md:py-12">
     <div class="text-center mb-12">
       <h1 class="gradient-text text-3xl font-light tracking-wide mb-3">Library</h1>
       <p class="text-text-secondary mb-4">The full archive</p>
       <div class="flex justify-center gap-6 text-xs text-text-muted">
-        <span>{docs.length} documents</span>
+        <span><span id="read-count">0</span> read / <span id="total-count">{docs.length}</span> documents</span>
         <span>{totalWords.toLocaleString()} words</span>
         <span>{Math.round(totalTime / 60)}h reading</span>
       </div>
@@ -38,8 +61,10 @@ const totalTime = docs.reduce((sum, d) => sum + d.readingTime, 0);
           {sourceDocs.map(doc => (
             <a
               href={doc.readPath}
-              class="glass p-4 transition-lift hover:border-cyan-glow group block"
+              data-doc-path={doc.readPath.replace(/^\/read\//, '')}
+              class="glass p-4 transition-lift hover:border-cyan-glow group block relative"
             >
+              <span class="read-indicator hidden absolute top-2 right-2 text-green text-xs">✓</span>
               <div class="text-sm text-text-primary group-hover:text-cyan transition-colors duration-300">
                 {doc.title}
               </div>
