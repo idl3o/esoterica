@@ -1920,6 +1920,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "SEED — Dionysus: The Mask as Aperture",
+    "subtitle": "THE QUESTION",
+    "category": "",
+    "wordCount": 947,
+    "readingTime": 4,
+    "readPath": "/read/seeds/dionysus-mask-aperture-technology.md",
+    "source": "Seeds",
+    "sourceDir": "seeds"
+  },
+  {
     "title": "SEED — Frigga: The One Who Knew and Did Not Tell",
     "subtitle": "THE QUESTION",
     "category": "",
@@ -4108,5 +4118,15 @@
     "readPath": "/read/distillations/your-first-conversation-with-reality.md",
     "source": "Distillations",
     "sourceDir": "distillations"
+  },
+  {
+    "title": "ZOROASTRIANISM: The Fire That Chooses to Shine",
+    "subtitle": "The Oldest Radical Idea",
+    "category": "persian",
+    "wordCount": 3245,
+    "readingTime": 13,
+    "readPath": "/read/traditions/persian/zoroastrianism-fire-that-chooses.md",
+    "source": "Traditions",
+    "sourceDir": "traditions"
   }
 ]
