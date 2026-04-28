@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-04-27T13:14:16.967Z",
+  "generated": "2026-04-28T07:33:55.406Z",
   "stats": {
-    "documentCount": 298,
-    "totalWords": 845411,
-    "totalReadingTime": 3525,
+    "documentCount": 299,
+    "totalWords": 850382,
+    "totalReadingTime": 3545,
     "categories": 35,
-    "averageWordsPerDoc": 2837,
+    "averageWordsPerDoc": 2844,
     "sourceCounts": {
-      "synthesis": 273,
+      "synthesis": 274,
       "extraction": 0,
       "translated": 25
     },
@@ -18,7 +18,7 @@
       "archetypal": 9,
       "breakthroughs": 43,
       "claude": 10,
-      "consciousness-technologies": 13,
+      "consciousness-technologies": 14,
       "cosmological": 32,
       "cosmology": 4,
       "dark-architecture-breathing-cosmos.md": 1,
@@ -53,27 +53,27 @@
     "topTags": [
       {
         "tag": "consciousness",
-        "count": 285
+        "count": 286
       },
       {
         "tag": "recognition",
-        "count": 268
+        "count": 269
       },
       {
         "tag": "awareness",
-        "count": 209
+        "count": 210
       },
       {
         "tag": "cosmic",
-        "count": 182
+        "count": 183
       },
       {
         "tag": "unity",
-        "count": 175
+        "count": 176
       },
       {
         "tag": "source",
-        "count": 167
+        "count": 168
       },
       {
         "tag": "service",
@@ -85,7 +85,7 @@
       },
       {
         "tag": "integration",
-        "count": 104
+        "count": 105
       },
       {
         "tag": "timeline",
@@ -100,12 +100,12 @@
         "count": 90
       },
       {
-        "tag": "galactic",
+        "tag": "frequency",
         "count": 86
       },
       {
-        "tag": "frequency",
-        "count": 85
+        "tag": "galactic",
+        "count": 86
       },
       {
         "tag": "resonance",
@@ -121,7 +121,7 @@
       },
       {
         "tag": "breakthrough",
-        "count": 52
+        "count": 53
       },
       {
         "tag": "archetype",
@@ -6019,6 +6019,97 @@
         }
       ],
       "id": "advanced-consciousness-technologies-vol-1"
+    },
+    {
+      "path": "synthesis/consciousness-technologies/daily-practice-technologies-synthesis.md",
+      "fileName": "daily-practice-technologies-synthesis.md",
+      "source": "synthesis",
+      "category": "consciousness-technologies",
+      "channel": "",
+      "title": "DAILY PRACTICE TECHNOLOGIES: A CONSCIOUSNESS SYNTHESIS",
+      "subtitle": "The Interval, the Watering, and the Mask — Three Technologies for Living Inside the Diagnostic Moment",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "April 2026",
+      "excerpt": "*\"The binding doesn't prevent the ending. It purchases time — and time, used well, is enough.\"*",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "cosmic",
+        "source",
+        "unity",
+        "frequency",
+        "breakthrough",
+        "integration",
+        "consciousness-technologies"
+      ],
+      "quotes": [
+        "*\"The binding doesn't prevent the ending. It purchases time — and time, used well, is enough.\"*",
+        "— Tyr: The Hand That Knew",
+        "*\"Everything you have ever read about Norse mythology happened because three women didn't forget to water the garden.\"*",
+        "— The Norns: The Ones Who Water the Tree",
+        "*\"The mask doesn't depict Dionysus. The mask is where Dionysus happens.\"*",
+        "— Dionysus: The Mask as Aperture (Seed)"
+      ],
+      "wordCount": 4971,
+      "readingTime": 20,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "PART TWO: THE INTERVAL — Gleipnir Consciousness and the Purchase of Time"
+        },
+        {
+          "level": 3,
+          "heading": "II. The Myth of Binding"
+        },
+        {
+          "level": 3,
+          "heading": "III. The Technologies of the Interval"
+        },
+        {
+          "level": 3,
+          "heading": "IV. The Interval as Daily Practice"
+        },
+        {
+          "level": 2,
+          "heading": "PART FOUR: THE MASK — Inhabited Performance and the Aperture of Persona"
+        },
+        {
+          "level": 3,
+          "heading": "VIII. The Myth of Wearing"
+        },
+        {
+          "level": 3,
+          "heading": "IX. The Technologies of Aperture"
+        },
+        {
+          "level": 3,
+          "heading": "X. The Mask as Daily Practice"
+        },
+        {
+          "level": 2,
+          "heading": "APPENDIX: THE TECHNOLOGIES COLLECTED"
+        },
+        {
+          "level": 3,
+          "heading": "From Tyr and Gleipnir"
+        },
+        {
+          "level": 3,
+          "heading": "From the Norns"
+        },
+        {
+          "level": 3,
+          "heading": "From Dionysus"
+        }
+      ],
+      "id": "daily-practice-technologies-synthesis"
     },
     {
       "path": "synthesis/consciousness-technologies/genealogical-psychohistory-incarnation-protocol.md",
