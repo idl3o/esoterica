@@ -48,7 +48,7 @@ const LIBRARY_DIRS = [
   { dir: 'seeds', label: 'Seeds' },
   { dir: 'traditions', label: 'Traditions' },
   { dir: 'translated', label: 'Translated' },
-  // extractions excluded — YouTube transcripts requiring creator consent
+  { dir: 'extractions', label: 'Extractions' },
 ];
 
 const TERM_PATTERNS = [
