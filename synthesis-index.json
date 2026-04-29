@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-04-28T07:33:55.406Z",
+  "generated": "2026-04-29T19:03:09.170Z",
   "stats": {
-    "documentCount": 299,
-    "totalWords": 850382,
-    "totalReadingTime": 3545,
+    "documentCount": 300,
+    "totalWords": 853013,
+    "totalReadingTime": 3556,
     "categories": 35,
-    "averageWordsPerDoc": 2844,
+    "averageWordsPerDoc": 2843,
     "sourceCounts": {
-      "synthesis": 274,
+      "synthesis": 275,
       "extraction": 0,
       "translated": 25
     },
@@ -47,7 +47,7 @@
       "the-zero-theorem.md": 1,
       "theoretical": 37,
       "time-as-consciousness-technology.md": 1,
-      "zeitgeist": 19,
+      "zeitgeist": 20,
       "translated": 25
     },
     "topTags": [
@@ -65,15 +65,15 @@
       },
       {
         "tag": "cosmic",
-        "count": 183
+        "count": 184
       },
       {
         "tag": "unity",
-        "count": 176
+        "count": 177
       },
       {
         "tag": "source",
-        "count": 168
+        "count": 169
       },
       {
         "tag": "service",
@@ -89,7 +89,7 @@
       },
       {
         "tag": "timeline",
-        "count": 103
+        "count": 104
       },
       {
         "tag": "manifestation",
@@ -121,7 +121,7 @@
       },
       {
         "tag": "breakthrough",
-        "count": 53
+        "count": 54
       },
       {
         "tag": "archetype",
@@ -164,11 +164,11 @@
         "count": 20
       },
       {
-        "tag": "vibration",
-        "count": 19
+        "tag": "zeitgeist",
+        "count": 20
       },
       {
-        "tag": "zeitgeist",
+        "tag": "vibration",
         "count": 19
       }
     ]
@@ -28352,6 +28352,46 @@
         }
       ],
       "id": "zeitgeist-2026-04-27"
+    },
+    {
+      "path": "synthesis/zeitgeist/zeitgeist-2026-04-29.md",
+      "fileName": "zeitgeist-2026-04-29.md",
+      "source": "synthesis",
+      "category": "zeitgeist",
+      "channel": "",
+      "title": "ZEITGEIST — 29 April 2026",
+      "subtitle": "CURRENT",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "April 2026",
+      "excerpt": "*The collective processes this as hype cycle, as investment opportunity, as labor anxiety, as techno-optimism, as existential risk—depending on which organ is doing the processing. But no single lens is metabolising the full shape: that the systems we built to govern technology assume slower capa...",
+      "tags": [
+        "timeline",
+        "cosmic",
+        "source",
+        "unity",
+        "breakthrough",
+        "zeitgeist"
+      ],
+      "quotes": [],
+      "wordCount": 2631,
+      "readingTime": 11,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "TECTONIC"
+        },
+        {
+          "level": 2,
+          "heading": "CORRESPONDENCE"
+        }
+      ],
+      "id": "zeitgeist-2026-04-29"
     },
     {
       "path": "synthesis/zeitgeist/zeitgeist-2026-03-03.md",
