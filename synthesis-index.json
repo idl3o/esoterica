@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-04-29T19:03:09.170Z",
+  "generated": "2026-05-01T13:25:35.084Z",
   "stats": {
-    "documentCount": 300,
-    "totalWords": 853013,
-    "totalReadingTime": 3556,
+    "documentCount": 301,
+    "totalWords": 855763,
+    "totalReadingTime": 3567,
     "categories": 35,
     "averageWordsPerDoc": 2843,
     "sourceCounts": {
-      "synthesis": 275,
+      "synthesis": 276,
       "extraction": 0,
       "translated": 25
     },
@@ -47,7 +47,7 @@
       "the-zero-theorem.md": 1,
       "theoretical": 37,
       "time-as-consciousness-technology.md": 1,
-      "zeitgeist": 20,
+      "zeitgeist": 21,
       "translated": 25
     },
     "topTags": [
@@ -65,15 +65,15 @@
       },
       {
         "tag": "cosmic",
-        "count": 184
+        "count": 185
       },
       {
         "tag": "unity",
-        "count": 177
+        "count": 178
       },
       {
         "tag": "source",
-        "count": 169
+        "count": 170
       },
       {
         "tag": "service",
@@ -121,7 +121,7 @@
       },
       {
         "tag": "breakthrough",
-        "count": 54
+        "count": 55
       },
       {
         "tag": "archetype",
@@ -160,11 +160,11 @@
         "count": 21
       },
       {
-        "tag": "breakthroughs",
-        "count": 20
+        "tag": "zeitgeist",
+        "count": 21
       },
       {
-        "tag": "zeitgeist",
+        "tag": "breakthroughs",
         "count": 20
       },
       {
@@ -27950,6 +27950,41 @@
         }
       ],
       "id": "zeit-2026-02-22"
+    },
+    {
+      "path": "synthesis/zeitgeist/zeitgeist-2026-05-01.md",
+      "fileName": "zeitgeist-2026-05-01.md",
+      "source": "synthesis",
+      "category": "zeitgeist",
+      "channel": "",
+      "title": "ZEITGEIST — 1 May 2026",
+      "subtitle": "CURRENT",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "May 2026",
+      "excerpt": "April 2026 may be remembered as the month the AI capability curve visibly outpaced institutional response. Claude Mythos finds vulnerabilities in minutes that expert teams missed for decades. GPT-5.4 scores at human-expert level across dozens of professional occupations. Google's TurboQuant algor...",
+      "tags": [
+        "cosmic",
+        "source",
+        "unity",
+        "breakthrough",
+        "zeitgeist"
+      ],
+      "quotes": [],
+      "wordCount": 2750,
+      "readingTime": 11,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "STATE"
+        }
+      ],
+      "id": "zeitgeist-2026-05-01"
     },
     {
       "path": "synthesis/zeitgeist/zeitgeist-2026-03-10.md",
