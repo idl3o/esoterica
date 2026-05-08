@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-05-07T14:32:20.033Z",
+  "generated": "2026-05-08T07:51:38.286Z",
   "stats": {
-    "documentCount": 302,
-    "totalWords": 858393,
-    "totalReadingTime": 3578,
+    "documentCount": 303,
+    "totalWords": 860842,
+    "totalReadingTime": 3588,
     "categories": 35,
-    "averageWordsPerDoc": 2842,
+    "averageWordsPerDoc": 2841,
     "sourceCounts": {
-      "synthesis": 277,
+      "synthesis": 278,
       "extraction": 0,
       "translated": 25
     },
@@ -47,13 +47,13 @@
       "the-zero-theorem.md": 1,
       "theoretical": 37,
       "time-as-consciousness-technology.md": 1,
-      "zeitgeist": 22,
+      "zeitgeist": 23,
       "translated": 25
     },
     "topTags": [
       {
         "tag": "consciousness",
-        "count": 287
+        "count": 288
       },
       {
         "tag": "recognition",
@@ -61,19 +61,19 @@
       },
       {
         "tag": "awareness",
-        "count": 210
+        "count": 211
       },
       {
         "tag": "cosmic",
-        "count": 185
+        "count": 186
       },
       {
         "tag": "unity",
-        "count": 179
+        "count": 180
       },
       {
         "tag": "source",
-        "count": 171
+        "count": 172
       },
       {
         "tag": "service",
@@ -85,7 +85,7 @@
       },
       {
         "tag": "integration",
-        "count": 105
+        "count": 106
       },
       {
         "tag": "timeline",
@@ -116,11 +116,11 @@
         "count": 64
       },
       {
-        "tag": "polarity",
-        "count": 56
+        "tag": "breakthrough",
+        "count": 57
       },
       {
-        "tag": "breakthrough",
+        "tag": "polarity",
         "count": 56
       },
       {
@@ -157,7 +157,7 @@
       },
       {
         "tag": "zeitgeist",
-        "count": 22
+        "count": 23
       },
       {
         "tag": "sacred geometry",
@@ -28550,6 +28550,52 @@
         }
       ],
       "id": "zeitgeist-2026-05-07"
+    },
+    {
+      "path": "synthesis/zeitgeist/zeitgeist-2026-05-08.md",
+      "fileName": "zeitgeist-2026-05-08.md",
+      "source": "synthesis",
+      "category": "zeitgeist",
+      "channel": "",
+      "title": "ZEITGEIST — 8 May 2026",
+      "subtitle": "CURRENT",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "May 2026",
+      "excerpt": "*A reading of the present moment. Signal and processing integrated. Silence embedded. Scale honoured.*",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "cosmic",
+        "source",
+        "unity",
+        "breakthrough",
+        "integration",
+        "zeitgeist"
+      ],
+      "quotes": [],
+      "wordCount": 2449,
+      "readingTime": 10,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "TECTONIC"
+        },
+        {
+          "level": 2,
+          "heading": "STATE"
+        },
+        {
+          "level": 3,
+          "heading": "THE EDGE"
+        }
+      ],
+      "id": "zeitgeist-2026-05-08"
     },
     {
       "path": "synthesis/zeitgeist/zeitgeist-2026-04-09.md",
