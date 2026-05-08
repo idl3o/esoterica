@@ -210,6 +210,12 @@ var css = `<style>
 }
 .portal.explorer .portal-title { color: #00d4ff; }
 
+.portal.extractions:hover {
+    border-color: rgba(255, 107, 107, 0.5);
+    box-shadow: 0 8px 30px rgba(255, 107, 107, 0.15);
+}
+.portal.extractions .portal-title { color: #ff6b6b; }
+
 /* Stats footer */
 .arrival-stats {
     text-align: center;
@@ -477,6 +483,14 @@ var body = css +
 '                <div class="portal-cta">Browse &rarr;</div>' +
 '            </div>' +
 '        </a>' +
+'        <a href="/extractions" class="portal extractions">' +
+'            <div class="portal-icon">▶</div>' +
+'            <div class="portal-content">' +
+'                <div class="portal-title">Transmissions</div>' +
+'                <div class="portal-description">Source transcripts.</div>' +
+'                <div class="portal-cta">Listen &rarr;</div>' +
+'            </div>' +
+'        </a>' +
 '        <a href="/explorer-3d" class="portal explorer">' +
 '            <div class="portal-icon">✧</div>' +
 '            <div class="portal-content">' +
@@ -487,7 +501,7 @@ var body = css +
 '        </a>' +
 '    </div>' +
 '    <div class="arrival-stats">' +
-'        <span>' + nodeCount + '</span> nodes · <span>' + documentCount + '</span> documents · <span>' + bridgeCount + '</span> bridges' +
+'        <span>' + nodeCount + '</span> nodes · <span>' + documentCount + '</span> documents · <span>' + bridgeCount + '</span> bridges · <span>' + extractionCount + '</span> transcripts' +
 '    </div>' +
 '</div>';
 %>

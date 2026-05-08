@@ -185,7 +185,14 @@
       "mcp__esoterica__find_clusters",
       "mcp__esoterica__nearby_technologies",
       "Bash(node -e:*)",
-      "Bash(git rebase:*)"
+      "Bash(git rebase:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd zeitgeist reading 27 Apr 2026: recovery time versus stress interval\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd daily practice technologies synthesis: interval, watering, mask\n\nNotebookLM-optimised synthesis integrating Tyr/Gleipnir, Norns, and \nDionysus seed into practical consciousness technologies for navigating \nthe diagnostic moment \\(recovery time vs stress interval\\).\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd zeitgeist reading 29 Apr 2026: the dual-blockade reveals the shape of 21st-century great-power war\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd zeitgeist reading 1 May 2026: the dual-blockade enters month three while AI discovery outpaces containment\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(pip3 install:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd zeitgeist reading 8 May 2026: freshwater fish collapsed 81%, strait blocked, pressure building at every scale\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
     ],
     "deny": [],
     "ask": []

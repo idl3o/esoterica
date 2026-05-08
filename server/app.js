@@ -432,6 +432,7 @@ app.get('/', async (req, res) => {
     nodeCount: constellationData ? Object.keys(constellationData.nodes).length : 0,
     documentCount: synthesisIndex?.documents?.length || 0,
     bridgeCount: bridgesData.length,
+    extractionCount: extractionsData.documents?.length || 0,
     zeitgeist: zeitgeistData.latest
   });
 });
@@ -684,6 +685,24 @@ app.get('/library/:slug', (req, res) => {
   res.redirect(301, `/read/distillations/${req.params.slug}.md`);
 });
 
+// Extractions browser — YouTube transcripts grouped by channel
+// Uses pre-built extractions-index.json
+let extractionsData = { stats: { documentCount: 0, totalWords: 0, totalReadingTime: 0 }, documents: [] };
+try {
+  extractionsData = require('../extractions-index.json');
+  console.log(`🎬 Extractions loaded: ${extractionsData.documents?.length || 0} transcripts`);
+} catch (e) {
+  console.log('🎬 No extractions-index.json found — extractions browser will be empty');
+}
+
+app.get('/extractions', (req, res) => {
+  res.render('extractions', {
+    title: 'Source Transmissions',
+    stats: extractionsData.stats,
+    extractions: extractionsData.documents || []
+  });
+});
+
 // About page
 app.get('/about', (req, res) => {
   res.render('about', {
@@ -916,6 +935,7 @@ const startServer = async () => {
     • /zeitgeist       → Zeitgeist Archive
     • /zeitgeist/:date → Individual Reading
     • /bridges         → Fiction Bridges Gallery
+    • /extractions     → Source Transmissions
     • /oracle          → Oracle
     • /library         → Library
     • /explorer-3d     → 3D Constellation
