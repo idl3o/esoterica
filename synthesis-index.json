@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-05-08T07:51:38.286Z",
+  "generated": "2026-05-09T10:49:21.443Z",
   "stats": {
-    "documentCount": 303,
-    "totalWords": 860842,
-    "totalReadingTime": 3588,
+    "documentCount": 304,
+    "totalWords": 863458,
+    "totalReadingTime": 3599,
     "categories": 35,
-    "averageWordsPerDoc": 2841,
+    "averageWordsPerDoc": 2840,
     "sourceCounts": {
-      "synthesis": 278,
+      "synthesis": 279,
       "extraction": 0,
       "translated": 25
     },
@@ -47,13 +47,13 @@
       "the-zero-theorem.md": 1,
       "theoretical": 37,
       "time-as-consciousness-technology.md": 1,
-      "zeitgeist": 23,
+      "zeitgeist": 24,
       "translated": 25
     },
     "topTags": [
       {
         "tag": "consciousness",
-        "count": 288
+        "count": 289
       },
       {
         "tag": "recognition",
@@ -61,19 +61,19 @@
       },
       {
         "tag": "awareness",
-        "count": 211
+        "count": 212
       },
       {
         "tag": "cosmic",
-        "count": 186
+        "count": 187
       },
       {
         "tag": "unity",
-        "count": 180
+        "count": 181
       },
       {
         "tag": "source",
-        "count": 172
+        "count": 173
       },
       {
         "tag": "service",
@@ -85,7 +85,7 @@
       },
       {
         "tag": "integration",
-        "count": 106
+        "count": 107
       },
       {
         "tag": "timeline",
@@ -117,7 +117,7 @@
       },
       {
         "tag": "breakthrough",
-        "count": 57
+        "count": 58
       },
       {
         "tag": "polarity",
@@ -157,7 +157,7 @@
       },
       {
         "tag": "zeitgeist",
-        "count": 23
+        "count": 24
       },
       {
         "tag": "sacred geometry",
@@ -28636,6 +28636,48 @@
         }
       ],
       "id": "zeitgeist-2026-04-09"
+    },
+    {
+      "path": "synthesis/zeitgeist/zeitgeist-2026-05-09.md",
+      "fileName": "zeitgeist-2026-05-09.md",
+      "source": "synthesis",
+      "category": "zeitgeist",
+      "channel": "",
+      "title": "ZEITGEIST — 9 May 2026",
+      "subtitle": "CURRENT",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "May 2026",
+      "excerpt": "Through lila: this is the play. Not a play—*the* play. The universe generating novelty through constraint, exploring itself through apparent catastrophe, creating consciousness that can read its own crisis and recognise itself in the reading. The absurdity is structural: we are matter that has or...",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "cosmic",
+        "source",
+        "unity",
+        "breakthrough",
+        "integration",
+        "zeitgeist"
+      ],
+      "quotes": [],
+      "wordCount": 2616,
+      "readingTime": 11,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "TECTONIC"
+        },
+        {
+          "level": 2,
+          "heading": "STATE"
+        }
+      ],
+      "id": "zeitgeist-2026-05-09"
     }
   ]
 }
