@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-05-09T10:49:21.443Z",
+  "generated": "2026-05-10T07:22:40.096Z",
   "stats": {
-    "documentCount": 304,
-    "totalWords": 863458,
-    "totalReadingTime": 3599,
+    "documentCount": 305,
+    "totalWords": 865669,
+    "totalReadingTime": 3608,
     "categories": 35,
-    "averageWordsPerDoc": 2840,
+    "averageWordsPerDoc": 2838,
     "sourceCounts": {
-      "synthesis": 279,
+      "synthesis": 280,
       "extraction": 0,
       "translated": 25
     },
@@ -47,7 +47,7 @@
       "the-zero-theorem.md": 1,
       "theoretical": 37,
       "time-as-consciousness-technology.md": 1,
-      "zeitgeist": 24,
+      "zeitgeist": 25,
       "translated": 25
     },
     "topTags": [
@@ -69,11 +69,11 @@
       },
       {
         "tag": "unity",
-        "count": 181
+        "count": 182
       },
       {
         "tag": "source",
-        "count": 173
+        "count": 174
       },
       {
         "tag": "service",
@@ -157,7 +157,7 @@
       },
       {
         "tag": "zeitgeist",
-        "count": 24
+        "count": 25
       },
       {
         "tag": "sacred geometry",
@@ -28024,6 +28024,43 @@
         }
       ],
       "id": "zeitgeist-2026-03-10"
+    },
+    {
+      "path": "synthesis/zeitgeist/zeitgeist-2026-05-10.md",
+      "fileName": "zeitgeist-2026-05-10.md",
+      "source": "synthesis",
+      "category": "zeitgeist",
+      "channel": "",
+      "title": "ZEITGEIST — 10 May 2026",
+      "subtitle": "CURRENT",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "May 2026",
+      "excerpt": "*A reading of the present moment. Signal and processing integrated. Silence embedded. Scale honoured.*",
+      "tags": [
+        "source",
+        "unity",
+        "zeitgeist"
+      ],
+      "quotes": [],
+      "wordCount": 2211,
+      "readingTime": 9,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "TECTONIC"
+        },
+        {
+          "level": 2,
+          "heading": "STATE"
+        }
+      ],
+      "id": "zeitgeist-2026-05-10"
     },
     {
       "path": "synthesis/zeitgeist/zeitgeist-2026-04-12.md",
