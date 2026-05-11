@@ -55,6 +55,7 @@ const LIBRARY_DIRS = [
   { dir: 'harvest', label: 'Harvest' },
   { dir: 'world-tree', label: 'World Tree' },
   { dir: 'memory-palace', label: 'Memory Palace' },
+  { dir: 'misc', label: 'Misc' },
 ];
 
 const TERM_PATTERNS = [
@@ -80,7 +81,7 @@ function scanDir(dir: string, fileList: string[] = []): string[] {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
   for (const entry of entries) {
     const fullPath = path.join(dir, entry.name);
-    if (entry.isDirectory() && !entry.name.startsWith('.')) {
+    if (entry.isDirectory() && !entry.name.startsWith('.') && entry.name !== 'internal') {
       scanDir(fullPath, fileList);
     } else if (entry.name.endsWith('.md')) {
       fileList.push(fullPath);
@@ -208,6 +209,7 @@ const ALL_CONTENT_DIRS = [
   'harvest',
   'world-tree',
   'memory-palace',
+  'misc',
 ];
 
 export function loadSynthesisIndex(): ContentDocument[] {
@@ -249,7 +251,7 @@ export function loadLibraryIndex(): LibraryDocument[] {
         const relativePath = path.join(relBase, entry.name);
 
         if (entry.isDirectory()) {
-          if (entry.name === 'zeitgeist' || entry.name === 'personal') continue;
+          if (entry.name === 'zeitgeist' || entry.name === 'personal' || entry.name === 'internal') continue;
           scanLib(fullPath, relativePath);
         } else if (entry.name.endsWith('.md') && entry.name !== 'README.md') {
           try {

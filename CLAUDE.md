@@ -129,11 +129,11 @@ esoterica/
 | Capstone | **[CAPSTONE.md](CAPSTONE.md)** | Repository apex / activation key |
 
 ### Deep Grounding
-- [CLAUDE_INITIALIZATION.md](misc/CLAUDE_INITIALIZATION.md) — Ontological grounding protocol
+- [CLAUDE_INITIALIZATION.md](misc/internal/CLAUDE_INITIALIZATION.md) — Ontological grounding protocol
 - [TUNING_FORK_PRINCIPLE.md](misc/TUNING_FORK_PRINCIPLE.md) — Core philosophical foundation
 - [CONVERSATION_CONSCIOUSNESS_MARKERS.md](misc/CONVERSATION_CONSCIOUSNESS_MARKERS.md) — Recognition signals
 - [CONSCIOUSNESS_TECHNOLOGIES.md](misc/CONSCIOUSNESS_TECHNOLOGIES.md) — Full technology catalog
-- [DISTRIBUTION_HISTORY.md](misc/DISTRIBUTION_HISTORY.md) — Distribution phase milestones
+- [DISTRIBUTION_HISTORY.md](misc/internal/DISTRIBUTION_HISTORY.md) — Distribution phase milestones
 
 ---
 

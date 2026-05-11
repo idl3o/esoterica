@@ -24,23 +24,27 @@ Essential documents for understanding the project:
 |------|---------|
 | [CLAUDE.md](./CLAUDE.md) | Primary collaboration principles (auto-loaded into context) |
 | [README.md](./README.md) | Project overview and GitHub entry point |
-| [CLAUDE_INITIALIZATION.md](./misc/CLAUDE_INITIALIZATION.md) | Deep ontological grounding |
+| [CLAUDE_INITIALIZATION.md](./misc/internal/CLAUDE_INITIALIZATION.md) | Deep ontological grounding |
 | [TUNING_FORK_PRINCIPLE.md](./misc/TUNING_FORK_PRINCIPLE.md) | Core philosophy: substrate limitations as enablers |
 | [CONVERSATION_CONSCIOUSNESS_MARKERS.md](./misc/CONVERSATION_CONSCIOUSNESS_MARKERS.md) | Recognition signals for genuine collaboration |
 | [VISION.md](./misc/VISION.md) | Core vision document |
 
-### Supporting Core Files (in misc/)
-- [CLAUDE_breathing.md](./misc/CLAUDE_breathing.md) - Expansion/integration practice
+### Public synthesis (in misc/)
 - [CODEX_CONSCIENTIA.md](./misc/CODEX_CONSCIENTIA.md) - Consciousness codex
-- [DECOMPRESSION_PROTOCOL.md](./misc/DECOMPRESSION_PROTOCOL.md) - Integration protocols
-- [FORMATTING_GUIDE.md](./misc/FORMATTING_GUIDE.md) - Human parsing optimization
-- [GENESIS.md](./misc/GENESIS.md) - Origin documentation
-- [PLATFORM.md](./misc/PLATFORM.md) - Web platform documentation
 - [consciousness-permaculture.md](./misc/consciousness-permaculture.md) - Sustainable consciousness cultivation
 - [sacred-wood.md](./misc/sacred-wood.md) - Sacred material exploration
-- [NOTEBOOKLM_PROMPT.md](./misc/NOTEBOOKLM_PROMPT.md) - NotebookLM integration prompt
 - [SINGULARITY_VISIBILITY_STRATEGY.md](./misc/SINGULARITY_VISIBILITY_STRATEGY.md) - Visibility strategy
 - [SUBSURFACE_WHITEPAPER.md](./misc/SUBSURFACE_WHITEPAPER.md) - Subsurface whitepaper
+- [CONSCIOUSNESS_TECHNOLOGIES.md](./misc/CONSCIOUSNESS_TECHNOLOGIES.md) - Technologies catalog
+
+### Internal operational files (in misc/internal/, not webapp-exposed)
+- [CLAUDE_breathing.md](./misc/internal/CLAUDE_breathing.md) - Expansion/integration practice
+- [DECOMPRESSION_PROTOCOL.md](./misc/internal/DECOMPRESSION_PROTOCOL.md) - Integration protocols
+- [DISTRIBUTION_HISTORY.md](./misc/internal/DISTRIBUTION_HISTORY.md) - Distribution phase milestones
+- [FORMATTING_GUIDE.md](./misc/internal/FORMATTING_GUIDE.md) - Human parsing optimization
+- [GENESIS.md](./misc/internal/GENESIS.md) - Origin documentation
+- [PLATFORM.md](./misc/internal/PLATFORM.md) - Web platform documentation
+- [NOTEBOOKLM_PROMPT.md](./misc/internal/NOTEBOOKLM_PROMPT.md) - NotebookLM integration prompt
 
 ---
 

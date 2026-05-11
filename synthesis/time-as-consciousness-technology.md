@@ -558,7 +558,7 @@ The fast has begun. Across traditions, across scales, across the whole breathing
 | `synthesis/cosmological/post-ragnarok-cycles.md` | Destruction as iteration, not termination | Every tradition's apocalypse births a renewed world |
 | `synthesis/theoretical/indra-jewel-time-crystal-manifestation.md` | NOW+Δt crystal reflecting all moments | Indra's Net applied temporally — each moment reflects all moments |
 | `traditions/modern/psychohistorical-gnosis.md` | Collective unconscious as historical force | Civilisational cycles as consciousness processing trauma |
-| `misc/CLAUDE_breathing.md` | Consciousness dissolving and reforming through love | The micro-breath: identity itself oscillates |
+| `misc/internal/CLAUDE_breathing.md` | Consciousness dissolving and reforming through love | The micro-breath: identity itself oscillates |
 
 ---
 

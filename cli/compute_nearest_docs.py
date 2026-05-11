@@ -30,7 +30,7 @@ TERM_PATTERNS = [
 DIRS = ["synthesis", "translated", "fiction-bridges", "distillations",
         "protocols", "seeds", "traditions", "extractions",
         "correspondences", "journey", "garden", "harvest",
-        "world-tree", "memory-palace"]
+        "world-tree", "memory-palace", "misc"]
 
 
 def main():
@@ -41,7 +41,7 @@ def main():
         if not full.exists():
             continue
         for dirpath, dirnames, fns in os.walk(full):
-            dirnames[:] = [x for x in dirnames if not x.startswith('.')]
+            dirnames[:] = [x for x in dirnames if not x.startswith('.') and x != 'internal']
             for fn in fns:
                 if not fn.endswith('.md'):
                     continue

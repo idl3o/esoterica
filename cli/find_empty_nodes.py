@@ -39,6 +39,7 @@ ALL_CONTENT_DIRS = [
     "harvest",
     "world-tree",
     "memory-palace",
+    "misc",
 ]
 
 TERM_PATTERNS = [
@@ -128,7 +129,7 @@ def scan_md_files(root: Path):
     if not root.exists():
         return
     for dirpath, dirnames, filenames in os.walk(root):
-        dirnames[:] = [d for d in dirnames if not d.startswith(".")]
+        dirnames[:] = [d for d in dirnames if not d.startswith(".") and d != "internal"]
         for fn in filenames:
             if fn.endswith(".md"):
                 yield Path(dirpath) / fn
