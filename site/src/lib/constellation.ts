@@ -10,6 +10,9 @@ export interface ConstellationNode {
   type: string;
   essence: string;
   connections: string[];
+  document?: string;
+  description?: string;
+  created?: string;
 }
 
 export interface ConstellationData {

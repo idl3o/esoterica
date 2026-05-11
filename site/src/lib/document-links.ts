@@ -231,6 +231,37 @@ export function buildDocumentNodeLinks(
   const documentToNodes: Record<string, { primary: string[]; related: string[] }> = {};
   const nodeToDocuments: Record<string, NodeDocument[]> = {};
 
+  // Explicit-primary pre-pass: any node with an explicit `document` path gets
+  // that doc as its authoritative primary. Tag-matched primaries below get
+  // demoted to related on collision.
+  const docByPath = new Map<string, DocumentMeta>();
+  for (const d of documents) {
+    if (d.path) docByPath.set(d.path, d);
+  }
+  const explicitPrimaryByNode: Record<string, string> = {};
+  for (const [nodeId, node] of Object.entries(nodes)) {
+    const docPath = node.document;
+    if (!docPath) continue;
+    const docMeta = docByPath.get(docPath);
+    if (!docMeta || !docMeta.id) continue;
+    explicitPrimaryByNode[nodeId] = docMeta.id;
+    if (!nodeToDocuments[nodeId]) nodeToDocuments[nodeId] = [];
+    nodeToDocuments[nodeId].push({
+      id: docMeta.id,
+      title: docMeta.title || docMeta.id,
+      path: docMeta.path,
+      readingTime: docMeta.readingTime || 0,
+      source: docMeta.source || 'unknown',
+      category: docMeta.category || '',
+      isPrimary: true,
+    });
+    if (!documentToNodes[docMeta.id]) {
+      documentToNodes[docMeta.id] = { primary: [nodeId], related: [] };
+    } else if (!documentToNodes[docMeta.id].primary.includes(nodeId)) {
+      documentToNodes[docMeta.id].primary.push(nodeId);
+    }
+  }
+
   for (const doc of documents) {
     const docId = doc.id;
     if (!docId) continue;
@@ -273,7 +304,14 @@ export function buildDocumentNodeLinks(
       }
     }
 
-    documentToNodes[docId] = { primary, related: related.slice(0, 20) };
+    if (documentToNodes[docId]) {
+      for (const nid of primary) {
+        if (!documentToNodes[docId].primary.includes(nid)) documentToNodes[docId].primary.push(nid);
+      }
+      documentToNodes[docId].related = related.slice(0, 20);
+    } else {
+      documentToNodes[docId] = { primary, related: related.slice(0, 20) };
+    }
 
     const docInfo: Omit<NodeDocument, 'isPrimary'> = {
       id: docId,
@@ -286,12 +324,17 @@ export function buildDocumentNodeLinks(
 
     for (const nodeId of [...primary, ...related.slice(0, 20)]) {
       if (!nodeToDocuments[nodeId]) nodeToDocuments[nodeId] = [];
-      if (!nodeToDocuments[nodeId].find(d => d.id === docId)) {
-        nodeToDocuments[nodeId].push({
-          ...docInfo,
-          isPrimary: primary.includes(nodeId)
-        });
-      }
+      if (nodeToDocuments[nodeId].find(d => d.id === docId)) continue;
+
+      // If this node has an explicit primary, any tag-matched doc that isn't
+      // the explicit one becomes related (not primary).
+      const hasExplicit = explicitPrimaryByNode[nodeId];
+      const isExplicitDoc = hasExplicit === docId;
+      let isPrimary = primary.includes(nodeId);
+      if (hasExplicit && !isExplicitDoc) isPrimary = false;
+      if (isExplicitDoc) continue; // already inserted in pre-pass
+
+      nodeToDocuments[nodeId].push({ ...docInfo, isPrimary });
     }
   }
 
