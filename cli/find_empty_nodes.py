@@ -33,6 +33,12 @@ ALL_CONTENT_DIRS = [
     "seeds",
     "traditions",
     "extractions",
+    "correspondences",
+    "journey",
+    "garden",
+    "harvest",
+    "world-tree",
+    "memory-palace",
 ]
 
 TERM_PATTERNS = [

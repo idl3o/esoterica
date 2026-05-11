@@ -49,6 +49,12 @@ const LIBRARY_DIRS = [
   { dir: 'traditions', label: 'Traditions' },
   { dir: 'translated', label: 'Translated' },
   { dir: 'extractions', label: 'Extractions' },
+  { dir: 'correspondences', label: 'Correspondences' },
+  { dir: 'journey', label: 'Journey' },
+  { dir: 'garden', label: 'Garden' },
+  { dir: 'harvest', label: 'Harvest' },
+  { dir: 'world-tree', label: 'World Tree' },
+  { dir: 'memory-palace', label: 'Memory Palace' },
 ];
 
 const TERM_PATTERNS = [
@@ -196,6 +202,12 @@ const ALL_CONTENT_DIRS = [
   'seeds',
   'traditions',
   'extractions',
+  'correspondences',
+  'journey',
+  'garden',
+  'harvest',
+  'world-tree',
+  'memory-palace',
 ];
 
 export function loadSynthesisIndex(): ContentDocument[] {

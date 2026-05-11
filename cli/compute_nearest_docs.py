@@ -28,7 +28,9 @@ TERM_PATTERNS = [
 ]
 
 DIRS = ["synthesis", "translated", "fiction-bridges", "distillations",
-        "protocols", "seeds", "traditions", "extractions"]
+        "protocols", "seeds", "traditions", "extractions",
+        "correspondences", "journey", "garden", "harvest",
+        "world-tree", "memory-palace"]
 
 
 def main():
