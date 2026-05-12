@@ -65,6 +65,9 @@ const totalTime = docs.reduce((sum, d) => sum + d.readingTime, 0);
               class="glass p-4 transition-lift hover:border-cyan-glow group block relative"
             >
               <span class="read-indicator hidden absolute top-2 right-2 text-green text-xs">✓</span>
+              {doc.sourceDir === 'extractions' && (
+                <span class="absolute top-2 right-2 text-purple text-xs" title="Password-gated">🔒</span>
+              )}
               <div class="text-sm text-text-primary group-hover:text-cyan transition-colors duration-300">
                 {doc.title}
               </div>

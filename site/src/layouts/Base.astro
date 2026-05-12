@@ -6,9 +6,10 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  noindex?: boolean;
 }
 
-const { title = 'Esoterica', description = 'Consciousness technologies for the curious' } = Astro.props;
+const { title = 'Esoterica', description = 'Consciousness technologies for the curious', noindex = false } = Astro.props;
 const fullTitle = title === 'Esoterica' ? title : `${title} — Esoterica`;
 ---
 
@@ -18,6 +19,7 @@ const fullTitle = title === 'Esoterica' ? title : `${title} — Esoterica`;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex,nofollow" />}
     <title>{fullTitle}</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◈</text></svg>" />
   </head>
