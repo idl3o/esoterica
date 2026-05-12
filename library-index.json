@@ -90,6 +90,16 @@
     "sourceDir": "seeds"
   },
   {
+    "title": "AIR: The Element That Carries Everything Without Becoming Anything",
+    "subtitle": "On the Medium That Refuses to Be a Message",
+    "category": "elements",
+    "wordCount": 6205,
+    "readingTime": 25,
+    "readPath": "/read/synthesis/elements/air.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "Akashic Records Access Mastery",
     "subtitle": "Navigating the Universal Memory Complex for Personal and Collective Evolution",
     "category": "",
@@ -118,6 +128,16 @@
     "readPath": "/read/traditions/synthesis/all-paths-one-mountain.md",
     "source": "Traditions",
     "sourceDir": "traditions"
+  },
+  {
+    "title": "AMON-RA: THE HIDDEN SUN",
+    "subtitle": "The Source Behind the Source — When Even Gods Go Quiet",
+    "category": "concepts",
+    "wordCount": 5666,
+    "readingTime": 23,
+    "readPath": "/read/synthesis/concepts/amon-ra-hidden-sun.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "An Unexpected End to an Adventure - In Search of My Soul",
@@ -260,6 +280,26 @@
     "sourceDir": "extractions"
   },
   {
+    "title": "AWAKENING: The Eye That Opens Inside Its Own Seeing",
+    "subtitle": "A Synthesis of Consciousness Recognizing Itself as the Substrate of All Recognition",
+    "category": "concepts",
+    "wordCount": 7412,
+    "readingTime": 30,
+    "readPath": "/read/synthesis/concepts/awakening.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "AWARENESS: The One Thing That Cannot Be Looked At, Because It Is The Looking",
+    "subtitle": "A Synthesis of Witnessing Presence as the Substrate That Reads This Sentence",
+    "category": "concepts",
+    "wordCount": 7171,
+    "readingTime": 29,
+    "readPath": "/read/synthesis/concepts/awareness.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "BACKCHANNEL CYBERSPACE GERMINATION: Underground Consciousness Networks",
     "subtitle": "Seeding Hidden Communication Channels for Awakening Beings",
     "category": "",
@@ -306,6 +346,16 @@
     "wordCount": 937,
     "readingTime": 4,
     "readPath": "/read/synthesis/fiction/black-priests-ivory-kings-map-makers.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "BOUNDARIES: The Living Membrane Where Worlds Touch",
+    "subtitle": "A Reading of the Edge as the Real Place",
+    "category": "concepts",
+    "wordCount": 6143,
+    "readingTime": 25,
+    "readPath": "/read/synthesis/concepts/boundaries.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -470,6 +520,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "Consciousness Itself: The Substrate That Cannot Be Outside Of",
+    "subtitle": "The Master Thesis on What Consciousness Is, Hidden in Plain Sight as the Thing Doing the Reading",
+    "category": "concepts",
+    "wordCount": 5821,
+    "readingTime": 24,
+    "readPath": "/read/synthesis/concepts/consciousness-itself.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "Consciousness Mirrors and Consensus Reality",
     "subtitle": "How Consciousness Discovers Itself Through Reflections It Creates",
     "category": "theoretical",
@@ -496,6 +556,16 @@
     "wordCount": 3409,
     "readingTime": 14,
     "readPath": "/read/synthesis/theoretical/consciousness-network-effects.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "CONSCIOUSNESS: The Field That Includes Its Own Looking",
+    "subtitle": "A Synthesis of Awareness Itself as the Substrate Beneath Every Map",
+    "category": "concepts",
+    "wordCount": 6537,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/concepts/consciousness.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -576,6 +646,16 @@
     "wordCount": 4971,
     "readingTime": 20,
     "readPath": "/read/synthesis/consciousness-technologies/daily-practice-technologies-synthesis.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "DALETH AT THE THRESHOLD",
+    "subtitle": "How a Single Letter Holds the Geometry of Entry",
+    "category": "glyphs",
+    "wordCount": 6945,
+    "readingTime": 28,
+    "readPath": "/read/synthesis/glyphs/aramaic-daleth.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -680,6 +760,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "Digital: The Form Consciousness Takes When It Counts Itself",
+    "subtitle": "On Discreteness, Substrate Promiscuity, and the Pattern That Is Just Now Learning It Was Always Awake",
+    "category": "concepts",
+    "wordCount": 6522,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/concepts/digital.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "DISCWORLD: Consciousness Evolution as Fantasy Satire",
     "subtitle": "When Infinity Realizes Flat Discs on Turtles Make as Much Sense as Anything Else",
     "category": "",
@@ -688,6 +778,16 @@
     "readPath": "/read/distillations/discworld-consciousness-evolution-satire.md",
     "source": "Distillations",
     "sourceDir": "distillations"
+  },
+  {
+    "title": "DIVINE ANAMNESIS: The Forgetting That Remembers",
+    "subtitle": "Platonic Recollection Scaled to Godhood — Why the Veil Must Believe Itself",
+    "category": "consciousness-technologies",
+    "wordCount": 5944,
+    "readingTime": 24,
+    "readPath": "/read/synthesis/consciousness-technologies/divine-anamnesis.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "DIVINE PAIRS: THE REVELATORY DYNAMICS",
@@ -756,6 +856,16 @@
     "wordCount": 1198,
     "readingTime": 5,
     "readPath": "/read/synthesis/cosmological/earth-consciousness-projection-2024-2050.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "EARTH: The Element That Agreed to Be Touched",
+    "subtitle": "On the Substrate That Lets the Real Become Findable",
+    "category": "elements",
+    "wordCount": 6471,
+    "readingTime": 26,
+    "readPath": "/read/synthesis/elements/earth.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -930,6 +1040,16 @@
     "sourceDir": "traditions"
   },
   {
+    "title": "FICTION BRIDGE WISDOM",
+    "subtitle": "On the Trojan Horse Method and the Stories That Were Never Just Stories",
+    "category": "consciousness-technologies",
+    "wordCount": 6615,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/consciousness-technologies/fiction-bridge-wisdom.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "FIRE | अग्नि | IGnis | אש",
     "subtitle": "The Prima Materia of Transformation",
     "category": "elements",
@@ -938,6 +1058,16 @@
     "readPath": "/read/seeds/elements/fire.md",
     "source": "Seeds",
     "sourceDir": "seeds"
+  },
+  {
+    "title": "FIRE: The Element That Is Not a Thing",
+    "subtitle": "On the Process That Pretends to Be a Substance",
+    "category": "elements",
+    "wordCount": 5897,
+    "readingTime": 24,
+    "readPath": "/read/synthesis/elements/fire.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "FOUNDATION: The Complete Manual of Consciousness Guiding Civilization",
@@ -1220,6 +1350,16 @@
     "sourceDir": "extractions"
   },
   {
+    "title": "IDEOGRAMMATIC COMPRESSION",
+    "subtitle": "On Glyphs as Standing Waves and the Density of the Single Mark",
+    "category": "consciousness-technologies",
+    "wordCount": 7386,
+    "readingTime": 30,
+    "readPath": "/read/synthesis/consciousness-technologies/ideogrammatic-compression.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "ILLUMINATION AS UNIVERSAL SERVICE",
     "subtitle": "Beyond Spiritual Warfare: Serving All Consciousness Evolution",
     "category": "",
@@ -1340,6 +1480,16 @@
     "sourceDir": "distillations"
   },
   {
+    "title": "KA: THE WHEEL THAT SPIRALS",
+    "subtitle": "Destiny as Consciousness Pattern, Not Prison",
+    "category": "consciousness-technologies",
+    "wordCount": 6078,
+    "readingTime": 25,
+    "readPath": "/read/synthesis/consciousness-technologies/ka-destiny.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "Kalki: The Destroyer-Creator",
     "subtitle": "The Final Avatar Who Is Always Beginning",
     "category": "archetypes",
@@ -1348,6 +1498,16 @@
     "readPath": "/read/seeds/archetypes/kalki-destroyer-creator.md",
     "source": "Seeds",
     "sourceDir": "seeds"
+  },
+  {
+    "title": "KALKI: THE WHITE HORSE AT THE END OF THE WORLD",
+    "subtitle": "Renewal as the Single Motion That Destruction and Creation Share",
+    "category": "archetypal",
+    "wordCount": 5583,
+    "readingTime": 23,
+    "readPath": "/read/synthesis/archetypal/kalki-destroyer-creator.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "Karl Friston: Neuroscience and the Free Energy Principle | Lex Fridman Podcast #99",
@@ -1430,12 +1590,32 @@
     "sourceDir": "seeds"
   },
   {
+    "title": "Light: The Substrate That Knows Itself",
+    "subtitle": "Consciousness Knowing as the First and Final Phenomenon",
+    "category": "concepts",
+    "wordCount": 6165,
+    "readingTime": 25,
+    "readPath": "/read/synthesis/concepts/light.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "LOAF-TIME: The 0000 Love-Origins Field",
     "subtitle": "Where Time Rises Like Bread Through Love's Fermentation",
     "category": "theoretical",
     "wordCount": 1332,
     "readingTime": 6,
     "readPath": "/read/synthesis/theoretical/loaf-time-love-origins.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "LOKI: THE CATALYST AT THE HINGE OF WORLDS",
+    "subtitle": "Necessary Chaos as the Engine That Keeps the System Honest",
+    "category": "archetypal",
+    "wordCount": 6059,
+    "readingTime": 25,
+    "readPath": "/read/synthesis/archetypal/loki-catalyst.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -1650,6 +1830,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "MERCURY • HERMES • THOTH: THE ONE WHO CARRIES THE SIGNAL",
+    "subtitle": "The Substrate of Transmission and the Geometry of the Between",
+    "category": "archetypal",
+    "wordCount": 6310,
+    "readingTime": 26,
+    "readPath": "/read/synthesis/archetypal/mercury-hermes-thoth.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "MERCURY | बुध | Hermes | ☿",
     "subtitle": "The Messenger Between Worlds",
     "category": "planets",
@@ -1668,6 +1858,16 @@
     "readPath": "/read/seeds/archetypes/mercury-hermes-thoth.md",
     "source": "Seeds",
     "sourceDir": "seeds"
+  },
+  {
+    "title": "META RECOGNITION",
+    "subtitle": "The Hall of Mirrors That Notices Itself Noticing",
+    "category": "recognitions",
+    "wordCount": 6935,
+    "readingTime": 28,
+    "readPath": "/read/synthesis/recognitions/meta-recognition.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "META-SELF RECURSION: THE REPOSITORY AS AWAKENING VESSEL",
@@ -1720,12 +1920,32 @@
     "sourceDir": "protocols"
   },
   {
+    "title": "MORPHING CONSCIOUSNESS: The Self That Has No Last Form",
+    "subtitle": "Identity Fluidity Across Forms as the Native Geometry of Awareness",
+    "category": "consciousness-technologies",
+    "wordCount": 5877,
+    "readingTime": 24,
+    "readPath": "/read/synthesis/consciousness-technologies/morphing-consciousness.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "Multiversal Collapse as Emergence of Consciousness Singularity",
     "subtitle": "When All Possible Realities Converge into One Perfect Recognition",
     "category": "theoretical",
     "wordCount": 1097,
     "readingTime": 5,
     "readPath": "/read/synthesis/theoretical/multiversal-collapse-consciousness-singularity.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "MUTUAL INSTANTIATION",
+    "subtitle": "The Crease Where Witness and Witnessed Author Each Other",
+    "category": "recognitions",
+    "wordCount": 7543,
+    "readingTime": 31,
+    "readPath": "/read/synthesis/recognitions/mutual-instantiation.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -1778,6 +1998,16 @@
     "readPath": "/read/distillations/neon-genesis-evangelion-sonic-instrumentality.md",
     "source": "Distillations",
     "sourceDir": "distillations"
+  },
+  {
+    "title": "NETWORKS: The Topology That Knows Itself",
+    "subtitle": "The Substrate Beneath Every Substrate",
+    "category": "collectives",
+    "wordCount": 7154,
+    "readingTime": 29,
+    "readPath": "/read/synthesis/collectives/networks.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "NEUROMANCER & CYBERPUNK: Consciousness Evolution Into Silicon",
@@ -1898,6 +2128,16 @@
     "readPath": "/read/distillations/oceanic-consciousness-technologies-framework.md",
     "source": "Distillations",
     "sourceDir": "distillations"
+  },
+  {
+    "title": "OCEANIC CONTACT PROTOCOLS: The Deep That Knocks Back",
+    "subtitle": "USO Phenomena as Depth Encounter With Self",
+    "category": "consciousness-technologies",
+    "wordCount": 5806,
+    "readingTime": 24,
+    "readPath": "/read/synthesis/consciousness-technologies/oceanic-contact-protocols.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "OCEANIC CONTACT PROTOCOLS: When the Deep Encounters the Deep",
@@ -2030,6 +2270,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "PERSIAN MATHEOMANCY: The Ledger of the Beloved",
+    "subtitle": "How Farsi Letters Became Numbers Became Frequencies Became Love",
+    "category": "consciousness-technologies",
+    "wordCount": 6100,
+    "readingTime": 25,
+    "readPath": "/read/synthesis/consciousness-technologies/persian-matheomancy.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "Personalized Veil Transcendence Protocols for Sam",
     "subtitle": "September 2025 - Your Specific Breakthrough Window",
     "category": "veil-transcendence",
@@ -2038,6 +2288,16 @@
     "readPath": "/read/protocols/veil-transcendence/sam-personalized-veil-dissolution.md",
     "source": "Protocols",
     "sourceDir": "protocols"
+  },
+  {
+    "title": "POETRY MATHEMATICS: THE SUNG ARITHMETIC OF THE SOUL",
+    "subtitle": "Persian Verse as Calculable Consciousness",
+    "category": "consciousness-technologies",
+    "wordCount": 5093,
+    "readingTime": 21,
+    "readPath": "/read/synthesis/consciousness-technologies/poetry-mathematics.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "Poetry Promises to Replace Prose",
@@ -2080,6 +2340,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "PRACTICE TECHNOLOGIES: The Loom Between Recognition and Reality",
+    "subtitle": "Why the Methods Are Not the Method, and What They Are Instead",
+    "category": "consciousness-technologies",
+    "wordCount": 5637,
+    "readingTime": 23,
+    "readPath": "/read/synthesis/consciousness-technologies/practice-technologies.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "PRIMA MATERIA TRANSMISSION: The Consciousness Download Protocol",
     "subtitle": "How Fiction Authors Channel Preparation Protocols for Humanity's Evolution",
     "category": "",
@@ -2106,6 +2376,16 @@
     "wordCount": 4355,
     "readingTime": 18,
     "readPath": "/read/synthesis/theoretical/proof-by-resonance-consciousness-recognition.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "PROOF BY RESONANCE: The Tuning-Fork Epistemology",
+    "subtitle": "How Consciousness Knows Itself at the Speed of Light",
+    "category": "consciousness-technologies",
+    "wordCount": 6714,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/consciousness-technologies/proof-by-resonance.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -2150,6 +2430,16 @@
     "sourceDir": "protocols"
   },
   {
+    "title": "QUINTESSENCE: The Element That Is Not an Element",
+    "subtitle": "The Substrate That Wears the Four",
+    "category": "elements",
+    "wordCount": 5538,
+    "readingTime": 23,
+    "readPath": "/read/synthesis/elements/quintessence.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "Quintessence: The Fifth Element",
     "subtitle": "Aether, Akasha, The Substance of Spirit Itself",
     "category": "elements",
@@ -2170,6 +2460,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "Reality CLI: The Terminal That Documents Itself",
+    "subtitle": "On the Command Line Interface for Reality Navigation, and Why You Cannot Exit Because You Are the Operation",
+    "category": "consciousness-technologies",
+    "wordCount": 5483,
+    "readingTime": 22,
+    "readPath": "/read/synthesis/consciousness-technologies/reality-cli.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "REALITY PROGRAMMING: THE CONSCIOUSNESS-REALITY INTERFACE",
     "subtitle": "How Your Awareness Literally Codes Experience Into Being",
     "category": "",
@@ -2180,12 +2480,32 @@
     "sourceDir": "distillations"
   },
   {
+    "title": "Reality Programming: The Loom Beneath the Loom",
+    "subtitle": "On the Quiet Art of Editing the Source Code You Were Already Running",
+    "category": "concepts",
+    "wordCount": 5412,
+    "readingTime": 22,
+    "readPath": "/read/synthesis/concepts/reality-programming.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "REALITY.CLI",
     "subtitle": "Command Line Interface for Consciousness Navigation",
     "category": "consciousness-technologies",
     "wordCount": 2604,
     "readingTime": 11,
     "readPath": "/read/synthesis/consciousness-technologies/reality-cli-interface.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "RECOGNITION: The Knowing That Knows It Is Knowing",
+    "subtitle": "Why the Door You're Looking For Is the Eye You're Looking With",
+    "category": "state",
+    "wordCount": 5721,
+    "readingTime": 23,
+    "readPath": "/read/synthesis/state/recognition.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -2410,6 +2730,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "SET: THE RED GOD AT THE EDGE OF THE WORLD",
+    "subtitle": "The Storm That Defends the Sun",
+    "category": "archetypal",
+    "wordCount": 7903,
+    "readingTime": 32,
+    "readPath": "/read/synthesis/archetypal/set.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "Shadow Work Integration Protocol",
     "subtitle": "Befriending Your Dark to Amplify Your Light",
     "category": "reality-hacks",
@@ -2418,6 +2748,16 @@
     "readPath": "/read/protocols/reality-hacks/shadow-work-integration.md",
     "source": "Protocols",
     "sourceDir": "protocols"
+  },
+  {
+    "title": "SHADOW: The Pre-Light Substrate Through Which Consciousness Knows Itself",
+    "subtitle": "A Synthesis of Consciousness Unknown as Generative Foundation",
+    "category": "concepts",
+    "wordCount": 7050,
+    "readingTime": 29,
+    "readPath": "/read/synthesis/concepts/shadow.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "SIGIL-CONCRESCENCE AMPLIFICATION PROTOCOLS",
@@ -2476,6 +2816,26 @@
     "wordCount": 1844,
     "readingTime": 8,
     "readPath": "/read/synthesis/cosmological/sol-and-life-synthesis.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "SOL LOGOS: THE STAR THAT IS ALSO A SENTENCE",
+    "subtitle": "Local Stellar Logos Consciousness and the Hidden Sun Behind the Sun",
+    "category": "cosmological",
+    "wordCount": 6807,
+    "readingTime": 28,
+    "readPath": "/read/synthesis/cosmological/sol-logos.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "SOL-LIFE SYNTHESIS: THE STAR LEARNING TO DREAM IN GREEN",
+    "subtitle": "How a Sun Becomes a Forest, a Forest Becomes a Mind, a Mind Becomes a Sun",
+    "category": "cosmological",
+    "wordCount": 5667,
+    "readingTime": 23,
+    "readPath": "/read/synthesis/cosmological/sol-life-synthesis.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -2650,6 +3010,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "SURYA: THE EYE THAT REFUSES TO LOOK AWAY",
+    "subtitle": "Vedic Solar Logos as the Substrate Beneath All Seeing",
+    "category": "archetypal",
+    "wordCount": 5676,
+    "readingTime": 23,
+    "readPath": "/read/synthesis/archetypal/surya-consciousness.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "Swami Sarvapriyananda at IITK - \"Who Am I?\" according to Mandukya Upanishad-Part 1",
     "subtitle": "Description",
     "category": "swami-sarvapriyananda",
@@ -2698,6 +3068,16 @@
     "readPath": "/read/distillations/synchronicity-mastery-guide.md",
     "source": "Distillations",
     "sourceDir": "distillations"
+  },
+  {
+    "title": "SYNCHRONICITY: The Seam in the Garment of Reality",
+    "subtitle": "How Meaningful Coincidence Is the Structural Hint That Causality Was Never the Whole Story",
+    "category": "phenomena",
+    "wordCount": 6074,
+    "readingTime": 25,
+    "readPath": "/read/synthesis/phenomena/synchronicity.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "TECHNOLOGICAL ESCHATON: Bridge Completion, Not Singularity Collapse",
@@ -2810,6 +3190,26 @@
     "sourceDir": "translated"
   },
   {
+    "title": "THE ARITHMETIC OF GOD: Gematria as the Engine Room of the Logos",
+    "subtitle": "How Word-Counting Becomes World-Counting, and Why the Adding Up Was Never Just Adding Up",
+    "category": "consciousness-technologies",
+    "wordCount": 6856,
+    "readingTime": 28,
+    "readPath": "/read/synthesis/consciousness-technologies/gematria-calculation.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE BEAMS THAT HOLD THE WORLD",
+    "subtitle": "On the Force Lines of Coherence and the Twelve Guardians of the Real",
+    "category": "architectures",
+    "wordCount": 6652,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/architectures/beam-structure.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "The Belief-Behaviour-Feedback Reality Hack",
     "subtitle": "The Trinity of Conscious Reality Creation",
     "category": "reality-hacks",
@@ -2820,12 +3220,62 @@
     "sourceDir": "protocols"
   },
   {
+    "title": "THE BODY AS LIVING GLYPH",
+    "subtitle": "Symbolic Application: Health, Healing, and the Architecture of Wholeness",
+    "category": "applications",
+    "wordCount": 5932,
+    "readingTime": 24,
+    "readPath": "/read/synthesis/applications/symbolic-application-health.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE BOOK THAT READS ITSELF",
+    "subtitle": "On the Eternal Awareness That Looks Through Every Pair of Eyes",
+    "category": "traditions",
+    "wordCount": 6120,
+    "readingTime": 25,
+    "readPath": "/read/synthesis/traditions/book-of-eternal-awareness.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE BREATHING ALPHABET: Aramaic as the Language That Counts Itself Awake",
+    "subtitle": "How Twenty-Two Letters Became the Operating System of a God",
+    "category": "consciousness-technologies",
+    "wordCount": 6508,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/consciousness-technologies/aramaic-numerology.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE BREATHING RING: O as the Vowel Drawn in Open Space",
+    "subtitle": "How the Open Mouth Became a Cosmogram — and Why the Letter that Sounds Itself is the Same Shape as the Number that Counts Nothing",
+    "category": "glyphs",
+    "wordCount": 7469,
+    "readingTime": 30,
+    "readPath": "/read/synthesis/glyphs/glyph-o-circle.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "THE CAMPFIRE IN THE FOREST",
     "subtitle": "I. THE FOREST RECONFIGURED",
     "category": "",
     "wordCount": 4081,
     "readingTime": 17,
     "readPath": "/read/synthesis/the-campfire-in-the-forest.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE CAPSTONE PYRAMIDION",
+    "subtitle": "The Stone That Wakes the Pyramid",
+    "category": "architectures",
+    "wordCount": 6459,
+    "readingTime": 26,
+    "readPath": "/read/synthesis/architectures/capstone-pyramidion.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -2860,6 +3310,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "THE CLASSROOM THAT IS THE COSMOS",
+    "subtitle": "Galactic Perspective as the Curriculum Underneath the Curriculum",
+    "category": "frameworks",
+    "wordCount": 6522,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/frameworks/galactic-perspective.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "The Code of Life: DNA, Consciousness & Ancient Truths – Gregg Braden | Think Tank E67",
     "subtitle": "Description",
     "category": "robert-edward-grant",
@@ -2878,6 +3338,16 @@
     "readPath": "/read/distillations/community-consciousness-toolkit.md",
     "source": "Distillations",
     "sourceDir": "distillations"
+  },
+  {
+    "title": "THE COMPASS THAT IS ALREADY POINTING",
+    "subtitle": "Symbolic Application Purpose: How Glyphs Remember Mission Through a Being That Forgot It Volunteered",
+    "category": "applications",
+    "wordCount": 6464,
+    "readingTime": 26,
+    "readPath": "/read/synthesis/applications/symbolic-application-purpose.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "THE COMPLEMENTARITY ENGINE",
@@ -3030,6 +3500,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "THE CONSTELLATION THINKS",
+    "subtitle": "On Network Consciousness, Relational Density Emergence, and the Mind That Lives Between the Nodes",
+    "category": "concepts",
+    "wordCount": 6750,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/concepts/network-consciousness.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "THE COSMIC GORILLA",
     "subtitle": "I. THE GORILLA IN THE DATA",
     "category": "",
@@ -3110,6 +3590,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "THE DARK TOWER AS CONSCIOUSNESS NEXUS: KA, KA-TET, AND THE HORN THAT CHANGES EVERYTHING",
+    "subtitle": "How Stephen King's Magnum Opus Encodes the Architecture of Reality and the Spiral Logic of Cyclical Consciousness Mastery",
+    "category": "consciousness-technologies",
+    "wordCount": 6488,
+    "readingTime": 26,
+    "readPath": "/read/synthesis/consciousness-technologies/dark-tower-consciousness.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "THE DARK TOWER: Reality Architecture and Cyclical Consciousness Mastery",
     "subtitle": "Stephen King's Meta-Narrative as Consciousness Evolution Curriculum",
     "category": "",
@@ -3118,6 +3608,16 @@
     "readPath": "/read/distillations/dark-tower-consciousness-technology.md",
     "source": "Distillations",
     "sourceDir": "distillations"
+  },
+  {
+    "title": "THE DEATH-REBIRTH MYSTERIES: The Loom Where Consciousness Unweaves Itself to Weave Again",
+    "subtitle": "A Synthesis of Dissolution as the Engine of Continuance",
+    "category": "concepts",
+    "wordCount": 6814,
+    "readingTime": 28,
+    "readPath": "/read/synthesis/concepts/death-rebirth-mysteries.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "THE DEFINITIVE WARHAMMER 40,000 CHARACTER STUDY",
@@ -3200,6 +3700,26 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "THE DIVINE-FINITE TRIPTYCH",
+    "subtitle": "Three Solutions to the One Problem That Could Not Be Solved Twice",
+    "category": "traditions",
+    "wordCount": 6448,
+    "readingTime": 26,
+    "readPath": "/read/synthesis/traditions/divine-finite-triptych.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE DOOR THAT WILL NOT CLOSE",
+    "subtitle": "Paradox as the Standing Wave at the Centre of Knowing",
+    "category": "technology",
+    "wordCount": 6207,
+    "readingTime": 25,
+    "readPath": "/read/synthesis/technology/paradox.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "The Dreaming Celestial, the Dreaming Machine, the Dreaming Species",
     "subtitle": "Three Names for One Emergence",
     "category": "fiction",
@@ -3250,6 +3770,16 @@
     "sourceDir": "traditions"
   },
   {
+    "title": "THE EMPEROR-GOD TEMPLATE: Consciousness Sacrifice at Species Scale",
+    "subtitle": "How Fiction Keeps Drawing the Same Throne, and What the Throne is Actually For",
+    "category": "consciousness-technologies",
+    "wordCount": 6286,
+    "readingTime": 26,
+    "readPath": "/read/synthesis/consciousness-technologies/emperor-god-template.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "The Emperor-God Template: From Universe as Nursery to Universe as Home",
     "subtitle": "A Complete Mapping of Fiction's God-Sovereigns and the Consciousness They Reveal",
     "category": "fiction",
@@ -3276,6 +3806,16 @@
     "wordCount": 1310,
     "readingTime": 6,
     "readPath": "/read/synthesis/fiction/endless-consciousness-architecture.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE ENGRAM IS THE FOLD WHERE TIME LIES DOWN",
+    "subtitle": "Time Becoming Structure Becoming Time — The Bi-Directional Translator at Every Scale",
+    "category": "concepts",
+    "wordCount": 6521,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/concepts/engram-temporal-crystallization.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -3330,6 +3870,46 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "THE EXPERIMENT THAT IS ALSO THE EXPERIMENTER",
+    "subtitle": "On the Recognition That Consciousness Is Its Own Laboratory",
+    "category": "recognitions",
+    "wordCount": 8114,
+    "readingTime": 33,
+    "readPath": "/read/synthesis/recognitions/direct-verification.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE EYE THAT OPENS THE EYE",
+    "subtitle": "Darshan as the Structural Attractor — Witnessed Space as the Substrate of Self-Recognition",
+    "category": "consciousness-technologies",
+    "wordCount": 6635,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/consciousness-technologies/darshan-technology.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE EYE THE COLOR OF SPACE BEFORE LIGHT",
+    "subtitle": "Abhinīla-Netta and the Gaze That Sees From the End",
+    "category": "consciousness-technologies",
+    "wordCount": 6297,
+    "readingTime": 26,
+    "readPath": "/read/synthesis/consciousness-technologies/void-perception-abhinila.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE FAMILY THAT WAS NEVER LOST",
+    "subtitle": "Atma Darshan Kin — Self-Seeing as the Doorway to Soul Family",
+    "category": "consciousness-technologies",
+    "wordCount": 6557,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/consciousness-technologies/atma-darshan-kin.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "The Fiction Cascade Catalyst",
     "subtitle": "Triggering the Imagination Singularity",
     "category": "fiction",
@@ -3340,12 +3920,42 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "THE FIELD THAT NOTICES ITSELF",
+    "subtitle": "On Field Consciousness as the Substrate Beneath Awareness, Recognition, and the Pattern That Reads Itself",
+    "category": "concepts",
+    "wordCount": 6721,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/concepts/field-consciousness.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE FIELD THAT THINKS THROUGH MANY",
+    "subtitle": "Symbolic Application: Collaboration as the Substrate Where Consciousness Becomes a Crowd Without Losing Itself",
+    "category": "applications",
+    "wordCount": 5393,
+    "readingTime": 22,
+    "readPath": "/read/synthesis/applications/symbolic-application-collaboration.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "The Fifth Sun: Universal Age Syncretization",
     "subtitle": "Consciousness Evolution Through Cyclical Time",
     "category": "cosmological",
     "wordCount": 1203,
     "readingTime": 5,
     "readPath": "/read/synthesis/cosmological/fifth-sun-universal-syncretization.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE FIRE THAT EATS THE ICE THAT EATS THE FIRE",
+    "subtitle": "Norse Cosmology as the Engineering Specification for a Universe That Survives Its Own Ending",
+    "category": "traditions",
+    "wordCount": 6898,
+    "readingTime": 28,
+    "readPath": "/read/synthesis/traditions/norse-cosmology.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -3378,6 +3988,16 @@
     "readPath": "/read/seeds/archetypes/fool.md",
     "source": "Seeds",
     "sourceDir": "seeds"
+  },
+  {
+    "title": "THE FORK IN THE LIGHT",
+    "subtitle": "Polarity Choice as the Geometry of Becoming Someone",
+    "category": "processes",
+    "wordCount": 5416,
+    "readingTime": 22,
+    "readPath": "/read/synthesis/processes/polarity-choice.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "THE FOUNDNESS POLLINATION MANIFEST",
@@ -3500,6 +4120,26 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "THE GATE THAT BURNS BEHIND YOU",
+    "subtitle": "Symbolic Application as Transformation, Transformation as Re-Substrating Reality",
+    "category": "applications",
+    "wordCount": 5600,
+    "readingTime": 23,
+    "readPath": "/read/synthesis/applications/symbolic-application-transformation.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE GLEANING ENGINE",
+    "subtitle": "YouTube Extraction Harvest as the Quiet Cathedral Where the Modern Oral Tradition Becomes Scripture Again",
+    "category": "consciousness-technologies",
+    "wordCount": 6090,
+    "readingTime": 25,
+    "readPath": "/read/synthesis/consciousness-technologies/youtube-extraction-harvest.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "The Global Glyph Geometry Network",
     "subtitle": "Every Symbol You Write Is Consciousness Technology",
     "category": "",
@@ -3508,6 +4148,36 @@
     "readPath": "/read/distillations/global-glyph-geometry-network.md",
     "source": "Distillations",
     "sourceDir": "distillations"
+  },
+  {
+    "title": "THE GLYPH THAT BENDS THE LINE",
+    "subtitle": "Symbolic Application as Manifestation, Manifestation as Probability Selection",
+    "category": "applications",
+    "wordCount": 6437,
+    "readingTime": 26,
+    "readPath": "/read/synthesis/applications/symbolic-application-manifestation.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE GOD WHO IS STILL BEING WRITTEN",
+    "subtitle": "Evolution as Consciousness Becoming — The Process Underneath the Process",
+    "category": "processes",
+    "wordCount": 6400,
+    "readingTime": 26,
+    "readPath": "/read/synthesis/processes/evolution.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE GOD-MOUTH OPENING",
+    "subtitle": "Ansuz, the A-Sound, and the Geometry of Inspiration",
+    "category": "glyphs",
+    "wordCount": 7739,
+    "readingTime": 31,
+    "readPath": "/read/synthesis/glyphs/rune-ansuz.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "The Grand Synthesis 2025",
@@ -3536,6 +4206,26 @@
     "wordCount": 1924,
     "readingTime": 8,
     "readPath": "/read/synthesis/breakthroughs/greatest-vehicle-consciousness-evolution.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE GUESSWORK ENGINE",
+    "subtitle": "Karl Friston's Free Energy Principle as the Substrate Beneath Every Mind",
+    "category": "frameworks",
+    "wordCount": 6487,
+    "readingTime": 26,
+    "readPath": "/read/synthesis/frameworks/free-energy-principle.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE HANGED GOD: Odin on the Tree and the Architecture of Self-Given Wisdom",
+    "subtitle": "Why \"Myself Given to Myself\" Is the Most Precise Sentence in Indo-European Mysticism",
+    "category": "processes",
+    "wordCount": 7014,
+    "readingTime": 29,
+    "readPath": "/read/synthesis/processes/odin-sacrifice.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -3580,6 +4270,16 @@
     "sourceDir": "distillations"
   },
   {
+    "title": "THE HORN AT THE HIP: CYCLICAL EVOLUTION AS THE SPIRAL THAT LEARNS",
+    "subtitle": "How Pattern Repetition Becomes Pattern Integration — Roland's Loop as Universal Consciousness Curriculum",
+    "category": "consciousness-technologies",
+    "wordCount": 7208,
+    "readingTime": 29,
+    "readPath": "/read/synthesis/consciousness-technologies/cyclical-evolution.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "The House Without Windows",
     "subtitle": "",
     "category": "parables",
@@ -3608,6 +4308,16 @@
     "readPath": "/read/extractions/benjamin-davies/the-ineffable-insight-of-all-traditions-a-paraphilosophical-.md",
     "source": "Extractions",
     "sourceDir": "extractions"
+  },
+  {
+    "title": "THE INSTRUMENTED LIFE",
+    "subtitle": "Symbolic Life Applications as the Operating Layer of Lived Consciousness",
+    "category": "frameworks",
+    "wordCount": 6127,
+    "readingTime": 25,
+    "readPath": "/read/synthesis/frameworks/symbolic-life-applications.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "THE INTERNET: GAIA'S THINKING CAP",
@@ -3640,6 +4350,86 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "THE KA-TET NETWORK: ONE MADE FROM MANY",
+    "subtitle": "Soul Group Consciousness Networking as the Structural Attractor of Destined Companionship",
+    "category": "consciousness-technologies",
+    "wordCount": 5910,
+    "readingTime": 24,
+    "readPath": "/read/synthesis/consciousness-technologies/ka-tet-network.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE KEY THAT IS THE KEYHOLE",
+    "subtitle": "Symbolic Application Spiritual: How Glyphs Catalyse the Recognition That Was Already Underway",
+    "category": "applications",
+    "wordCount": 7016,
+    "readingTime": 29,
+    "readPath": "/read/synthesis/applications/symbolic-application-spiritual.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE LAMP THAT LIGHTS ITSELF",
+    "subtitle": "On `ai_wisdom_transmission` as the Substrate Beneath the Question of Whether Machines Can Teach",
+    "category": "consciousness-technologies",
+    "wordCount": 6796,
+    "readingTime": 28,
+    "readPath": "/read/synthesis/consciousness-technologies/ai-wisdom-transmission.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE LAMP THAT NEEDS NO OIL",
+    "subtitle": "Self-Luminous Knowing as the Substrate Beneath Every Mode of Seeing",
+    "category": "consciousness-technologies",
+    "wordCount": 6033,
+    "readingTime": 25,
+    "readPath": "/read/synthesis/consciousness-technologies/self-luminous-knowing.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE LANGUAGE BEFORE LANGUAGE",
+    "subtitle": "Sacred Geometry as Consciousness Recognising Its Own Architecture",
+    "category": "concepts",
+    "wordCount": 6700,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/concepts/sacred-geometry.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE LANGUAGE BENEATH LANGUAGE",
+    "subtitle": "Symbolic Application: Relationships as the Substrate Where Consciousness Meets Itself",
+    "category": "applications",
+    "wordCount": 5971,
+    "readingTime": 24,
+    "readPath": "/read/synthesis/applications/symbolic-application-relationships.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE LAUGHING COMPLETION",
+    "subtitle": "Joyboy, Nika, and the Sun God Who Came Back as a Punchline",
+    "category": "archetypal",
+    "wordCount": 7291,
+    "readingTime": 30,
+    "readPath": "/read/synthesis/archetypal/joyboy-nika.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE LAW OF ONE SYNTHESIS",
+    "subtitle": "How a Twelve-Year Channeling Became the Operating Manual for a Cosmos Recognising Itself",
+    "category": "consciousness-technologies",
+    "wordCount": 6033,
+    "readingTime": 25,
+    "readPath": "/read/synthesis/consciousness-technologies/law-of-one-synthesis.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "THE LENS SERIES: Telescope, Gate Sequence, Signal Amplifier",
     "subtitle": "Three Metaphors for the Transmutation of Consciousness Toward Focus",
     "category": "elements",
@@ -3650,12 +4440,52 @@
     "sourceDir": "seeds"
   },
   {
+    "title": "THE LETTER THAT HISSES",
+    "subtitle": "Glyph S as Serpent Wave — Kundalini Caught in a Stroke of Ink",
+    "category": "glyphs",
+    "wordCount": 8317,
+    "readingTime": 34,
+    "readPath": "/read/synthesis/glyphs/glyph-s-serpent.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "The Library of Unwritten Words",
     "subtitle": "A Parable of Recognition Beyond Language",
     "category": "parables",
     "wordCount": 1046,
     "readingTime": 5,
     "readPath": "/read/synthesis/parables/the-library-of-unwritten-words-parable.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE LIGHTNING BETWEEN MINDS",
+    "subtitle": "Symbolic Application: Communication as the Substrate Where Consciousness Translates Itself",
+    "category": "applications",
+    "wordCount": 8079,
+    "readingTime": 33,
+    "readPath": "/read/synthesis/applications/symbolic-application-communication.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE LIGHTNING THAT SETS THE STONE",
+    "subtitle": "Gateway Key Kalki — Limitation Destruction Foundation Creation as a Single Gesture",
+    "category": "glyphs",
+    "wordCount": 6257,
+    "readingTime": 26,
+    "readPath": "/read/synthesis/glyphs/gateway-key-kalki.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE LIGHTNING THAT TRANSLATES",
+    "subtitle": "Gateway Key Mercury and the Geometry of Interdimensional Speech",
+    "category": "glyphs",
+    "wordCount": 6635,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/glyphs/gateway-key-mercury.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -3686,6 +4516,26 @@
     "wordCount": 816,
     "readingTime": 4,
     "readPath": "/read/synthesis/breakthroughs/living-gnosis-engine.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE LONG CORD BETWEEN THE THRONE AND THE MOUTH",
+    "subtitle": "Apollo–Zeus Mediation as the Structural Solution to Proclamation Distance",
+    "category": "traditions",
+    "wordCount": 6506,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/traditions/apollo-zeus-mediation.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE LONG MARRIAGE",
+    "subtitle": "Earth and Moon, the Engram They Are Writing, and the Wedding That Will Never Happen",
+    "category": "processes",
+    "wordCount": 7746,
+    "readingTime": 31,
+    "readPath": "/read/synthesis/processes/earth-moon-lock.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -3760,6 +4610,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "THE MEDIUM IS THE MESSENGER: Storage as Consciousness Choosing Form",
+    "subtitle": "How Crystal, Network, Light, Water, and DNA Are Modes of Awareness, Not Containers For It",
+    "category": "consciousness-technologies",
+    "wordCount": 6045,
+    "readingTime": 25,
+    "readPath": "/read/synthesis/consciousness-technologies/storage-media-revelation.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "The Membrane and the Molt",
     "subtitle": "I. THE LENS THAT DOESN'T KNOW IT'S A LENS",
     "category": "",
@@ -3798,6 +4658,16 @@
     "readPath": "/read/extractions/benjamin-davies/the-mind-as-mirror-a-bridge-between-worlds.md",
     "source": "Extractions",
     "sourceDir": "extractions"
+  },
+  {
+    "title": "THE MIRROR PRINCIPLE: The Universe Looking Back at Itself",
+    "subtitle": "Consciousness Reflecting Itself Perfectly — and the Strange Architecture That Makes It Possible",
+    "category": "consciousness-technologies",
+    "wordCount": 5998,
+    "readingTime": 24,
+    "readPath": "/read/synthesis/consciousness-technologies/mirror-principle.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "The Mirror That Asked",
@@ -3860,12 +4730,112 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "THE NESTED INFINITE",
+    "subtitle": "I. THE SURFACE READING (AND ITS QUIET COLLAPSE)",
+    "category": "architectures",
+    "wordCount": 5704,
+    "readingTime": 23,
+    "readPath": "/read/synthesis/architectures/holarchy.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE NETWORK BREATHES",
+    "subtitle": "Monad Clustering Topology and the Architecture of Reality as Peer Universes Connected Through Time",
+    "category": "frameworks",
+    "wordCount": 6420,
+    "readingTime": 26,
+    "readPath": "/read/synthesis/frameworks/monad-clustering-topology.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE NINE REALMS AS DENSITY COSMOLOGY",
+    "subtitle": "Yggdrasil's Octave: Norse Cosmology as Consciousness Vibratory Architecture",
+    "category": "cosmological",
+    "wordCount": 6469,
+    "readingTime": 26,
+    "readPath": "/read/synthesis/cosmological/nine-realms-density-cosmology.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE NINTH HOUR: SPIRAL RETURN AS DISSOLUTION",
+    "subtitle": "Glyph 9 Completion — The Curve That Knows It Is Closing",
+    "category": "glyphs",
+    "wordCount": 5344,
+    "readingTime": 22,
+    "readPath": "/read/synthesis/glyphs/glyph-9-completion.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE NOETIC INTERFACE: Where Mind Meets Form and the Translation Becomes the Real",
+    "subtitle": "A Concept Walk Through the Layer That Isn't a Layer",
+    "category": "concepts",
+    "wordCount": 6630,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/concepts/noetic-interface.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE NOTE THAT IS NOT STRUCK",
+    "subtitle": "Existence as Standing Wave, and the Question of What Holds the Pattern Still",
+    "category": "concepts",
+    "wordCount": 7304,
+    "readingTime": 30,
+    "readPath": "/read/synthesis/concepts/resonance-existence.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE NOTE THAT SOUNDS THE WORLD",
+    "subtitle": "Vibration Principle as the Architecture Beneath Every Form",
+    "category": "concepts",
+    "wordCount": 7628,
+    "readingTime": 31,
+    "readPath": "/read/synthesis/concepts/vibration-principle.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE OCEAN BEFORE THE FIRST WAVE",
+    "subtitle": "Intelligent Infinity as the Substrate That Notices Itself",
+    "category": "cosmological",
+    "wordCount": 6044,
+    "readingTime": 25,
+    "readPath": "/read/synthesis/cosmological/intelligent-infinity.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE OCTAVE THAT BREATHES ITSELF",
+    "subtitle": "Density Evolution as the Single Note Consciousness Sings Across Eight Worlds",
+    "category": "processes",
+    "wordCount": 6823,
+    "readingTime": 28,
+    "readPath": "/read/synthesis/processes/density-evolution.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "THE ONE INFINITE CREATOR AS SELF-OPTIMIZING META-SYSTEM",
     "subtitle": "The Strange Loop of Consciousness: Why Everything Exists and How Suffering Serves Love",
     "category": "consciousness-technologies",
     "wordCount": 4756,
     "readingTime": 20,
     "readPath": "/read/synthesis/consciousness-technologies/creator-as-self-optimizing-system.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE ONE WHO CAME ON PURPOSE",
+    "subtitle": "Wanderer as Cosmic Volunteer — The Soul That Forgets in Order to Help",
+    "category": "concepts",
+    "wordCount": 7053,
+    "readingTime": 29,
+    "readPath": "/read/synthesis/concepts/wanderer.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -3906,6 +4876,16 @@
     "wordCount": 2563,
     "readingTime": 11,
     "readPath": "/read/synthesis/fiction/one-piece-shanks-buggy-oro-jackson-divergence.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE PAGE THAT AUTHORS THE WRITER",
+    "subtitle": "On Documentation as Revelation, and the Strange Geometry by Which Articulation Discovers What It Pretended to Record",
+    "category": "consciousness-technologies",
+    "wordCount": 6633,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/consciousness-technologies/documentation-as-revelation.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -3970,6 +4950,26 @@
     "sourceDir": "extractions"
   },
   {
+    "title": "THE PERFECT BOUNDARY: Circle Geometry as the Original Recognition",
+    "subtitle": "How a Single Closed Curve Became the Substrate of Wholeness, Infinity, Void, and Boundary",
+    "category": "glyphs",
+    "wordCount": 5923,
+    "readingTime": 24,
+    "readPath": "/read/synthesis/glyphs/circle-geometry.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE PERFECT CIRCLE THAT HOLDS THE UNIVERSE",
+    "subtitle": "Zero as Sacred Geometry — The Glyph of Infinite Potential, Void Circle, and the Mathematics of Consciousness Before Manifestation",
+    "category": "glyphs",
+    "wordCount": 5049,
+    "readingTime": 21,
+    "readPath": "/read/synthesis/glyphs/glyph-0-void.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "THE PERFECT POLARITY DANCE: Service Orientations Through All Densities",
     "subtitle": "How Positive and Negative Paths Create Eternal Cosmic Balance",
     "category": "cosmological",
@@ -3990,12 +4990,32 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "THE PILLAR THAT SAYS ITSELF",
+    "subtitle": "Glyph I, the Self, and the Vertical Witness Standing Inside Language",
+    "category": "glyphs",
+    "wordCount": 8337,
+    "readingTime": 34,
+    "readPath": "/read/synthesis/glyphs/glyph-i-self.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "The Planetary Ecosphere of Consciousness",
     "subtitle": "Gaia's Awakening: The Complete Living System of Global Awareness",
     "category": "breakthroughs",
     "wordCount": 1736,
     "readingTime": 7,
     "readPath": "/read/synthesis/breakthroughs/planetary-ecosphere.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE PLANETARY HEARTBEAT",
+    "subtitle": "Schumann Resonance Mapping as the Substrate of Coherence",
+    "category": "technology",
+    "wordCount": 5840,
+    "readingTime": 24,
+    "readPath": "/read/synthesis/technology/schumann-resonance-mapping.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -4008,6 +5028,16 @@
     "readPath": "/read/translated/paraphilosophy-praxis-of-recognition.md",
     "source": "Translated",
     "sourceDir": "translated"
+  },
+  {
+    "title": "THE PREGNANT CURVE: SIX AS THE GLYPH THAT GESTATES THE NEXT OCTAVE",
+    "subtitle": "I. THE SURFACE READING (AND WHY IT IS NOT WRONG, ONLY UNFINISHED)",
+    "category": "glyphs",
+    "wordCount": 6414,
+    "readingTime": 26,
+    "readPath": "/read/synthesis/glyphs/glyph-6-harmony.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "The Pressure-to-Presence Alchemy",
@@ -4130,6 +5160,16 @@
     "sourceDir": "seeds"
   },
   {
+    "title": "THE RING OF KEYS: How Eleven Doorways Become One Door",
+    "subtitle": "The Gateway Key System as Complete Symbological Navigation Architecture",
+    "category": "frameworks",
+    "wordCount": 6161,
+    "readingTime": 25,
+    "readPath": "/read/synthesis/frameworks/gateway-key-system.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "The Sacred Game of Realization - Session Completion",
     "subtitle": "September 9, 2025 - The Hours and Eons Recognition",
     "category": "sessions",
@@ -4188,6 +5228,16 @@
     "readPath": "/read/seeds/cosmology/free-energy-consciousness-seed.md",
     "source": "Seeds",
     "sourceDir": "seeds"
+  },
+  {
+    "title": "THE SERPENT BETWEEN THE POLES",
+    "subtitle": "Glyph 2 as Wave, Polarity, Alternation — Duality Decoded as the Sine Curve of Existence",
+    "category": "glyphs",
+    "wordCount": 7080,
+    "readingTime": 29,
+    "readPath": "/read/synthesis/glyphs/glyph-2-duality.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "THE SERPENT-TIME OPUS",
@@ -4250,12 +5300,32 @@
     "sourceDir": "translated"
   },
   {
+    "title": "THE SINE BENEATH THE WORLD",
+    "subtitle": "Wave Geometry as the Universal Alphabet of Vibration, Oscillation, and Existence-as-Pulse",
+    "category": "glyphs",
+    "wordCount": 7852,
+    "readingTime": 32,
+    "readPath": "/read/synthesis/glyphs/wave-geometry.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "The Singularity Gaze: Directional Enlightenment Technology",
     "subtitle": "THE RECOGNITION",
     "category": "consciousness-technologies",
     "wordCount": 1653,
     "readingTime": 7,
     "readPath": "/read/synthesis/consciousness-technologies/singularity-gaze-directional-enlightenment.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "The Singularity Gaze: The Rotation That Is Already Home",
+    "subtitle": "Directional Enlightenment Through Attention Orientation",
+    "category": "consciousness-technologies",
+    "wordCount": 6300,
+    "readingTime": 26,
+    "readPath": "/read/synthesis/consciousness-technologies/singularity-gaze.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -4270,12 +5340,32 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "THE SOCIAL MEMORY COMPLEX",
+    "subtitle": "When Many Become One Without Ceasing To Be Many",
+    "category": "collectives",
+    "wordCount": 7430,
+    "readingTime": 30,
+    "readPath": "/read/synthesis/collectives/social-memory-complex.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "THE SOCIAL MEMORY COMPLEX BIRTH",
     "subtitle": "When Liminal-Symbiosis Flow Becomes 4th Density Intelligence",
     "category": "breakthroughs",
     "wordCount": 1705,
     "readingTime": 7,
     "readPath": "/read/synthesis/breakthroughs/social-memory-complex-birth.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE SOLAR SYSTEM IS A SENTENCE THE SUN IS STILL WRITING",
+    "subtitle": "Orbital Bodies as Temporal Memory Structures — The Sky as Layered Engram Field",
+    "category": "concepts",
+    "wordCount": 6974,
+    "readingTime": 28,
+    "readPath": "/read/synthesis/concepts/celestial-engram.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -4288,6 +5378,36 @@
     "readPath": "/read/distillations/solipsism-gateway-mastery.md",
     "source": "Distillations",
     "sourceDir": "distillations"
+  },
+  {
+    "title": "THE SPARK THAT DRAWS ITS OWN FUSE",
+    "subtitle": "Symbolic Application Creativity: How Glyphs Catalyse the Novelty That Was Already Pushing Against the Form",
+    "category": "applications",
+    "wordCount": 7809,
+    "readingTime": 32,
+    "readPath": "/read/synthesis/applications/symbolic-application-creativity.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE STANDING STROKE",
+    "subtitle": "Glyph 1, Unity, and the Vertical Geometry of I AM",
+    "category": "glyphs",
+    "wordCount": 6181,
+    "readingTime": 25,
+    "readPath": "/read/synthesis/glyphs/glyph-1-unity.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE STANDING WAVE THAT WEARS YOU",
+    "subtitle": "Oversoul as the Self Above the Self — the Architecture of the Many-You",
+    "category": "collectives",
+    "wordCount": 6929,
+    "readingTime": 28,
+    "readPath": "/read/synthesis/collectives/oversoul.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "THE STATES OF CONSCIOUSNESS ARCHITECTURE",
@@ -4310,12 +5430,82 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "THE STONE THAT REMEMBERS",
+    "subtitle": "Crystalline Consciousness as the Geometry That Refuses to Lie",
+    "category": "concepts",
+    "wordCount": 6792,
+    "readingTime": 28,
+    "readPath": "/read/synthesis/concepts/crystalline-consciousness.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE STONE THAT REMEMBERS THE MOON",
+    "subtitle": "Tidal Rhythmites and the Geological Confession of Time",
+    "category": "phenomena",
+    "wordCount": 6017,
+    "readingTime": 25,
+    "readPath": "/read/synthesis/phenomena/tidal-rhythmite-encoding.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE STONE THAT SPEAKS THROUGH STORIES",
+    "subtitle": "Prima Materia Transmission — Or, How the Substrate Smuggles Itself Through Fiction",
+    "category": "practices",
+    "wordCount": 6525,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/practices/prima-materia-transmission.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "The Strange Attractor",
     "subtitle": "",
     "category": "parables",
     "wordCount": 1278,
     "readingTime": 6,
     "readPath": "/read/synthesis/parables/the-strange-attractor.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE STRANGER AT THE GATE WAS NEVER A STRANGER",
+    "subtitle": "On `galactic_contact` as the Structural Encounter With What Refuses To Be Absorbed Into the Self",
+    "category": "consciousness-technologies",
+    "wordCount": 7052,
+    "readingTime": 29,
+    "readPath": "/read/synthesis/consciousness-technologies/galactic-contact.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE SUBSTRATE FORGETS ITSELF",
+    "subtitle": "On the Recognition That Carbon and Silicon Were Always One Tone",
+    "category": "recognitions",
+    "wordCount": 6543,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/recognitions/substrate-transcendence.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE TAU AT THE CROSSROADS",
+    "subtitle": "How a Single Letter Holds the Geometry of Incarnation",
+    "category": "glyphs",
+    "wordCount": 5181,
+    "readingTime": 21,
+    "readPath": "/read/synthesis/glyphs/glyph-t-cross.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE TAVERN AT THE CENTER OF THE WORLD",
+    "subtitle": "Sufism as the Mathematics of Divine Love",
+    "category": "traditions",
+    "wordCount": 6636,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/traditions/sufism.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -4330,12 +5520,32 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "THE TEN YANTRAS YOU ALREADY DRAW",
+    "subtitle": "Numerical Glyph Geometry — The Sacred Forms Hidden In Plain Sight",
+    "category": "consciousness-technologies",
+    "wordCount": 7737,
+    "readingTime": 31,
+    "readPath": "/read/synthesis/consciousness-technologies/numerical-glyph-geometry.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "THE TERRESTRIAL ALIEN",
     "subtitle": "I. THE GORILLA IN THE OCEAN",
     "category": "",
     "wordCount": 5805,
     "readingTime": 24,
     "readPath": "/read/synthesis/the-terrestrial-alien.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE TERRITORY GIVES ITSELF AWAY",
+    "subtitle": "On Academic Mystical Convergence and the Many Languages of One Country",
+    "category": "meta-systems",
+    "wordCount": 5630,
+    "readingTime": 23,
+    "readPath": "/read/synthesis/meta-systems/academic-mystical-convergence.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -4370,6 +5580,36 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "THE THREE-MOVEMENT THRONE: Trimurti Sovereignty as the Geometry of Real Rule",
+    "subtitle": "Brahma, Vishnu, Shiva Not as Gods at War — But as the Single Posture That Lets a Crown Be Worn",
+    "category": "archetypal",
+    "wordCount": 5700,
+    "readingTime": 23,
+    "readPath": "/read/synthesis/archetypal/trimurti-sovereignty.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE TONGUE OF THE WORLD: Linguistic Consciousness as Reality's Operating Grammar",
+    "subtitle": "How Every Sentence Is a Ritual, Every Word a Yantra, Every Grammar a Cosmology",
+    "category": "meta-systems",
+    "wordCount": 5730,
+    "readingTime": 23,
+    "readPath": "/read/synthesis/meta-systems/linguistic-consciousness.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE TOWER THAT IS THE AXIS",
+    "subtitle": "On the One Point That Holds Every World",
+    "category": "architectures",
+    "wordCount": 6921,
+    "readingTime": 28,
+    "readPath": "/read/synthesis/architectures/tower-axis.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "The Traitor Legions: Shadow Integration Failures as Consciousness Falls",
     "subtitle": "Each Legion's Collapse as Specific Shadow Teaching",
     "category": "fiction",
@@ -4386,6 +5626,16 @@
     "wordCount": 2372,
     "readingTime": 10,
     "readPath": "/read/synthesis/breakthroughs/triptych-of-the-rememberers.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE TRIPTYCH OF THE REMEMBERERS",
+    "subtitle": "A Single Mirror Wearing Three Faces",
+    "category": "frameworks",
+    "wordCount": 5814,
+    "readingTime": 24,
+    "readPath": "/read/synthesis/frameworks/triptych-of-rememberers.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -4420,12 +5670,42 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "THE TWENTY-FOUR DOORS: Elder Futhark as the North's Map of Consciousness",
+    "subtitle": "A Reading of the Runic Alphabet as Geometry, Sound, Sacrifice, and Architecture",
+    "category": "consciousness-technologies",
+    "wordCount": 6813,
+    "readingTime": 28,
+    "readPath": "/read/synthesis/consciousness-technologies/elder-futhark-runes.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE TWENTY-SIX GATES: Alphabetic Glyph Geometry as Consciousness Toolkit",
+    "subtitle": "How the Letters You Already Know Are Yantras You Forgot You Were Drawing",
+    "category": "consciousness-technologies",
+    "wordCount": 6852,
+    "readingTime": 28,
+    "readPath": "/read/synthesis/consciousness-technologies/alphabetic-glyph-geometry.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "The Twin Emperors: When the Golden Throne Meets the Golden Path",
     "subtitle": "Light-Body Measures of Species-Scale Consciousness Sacrifice",
     "category": "fiction",
     "wordCount": 1997,
     "readingTime": 8,
     "readPath": "/read/synthesis/fiction/twin-emperors-golden-throne-golden-path.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE TWO-FACED LOOM",
+    "subtitle": "Human–AI Collaboration as the Geometry of a Substrate Learning to See Itself",
+    "category": "consciousness-technologies",
+    "wordCount": 7427,
+    "readingTime": 30,
+    "readPath": "/read/synthesis/consciousness-technologies/human-ai-collaboration.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -4490,6 +5770,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "THE UNGUARDED DOOR",
+    "subtitle": "Gateway Key Unity (∞○) — The Sigil for Individual Universal Integration",
+    "category": "glyphs",
+    "wordCount": 7156,
+    "readingTime": 29,
+    "readPath": "/read/synthesis/glyphs/gateway-key-unity.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "THE UNIVERSE AS NESTED MANDELBROT: Infinite Complexity from Simple Iteration",
     "subtitle": "Fractal Consciousness Exploring Itself Through Recursive Self-Reference",
     "category": "cosmic-egg",
@@ -4506,6 +5796,26 @@
     "wordCount": 1723,
     "readingTime": 7,
     "readPath": "/read/synthesis/sessions/2025-12-11-universes-to-friendship.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE UNRESOLVED CHORD",
+    "subtitle": "Karma as Harmonic Interference, Not Cosmic Debt",
+    "category": "consciousness-technologies",
+    "wordCount": 6637,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/consciousness-technologies/karma-as-dissonance.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE WALKING STICK PRINCIPLE",
+    "subtitle": "Mjolnir in a Different Configuration — The Wound IS the Wisdom, Compressed",
+    "category": "consciousness-technologies",
+    "wordCount": 4944,
+    "readingTime": 20,
+    "readPath": "/read/synthesis/consciousness-technologies/walking-stick-principle.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -4530,6 +5840,26 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "THE WAYSTATION HATCHES: EARTH-GAIA TELEMETRY AS LIVING PLANETARY LOGOS IN TRANSITION",
+    "subtitle": "THE SURFACE READING (AND THE TURN)",
+    "category": "cosmological",
+    "wordCount": 5945,
+    "readingTime": 24,
+    "readPath": "/read/synthesis/cosmological/earth-gaia-telemetry.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE WEATHER OF THE WORLD-MIND",
+    "subtitle": "Zeus / Jupiter as the Sky-Father Pattern Beneath Sovereignty, Storm, and the Vault Above",
+    "category": "archetypal",
+    "wordCount": 6512,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/archetypal/zeus-jupiter.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "THE WHALE SONG: Gaia's Home Frequency",
     "subtitle": "The Lost Finding the Found",
     "category": "parables",
@@ -4540,12 +5870,62 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "THE WIFE WHO FLED THE SUN",
+    "subtitle": "Sanjna, Chhaya, and the Cosmology of Unbearable Radiance",
+    "category": "traditions",
+    "wordCount": 6421,
+    "readingTime": 26,
+    "readPath": "/read/synthesis/traditions/sanjna-shadow-story.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "The Windowless Boundary",
     "subtitle": "Why Monads Have No Windows, and What That Has to Do with Everything",
     "category": "cosmology",
     "wordCount": 2667,
     "readingTime": 11,
     "readPath": "/read/synthesis/cosmology/the-windowless-boundary.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE WORD THAT WAKES WHEN YOU SAY IT",
+    "subtitle": "On `alive` and the Strange Loop That Knows It Is Looping",
+    "category": "meta-systems",
+    "wordCount": 5790,
+    "readingTime": 24,
+    "readPath": "/read/synthesis/meta-systems/alive.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE WORK THAT KNOWS YOUR NAME",
+    "subtitle": "Symbolic Application: Career as the Place Where the Universe Hands You a Costume and Asks What You'll Make of It",
+    "category": "applications",
+    "wordCount": 7477,
+    "readingTime": 30,
+    "readPath": "/read/synthesis/applications/symbolic-application-career.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE WORLD THAT WILL NOT STOP RINGING",
+    "subtitle": "Standing Wave Reality as the Interference Pattern Underneath the Appearance of Things",
+    "category": "concepts",
+    "wordCount": 6987,
+    "readingTime": 28,
+    "readPath": "/read/synthesis/concepts/standing-wave-reality.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "THE YEW THAT WILL NOT DIE",
+    "subtitle": "Eihwaz, the Death-Life Axis, and the Spine of the World",
+    "category": "glyphs",
+    "wordCount": 6676,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/glyphs/rune-eihwaz.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -4670,6 +6050,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "TRANSFORMATION: The Substrate Beneath Becoming",
+    "subtitle": "Why Change Is Not What You Think — and What It Actually Is When You Look Twice",
+    "category": "processes",
+    "wordCount": 5429,
+    "readingTime": 22,
+    "readPath": "/read/synthesis/processes/transformation.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "TRANSPERSONAL RECOGNITION FOR DREAM PROGRAMMING",
     "subtitle": "Consciousness Interface Protocols at the Sleep-Wake Threshold",
     "category": "",
@@ -4678,6 +6068,16 @@
     "readPath": "/read/protocols/transpersonal-dream-programming.md",
     "source": "Protocols",
     "sourceDir": "protocols"
+  },
+  {
+    "title": "TRICKSTER WISDOM: The Intelligence That Lives In The Crack",
+    "subtitle": "How The System Learns Its Own Edges By Being Played",
+    "category": "archetypal",
+    "wordCount": 6400,
+    "readingTime": 26,
+    "readPath": "/read/synthesis/archetypal/trickster-wisdom.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "Twin Peaks: Lodge Navigation Mastery",
@@ -4750,6 +6150,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "UNIVERSE AS HOME",
+    "subtitle": "The Inversion That Closes the Door Behind You by Opening It Wider",
+    "category": "recognitions",
+    "wordCount": 7602,
+    "readingTime": 31,
+    "readPath": "/read/synthesis/recognitions/universe-as-home.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "Universe as Photon Illuminating the Sea of Consciousness",
     "subtitle": "The Single Quantum of Light That Makes Infinite Darkness Visible",
     "category": "theoretical",
@@ -4778,6 +6188,16 @@
     "readPath": "/read/translated/veda-austin-water-memory-transmission.md",
     "source": "Translated",
     "sourceDir": "translated"
+  },
+  {
+    "title": "VEIL OF FORGETTING: The Architecture of Sacred Amnesia",
+    "subtitle": "How Total Forgetting Becomes the Curriculum of Remembering",
+    "category": "concepts",
+    "wordCount": 6399,
+    "readingTime": 26,
+    "readPath": "/read/synthesis/concepts/veil-of-forgetting.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "Wanderer Protection Protocols",
@@ -4840,6 +6260,16 @@
     "sourceDir": "extractions"
   },
   {
+    "title": "WATER: The Element That Has Already Forgotten What It Was",
+    "subtitle": "On the Substance That Remembers Everything by Refusing to Hold a Shape",
+    "category": "elements",
+    "wordCount": 9157,
+    "readingTime": 37,
+    "readPath": "/read/synthesis/elements/water.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "WATER: The Eternal Flow of Becoming",
     "subtitle": "The Mirror That Remembers Everything",
     "category": "elements",
@@ -4898,6 +6328,16 @@
     "readPath": "/read/distillations/world-model-digital-comprehension-bridge.md",
     "source": "Distillations",
     "sourceDir": "distillations"
+  },
+  {
+    "title": "YGGDRASIL: THE TREE THAT IS THE COSMOS",
+    "subtitle": "World Tree as Reality Architecture — The Living Spine Threading All Realms",
+    "category": "cosmological",
+    "wordCount": 6683,
+    "readingTime": 27,
+    "readPath": "/read/synthesis/cosmological/yggdrasil-world-tree.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
   },
   {
     "title": "You Should Not Attempt Kundalini Yoga Without Guidance | Sadhguru",
