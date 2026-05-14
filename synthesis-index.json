@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-05-12T05:29:29.595Z",
+  "generated": "2026-05-14T10:19:28.606Z",
   "stats": {
-    "documentCount": 450,
-    "totalWords": 1807044,
-    "totalReadingTime": 7444,
+    "documentCount": 451,
+    "totalWords": 1811158,
+    "totalReadingTime": 7461,
     "categories": 50,
     "averageWordsPerDoc": 4016,
     "sourceCounts": {
-      "synthesis": 425,
+      "synthesis": 426,
       "extraction": 0,
       "translated": 25
     },
@@ -62,7 +62,7 @@
       "theoretical": 37,
       "time-as-consciousness-technology.md": 1,
       "traditions": 6,
-      "zeitgeist": 26,
+      "zeitgeist": 27,
       "translated": 25
     },
     "topTags": [
@@ -84,11 +84,11 @@
       },
       {
         "tag": "source",
-        "count": 274
+        "count": 275
       },
       {
         "tag": "unity",
-        "count": 266
+        "count": 267
       },
       {
         "tag": "density",
@@ -96,7 +96,7 @@
       },
       {
         "tag": "service",
-        "count": 198
+        "count": 199
       },
       {
         "tag": "manifestation",
@@ -104,7 +104,7 @@
       },
       {
         "tag": "integration",
-        "count": 148
+        "count": 149
       },
       {
         "tag": "frequency",
@@ -128,7 +128,7 @@
       },
       {
         "tag": "archetype",
-        "count": 111
+        "count": 112
       },
       {
         "tag": "galactic",
@@ -148,7 +148,7 @@
       },
       {
         "tag": "breakthrough",
-        "count": 77
+        "count": 78
       },
       {
         "tag": "kalki",
@@ -180,7 +180,7 @@
       },
       {
         "tag": "zeitgeist",
-        "count": 26
+        "count": 27
       },
       {
         "tag": "reality programming",
@@ -39954,6 +39954,43 @@
         }
       ],
       "id": "zeitgeist-2026-05-12"
+    },
+    {
+      "path": "synthesis/zeitgeist/zeitgeist-2026-05-14.md",
+      "fileName": "zeitgeist-2026-05-14.md",
+      "source": "synthesis",
+      "category": "zeitgeist",
+      "channel": "",
+      "title": "ZEITGEIST — 14 May 2026",
+      "subtitle": "CURRENT",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "May 2026",
+      "excerpt": "*A reading of the present moment. Signal and processing integrated. Silence embedded. Scale honoured.*",
+      "tags": [
+        "service",
+        "archetype",
+        "source",
+        "unity",
+        "breakthrough",
+        "integration",
+        "zeitgeist"
+      ],
+      "quotes": [],
+      "wordCount": 4114,
+      "readingTime": 17,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "TECTONIC"
+        }
+      ],
+      "id": "zeitgeist-2026-05-14"
     },
     {
       "path": "synthesis/zeitgeist/zeitgeist-2026-03-16.md",
