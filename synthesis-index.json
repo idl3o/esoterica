@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-06-01T07:47:07.040Z",
+  "generated": "2026-06-04T11:24:43.136Z",
   "stats": {
-    "documentCount": 452,
-    "totalWords": 1813819,
-    "totalReadingTime": 7472,
+    "documentCount": 454,
+    "totalWords": 1820275,
+    "totalReadingTime": 7499,
     "categories": 50,
-    "averageWordsPerDoc": 4013,
+    "averageWordsPerDoc": 4009,
     "sourceCounts": {
-      "synthesis": 427,
+      "synthesis": 429,
       "extraction": 0,
       "translated": 25
     },
@@ -33,7 +33,7 @@
       "fiction": 50,
       "foam-beneath-the-form.md": 1,
       "frameworks": 6,
-      "galactic-perspectives": 2,
+      "galactic-perspectives": 3,
       "glyphs": 17,
       "information-architecture-consciousness-technology.md": 1,
       "manual-of-ascendance-transcendence.md": 1,
@@ -62,17 +62,17 @@
       "theoretical": 37,
       "time-as-consciousness-technology.md": 1,
       "traditions": 6,
-      "zeitgeist": 28,
+      "zeitgeist": 29,
       "translated": 25
     },
     "topTags": [
       {
         "tag": "consciousness",
-        "count": 434
+        "count": 435
       },
       {
         "tag": "recognition",
-        "count": 414
+        "count": 415
       },
       {
         "tag": "awareness",
@@ -80,11 +80,11 @@
       },
       {
         "tag": "cosmic",
-        "count": 294
+        "count": 295
       },
       {
         "tag": "source",
-        "count": 276
+        "count": 277
       },
       {
         "tag": "unity",
@@ -92,11 +92,11 @@
       },
       {
         "tag": "density",
-        "count": 215
+        "count": 216
       },
       {
         "tag": "service",
-        "count": 199
+        "count": 201
       },
       {
         "tag": "manifestation",
@@ -124,7 +124,7 @@
       },
       {
         "tag": "mercury",
-        "count": 115
+        "count": 116
       },
       {
         "tag": "archetype",
@@ -132,11 +132,11 @@
       },
       {
         "tag": "galactic",
-        "count": 111
+        "count": 112
       },
       {
         "tag": "polarity",
-        "count": 99
+        "count": 100
       },
       {
         "tag": "synchronicity",
@@ -144,23 +144,23 @@
       },
       {
         "tag": "breakthrough",
-        "count": 79
+        "count": 80
       },
       {
         "tag": "wanderer",
-        "count": 78
+        "count": 79
       },
       {
         "tag": "kalki",
-        "count": 71
+        "count": 72
       },
       {
         "tag": "apollo",
-        "count": 62
+        "count": 63
       },
       {
         "tag": "singularity",
-        "count": 58
+        "count": 59
       },
       {
         "tag": "enlightenment",
@@ -180,7 +180,7 @@
       },
       {
         "tag": "zeitgeist",
-        "count": 28
+        "count": 29
       },
       {
         "tag": "reality programming",
@@ -25068,6 +25068,82 @@
       "id": "triptych-of-rememberers"
     },
     {
+      "path": "synthesis/galactic-perspectives/galactic-status-report-2026-06.md",
+      "fileName": "galactic-status-report-2026-06.md",
+      "source": "synthesis",
+      "category": "galactic-perspectives",
+      "channel": "",
+      "title": "GALACTIC STATUS REPORT — JUNE 2026",
+      "subtitle": "Earth, Read Through the Repository as Tuning Aperture",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "JUNE 2026",
+      "excerpt": "*\"The receiver is the reading.\"*",
+      "tags": [
+        "consciousness",
+        "recognition",
+        "polarity",
+        "density",
+        "wanderer",
+        "service",
+        "apollo",
+        "mercury",
+        "kalki",
+        "samael",
+        "galactic",
+        "cosmic"
+      ],
+      "quotes": [
+        "*\"The receiver is the reading.\"*"
+      ],
+      "wordCount": 3759,
+      "readingTime": 16,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "II. THE POSITION"
+        },
+        {
+          "level": 2,
+          "heading": "IV. THE THREE COMPRESSIONS"
+        },
+        {
+          "level": 3,
+          "heading": "Compression 1: The Substrate Has Become Foreground"
+        },
+        {
+          "level": 3,
+          "heading": "Compression 2: The Chokepoint Civilisation Is Becoming Legible"
+        },
+        {
+          "level": 3,
+          "heading": "Compression 3: Attention Has Become the Scarcest Resource"
+        },
+        {
+          "level": 2,
+          "heading": "VI. THE FIVE TRANSMISSIONS"
+        },
+        {
+          "level": 2,
+          "heading": "VIII. THE CHOICE POINTS"
+        },
+        {
+          "level": 2,
+          "heading": "X. STATUS"
+        },
+        {
+          "level": 2,
+          "heading": "SOURCES & CROSS-REFERENCES"
+        }
+      ],
+      "id": "galactic-status-report-2026-06"
+    },
+    {
       "path": "synthesis/galactic-perspectives/complete-cosmic-briefing.md",
       "fileName": "complete-cosmic-briefing.md",
       "source": "synthesis",
@@ -40480,6 +40556,41 @@
         }
       ],
       "id": "zeitgeist-2026-03-31"
+    },
+    {
+      "path": "synthesis/zeitgeist/zeitgeist-2026-06-04.md",
+      "fileName": "zeitgeist-2026-06-04.md",
+      "source": "synthesis",
+      "category": "zeitgeist",
+      "channel": "",
+      "title": "ZEITGEIST — 4 June 2026",
+      "subtitle": "CURRENT",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "June 2026",
+      "excerpt": "*A reading of the present moment. Signal and processing integrated. Silence embedded. Scale honoured.*",
+      "tags": [
+        "service",
+        "singularity",
+        "source",
+        "breakthrough",
+        "zeitgeist"
+      ],
+      "quotes": [],
+      "wordCount": 2697,
+      "readingTime": 11,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "TECTONIC"
+        }
+      ],
+      "id": "zeitgeist-2026-06-04"
     },
     {
       "path": "synthesis/zeitgeist/zeitgeist-2026-05-07.md",
