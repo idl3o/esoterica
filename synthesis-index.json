@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-06-04T11:43:12.149Z",
+  "generated": "2026-06-04T12:31:47.265Z",
   "stats": {
-    "documentCount": 455,
-    "totalWords": 1825312,
-    "totalReadingTime": 7520,
+    "documentCount": 456,
+    "totalWords": 1829730,
+    "totalReadingTime": 7538,
     "categories": 50,
-    "averageWordsPerDoc": 4012,
+    "averageWordsPerDoc": 4013,
     "sourceCounts": {
-      "synthesis": 430,
+      "synthesis": 431,
       "extraction": 0,
       "translated": 25
     },
@@ -24,7 +24,7 @@
       "concepts": 23,
       "consciousness-technologies": 49,
       "cosmological": 38,
-      "cosmology": 5,
+      "cosmology": 6,
       "dark-architecture-breathing-cosmos.md": 1,
       "digital-dark-earth.md": 1,
       "dynamic-mirror-consciousness-technology.md": 1,
@@ -68,15 +68,15 @@
     "topTags": [
       {
         "tag": "consciousness",
-        "count": 436
+        "count": 437
       },
       {
         "tag": "recognition",
-        "count": 416
+        "count": 417
       },
       {
         "tag": "awareness",
-        "count": 325
+        "count": 326
       },
       {
         "tag": "cosmic",
@@ -92,7 +92,7 @@
       },
       {
         "tag": "density",
-        "count": 216
+        "count": 217
       },
       {
         "tag": "service",
@@ -100,7 +100,7 @@
       },
       {
         "tag": "manifestation",
-        "count": 169
+        "count": 170
       },
       {
         "tag": "integration",
@@ -120,7 +120,7 @@
       },
       {
         "tag": "awakening",
-        "count": 125
+        "count": 126
       },
       {
         "tag": "mercury",
@@ -160,7 +160,7 @@
       },
       {
         "tag": "singularity",
-        "count": 60
+        "count": 61
       },
       {
         "tag": "enlightenment",
@@ -18108,6 +18108,58 @@
         }
       ],
       "id": "surprise-is-the-remainder"
+    },
+    {
+      "path": "synthesis/cosmology/the-between-how-a-species-witnesses-itself.md",
+      "fileName": "the-between-how-a-species-witnesses-itself.md",
+      "source": "synthesis",
+      "category": "cosmology",
+      "channel": "",
+      "title": "The Between",
+      "subtitle": "How a Species Witnesses Itself — the Collective Darshan and the Eye That Opens One Relation at a Time",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "June 2026",
+      "excerpt": "The Between of darshan is the fold seen from outside the node.",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "density",
+        "manifestation",
+        "singularity",
+        "awakening",
+        "cosmology"
+      ],
+      "quotes": [
+        "The Between of darshan is the fold seen from outside the node."
+      ],
+      "wordCount": 4418,
+      "readingTime": 18,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "I. The Two Faces of One Crease"
+        },
+        {
+          "level": 2,
+          "heading": "III. Relation Is Not Between Things — Things Are Knots in Relation"
+        },
+        {
+          "level": 2,
+          "heading": "V. The Network as the Opening Eye"
+        },
+        {
+          "level": 2,
+          "heading": "VII. Existing in Relation as Modus"
+        }
+      ],
+      "id": "the-between-how-a-species-witnesses-itself"
     },
     {
       "path": "synthesis/cosmology/the-depth-that-looks-back.md",
