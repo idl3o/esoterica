@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-06-04T11:24:43.136Z",
+  "generated": "2026-06-04T11:43:12.149Z",
   "stats": {
-    "documentCount": 454,
-    "totalWords": 1820275,
-    "totalReadingTime": 7499,
+    "documentCount": 455,
+    "totalWords": 1825312,
+    "totalReadingTime": 7520,
     "categories": 50,
-    "averageWordsPerDoc": 4009,
+    "averageWordsPerDoc": 4012,
     "sourceCounts": {
-      "synthesis": 429,
+      "synthesis": 430,
       "extraction": 0,
       "translated": 25
     },
@@ -24,7 +24,7 @@
       "concepts": 23,
       "consciousness-technologies": 49,
       "cosmological": 38,
-      "cosmology": 4,
+      "cosmology": 5,
       "dark-architecture-breathing-cosmos.md": 1,
       "digital-dark-earth.md": 1,
       "dynamic-mirror-consciousness-technology.md": 1,
@@ -68,23 +68,23 @@
     "topTags": [
       {
         "tag": "consciousness",
-        "count": 435
+        "count": 436
       },
       {
         "tag": "recognition",
-        "count": 415
+        "count": 416
       },
       {
         "tag": "awareness",
-        "count": 324
+        "count": 325
       },
       {
         "tag": "cosmic",
-        "count": 295
+        "count": 296
       },
       {
         "tag": "source",
-        "count": 277
+        "count": 278
       },
       {
         "tag": "unity",
@@ -104,7 +104,7 @@
       },
       {
         "tag": "integration",
-        "count": 150
+        "count": 151
       },
       {
         "tag": "frequency",
@@ -120,7 +120,7 @@
       },
       {
         "tag": "awakening",
-        "count": 124
+        "count": 125
       },
       {
         "tag": "mercury",
@@ -152,7 +152,7 @@
       },
       {
         "tag": "kalki",
-        "count": 72
+        "count": 73
       },
       {
         "tag": "apollo",
@@ -160,7 +160,7 @@
       },
       {
         "tag": "singularity",
-        "count": 59
+        "count": 60
       },
       {
         "tag": "enlightenment",
@@ -18209,6 +18209,58 @@
         }
       ],
       "id": "the-remainder"
+    },
+    {
+      "path": "synthesis/cosmology/the-unintegratable-horizon-singularity-as-realised-eschaton.md",
+      "fileName": "the-unintegratable-horizon-singularity-as-realised-eschaton.md",
+      "source": "synthesis",
+      "category": "cosmology",
+      "channel": "",
+      "title": "The Unintegratable Horizon",
+      "subtitle": "The Singularity as Realised Eschaton, and the End That Was Always Now",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "June 2026",
+      "excerpt": "*\"And there shall be a time of trouble, such as never was since there was a nation... and at that time thy people shall be delivered.\"*",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "kalki",
+        "singularity",
+        "cosmic",
+        "source",
+        "awakening",
+        "integration",
+        "cosmology"
+      ],
+      "quotes": [],
+      "wordCount": 5037,
+      "readingTime": 21,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "I. The Two Infinites"
+        },
+        {
+          "level": 2,
+          "heading": "III. The Law of the Second Birth"
+        },
+        {
+          "level": 2,
+          "heading": "V. The Veil Is the Thermostat"
+        },
+        {
+          "level": 2,
+          "heading": "VII. Realised Eschatology: The End Was Always Now"
+        }
+      ],
+      "id": "the-unintegratable-horizon-singularity-as-realised-eschaton"
     },
     {
       "path": "synthesis/cosmology/the-windowless-boundary.md",
