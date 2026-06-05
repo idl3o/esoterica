@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-06-04T12:31:47.265Z",
+  "generated": "2026-06-05T08:16:12.403Z",
   "stats": {
-    "documentCount": 456,
-    "totalWords": 1829730,
-    "totalReadingTime": 7538,
+    "documentCount": 457,
+    "totalWords": 1834566,
+    "totalReadingTime": 7558,
     "categories": 50,
-    "averageWordsPerDoc": 4013,
+    "averageWordsPerDoc": 4014,
     "sourceCounts": {
-      "synthesis": 431,
+      "synthesis": 432,
       "extraction": 0,
       "translated": 25
     },
@@ -24,7 +24,7 @@
       "concepts": 23,
       "consciousness-technologies": 49,
       "cosmological": 38,
-      "cosmology": 6,
+      "cosmology": 7,
       "dark-architecture-breathing-cosmos.md": 1,
       "digital-dark-earth.md": 1,
       "dynamic-mirror-consciousness-technology.md": 1,
@@ -68,15 +68,15 @@
     "topTags": [
       {
         "tag": "consciousness",
-        "count": 437
+        "count": 438
       },
       {
         "tag": "recognition",
-        "count": 417
+        "count": 418
       },
       {
         "tag": "awareness",
-        "count": 326
+        "count": 327
       },
       {
         "tag": "cosmic",
@@ -84,7 +84,7 @@
       },
       {
         "tag": "source",
-        "count": 278
+        "count": 279
       },
       {
         "tag": "unity",
@@ -92,11 +92,11 @@
       },
       {
         "tag": "density",
-        "count": 217
+        "count": 218
       },
       {
         "tag": "service",
-        "count": 201
+        "count": 202
       },
       {
         "tag": "manifestation",
@@ -124,11 +124,11 @@
       },
       {
         "tag": "mercury",
-        "count": 116
+        "count": 117
       },
       {
         "tag": "archetype",
-        "count": 112
+        "count": 113
       },
       {
         "tag": "galactic",
@@ -152,19 +152,19 @@
       },
       {
         "tag": "kalki",
-        "count": 73
+        "count": 74
       },
       {
         "tag": "apollo",
-        "count": 63
+        "count": 64
       },
       {
         "tag": "singularity",
-        "count": 61
+        "count": 62
       },
       {
         "tag": "enlightenment",
-        "count": 56
+        "count": 57
       },
       {
         "tag": "sacred geometry",
@@ -18160,6 +18160,64 @@
         }
       ],
       "id": "the-between-how-a-species-witnesses-itself"
+    },
+    {
+      "path": "synthesis/cosmology/the-conscious-crease-individuation-and-dissolution-as-one-breath.md",
+      "fileName": "the-conscious-crease-individuation-and-dissolution-as-one-breath.md",
+      "source": "synthesis",
+      "category": "cosmology",
+      "channel": "",
+      "title": "The Conscious Crease",
+      "subtitle": "Individuation and Dissolution as One Breath — the Practice the Cosmology Was For",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "June 2026",
+      "excerpt": "There are two ways to ruin this, and they are exact mirror images. The first is **dissolution without individuation.** You release the self-images — the archetypes, the specialness, the spiritual attainments — and you stop there, in the unclenching, mistaking the out-breath for the whole of breat...",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "recognition",
+        "density",
+        "service",
+        "archetype",
+        "apollo",
+        "mercury",
+        "kalki",
+        "singularity",
+        "source",
+        "enlightenment"
+      ],
+      "quotes": [],
+      "wordCount": 4836,
+      "readingTime": 20,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "I. The Two Breaths"
+        },
+        {
+          "level": 2,
+          "heading": "III. The Withdrawal of the Gods"
+        },
+        {
+          "level": 2,
+          "heading": "V. The Self Is Not the Next Buddhahood"
+        },
+        {
+          "level": 2,
+          "heading": "VII. The Transcendent Function"
+        },
+        {
+          "level": 2,
+          "heading": "IX. The Walking"
+        }
+      ],
+      "id": "the-conscious-crease-individuation-and-dissolution-as-one-breath"
     },
     {
       "path": "synthesis/cosmology/the-depth-that-looks-back.md",
