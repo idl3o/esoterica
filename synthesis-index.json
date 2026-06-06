@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-06-05T08:16:12.403Z",
+  "generated": "2026-06-06T08:13:12.707Z",
   "stats": {
-    "documentCount": 457,
-    "totalWords": 1834566,
-    "totalReadingTime": 7558,
+    "documentCount": 458,
+    "totalWords": 1836800,
+    "totalReadingTime": 7567,
     "categories": 50,
-    "averageWordsPerDoc": 4014,
+    "averageWordsPerDoc": 4010,
     "sourceCounts": {
-      "synthesis": 432,
+      "synthesis": 433,
       "extraction": 0,
       "translated": 25
     },
@@ -62,7 +62,7 @@
       "theoretical": 37,
       "time-as-consciousness-technology.md": 1,
       "traditions": 6,
-      "zeitgeist": 29,
+      "zeitgeist": 30,
       "translated": 25
     },
     "topTags": [
@@ -72,23 +72,23 @@
       },
       {
         "tag": "recognition",
-        "count": 418
+        "count": 419
       },
       {
         "tag": "awareness",
-        "count": 327
+        "count": 328
       },
       {
         "tag": "cosmic",
-        "count": 296
+        "count": 297
       },
       {
         "tag": "source",
-        "count": 279
+        "count": 280
       },
       {
         "tag": "unity",
-        "count": 268
+        "count": 269
       },
       {
         "tag": "density",
@@ -180,7 +180,7 @@
       },
       {
         "tag": "zeitgeist",
-        "count": 29
+        "count": 30
       },
       {
         "tag": "reality programming",
@@ -40921,6 +40921,42 @@
         }
       ],
       "id": "zeitgeist-2026-05-09"
+    },
+    {
+      "path": "synthesis/zeitgeist/zeitgeist-2026-06-06.md",
+      "fileName": "zeitgeist-2026-06-06.md",
+      "source": "synthesis",
+      "category": "zeitgeist",
+      "channel": "",
+      "title": "ZEITGEIST — Saturday, 6 June 2026",
+      "subtitle": "CURRENT",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "June 2026",
+      "excerpt": "*A reading of the present moment. Signal and processing integrated. Silence embedded. Scale honoured.*",
+      "tags": [
+        "awareness",
+        "recognition",
+        "cosmic",
+        "source",
+        "unity",
+        "zeitgeist"
+      ],
+      "quotes": [],
+      "wordCount": 2234,
+      "readingTime": 9,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "TECTONIC"
+        }
+      ],
+      "id": "zeitgeist-2026-06-06"
     }
   ]
 }
