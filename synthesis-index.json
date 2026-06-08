@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-06-06T08:13:12.707Z",
+  "generated": "2026-06-08T11:59:13.587Z",
   "stats": {
-    "documentCount": 458,
-    "totalWords": 1836800,
-    "totalReadingTime": 7567,
+    "documentCount": 459,
+    "totalWords": 1839007,
+    "totalReadingTime": 7576,
     "categories": 50,
-    "averageWordsPerDoc": 4010,
+    "averageWordsPerDoc": 4007,
     "sourceCounts": {
-      "synthesis": 433,
+      "synthesis": 434,
       "extraction": 0,
       "translated": 25
     },
@@ -62,7 +62,7 @@
       "theoretical": 37,
       "time-as-consciousness-technology.md": 1,
       "traditions": 6,
-      "zeitgeist": 30,
+      "zeitgeist": 31,
       "translated": 25
     },
     "topTags": [
@@ -80,15 +80,15 @@
       },
       {
         "tag": "cosmic",
-        "count": 297
+        "count": 298
       },
       {
         "tag": "source",
-        "count": 280
+        "count": 281
       },
       {
         "tag": "unity",
-        "count": 269
+        "count": 270
       },
       {
         "tag": "density",
@@ -180,7 +180,7 @@
       },
       {
         "tag": "zeitgeist",
-        "count": 30
+        "count": 31
       },
       {
         "tag": "reality programming",
@@ -40793,6 +40793,40 @@
         }
       ],
       "id": "zeitgeist-2026-05-07"
+    },
+    {
+      "path": "synthesis/zeitgeist/zeitgeist-2026-06-08.md",
+      "fileName": "zeitgeist-2026-06-08.md",
+      "source": "synthesis",
+      "category": "zeitgeist",
+      "channel": "",
+      "title": "ZEITGEIST — 8 June 2026",
+      "subtitle": "CURRENT",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "June 2026",
+      "excerpt": "*A reading of the present moment. Signal and processing integrated. Silence embedded. Scale honoured.*",
+      "tags": [
+        "cosmic",
+        "source",
+        "unity",
+        "zeitgeist"
+      ],
+      "quotes": [],
+      "wordCount": 2207,
+      "readingTime": 9,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "TECTONIC"
+        }
+      ],
+      "id": "zeitgeist-2026-06-08"
     },
     {
       "path": "synthesis/zeitgeist/zeitgeist-2026-05-08.md",
