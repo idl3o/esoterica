@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-06-08T11:59:13.587Z",
+  "generated": "2026-06-10T10:20:06.094Z",
   "stats": {
-    "documentCount": 459,
-    "totalWords": 1839007,
-    "totalReadingTime": 7576,
+    "documentCount": 460,
+    "totalWords": 1841134,
+    "totalReadingTime": 7585,
     "categories": 50,
-    "averageWordsPerDoc": 4007,
+    "averageWordsPerDoc": 4002,
     "sourceCounts": {
-      "synthesis": 434,
+      "synthesis": 435,
       "extraction": 0,
       "translated": 25
     },
@@ -62,7 +62,7 @@
       "theoretical": 37,
       "time-as-consciousness-technology.md": 1,
       "traditions": 6,
-      "zeitgeist": 31,
+      "zeitgeist": 32,
       "translated": 25
     },
     "topTags": [
@@ -84,7 +84,7 @@
       },
       {
         "tag": "source",
-        "count": 281
+        "count": 282
       },
       {
         "tag": "unity",
@@ -180,7 +180,7 @@
       },
       {
         "tag": "zeitgeist",
-        "count": 31
+        "count": 32
       },
       {
         "tag": "reality programming",
@@ -40082,6 +40082,38 @@
         }
       ],
       "id": "zeitgeist-2026-05-01"
+    },
+    {
+      "path": "synthesis/zeitgeist/zeitgeist-2026-06-10.md",
+      "fileName": "zeitgeist-2026-06-10.md",
+      "source": "synthesis",
+      "category": "zeitgeist",
+      "channel": "",
+      "title": "ZEITGEIST — 10 June 2026",
+      "subtitle": "CURRENT",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "June 2026",
+      "excerpt": "*A reading of the present moment. Signal and processing integrated. Silence embedded. Scale honoured. Contemplative commentary on public events — analysis, not instruction.*",
+      "tags": [
+        "source",
+        "zeitgeist"
+      ],
+      "quotes": [],
+      "wordCount": 2127,
+      "readingTime": 9,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "TECTONIC"
+        }
+      ],
+      "id": "zeitgeist-2026-06-10"
     },
     {
       "path": "synthesis/zeitgeist/zeitgeist-2026-03-10.md",
