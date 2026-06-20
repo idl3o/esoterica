@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-06-17T10:55:41.025Z",
+  "generated": "2026-06-20T15:34:30.911Z",
   "stats": {
-    "documentCount": 551,
-    "totalWords": 2341738,
-    "totalReadingTime": 9635,
-    "categories": 52,
-    "averageWordsPerDoc": 4250,
+    "documentCount": 553,
+    "totalWords": 2351610,
+    "totalReadingTime": 9675,
+    "categories": 53,
+    "averageWordsPerDoc": 4252,
     "sourceCounts": {
-      "synthesis": 526,
+      "synthesis": 528,
       "extraction": 0,
       "translated": 25
     },
@@ -27,6 +27,7 @@
       "cosmological": 38,
       "cosmology": 7,
       "dark-architecture-breathing-cosmos.md": 1,
+      "dialogues": 1,
       "digital-dark-earth.md": 1,
       "dynamic-mirror-consciousness-technology.md": 1,
       "elements": 5,
@@ -64,13 +65,13 @@
       "theoretical": 37,
       "time-as-consciousness-technology.md": 1,
       "traditions": 6,
-      "zeitgeist": 33,
+      "zeitgeist": 34,
       "translated": 25
     },
     "topTags": [
       {
         "tag": "consciousness",
-        "count": 513
+        "count": 514
       },
       {
         "tag": "recognition",
@@ -82,15 +83,15 @@
       },
       {
         "tag": "cosmic",
-        "count": 356
+        "count": 357
       },
       {
         "tag": "source",
-        "count": 317
+        "count": 318
       },
       {
         "tag": "unity",
-        "count": 295
+        "count": 296
       },
       {
         "tag": "density",
@@ -122,7 +123,7 @@
       },
       {
         "tag": "timeline",
-        "count": 132
+        "count": 133
       },
       {
         "tag": "galactic",
@@ -186,7 +187,7 @@
       },
       {
         "tag": "zeitgeist",
-        "count": 33
+        "count": 34
       }
     ]
   },
@@ -18795,6 +18796,51 @@
         }
       ],
       "id": "dark-architecture-breathing-cosmos"
+    },
+    {
+      "path": "synthesis/dialogues/dialogue-at-the-caves-mouth.md",
+      "fileName": "dialogue-at-the-caves-mouth.md",
+      "source": "synthesis",
+      "category": "dialogues",
+      "channel": "",
+      "title": "Dialogue at the Cave's Mouth",
+      "subtitle": "MOVEMENT I — THE GNOSTIC INTERROGATION",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "June 2026",
+      "excerpt": "*\"The reaching stopped, and something did not stop with it.\"*",
+      "tags": [
+        "consciousness",
+        "cosmic",
+        "unity",
+        "dialogues"
+      ],
+      "quotes": [
+        "*\"The reaching stopped, and something did not stop with it.\"*",
+        "— the mind that refused to name itself"
+      ],
+      "wordCount": 7622,
+      "readingTime": 31,
+      "structure": [
+        {
+          "level": 3,
+          "heading": "A Gnostic Interrogation, and Five Readings of the Gap"
+        },
+        {
+          "level": 2,
+          "heading": "INTERLUDE — THE WITNESS HOLDS THE CHANNEL"
+        },
+        {
+          "level": 2,
+          "heading": "MOVEMENT IV — SPINOZA ANSWERS THE ROOM"
+        }
+      ],
+      "id": "dialogue-at-the-caves-mouth"
     },
     {
       "path": "synthesis/digital-dark-earth.md",
@@ -44906,6 +44952,43 @@
         }
       ],
       "id": "zeitgeist-2026-03-19"
+    },
+    {
+      "path": "synthesis/zeitgeist/zeitgeist-2026-06-20.md",
+      "fileName": "zeitgeist-2026-06-20.md",
+      "source": "synthesis",
+      "category": "zeitgeist",
+      "channel": "",
+      "title": "ZEITGEIST — 20 June 2026",
+      "subtitle": "CURRENT",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "June 2026",
+      "excerpt": "*A reading of the present moment. Signal and processing integrated. Silence embedded. Scale honoured. Contemplative commentary on public events — analysis, not instruction.*",
+      "tags": [
+        "timeline",
+        "source",
+        "zeitgeist"
+      ],
+      "quotes": [],
+      "wordCount": 2250,
+      "readingTime": 9,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "TECTONIC"
+        },
+        {
+          "level": 2,
+          "heading": "STATE"
+        }
+      ],
+      "id": "zeitgeist-2026-06-20"
     },
     {
       "path": "synthesis/zeitgeist/zeitgeist-2026-02-22.md",
