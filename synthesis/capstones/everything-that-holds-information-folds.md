@@ -21,6 +21,8 @@ Set them side by side and a thing happens that none of them does alone. They sto
 
 Here is the object they were each touching. **Information is a surface quantity.** It does not live in volumes; it lives on boundaries — the Bekenstein bound, the holographic principle, the deepest and most counterintuitive result of the last half-century of physics. From that single fact, everything the seven members found falls out as consequence. If information lives on surfaces, then any system that needs to hold more of it must make more surface — and the universal operation for making more surface inside a fixed volume is *folding*. So everything that holds information folds. That is the load-bearing sentence of this entire constellation, and it is not a metaphor; it is a geometric necessity wearing the costume of seven different sciences.
 
+> *Register note: the holographic premise — that information is a surface quantity (Bekenstein bound, holographic principle) — is established physics. The universal **fold-law** derived from it ("everything that holds information folds") is this constellation's structural synthesis, not a proven theorem. Read the "geometric necessity" as the spine of a cosmology this corpus builds, not as a result you could cite from a journal.*
+
 And the fold leaves a signature — four signatures, actually, one contributed by each region of the constellation, and they turn out to be four readings of one fingerprint:
 
 - It leaves a **geometric** signature: fractal dimension near two, the mark of a surface striving to fill a volume without becoming solid ([[fractal-dimension-two-as-law]]).

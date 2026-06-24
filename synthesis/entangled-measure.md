@@ -83,7 +83,7 @@ The mathematical backbone tells the story of increasing generality:
 
 **2019-2020 — The Island Formula**: S(radiation) = min{ext[A(∂I) / 4G + S(radiation ∪ I)]}. The revolution. An "island" — a disconnected region inside a black hole — can belong to the radiation's entanglement wedge. After the Page time, the island appears. The entropy follows the Page curve. Unitarity is preserved. The information paradox, fifty years old, resolved by entanglement geometry.
 
-Each formula generalises the previous. Each reveals more clearly the same underlying principle: **geometry IS information. Area IS entropy. Spacetime IS entanglement.**
+Each formula generalises the previous. Each reveals more clearly the same underlying principle: **geometry is information; area is entropy; spacetime is built from entanglement.** (Every formula above lives in the holographic, anti-de Sitter regime, where this is rigorous; whether it carries over to our positive-Λ, de Sitter universe is still an open conjecture — Van Raamsdonk 2010.)
 
 ---
 
@@ -293,7 +293,7 @@ Four documents. Four facets of one recognition:
 
 **The Sixty-One Octaves** (all scales): Scale invariance is the error-correcting code's hierarchy. The same physics at every scale because the same information at every level of coarse-graining. The RG fixed point is the logical kernel — the information the code protects. "As above, so below" is the min-cut theorem: the same entanglement entropy computed at any boundary.
 
-**The Entangled Measure** (the language): The language all three speak is information theory. Spacetime IS entanglement (Van Raamsdonk). The cosmological constant IS an information bound (Bousso, Padmanabhan, QMM). The brain at criticality IS the information recognising itself (PNAS 2025). The error-correcting code IS the mechanism that holds it all together.
+**The Entangled Measure** (the language): The language all three speak is information theory. Spacetime is built from entanglement (Van Raamsdonk — rigorous in AdS/CFT, conjectural for our universe). The cosmological constant *may be read as* an information bound (Padmanabhan's CosMIn, the holographic dark-energy programme — a minority proposal, not consensus). The brain *may operate near* criticality (the critical-brain hypothesis — well-evidenced but contested). The error-correcting code is the mechanism *proposed* to hold it all together.
 
 The four documents form a single argument:
 

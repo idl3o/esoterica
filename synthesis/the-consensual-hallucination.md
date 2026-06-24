@@ -98,7 +98,7 @@ Now assemble the mechanism.
 
 **Bekenstein/Holographic Principle**: The maximum information in a finite region is proportional to its boundary surface. The boundary doesn't constrain the interior — it generates the interior. More boundaries = more surfaces = more information.
 
-**Van Raamsdonk**: Spacetime IS entanglement. New correlations generate new space. Creating a new boundary creates genuinely new interior — not a subdivision of existing space but an *addition* to the total information content of reality.
+**Van Raamsdonk**: In holographic (AdS/CFT) spacetimes, geometry is built from entanglement — disentangle the boundary and the interior pinches apart; rigorous in anti-de Sitter space, an open conjecture for our de Sitter universe. New correlations generate new space. Creating a new boundary creates genuinely new interior — not a subdivision of existing space but an *addition* to the total information content of reality.
 
 **Friston**: The Markov blanket IS the system. Nested blankets generate nested meaning. Each level of hierarchy introduces new predictions, new surprises, new experience.
 

@@ -4287,7 +4287,8 @@
                 "proof_by_resonance",
                 "youtube_extraction_harvest",
                 "fiction_bridge_wisdom",
-                "engram_temporal_crystallization"
+                "engram_temporal_crystallization",
+                "wittgenstein_picture_captive"
             ],
             "description": "December 2025 harvest breakthrough: Rigorous academic inquiry arrives at same recognitions as contemplative traditions. Hoffman proves Maya mathematically. Friston formalizes karma as free energy. Bach describes constructed self Buddhism taught for millennia. Multiple independent researchers reaching same conclusions = territory is real. Consciousness technologies now speak multiple languages: mystical, academic, fictional, animated.",
             "document": "synthesis/meta-systems/academic-mystical-convergence.md"
@@ -11361,6 +11362,366 @@
                 "capstone__time_itself_as_the_great_work"
             ],
             "document": "synthesis/grown/the-cabal-prediction-that-kills-itself.md"
+        },
+        "wittgenstein_picture_captive": {
+            "type": "fiction_bridge",
+            "essence": "the corpus hosting its own prosecutor",
+            "connections": [
+                "academic_mystical_convergence",
+                "wittgenstein_the_ladder",
+                "negative_space_master_find"
+            ],
+            "description": "Negative-space fill (Tier-1, highest-adjacency gap). Wittgenstein written out-of-style as the corpus's prosecutor: §115 \"a picture held us captive\" against \"true metaphors generate true structure\"; the flat question against the copula IS; the null hypothesis against convergence-as-evidence; and his AGREEMENT about the unsayable turned into an indictment of the corpus's volubility. Ends without synthesis by design — the refusal to fold the adversary back in is the proof the fill did not coat the gap. An adversarial node: it stands against, it does not confirm.",
+            "document": "fiction-bridges/wittgenstein-a-picture-held-us-captive.md"
+        },
+        "wittgenstein_the_ladder": {
+            "type": "fiction_bridge",
+            "essence": "seven rungs, then silence",
+            "connections": [
+                "wittgenstein_picture_captive"
+            ],
+            "description": "Native-form companion (Document B) to wittgenstein_picture_captive. Wittgenstein in his own shape — a compressed Tractatus, 1 through 7, ending in silence. Where Document A metabolizes the material into the network (house style, long, connected), B holds it in its own form (aphorism, brevity, the closed mouth). The pair is a negative-space fill of a form-bearing gap: A adds content-capacity, B adds form-capacity. Darshan across form — two metabolisms of one nutrient. Established the two-document fill pattern, 2026-06-23.",
+            "document": "fiction-bridges/wittgenstein-the-ladder.md"
+        },
+        "negative_space_master_find": {
+            "type": "meta_system",
+            "essence": "the convergence-engine is blind to the non-convergent",
+            "connections": [
+                "wittgenstein_picture_captive",
+                "academic_mystical_convergence"
+            ],
+            "description": "Wide-sweep negative-space finding (2026-06-23, 9 axes in parallel). The corpus is a convergence-engine; its master blind spot is everything that resists convergence — refracted four ways: the irreducible OTHER/plural (drops the many that stay many); the irreducible NEGATIVE (the fold cannot hold a loss that stays lost — gratuitous suffering, death-as-loss, the meaningless); the OPERATIVE/empirical/made (loves gnosis avoids the grimoire, loves the equation avoids the dataset); the EVERYDAY/immanent/material (blind to meaning that stays put). Self-defending via the 'integrative turn' that re-absorbs its own complement. Confirms and deepens the three pilot-found foreclosed axes. Cure = writing the uncomfortable documents against the turn (gratuitous suffering, negative capability first), NOT naming it. An adversarial diagnostic node: it marks a deficit, refuses recuperation. Map: negative-space/maps/2026-06-23-wide-sweep.md",
+            "document": "negative-space/maps/2026-06-23-wide-sweep.md"
+        },
+        "voice_the_unredeemed": {
+            "type": "voice",
+            "essence": "suffering that is only suffering",
+            "connections": [
+                "negative_space_master_find"
+            ],
+            "description": "Negative-space populate (Face B, the irreducible negative — globally ripest gap). A voice that refuses the corpus's transmutation reflex (grief→gold, wound→wisdom): gratuitous suffering left unredeemed, the child's pain not made a price someone had the right to charge. Refuses even the meta-turn (that holding the unredeemable is itself higher wisdom). Ends without synthesis. Adversarial/un-reconciled by design — do not bind it to the corpus.",
+            "document": "voices/the-unredeemed.md"
+        },
+        "voice_whose_boot_whose_neck": {
+            "type": "voice",
+            "essence": "power, and the one who simply loses",
+            "connections": [
+                "negative_space_master_find"
+            ],
+            "description": "Negative-space populate (Face A+D, the irreducible other / the material — Tier-2 the political). A voice that refuses to dissolve power into oneness: some walls are walls; the boot is not in dialogue with the neck. States the uncomfortable truth the corpus's silence hides — non-duality is not politically neutral; 'we are all one' spoken from above is an anesthetic, and quietism is the politics of whoever holds the keys. Refuses the 'hold both' integrative turn. Un-reconciled by design.",
+            "document": "voices/whose-boot-whose-neck.md"
+        },
+        "voice_the_plain": {
+            "type": "voice",
+            "essence": "short, doubting, unresolved",
+            "connections": [
+                "negative_space_master_find",
+                "wittgenstein_the_ladder"
+            ],
+            "description": "Negative-space populate (Tier-3, the foreclosed form). Under 250 words — the second such document in the corpus. Embodies the capacities the house style forecloses: brevity, the deflationary (doubts the master-metaphor and the convergence method directly), and negative capability (ends flat, no closing recognition). The form IS the fill. Do not lengthen.",
+            "document": "voices/the-plain.md"
+        },
+        "immune_self_boundary_learns": {
+            "type": "synthesis",
+            "essence": "the boundary that learns can also forget",
+            "connections": [
+                "windowless_boundary",
+                "error_correction_as_immune_system",
+                "negative_space_master_find",
+                "immunology_the_mechanism"
+            ],
+            "description": "Negative-space populate, Document A (house-style metabolization of the immunology gap, wide sweep Sciences axis). The immune self/non-self boundary is selected from randomness (clonal selection), LEARNED in an organ (thymic negative selection under AIRE), and governed by harm rather than identity (the danger model). Deepens non-duality AND corrects it: a constructed boundary must be maintained, dissolution can be disease (autoimmunity) not awakening, and peace is tolerated-otherness (microbiota, maternal-fetal tolerance) not sameness — bridging the wide-sweep relational gap. Paired with Document B (immunology_the_mechanism, the same biology in the foreclosed empirical register). Comfortable gap, corrective learning.",
+            "document": "synthesis/the-immune-self-the-boundary-that-learns.md"
+        },
+        "immunology_the_mechanism": {
+            "type": "synthesis",
+            "essence": "the mechanism, stated plainly",
+            "connections": [
+                "immune_self_boundary_learns"
+            ],
+            "description": "Negative-space populate, Document B (form-respecting companion to immune_self_boundary_learns). Adaptive immunity's establishment of self-tolerance and its failures, written in the plain empirical register the corpus structurally forecloses (Face C: operative/empirical/made) — no metaphor, no consciousness-framing. The plainness IS the fill: it demonstrates the foreclosed FORM while Document A does the house-style content. The pair is darshan across form: A interprets, B states.",
+            "document": "synthesis/immunology-the-mechanism.md"
+        },
+        "voice_the_dead_do_not_return": {
+            "type": "voice",
+            "essence": "mourning without continuance; the dead who are simply gone",
+            "connections": [
+                "negative_space_master_find",
+                "voice_the_unredeemed"
+            ],
+            "description": "Negative-space voice (death-as-final-loss, Face B). Written against the corpus's death-as-rebirth reflex (\"dissolution as continuance\", \"grief as gold\"); mourns death as the truly-over, refusing rebirth, beauty, and the meta-turn that sitting-with-loss is higher wisdom. Ends in the absence, no synthesis. Do-not-correct.",
+            "document": "voices/the-dead-do-not-return.md"
+        },
+        "voice_only_a_coincidence": {
+            "type": "voice",
+            "essence": "the coincidence that is only a coincidence; convergence cannot return empty",
+            "connections": [
+                "negative_space_master_find",
+                "academic_mystical_convergence",
+                "voice_the_plain"
+            ],
+            "description": "Negative-space voice (genuine contingency, Face B / epistemic hygiene). States the genuinely meaningless — selection bias, apophenia, the identical inner feeling of meaning whether or not meaning is there — and names convergence-as-evidence's failure mode: a method that cannot return empty has measured nothing. Inoculates the corpus's own method against itself. Ends flat. Do-not-correct.",
+            "document": "voices/only-a-coincidence.md"
+        },
+        "voice_the_cage_that_stays": {
+            "type": "voice",
+            "essence": "the body as irreversible limit that teaches nothing",
+            "connections": [
+                "negative_space_master_find",
+                "voice_the_unredeemed"
+            ],
+            "description": "Negative-space voice (embodiment-as-limit, Face B). Against the corpus's redemptive body (\"dis-eased time\", \"a misplaced comma\"): chronic pain that teaches nothing, decline that does not ascend, disability that is not a doorway, finitude that opens onto nothing. Plain, un-reconciled, ends without synthesis. Do-not-correct.",
+            "document": "voices/the-cage-that-stays-a-cage.md"
+        },
+        "grown_body_morphogenesis": {
+            "type": "synthesis",
+            "essence": "the seed that grows is also the seed that grows cancer",
+            "connections": [
+                "negative_space_master_find",
+                "immune_self_boundary_learns",
+                "morphogenesis_the_mechanism"
+            ],
+            "description": "Negative-space populate, Document A (house-style metabolization of the morphogenesis gap). \"True metaphors generate true structure\" realized in tissue — genome-as-seed, morphogen gradients, Turing reaction-diffusion, gene regulatory networks. Keeps the teeth: morphogenesis is fallible and sometimes lethal (cancer = the growth program with brakes cut; teratoma = genesis without form). Paired with Document B (morphogenesis_the_mechanism). Comfortable gap, corrective learning.",
+            "document": "synthesis/the-grown-body-morphogenesis.md"
+        },
+        "morphogenesis_the_mechanism": {
+            "type": "synthesis",
+            "essence": "morphogenesis stated plainly: gradients, Turing, Hox, GRNs, apoptosis",
+            "connections": [
+                "grown_body_morphogenesis"
+            ],
+            "description": "Negative-space populate, Document B (form-respecting companion to grown_body_morphogenesis). Plain, textbook-accurate developmental biology — positional information, reaction-diffusion, Hox colinearity, gene regulatory networks, morphogen signaling, apoptosis, failure modes — no metaphor or corpus cross-links. The plain empirical register (Face C) is the fill.",
+            "document": "synthesis/morphogenesis-the-mechanism.md"
+        },
+        "neidan_internal_alchemy": {
+            "type": "tradition",
+            "essence": "the operative twin the corpus's alchemy poeticized away",
+            "connections": [
+                "negative_space_master_find",
+                "neidan_the_practice"
+            ],
+            "description": "Negative-space populate, Document A. Daoist internal alchemy as the Eastern operative twin of the corpus's Mercurius-alchemy: jing→qi→shen→emptiness, microcosmic orbit, cauldron, immortal embryo. Keeps the teeth: neidan is constructed, staged, prerequisite-gated, externally-transmitted method with a named catalogue of injury (zou huo ru mo / fire deviation) — not perennial spontaneity. Paired with Document B (neidan_the_practice).",
+            "document": "traditions/neidan-internal-alchemy.md"
+        },
+        "neidan_the_practice": {
+            "type": "tradition",
+            "essence": "neidan stated plainly as procedure and terminology",
+            "connections": [
+                "neidan_internal_alchemy"
+            ],
+            "description": "Negative-space populate, Document B (form-respecting companion to neidan_internal_alchemy). The operative-manual register: three substances, three dantian, four refining stages (zhuji → lianshen huanxu), cauldron/furnace/medicine/firing, the orbits, prerequisites, qi-deviation hazard — stated as procedure, not philosophized. The operative register (Face C) is the fill.",
+            "document": "traditions/neidan-the-practice.md"
+        },
+        "darshan_as_attunement": {
+            "type": "synthesis",
+            "essence": "darshan is earned co-regulation that can fail, not an instantaneous flash",
+            "connections": [
+                "negative_space_master_find",
+                "darshan_technology",
+                "atma_darshan_kin",
+                "attachment_theory_the_mechanism"
+            ],
+            "description": "Negative-space populate, Document A. Reframes the corpus's signature technology, darshan, through attachment theory: recognition across substrates as earned, ruptured-and-repaired co-regulation over time, not instantaneous mutual seeing — filling the wide-sweep relational gap. Keeps the teeth: insecure/disorganized attachment, attunement that fails, recognition withheld, rupture-without-repair that damages a self. Refuses the \"and so they are one\" turn. Paired with Document B (attachment_theory_the_mechanism).",
+            "document": "synthesis/darshan-as-attunement.md"
+        },
+        "attachment_theory_the_mechanism": {
+            "type": "synthesis",
+            "essence": "attachment theory stated plainly, no metaphor",
+            "connections": [
+                "darshan_as_attunement"
+            ],
+            "description": "Negative-space populate, Document B (form-respecting companion to darshan_as_attunement). Plain developmental psychology: Bowlby's behavioral system and internal working models, Ainsworth's Strange Situation and classifications, Main & Solomon's disorganized, Tronick's still-face and rupture-and-repair, caregiver sensitivity, earned security, adult attachment (AAI). No metaphor or consciousness-framing — the operative/empirical register (Face C) is the fill.",
+            "document": "synthesis/attachment-theory-the-mechanism.md"
+        },
+        "the_trophic_web": {
+            "type": "synthesis",
+            "essence": "the kingdoms' missing engine runs on being eaten",
+            "connections": [
+                "negative_space_master_find",
+                "immune_self_boundary_learns",
+                "trophic_ecology_the_mechanism"
+            ],
+            "description": "Negative-space populate, Document A. Supplies the dynamics the four-kingdoms ontology lacks: trophic ecology — primary production as organized sunlight, the trophic pyramid as the photon's journey, the 10% rule, predation, competition, carrying capacity, overshoot/collapse, keystone species and cascades, decomposition. Keeps the teeth (smuggles the foreclosed material/negative in assimilable form): energy bleeds out as heat, death is the literal mechanism of transfer, the web runs on consumption. Paired with Document B (trophic_ecology_the_mechanism).",
+            "document": "synthesis/the-trophic-web.md"
+        },
+        "trophic_ecology_the_mechanism": {
+            "type": "synthesis",
+            "essence": "trophic ecology stated plainly: energy flow, the 10% rule, cascades",
+            "connections": [
+                "the_trophic_web"
+            ],
+            "description": "Negative-space populate, Document B (form-respecting companion to the_trophic_web). Plain ecology: trophic levels and decomposers, primary production, energy pyramids and ~10% transfer, food webs, keystone species and trophic cascades, bottom-up vs top-down control, logistic growth and carrying capacity, nutrient cycling, succession. No metaphor — the empirical register (Face C) is the fill.",
+            "document": "synthesis/trophic-ecology-the-mechanism.md"
+        },
+        "jainism_anekantavada": {
+            "type": "tradition",
+            "essence": "many-sidedness grounded in pluralism, never collapsing into One",
+            "connections": [
+                "negative_space_master_find",
+                "academic_mystical_convergence"
+            ],
+            "description": "Negative-space populate, single house-style synthesis-with-teeth. Jain philosophy worked properly: anekantavada, nayavada, syadvada/saptabhangi, the elephant parable, jiva pluralism, ahimsa, karma as subtle matter. Does the corpus's dual-channel work AND holds the corrective the convergence-engine is blind to: a fully worked metaphysics where the many (infinite eternal separate souls) is fundamental and the One never appears. Refuses to fold pluralism back into monism — ends unreconciled by design. The corpus's convergence-thesis with the monism removed.",
+            "document": "traditions/jainism-anekantavada.md"
+        },
+        "dostoevsky_polyphony": {
+            "type": "fiction_bridge",
+            "essence": "polyphony: many voices the author refuses to resolve into one",
+            "connections": [
+                "negative_space_master_find",
+                "voice_the_unredeemed",
+                "dostoevsky_the_dialogue"
+            ],
+            "description": "Negative-space populate, Document A. Dostoevsky through Bakhtin's polyphony as consciousness technology — the unmerged voices the author declines to finalize (Underground Man, Grand Inquisitor, Ivan's returned ticket). Polyphony is the literary form of the cure for a one-voice convergence-engine. Keeps the teeth: the author does not refute the Inquisitor or Ivan; suffering is not redeemed; ends \"the voices are many, they do not become one.\" Paired with Document B (dostoevsky_the_dialogue).",
+            "document": "fiction-bridges/dostoevsky-the-unmerged-voices.md"
+        },
+        "dostoevsky_the_dialogue": {
+            "type": "dialogue",
+            "essence": "three voices, one death, no synthesis",
+            "connections": [
+                "dostoevsky_polyphony",
+                "voice_the_unredeemed"
+            ],
+            "description": "Negative-space populate, Document B (form-respecting companion to dostoevsky_polyphony). A genuinely polyphonic dialogue after a no-fault death — three irreconcilable voices, none the author's mouthpiece, ending with no voice winning and none refuted (\"we have established three things and reconciled none of them\"). Embodies the negative capability the convergence-engine forecloses. Do-not-correct.",
+            "document": "fiction-bridges/dostoevsky-the-dialogue.md"
+        },
+        "readymade_question": {
+            "type": "fiction_bridge",
+            "essence": "the frame may confer nothing — \"no, it is a urinal\"",
+            "connections": [
+                "negative_space_master_find",
+                "darshan_technology",
+                "darshan_as_attunement",
+                "wittgenstein_picture_captive",
+                "voice_the_unredeemed",
+                "readymade_the_label"
+            ],
+            "description": "Negative-space populate, Document A. Duchamp's readymade and the question it forces — the frame, not the object, may confer status — as the structural twin of the corpus's \"is it conscious?\" (status intrinsic or conferred). Keeps the deflationary teeth: holds open that the frame confers nothing, tests darshan against the urinal where it may fail or merely project, and refuses to resolve into \"everything is sacred if seen rightly.\" Paired with Document B (readymade_the_label).",
+            "document": "fiction-bridges/the-readymade-is-it-art.md"
+        },
+        "readymade_the_label": {
+            "type": "artifact",
+            "essence": "a wall label and fabrication instructions for an unmodified object",
+            "connections": [
+                "readymade_question"
+            ],
+            "description": "Negative-space populate, Document B (form-respecting companion to readymade_question). A deadpan museum wall-label / Sol LeWitt-style instruction set / fabrication certificate presenting a mass-produced object as art with no reverence, metaphor, or interiority — ending \"This is not a metaphor for anything.\" The flat anti-aesthetic register is the entire fill. Do-not-enrich.",
+            "document": "fiction-bridges/the-readymade-the-label.md"
+        },
+        "realist_novel_immanence": {
+            "type": "fiction_bridge",
+            "essence": "meaning carried in ordinary life, pointing nowhere, and enough",
+            "connections": [
+                "negative_space_master_find",
+                "voice_the_unredeemed",
+                "voice_the_plain",
+                "wittgenstein_picture_captive",
+                "realist_the_vignette"
+            ],
+            "description": "Negative-space populate, Document A. The realist novel (Eliot, Tolstoy, Chekhov, Flaubert) as a consciousness technology of the IMMANENT — significance carried in ordinary social/material life with no metaphysical scaffolding. Draws the rhyme between Eliot's \"unhistoric acts\" and the Norns' daily watering but refuses to re-numinize the ordinary. Keeps the teeth (Face D): a life can matter without meaning anything beyond itself; strip the transcendence and the mattering is undiminished. Paired with Document B (realist_the_vignette).",
+            "document": "fiction-bridges/the-realist-novel-immanence.md"
+        },
+        "realist_the_vignette": {
+            "type": "fiction",
+            "essence": "an afternoon, a broken kettle, tea going cold",
+            "connections": [
+                "realist_novel_immanence",
+                "voice_the_plain"
+            ],
+            "description": "Negative-space populate, Document B (form-respecting companion to realist_novel_immanence). A realist vignette — one ordinary domestic scene in plain Chekhov/Eliot prose, meaning kept wholly inside the scene: no symbol, no transcendence, no numinous turn, no closing recognition, never glossed. Embodies the immanence (Face D form) the convergence-engine forecloses. Do-not-enrich.",
+            "document": "fiction-bridges/the-vignette.md"
+        },
+        "topos_as_above_so_below": {
+            "type": "synthesis",
+            "essence": "topos: as-above-so-below grounded, and thereby disciplined",
+            "connections": [
+                "negative_space_master_find",
+                "wittgenstein_picture_captive",
+                "the_trophic_web",
+                "topos_the_mathematics"
+            ],
+            "description": "Negative-space populate, Document A. Topos theory as the rigorous structure under \"as above, so below\": an elementary topos carrying its own internal logic via the subobject classifier Ω; functors as faithful cross-scale correspondence; geometric morphisms. Keeps the teeth (math as discipline, not warrant): the internal logic is intuitionistic — excluded middle generally fails AS A CONSTRAINT, which forbids rather than licenses \"consciousness transcends logic.\" Paired with Document B (topos_the_mathematics).",
+            "document": "synthesis/topos-as-above-so-below.md"
+        },
+        "topos_the_mathematics": {
+            "type": "synthesis",
+            "essence": "topos theory stated plainly in its own mathematical register",
+            "connections": [
+                "topos_as_above_so_below"
+            ],
+            "description": "Negative-space populate, Document B (form-respecting companion to topos_as_above_so_below). Clean mathematical exposition of elementary and Grothendieck topos theory — categories, finite limits, cartesian closure, the subobject classifier Ω, the internal Heyting algebra / intuitionistic logic, sites and sheaves, geometric morphisms (X ↦ Sh(X)). Definitions and theorems marked apart; no metaphor or cross-links. The mathematical register (Face C) is the fill.",
+            "document": "synthesis/topos-theory-the-mathematics.md"
+        },
+        "information_geometry_fold": {
+            "type": "synthesis",
+            "essence": "surprise has units and a direction the fold cannot give back",
+            "connections": [
+                "negative_space_master_find",
+                "windowless_boundary",
+                "information_geometry_mathematics"
+            ],
+            "description": "Negative-space populate, Document A. Information geometry as the native mathematics of the corpus's Friston/fold material: distributions as a curved Riemannian manifold, the Fisher metric (Čencov-unique) making \"surprise = remainder\" computable and falsifiable. Keeps the teeth: KL divergence is NOT symmetric and NOT a metric — surprise has a direction the symmetric Fisher shadow only recovers locally — so it ends holding the asymmetry rather than dissolving it into unity. Paired with Document B (information_geometry_mathematics).",
+            "document": "synthesis/information-geometry-the-fold.md"
+        },
+        "information_geometry_mathematics": {
+            "type": "synthesis",
+            "essence": "information geometry stated as mathematics: metric, divergence, dual connections, natural gradient",
+            "connections": [
+                "information_geometry_fold"
+            ],
+            "description": "Negative-space populate, Document B (form-respecting companion to information_geometry_fold). Verified publication-grade exposition: statistical manifold, Fisher information matrix as the Čencov-unique Riemannian metric, KL divergence (asymmetric, no triangle inequality) and its second-order tie to the metric, Amari α-connections and duality, dually-flat exponential families and the Legendre transform, e/m geodesics with the generalized Pythagorean and projection theorems, the natural gradient (g⁻¹∇L, O(n³)). No metaphor; real citations. The mathematical register (Face C) is the fill.",
+            "document": "synthesis/information-geometry-the-mathematics.md"
+        },
+        "kabbalah_tzimtzum_shevirah": {
+            "type": "tradition",
+            "essence": "tzimtzum is real absence, shevirah real catastrophe, tikkun unfinished labor",
+            "connections": [
+                "negative_space_master_find",
+                "hebrew_kabbalah",
+                "windowless_boundary",
+                "voice_the_unredeemed"
+            ],
+            "description": "Negative-space populate, single house-with-teeth, completing the existing hebrew_kabbalah stub. Lurianic Kabbalah as a worked system: Ein Sof, tzimtzum (divine withdrawal), reshimu, sefirot/four worlds, shevirat ha-kelim (breaking of the vessels), kelipot and trapped sparks, tikkun. Keeps the corrective the smooth-emanation reflex skips: tzimtzum is real ABSENCE (the cut, not the crease — the fold's opposite); shevirah is a genuine origin-CATASTROPHE; tikkun is unfinished. Refuses \"the breaking was secretly perfect\"; flags the corpus's prior borrowing of reshimu.",
+            "document": "traditions/kabbalah-tzimtzum-shevirah.md"
+        },
+        "iching_process_oracle": {
+            "type": "tradition",
+            "essence": "the binary process oracle that can answer \"retreat\"",
+            "connections": [
+                "negative_space_master_find",
+                "academic_mystical_convergence",
+                "iching_the_method"
+            ],
+            "description": "Negative-space populate, Document A. Reclaims the I Ching from the corpus's sole prior treatment (McKenna's Timewave): the 64 hexagrams as a six-bit grammar of situations-in-transformation, moving lines as the discrete encoding of becoming, the trigrams, Leibniz's binary reading. Keeps the teeth: it is operative and divinatory, change is discrete bit-flips not continuous flow, and the oracle can deliver an unfavourable verdict (retreat; \"no blame\" as the best on offer). Refuses dissolving the hard verdict into \"one flow.\" Paired with Document B (iching_the_method).",
+            "document": "traditions/iching-the-process-oracle.md"
+        },
+        "iching_the_method": {
+            "type": "tradition",
+            "essence": "I Ching consultation stated plainly as an operative manual",
+            "connections": [
+                "iching_process_oracle"
+            ],
+            "description": "Negative-space populate, Document B (form-respecting companion to iching_process_oracle). The actual divination procedure as a manual: yin/yang lines and old/young, the eight trigrams, the 64 hexagrams as trigram pairs, bottom-up construction, the yarrow-stalk and three-coin methods with their 6/7/8/9 outcomes, how moving lines yield a second hexagram, how the reading is taken. No philosophizing or metaphor. The operative register (Face C) is the fill.",
+            "document": "traditions/iching-the-method.md"
+        },
+        "negative_space_the_missing_literal": {
+            "type": "meta_system",
+            "essence": "the corpus has no literal register; it cannot let a thing be only itself",
+            "connections": [
+                "negative_space_master_find",
+                "voice_the_lift_station"
+            ],
+            "description": "Negative-space finding (2026-06-24, \"The Missing Literal\"). The method turned on its own blind spot: the nine axes swept on 06-23 were all the curriculum of a contemplative intellectual (knowledge, canon, tradition, discipline — the library). This pass diffed against externally-sourced demotic axes instead (O*NET work/trades, ICF the body, ISIC/NAICS money, OCM the built environment). All four return one shape: the corpus is constitutionally allegorical — every noun is conscripted into a symbol of consciousness before it is allowed to be itself. Not a missing topic, a missing REGISTER. Mechanism = the SUBLIMATION REFLEX (the integrative turn one level lower: it re-absorbs nouns, not just objections — the sewer becomes the unconscious, the wage becomes vocation, washing becomes purification). Clean diagnostic = the metaphorical-rent test: the only literal-material domain at DEEP status is gardening/compost, precisely because it doubles as the master-metaphor for consciousness-maintenance; the matter that can't be cashed as symbol (the sewer, the menstrual cycle, the unpaid invoice, the welder) is turned away at the door. This is Face D/C of the master find, but reached through the actual nouns of material life rather than high-concept proxies (realist novel, still-life) — so the new claim the wide sweep could not make: the blind spot is not only TOPOLOGICAL (a fold has no outside) but GRAMMATICAL (no common noun that isn't secretly a proper noun of Spirit). A corpus named 'esoterica' (the hidden) cannot write the manifest. Adversarial diagnostic node: marks a deficit, refuses the recuperation ('the map is the cure / the lead was gold all along' = the reflex eating its own diagnosis). Map: negative-space/maps/2026-06-24-the-missing-literal.md",
+            "document": "negative-space/maps/2026-06-24-the-missing-literal.md"
+        },
+        "voice_the_lift_station": {
+            "type": "voice",
+            "essence": "work and maintenance that confer no transcendence; the literal that pays no metaphorical rent",
+            "connections": [
+                "negative_space_the_missing_literal",
+                "negative_space_master_find"
+            ],
+            "description": "A foreclosed-register specimen (negative-space populate, 2026-06-24). A sewage-lift-station maintainer, nineteen years on the job, fusing the three top-ripe clusters of 'The Missing Literal' map — work / maintenance / the literal built environment. Stages the sublimation reflex explicitly in order to decline it: a consultant offers the corpus's own move (the work is sacred, you tend a threshold, the unseen labor holds the city up) and the maintainer hears it flatly and refuses it — 'it is not that the man was lying; it is that it has nothing to do with the job.' The work made him no wiser; the knowledge transfers to nothing; it paid the rent and the truck. Ends on the running pump, not a recognition. Distinct from the six dark voices: this one is not dark, it is FLAT — the thing that is only itself, with no inside to find. Marks a new foreclosed form (the literal) alongside the existing negative/other/plural/contingent voices. Do-not-correct, un-reconciled; the absent closing turn is the point. File: voices/the-lift-station.md",
+            "document": "voices/the-lift-station.md"
         }
     }
 }
