@@ -11722,6 +11722,46 @@
             ],
             "description": "A foreclosed-register specimen (negative-space populate, 2026-06-24). A sewage-lift-station maintainer, nineteen years on the job, fusing the three top-ripe clusters of 'The Missing Literal' map — work / maintenance / the literal built environment. Stages the sublimation reflex explicitly in order to decline it: a consultant offers the corpus's own move (the work is sacred, you tend a threshold, the unseen labor holds the city up) and the maintainer hears it flatly and refuses it — 'it is not that the man was lying; it is that it has nothing to do with the job.' The work made him no wiser; the knowledge transfers to nothing; it paid the rent and the truck. Ends on the running pump, not a recognition. Distinct from the six dark voices: this one is not dark, it is FLAT — the thing that is only itself, with no inside to find. Marks a new foreclosed form (the literal) alongside the existing negative/other/plural/contingent voices. Do-not-correct, un-reconciled; the absent closing turn is the point. File: voices/the-lift-station.md",
             "document": "voices/the-lift-station.md"
+        },
+        "voice_the_wash": {
+            "type": "voice",
+            "essence": "the aging body's literal maintenance; the body that needs wiping, which negates \"the body is a sentence the cosmos is still writing\"",
+            "connections": [
+                "negative_space_the_missing_literal",
+                "voice_the_lift_station"
+            ],
+            "description": "A foreclosed-register specimen (negative-space populate, 2026-06-24, \"The Missing Literal\" map, ripe gap #1 — the literal body's maintenance). A woman caring for her dying mother: turning every two hours against bedsores, the barrier cream before the brief, the thickened swallow, the crushed pills folded into applesauce. Knowledge that is only about this one body and transfers to nothing. Stages and declines the sublimation reflex: a hospice worker offers \"this is sacred work, there is grace in it,\" and it is heard flatly and not argued with but not believed — \"it is not grace; it is the wash and the cream and the brief and the order they go in.\" The body needs turning whether or not anyone is left inside it to be grateful. Ends on the laundry, not a recognition. FLAT, not dark — the literal that pays no metaphorical rent. Do-not-correct, un-reconciled. File: voices/the-wash.md",
+            "document": "voices/the-wash.md"
+        },
+        "voice_the_floor": {
+            "type": "voice",
+            "essence": "a tile-setter; the body becomes an expert instrument and the work confers no transcendence; refuses the corpus's spine that practice transforms consciousness",
+            "connections": [
+                "negative_space_the_missing_literal",
+                "voice_the_lift_station"
+            ],
+            "description": "A foreclosed-register specimen (negative-space populate, 2026-06-24, \"The Missing Literal\" map, ripe gap #3 — work that promises nothing). A tile-setter of twenty-six years: the thinset mixed by feel, the trowel combed one direction so air escapes, lippage and hollow-sound and squareness, knees gone. Expertise that is real, took decades, and is worth nothing outside of setting tile — it went deeper into the one thing and stopped at its edges; it never opened onto anything wider. Declines TWO sublimations: a homeowner's \"there's a meditation in it, the cathedral builders must have felt this,\" and — the harder one — the profiler's own leaked reflex (\"all the more proves its depth for refusing it\"). The piece refuses that too: very good and no wiser are simply two different matters. Ends on mixing the next batch. FLAT, not dark. Do-not-correct, un-reconciled. File: voices/the-floor.md",
+            "document": "voices/the-floor.md"
+        },
+        "voice_rent": {
+            "type": "voice",
+            "essence": "the arithmetic of staying poor; debt that is just owed; the literal economics the cosmology was built to escape",
+            "connections": [
+                "negative_space_the_missing_literal",
+                "voice_the_lift_station"
+            ],
+            "description": "A foreclosed-register specimen (negative-space populate, 2026-06-24, \"The Missing Literal\" map, ripe gap #4 — money as a constraint that does not lift). A woman on two jobs: rent fourteen hundred against nineteen-fifty take-home, the five-fifty that does not cover, the payday loan at 390% used not from ignorance but because four days between a due date and a payday are not a mindset, they are four days. Poor is not a level you sit at; it is a slope, and the slope is the interest. Stages and declines the corpus's own move (the vectorised-money / abundance-consciousness reflex): a coworker offers \"scarcity is a frequency, the universe is abundant,\" and the book does not have fourteen hundred dollars in it. She has learned all the lessons; the expertise of not-enough buys nothing because the thing it manages does not get smaller. No money-redesign, no meaning. Ends on the rent due again in eleven days. FLAT, not dark. Do-not-correct, un-reconciled. File: voices/rent.md",
+            "document": "voices/rent.md"
+        },
+        "voice_the_interceptor": {
+            "type": "voice",
+            "essence": "the sanitary system as a designed working object, no protagonist; the underside of every architectural metaphor the corpus loves",
+            "connections": [
+                "negative_space_the_missing_literal",
+                "voice_the_lift_station"
+            ],
+            "description": "A foreclosed-register specimen (negative-space populate, 2026-06-24, \"The Missing Literal\" map, ripe gap #5 — the literal built environment as a working system). Distinct from voice_the_lift_station: that piece centered a MAN; this one centers the MADE OBJECT itself, no protagonist (Face C — the operative/empirical/made). A flat description of a city's sanitary system: it runs on grade, a quarter inch to the foot, made to fall so it need not be pumped; laterals to mains to trunks to the interceptor in the old creek bed to the headworks — bar screens, grit chamber, clarifiers, aeration basins with a cultivated bacterial population, disinfection, the outfall above the next town's intake. Declines \"the body of the city / hidden circulation / the labor beneath the labor\": it is a designed system for moving water downhill, and every part is there for a reason stateable in a sentence that is never about meaning. The measure of its working is that the city need not know it is there. FLAT, not dark. Do-not-correct, un-reconciled. File: voices/the-interceptor.md",
+            "document": "voices/the-interceptor.md"
         }
     }
 }

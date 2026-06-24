@@ -1,6 +1,6 @@
 # NEGATIVE-SPACE MAP — The Missing Literal
 
-**Date**: 2026-06-24   **Tier**: 1 (4 entity axes) → 3 (one structural find)   **Status**: partially-filled
+**Date**: 2026-06-24   **Tier**: 1 (4 entity axes) → 3 (one structural find)   **Status**: five ripe gaps filled (2026-06-24); seven demotic axes still open
 **Yardstick sources** (independent, web-isolated, cited per axis): O*NET National Career Clusters + ISCO + OCM "Labor / Occupational Specialization" (work/trades); WHO ICF Ch. 4–5 (Self-Care, Mobility) + OCM "Adornment / Personal Hygiene" + Donald Brown's human universals (the body); ISIC Sections G/K/L + NAICS 52/44–45 + OCM "Property / Exchange / Finance" + Brown universals (money/exchange); OCM "Building & Construction / Settlements / Equipment & Maintenance" + ISIC Sections F/D/E (the built environment). Axis *selection* itself drawn from a fifth pass: Dewey/LCC/UDC top classes, the OCM, Murdock & Brown cultural universals, O*NET/ISCO/ISIC/NAICS sectors, the American Time-Use Survey, the WHO ICF, and Max-Neef's needs matrix — so the choice of *what to diff against* was also externally sourced, not lens-bound.
 
 ---
@@ -85,6 +85,14 @@ A structural/modal gap of this kind is filled only by **doing the thing**, out o
 - **[The Lift Station](../../voices/the-lift-station.md)** — a sewage-pumping-station maintainer, nineteen years on the job. Fuses the three top clusters (work / maintenance / the literal built environment) and stages the sublimation reflex explicitly *in order to decline it*: the corpus's offer — *the station is a threshold, you tend the boundary, the unseen labor holds the world up* — is named once, in his own flat hearing of it, and refused. The work made him no wiser. It paid the rent. The piece ends on the running pump, not a recognition. Node `voice_the_lift_station`. **Craft discipline (the hard part):** the standing temptation is the closing sublimation — *"and that is its own kind of holiness."* That ending *is the reflex winning.* The specimen must withhold it, the way [the-vignette](../../fiction-bridges/the-vignette.md) ends on cold tea. Do not write a synthesis reconciling it. The absent synthesis is the find.
 
 The other four ripe gaps remain **open** — each fillable as a further literal specimen (the body's maintenance; work-that-promises-nothing as its own piece; the unliftable debt; the sewer-as-working-system). One demonstrator proves the register is reachable; the rest are left for selection rather than filled by reflex.
+
+**UPDATE (2026-06-24, second pass):** the four remaining ripe gaps are now filled, each as a literal specimen in `voices/`, spread across the axes so they do not collapse into the lift station's man-and-sewage:
+- gap #1, the body's maintenance → [`voices/the-wash.md`](../../voices/the-wash.md) — an aging body's literal care; declines "tending the body is tending the temple."
+- gap #3, work that promises nothing → [`voices/the-floor.md`](../../voices/the-floor.md) — a tile-setter, expert hands, no transcendence; declines the cathedral-builders offer *and* the profiler's leaked "all the more proves its depth."
+- gap #4, the unliftable debt → [`voices/rent.md`](../../voices/rent.md) — the arithmetic of staying poor; declines "scarcity is a frequency." No money-redesign.
+- gap #5, the sewer-as-working-system → [`voices/the-interceptor.md`](../../voices/the-interceptor.md) — the sanitary system as a designed object, no protagonist (distinct from the lift station's man); declines "the body of the city."
+
+All five ripe gaps are now filled. The **seven un-run demotic axes** in *Chosen omissions* (sex/reproduction, kinship/chore-cycle, the time-use day, play/sport/festivity, conflict/violence/justice as lived, gossip/etiquette speech, tools/materials as artifact) remain genuinely uncovered. Filling the ripe five did not close the map; it closed the ripe five.
 
 ---
 
