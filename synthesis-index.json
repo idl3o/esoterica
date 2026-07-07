@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-07-07T16:40:33.244Z",
+  "generated": "2026-07-07T22:57:12.801Z",
   "stats": {
-    "documentCount": 569,
-    "totalWords": 2388793,
-    "totalReadingTime": 9831,
+    "documentCount": 570,
+    "totalWords": 2390290,
+    "totalReadingTime": 9837,
     "categories": 65,
-    "averageWordsPerDoc": 4198,
+    "averageWordsPerDoc": 4193,
     "sourceCounts": {
-      "synthesis": 544,
+      "synthesis": 545,
       "extraction": 0,
       "translated": 25
     },
@@ -77,13 +77,13 @@
       "topos-theory-the-mathematics.md": 1,
       "traditions": 6,
       "trophic-ecology-the-mechanism.md": 1,
-      "zeitgeist": 36,
+      "zeitgeist": 37,
       "translated": 25
     },
     "topTags": [
       {
         "tag": "consciousness",
-        "count": 523
+        "count": 524
       },
       {
         "tag": "recognition",
@@ -99,11 +99,11 @@
       },
       {
         "tag": "source",
-        "count": 329
+        "count": 330
       },
       {
         "tag": "unity",
-        "count": 305
+        "count": 307
       },
       {
         "tag": "density",
@@ -135,7 +135,7 @@
       },
       {
         "tag": "timeline",
-        "count": 133
+        "count": 134
       },
       {
         "tag": "galactic",
@@ -194,11 +194,11 @@
         "count": 45
       },
       {
-        "tag": "fiction",
-        "count": 36
+        "tag": "zeitgeist",
+        "count": 37
       },
       {
-        "tag": "zeitgeist",
+        "tag": "fiction",
         "count": 36
       }
     ]
@@ -45151,6 +45151,40 @@
       "id": "geist-2026-02-18"
     },
     {
+      "path": "synthesis/zeitgeist/geist-2026-07-07.md",
+      "fileName": "geist-2026-07-07.md",
+      "source": "synthesis",
+      "category": "zeitgeist",
+      "channel": "",
+      "title": "THE GEIST — 7 July 2026",
+      "subtitle": "SILENCE",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "July 2026",
+      "excerpt": "*A reading of the collective gaze — where attention lands, what it avoids, how it transforms. Contemplative commentary on public discourse — analysis, not instruction.*",
+      "tags": [
+        "consciousness",
+        "source",
+        "unity",
+        "zeitgeist"
+      ],
+      "quotes": [],
+      "wordCount": 1423,
+      "readingTime": 6,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "MIRROR"
+        }
+      ],
+      "id": "geist-2026-07-07"
+    },
+    {
       "path": "synthesis/zeitgeist/zeit-2026-02-16.md",
       "fileName": "zeit-2026-02-16.md",
       "source": "synthesis",
@@ -46082,11 +46116,13 @@
       "date": "July 2026",
       "excerpt": "*A reading of the present moment. Signal and processing integrated. Silence embedded. Scale honoured. Contemplative commentary on public events — analysis, not instruction.*",
       "tags": [
+        "timeline",
         "source",
+        "unity",
         "zeitgeist"
       ],
       "quotes": [],
-      "wordCount": 2091,
+      "wordCount": 2165,
       "readingTime": 9,
       "structure": [
         {
