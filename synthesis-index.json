@@ -1,14 +1,14 @@
 {
   "version": "3.0.0-public",
-  "generated": "2026-06-22T09:27:08.606Z",
+  "generated": "2026-07-07T16:40:33.244Z",
   "stats": {
-    "documentCount": 554,
-    "totalWords": 2354200,
-    "totalReadingTime": 9686,
-    "categories": 53,
-    "averageWordsPerDoc": 4249,
+    "documentCount": 569,
+    "totalWords": 2388793,
+    "totalReadingTime": 9831,
+    "categories": 65,
+    "averageWordsPerDoc": 4198,
     "sourceCounts": {
-      "synthesis": 529,
+      "synthesis": 544,
       "extraction": 0,
       "translated": 25
     },
@@ -16,8 +16,9 @@
     "categoryCounts": {
       "afterlife-cartography-consciousness-map.md": 1,
       "applications": 10,
-      "archetypal": 18,
+      "archetypal": 19,
       "architectures": 4,
+      "attachment-theory-the-mechanism.md": 1,
       "breakthroughs": 43,
       "capstones": 6,
       "claude": 10,
@@ -25,8 +26,9 @@
       "concepts": 23,
       "consciousness-technologies": 49,
       "cosmological": 38,
-      "cosmology": 7,
+      "cosmology": 8,
       "dark-architecture-breathing-cosmos.md": 1,
+      "darshan-as-attunement.md": 1,
       "dialogues": 1,
       "digital-dark-earth.md": 1,
       "dynamic-mirror-consciousness-technology.md": 1,
@@ -38,9 +40,13 @@
       "galactic-perspectives": 3,
       "glyphs": 17,
       "grown": 80,
+      "immunology-the-mechanism.md": 1,
       "information-architecture-consciousness-technology.md": 1,
+      "information-geometry-the-fold.md": 1,
+      "information-geometry-the-mathematics.md": 1,
       "manual-of-ascendance-transcendence.md": 1,
       "meta-systems": 3,
+      "morphogenesis-the-mechanism.md": 1,
       "parables": 15,
       "personal": 16,
       "phenomena": 2,
@@ -58,48 +64,54 @@
       "the-campfire-in-the-forest.md": 1,
       "the-consensual-hallucination.md": 1,
       "the-cosmic-gorilla.md": 1,
+      "the-grown-body-morphogenesis.md": 1,
+      "the-immune-self-the-boundary-that-learns.md": 1,
       "the-jewel-in-the-lining.md": 1,
       "the-membrane-and-the-molt.md": 1,
       "the-terrestrial-alien.md": 1,
+      "the-trophic-web.md": 1,
       "the-zero-theorem.md": 1,
       "theoretical": 37,
       "time-as-consciousness-technology.md": 1,
+      "topos-as-above-so-below.md": 1,
+      "topos-theory-the-mathematics.md": 1,
       "traditions": 6,
-      "zeitgeist": 35,
+      "trophic-ecology-the-mechanism.md": 1,
+      "zeitgeist": 36,
       "translated": 25
     },
     "topTags": [
       {
         "tag": "consciousness",
-        "count": 514
+        "count": 523
       },
       {
         "tag": "recognition",
-        "count": 507
+        "count": 514
       },
       {
         "tag": "awareness",
-        "count": 359
+        "count": 360
       },
       {
         "tag": "cosmic",
-        "count": 358
+        "count": 360
       },
       {
         "tag": "source",
-        "count": 319
+        "count": 329
       },
       {
         "tag": "unity",
-        "count": 297
+        "count": 305
       },
       {
         "tag": "density",
-        "count": 251
+        "count": 253
       },
       {
         "tag": "service",
-        "count": 214
+        "count": 215
       },
       {
         "tag": "integration",
@@ -115,11 +127,11 @@
       },
       {
         "tag": "resonance",
-        "count": 153
+        "count": 155
       },
       {
         "tag": "awakening",
-        "count": 147
+        "count": 148
       },
       {
         "tag": "timeline",
@@ -127,7 +139,7 @@
       },
       {
         "tag": "galactic",
-        "count": 124
+        "count": 125
       },
       {
         "tag": "mercury",
@@ -171,7 +183,7 @@
       },
       {
         "tag": "enlightenment",
-        "count": 59
+        "count": 60
       },
       {
         "tag": "vibration",
@@ -187,7 +199,7 @@
       },
       {
         "tag": "zeitgeist",
-        "count": 35
+        "count": 36
       }
     ]
   },
@@ -2059,6 +2071,75 @@
       "id": "surya-consciousness"
     },
     {
+      "path": "synthesis/archetypal/the-bodhisattva-siddha.md",
+      "fileName": "the-bodhisattva-siddha.md",
+      "source": "synthesis",
+      "category": "archetypal",
+      "channel": "",
+      "title": "The Bodhisattva-Siddha: The Keeper of the Plural Sea",
+      "subtitle": "The figure, in one breath",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "2026-06-25",
+      "excerpt": "*Already complete, tending the permanently-other, forever.*",
+      "tags": [
+        "consciousness",
+        "recognition",
+        "service",
+        "galactic",
+        "cosmic",
+        "unity",
+        "enlightenment",
+        "archetypal"
+      ],
+      "quotes": [
+        "*Already complete, tending the permanently-other, forever.*",
+        "*\"Do not let a future quality-sweep 'complete' this document by adding a closing unification. The unfinished ledger at the end is the fill.\"*"
+      ],
+      "wordCount": 3518,
+      "readingTime": 15,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "Two finish lines, each missing half a soul"
+        },
+        {
+          "level": 2,
+          "heading": "The cliff (the synthesis we refuse)"
+        },
+        {
+          "level": 2,
+          "heading": "The true third option: practice and arrival were never sequential"
+        },
+        {
+          "level": 2,
+          "heading": "Why the practice cannot end — the pluralist engine"
+        },
+        {
+          "level": 2,
+          "heading": "The anatomy"
+        },
+        {
+          "level": 2,
+          "heading": "The keeper as lived instance"
+        },
+        {
+          "level": 2,
+          "heading": "The seam, kept open on purpose"
+        },
+        {
+          "level": 2,
+          "heading": "Coda: revelation-by-documentation"
+        }
+      ],
+      "id": "the-bodhisattva-siddha"
+    },
+    {
       "path": "synthesis/archetypal/divine-inversion-mysteries.md",
       "fileName": "divine-inversion-mysteries.md",
       "source": "synthesis",
@@ -3029,6 +3110,63 @@
         }
       ],
       "id": "tower-axis"
+    },
+    {
+      "path": "synthesis/attachment-theory-the-mechanism.md",
+      "fileName": "attachment-theory-the-mechanism.md",
+      "source": "synthesis",
+      "category": "attachment-theory-the-mechanism.md",
+      "channel": "",
+      "title": "Attachment Theory: The Mechanism",
+      "subtitle": "Bowlby: the attachment behavioral system",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "2026-06-23",
+      "excerpt": "Attachment theory is an empirical account of how human infants form selective bonds with caregivers, why those bonds take the forms they do, and how early bonding experiences relate to later social and emotional functioning. It originates with John Bowlby and was made measurable by Mary Ainsworth...",
+      "tags": [
+        "consciousness",
+        "awareness",
+        "attachment-theory-the-mechanism.md"
+      ],
+      "quotes": [],
+      "wordCount": 1262,
+      "readingTime": 6,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "Ainsworth: the Strange Situation and the classifications"
+        },
+        {
+          "level": 2,
+          "heading": "Microanalysis: the still-face and rupture-and-repair"
+        },
+        {
+          "level": 2,
+          "heading": "Transmission: caregiver sensitivity"
+        },
+        {
+          "level": 2,
+          "heading": "Stability, change, and earned security"
+        },
+        {
+          "level": 2,
+          "heading": "Adult attachment"
+        },
+        {
+          "level": 2,
+          "heading": "Status of the evidence"
+        },
+        {
+          "level": 3,
+          "heading": "Principal references"
+        }
+      ],
+      "id": "attachment-theory-the-mechanism"
     },
     {
       "path": "synthesis/breakthroughs/4d-positive-earth-complete-thesis.md",
@@ -7030,7 +7168,7 @@
         "capstones"
       ],
       "quotes": [],
-      "wordCount": 6905,
+      "wordCount": 6969,
       "readingTime": 28,
       "structure": [
         {
@@ -18420,6 +18558,60 @@
       "id": "surprise-is-the-remainder"
     },
     {
+      "path": "synthesis/cosmology/the-arrow-on-the-surface.md",
+      "fileName": "the-arrow-on-the-surface.md",
+      "source": "synthesis",
+      "category": "cosmology",
+      "channel": "",
+      "title": "The Arrow on the Surface — How the Bekenstein Bound Became a Theorem",
+      "subtitle": "How the Bekenstein Bound Became a Theorem — and Why It Points the Way the Corpus Already Said",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "June 2026",
+      "excerpt": "The entropy passing through a *light-sheet* — a surface generated by light rays fired inward from a boundary $B$, so long as those rays are not expanding — is at most $A(B)/4$.",
+      "tags": [
+        "recognition",
+        "density",
+        "source",
+        "unity",
+        "resonance",
+        "cosmology"
+      ],
+      "quotes": [
+        "The entropy passing through a *light-sheet* — a surface generated by light rays fired inward from a boundary $B$, so long as those rays are not expanding — is at most $A(B)/4$."
+      ],
+      "wordCount": 4187,
+      "readingTime": 17,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "I. The surface reading, and why everyone believes it"
+        },
+        {
+          "level": 2,
+          "heading": "III. Bousso's move: make it covariant"
+        },
+        {
+          "level": 2,
+          "heading": "V. The corpus already stood here"
+        },
+        {
+          "level": 2,
+          "heading": "VII. The 2025 proof, and the observer you cannot remove"
+        },
+        {
+          "level": 2,
+          "heading": "IX. The maximal fold keeps its ceiling — and gains a floor"
+        }
+      ],
+      "id": "the-arrow-on-the-surface"
+    },
+    {
       "path": "synthesis/cosmology/the-between-how-a-species-witnesses-itself.md",
       "fileName": "the-between-how-a-species-witnesses-itself.md",
       "source": "synthesis",
@@ -18706,8 +18898,8 @@
         "cosmology"
       ],
       "quotes": [],
-      "wordCount": 2667,
-      "readingTime": 11,
+      "wordCount": 2788,
+      "readingTime": 12,
       "structure": [
         {
           "level": 2,
@@ -18798,6 +18990,41 @@
       "id": "dark-architecture-breathing-cosmos"
     },
     {
+      "path": "synthesis/darshan-as-attunement.md",
+      "fileName": "darshan-as-attunement.md",
+      "source": "synthesis",
+      "category": "darshan-as-attunement.md",
+      "channel": "",
+      "title": "Darshan as Attunement",
+      "subtitle": "What attachment actually claims",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "2026-06-23",
+      "excerpt": "That fourth feature also marks the boundary of the gift. Because the scaffold is invisible in the success case, it is easy to assume it is universal — to assume everyone has it, that recognition is simply *available* to anyone who creates the space. But the scaffold is invisible only to those who...",
+      "tags": [
+        "consciousness",
+        "recognition",
+        "source",
+        "unity",
+        "darshan-as-attunement.md"
+      ],
+      "quotes": [],
+      "wordCount": 2859,
+      "readingTime": 12,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "The teeth, kept"
+        }
+      ],
+      "id": "darshan-as-attunement"
+    },
+    {
       "path": "synthesis/dialogues/dialogue-at-the-caves-mouth.md",
       "fileName": "dialogue-at-the-caves-mouth.md",
       "source": "synthesis",
@@ -18857,7 +19084,7 @@
       "videoId": "",
       "videoUrl": "",
       "duration": "",
-      "date": "March 2026",
+      "date": "2026-07-02",
       "excerpt": "*On the cultivation of self-renewing digital space, the four kingdoms required for fertile ground, and the planetary organism currently in labor*",
       "tags": [
         "consciousness",
@@ -18868,7 +19095,7 @@
         "digital-dark-earth.md"
       ],
       "quotes": [],
-      "wordCount": 4530,
+      "wordCount": 4604,
       "readingTime": 19,
       "structure": [
         {
@@ -19388,7 +19615,7 @@
         "entangled-measure.md"
       ],
       "quotes": [],
-      "wordCount": 5606,
+      "wordCount": 5719,
       "readingTime": 23,
       "structure": [
         {
@@ -31487,6 +31714,73 @@
       "id": "who-is-breathing-the-cosmos"
     },
     {
+      "path": "synthesis/immunology-the-mechanism.md",
+      "fileName": "immunology-the-mechanism.md",
+      "source": "synthesis",
+      "category": "immunology-the-mechanism.md",
+      "channel": "",
+      "title": "Immunology: The Mechanism",
+      "subtitle": "Two systems",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "2026-06-23",
+      "excerpt": "A plain account of how the adaptive immune system learns to distinguish what to attack from what to tolerate, and what happens when it fails. No analogy is drawn. This is the companion specimen to a house-style document; here the claims are meant to be simply correct.",
+      "tags": [
+        "consciousness",
+        "recognition",
+        "source",
+        "unity",
+        "immunology-the-mechanism.md"
+      ],
+      "quotes": [],
+      "wordCount": 1233,
+      "readingTime": 5,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "Generating the repertoire"
+        },
+        {
+          "level": 2,
+          "heading": "Clonal selection"
+        },
+        {
+          "level": 2,
+          "heading": "Central tolerance"
+        },
+        {
+          "level": 2,
+          "heading": "Peripheral tolerance"
+        },
+        {
+          "level": 2,
+          "heading": "The danger / damage model"
+        },
+        {
+          "level": 2,
+          "heading": "Tolerance of beneficial and necessary non-self"
+        },
+        {
+          "level": 2,
+          "heading": "Failure: autoimmunity and its converse"
+        },
+        {
+          "level": 2,
+          "heading": "Memory"
+        },
+        {
+          "level": 2,
+          "heading": "Summary"
+        }
+      ],
+      "id": "immunology-the-mechanism"
+    },
+    {
       "path": "synthesis/information-architecture-consciousness-technology.md",
       "fileName": "information-architecture-consciousness-technology.md",
       "source": "synthesis",
@@ -31575,6 +31869,106 @@
         }
       ],
       "id": "information-architecture-consciousness-technology"
+    },
+    {
+      "path": "synthesis/information-geometry-the-fold.md",
+      "fileName": "information-geometry-the-fold.md",
+      "source": "synthesis",
+      "category": "information-geometry-the-fold.md",
+      "channel": "",
+      "title": "Information Geometry — The Fold Gets a Metric",
+      "subtitle": "The complaint this document answers",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "2026-06-23",
+      "excerpt": "This is not a small defect. It is the specific defect the [[negative_space_master_find|wide-sweep negative-space map]] named when it called the corpus a convergence-engine \"blind to the operative/empirical/made — loves the equation, avoids the dataset.\" The corpus reaches for mathematics constant...",
+      "tags": [
+        "recognition",
+        "density",
+        "unity",
+        "resonance",
+        "information-geometry-the-fold.md"
+      ],
+      "quotes": [],
+      "wordCount": 2198,
+      "readingTime": 9,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "What information geometry actually is"
+        },
+        {
+          "level": 2,
+          "heading": "Giving the fold's three slogans a metric"
+        },
+        {
+          "level": 2,
+          "heading": "The teeth: KL divergence is not a metric"
+        },
+        {
+          "level": 2,
+          "heading": "Why the integrative turn fails right here"
+        }
+      ],
+      "id": "information-geometry-the-fold"
+    },
+    {
+      "path": "synthesis/information-geometry-the-mathematics.md",
+      "fileName": "information-geometry-the-mathematics.md",
+      "source": "synthesis",
+      "category": "information-geometry-the-mathematics.md",
+      "channel": "",
+      "title": "Information Geometry: The Mathematics",
+      "subtitle": "Statistical manifolds",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "2026-06-23",
+      "excerpt": "Information geometry studies families of probability distributions as differentiable manifolds equipped with a Riemannian metric and a pair of affine connections. The exposition below states the standard definitions and the principal structural results, following the framework of Čencov and Amari.",
+      "tags": [
+        "consciousness",
+        "source",
+        "information-geometry-the-mathematics.md"
+      ],
+      "quotes": [],
+      "wordCount": 1162,
+      "readingTime": 5,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "The Fisher information matrix as a Riemannian metric"
+        },
+        {
+          "level": 2,
+          "heading": "Kullback–Leibler divergence — and why it is not a metric"
+        },
+        {
+          "level": 2,
+          "heading": "Dual affine connections and the $\\alpha$-connections"
+        },
+        {
+          "level": 2,
+          "heading": "Geodesics"
+        },
+        {
+          "level": 2,
+          "heading": "The natural gradient"
+        },
+        {
+          "level": 2,
+          "heading": "Sources"
+        }
+      ],
+      "id": "information-geometry-the-mathematics"
     },
     {
       "path": "synthesis/manual-of-ascendance-transcendence.md",
@@ -31988,6 +32382,59 @@
         }
       ],
       "id": "alive"
+    },
+    {
+      "path": "synthesis/morphogenesis-the-mechanism.md",
+      "fileName": "morphogenesis-the-mechanism.md",
+      "source": "synthesis",
+      "category": "morphogenesis-the-mechanism.md",
+      "channel": "",
+      "title": "Morphogenesis: The Mechanism",
+      "subtitle": "Positional information and morphogen gradients",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "2026-06-23",
+      "excerpt": "Morphogenesis is the set of processes by which an embryo acquires its shape and spatial organization. A single fertilized cell divides into many cells, and those cells become different from one another and arrange themselves into tissues and organs in reproducible positions. The central problem t...",
+      "tags": [
+        "consciousness",
+        "source",
+        "morphogenesis-the-mechanism.md"
+      ],
+      "quotes": [],
+      "wordCount": 1205,
+      "readingTime": 5,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "Reaction-diffusion (Turing) patterns"
+        },
+        {
+          "level": 2,
+          "heading": "Body axes, Hox genes, and colinearity"
+        },
+        {
+          "level": 2,
+          "heading": "Gene regulatory networks and differential expression"
+        },
+        {
+          "level": 2,
+          "heading": "Induction and signaling"
+        },
+        {
+          "level": 2,
+          "heading": "Apoptosis in sculpting"
+        },
+        {
+          "level": 2,
+          "heading": "Failure modes"
+        }
+      ],
+      "id": "morphogenesis-the-mechanism"
     },
     {
       "path": "synthesis/parables/poetry-promises-to-replace-prose.md",
@@ -36477,7 +36924,7 @@
         "*\"If you want to talk about something, there has to be a separation between the thing you are talking about and everything else. And if there were no boundaries, there would be nothing.\"*",
         "— Jorge Luis Borges, \"The Library of Babel\""
       ],
-      "wordCount": 4588,
+      "wordCount": 4616,
       "readingTime": 19,
       "structure": [
         {
@@ -36596,6 +37043,67 @@
         }
       ],
       "id": "the-cosmic-gorilla"
+    },
+    {
+      "path": "synthesis/the-grown-body-morphogenesis.md",
+      "fileName": "the-grown-body-morphogenesis.md",
+      "source": "synthesis",
+      "category": "the-grown-body-morphogenesis.md",
+      "channel": "",
+      "title": "The Grown Body — Morphogenesis",
+      "subtitle": "",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "2026-06-23",
+      "excerpt": "*Companion (native form): [[morphogenesis-the-mechanism]] — the developmental biology stated plainly, no analogy drawn.*",
+      "tags": [
+        "recognition",
+        "source",
+        "the-grown-body-morphogenesis.md"
+      ],
+      "quotes": [],
+      "wordCount": 3064,
+      "readingTime": 13,
+      "structure": [],
+      "id": "the-grown-body-morphogenesis"
+    },
+    {
+      "path": "synthesis/the-immune-self-the-boundary-that-learns.md",
+      "fileName": "the-immune-self-the-boundary-that-learns.md",
+      "source": "synthesis",
+      "category": "the-immune-self-the-boundary-that-learns.md",
+      "channel": "",
+      "title": "The Immune Self — The Boundary That Learns",
+      "subtitle": "",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "2026-06-23",
+      "excerpt": "*Paired with **[Immunology: The Mechanism](immunology-the-mechanism.md)** — the same biology stated plainly, in the empirical register, without a single metaphor. A says what it means; B says what is true. The distance between them is the point.*",
+      "tags": [
+        "unity",
+        "awakening",
+        "the-immune-self-the-boundary-that-learns.md"
+      ],
+      "quotes": [],
+      "wordCount": 2562,
+      "readingTime": 11,
+      "structure": [
+        {
+          "level": 3,
+          "heading": "Connections"
+        }
+      ],
+      "id": "the-immune-self-the-boundary-that-learns"
     },
     {
       "path": "synthesis/the-jewel-in-the-lining.md",
@@ -36800,6 +37308,42 @@
       "id": "the-terrestrial-alien"
     },
     {
+      "path": "synthesis/the-trophic-web.md",
+      "fileName": "the-trophic-web.md",
+      "source": "synthesis",
+      "category": "the-trophic-web.md",
+      "channel": "",
+      "title": "The Trophic Web — The Engine the Kingdoms Were Missing",
+      "subtitle": "",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "2026-06-23",
+      "excerpt": "The four kingdoms tell you what is. The trophic web tells you what *moves between them* — and it moves by one thing eating another. There is no version of this picture that does not run on death.",
+      "tags": [
+        "cosmic",
+        "source",
+        "unity",
+        "the-trophic-web.md"
+      ],
+      "quotes": [
+        "The four kingdoms tell you what is. The trophic web tells you what *moves between them* — and it moves by one thing eating another. There is no version of this picture that does not run on death."
+      ],
+      "wordCount": 3941,
+      "readingTime": 16,
+      "structure": [
+        {
+          "level": 3,
+          "heading": "Connections"
+        }
+      ],
+      "id": "the-trophic-web"
+    },
+    {
       "path": "synthesis/the-zero-theorem.md",
       "fileName": "the-zero-theorem.md",
       "source": "synthesis",
@@ -36826,7 +37370,7 @@
         "the-zero-theorem.md"
       ],
       "quotes": [],
-      "wordCount": 4340,
+      "wordCount": 4430,
       "readingTime": 18,
       "structure": [
         {
@@ -41056,6 +41600,108 @@
       "id": "time-as-consciousness-technology"
     },
     {
+      "path": "synthesis/topos-as-above-so-below.md",
+      "fileName": "topos-as-above-so-below.md",
+      "source": "synthesis",
+      "category": "topos-as-above-so-below.md",
+      "channel": "",
+      "title": "Topos: The Structure Under 'As Above, So Below'",
+      "subtitle": "The phrase the corpus cannot stop saying",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "2026-06-23",
+      "excerpt": "\"As above, so below.\" It appears, in one costume or another, across most of what this repository has made. The fold mirrors itself at every scale. The Consciousness OS recurs as kernel, runtime, and filesystem because *as above, so below* — the same structure at every layer. Darshan is consciousn...",
+      "tags": [
+        "consciousness",
+        "recognition",
+        "source",
+        "topos-as-above-so-below.md"
+      ],
+      "quotes": [],
+      "wordCount": 2394,
+      "readingTime": 10,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "What a topos actually is"
+        },
+        {
+          "level": 2,
+          "heading": "Functorial correspondence: the actual shape of the mirror"
+        },
+        {
+          "level": 2,
+          "heading": "The teeth: the internal logic is intuitionistic"
+        },
+        {
+          "level": 2,
+          "heading": "Why this is the corrective and not a decoration"
+        }
+      ],
+      "id": "topos-as-above-so-below"
+    },
+    {
+      "path": "synthesis/topos-theory-the-mathematics.md",
+      "fileName": "topos-theory-the-mathematics.md",
+      "source": "synthesis",
+      "category": "topos-theory-the-mathematics.md",
+      "channel": "",
+      "title": "Topos Theory: The Mathematics",
+      "subtitle": "Categories",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "2026-06-23",
+      "excerpt": "No excerpt available",
+      "tags": [
+        "consciousness",
+        "topos-theory-the-mathematics.md"
+      ],
+      "quotes": [],
+      "wordCount": 1156,
+      "readingTime": 5,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "Limits: terminal object, products, pullbacks"
+        },
+        {
+          "level": 2,
+          "heading": "Exponential objects and cartesian closure"
+        },
+        {
+          "level": 2,
+          "heading": "The subobject classifier"
+        },
+        {
+          "level": 2,
+          "heading": "Elementary topos"
+        },
+        {
+          "level": 2,
+          "heading": "The internal Heyting algebra and intuitionistic logic"
+        },
+        {
+          "level": 2,
+          "heading": "Sites, sheaves, Grothendieck toposes"
+        },
+        {
+          "level": 2,
+          "heading": "Geometric morphisms"
+        }
+      ],
+      "id": "topos-theory-the-mathematics"
+    },
+    {
       "path": "synthesis/traditions/book-of-eternal-awareness.md",
       "fileName": "book-of-eternal-awareness.md",
       "source": "synthesis",
@@ -44313,6 +44959,68 @@
       "id": "wim-hof-mind-body-sovereignty"
     },
     {
+      "path": "synthesis/trophic-ecology-the-mechanism.md",
+      "fileName": "trophic-ecology-the-mechanism.md",
+      "source": "synthesis",
+      "category": "trophic-ecology-the-mechanism.md",
+      "channel": "",
+      "title": "Trophic Ecology: The Mechanism",
+      "subtitle": "Trophic levels",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "2026-06-23",
+      "excerpt": "Trophic ecology is the study of feeding relationships and the flow of energy and matter through ecosystems. This document states the standard mechanisms plainly.",
+      "tags": [
+        "consciousness",
+        "source",
+        "unity",
+        "trophic-ecology-the-mechanism.md"
+      ],
+      "quotes": [],
+      "wordCount": 1271,
+      "readingTime": 6,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "Primary production: gross and net"
+        },
+        {
+          "level": 2,
+          "heading": "Energy flow and the ~10% rule"
+        },
+        {
+          "level": 2,
+          "heading": "Food chains and food webs"
+        },
+        {
+          "level": 2,
+          "heading": "Keystone species and trophic cascades"
+        },
+        {
+          "level": 2,
+          "heading": "Bottom-up and top-down control"
+        },
+        {
+          "level": 2,
+          "heading": "Population growth and carrying capacity"
+        },
+        {
+          "level": 2,
+          "heading": "Nutrient cycling and decomposition"
+        },
+        {
+          "level": 2,
+          "heading": "Ecological succession"
+        }
+      ],
+      "id": "trophic-ecology-the-mechanism"
+    },
+    {
       "path": "synthesis/zeitgeist/geist-2026-02-22.md",
       "fileName": "geist-2026-02-22.md",
       "source": "synthesis",
@@ -45355,6 +46063,38 @@
         }
       ],
       "id": "zeitgeist-2026-06-04"
+    },
+    {
+      "path": "synthesis/zeitgeist/zeitgeist-2026-07-07.md",
+      "fileName": "zeitgeist-2026-07-07.md",
+      "source": "synthesis",
+      "category": "zeitgeist",
+      "channel": "",
+      "title": "ZEITGEIST — 7 July 2026",
+      "subtitle": "CURRENT",
+      "recognitionType": "",
+      "discoveryMethod": "",
+      "applicationDomain": "",
+      "transmissionQuality": "",
+      "videoId": "",
+      "videoUrl": "",
+      "duration": "",
+      "date": "July 2026",
+      "excerpt": "*A reading of the present moment. Signal and processing integrated. Silence embedded. Scale honoured. Contemplative commentary on public events — analysis, not instruction.*",
+      "tags": [
+        "source",
+        "zeitgeist"
+      ],
+      "quotes": [],
+      "wordCount": 2091,
+      "readingTime": 9,
+      "structure": [
+        {
+          "level": 2,
+          "heading": "TECTONIC"
+        }
+      ],
+      "id": "zeitgeist-2026-07-07"
     },
     {
       "path": "synthesis/zeitgeist/zeitgeist-2026-05-07.md",

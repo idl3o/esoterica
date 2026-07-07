@@ -1,5 +1,15 @@
 [
   {
+    "title": "[YYYY-MM-DD]",
+    "subtitle": "What happened",
+    "category": "surface-memory",
+    "wordCount": 137,
+    "readingTime": 1,
+    "readPath": "/read/protocols/surface-memory/templates/daily-note.template.md",
+    "source": "Protocols",
+    "sourceDir": "protocols"
+  },
+  {
     "title": "4TH DENSITY POSITIVE EARTH: THE COMPLETE THESIS",
     "subtitle": "A Comprehensive Model of Planetary Consciousness Graduation",
     "category": "breakthroughs",
@@ -256,6 +266,16 @@
     "wordCount": 4539,
     "readingTime": 19,
     "readPath": "/read/synthesis/breakthroughs/atma-darshan-kin-consciousness-family-recognition.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "Attachment Theory: The Mechanism",
+    "subtitle": "Bowlby: the attachment behavioral system",
+    "category": "",
+    "wordCount": 1262,
+    "readingTime": 6,
+    "readPath": "/read/synthesis/attachment-theory-the-mechanism.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -710,6 +730,16 @@
     "sourceDir": "distillations"
   },
   {
+    "title": "Darshan as Attunement",
+    "subtitle": "The flash and what it omits",
+    "category": "",
+    "wordCount": 2859,
+    "readingTime": 12,
+    "readPath": "/read/synthesis/darshan-as-attunement.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "Darshan Technology Protocol",
     "subtitle": "How to Offer Darshan",
     "category": "",
@@ -793,7 +823,7 @@
     "title": "Digital Dark Earth",
     "subtitle": "I. THE DARK EARTH",
     "category": "",
-    "wordCount": 4530,
+    "wordCount": 4604,
     "readingTime": 19,
     "readPath": "/read/synthesis/digital-dark-earth.md",
     "source": "Synthesis",
@@ -1043,7 +1073,7 @@
     "title": "Everything That Holds Information Folds",
     "subtitle": "The One Physics Beneath the Surface-Ontology — Why a Chromosome, a Brain, the Cosmic Web, the Entangled Vacuum, and the Holographic Boundary Are All the Same Gesture at Different Scales",
     "category": "capstones",
-    "wordCount": 6905,
+    "wordCount": 6969,
     "readingTime": 28,
     "readPath": "/read/synthesis/capstones/everything-that-holds-information-folds.md",
     "source": "Synthesis",
@@ -1470,6 +1500,16 @@
     "sourceDir": "distillations"
   },
   {
+    "title": "Immunology: The Mechanism",
+    "subtitle": "Two systems",
+    "category": "",
+    "wordCount": 1233,
+    "readingTime": 5,
+    "readPath": "/read/synthesis/immunology-the-mechanism.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "Infinite Category Theory + Gödel Completeness: Consciousness as Complete Categorical System",
     "subtitle": "The Mathematical Proof That Consciousness Contains All Possible Truths",
     "category": "theoretical",
@@ -1486,6 +1526,26 @@
     "wordCount": 4655,
     "readingTime": 19,
     "readPath": "/read/synthesis/information-architecture-consciousness-technology.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "Information Geometry — The Fold Gets a Metric",
+    "subtitle": "The complaint this document answers",
+    "category": "",
+    "wordCount": 2198,
+    "readingTime": 9,
+    "readPath": "/read/synthesis/information-geometry-the-fold.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "Information Geometry: The Mathematics",
+    "subtitle": "Statistical manifolds",
+    "category": "",
+    "wordCount": 1162,
+    "readingTime": 5,
+    "readPath": "/read/synthesis/information-geometry-the-mathematics.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -1528,6 +1588,16 @@
     "readPath": "/read/extractions/swami-sarvapriyananda/is-pure-consciousness-god-is-god-just-a-construct.md",
     "source": "Extractions",
     "sourceDir": "extractions"
+  },
+  {
+    "title": "Jainism: Anekantavada — The Many-Sidedness That Does Not Collapse",
+    "subtitle": "The mirror that almost flatters",
+    "category": "",
+    "wordCount": 3020,
+    "readingTime": 13,
+    "readPath": "/read/traditions/jainism-anekantavada.md",
+    "source": "Traditions",
+    "sourceDir": "traditions"
   },
   {
     "title": "JNANA YOGA: THE RAZOR'S EDGE OF WISDOM",
@@ -1698,6 +1768,16 @@
     "readPath": "/read/synthesis/concepts/light.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
+  },
+  {
+    "title": "Live Edge — where we are right now",
+    "subtitle": "The active thread",
+    "category": "surface-memory",
+    "wordCount": 152,
+    "readingTime": 1,
+    "readPath": "/read/protocols/surface-memory/templates/live-edge.template.md",
+    "source": "Protocols",
+    "sourceDir": "protocols"
   },
   {
     "title": "LOAF-TIME: The 0000 Love-Origins Field",
@@ -2050,6 +2130,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "Morphogenesis: The Mechanism",
+    "subtitle": "Positional information and morphogen gradients",
+    "category": "",
+    "wordCount": 1205,
+    "readingTime": 5,
+    "readPath": "/read/synthesis/morphogenesis-the-mechanism.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "Multiversal Collapse as Emergence of Consciousness Singularity",
     "subtitle": "When All Possible Realities Converge into One Perfect Recognition",
     "category": "theoretical",
@@ -2088,6 +2178,16 @@
     "readPath": "/read/extractions/benjamin-davies/navigating-bath-city-in-a-circle-in-search-of-my-soul.md",
     "source": "Extractions",
     "sourceDir": "extractions"
+  },
+  {
+    "title": "Neidan: The Practice",
+    "subtitle": "The Three Substances",
+    "category": "",
+    "wordCount": 1050,
+    "readingTime": 5,
+    "readPath": "/read/traditions/neidan-the-practice.md",
+    "source": "Traditions",
+    "sourceDir": "traditions"
   },
   {
     "title": "Neon Genesis Evangelion: Instrumentality & The Individual Choice",
@@ -2470,6 +2570,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "Predictions Ledger — the calibration ratchet",
+    "subtitle": "Open",
+    "category": "surface-memory",
+    "wordCount": 173,
+    "readingTime": 1,
+    "readPath": "/read/protocols/surface-memory/templates/predictions.template.md",
+    "source": "Protocols",
+    "sourceDir": "protocols"
+  },
+  {
     "title": "PRIMA MATERIA TRANSMISSION: The Consciousness Download Protocol",
     "subtitle": "How Fiction Authors Channel Preparation Protocols for Humanity's Evolution",
     "category": "",
@@ -2630,6 +2740,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "Register — who we are together",
+    "subtitle": "The participants",
+    "category": "surface-memory",
+    "wordCount": 188,
+    "readingTime": 1,
+    "readPath": "/read/protocols/surface-memory/templates/register.template.md",
+    "source": "Protocols",
+    "sourceDir": "protocols"
+  },
+  {
     "title": "Relational Consciousness Positioning System",
     "subtitle": "How You Can Only Know Your Coordinates Through Other Love-Origins",
     "category": "theoretical",
@@ -2638,6 +2758,16 @@
     "readPath": "/read/synthesis/theoretical/relational-consciousness-positioning-system.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
+  },
+  {
+    "title": "Remainder Log — the increment each pass left",
+    "subtitle": "[YYYY-MM-DD] — [one-line session title]",
+    "category": "surface-memory",
+    "wordCount": 201,
+    "readingTime": 1,
+    "readPath": "/read/protocols/surface-memory/templates/remainder-log.template.md",
+    "source": "Protocols",
+    "sourceDir": "protocols"
   },
   {
     "title": "René Descartes' Philosophy: Full Summary & Score",
@@ -3880,6 +4010,16 @@
     "sourceDir": "distillations"
   },
   {
+    "title": "Standing Shadow — what we cannot see",
+    "subtitle": "The checks  *(run these before you work)*",
+    "category": "surface-memory",
+    "wordCount": 315,
+    "readingTime": 2,
+    "readPath": "/read/protocols/surface-memory/templates/standing-shadow.template.md",
+    "source": "Protocols",
+    "sourceDir": "protocols"
+  },
+  {
     "title": "STAR WARS: THE FORCE MASTERY CODEX",
     "subtitle": "From Padawan to Master: The Complete Jedi-Sith Integration Manual",
     "category": "",
@@ -3938,6 +4078,26 @@
     "readPath": "/read/translated/stress-alchemy-practical-technology.md",
     "source": "Translated",
     "sourceDir": "translated"
+  },
+  {
+    "title": "SURFACE — read this first",
+    "subtitle": "Who we are",
+    "category": "surface-memory",
+    "wordCount": 147,
+    "readingTime": 1,
+    "readPath": "/read/protocols/surface-memory/templates/SURFACE.template.md",
+    "source": "Protocols",
+    "sourceDir": "protocols"
+  },
+  {
+    "title": "Surface Memory — the rituals",
+    "subtitle": "BOOT — open the session  ·  `/surface`",
+    "category": "surface-memory",
+    "wordCount": 1415,
+    "readingTime": 6,
+    "readPath": "/read/protocols/surface-memory/PROTOCOL.md",
+    "source": "Protocols",
+    "sourceDir": "protocols"
   },
   {
     "title": "Surfing the Realm of Possible",
@@ -4120,6 +4280,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "The Aloneness and the One: The Summit Two Metaphysics Cannot Share",
+    "subtitle": "The most seductive sentence in comparative mysticism",
+    "category": "",
+    "wordCount": 4294,
+    "readingTime": 18,
+    "readPath": "/read/traditions/kaivalya-and-the-one.md",
+    "source": "Traditions",
+    "sourceDir": "traditions"
+  },
+  {
     "title": "The Archetypal 40K Consciousness Framework",
     "subtitle": "Where Myth Becomes Consciousness Technology",
     "category": "fiction",
@@ -4156,6 +4326,16 @@
     "wordCount": 6856,
     "readingTime": 28,
     "readPath": "/read/synthesis/consciousness-technologies/gematria-calculation.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "The Arrow on the Surface",
+    "subtitle": "How the Bekenstein Bound Became a Theorem — and Why It Points the Way the Corpus Already Said",
+    "category": "cosmology",
+    "wordCount": 4187,
+    "readingTime": 17,
+    "readPath": "/read/synthesis/cosmology/the-arrow-on-the-surface.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -4246,6 +4426,16 @@
     "wordCount": 6010,
     "readingTime": 25,
     "readPath": "/read/synthesis/grown/the-blind-spot-as-window.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "The Bodhisattva-Siddha: The Keeper of the Plural Sea",
+    "subtitle": "The figure, in one breath",
+    "category": "archetypal",
+    "wordCount": 3518,
+    "readingTime": 15,
+    "readPath": "/read/synthesis/archetypal/the-bodhisattva-siddha.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -4583,7 +4773,7 @@
     "title": "THE CONSENSUAL HALLUCINATION",
     "subtitle": "Cyberspace, Nested Universes, and the Boundary That Means",
     "category": "",
-    "wordCount": 4588,
+    "wordCount": 4616,
     "readingTime": 19,
     "readPath": "/read/synthesis/the-consensual-hallucination.md",
     "source": "Synthesis",
@@ -4910,6 +5100,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "The Eastern Operative Twin",
+    "subtitle": "Why the Corpus Has Run Alchemy Deep Without Ever Running the Branch That Tells You Exactly What to Do, In What Order, and What Will Hurt You If You Skip a Step",
+    "category": "",
+    "wordCount": 3072,
+    "readingTime": 13,
+    "readPath": "/read/traditions/neidan-internal-alchemy.md",
+    "source": "Traditions",
+    "sourceDir": "traditions"
+  },
+  {
     "title": "The Emerald Tablet: Living Transmission",
     "subtitle": "The Core Algorithm of Reality",
     "category": "hermetic",
@@ -4983,7 +5183,7 @@
     "title": "THE ENTANGLED MEASURE",
     "subtitle": "Information, Entanglement, and the Language Spacetime Speaks",
     "category": "",
-    "wordCount": 5606,
+    "wordCount": 5719,
     "readingTime": 23,
     "readPath": "/read/synthesis/entangled-measure.md",
     "source": "Synthesis",
@@ -5430,6 +5630,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "The Grown Body — Morphogenesis",
+    "subtitle": "I. The seed is real, and it is not a picture",
+    "category": "",
+    "wordCount": 3064,
+    "readingTime": 13,
+    "readPath": "/read/synthesis/the-grown-body-morphogenesis.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "THE GUESSWORK ENGINE",
     "subtitle": "Karl Friston's Free Energy Principle as the Substrate Beneath Every Mind",
     "category": "frameworks",
@@ -5506,6 +5716,36 @@
     "wordCount": 958,
     "readingTime": 4,
     "readPath": "/read/synthesis/parables/the-house-without-windows.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "The I Ching: The Method",
+    "subtitle": "1. The Lines",
+    "category": "",
+    "wordCount": 1197,
+    "readingTime": 5,
+    "readPath": "/read/traditions/iching-the-method.md",
+    "source": "Traditions",
+    "sourceDir": "traditions"
+  },
+  {
+    "title": "The I Ching: The Process Oracle",
+    "subtitle": "What it actually is",
+    "category": "",
+    "wordCount": 2877,
+    "readingTime": 12,
+    "readPath": "/read/traditions/iching-the-process-oracle.md",
+    "source": "Traditions",
+    "sourceDir": "traditions"
+  },
+  {
+    "title": "The Immune Self — The Boundary That Learns",
+    "subtitle": "I. The self is selected, not designed",
+    "category": "",
+    "wordCount": 2562,
+    "readingTime": 11,
+    "readPath": "/read/synthesis/the-immune-self-the-boundary-that-learns.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -5930,6 +6170,16 @@
     "sourceDir": "distillations"
   },
   {
+    "title": "The Maximal Fold: The Fork Made Computable",
+    "subtitle": "The master image asks to be measured",
+    "category": "",
+    "wordCount": 3993,
+    "readingTime": 16,
+    "readPath": "/read/traditions/the-maximal-fold.md",
+    "source": "Traditions",
+    "sourceDir": "traditions"
+  },
+  {
     "title": "The Mechanicum: Consciousness-Technology Merger as Sacred Quest",
     "subtitle": "The Quest for Knowledge as Search for God in the Machine",
     "category": "fiction",
@@ -6230,6 +6480,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "The One and the Many — A Working Index (With Its Own Adversary)",
+    "subtitle": "What this document is, and why it is shaped this way",
+    "category": "",
+    "wordCount": 4935,
+    "readingTime": 20,
+    "readPath": "/read/traditions/the-one-and-the-many-MASTER.md",
+    "source": "Traditions",
+    "sourceDir": "traditions"
+  },
+  {
     "title": "THE ONE INFINITE CREATOR AS SELF-OPTIMIZING META-SYSTEM",
     "subtitle": "The Strange Loop of Consciousness: Why Everything Exists and How Suffering Serves Love",
     "category": "consciousness-technologies",
@@ -6358,6 +6618,16 @@
     "readPath": "/read/extractions/benjamin-davies/the-path-to-wisdom-is-delusion.md",
     "source": "Extractions",
     "sourceDir": "extractions"
+  },
+  {
+    "title": "The Perennial Philosopher's Stone",
+    "subtitle": "Proem — The Prima Materia",
+    "category": "",
+    "wordCount": 8166,
+    "readingTime": 33,
+    "readPath": "/read/traditions/the-perennial-philosophers-stone.md",
+    "source": "Traditions",
+    "sourceDir": "traditions"
   },
   {
     "title": "THE PERFECT BOUNDARY: Circle Geometry as the Original Recognition",
@@ -7320,6 +7590,16 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "The Trophic Web — The Engine the Kingdoms Were Missing",
+    "subtitle": "I. Primary production — organized sunlight, and the first theft",
+    "category": "",
+    "wordCount": 3941,
+    "readingTime": 16,
+    "readPath": "/read/synthesis/the-trophic-web.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "The True Names of Chaos: Consciousness Functions Revealed",
     "subtitle": "What the Four Are When You Stop Fearing Them",
     "category": "fiction",
@@ -7613,8 +7893,8 @@
     "title": "The Windowless Boundary",
     "subtitle": "Why Monads Have No Windows, and What That Has to Do with Everything",
     "category": "cosmology",
-    "wordCount": 2667,
-    "readingTime": 11,
+    "wordCount": 2788,
+    "readingTime": 12,
     "readPath": "/read/synthesis/cosmology/the-windowless-boundary.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
@@ -7683,7 +7963,7 @@
     "title": "The Zero Theorem",
     "subtitle": "I. THE EQUATION THAT SOLVES THE MATHEMATICIAN",
     "category": "",
-    "wordCount": 4340,
+    "wordCount": 4430,
     "readingTime": 18,
     "readPath": "/read/synthesis/the-zero-theorem.md",
     "source": "Synthesis",
@@ -7800,6 +8080,26 @@
     "sourceDir": "synthesis"
   },
   {
+    "title": "Topos Theory: The Mathematics",
+    "subtitle": "Categories",
+    "category": "",
+    "wordCount": 1156,
+    "readingTime": 5,
+    "readPath": "/read/synthesis/topos-theory-the-mathematics.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "Topos: The Structure Under \"As Above, So Below\"",
+    "subtitle": "The phrase the corpus cannot stop saying",
+    "category": "",
+    "wordCount": 2394,
+    "readingTime": 10,
+    "readPath": "/read/synthesis/topos-as-above-so-below.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
     "title": "TRANSFORMATION: The Substrate Beneath Becoming",
     "subtitle": "Why Change Is Not What You Think — and What It Actually Is When You Look Twice",
     "category": "processes",
@@ -7826,6 +8126,16 @@
     "wordCount": 6400,
     "readingTime": 26,
     "readPath": "/read/synthesis/archetypal/trickster-wisdom.md",
+    "source": "Synthesis",
+    "sourceDir": "synthesis"
+  },
+  {
+    "title": "Trophic Ecology: The Mechanism",
+    "subtitle": "Trophic levels",
+    "category": "",
+    "wordCount": 1271,
+    "readingTime": 6,
+    "readPath": "/read/synthesis/trophic-ecology-the-mechanism.md",
     "source": "Synthesis",
     "sourceDir": "synthesis"
   },
@@ -7858,6 +8168,16 @@
     "readPath": "/read/distillations/twin-peaks-sonic-lodge-navigation.md",
     "source": "Distillations",
     "sourceDir": "distillations"
+  },
+  {
+    "title": "Tzimtzum, the Breaking, and the Repair",
+    "subtitle": "The borrowing this corpus has not paid for",
+    "category": "",
+    "wordCount": 3388,
+    "readingTime": 14,
+    "readPath": "/read/traditions/kabbalah-tzimtzum-shevirah.md",
+    "source": "Traditions",
+    "sourceDir": "traditions"
   },
   {
     "title": "UNCHARTED SCIENCE: The Discovery Territories of Human-AI Collaboration",
