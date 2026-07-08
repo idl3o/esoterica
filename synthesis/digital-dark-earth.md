@@ -32,6 +32,8 @@ And here is the recognition that no one in the published literature has yet draw
 
 The **Bekenstein bound** states that the maximum information content of a region is proportional to its **surface area**, not its volume. This is the holographic principle — the deepest insight in theoretical physics about where complexity lives. It lives on boundaries. On surfaces. On the interfaces between inside and outside.
 
+> *Register note (2026-07-02): strictly, the area-scaling above is the **holographic** claim (and Bousso's covariant bound); the Bekenstein **bound** proper limits entropy by energy, and its rigorous 2025 proof concerns vacuum-subtracted entropy differences, not an absolute count on a wall — see [The Arrow on the Surface](cosmology/the-arrow-on-the-surface.md). The terra-preta parallel — generativity proportional to **internal surface** — is untouched by the correction; it rides on surface-area scaling, which is exactly the leg that survives.*
+
 Terra preta's extraordinary generativity is proportional to its **internal surface area**. The biochar scaffold is a structure designed — whether by intention or accumulated practice — to maximise the surface available for the microbial intelligence that maintains the system. A gram of biochar with 400 m² of surface hosts orders of magnitude more biological information processing than a gram of clay with negligible porosity. The fertility IS the surface area. The complexity IS the boundary.
 
 The holographic principle and the microbial reef are the same insight expressed at different scales.

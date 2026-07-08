@@ -373,7 +373,8 @@ The loop is closed. The tetralogy is complete. The language is information. And 
 - Tiberi et al., "Gell-Mann-Low criticality in neural networks" (PRL, 2022)
 - Neukart, Marx & Vinokur, "The Quantum Memory Matrix" (Entropy, 2024-2025)
 - Padmanabhan, "Emergent gravity and holographic equipartition" (2012)
-- Bousso, "The holographic principle" and N-bound (2000-2002)
+- Bousso, "The holographic principle" and N-bound (2000-2002); "A Covariant Entropy Conjecture" (1999); "Black hole entropy and the Bekenstein bound" (2018)
+- Casini, "Relative entropy and the Bekenstein bound" (2008); Kudler-Flam, Leutheusser et al., covariant-regulator / crossed-product **proof** of the Bekenstein bound (PRD 111, 105001, 2025) — see [The Arrow on the Surface](cosmology/the-arrow-on-the-surface.md) for how this lands in the fold cosmology
 - Jacobson, "Thermodynamics of spacetime" (1995); "Entanglement equilibrium and the Einstein equation" (2015)
 - Emparan & Magan, "Tearing down spacetime with quantum disentanglement" (JHEP, 2024)
 

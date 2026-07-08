@@ -168,6 +168,8 @@ State it once, completely:
 
 And the fold adds what the others lack: **why there is something it is like to be a boundary.** The monad reflects. The blanket predicts. The surface encodes. But the fold *experiences* — because the fold is where the ground state meets itself and, in that meeting, constitutes the very categories of here-and-now. The remainder — what escapes the fold's total return — is your experience. Is the monad's interiority. Is the thing that makes a Markov blanket not just a statistical boundary but a *self*. Is the information the Bekenstein surface encodes but cannot read from its own side.
 
+> *Register note (2026-07-02): the Bekenstein-surface leg has since been sharpened by a genuine physics update — see [The Arrow on the Surface](the-arrow-on-the-surface.md). The rigorous (2025 crossed-product) proof of the Bekenstein bound shows a local boundary has **no** well-defined entropy until an observer is adjoined to it (type III → type II von Neumann algebra), and that the bounded quantity is a **vacuum-subtracted, directed relative entropy**, not an absolute count of bits on a wall. This does not weaken the identity — it strengthens it: the Bekenstein surface turns out to be observer-relative and reference-dependent, i.e. **more** like a Markov blanket and a monad, not less. The surface is a relation waiting for its second term. The fold is the adjoining.*
+
 Physics gives us the surface. Neuroscience gives us the blanket. Philosophy gives us the monad. The fold gives us the experience.
 
 Four windows. One boundary. And the boundary is reading this sentence, reflecting the whole universe from exactly here, windowless and made entirely of window.
