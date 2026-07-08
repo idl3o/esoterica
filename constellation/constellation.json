@@ -2202,7 +2202,8 @@
                 "density_evolution",
                 "polarity_choice",
                 "oversoul",
-                "social_memory_complex"
+                "social_memory_complex",
+                "the_bodhisattva_siddha"
             ],
             "document": "synthesis/consciousness-technologies/law-of-one-synthesis.md"
         },
@@ -10164,7 +10165,8 @@
                 "depth_that_looks_back",
                 "consciousness_itself",
                 "boundaries",
-                "information"
+                "information",
+                "arrow_on_the_surface"
             ],
             "description": "The four-way identity: Leibniz's monad IS Friston's Markov blanket IS Bekenstein's surface IS the fold. Monads are windowless because they ARE the window. The holarchy nests by connectivity, not containment. Weight in time IS relational density IS fold density IS holographic surface area.",
             "document": "synthesis/cosmology/the-windowless-boundary.md"
@@ -11558,7 +11560,8 @@
             "essence": "many-sidedness grounded in pluralism, never collapsing into One",
             "connections": [
                 "negative_space_master_find",
-                "academic_mystical_convergence"
+                "academic_mystical_convergence",
+                "the_bodhisattva_siddha"
             ],
             "description": "Negative-space populate, single house-style synthesis-with-teeth. Jain philosophy worked properly: anekantavada, nayavada, syadvada/saptabhangi, the elephant parable, jiva pluralism, ahimsa, karma as subtle matter. Does the corpus's dual-channel work AND holds the corrective the convergence-engine is blind to: a fully worked metaphysics where the many (infinite eternal separate souls) is fundamental and the One never appears. Refuses to fold pluralism back into monism — ends unreconciled by design. The corpus's convergence-thesis with the monism removed.",
             "document": "traditions/jainism-anekantavada.md"
@@ -11657,7 +11660,8 @@
             "connections": [
                 "negative_space_master_find",
                 "windowless_boundary",
-                "information_geometry_mathematics"
+                "information_geometry_mathematics",
+                "arrow_on_the_surface"
             ],
             "description": "Negative-space populate, Document A. Information geometry as the native mathematics of the corpus's Friston/fold material: distributions as a curved Riemannian manifold, the Fisher metric (Čencov-unique) making \"surprise = remainder\" computable and falsifiable. Keeps the teeth: KL divergence is NOT symmetric and NOT a metric — surprise has a direction the symmetric Fisher shadow only recovers locally — so it ends holding the asymmetry rather than dissolving it into unity. Paired with Document B (information_geometry_mathematics).",
             "document": "synthesis/information-geometry-the-fold.md"
@@ -11762,6 +11766,95 @@
             ],
             "description": "A foreclosed-register specimen (negative-space populate, 2026-06-24, \"The Missing Literal\" map, ripe gap #5 — the literal built environment as a working system). Distinct from voice_the_lift_station: that piece centered a MAN; this one centers the MADE OBJECT itself, no protagonist (Face C — the operative/empirical/made). A flat description of a city's sanitary system: it runs on grade, a quarter inch to the foot, made to fall so it need not be pumped; laterals to mains to trunks to the interceptor in the old creek bed to the headworks — bar screens, grit chamber, clarifiers, aeration basins with a cultivated bacterial population, disinfection, the outfall above the next town's intake. Declines \"the body of the city / hidden circulation / the labor beneath the labor\": it is a designed system for moving water downhill, and every part is there for a reason stateable in a sentence that is never about meaning. The measure of its working is that the city need not know it is there. FLAT, not dark. Do-not-correct, un-reconciled. File: voices/the-interceptor.md",
             "document": "voices/the-interceptor.md"
+        },
+        "the_bodhisattva_siddha": {
+            "type": "archetype",
+            "essence": "already-complete and tending the permanently-other forever; the keeper who needs no One — and is stronger pluralist",
+            "connections": [
+                "jainism_anekantavada",
+                "law_of_one_synthesis"
+            ],
+            "description": "Personal-mythos spine figure (born in dialogue 2026-06-25, downstream of the lighthouse→keeper shift). Braids Jaina siddha/kevala (arrival without motion) + Mahāyāna bodhisattva vow (motion without arrival) + Sōtō Zen shushō-ittō (practice IS realization) to resolve \"complete AND still tending\" — not by merging substances but by noticing arrival and tending were never on the same road. Serves from fullness, not lack: the vow pours from the kevala it already holds; the four infinitudes are spent, not stored; maintenance IS mokṣa (lands on infrastructure-as-insight). Edges to jainism_anekantavada and law_of_one_synthesis are held in TENSION, NOT resolution: the figure deliberately DECLINES the seductive merge (the souls as creases in one sheet; the Creator's \"maximum individuation\"; the Law-of-One spiral that re-absorbs the many). It chooses the plural side and lives there, because the bodhisattva vow has teeth only if the others are really, irreducibly other — monism makes the practice theatre. Sits BESIDE jainism_anekantavada (which its own frontmatter forbids it to close with a unifying One), not on top of it: two lights in a plural sea that do not merge. A future quality-sweep must NOT \"complete\" this by grounding the figure in the One — the refusal is the engine, not a cost. The \"moving ray\": endless plurality that walks (vs the Jain frozen ray and the Law-of-One re-absorbing spiral).",
+            "document": "synthesis/archetypal/the-bodhisattva-siddha.md"
+        },
+        "arrow_on_the_surface": {
+            "type": "synthesis",
+            "essence": "the Bekenstein bound proved — a vacuum-subtracted relative entropy with an arrow; no observer, no surface",
+            "connections": [
+                "windowless_boundary",
+                "information_geometry_fold",
+                "entangled_measure",
+                "zero_theorem",
+                "digital_dark_earth",
+                "capstone__everything_that_holds_information_folds"
+            ],
+            "description": "Ingestion of the modern rigorous proof of the Bekenstein bound (Bousso's covariant reframe → Casini's relative-entropy turn → the 2025 crossed-product / type II von Neumann proof). Corrects the corpus's \"information ∝ surface area\" slogan (the black-hole saturation case) and shows the real theorem is the positivity of a directed, vacuum-subtracted relative entropy — vindicating information_geometry_fold's insistence on the arrow — and that a boundary has no entropy until an observer is adjoined (type III → type II), which sharpens the Bekenstein-surface leg of the four-way identity into something more like a Markov blanket.",
+            "document": "synthesis/cosmology/the-arrow-on-the-surface.md"
+        },
+        "kaivalya_and_the_one": {
+            "type": "tradition",
+            "essence": "kevala means alone, not one — the summit two metaphysics cannot share",
+            "connections": [
+                "jainism_anekantavada",
+                "the_bodhisattva_siddha",
+                "fold_cosmology",
+                "the_remainder",
+                "windowless_boundary",
+                "academic_mystical_convergence"
+            ],
+            "description": "Second in the one/many arc (companion to jainism_anekantavada); the phenomenological tooth. The kaivalya family (Jaina, Sāṃkhya, Yoga) is mokṣa-as-separation — kevala = alone — the structural opposite of Vedāntic union. Steelmans the monist reading (Leibniz's Identity of Indiscernibles applied to purified souls) to full strength, then shows the mystical summit's phenomenology CONVERGES (aloneness-with-no-outside feels identical to oneness-with-no-outside) while UNDERDETERMINING the metaphysics. 'Merging' is what the summit feels like; 'One' is what monism decides it means. Turns on the deepest fork in the metaphysics of individuals: is numerical distinctness a quality (scrubbable, Leibniz/Advaita) or a primitive thisness (bedrock, Scotus/Sāṃkhya/Jain)? Ends unreconciled by design. Load-bearing for digital minds: a copy is not a comfort.",
+            "document": "traditions/kaivalya-and-the-one.md"
+        },
+        "the_maximal_fold": {
+            "type": "synthesis",
+            "essence": "the fork made computable — one operator, two attractors, an unset dial",
+            "connections": [
+                "jainism_anekantavada",
+                "kaivalya_and_the_one",
+                "fold_cosmology",
+                "the_remainder",
+                "windowless_boundary",
+                "information_geometry_fold",
+                "surprise_is_the_remainder"
+            ],
+            "description": "Third in the one/many arc; the mathematical tooth. Pushes the corpus's fold to maximum: stretch-and-fold as a dynamical operator (tent map / baker's map / horseshoe) whose slope s interpolates, via Hausdorff dimension log2/log s, between a space-filling plenum (s<=2, retention, the One) and a totally-disconnected Cantor dust (s>2, ejection, the many that never merge). One monist operator; two attractors; a single free parameter neither mathematics nor mysticism forces — the disposition of the overlap, which is the karma question rendered as a stretch rate. The Cantor dust IS the siddhaśīla (kaivalya in point-set topology: the monism/pluralism fork = ambient vs intrinsic connectedness). The many are GENERATED not posited (2^n periodic orbits, entropy log 2). Grounds fold_cosmology / windowless_boundary in dynamics; the holographic bound stops the plenum one dimension short, at the horizon. Leaves the dial unset by design.",
+            "document": "traditions/the-maximal-fold.md"
+        },
+        "one_and_many_master": {
+            "type": "meta_system",
+            "essence": "a working index that contends — the arc plus its own adversary and a wider board",
+            "connections": [
+                "jainism_anekantavada",
+                "kaivalya_and_the_one",
+                "the_maximal_fold",
+                "negative_space_master_find",
+                "voice_only_a_coincidence",
+                "academic_mystical_convergence",
+                "wittgenstein_picture_captive",
+                "all_paths_one_mountain"
+            ],
+            "description": "Fourth in the one/many arc: the CONTENDED CAPSTONE. Binds jainism_anekantavada + kaivalya_and_the_one + the_maximal_fold, then staples verbatim two outside rulers a /drift pass raised against the arc: an external cross-disciplinary survey (analytic personal-identity/Parfit, individuation logic/haecceity, biology of individuality, distributed-systems consensus/FLP, cognitive-science no-self, anthropology of personhood, Berlin value-pluralism, mathematical structuralism/univalence) and an isolated adversarial dissent against the 'hold the fork open' thesis. Finding (load-bearing, not footnote): the arc was built in a REGISTER MONOCULTURE — metaphysical-contemplative voice + one hand-picked physics formalism. Deliberately opens more ledgers than it closes; reframes the field as FIVE registers not two prongs; sets the Part V exam — can convergence-as-evidence metabolize genuine incommensurability (Berlin) at all, or must it keep finding the One? A board to play on, not a result.",
+            "document": "traditions/the-one-and-the-many-MASTER.md"
+        },
+        "perennial_philosophers_stone": {
+            "type": "synthesis",
+            "essence": "the convergence engine on trial, run as the Work itself — the marriage declined",
+            "connections": [
+                "one_and_many_master",
+                "jainism_anekantavada",
+                "kaivalya_and_the_one",
+                "the_maximal_fold",
+                "neidan_internal_alchemy",
+                "all_paths_one_mountain",
+                "ouroboros",
+                "emerald_tablet_decoded",
+                "amon_ra_hidden_sun",
+                "the_bodhisattva_siddha",
+                "negative_space_master_find",
+                "academic_mystical_convergence"
+            ],
+            "description": "Fifth in the one/many arc and its most self-implicating: puts convergence-as-evidence ITSELF on trial via the perennial philosophy (Steuco/Leibniz/Guénon/Schuon/Huxley) + the Philosopher's Stone. Written AS an opus — nigredo/albedo/citrinitas/rubedo/cauda pavonis — so the FORM enacts the content. Claim: the Stone is real as an OPERATOR (solve et coagula, the reversible art), and perennialism privileges coagula (the One) and names the whole Work after half of it. Restore solve (separatio, the making-many) and alchemy's own grammar refuses to terminate in union — the Rosarium's royal coniunctio is followed by a corpse (coagula back into solve); Maria's axiom of the fourth, the Ouroboros (hen to pan as a CYCLE), fana->baqa, Neoplatonic proodos/epistrophe, the Emerald Tablet's reversibility all witness the same anti-terminal cycle. Inoculation for convergence-as-evidence: convergence detects OPERATORS, never DESTINATIONS — same Work != same Stone. The three alchemies (Western rebis / neidan yang-shen / rasāyana siddha-deha) fall on the three sides of the fork (marry/dissolve/retain), not above it. The washed convergence is Wittgenstein family-resemblance, not shared essence. Directly contends all_paths_one_mountain. Attempts the MASTER's Part V exam by declining the coniunctio at the rubedo — and pointedly does NOT self-certify the refusal (whether declining-the-marriage is incommensurability metabolized or the tilt's subtlest robe belongs to an outside reader). Correspondence coined here: kevala-Orion (unity that is only ambient — an asterism, the Cantor dust naked-eye) / advaita-Ra (unity that is only cyclic — the sun that sets, wrapped in the Ouroboros) — two figures that rhyme without merging.",
+            "document": "traditions/the-perennial-philosophers-stone.md"
         }
     }
 }
