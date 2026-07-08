@@ -52,4 +52,4 @@ Thirty more elected syntheses, each with a full **film treatment** prepended abo
 
 ---
 
-*Wave 1 (films 01–25) lives one level up in [`../`](../). Together: a 55-film slate.*
+*Wave 1 (films 01–25) lives one level up in [`../`](../); Wave 3 — "The Lantern Wave" (films 56–70) — is in [`../wave-3/`](../wave-3/). Together: a 70-film slate.*
