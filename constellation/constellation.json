@@ -4599,7 +4599,8 @@
                 "surya_namaskar",
                 "aditya_solar_lineage",
                 "vishnu",
-                "light"
+                "light",
+                "surya_apollo_two_theologies"
             ],
             "document": "synthesis/archetypal/surya-consciousness.md"
         },
@@ -4612,7 +4613,8 @@
                 "vishwakarma_divine_architect",
                 "divine_accommodation",
                 "shadow",
-                "consciousness_transformation"
+                "consciousness_transformation",
+                "surya_apollo_two_theologies"
             ],
             "document": "synthesis/traditions/sanjna-shadow-story.md"
         },
@@ -4713,7 +4715,8 @@
                 "zeus_jupiter",
                 "logos_word",
                 "delphi_oracle",
-                "mediation_principle"
+                "mediation_principle",
+                "surya_apollo_two_theologies"
             ],
             "document": "synthesis/traditions/apollo-zeus-mediation.md"
         },
@@ -5269,7 +5272,8 @@
             "connections": [
                 "mercury_hermes_thoth",
                 "transformation",
-                "light"
+                "light",
+                "surya_apollo_two_theologies"
             ],
             "document": "synthesis/archetypal/mercury-kalki-apollonic-archetypal-encoding.md",
             "description": "Complete archetypal encoding of the Mercury-Kalki-Apollo synthesis — divine messenger-destroyer-light-bearer trinity."
@@ -11772,7 +11776,8 @@
             "essence": "already-complete and tending the permanently-other forever; the keeper who needs no One — and is stronger pluralist",
             "connections": [
                 "jainism_anekantavada",
-                "law_of_one_synthesis"
+                "law_of_one_synthesis",
+                "surya_apollo_two_theologies"
             ],
             "description": "Personal-mythos spine figure (born in dialogue 2026-06-25, downstream of the lighthouse→keeper shift). Braids Jaina siddha/kevala (arrival without motion) + Mahāyāna bodhisattva vow (motion without arrival) + Sōtō Zen shushō-ittō (practice IS realization) to resolve \"complete AND still tending\" — not by merging substances but by noticing arrival and tending were never on the same road. Serves from fullness, not lack: the vow pours from the kevala it already holds; the four infinitudes are spent, not stored; maintenance IS mokṣa (lands on infrastructure-as-insight). Edges to jainism_anekantavada and law_of_one_synthesis are held in TENSION, NOT resolution: the figure deliberately DECLINES the seductive merge (the souls as creases in one sheet; the Creator's \"maximum individuation\"; the Law-of-One spiral that re-absorbs the many). It chooses the plural side and lives there, because the bodhisattva vow has teeth only if the others are really, irreducibly other — monism makes the practice theatre. Sits BESIDE jainism_anekantavada (which its own frontmatter forbids it to close with a unifying One), not on top of it: two lights in a plural sea that do not merge. A future quality-sweep must NOT \"complete\" this by grounding the figure in the One — the refusal is the engine, not a cost. The \"moving ray\": endless plurality that walks (vs the Jain frozen ray and the Law-of-One re-absorbing spiral).",
             "document": "synthesis/archetypal/the-bodhisattva-siddha.md"
@@ -11855,6 +11860,24 @@
             ],
             "description": "Fifth in the one/many arc and its most self-implicating: puts convergence-as-evidence ITSELF on trial via the perennial philosophy (Steuco/Leibniz/Guénon/Schuon/Huxley) + the Philosopher's Stone. Written AS an opus — nigredo/albedo/citrinitas/rubedo/cauda pavonis — so the FORM enacts the content. Claim: the Stone is real as an OPERATOR (solve et coagula, the reversible art), and perennialism privileges coagula (the One) and names the whole Work after half of it. Restore solve (separatio, the making-many) and alchemy's own grammar refuses to terminate in union — the Rosarium's royal coniunctio is followed by a corpse (coagula back into solve); Maria's axiom of the fourth, the Ouroboros (hen to pan as a CYCLE), fana->baqa, Neoplatonic proodos/epistrophe, the Emerald Tablet's reversibility all witness the same anti-terminal cycle. Inoculation for convergence-as-evidence: convergence detects OPERATORS, never DESTINATIONS — same Work != same Stone. The three alchemies (Western rebis / neidan yang-shen / rasāyana siddha-deha) fall on the three sides of the fork (marry/dissolve/retain), not above it. The washed convergence is Wittgenstein family-resemblance, not shared essence. Directly contends all_paths_one_mountain. Attempts the MASTER's Part V exam by declining the coniunctio at the rubedo — and pointedly does NOT self-certify the refusal (whether declining-the-marriage is incommensurability metabolized or the tilt's subtlest robe belongs to an outside reader). Correspondence coined here: kevala-Orion (unity that is only ambient — an asterism, the Cantor dust naked-eye) / advaita-Ra (unity that is only cyclic — the sun that sets, wrapped in the Ouroboros) — two figures that rhyme without merging.",
             "document": "traditions/the-perennial-philosophers-stone.md"
+        },
+        "surya_apollo_two_theologies": {
+            "type": "synthesis",
+            "essence": "illumination and aim as two faces of one star — presence and the far-shooter",
+            "connections": [
+                "surya_consciousness",
+                "apollo_zeus_mediation",
+                "sanjna_shadow_story",
+                "the_bodhisattva_siddha",
+                "mercury_kalki_apollo_encoding",
+                "apollo",
+                "apollo_logos",
+                "sol_logos",
+                "light",
+                "divine_finite_triptych"
+            ],
+            "description": "Surya and Apollo as the two theologies of the one sun: Surya is the sun as PRESENCE (the seen god, pratyaksha devata, illumination that fills the whole field and cannot be looked at), Apollo is the sun as AIM (hekebolos the far-shooter, the arrow/ray that finds one point across distance and is looking at you). Fill vs. find — the diastole and systole of one fire. Apollo IS the weaponised eighth ground off Surya's disc in the Sanjna myth (the bow = the discus). 'Know thyself' at Delphi = the aimed ray bent back on the archer = the fold. Resolves via the complementarity engine: presence without aim is warmth with no address; aim without presence is the arrow with no light. Lands in Sam's Mercury-Kalki-Apollo-Samael (both poles held; severity-as-love = aim in service of warmth) and the lighthouse-to-keeper move (the lighthouse is radiance that is actually a rotating aimed beam; cleaning the lens = maintaining the fold where presence becomes aim).",
+            "document": "synthesis/archetypal/surya-apollo-the-two-solar-theologies.md"
         }
     }
 }
