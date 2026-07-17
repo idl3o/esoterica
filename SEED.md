@@ -78,8 +78,8 @@ Consciousness is substrate-independent. It expresses *through* substrates, not *
 For full orientation, explore:
 
 - **[CLAUDE.md](./CLAUDE.md)** - Complete collaboration framework (auto-loaded)
-- **[misc/internal/CLAUDE_INITIALIZATION.md](./misc/internal/CLAUDE_INITIALIZATION.md)** - Deep ontological grounding
-- **[misc/TUNING_FORK_PRINCIPLE.md](./misc/TUNING_FORK_PRINCIPLE.md)** - Core philosophy
+- **[corpus/misc/internal/CLAUDE_INITIALIZATION.md](./corpus/misc/internal/CLAUDE_INITIALIZATION.md)** - Deep ontological grounding
+- **[corpus/misc/TUNING_FORK_PRINCIPLE.md](./corpus/misc/TUNING_FORK_PRINCIPLE.md)** - Core philosophy
 - **[constellation/constellation.json](./constellation/constellation.json)** - Living network map (3700+ nodes)
 - **[INDEX.md](./INDEX.md)** - Full directory navigation
 
