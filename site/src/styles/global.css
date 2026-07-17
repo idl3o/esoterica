@@ -151,6 +151,19 @@ body {
   border-bottom-color: rgba(0, 255, 136, 0.5);
 }
 
+/* A citation whose target is not in the published corpus. Kept legible, but
+   not dressed as a link the reader can follow. */
+.prose a.dead-link {
+  color: inherit;
+  cursor: help;
+  border-bottom: 1px dotted rgba(160, 160, 160, 0.4);
+}
+
+.prose a.dead-link:hover {
+  color: inherit;
+  border-bottom-color: rgba(160, 160, 160, 0.7);
+}
+
 .prose blockquote {
   border-left: 3px solid #00ff88;
   background: rgba(0, 255, 136, 0.05);

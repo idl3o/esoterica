@@ -36,14 +36,17 @@ export interface LibraryDocument {
 
 const ROOT = REPO_ROOT;
 
-const CONTENT_DIRS = [
+/**
+ * The corpus. One list, used for both the /read/ routes and the synthesis
+ * index that links to them — if a directory is indexed but not routed, every
+ * link into it 404s.
+ *
+ * `world-model/` is deliberately absent: it is a Python project whose only
+ * markdown is its own README and ARCHITECTURE. Apparatus, not corpus.
+ */
+const CORPUS_DIRS = [
   { dir: 'synthesis', label: 'Synthesis' },
-  { dir: 'translated', label: 'Translated' },
-];
-
-const LIBRARY_DIRS = [
   { dir: 'distillations', label: 'Distillations' },
-  { dir: 'synthesis', label: 'Synthesis' },
   { dir: 'protocols', label: 'Protocols' },
   { dir: 'seeds', label: 'Seeds' },
   { dir: 'traditions', label: 'Traditions' },
@@ -56,7 +59,15 @@ const LIBRARY_DIRS = [
   { dir: 'world-tree', label: 'World Tree' },
   { dir: 'memory-palace', label: 'Memory Palace' },
   { dir: 'misc', label: 'Misc' },
+  { dir: 'fiction-bridges', label: 'Fiction Bridges' },
+  { dir: 'film-slate', label: 'Film Slate' },
+  { dir: 'voices', label: 'Voices' },
+  { dir: 'negative-space', label: 'Negative Space' },
+  { dir: 'audio-transcripts', label: 'Audio Transcripts' },
 ];
+
+/** Withheld from publication. Must match across routing and indexing. */
+const EXCLUDED_SUBDIRS = new Set(['internal', 'personal']);
 
 const TERM_PATTERNS = [
   'consciousness', 'awareness', 'recognition', 'polarity', 'density',
@@ -81,9 +92,9 @@ function scanDir(dir: string, fileList: string[] = []): string[] {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
   for (const entry of entries) {
     const fullPath = path.join(dir, entry.name);
-    if (entry.isDirectory() && !entry.name.startsWith('.') && entry.name !== 'internal') {
+    if (entry.isDirectory() && !entry.name.startsWith('.') && !EXCLUDED_SUBDIRS.has(entry.name)) {
       scanDir(fullPath, fileList);
-    } else if (entry.name.endsWith('.md')) {
+    } else if (entry.name.endsWith('.md') && entry.name !== 'README.md') {
       fileList.push(fullPath);
     }
   }
@@ -193,31 +204,12 @@ function parseDocument(filePath: string, content: string): ContentDocument {
 
 // --- Public API ---
 
-/** All directories to index for document-node linking */
-const ALL_CONTENT_DIRS = [
-  'synthesis',
-  'translated',
-  'fiction-bridges',
-  'distillations',
-  'protocols',
-  'seeds',
-  'traditions',
-  'extractions',
-  'correspondences',
-  'journey',
-  'garden',
-  'harvest',
-  'world-tree',
-  'memory-palace',
-  'misc',
-];
-
 export function loadSynthesisIndex(): ContentDocument[] {
   if (_synthesisIndex) return _synthesisIndex;
 
   const docs: ContentDocument[] = [];
 
-  for (const dir of ALL_CONTENT_DIRS) {
+  for (const { dir } of CORPUS_DIRS) {
     const fullDir = path.join(ROOT, dir);
     if (!fs.existsSync(fullDir)) continue;
     const files = scanDir(fullDir);
@@ -237,7 +229,7 @@ export function loadLibraryIndex(): LibraryDocument[] {
 
   const docs: LibraryDocument[] = [];
 
-  for (const { dir, label } of LIBRARY_DIRS) {
+  for (const { dir, label } of CORPUS_DIRS) {
     const fullDir = path.join(ROOT, dir);
     if (!fs.existsSync(fullDir)) continue;
 
@@ -251,7 +243,7 @@ export function loadLibraryIndex(): LibraryDocument[] {
         const relativePath = path.join(relBase, entry.name);
 
         if (entry.isDirectory()) {
-          if (entry.name === 'zeitgeist' || entry.name === 'personal' || entry.name === 'internal') continue;
+          if (entry.name.startsWith('.') || EXCLUDED_SUBDIRS.has(entry.name)) continue;
           scanLib(fullPath, relativePath);
         } else if (entry.name.endsWith('.md') && entry.name !== 'README.md') {
           try {
@@ -310,4 +302,45 @@ export function readContent(contentPath: string): string | null {
   } catch {
     return null;
   }
+}
+
+let _publishedPaths: Set<string> | null = null;
+
+/** Repo-relative paths of every document that has a /read/ route. */
+export function getPublishedPaths(): Set<string> {
+  if (_publishedPaths) return _publishedPaths;
+  _publishedPaths = new Set(getAllContentPaths().map(p => p.path));
+  return _publishedPaths;
+}
+
+/**
+ * Rewrite inter-document links to their /read/ routes.
+ *
+ * Corpus documents cite each other with paths relative to their own location
+ * on disk ("foam-beneath-the-form.md", "../traditions/x.md"). Rendered at
+ * /read/<path>/ those resolve to nothing. Targets that exist become links to
+ * the published route; targets that don't are left inert rather than made into
+ * links that 404 — a document may cite one that is withheld or absent.
+ */
+export function rewriteDocLinks(html: string, contentPath: string): string {
+  const published = getPublishedPaths();
+  const baseDir = path.posix.dirname(contentPath.replace(/\\/g, '/'));
+
+  return html.replace(/<a\s+([^>]*?)href="([^"]+)"([^>]*)>/gi, (tag, pre, href: string, post) => {
+    if (/^(?:[a-z]+:|#|\/read\/)/i.test(href)) return tag;
+
+    const hashAt = href.indexOf('#');
+    const target = hashAt === -1 ? href : href.slice(0, hashAt);
+    const anchor = hashAt === -1 ? '' : href.slice(hashAt);
+    if (!/\.md$/i.test(target)) return tag;
+
+    const resolved = target.startsWith('/')
+      ? path.posix.normalize(target.slice(1))
+      : path.posix.normalize(path.posix.join(baseDir, decodeURIComponent(target)));
+
+    if (resolved.startsWith('..') || !published.has(resolved)) {
+      return `<a ${pre}class="dead-link" title="Not in the published corpus"${post}>`;
+    }
+    return `<a ${pre}href="/read/${resolved}${anchor}"${post}>`;
+  });
 }
