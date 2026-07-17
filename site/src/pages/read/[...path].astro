@@ -1,9 +1,10 @@
 ---
 import Base from '../../layouts/Base.astro';
 import ThreadSidebar from '../../components/ThreadSidebar.astro';
-import { getAllContentPaths, readContent, loadDocumentLinks, loadSynthesisIndex } from '../../lib/content';
+import { getAllContentPaths, readContent, loadDocumentLinks, loadSynthesisIndex, rewriteDocLinks } from '../../lib/content';
 import { getNode } from '../../lib/constellation';
 import { getDomainForType } from '../../lib/domains';
+import { getAttribution } from '../../lib/publish';
 import { marked } from 'marked';
 
 export function getStaticPaths() {
@@ -36,7 +37,9 @@ export function getStaticPaths() {
 
 const { contentPath, sourceDir, docId } = Astro.props;
 const markdown = readContent(contentPath);
-const html = markdown ? marked.parse(markdown) : '<p>Document not found.</p>';
+const html = markdown
+  ? rewriteDocLinks(marked.parse(markdown) as string, contentPath)
+  : '<p>Document not found.</p>';
 
 // Extract title from markdown
 const titleMatch = markdown?.match(/^#\s+(.+)$/m);
@@ -71,10 +74,10 @@ const sourceLabels: Record<string, string> = {
 };
 const sourceLabel = sourceLabels[sourceDir] || sourceDir;
 
-const isLocked = sourceDir === 'extractions';
+const attribution = getAttribution(contentPath);
 ---
 
-<Base title={title} noindex={isLocked}>
+<Base title={title}>
   <script>
     function updateReadButton() {
       const btn = document.getElementById('read-toggle');
@@ -131,69 +134,20 @@ const isLocked = sourceDir === 'extractions';
             Loading...
           </button>
         </div>
-        {isLocked && (
-          <div id="extraction-lock" class="glass p-6 mb-6 border border-purple-dim">
-            <div class="text-sm text-purple mb-1">🔒 Extraction archive</div>
-            <p class="text-text-muted text-sm mb-4">
-              Transcripts harvested from YouTube videos are gated to discourage casual indexing.
-              Enter the password to view.
+        {attribution && (
+          <div class="glass p-4 mb-6 border border-purple-dim">
+            <div class="text-sm text-purple mb-1">Transcript of someone else's work</div>
+            <p class="text-text-muted text-sm">
+              Machine-transcribed from
+              {' '}<a href={attribution.url} rel="nofollow noopener" target="_blank" class="text-cyan hover:text-green">{attribution.title}</a>
+              {attribution.channel && <> by <span class="text-text-primary">{attribution.channel}</span></>}.
+              The words belong to their speaker and the recording to its publisher; rights are
+              theirs, not this library's. Held here for study, and quoted at length — go watch
+              the original.
             </p>
-            <div class="flex gap-2">
-              <input
-                type="password"
-                id="extraction-pw"
-                placeholder="password"
-                class="flex-1 bg-transparent border border-cyan-dim text-text-primary px-3 py-2 rounded outline-none focus:border-cyan"
-              />
-              <button
-                id="extraction-unlock"
-                class="px-4 py-2 rounded border border-cyan-dim text-cyan hover:border-cyan transition-colors"
-              >
-                Unlock
-              </button>
-            </div>
-            <p id="extraction-err" class="text-red-400 text-xs mt-2 hidden">Incorrect password.</p>
           </div>
         )}
-        <div
-          id="gated-content"
-          class="prose"
-          style={isLocked ? 'display:none' : ''}
-          set:html={html}
-        />
-        {isLocked && (
-          <script is:inline>
-            (function () {
-              const KEY = 'esoterica-extractions-unlocked';
-              const PASS = 'password';
-              const gate = document.getElementById('extraction-lock');
-              const content = document.getElementById('gated-content');
-              const input = document.getElementById('extraction-pw');
-              const btn = document.getElementById('extraction-unlock');
-              const err = document.getElementById('extraction-err');
-              function unlock() {
-                if (gate) gate.style.display = 'none';
-                if (content) content.style.display = '';
-              }
-              try {
-                if (sessionStorage.getItem(KEY) === '1') unlock();
-              } catch (e) { /* sessionStorage unavailable */ }
-              function attempt() {
-                if (!input) return;
-                if (input.value === PASS) {
-                  try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
-                  unlock();
-                } else {
-                  if (err) err.classList.remove('hidden');
-                }
-              }
-              if (btn) btn.addEventListener('click', attempt);
-              if (input) input.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter') attempt();
-              });
-            })();
-          </script>
-        )}
+        <div class="prose" set:html={html} />
       </article>
 
       <!-- Thread Sidebar -->
