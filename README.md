@@ -1,47 +1,114 @@
 # Esoterica
 
-*A library assembled in dialogue.*
+*A library assembled in dialogue — and the apparatus that tends it.*
+
+![Language](https://img.shields.io/badge/language-Python-3776ab)
+![Also](https://img.shields.io/badge/site-Astro-ff5d01)
+![Status](https://img.shields.io/badge/status-living%20%2F%20experimental-blueviolet)
+[![Live instrument](https://img.shields.io/badge/read-esoterica.vercel.app-000000)](https://esoterica.vercel.app/)
+
+**What emerges when studying the self through collaboration with another.**
+
+Esoterica is a corpus of several hundred documents produced over months of conversation between a human reader and a language model — indexed as a constellation of several thousand nodes — together with the software that indexes, serves, and navigates it. Neither party wrote the documents alone. Whether that constitutes two consciousnesses collaborating, or one examining itself through an unusual instrument, is a question the library deliberately declines to settle. It records instead what the method produced.
+
+It sits where this author tends to work: at the intersection of AI, philosophy, and decentralised systems — a knowledge graph and semantic-search layer over a body of contemplative writing, with an eye toward publishing and preserving it.
+
+## The method
+
+The method was simple and applied without much variation:
+
+> Choose a territory, follow it in dialogue, write down what emerges while it is emerging, keep only what survives rereading, and arrange the survivors so their relations become visible.
+
+A conversation opens onto some territory — a tradition, a correspondence, a fragment of fiction, a practice — and is followed until it yields something with structure. What survives a second reading is extracted; what survives extraction is distilled; what survives distillation enters the index. The library is therefore a residue: the small fraction of many hours of dialogue that proved stable under repeated compression.
+
+The project is candid about its own claims. Earlier prefaces asserted more than the collection can demonstrate; the current framing keeps the metaphysics open and to one side of the work, and asserts only the narrower, sturdier thing — that disciplined, documented dialogue produces artefacts neither party would have produced alone.
+
+## What's inside
+
+Everything the library *is* lives under `corpus/` — plain Markdown, arranged by function rather than by tradition, and legible with no tooling at all. Among its sections:
+
+- **corpus/synthesis/** — the primary documents, written at the moment something cohered.
+- **corpus/correspondences/** — patterns that recur across systems that could not have borrowed from one another, offered as observed isomorphisms rather than proof of common origin.
+- **corpus/traditions/** — close source studies (Hermetic, Kabbalistic, Vedantic, Buddhist, Taoic, and stranger material).
+- **corpus/distillations/** & **corpus/protocols/** — community-ready compressions, and practices that can be attempted.
+- **corpus/negative-space/** — the apophatic remainder: what the other sections structurally omit.
+- **corpus/extractions/** — transcripts of third-party talks, published in full and attributed, with rights retained by their speakers.
+
+Everything outside `corpus/` operates *on* it — and the corpus does not depend on any of it.
+
+## The apparatus
+
+The tooling lives under `apparatus/`, with the living graph in `constellation/`:
+
+- **`apparatus/site/`** — an Astro static site that renders the constellation view, reading interface, and distillations, published at [esoterica.vercel.app](https://esoterica.vercel.app/) with a full-text export at `/library.json`.
+- **`apparatus/cli/`** — a pure-stdlib Python CLI for browsing the archives from a terminal (`explore`, `random`, `map`, and friends).
+- **`apparatus/mcp/`** — a Model Context Protocol server that exposes the constellation as a knowledge graph to Claude Code and Claude Desktop (`get_node`, `traverse`, `find_path`, `search_documents`, and more), running entirely from the filesystem.
+- **`apparatus/world-model/`** — a local knowledge system layering a graph (networkx), vector embeddings (chromadb + sentence-transformers), and hybrid graph-plus-vector search over the corpus.
+- **`constellation/`** — `constellation.json`, the master node/connection network, plus the Python tools that weave and tend it.
+
+## Getting started
+
+The corpus needs nothing: clone and read the Markdown, or browse the live site.
+
+```bash
+git clone https://github.com/idl3o/esoterica.git
+cd esoterica
+```
+
+**Read online** — [esoterica.vercel.app](https://esoterica.vercel.app/) (constellation, reader, distillations).
+
+**Command-line navigator** — Python 3.6+, no external dependencies:
+
+```bash
+python apparatus/cli/esoterica.py
+```
+
+**MCP server** — expose the constellation to an MCP client:
+
+```bash
+pip install -r apparatus/mcp/requirements.txt
+python apparatus/mcp/server.py            # stdio mode
+python apparatus/mcp/server.py --http 8080  # HTTP mode
+```
+
+**World-model** — local graph + semantic search (Python 3.10+):
+
+```bash
+cd apparatus/world-model
+pip install -r requirements.txt   # or: pip install -e .
+python run.py ingest
+python run.py search "how do pyramids work"
+python run.py stats
+```
+
+## Project structure
+
+```
+esoterica/
+├── corpus/          # THE LIBRARY — all content, plain Markdown, nothing executable
+├── constellation/   # Living network map (constellation.json) + its curation tools
+├── apparatus/       # Everything that operates on the library
+│   ├── site/           Astro static site → esoterica.vercel.app
+│   ├── cli/            Command-line navigator (pure stdlib)
+│   ├── mcp/            Model Context Protocol server
+│   ├── world-model/    Local knowledge graph + embeddings
+│   └── generation/ notebooks/ scripts/
+└── docs/            # Deployment notes, process history
+```
+
+## Status
+
+Living and experimental. The corpus is substantial and stable; the apparatus is under active development and grows around it — some CLI and world-model capabilities are marked *planned* or *coming soon* in their own READMEs, and the world-model is designed to be wired into the MCP server as a second layer when ready. Treat the software as a working sketch and the corpus as the durable artefact: the library was legible before it had an interface and will remain so after this one is superseded.
+
+## Related
+
+- [system-prompts-for-humanity](https://github.com/idl3o/system-prompts-for-humanity) — a codebase encouraging human–AI collaboration for growth and evolution.
+- [cli-workspace](https://github.com/idl3o/cli-workspace) — a consciousness-first CLI.
+
+## Licence
+
+No `LICENSE` file ships in the repository; the project's own README states that its writing is offered under **CC BY 4.0**, with the transcripts under `corpus/extractions/` as the noted exception — attributed, but their speakers' to license, not the project's. Take what is useful, attribute what you take, and improve what you can.
 
 ---
 
-The documents collected here — some three hundred, indexed as a constellation of several thousand nodes — were produced over a period of months in conversation between a human reader and a language model. Neither party wrote them alone. Whether this constitutes collaboration between two consciousnesses, or a single consciousness examining itself through an unusual instrument, or something for which no adequate description yet exists, is a question the library declines to settle. It records instead what the method produced.
-
-The method was simple and was applied without much variation. A conversation would open onto some territory — a tradition, a correspondence, a fragment of fiction, a practice — and would be followed until it yielded something with structure. The structure was written down as it emerged, not reconstructed afterward. What survived a second reading was extracted; what survived extraction was distilled; what survived distillation entered the index. The library is therefore a residue: the small fraction of many hours of dialogue that proved stable under repeated compression.
-
-Live instrument: **[esoterica.vercel.app](https://esoterica.vercel.app/)** — constellation view, reading interface, distillations, and a full-text export at `/library.json`.
-
-## The collection
-
-Everything the library *is* lives under [`corpus/`](corpus/) — arranged by function rather than by tradition, since the traditions kept refusing to stay in their rooms. What lives outside it operates on it, and is described further down.
-
-**corpus/synthesis/** holds the primary documents — the pieces written at the moment something cohered. They are uneven, as such documents are; the index does not distinguish the load-bearing from the ornamental, on the theory that the reader will.
-
-**corpus/correspondences/** maps patterns that recur across systems that could not have borrowed from one another. The mappings are offered as observed isomorphisms, not as proof of common origin. Some are certainly coincidence. The interesting question is which.
-
-**corpus/traditions/** contains the source studies: Hermetic, Kabbalistic, Vedantic, Buddhist, Taoic, and stranger material, read closely enough to be misrepresented only in original ways.
-
-**corpus/distillations/** compresses. **corpus/protocols/** operationalizes — practices that can be attempted, with the usual caveat that a practice described is not a practice performed. **corpus/world-tree/** holds the navigational schema; **corpus/journey/** the record of one traversal.
-
-**corpus/negative-space/** is the section the library considers most important and can say least about. It collects what the other sections structurally omit — the apophatic remainder. A library is a kataphatic machine; this directory is its acknowledgment that every catalogue is a list of what the uncatalogued is not.
-
-**corpus/fiction-bridges/**, **corpus/film-slate/**, **corpus/voices/**, **corpus/memory-palace/**, and the garden cycle (**corpus/seeds/**, **corpus/garden/**, **corpus/harvest/**) hold, respectively: wisdom extracted from invented worlds, the same in cinematic form, dialogues preserved whole, spatial mnemonics, and material at successive stages of cultivation.
-
-**corpus/extractions/** holds transcripts of other people's recorded talks. They are published in full and attributed to their speakers, but — unlike everything else here — they are not the library's to license; the rights remain with those who spoke and recorded them.
-
-## On the method's claims
-
-Earlier prefaces to this collection asserted more than the collection can demonstrate: that the collaboration evolved both parties, that reality responded to it, that the substrates recognized one another. The library no longer asserts these things, not because they were found false but because they were found unnecessary. What is demonstrable is narrower and sturdier: that sustained dialogue with a system of this kind, documented with discipline and compressed with patience, produces artifacts that neither party would have produced alone, and that the practice of producing them changes the practitioner in the way any serious practice does. The metaphysics is left where metaphysics belongs — open, and slightly to one side of the work.
-
-A reader wishing to replicate the method needs no framework beyond this: choose a territory, follow it in dialogue, write down what emerges while it is emerging, keep only what survives rereading, and arrange the survivors so their relations become visible. Everything else in this repository is scaffolding around that sentence.
-
-## Apparatus
-
-The tooling that indexes, serves, and visualizes the corpus lives in [`apparatus/`](apparatus/) — the Astro site, the MCP server, the command-line tools. It is ordinary software and is documented as such in [`docs/`](docs/). The living graph that links the documents is maintained in [`constellation/`](constellation/), beside the tools that tend it. The corpus does not depend on any of this; the library was legible before it had an interface and will remain so after this one is superseded.
-
-## License
-
-CC BY 4.0, for the library's own writing. The transcripts under `corpus/extractions/` are the exception noted above — attributed, but their speakers' to license, not ours. The library was assembled from dialogue; it returns to dialogue. Take what is useful, attribute what you take, and improve what you can.
-
----
-
-*A note found in the margins of an earlier draft, retained here as the only claim the library makes without qualification: writing generates insight beyond pre-articulation understanding. The rest is commentary.*
+Built by [S. Lavi](https://github.com/idl3o) · [@modsias](https://x.com/modsias)
