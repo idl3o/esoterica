@@ -62,6 +62,7 @@ const CORPUS_DIRS = [
   { dir: 'memory-palace', label: 'Memory Palace' },
   { dir: 'misc', label: 'Misc' },
   { dir: 'fiction-bridges', label: 'Fiction Bridges' },
+  { dir: 'vignettes', label: 'Vignettes' },
   { dir: 'film-slate', label: 'Film Slate' },
   { dir: 'voices', label: 'Voices' },
   { dir: 'negative-space', label: 'Negative Space' },
