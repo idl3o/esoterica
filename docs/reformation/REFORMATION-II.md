@@ -111,9 +111,46 @@ Remove/repoint any constellation node whose `document` field targets a deleted f
 - Anything Priority 0 is surfaced to Sam and left for Sam — do not decide on his behalf, and do not decide on the third party's behalf at all.
 - If a verification step fails and the fix isn't obvious within this plan, stop and surface it.
 
-## Loose ends for Sam to rule on
+## Rulings
 
-- Pilgrimage files: redact dates, or remove, or leave?
-- `film-slate/`: private study / gated / out of public tree?
-- History rewrite: authorize the single batched `filter-repo` (PII + audio), or keep to HEAD-only removals?
-- Byline: is full legal name the intended public credit on the whitepaper?
+*Sam ruled on these on 2026-07-28. Recorded here so they are not re-litigated.*
+
+- **Pilgrimage files — leave them.** The itineraries are hypothetical, not
+  forward whereabouts. Priority 0 item 3 is withdrawn: it read a thought
+  experiment as a travel plan. No action.
+
+- **`film-slate/` — stays public and readable.** No objection to it being
+  available. The IP question raised in Priority 1 item 7 concerns *rendering
+  and distributing* video, not hosting the written pre-production, and that
+  decision is deferred to whenever a wave is actually rendered. Nothing to do
+  in this pass.
+
+- **Byline — intentional, item closed.** The whitepaper credit is not a
+  standalone decision: the full name appears in 40+ files including
+  `CLAUDE.md`, where it is structural, and the GitHub account and commit
+  metadata carry it regardless. Priority 0 item 4 was scoped as a one-file
+  question and should not have been. Pseudonymity across the project would be
+  a separate, much larger job; it is not wanted.
+
+- **Audio — deleted, HEAD-only for now.** The three `.m4a` are untracked and
+  `corpus/audio-transcripts/raw/` is gitignored; the originals stay on Sam's
+  disk. The blobs remain in history, so no clone is smaller until the rewrite.
+
+- **Licence — CC BY 4.0 for the library, MIT for the apparatus.** Landed. The
+  AI-authorship limit is stated in the `LICENSE` rather than papered over.
+
+## Still open
+
+- **History rewrite.** Authorized in principle, not yet run. One batched
+  `filter-repo` covering the three privacy files *and* the audio, then
+  force-push, then a GitHub Support request to garbage-collect unreachable
+  objects — without that ticket the blobs stay fetchable by direct SHA URL
+  after the push, which is the part most rewrites quietly get wrong.
+
+  Two preconditions, in order: land `hygiene/privacy` first, and reconcile the
+  second checkout at `Documents/GitHub/esoterica` **before** the rewrite, not
+  after. A rewrite strands every existing clone, and that one may hold work
+  that exists nowhere else.
+
+  Exposure is low enough to make this worth doing calmly rather than urgently:
+  0 forks, 0 stars, public since 2025-09-08.
