@@ -74,3 +74,6 @@ apparatus/cli/output/
 
 # Generated from constellation/constellation.json by apparatus/site/scripts/sync-public-data.mjs
 apparatus/site/public/constellation.json
+
+# Source audio — superseded by the transcripts; originals kept locally, out of git
+corpus/audio-transcripts/raw/

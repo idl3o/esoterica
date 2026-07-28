@@ -6,16 +6,16 @@ Transcriptions of audio files — voice notes, recordings, lectures, conversatio
 
 ```bash
 # From repo root
-python cli/audio_ingest.py path/to/audio.mp3
+python apparatus/cli/audio_ingest.py path/to/audio.mp3
 
 # With timestamps
-python cli/audio_ingest.py recording.m4a --timestamps
+python apparatus/cli/audio_ingest.py recording.m4a --timestamps
 
 # Better accuracy (slower)
-python cli/audio_ingest.py lecture.mp3 --model medium
+python apparatus/cli/audio_ingest.py lecture.mp3 --model medium
 
 # Custom title and tags
-python cli/audio_ingest.py voice-note.m4a --title "Session Notes" --tags personal reflection
+python apparatus/cli/audio_ingest.py voice-note.m4a --title "Session Notes" --tags personal reflection
 ```
 
 ## Requirements
@@ -27,7 +27,7 @@ pip install faster-whisper
 ## Workflow
 
 1. Drop audio file in `raw/`
-2. Run: `python cli/audio_ingest.py audio-transcripts/raw/your-file.mp3`
+2. Run: `python apparatus/cli/audio_ingest.py audio-transcripts/raw/your-file.mp3`
 3. Transcript saved to `transcripts/[filename]-transcript.md`
 4. Optional: digest/synthesis saved as `digests/[filename]-digest.md`
 
@@ -49,7 +49,12 @@ pip install faster-whisper
 
 ```
 audio-transcripts/
-├── raw/          # Original audio files
+├── raw/          # Original audio files — local only, not in git
 ├── transcripts/  # Raw transcriptions
 └── digests/      # Synthesized/processed versions
 ```
+
+`raw/` is gitignored. Source audio ran to ~165 MB and every clone paid for it
+forever, while the transcripts beside it already carry the content. Drop audio in
+`raw/` to transcribe it; keep the originals wherever you keep originals. What
+belongs in the library is the text.
