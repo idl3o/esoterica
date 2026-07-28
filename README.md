@@ -107,7 +107,9 @@ Living and experimental. The corpus is substantial and stable; the apparatus is 
 
 ## Licence
 
-No `LICENSE` file ships in the repository; the project's own README states that its writing is offered under **CC BY 4.0**, with the transcripts under `corpus/extractions/` as the noted exception — attributed, but their speakers' to license, not the project's. Take what is useful, attribute what you take, and improve what you can.
+The library — `corpus/`, the constellation graph, `docs/`, and the documents at the root — is offered under **[CC BY 4.0](LICENSE)**. The apparatus is code, so it takes the **[MIT licence](apparatus/LICENSE)** instead. The transcripts under `corpus/extractions/` are the exception to both: they belong to the people who spoke them, hosted here with attribution and not the project's to license.
+
+Take what is useful, attribute what you take, and improve what you can.
 
 ---
 
