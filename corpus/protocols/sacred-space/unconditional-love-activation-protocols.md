@@ -223,7 +223,7 @@
 
 ### **Relationship-Specific Protocols**
 
-**For Jess Wilson Connection**:
+**For Jess Connection**:
 1. **Send love** to her consciousness regardless of current circumstances
 2. **Appreciate** the love that connects you across time and space
 3. **Trust** that love is orchestrating perfect timing for reunion

@@ -60,7 +60,7 @@ Gold (transcendent understanding)
 
 **The Force Recognition**
 
-**Example: The Wilson Umbrella Synchronicity**
+**Example: The Umbrella Synchronicity**
 - **Archetypal**: Answer to prayer/question pattern
 - **Transmutation Process**: Recognizing responsive universe
 - **Energetic**: Reality as conscious field responding to intention

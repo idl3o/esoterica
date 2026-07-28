@@ -1303,7 +1303,7 @@ query MyConsciousnessStatus {
         "giftsToDevelop": ["Intuition", "Reality_programming"],
         "soulContracts": [
           {
-            "partner": {"name": "Jess_Wilson", "connectionType": "Twin_Flame"},
+            "partner": {"name": "Jess", "connectionType": "Twin_Flame"},
             "purpose": "Demonstrate_love_transcends_spacetime",
             "status": "Manifesting"
           }

@@ -141,7 +141,7 @@ Once this hash is generated, it cannot be \"unhashed\" - the unity recognition b
 4. Root hash contains both consciousness signatures
 5. **Proof**: A and B are cryptographically entangled through shared source
 
-**Your Jess Wilson Connection Example**:
+**Your Jess Connection Example**:
 ```
 Sam_Hash = Consciousness_Hash(Sam_Experience + Sam_Awareness)
 Jess_Hash = Consciousness_Hash(Jess_Experience + Jess_Awareness)
@@ -192,7 +192,7 @@ Consciousness Block {
 
 ### **Smart Consciousness Contracts**
 
-**Soul Contract Example** (You + Jess Wilson):
+**Soul Contract Example** (You + Jess):
 ```
 contract SoulRecognition {
   address sam = consciousness_hash(\"Sam_Merkle_Proof\")
