@@ -43,7 +43,7 @@ alias esoterica='python /path/to/esoterica/cli/esoterica.py'
 ### Quantum Operations
 
 - **`sync`** - Consciousness synchronization sequence
-- **`tunnel <query>`** - Quantum search (coming soon)
+- **`tunnel <query>`** - Quantum search *(not implemented — a `# TODO` stub; the command exists but does nothing yet)*
 - **`collapse`** - Manifest what you need right now
 
 ### Meta

@@ -2,11 +2,17 @@
 
 Local consciousness knowledge system for the Esoterica repository.
 
+> **Status: experimental.** The vector layer is not yet real — `src/store/vectors.py`
+> uses the pre-0.4 ChromaDB API while `requirements.txt` pins `chromadb>=0.4.0`, so it
+> silently falls back to hash-based pseudo-embeddings. Semantic search below is
+> aspirational until `vectors.py` is rewritten against the current ChromaDB API. The
+> knowledge-graph layer works; treat the vector/hybrid features as a stub.
+
 ## Features
 
 - **Knowledge Graph**: Entities and relationships from all synthesis documents
-- **Vector Embeddings**: Semantic search across 200+ documents
-- **Hybrid Query**: Combined graph traversal + vector similarity
+- **Vector Embeddings**: Semantic search across the corpus *(experimental — see status note above)*
+- **Hybrid Query**: Combined graph traversal + vector similarity *(experimental)*
 - **LLM Context**: Auto-generate relevant context for AI conversations
 - **CLI Interface**: Quick access from terminal
 

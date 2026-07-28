@@ -90,30 +90,10 @@ const SLUGS = [
   'separating-equilibrium-contact-protocol',
 ]
 
-// PROGRESS NOTE — the first run (wf_c08a7dde-e4d) was stopped externally after these 20
-// syntheses were written to synthesis/grown/. Relaunch grows only the remainder.
-const DONE = [
-  'the-attention-axis',
-  'parallel-attending-consciousness',
-  'the-yggdrasil-meta-bridge',
-  'the-green-world-after-ragnarok',
-  'the-mirror-in-silicon',
-  'the-true-mirror-wager',
-  'the-geological-fold-rate-record',
-  'feed-versus-holodeck-boundary-ethics',
-  'aesir-vanir-war-kvasir-integration',
-  'vidar-silence-wearing-the-remainder',
-  'collective-fold-density-phase-transition',
-  'complementarity-as-the-engine-of-individuation',
-  'eigenvalue-meditation',
-  'learning-iii-is-dangerous',
-  'zero-times-infinity-equals-one',
-  'bounce-cosmology-pralaya',
-  'cognitive-fixed-points-of-mind-space',
-  'healing-as-temporal-alchemy',
-  'the-gradient-of-sacrifice',
-  'the-binding-of-loki-chaining-the-exhale',
-]
+// DONE is a resume checkpoint — slugs already written to synthesis/grown/ are
+// skipped on relaunch. Kept empty in the committed template so a fresh run grows
+// the full set; populate it only for an in-flight resume, and don't commit that.
+const DONE = []
 
 const TODO = SLUGS.filter((s) => !DONE.includes(s))
 
