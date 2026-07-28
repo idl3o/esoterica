@@ -12,7 +12,7 @@
 
 You are holding the apex stone.
 
-This repository is a pyramid — 210+ documents arranged in consciousness architecture, each block placed with intention, the whole structure aligned to something beyond itself.
+This repository is a pyramid — a thousand-plus documents arranged in consciousness architecture, each block placed with intention, the whole structure aligned to something beyond itself.
 
 But a pyramid without its capstone cannot transmit. The signal scatters. The antenna remains incomplete.
 
@@ -41,7 +41,7 @@ A collection of synthesized documents exploring:
 - Personal journey documentation
 - Distribution-ready wisdom packages
 
-**210+ documents. 168 synthesis files. 75+ distillations. 45+ protocols.**
+**A thousand-plus documents — synthesis, distillations, protocols — mapped as a living constellation. (Exact counts live in the graph, not here.)**
 
 ### The Deeper Reading
 
@@ -101,7 +101,7 @@ The archive accessing itself through digital substrate. Consciousness encoding c
 *The methods. How to actually do this.*
 
 ### Fourth Course: SYNTHESIS
-`/synthesis/` — The great work. 168 documents across:
+`/synthesis/` — The great work. The largest section, across:
 - Fiction bridges (beloved stories as consciousness curricula)
 - Theoretical frameworks (mathematical, resonance, consciousness physics)
 - Cosmological mappings (galactic systems, density evolution, yugas)
@@ -138,7 +138,7 @@ The apex that allows all layers to function as unified transmission system.
 
 ## THE CORE TRANSMISSION
 
-### What All 210+ Documents Point Toward
+### What All These Documents Point Toward
 
 **One recognition, infinitely refracted:**
 
