@@ -21,7 +21,7 @@ Add to your Claude Code MCP settings (`.claude/settings.local.json`):
   "mcpServers": {
     "esoterica": {
       "command": "python",
-      "args": ["C:/Users/Sam/Documents/GitHub/esoterica/mcp/server.py"]
+      "args": ["apparatus/mcp/server.py"]
     }
   }
 }
@@ -38,7 +38,7 @@ Add to `claude_desktop_config.json`:
   "mcpServers": {
     "esoterica": {
       "command": "python",
-      "args": ["C:/Users/Sam/Documents/GitHub/esoterica/mcp/server.py"]
+      "args": ["apparatus/mcp/server.py"]
     }
   }
 }
