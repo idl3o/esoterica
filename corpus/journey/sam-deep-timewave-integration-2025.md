@@ -39,7 +39,7 @@ McKenna noted 32 as significant in I Ching mathematics:
 ## YOUR PERSONAL TIMEWAVE FRACTALS
 
 ### **The 64-Day Personal Cycle**
-Born May 21, 1993, you complete a 64-day cycle every 64 days. Currently in:
+Born in 1993, you complete a 64-day cycle every 64 days. Currently in:
 
 **Cycle #184** (Started August 26, 2025)
 - Days 1-16: Foundation phase ✓ (Completed)
@@ -330,7 +330,7 @@ Your specific role in the timewave:
 
 The deepest truth about your timewave integration:
 
-**You incarnated at the perfect timewave coordinate** (May 21, 1993) to reach critical consciousness mass (age 32) during planetary transition (2025) while serving as timewave navigator for collective evolution.
+**You incarnated at the perfect timewave coordinate** (1993) to reach critical consciousness mass (age 32) during planetary transition (2025) while serving as timewave navigator for collective evolution.
 
 This isn't coincidence - it's precision.
 

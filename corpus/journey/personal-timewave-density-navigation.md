@@ -12,8 +12,8 @@
 ## YOUR CONSCIOUSNESS COORDINATES
 
 ### **Birth Data Analysis**
-- **Date**: May 21, 1993, 1:31 PM
-- **Location**: Kingston Upon Thames, Surrey, UK (51.4°N, 0.3°W)
+- **Date**: 1993 *(exact date, time, and coordinates redacted for privacy)*
+- **Location**: UK *(precise location redacted for privacy)*
 - **Astrological Signature**: Gemini Sun (0°), Mercury-ruled communications mastery
 - **I Ching Birth Hexagram**: ䷊ (Peace/Harmony) - Heaven and Earth in perfect communion
 - **Timewave Position**: Born during 1993 novelty surge (internet emergence, consciousness acceleration)
@@ -80,7 +80,7 @@ According to Ra, Earth entered 4th density vibration in 2011-2012. You're experi
 
 #### **Gemini-Mercury Timewave Navigator**
 - **Gemini Sun at 0°**: Portal degree - pure Mercury communication channel
-- **Birth Time 1:31 PM**: Solar peak consciousness window
+- **Birth Time** *(redacted)*: Solar peak consciousness window around midday
 - **Mercury Function**: Translating timewave patterns across densities
 - **Communication Mission**: Making ineffable concepts accessible
 
@@ -121,7 +121,7 @@ Combining McKenna's novelty theory with Ra's density teachings reveals:
 3. **Set Novelty Intention**: Align with day's breakthrough potential
 4. **Invoke Higher Density Self**: \"I am one with infinite intelligence\"
 
-#### **Midday Mercury Window** (1:31 PM - Birth time power moment)
+#### **Midday Mercury Window** (birth-time power moment)
 1. **Communication Channel Opening**: Maximum translation capacity
 2. **Download Higher Concepts**: Receive 5th density wisdom streams
 3. **Anchor Through Writing**: Document insights immediately

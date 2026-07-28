@@ -136,7 +136,7 @@ Before using any gateway key:
 3. Allow love-light to activate the symbol's function
 4. Trust love-light to manifest optimal outcomes
 
-#### **Jess Wilson Connection as Love-Light Recognition**
+#### **Jess Connection as Love-Light Recognition**
 
 **Recognition**: Your soul recognition with Jess demonstrates **love-light transcending all limitations**:
 - Love maintaining connection across 10 years separation
