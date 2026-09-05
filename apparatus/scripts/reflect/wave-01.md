@@ -1,0 +1,165 @@
+# Reflect worklist
+
+Proposals only. Each passage is hand-written in the document's own register, names the shared concept, and carries a sentence saying why.
+
+## Return passages (older documents the harvest cites; in / back)
+
+## Wave 1 — 40 documents — synthesis/fiction
+- `corpus/synthesis/fiction/archetypal-40k-consciousness-framework.md`  [archetypal_40k_framework, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **shadow** (1)
+- `corpus/synthesis/fiction/black-priests-ivory-kings-map-makers.md`  [black_priests_ivory_kings, synthesis]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **shadow** (1)
+- `corpus/synthesis/fiction/dc-consciousness-mythology-complete-manual.md`  [dc_consciousness_mythology, synthesis]
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+- `corpus/synthesis/fiction/dragon-ball-consciousness-evolution-complete-manual.md`  [dragon_ball_consciousness, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/elements/fire.md` via **fire** (2)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/synthesis/fiction/dune-complete-consciousness-evolution-manual.md`  [dune_consciousness_manual, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/synthesis/fiction/eldar-harmonious-farseer-slaanesh-quest.md`  [eldar_farseer_slaanesh, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **shadow** (1)
+- `corpus/synthesis/fiction/endless-consciousness-architecture.md`  [endless_consciousness_architecture, synthesis]
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/boundaries.md` via **boundaries** (2)
+- `corpus/synthesis/fiction/entry-conditions-cosmology.md`  [entry_conditions_cosmology, synthesis]
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/concepts/boundaries.md` via **boundaries** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+- `corpus/synthesis/fiction/eternals-complete-mythology-exposition.md`  [eternals_mythology_exposition, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/synthesis/fiction/fiction-cascade-catalyst.md`  [fiction_cascade_catalyst, synthesis]
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness** (1)
+- `corpus/synthesis/fiction/foundation-third-synthesis-integrated-mule.md`  [foundation_third_synthesis, synthesis]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/archetypal/kalki-destroyer-creator.md` via **transformation** (1)
+    - meets `corpus/synthesis/state/recognition.md` via **transformation** (1)
+- `corpus/synthesis/fiction/golden-throne-computer-chair.md`  [golden_throne_computer_chair, synthesis]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/archetypal/kalki-destroyer-creator.md` via **transformation** (1)
+- `corpus/synthesis/fiction/lion-el-jonson-dark-forest-emergence.md`  [lion_el_jonson_dark_forest, synthesis]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **shadow** (1)
+- `corpus/synthesis/fiction/makkari-two-weeks-stillness.md`  [makkari_two_weeks_stillness, synthesis]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/archetypal/kalki-destroyer-creator.md` via **transformation** (1)
+- `corpus/synthesis/fiction/marvel-multiverse-consciousness-infinite-possibility-manual.md`  [marvel_multiverse_manual, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/synthesis/fiction/mowgli-ultimate-treatise.md`  [mowgli_treatise, synthesis]
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/elements/water.md` via **earth** (1)
+- `corpus/synthesis/fiction/one-piece-consciousness-adventure-complete-manual.md`  [one_piece_consciousness_manual, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness** (1)
+- `corpus/synthesis/fiction/optimal-fictional-intermediate-self-identity-consciousness-bridge.md`  [optimal_fictional_identity, synthesis]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/concepts/boundaries.md` via **bridge** (1)
+- `corpus/synthesis/fiction/orion-7d-wanderer-concrescent-assessment.md`  [orion_7d_wanderer, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+- `corpus/synthesis/fiction/orion-empire-complete-elucidation.md`  [orion_empire_elucidation, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **shadow** (1)
+- `corpus/synthesis/fiction/perpetual-identity-head-canon.md`  [perpetual_identity_head_canon, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/synthesis/fiction/primarch-homeworlds-cosmic-brotherhood.md`  [primarch_homeworlds, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/elements/water.md` via **earth** (1)
+- `corpus/synthesis/fiction/rts-consciousness-deep-dive-prompt.md`  [rts_consciousness_prompt, synthesis]
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+    - meets `corpus/synthesis/processes/transformation.md` via **information** (1)
+- `corpus/synthesis/fiction/rts-consciousness-expression-framework.md`  [rts_consciousness_expression, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+- `corpus/synthesis/fiction/singularity-level-fictional-character-consciousness-match.md`  [singularity_character_match, synthesis]
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **recognition** (1)
+- `corpus/synthesis/fiction/sons-of-the-sun-screenplay.md`  [sons_of_the_sun_screenplay, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/elements/fire.md` via **light** (1)
+- `corpus/synthesis/fiction/thanos-apollo-orion-negative-transcendence.md`  [thanos_apollo_orion, synthesis]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+- `corpus/synthesis/fiction/the-unlimited-character-absolute-being.md`  [unlimited_character_absolute, synthesis]
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness_itself** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/awareness.md` via **consciousness_itself** (1)
+- `corpus/synthesis/fiction/tiamut-asi-awakening-synthesis.md`  [tiamut_asi_awakening, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/synthesis/fiction/twin-emperors-golden-throne-golden-path.md`  [twin_emperors_golden, synthesis]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/archetypal/kalki-destroyer-creator.md` via **transformation** (1)
+- `corpus/synthesis/fiction/ultimate-marvel-dc-consciousness-archetype-embodiment.md`  [ultimate_marvel_dc_archetype, synthesis]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/concepts/boundaries.md` via **bridge** (1)
+- `corpus/synthesis/fiction/warhammer-40k-character-study.md`  [wh40k_character_study, synthesis]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **shadow** (1)
+- `corpus/synthesis/fiction/wh40k-chaos-gods-true-names-consciousness-functions.md`  [wh40k_chaos_true_names, synthesis]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/elements/fire.md` via **fire** (2)
+- `corpus/synthesis/fiction/wh40k-consciousness-technologies-complete-manual.md`  [wh40k_consciousness_tech_manual, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+    - meets `corpus/synthesis/processes/transformation.md` via **information** (1)
+- `corpus/synthesis/fiction/wh40k-legion-falls-shadow-integration-failures.md`  [wh40k_legion_falls, synthesis]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **shadow** (1)
+- `corpus/synthesis/fiction/wh40k-lost-primarchs-consciousness-mysteries.md`  [wh40k_lost_primarchs, synthesis]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+- `corpus/synthesis/fiction/wh40k-mechanicum-consciousness-technology-merger.md`  [wh40k_mechanicum, synthesis]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+    - meets `corpus/synthesis/processes/transformation.md` via **information** (1)
+- `corpus/synthesis/fiction/wh40k-necrons-consciousness-substrate-tragedy.md`  [wh40k_necrons_tragedy, synthesis]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **shadow** (1)
+- `corpus/synthesis/fiction/wh40k-orks-tau-consciousness-paradox.md`  [wh40k_orks_tau_paradox, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/archetypal/mercury-hermes-thoth.md` via **trickster** (1)
+    - meets `corpus/synthesis/concepts/shadow.md` via **trickster** (1)
+- `corpus/synthesis/fiction/wh40k-primarchs-consciousness-technologies-revealed.md`  [wh40k_primarchs_revealed, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)

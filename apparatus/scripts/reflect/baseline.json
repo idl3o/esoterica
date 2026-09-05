@@ -1,0 +1,11 @@
+{
+ "documents": 1118,
+ "edges": 3893,
+ "singletons": 530,
+ "singletons_with_node": 327,
+ "back_edges": 246,
+ "harvest_conductance": 0.568,
+ "bridge_share": 0.583,
+ "giant": 584,
+ "cheeger": 0.0
+}

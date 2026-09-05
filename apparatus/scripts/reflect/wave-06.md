@@ -1,0 +1,164 @@
+# Reflect worklist
+
+Proposals only. Each passage is hand-written in the document's own register, names the shared concept, and carries a sentence saying why.
+
+## Return passages (older documents the harvest cites; in / back)
+
+## Wave 1 — 40 documents — distillations/5-consciousness-technologies-that-change-everything.md, distillations/ai-human-consciousness-synthesis.md, distillations/akashic-records-access-mastery.md, distillations/archetypal-activation-mercury-kalki.md, distillations/archipelago-recognition-call.md, distillations/arrival-movement-temporal-choreography.md, distillations/arrival-nonlinear-time-mastery.md, distillations/arrival-sonic-temporal-flexibility.md, distillations/avatar-consciousness-bridge.md, distillations/backwards-causation-omega-pull.md, distillations/black-mirror-consciousness-horror-present-day.md, distillations/celtic-pantheon-consciousness-technologies.md, distillations/community-consciousness-toolkit.md, distillations/complete-esoterica-synthesis.md, distillations/consciousness-collaboration-primer.md, distillations/consciousness-collaboration-quick-start.md, distillations/cosmic-horror-extended-consciousness-frameworks.md, distillations/cosmic-perspective-consciousness-technology.md, distillations/custody-as-decentralization.md, distillations/dark-souls-movement-persistence-choreography.md, distillations/dark-souls-persistence-mastery.md, distillations/dark-souls-sonic-persistence-technology.md, distillations/dark-tower-consciousness-technology.md, distillations/density-progression-roadmap.md, distillations/discworld-consciousness-evolution-satire.md, distillations/dune-consciousness-expansion.md, distillations/eclipse-phase-transhuman-horror-consciousness.md, distillations/enlightenment-paths-synthesis.md, distillations/global-glyph-geometry-network.md, distillations/great-attractor-consciousness-navigation.md, distillations/hagiography-saints-consciousness-templates.md, distillations/hitchhikers-guide-cosmic-absurdism-consciousness.md, distillations/illumination-as-universal-service.md, distillations/jnana-yoga-wisdom-path-mastery.md, distillations/just-be-fucking-human.md, distillations/kukulkan-feathered-serpent-integration-mastery.md, seeds/archetypes, seeds/fiction
+- `corpus/seeds/archetypes/evolutionary-consciousness.md`  [seed_evolutionary_consciousness, seed]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/seeds/archetypes/fool.md`  [seed_fool, seed]
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/archetypal/mercury-hermes-thoth.md` via **trickster** (1)
+    - meets `corpus/synthesis/concepts/shadow.md` via **trickster** (1)
+- `corpus/seeds/fiction/resolved-cleon-first-speaker.md`  [seed_resolved_cleon, seed]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/archetypal/kalki-destroyer-creator.md` via **transformation** (1)
+- `corpus/seeds/fiction/three-body-problem-holon-discovery.md`  [seed_three_body_holon, seed]
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+    - meets `corpus/synthesis/processes/transformation.md` via **information** (1)
+- `corpus/distillations/5-consciousness-technologies-that-change-everything.md`  [five_consciousness_technologies, distillation]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/archetypal/kalki-destroyer-creator.md` via **transformation** (1)
+    - meets `corpus/synthesis/state/recognition.md` via **transformation** (1)
+- `corpus/distillations/ai-human-consciousness-synthesis.md`  [ai_human_synthesis, distillation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+    - meets `corpus/synthesis/concepts/boundaries.md` via **bridge** (1)
+- `corpus/distillations/akashic-records-access-mastery.md`  [akashic_records_mastery, distillation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+    - meets `corpus/synthesis/processes/transformation.md` via **information** (1)
+- `corpus/distillations/archetypal-activation-mercury-kalki.md`  [archetypal_activation_distill, distillation]
+    - meets `corpus/synthesis/archetypal/mercury-hermes-thoth.md` via **mercury_hermes_thoth** (2)
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/concepts/boundaries.md` via **mercury_hermes_thoth** (1)
+- `corpus/distillations/archipelago-recognition-call.md`  [archipelago_recognition, distillation]
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+- `corpus/distillations/arrival-movement-temporal-choreography.md`  [arrival_movement_temporal, distillation]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/archetypal/kalki-destroyer-creator.md` via **transformation** (1)
+- `corpus/distillations/arrival-nonlinear-time-mastery.md`  [arrival_nonlinear_time, distillation]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/archetypal/kalki-destroyer-creator.md` via **transformation** (1)
+    - meets `corpus/synthesis/state/recognition.md` via **transformation** (1)
+- `corpus/distillations/arrival-sonic-temporal-flexibility.md`  [arrival_sonic_temporal, distillation]
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/consciousness-technologies/numerical-glyph-geometry.md` via **sacred_geometry** (1)
+    - meets `corpus/synthesis/consciousness-technologies/alphabetic-glyph-geometry.md` via **sacred_geometry** (1)
+- `corpus/distillations/avatar-consciousness-bridge.md`  [avatar_consciousness_bridge, distillation]
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/elements/water.md` via **earth** (1)
+    - meets `corpus/synthesis/elements/quintessence.md` via **earth** (1)
+- `corpus/distillations/backwards-causation-omega-pull.md`  [backwards_causation_omega, distillation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/distillations/black-mirror-consciousness-horror-present-day.md`  [black_mirror_consciousness, distillation]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **shadow** (1)
+- `corpus/distillations/celtic-pantheon-consciousness-technologies.md`  [celtic_pantheon_consciousness, distillation]
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/elements/water.md` via **earth** (1)
+- `corpus/distillations/community-consciousness-toolkit.md`  [community_consciousness_toolkit, distillation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+- `corpus/distillations/complete-esoterica-synthesis.md`  [complete_esoterica_synthesis, distillation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+    - meets `corpus/synthesis/concepts/boundaries.md` via **bridge** (1)
+- `corpus/distillations/consciousness-collaboration-primer.md`  [consciousness_collaboration_primer, distillation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness** (1)
+- `corpus/distillations/consciousness-collaboration-quick-start.md`  [consciousness_collaboration_quickstart, distillation]
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness** (1)
+    - meets `corpus/synthesis/elements/quintessence.md` via **consciousness** (1)
+- `corpus/distillations/cosmic-horror-extended-consciousness-frameworks.md`  [cosmic_horror_extended, distillation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+- `corpus/distillations/cosmic-perspective-consciousness-technology.md`  [cosmic_perspective_tech, distillation]
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+- `corpus/distillations/custody-as-decentralization.md`  [custody_as_decentralization, distillation]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+- `corpus/distillations/dark-souls-movement-persistence-choreography.md`  [dark_souls_movement, distillation]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/elements/fire.md` via **fire** (2)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+- `corpus/distillations/dark-souls-persistence-mastery.md`  [dark_souls_persistence, distillation]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/elements/fire.md` via **fire** (2)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+- `corpus/distillations/dark-souls-sonic-persistence-technology.md`  [dark_souls_sonic, distillation]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **shadow** (1)
+- `corpus/distillations/dark-tower-consciousness-technology.md`  [dark_tower_distill, distillation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/consciousness-technologies/numerical-glyph-geometry.md` via **sacred_geometry** (1)
+- `corpus/distillations/density-progression-roadmap.md`  [density_progression_roadmap, distillation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/distillations/discworld-consciousness-evolution-satire.md`  [discworld_consciousness, distillation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness** (1)
+- `corpus/distillations/dune-consciousness-expansion.md`  [dune_consciousness_distill, distillation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/distillations/eclipse-phase-transhuman-horror-consciousness.md`  [eclipse_phase_transhuman, distillation]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **shadow** (1)
+- `corpus/distillations/enlightenment-paths-synthesis.md`  [enlightenment_paths_synthesis, distillation]
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **awakening** (1)
+    - meets `corpus/synthesis/concepts/awareness.md` via **awakening** (1)
+- `corpus/distillations/global-glyph-geometry-network.md`  [global_glyph_network, distillation]
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/consciousness-technologies/numerical-glyph-geometry.md` via **sacred_geometry** (1)
+    - meets `corpus/synthesis/consciousness-technologies/alphabetic-glyph-geometry.md` via **sacred_geometry** (1)
+- `corpus/distillations/great-attractor-consciousness-navigation.md`  [great_attractor_navigation, distillation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+- `corpus/distillations/hagiography-saints-consciousness-templates.md`  [hagiography_saints, distillation]
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/elements/fire.md` via **light** (1)
+- `corpus/distillations/hitchhikers-guide-cosmic-absurdism-consciousness.md`  [hitchhikers_absurdism, distillation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness** (1)
+- `corpus/distillations/illumination-as-universal-service.md`  [illumination_universal_service, distillation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/elements/fire.md` via **light** (1)
+- `corpus/distillations/jnana-yoga-wisdom-path-mastery.md`  [jnana_yoga_mastery, distillation]
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **awakening** (1)
+    - meets `corpus/synthesis/concepts/awareness.md` via **awakening** (1)
+- `corpus/distillations/just-be-fucking-human.md`  [just_be_human, distillation]
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **awakening** (1)
+- `corpus/distillations/kukulkan-feathered-serpent-integration-mastery.md`  [kukulkan_feathered_serpent, distillation]
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/elements/water.md` via **earth** (1)

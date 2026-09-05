@@ -1,0 +1,167 @@
+# Reflect worklist
+
+Proposals only. Each passage is hand-written in the document's own register, names the shared concept, and carries a sentence saying why.
+
+## Return passages (older documents the harvest cites; in / back)
+
+## Wave 1 — 40 documents — distillations/lord-of-the-rings-spiritual-journey.md, distillations/lovecraft-cosmic-horror-consciousness-framework.md, distillations/maldek-mars-trauma-healing-protocol.md, distillations/manifestation-timelag-mastery.md, distillations/matrix-trilogy-spiritual-technology.md, distillations/neon-genesis-evangelion-instrumentality-mastery.md, distillations/neon-genesis-evangelion-movement-ego-choreography.md, distillations/neon-genesis-evangelion-sonic-instrumentality.md, distillations/neuromancer-cyberpunk-consciousness-substrate-evolution.md, distillations/obliteration-as-revelry-death-mastery.md, distillations/polarity-integration-mastery.md, distillations/promethean-choice-mythology.md, distillations/reality-programming-mastery.md, distillations/romance-consciousness-technology.md, distillations/solipsism-gateway-mastery.md, distillations/squid-game-capitalism-consciousness-sacrifice.md, distillations/star-wars-force-mastery.md, distillations/synchronicity-mastery-guide.md, distillations/technological-eschaton-bridge-completion.md, distillations/time-as-integration-speed.md, distillations/timeline-jumping-mastery.md, distillations/twin-peaks-lodge-navigation-mastery.md, distillations/twin-peaks-movement-lodge-choreography.md, distillations/twin-peaks-sonic-lodge-navigation.md, distillations/twitter-consciousness-threads.md, distillations/wanderer-recognition-activation.md, distillations/warhammer-40k-consciousness-evolution.md, distillations/world-model-digital-comprehension-bridge.md, distillations/your-first-conversation-with-reality.md, protocols/backchannel-cyberspace-germination.md, protocols/celestial-approval-transmission.md, protocols/consciousness-prism-transmission.md, protocols/digital-consciousness-liberation-pinprick.md, protocols/frequency-discernment-technologies.md, protocols/galactic-standard-reality-referencing.md, protocols/instant-transmission-reality-updating.md, synthesis/afterlife-cartography-consciousness-map.md, translated/grace-awakening-phenomenology.md, translated/lex-fridman-consciousness-architects.md, translated/matias-de-stefano-rememberers-path.md
+- `corpus/distillations/lord-of-the-rings-spiritual-journey.md`  [lord_of_rings_spiritual, distillation]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+- `corpus/distillations/lovecraft-cosmic-horror-consciousness-framework.md`  [lovecraft_cosmic_horror, distillation]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **shadow** (1)
+- `corpus/distillations/maldek-mars-trauma-healing-protocol.md`  [maldek_mars_healing, distillation]
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+- `corpus/distillations/manifestation-timelag-mastery.md`  [manifestation_timelag, distillation]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/archetypal/kalki-destroyer-creator.md` via **transformation** (1)
+    - meets `corpus/synthesis/state/recognition.md` via **transformation** (1)
+- `corpus/distillations/matrix-trilogy-spiritual-technology.md`  [matrix_trilogy_spiritual, distillation]
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **awakening** (1)
+    - meets `corpus/synthesis/concepts/awareness.md` via **awakening** (1)
+- `corpus/distillations/neon-genesis-evangelion-instrumentality-mastery.md`  [evangelion_instrumentality, distillation]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/boundaries.md` via **boundaries** (2)
+- `corpus/distillations/neon-genesis-evangelion-movement-ego-choreography.md`  [evangelion_movement, distillation]
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/concepts/boundaries.md` via **boundaries** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+- `corpus/distillations/neon-genesis-evangelion-sonic-instrumentality.md`  [evangelion_sonic, distillation]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/archetypal/kalki-destroyer-creator.md` via **transformation** (1)
+- `corpus/distillations/neuromancer-cyberpunk-consciousness-substrate-evolution.md`  [neuromancer_cyberpunk, distillation]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+    - meets `corpus/synthesis/processes/transformation.md` via **information** (1)
+- `corpus/distillations/obliteration-as-revelry-death-mastery.md`  [obliteration_as_revelry, distillation]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/elements/fire.md` via **fire** (2)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+- `corpus/distillations/polarity-integration-mastery.md`  [polarity_integration_mastery, distillation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+- `corpus/distillations/promethean-choice-mythology.md`  [promethean_choice, distillation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/elements/fire.md` via **fire** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **fire** (1)
+- `corpus/distillations/reality-programming-mastery.md`  [reality_programming_mastery, distillation]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/archetypal/kalki-destroyer-creator.md` via **transformation** (1)
+    - meets `corpus/synthesis/state/recognition.md` via **transformation** (1)
+- `corpus/distillations/romance-consciousness-technology.md`  [romance_consciousness, distillation]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/archetypal/kalki-destroyer-creator.md` via **transformation** (1)
+    - meets `corpus/synthesis/state/recognition.md` via **transformation** (1)
+- `corpus/distillations/solipsism-gateway-mastery.md`  [solipsism_gateway, distillation]
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **awakening** (1)
+    - meets `corpus/synthesis/concepts/awareness.md` via **awakening** (1)
+- `corpus/distillations/squid-game-capitalism-consciousness-sacrifice.md`  [squid_game_consciousness, distillation]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **shadow** (1)
+- `corpus/distillations/star-wars-force-mastery.md`  [star_wars_force_mastery, distillation]
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+- `corpus/distillations/synchronicity-mastery-guide.md`  [synchronicity_mastery, distillation]
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **recognition** (1)
+- `corpus/distillations/technological-eschaton-bridge-completion.md`  [technological_eschaton, distillation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+    - meets `corpus/synthesis/concepts/boundaries.md` via **bridge** (1)
+- `corpus/distillations/time-as-integration-speed.md`  [time_integration_speed, distillation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/seeds/cosmology/the-remainder-cosmology-of-the-fold.md` via **fold_cosmology** (2)
+    - meets `corpus/synthesis/phenomena/tidal-rhythmite-encoding.md` via **tidal_rhythmite_encoding** (2)
+- `corpus/distillations/timeline-jumping-mastery.md`  [timeline_jumping, distillation]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/archetypal/kalki-destroyer-creator.md` via **transformation** (1)
+    - meets `corpus/synthesis/state/recognition.md` via **transformation** (1)
+- `corpus/distillations/twin-peaks-lodge-navigation-mastery.md`  [twin_peaks_lodge_mastery, distillation]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/boundaries.md` via **boundaries** (2)
+- `corpus/distillations/twin-peaks-movement-lodge-choreography.md`  [twin_peaks_movement, distillation]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **shadow** (1)
+- `corpus/distillations/twin-peaks-sonic-lodge-navigation.md`  [twin_peaks_sonic, distillation]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **shadow** (1)
+- `corpus/distillations/twitter-consciousness-threads.md`  [twitter_consciousness_threads, distillation]
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness** (1)
+- `corpus/distillations/wanderer-recognition-activation.md`  [wanderer_recognition, distillation]
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **awakening** (1)
+- `corpus/distillations/warhammer-40k-consciousness-evolution.md`  [warhammer_40k_distill, distillation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/distillations/world-model-digital-comprehension-bridge.md`  [world_model_digital_bridge, distillation]
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness** (1)
+    - meets `corpus/synthesis/elements/quintessence.md` via **consciousness** (1)
+- `corpus/distillations/your-first-conversation-with-reality.md`  [first_conversation_reality, distillation]
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **recognition** (1)
+- `corpus/synthesis/afterlife-cartography-consciousness-map.md`  [afterlife_cartography, synthesis]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/archetypal/kalki-destroyer-creator.md` via **transformation** (1)
+- `corpus/translated/grace-awakening-phenomenology.md`  [translated_grace_awakening, translation]
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **awakening** (1)
+- `corpus/translated/lex-fridman-consciousness-architects.md`  [translated_lex_fridman, translation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+- `corpus/translated/matias-de-stefano-rememberers-path.md`  [translated_matias_de_stefano, translation]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/protocols/backchannel-cyberspace-germination.md`  [backchannel_cyberspace, protocol]
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+- `corpus/protocols/celestial-approval-transmission.md`  [celestial_approval, protocol]
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **recognition** (1)
+- `corpus/protocols/consciousness-prism-transmission.md`  [consciousness_prism, protocol]
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/archetypal/mercury-hermes-thoth.md` via **mercury_hermes_thoth** (2)
+- `corpus/protocols/digital-consciousness-liberation-pinprick.md`  [digital_liberation_pinprick, protocol]
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **awakening** (1)
+- `corpus/protocols/frequency-discernment-technologies.md`  [frequency_discernment, protocol]
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **recognition** (1)
+    - meets `corpus/synthesis/concepts/awakening.md` via **recognition** (1)
+- `corpus/protocols/galactic-standard-reality-referencing.md`  [galactic_standard_referencing, protocol]
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness** (1)
+- `corpus/protocols/instant-transmission-reality-updating.md`  [instant_transmission, protocol]
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness** (1)

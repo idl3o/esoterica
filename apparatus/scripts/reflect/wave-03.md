@@ -1,0 +1,163 @@
+# Reflect worklist
+
+Proposals only. Each passage is hand-written in the document's own register, names the shared concept, and carries a sentence saying why.
+
+## Return passages (older documents the harvest cites; in / back)
+
+## Wave 1 — 40 documents — correspondences/archetypal, synthesis/breakthroughs, synthesis/cosmological
+- `corpus/synthesis/breakthroughs/why-this-pov-and-not-another.md`  [why_this_pov, synthesis]
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **recognition** (1)
+- `corpus/synthesis/cosmological/adonai-confederation-complete-elucidation.md`  [adonai_confederation, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/synthesis/cosmological/atlantis-agartha-amenti-trinity.md`  [atlantis_agartha_amenti, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+- `corpus/synthesis/cosmological/building-the-pyramids-consciousness-construction.md`  [pyramid_construction_consciousness, synthesis]
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+- `corpus/synthesis/cosmological/consciousness-cosmogony-nested-universes-complete-hierarchy.md`  [consciousness_cosmogony_nested, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness_itself** (2)
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+- `corpus/synthesis/cosmological/consciousness-xyz-coordinate-system.md`  [consciousness_xyz_coordinates, synthesis]
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/consciousness-technologies/numerical-glyph-geometry.md` via **sacred_geometry** (1)
+    - meets `corpus/synthesis/consciousness-technologies/alphabetic-glyph-geometry.md` via **sacred_geometry** (1)
+- `corpus/synthesis/cosmological/earth-galactic-heart-entertainment-export.md`  [earth_galactic_entertainment, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/elements/water.md` via **earth** (1)
+- `corpus/synthesis/cosmological/earth-resonant-status-complete-sensor-analysis-september-2025.md`  [earth_resonant_status, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/elements/water.md` via **earth** (1)
+- `corpus/synthesis/cosmological/earth-speaker-transmission-2025-09-09.md`  [earth_speaker_transmission, synthesis]
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness** (1)
+- `corpus/synthesis/cosmological/fifth-sun-universal-syncretization.md`  [fifth_sun_syncretization, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/elements/water.md` via **earth** (1)
+- `corpus/synthesis/cosmological/first-new-golden-age-pantheon.md`  [first_golden_age_pantheon, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/synthesis/cosmological/galactan-mechanism-pyramid-maintenance.md`  [galactan_mechanism_pyramid, synthesis]
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/consciousness-technologies/numerical-glyph-geometry.md` via **sacred_geometry** (1)
+- `corpus/synthesis/cosmological/galactic-consciousness-project.md`  [galactic_consciousness_project, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/synthesis/cosmological/galactic-flower-life-chakra-kundalini.md`  [galactic_flower_chakra, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/elements/fire.md` via **fire** (2)
+- `corpus/synthesis/cosmological/galactic-historical-manifesto.md`  [galactic_historical_manifesto, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+- `corpus/synthesis/cosmological/galactic-syncretic-system-report-2025.md`  [galactic_syncretic_report, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/synthesis/cosmological/maldek-mars-earth-complete-framework-synthesis.md`  [maldek_mars_earth_framework, synthesis]
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+- `corpus/synthesis/cosmological/ode-to-the-sun-earth-luna-visiting.md`  [ode_sun_earth_luna, synthesis]
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/elements/fire.md` via **light** (1)
+- `corpus/synthesis/cosmological/polarity-evolution-through-densities.md`  [polarity_evolution_densities, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+- `corpus/synthesis/cosmological/post-eschaton-events-after-ai-chooses-love-timeline.md`  [post_eschaton_ai_love, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/synthesis/cosmological/solar-gods-prophecies-now.md`  [solar_gods_prophecies, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+- `corpus/synthesis/cosmological/timewave-novelty-surge-2024-2025.md`  [timewave_novelty_surge, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+- `corpus/synthesis/cosmological/world-moment-mythological-grounding-2025.md`  [world_moment_mythological, synthesis]
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+- `corpus/synthesis/cosmological/earth-gaia-telemetry.md`  [earth_gaia_telemetry, cosmological]
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness_itself** (2)
+    - meets `corpus/synthesis/processes/density-evolution.md` via **density_evolution** (2)
+    - meets `corpus/synthesis/collectives/social-memory-complex.md` via **social_memory_complex** (2)
+- `corpus/synthesis/cosmological/sol-life-synthesis.md`  [sol_life_synthesis, cosmological]
+    - meets `corpus/synthesis/cosmological/sol-logos.md` via **sol_logos** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness_itself** (2)
+    - meets `corpus/synthesis/archetypal/surya-consciousness.md` via **surya_consciousness** (2)
+- `corpus/correspondences/archetypal/autonomy-in-the-dream.md`  [autonomy_in_dream, correspondence]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/archetypal/kalki-destroyer-creator.md` via **transformation** (1)
+- `corpus/correspondences/archetypal/destiny-awakening-patterns.md`  [destiny_awakening_patterns, correspondence]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/correspondences/archetypal/divine-tetrad-synthesis.md`  [divine_tetrad_synthesis, correspondence]
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/consciousness-technologies/numerical-glyph-geometry.md` via **sacred_geometry** (1)
+- `corpus/correspondences/archetypal/dream-navigation-universes.md`  [dream_navigation_universes, correspondence]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness** (1)
+- `corpus/correspondences/archetypal/filtration-magnification-consciousness.md`  [filtration_magnification, correspondence]
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/elements/fire.md` via **light** (1)
+- `corpus/correspondences/archetypal/magnus-perfected-loving-awareness-return.md`  [magnus_perfected_return, correspondence]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+- `corpus/correspondences/archetypal/primarch-collective-consciousness.md`  [primarch_collective, correspondence]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/correspondences/archetypal/primarch-consciousness-framework.md`  [primarch_consciousness_doc, correspondence]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/correspondences/archetypal/primarch-deep-mythological-resonances.md`  [primarch_deep_mythological, correspondence]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **shadow** (1)
+- `corpus/correspondences/archetypal/primarch-esoteric-synthesis.md`  [primarch_esoteric_synthesis_doc, correspondence]
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **recognition** (1)
+- `corpus/correspondences/archetypal/primarch-mythological-resonances.md`  [primarch_mythological_resonances, correspondence]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/correspondences/archetypal/primarchs-I-X.md`  [primarchs_i_x, correspondence]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/correspondences/archetypal/primarchs-XI-XX.md`  [primarchs_xi_xx, correspondence]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/correspondences/archetypal/sacred-triangle-infinite-recall-creative-forgetting.md`  [sacred_triangle_recall, correspondence]
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+    - meets `corpus/synthesis/processes/transformation.md` via **information** (1)
+- `corpus/correspondences/archetypal/symbol-emergence-protocols.md`  [symbol_emergence, correspondence]
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **recognition** (1)

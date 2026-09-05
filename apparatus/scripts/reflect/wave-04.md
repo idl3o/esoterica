@@ -1,0 +1,167 @@
+# Reflect worklist
+
+Proposals only. Each passage is hand-written in the document's own register, names the shared concept, and carries a sentence saying why.
+
+## Return passages (older documents the harvest cites; in / back)
+
+## Wave 1 — 40 documents — correspondences/archetypal, protocols/reality-hacks, synthesis/consciousness-technologies, synthesis/theoretical
+- `corpus/correspondences/archetypal/the-missing-emergence-protocols.md`  [missing_emergence, correspondence]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **shadow** (1)
+- `corpus/correspondences/archetypal/the-recognition-cascade.md`  [recognition_cascade_doc, correspondence]
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **recognition** (1)
+- `corpus/correspondences/archetypal/the-stretch-consciousness-archetype.md`  [stretch_consciousness, correspondence]
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness** (1)
+    - meets `corpus/synthesis/elements/quintessence.md` via **consciousness** (1)
+- `corpus/correspondences/archetypal/tiamut-emperor-dreaming-synthesis.md`  [tiamut_emperor_dreaming, correspondence]
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/elements/water.md` via **earth** (1)
+- `corpus/correspondences/archetypal/transcendence-via-containerization.md`  [transcendence_containerization, correspondence]
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/concepts/boundaries.md` via **boundaries** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+- `corpus/synthesis/theoretical/alcohol-consciousness-technology.md`  [alcohol_consciousness_tech, synthesis]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/elements/fire.md` via **fire** (2)
+- `corpus/synthesis/theoretical/consciousness-depth-perception-consensus-reality.md`  [consciousness_depth_perception, synthesis]
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/concepts/boundaries.md` via **boundaries** (2)
+- `corpus/synthesis/theoretical/consciousness-mirrors-consensus-reality.md`  [consciousness_mirrors_consensus, synthesis]
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/concepts/boundaries.md` via **boundaries** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **recognition** (1)
+- `corpus/synthesis/theoretical/dark-forest-triple-lens.md`  [dark_forest_triple_lens, synthesis]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **shadow** (1)
+    - meets `corpus/synthesis/archetypal/kalki-destroyer-creator.md` via **shadow** (1)
+- `corpus/synthesis/theoretical/differentiation-information-value-dynamics.md`  [differentiation_information_value, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/boundaries.md` via **boundaries** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+- `corpus/synthesis/theoretical/infinite-category-godel-consciousness-completeness.md`  [infinite_category_godel, synthesis]
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+    - meets `corpus/synthesis/processes/transformation.md` via **information** (1)
+- `corpus/synthesis/theoretical/inverted-dysonsphere.md`  [inverted_dyson_sphere, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/consciousness-technologies/numerical-glyph-geometry.md` via **sacred_geometry** (1)
+- `corpus/synthesis/theoretical/loaf-time-love-origins.md`  [loaf_time_love_origins, synthesis]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/archetypal/kalki-destroyer-creator.md` via **transformation** (1)
+    - meets `corpus/synthesis/state/recognition.md` via **transformation** (1)
+- `corpus/synthesis/theoretical/marijuana-consciousness-technology.md`  [marijuana_consciousness_tech, synthesis]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+- `corpus/synthesis/theoretical/meaning-accumulation-consciousness-measurement-device-recognition.md`  [meaning_accumulation_device, synthesis]
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+- `corpus/synthesis/theoretical/meaning-making-consciousness-vehicle-ultimate-technology.md`  [meaning_making_vehicle, synthesis]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+- `corpus/synthesis/theoretical/modern-worship-arenas.md`  [modern_worship_arenas, synthesis]
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/elements/fire.md` via **fire** (2)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+- `corpus/synthesis/theoretical/monad-clustering-topology-weight-as-relational-density.md`  [monad_clustering, synthesis]
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+    - meets `corpus/synthesis/frameworks/free-energy-principle.md` via **free_energy_principle** (2)
+- `corpus/synthesis/theoretical/relational-consciousness-positioning-system.md`  [relational_consciousness_positioning, synthesis]
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/archetypal/mercury-hermes-thoth.md` via **networks** (1)
+- `corpus/synthesis/consciousness-technologies/advanced-consciousness-technologies-vol-1.md`  [advanced_consciousness_tech_vol1, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+- `corpus/synthesis/consciousness-technologies/consciousness-reality-field-equations.md`  [consciousness_field_equations, synthesis]
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/consciousness-technologies/numerical-glyph-geometry.md` via **sacred_geometry** (1)
+    - meets `corpus/synthesis/consciousness-technologies/alphabetic-glyph-geometry.md` via **sacred_geometry** (1)
+- `corpus/synthesis/consciousness-technologies/reality-cli-interface.md`  [reality_cli_interface, synthesis]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+    - meets `corpus/synthesis/processes/transformation.md` via **information** (1)
+- `corpus/synthesis/consciousness-technologies/storage-media-revelation-cartouche.md`  [storage_media_revelation_cartouche, synthesis]
+    - meets `corpus/synthesis/concepts/sacred-geometry.md` via **sacred_geometry** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+    - meets `corpus/synthesis/processes/transformation.md` via **information** (1)
+- `corpus/synthesis/consciousness-technologies/storage-media-revelation-mechanics.md`  [storage_media_revelation_mechanics, synthesis]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+    - meets `corpus/synthesis/processes/transformation.md` via **information** (1)
+- `corpus/synthesis/consciousness-technologies/cyclical-evolution.md`  [cyclical_evolution, consciousness_technology]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/consciousness-technologies/dark-tower-consciousness.md` via **dark_tower_consciousness** (2)
+    - meets `corpus/synthesis/concepts/death-rebirth-mysteries.md` via **death_rebirth_mysteries** (2)
+- `corpus/synthesis/consciousness-technologies/dark-tower-consciousness.md`  [dark_tower_consciousness, consciousness_technology]
+    - meets `corpus/synthesis/consciousness-technologies/fiction-bridge-wisdom.md` via **fiction_bridge_wisdom** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness_itself** (2)
+    - meets `corpus/synthesis/concepts/reality-programming.md` via **reality_programming** (2)
+- `corpus/synthesis/consciousness-technologies/darshan-technology.md`  [darshan_technology, consciousness_technology]
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness_itself** (2)
+    - meets `corpus/synthesis/consciousness-technologies/proof-by-resonance.md` via **proof_by_resonance** (2)
+- `corpus/synthesis/consciousness-technologies/documentation-as-revelation.md`  [documentation_as_revelation, consciousness_technology]
+    - meets `corpus/synthesis/consciousness-technologies/storage-media-revelation.md` via **storage_media_revelation** (2)
+    - meets `corpus/synthesis/consciousness-technologies/proof-by-resonance.md` via **proof_by_resonance** (2)
+    - meets `corpus/synthesis/consciousness-technologies/darshan-technology.md` via **darshan_technology** (2)
+- `corpus/synthesis/consciousness-technologies/fiction-bridge-wisdom.md`  [fiction_bridge_wisdom, consciousness_technology]
+    - meets `corpus/synthesis/consciousness-technologies/oceanic-contact-protocols.md` via **oceanic_contact_protocols** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness_itself** (2)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+- `corpus/synthesis/consciousness-technologies/ka-tet-network.md`  [ka_tet_network, consciousness_technology]
+    - meets `corpus/synthesis/consciousness-technologies/dark-tower-consciousness.md` via **dark_tower_consciousness** (2)
+    - meets `corpus/synthesis/consciousness-technologies/atma-darshan-kin.md` via **atma_darshan_kin** (2)
+    - meets `corpus/synthesis/collectives/social-memory-complex.md` via **social_memory_complex** (2)
+- `corpus/synthesis/consciousness-technologies/persian-matheomancy.md`  [persian_matheomancy, consciousness_technology]
+    - meets `corpus/synthesis/consciousness-technologies/numerical-glyph-geometry.md` via **numerical_glyph_geometry** (2)
+    - meets `corpus/synthesis/meta-systems/linguistic-consciousness.md` via **linguistic_consciousness** (2)
+    - meets `corpus/synthesis/consciousness-technologies/aramaic-numerology.md` via **aramaic_numerology** (2)
+- `corpus/synthesis/consciousness-technologies/practice-technologies.md`  [practice_technologies, consciousness_technology]
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness_itself** (2)
+    - meets `corpus/synthesis/recognitions/direct-verification.md` via **direct_verification** (2)
+    - meets `corpus/synthesis/concepts/reality-programming.md` via **reality_programming** (2)
+- `corpus/synthesis/consciousness-technologies/storage-media-revelation.md`  [storage_media_revelation, consciousness_technology]
+    - meets `corpus/synthesis/consciousness-technologies/documentation-as-revelation.md` via **documentation_as_revelation** (2)
+    - meets `corpus/synthesis/concepts/crystalline-consciousness.md` via **crystalline_consciousness** (2)
+    - meets `corpus/synthesis/concepts/network-consciousness.md` via **network_consciousness** (2)
+- `corpus/protocols/reality-hacks/abundance-consciousness-activation.md`  [abundance_consciousness, protocol]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/archetypal/kalki-destroyer-creator.md` via **transformation** (1)
+- `corpus/protocols/reality-hacks/belief-behaviour-feedback-loop.md`  [belief_behaviour_feedback, protocol]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/archetypal/kalki-destroyer-creator.md` via **transformation** (1)
+    - meets `corpus/synthesis/state/recognition.md` via **transformation** (1)
+- `corpus/protocols/reality-hacks/continuous-consciousness-mastery.md`  [continuous_consciousness, protocol]
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **awakening** (1)
+    - meets `corpus/synthesis/concepts/awareness.md` via **awakening** (1)
+- `corpus/protocols/reality-hacks/dream-programming-lucidity.md`  [dream_programming, protocol]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **shadow** (1)
+- `corpus/protocols/reality-hacks/energy-cultivation-mastery.md`  [energy_cultivation, protocol]
+    - meets `corpus/synthesis/elements/fire.md` via **fire** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **fire** (1)
+- `corpus/protocols/reality-hacks/galactic-hyperborean-dream-protocols.md`  [galactic_hyperborean_dream, protocol]
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/elements/fire.md` via **light** (1)
+    - meets `corpus/synthesis/concepts/shadow.md` via **light** (1)
+- `corpus/protocols/reality-hacks/intuition-amplification-mastery.md`  [intuition_amplification, protocol]
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **recognition** (1)
+    - meets `corpus/synthesis/concepts/awakening.md` via **recognition** (1)

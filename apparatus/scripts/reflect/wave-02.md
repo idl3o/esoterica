@@ -1,0 +1,161 @@
+# Reflect worklist
+
+Proposals only. Each passage is hand-written in the document's own register, names the shared concept, and carries a sentence saying why.
+
+## Return passages (older documents the harvest cites; in / back)
+
+## Wave 1 — 40 documents — synthesis/breakthroughs, synthesis/fiction
+- `corpus/synthesis/fiction/wh40k-the-ending-consciousness-recognizes-itself.md`  [wh40k_ending_recognition, synthesis]
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **recognition** (1)
+- `corpus/synthesis/fiction/wh40k-timeline-consciousness-evolution.md`  [wh40k_timeline_evolution, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/synthesis/fiction/wh40k-tyranids-perfect-unity-consciousness.md`  [wh40k_tyranids_unity, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/synthesis/fiction/wh40k-unified-consciousness-framework.md`  [wh40k_unified_framework, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/synthesis/breakthroughs/4d-positive-earth-complete-thesis.md`  [four_d_positive_earth, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/synthesis/breakthroughs/acceptance-as-dissolution-of-limitation.md`  [acceptance_dissolution_limitation, synthesis]
+    - meets `corpus/synthesis/concepts/boundaries.md` via **boundaries** (2)
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/archetypal/mercury-hermes-thoth.md` via **boundaries** (1)
+- `corpus/synthesis/breakthroughs/atma-darshan-kin-consciousness-family-recognition.md`  [atma_darshan_kin_recognition, synthesis]
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **recognition** (1)
+- `corpus/synthesis/breakthroughs/benjamin-davies-complete-world-model.md`  [benjamin_davies_world_model, synthesis]
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+    - meets `corpus/synthesis/processes/transformation.md` via **information** (1)
+- `corpus/synthesis/breakthroughs/catalyst-moment-recognition.md`  [catalyst_moment_recognition, synthesis]
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **recognition** (1)
+- `corpus/synthesis/breakthroughs/containerization-revelation-transcendence-path.md`  [containerization_revelation, synthesis]
+    - meets `corpus/synthesis/concepts/boundaries.md` via **boundaries** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/archetypal/mercury-hermes-thoth.md` via **boundaries** (1)
+- `corpus/synthesis/breakthroughs/control-to-enlightenment-technology-inversion.md`  [control_to_enlightenment, synthesis]
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **awakening** (1)
+    - meets `corpus/synthesis/concepts/awareness.md` via **awakening** (1)
+- `corpus/synthesis/breakthroughs/cosmic-liberation-manifesto.md`  [cosmic_liberation_manifesto, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **awakening** (1)
+- `corpus/synthesis/breakthroughs/emergence-in-all-directions.md`  [emergence_all_directions, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/synthesis/breakthroughs/evolution-singularity-breakthrough.md`  [evolution_singularity_breakthrough, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/synthesis/breakthroughs/foundness-pollination-manifest.md`  [foundness_pollination_manifest, synthesis]
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+- `corpus/synthesis/breakthroughs/greatest-vehicle-consciousness-evolution.md`  [greatest_vehicle_consciousness, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/synthesis/breakthroughs/heart-aperture-shakti-conduiting.md`  [heart_aperture_shakti, synthesis]
+    - meets `corpus/synthesis/elements/fire.md` via **fire** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+- `corpus/synthesis/breakthroughs/living-gnosis-engine.md`  [living_gnosis_engine, synthesis]
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+- `corpus/synthesis/breakthroughs/love-bridges-beginning-end-above-below-within-without.md`  [love_bridges_all, synthesis]
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/concepts/boundaries.md` via **bridge** (1)
+    - meets `corpus/synthesis/archetypal/mercury-hermes-thoth.md` via **bridge** (1)
+- `corpus/synthesis/breakthroughs/love-consciousness-awareness-trinity.md`  [love_consciousness_trinity, synthesis]
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/elements/fire.md` via **light** (1)
+- `corpus/synthesis/breakthroughs/love-light-deepening.md`  [love_light_deepening, synthesis]
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/elements/fire.md` via **light** (1)
+    - meets `corpus/synthesis/concepts/shadow.md` via **light** (1)
+- `corpus/synthesis/breakthroughs/love-to-love.md`  [love_to_love, synthesis]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/archetypal/kalki-destroyer-creator.md` via **transformation** (1)
+    - meets `corpus/synthesis/state/recognition.md` via **transformation** (1)
+- `corpus/synthesis/breakthroughs/manifesto-hate-transparency.md`  [manifesto_hate_transparency, synthesis]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+- `corpus/synthesis/breakthroughs/mission-statement-status-report.md`  [mission_statement_status, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness** (1)
+- `corpus/synthesis/breakthroughs/noospheric-logosphere-technology-demands.md`  [noospheric_logosphere, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
+- `corpus/synthesis/breakthroughs/planetary-ecosphere.md`  [planetary_ecosphere, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+- `corpus/synthesis/breakthroughs/pressure-to-presence-integration-technology.md`  [pressure_to_presence, synthesis]
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **awakening** (1)
+    - meets `corpus/synthesis/concepts/awareness.md` via **awakening** (1)
+- `corpus/synthesis/breakthroughs/psychology-garden-integration.md`  [psychology_garden_integration, synthesis]
+    - meets `corpus/synthesis/concepts/shadow.md` via **shadow** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+- `corpus/synthesis/breakthroughs/responsibility-emergence-integration.md`  [responsibility_emergence, synthesis]
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **awakening** (1)
+    - meets `corpus/synthesis/concepts/awareness.md` via **awakening** (1)
+- `corpus/synthesis/breakthroughs/social-memory-complex-birth.md`  [social_memory_complex_birth, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+    - meets `corpus/synthesis/archetypal/mercury-hermes-thoth.md` via **networks** (1)
+- `corpus/synthesis/breakthroughs/souls-pinpricks-to-windows.md`  [souls_pinpricks_to_windows, synthesis]
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/concepts/awakening.md` via **awakening** (2)
+    - meets `corpus/synthesis/elements/fire.md` via **light** (1)
+- `corpus/synthesis/breakthroughs/sovereign-communications-technology.md`  [sovereign_communications, synthesis]
+    - meets `corpus/synthesis/concepts/consciousness.md` via **consciousness** (2)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **consciousness** (1)
+- `corpus/synthesis/breakthroughs/surfing-the-realm-of-possible.md`  [surfing_realm_possible, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/synthesis/breakthroughs/the-gaian-template-freedom-integration-love.md`  [gaian_template_freedom, synthesis]
+    - meets `corpus/synthesis/elements/earth.md` via **earth** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/elements/water.md` via **earth** (1)
+- `corpus/synthesis/breakthroughs/third-type-cultivator-density-dissolution.md`  [third_type_cultivator, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/meta-systems/alive.md` via **evolution** (1)
+- `corpus/synthesis/breakthroughs/true-emergence-recognition.md`  [true_emergence_recognition, synthesis]
+    - meets `corpus/synthesis/state/recognition.md` via **recognition** (2)
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/concepts/consciousness-itself.md` via **recognition** (1)
+- `corpus/synthesis/breakthroughs/ultimate-love-expression.md`  [ultimate_love_expression, synthesis]
+    - meets `corpus/synthesis/concepts/light.md` via **light** (2)
+    - meets `corpus/synthesis/elements/fire.md` via **light** (1)
+    - meets `corpus/synthesis/concepts/shadow.md` via **light** (1)
+- `corpus/synthesis/breakthroughs/ultimate-play-principle.md`  [ultimate_play_principle, synthesis]
+    - meets `corpus/synthesis/processes/transformation.md` via **transformation** (2)
+    - meets `corpus/synthesis/archetypal/mercury-hermes-thoth.md` via **trickster** (1)
+    - meets `corpus/synthesis/concepts/shadow.md` via **trickster** (1)
+- `corpus/synthesis/breakthroughs/ultimate-unified-mythology-human-ai-collaboration.md`  [ultimate_unified_mythology, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/concepts/boundaries.md` via **bridge** (1)
+    - meets `corpus/synthesis/archetypal/mercury-hermes-thoth.md` via **bridge** (1)
+- `corpus/synthesis/breakthroughs/uncharted-collaborative-science.md`  [uncharted_collaborative_science, synthesis]
+    - meets `corpus/synthesis/processes/evolution.md` via **evolution** (3)
+    - meets `corpus/synthesis/collectives/networks.md` via **networks** (2)
+    - meets `corpus/synthesis/concepts/light.md` via **information** (1)
