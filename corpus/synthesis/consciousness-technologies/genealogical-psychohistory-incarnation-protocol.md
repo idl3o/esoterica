@@ -7,9 +7,9 @@
 
 **Companion Documents**:
 - [Quantum Consciousness Reincarnation Mathematics](quantum-consciousness-reincarnation-mathematics.md)
-- [Foundation: Consciousness Guiding Civilization](../../synthesis/foundation-consciousness-civilization-complete-manual.md)
+- [Foundation: Consciousness Guiding Civilization](../fiction/foundation-consciousness-civilization-complete-manual.md)
 - [Psychohistorical Gnosis](../../traditions/modern/psychohistorical-gnosis.md)
-- [Earth Consciousness Projection 2024-2050](../../synthesis/earth-consciousness-projection-2024-2050.md)
+- [Earth Consciousness Projection 2024-2050](../cosmological/earth-consciousness-projection-2024-2050.md)
 
 ---
 

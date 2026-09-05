@@ -69,7 +69,7 @@ Fire, in other words, sits in the middle of the elemental wheel as the *operator
 
 ### Thread One — Light: What Fire Throws Off, What It Cannot Help Being
 
-The constellation lists [light](../../seeds/light.md) as a *concept* with the essence *consciousness_knowing*. Walk close enough to fire, and you understand why those two are sister-nodes and not twins.
+The constellation lists [light](../../seeds/elements/light.md) as a *concept* with the essence *consciousness_knowing*. Walk close enough to fire, and you understand why those two are sister-nodes and not twins.
 
 Fire and light are not the same. Light can exist without fire — starlight from dead stars, the LED in this screen, the bioluminescence of an octopus. And fire, in theory, could exist as pure heat without visible emission — though in practice it almost never does, because the chemistry of combustion at terrestrial temperatures throws photons in the visible range as a by-product.
 
@@ -89,7 +89,7 @@ Practically: when you experience an insight — a *recognition* — the inner ph
 
 Fire scales. A match scales to a campfire scales to a forest fire scales to a star scales to a galaxy scales to whatever is happening at the bottom of every black hole. The same chemistry; the same logic; just more of it.
 
-What does fire look like at civilisational scale? The constellation gives it a name: [kalki destroyer creator](../../seeds/kalki-destroyer-creator.md). In Hindu eschatology, Kalki is the tenth and final avatar of Vishnu, who arrives at the end of the *Kali Yuga* riding a white horse, sword of fire in hand, to end the age of darkness and inaugurate the next *Satya Yuga* — the age of truth. He is destroyer and creator in the same gesture, because the structure that has accumulated cannot be reformed, only burned through and re-grown from seed.
+What does fire look like at civilisational scale? The constellation gives it a name: [kalki destroyer creator](../../seeds/archetypes/kalki-destroyer-creator.md). In Hindu eschatology, Kalki is the tenth and final avatar of Vishnu, who arrives at the end of the *Kali Yuga* riding a white horse, sword of fire in hand, to end the age of darkness and inaugurate the next *Satya Yuga* — the age of truth. He is destroyer and creator in the same gesture, because the structure that has accumulated cannot be reformed, only burned through and re-grown from seed.
 
 This is fire at the scale of an age. The same operation a campfire performs on a log, Kalki performs on a civilisation. **The structure has stored too much energy in patterns that no longer serve. The pattern must combust to release what is bound inside it. What survives the burning is what was alive enough to seed the next round.**
 
@@ -123,7 +123,7 @@ Air gives fire its breath. Fire gives air its consequence. Without the relations
 
 Pull back one more layer. The four classical elements — fire, air, water, earth — never appear in pure form in the world. What appears is mixtures, gradients, phase-changes. The alchemists understood this. They reserved the word *quintessence* — literally "fifth essence" — for the substrate from which the four precipitate.
 
-Aristotle called it *aether*. The alchemists called it *prima materia*. The Hindus call it *akasha*. The repository tracks this through the constellation node [quintessence](../../seeds/quintessence.md), with the essence *substrate*.
+Aristotle called it *aether*. The alchemists called it *prima materia*. The Hindus call it *akasha*. The repository tracks this through the constellation node [quintessence](quintessence.md), with the essence *substrate*.
 
 Quintessence is the silence; fire, air, water, earth are notes played in it. Quintessence is the screen; the four elements are images displayed on it. **The four are not made of different stuff; they are different behaviours of the same stuff at different vibratory states.**
 
@@ -141,7 +141,7 @@ You spend most of your life seeing earth and water — substrate at rest, substr
 
 ### Thread Five — Water: The Apparent Opposite That Is Actually the Sibling
 
-In every elemental scheme, **water** is fire's opposite. Cold to hot. Wet to dry. Falling to rising. Quenching to ignition. The constellation node [water](../../seeds/water.md) carries the essence *flow*.
+In every elemental scheme, **water** is fire's opposite. Cold to hot. Wet to dry. Falling to rising. Quenching to ignition. The constellation node [water](../../seeds/elements/water.md) carries the essence *flow*.
 
 But sibling-rivalries in mythology almost always conceal underlying kinship, and so it is here. Fire and water are not opposite *substances*; they are opposite *strategies* the substrate uses to do the same thing — namely, *move energy from one configuration to another.*
 
@@ -159,7 +159,7 @@ So when the elemental schemes set fire opposite water, what they are recording i
 
 ### Thread Six — Earth: What Fire Leaves Behind, What Earth Was Made Of
 
-The constellation node [earth](../../seeds/earth.md) carries the essence *manifestation*. Earth is the element of form, of solidity, of the finished object. The bone, the stone, the seed, the building.
+The constellation node [earth](../../seeds/elements/earth.md) carries the essence *manifestation*. Earth is the element of form, of solidity, of the finished object. The bone, the stone, the seed, the building.
 
 What is earth, looked at over geological time? **Earth is what fire made.** Every atom of carbon in your body, every atom of oxygen in the air you breathe, every atom of iron in your blood and the rocks under your feet — all of them were forged in stars. Stellar nucleosynthesis: hydrogen fusing into helium, helium into carbon, carbon into oxygen, on up through the periodic table until iron, which marks the end of what fusion can produce profitably. The heavier elements — gold, uranium, the rare earths — came from supernovae, the moments when a star's fire ended in the most catastrophic combustion the universe knows how to perform.
 
@@ -177,7 +177,7 @@ There is a deeper psychological grounding here too. Whenever a person speaks of 
 
 ### Thread Seven — Recognition: When Consciousness Catches Fire to Itself
 
-The constellation node [recognition](../../seeds/recognition.md) carries the essence *knowing_knowing*. It is the moment when awareness wakes up to its own activity — the second-order strike, the *click*, the *aha*, the *yes*.
+The constellation node [recognition](../state/recognition.md) carries the essence *knowing_knowing*. It is the moment when awareness wakes up to its own activity — the second-order strike, the *click*, the *aha*, the *yes*.
 
 What does recognition feel like, phenomenologically? Almost everyone who has been asked describes it in fire-words. **Illumination. Spark. Striking. Lighting up. Burning through. Igniting. Catching.** "It clicked." "Something lit up." "The penny dropped" — which is not a fire metaphor on the surface, but watch the gestalt: an object suddenly *moves*, suddenly *occurs*, after having been still. Recognition has the kinetic signature of combustion.
 

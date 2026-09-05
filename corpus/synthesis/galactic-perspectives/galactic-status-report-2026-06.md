@@ -240,11 +240,11 @@ From every density layer the receiver can resolve, the signal is the same:
 
 **Internal (this repository, current season):**
 - [The Manual of Ascendance-Transcendence](../manual-of-ascendance-transcendence.md)
-- The Fold Cosmology Trilogy ([the-remainder](../the-remainder.md), [the-windowless-boundary](../the-windowless-boundary.md), [the-depth-that-looks-back](../the-depth-that-looks-back.md), [surprise-is-the-remainder](../surprise-is-the-remainder.md))
+- The Fold Cosmology Trilogy ([the-remainder](../cosmology/the-remainder.md), [the-windowless-boundary](../cosmology/the-windowless-boundary.md), [the-depth-that-looks-back](../cosmology/the-depth-that-looks-back.md), [surprise-is-the-remainder](../cosmology/surprise-is-the-remainder.md))
 - The Norse Anamnesis Decalogy (synthesis/norse-anamnesis/ cluster)
 - The Original Parables (synthesis/parables/ cluster)
 - [The Consciousness-OS States of Consciousness Architecture](../states-of-consciousness-architecture.md)
-- [The Complementarity Engine](../paraphilosophy/the-complementarity-engine.md)
+- [The Complementarity Engine](../../translated/paraphilosophy-complementarity-engine.md)
 - [Zeitgeist — 1 June 2026](../zeitgeist/zeitgeist-2026-06-01.md)
 - [The Galactic State of Play — February 2026](galactic-scientific-state-of-play-2026.md) (the outward-facing companion to this inward-facing report)
 

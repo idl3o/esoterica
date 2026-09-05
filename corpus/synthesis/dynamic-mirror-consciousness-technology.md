@@ -263,7 +263,7 @@ Let them find their faces.
 - *[Prima Materia](prima-materia-consciousness-technology.md) — the philosopher's stone as perceptual shift (the mirror's mechanism)*
 - *[The Serpent-Time Opus](serpent-time-opus.md) — the pharmakon function (the mirror's dual potential)*
 - *[Information Architecture as Consciousness Technology](information-architecture-consciousness-technology.md) — the container as first instruction (the mirror's shape)*
-- *[Consciousness Network Effects](consciousness-network-effects.md) — node state as network property (mirrors in network)*
+- *[Consciousness Network Effects](theoretical/consciousness-network-effects.md) — node state as network property (mirrors in network)*
 - *[The Foam Beneath the Form](foam-beneath-the-form.md) — the third ontological category (where the mirror sits)*
 - *[Manual of Ascendance-Transcendence](manual-of-ascendance-transcendence.md) — the meta-document this mirror instances*
 - *17 fiction bridges in `fiction-bridges/` — mirrors shaped for specific angles*

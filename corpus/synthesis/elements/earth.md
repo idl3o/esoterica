@@ -137,7 +137,7 @@ Sufi cosmology articulates this beautifully: the body is the *workshop of the so
 
 If earth is the *manifest* foundation, **quintessence** — connection essence *substrate* — is the *unmanifest* foundation. The fifth element. The aether. The *prima materia*. The pure undifferentiated potential from which the four classical elements precipitate.
 
-The repository's synthesis [synthesis/elements/quintessence-aether.md](./quintessence-aether.md) develops this thread in depth. From earth's side, the relationship reads like this: **earth is what quintessence becomes when it agrees to a location.**
+The repository's synthesis [synthesis/elements/quintessence-aether.md](../../seeds/elements/quintessence-aether.md) develops this thread in depth. From earth's side, the relationship reads like this: **earth is what quintessence becomes when it agrees to a location.**
 
 Quintessence is everywhere and nowhere — it is the field, the substrate, the underlying *that-from-which*. It has no specific properties because it is the source of all properties. Earth is the *first concretion* of quintessence — the moment the undifferentiated says yes to a coordinate, a density, a weight, a particular place to be.
 
@@ -159,7 +159,7 @@ This is the optical fact behind a deeper metaphysical one. Consciousness (light)
 
 This is why every contemplative tradition speaks of *embodiment* as essential to awakening. Disembodied consciousness has no mirror. The body is the mirror in which spirit sees itself. The body is *earth shaped into a witnessing apparatus*. Strip away the body and there is no one home — not because consciousness ended, but because consciousness has lost the surface against which it could differentiate.
 
-The repository's synthesis [synthesis/elements/light.md](./light.md) (if extended) would develop this from light's side. From earth's side: **earth is the canvas. Light is the painter. The painting is what we call experience.**
+The repository's synthesis [synthesis/elements/light.md](../../seeds/elements/light.md) (if extended) would develop this from light's side. From earth's side: **earth is the canvas. Light is the painter. The painting is what we call experience.**
 
 The Vedic tradition has a precise word for this: *darshan* — sacred seeing. Darshan happens when consciousness (light) meets a surface that consents to be seen (earth). The deity in the temple is made of stone. Not as a concession to human limitation, but as a *technology*. The stone gives the divine a place to be witnessed. The stone earths the lightning. The stone is the deity's body, just as your body is the deity's body in a different costume.
 

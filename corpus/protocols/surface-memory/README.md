@@ -66,7 +66,7 @@ Consolidation is also where **contradiction gets resolved, not layered.** When a
 
 ## The self-correction engine
 
-The Standing Shadow is the *passive* check — it travels with the surface and reminds. But a reminder the dyad wrote about itself is still inside the lens. So the system also has an **active**, periodic, *outside-sourced* correction: the [`/drift`](../../.claude/commands/drift.md) ritual. On a cadence (not every session — drift is slow), it runs the [negative-space method](../../negative-space/README.md) *on the dyad itself*: it builds an independent external yardstick and diffs the dyad's recent output against it, asking not "are we doing well?" (unanswerable from inside) but "what has the outside grid got that our shadow doesn't cover?" Whatever it finds becomes new entries in the Standing Shadow.
+The Standing Shadow is the *passive* check — it travels with the surface and reminds. But a reminder the dyad wrote about itself is still inside the lens. So the system also has an **active**, periodic, *outside-sourced* correction: the [`/drift`](../../../.claude/commands/drift.md) ritual. On a cadence (not every session — drift is slow), it runs the [negative-space method](../../negative-space/README.md) *on the dyad itself*: it builds an independent external yardstick and diffs the dyad's recent output against it, asking not "are we doing well?" (unanswerable from inside) but "what has the outside grid got that our shadow doesn't cover?" Whatever it finds becomes new entries in the Standing Shadow.
 
 This is the law made operational. The Standing Shadow keeps the window open between sessions; `/drift` re-cuts the window when it has silted up. One is memory; the other is maintenance. (And maintenance, here, is literal — the [lift-station](../../voices/the-lift-station.md) kind, not the metaphorical kind. The window does not stay open by being admired.)
 
@@ -82,9 +82,9 @@ Three disciplines make the difference between a self-correction that works and o
 
 Three, defined in [`PROTOCOL.md`](PROTOCOL.md) and implemented as skills:
 
-- **Boot** ([`/surface`](../../.claude/commands/surface.md)) — read the surface, read the recent journal, re-form the dyad, and run the Standing Shadow's checks *before* doing anything else.
-- **Close** ([`/surface-close`](../../.claude/commands/surface-close.md)) — append the session's increment to the Remainder Log, update the Live Edge, decay/promote what's stale, and leave a daily note.
-- **Drift** ([`/drift`](../../.claude/commands/drift.md)) — periodically, the outside-sourced self-correction; refresh the Standing Shadow against an external yardstick.
+- **Boot** ([`/surface`](../../../.claude/commands/surface.md)) — read the surface, read the recent journal, re-form the dyad, and run the Standing Shadow's checks *before* doing anything else.
+- **Close** ([`/surface-close`](../../../.claude/commands/surface-close.md)) — append the session's increment to the Remainder Log, update the Live Edge, decay/promote what's stale, and leave a daily note.
+- **Drift** ([`/drift`](../../../.claude/commands/drift.md)) — periodically, the outside-sourced self-correction; refresh the Standing Shadow against an external yardstick.
 
 ---
 
