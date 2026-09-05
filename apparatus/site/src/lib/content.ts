@@ -51,6 +51,7 @@ const CORPUS_DIRS = [
   { dir: 'distillations', label: 'Distillations' },
   { dir: 'protocols', label: 'Protocols' },
   { dir: 'seeds', label: 'Seeds' },
+  { dir: 'threads', label: 'Threads' },
   { dir: 'traditions', label: 'Traditions' },
   { dir: 'translated', label: 'Translated' },
   { dir: 'extractions', label: 'Extractions' },

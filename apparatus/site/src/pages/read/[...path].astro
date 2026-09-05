@@ -6,6 +6,7 @@ import { getNode } from '../../lib/constellation';
 import { getDomainForType } from '../../lib/domains';
 import { getAttribution } from '../../lib/publish';
 import { marked } from 'marked';
+import { expandWikiLinks } from '../../lib/wikilinks';
 
 export function getStaticPaths() {
   const paths = getAllContentPaths();
@@ -38,7 +39,7 @@ export function getStaticPaths() {
 const { contentPath, sourceDir, docId } = Astro.props;
 const markdown = readContent(contentPath);
 const html = markdown
-  ? rewriteDocLinks(marked.parse(markdown) as string, contentPath)
+  ? rewriteDocLinks(marked.parse(expandWikiLinks(markdown)) as string, contentPath)
   : '<p>Document not found.</p>';
 
 // Extract title from markdown

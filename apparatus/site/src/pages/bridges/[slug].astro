@@ -6,6 +6,7 @@ import { loadDocumentLinks, rewriteDocLinks } from '../../lib/content';
 import { getNode } from '../../lib/constellation';
 import { getDomainForType } from '../../lib/domains';
 import { marked } from 'marked';
+import { expandWikiLinks } from '../../lib/wikilinks';
 
 export function getStaticPaths() {
   const bridges = loadBridges();
@@ -18,7 +19,7 @@ export function getStaticPaths() {
 const { bridge } = Astro.props;
 const markdown = readBridgeContent(bridge.slug);
 const html = markdown
-  ? rewriteDocLinks(marked.parse(markdown) as string, `fiction-bridges/${bridge.slug}.md`)
+  ? rewriteDocLinks(marked.parse(expandWikiLinks(markdown)) as string, `fiction-bridges/${bridge.slug}.md`)
   : '';
 
 // Get constellation links for this bridge
