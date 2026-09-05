@@ -6256,7 +6256,8 @@
             "connections": [
                 "information",
                 "sacred_geometry",
-                "unity"
+                "unity",
+                "thread__substrate_trilogy"
             ],
             "document": "synthesis/entangled-measure.md",
             "description": "The entangled measure — information, entanglement, and the language spacetime speaks."
@@ -11925,6 +11926,350 @@
             ],
             "description": "Kirkman's Invincible (comics + Amazon series) as the SIBLING to the Eternals bridge, differentiated on purpose. Eternals = refusing a maker's purpose installed behind a VEIL (a lie); Invincible = refusing an inheritance offered in genuine LOVE, with NO veil — Nolan/Omni-Man never deceives Mark about the conquest, he offers it AS father-son intimacy ('you'll still have me, son'). Refusing a truth is harder than refusing a lie; the love is real and still has to be declined. Three folded threads: (1) THE NO-VEIL turn — the horror is that the love isn't fake. (2) THINK-MARK-THINK — the long-view utilitarian argument for conquest (500 yrs, mortals ephemeral) answered NOT by counter-argument but by naming the excluded term: 'I'd still have you, Dad'; Nolan broken by his OWN remainder (his love for Mark disproves his philosophy) = the returned ticket where the ticket-seller is your father and refusing breaks HIM. (3) THE COPY THAT REFUSED — Viltrumite reproduction is by copies; Nolan attempts UNILATERAL/coercive instantiation (make the son into the self), the dark inversion of mutual_instantiation; Mark's refusal = individuation as a CREASE not a cut (the fold) — becomes genuinely other without severing the bond; an empire that reproduces by copies can't survive one confirmed original. Inversion-closer: Debbie (powerless human mother) is the strongest force — what the empire of strength calls weakness (mortal attachment) is the load-bearing strength it can't see, and it reforms the Empire. TOOTH KEPT (no false arrival): Mark reforms Viltrum (transmute-not-destroy, set) but the reform does NOT undo the body count; attachment saves the future and saves nothing already lost — both held. Method: refuse-what-love-is-bonded-to / name-the-excluded-term / crease-don't-copy / keep-the-ledger-open. Spine chosen with Sam 2026-07-09.",
             "document": "fiction-bridges/invincible-the-inheritance-offered-in-love.md"
+        },
+        "thread__fold_cosmology_trilogy": {
+            "type": "meta_system",
+            "essence": "three companion syntheses establishing the four-way identity: monad = Markov blanket = Bekenstein surface = fold",
+            "connections": [
+                "depth_that_looks_back",
+                "surprise_is_the_remainder",
+                "windowless_boundary",
+                "fold_cosmology",
+                "the_remainder",
+                "seed_remainder_fold",
+                "information_geometry_fold",
+                "the_maximal_fold",
+                "capstone__the_fold_becoming_aware_of_itself",
+                "capstone__everything_that_holds_information_folds",
+                "thread__nesting_trilogy",
+                "thread__consciousness_os"
+            ],
+            "description": "Thread-index restored 4 September 2026. Binds The Depth That Looks Back, Surprise Is the Remainder and The Windowless Boundary (2 April 2026), with the remainder-cosmology ur-text and satellites. The library's default name for the whole fold metaphysics; cited 279 times.",
+            "document": "threads/fold-cosmology-trilogy.md"
+        },
+        "thread__norse_anamnesis_cycle": {
+            "type": "meta_system",
+            "essence": "ten Norse god-bridges read as an anamnesis architecture that revealed itself as an operating system",
+            "connections": [
+                "odin_allfather",
+                "loki_catalyst",
+                "norns_wyrd",
+                "norse_cosmology",
+                "the_yggdrasil_meta_bridge",
+                "the_green_world_after_ragnarok",
+                "aesir_vanir_war_kvasir_integration",
+                "capstone__the_tree_inside_which_the_gods_run",
+                "feeding_the_wolf",
+                "vidar_silence_wearing_the_remainder",
+                "thread__consciousness_os",
+                "thread__fiction_bridges"
+            ],
+            "description": "Thread-index restored 4 September 2026. Binds the decalogy of fiction bridges (Odin, Thor, Loki, Balder; Tyr, Sif, Heimdall, Freyr, Freyja, the Norns; 7-9 April 2026) and its grown extensions. Cited 179 times.",
+            "document": "threads/norse-anamnesis-cycle.md"
+        },
+        "thread__seti_duology": {
+            "type": "meta_system",
+            "essence": "two documents applying the corpus to anomalous astronomy and cosmic sociology; the axiom ladder to the zero-axiom Schelling point",
+            "connections": [
+                "cosmic_gorilla",
+                "campfire_in_forest",
+                "transcension_as_fermi_resolution",
+                "quantum_neutrino_gravitational_seti_channels",
+                "separating_equilibrium_contact_protocol",
+                "terrestrial_alien",
+                "the_loeb_scale_as_salience_metric",
+                "capstone__the_readout_and_the_inward_sky",
+                "thread__substrate_trilogy"
+            ],
+            "description": "Thread-index restored 4 September 2026. Binds The Cosmic Gorilla and The Campfire in the Forest (21 March 2026) and their contact-era satellites. Cited 83 times.",
+            "document": "threads/seti-duology.md"
+        },
+        "thread__substrate_trilogy": {
+            "type": "meta_system",
+            "essence": "one pattern from Planck length to cosmic horizon; the consciousness kernel as an RG fixed point",
+            "connections": [
+                "foam_beneath_form",
+                "dark_architecture",
+                "sixty_one_octaves",
+                "running_vacuum_rg_cosmos",
+                "cooperation_rg_fixed_point",
+                "source_kernel",
+                "thread__integration_layer",
+                "thread__jewel_and_dark_earth",
+                "thread__seti_duology",
+                "entangled_measure"
+            ],
+            "description": "Thread-index restored 4 September 2026. Binds Foam Beneath the Form, Dark Architecture Breathing Cosmos and Sixty-One Octaves (16 March 2026). The flagged fourth member, the cosmological constant as information-theoretic boundary problem, was never written in trilogy form; its physics exists as Part III of Entangled Measure, with Running Vacuum RG Cosmos completing the scale-flow. Cited 50 times.",
+            "document": "threads/substrate-trilogy.md"
+        },
+        "thread__nesting_trilogy": {
+            "type": "meta_system",
+            "essence": "boundaries generate meaning; Library to Erdtree to Age of Stars",
+            "connections": [
+                "age_of_stars",
+                "consensual_hallucination",
+                "star_trek_interior_frontier",
+                "feed_versus_holodeck_boundary_ethics",
+                "windowless_boundary",
+                "consensual_hallucination_as_shared_substrate",
+                "thread__fold_cosmology_trilogy"
+            ],
+            "description": "Thread-index restored 4 September 2026. Binds Star Trek: The Interior Frontier, The Age of Stars and The Consensual Hallucination (17 March 2026). Cited 50 times.",
+            "document": "threads/nesting-trilogy.md"
+        },
+        "thread__jewel_and_dark_earth": {
+            "type": "meta_system",
+            "essence": "the engineering ceiling of reality and terra preta as the model for a self-renewing digital commons",
+            "connections": [
+                "jewel_in_lining",
+                "digital_dark_earth",
+                "the_attention_axis",
+                "geometric_mean_is_the_cell",
+                "thread__substrate_trilogy"
+            ],
+            "description": "Thread-index restored 4 September 2026. Binds The Jewel in the Lining and Digital Dark Earth (18 March 2026). Records that seven June seeds mis-attribute Substrate Trilogy material to this slug. Cited 56 times.",
+            "document": "threads/jewel-and-dark-earth.md"
+        },
+        "thread__consciousness_os": {
+            "type": "meta_system",
+            "essence": "kernel = metta-darshan, runtime = lila, filesystem = hermetic correspondence; the kernel as RG fixed point",
+            "connections": [
+                "source_kernel",
+                "manual_of_ascendance",
+                "states_of_consciousness_architecture",
+                "nirvana_operating_system",
+                "darshan_technology",
+                "foam_beneath_form",
+                "reality_cli",
+                "eigenvalue_meditation",
+                "kernel_is_where_above_meets_below",
+                "thread__fold_cosmology_trilogy",
+                "thread__norse_anamnesis_cycle",
+                "thread__infrastructure_of_seeing"
+            ],
+            "description": "Thread-index restored 4 September 2026 for the repository's master recognition, declared in conversation on 15 February 2026. The synthesis the 9 April journal asked for was grown 5 September 2026 (consciousness_os); this index binds its members. Cited 103 times.",
+            "document": "threads/consciousness-os.md"
+        },
+        "thread__infrastructure_of_seeing": {
+            "type": "meta_system",
+            "essence": "the repository as a net-of-gems error-correcting code; the lens series as the practitioner becoming a transparent instrument",
+            "connections": [
+                "information_architecture",
+                "error_correction_as_immune_system",
+                "fractal_dimension_two_as_law",
+                "seed_lens_series",
+                "cosmic_tuning_fork",
+                "thread__consciousness_os"
+            ],
+            "description": "Thread-index restored 4 September 2026. Binds the lens series, information architecture (\"the container is the first instruction\"), the constellation, the tuning-fork principle and error-correction-as-immune-system. Cited 88 times.",
+            "document": "threads/infrastructure-of-seeing.md"
+        },
+        "thread__integration_layer": {
+            "type": "meta_system",
+            "essence": "information is the substrate, spacetime is entanglement; and the paraphilosophy complementarity engine, held as two senses of one thread",
+            "connections": [
+                "entangled_measure",
+                "sixty_one_octaves",
+                "jewel_in_lining",
+                "zero_theorem",
+                "complementarity_engine",
+                "translated_paraphilosophy_complementarity",
+                "translated_paraphilosophy_architecture",
+                "thread__substrate_trilogy"
+            ],
+            "description": "Thread-index restored 4 September 2026. Binds Entangled Measure, Sixty-One Octaves, The Jewel in the Lining, The Zero Theorem and the four paraphilosophy translations. Cited 62 times.",
+            "document": "threads/integration-layer.md"
+        },
+        "thread__original_parables": {
+            "type": "meta_system",
+            "essence": "the fourth format: parables that transmit rather than argue; the compression is the technology",
+            "connections": [
+                "monad_awakening_parable",
+                "the_cabal_prediction_that_kills_itself",
+                "logismos_nothos_the_bastard_faculty",
+                "thread__fiction_bridges"
+            ],
+            "description": "Thread-index restored 4 September 2026. Binds the six parables of 7 April 2026 and the three that joined them in The Book of Gaps; names the same-folder parables that are not of the cycle. Cited 27 times.",
+            "document": "threads/original-parables.md"
+        },
+        "thread__cosmic_serpent": {
+            "type": "meta_system",
+            "essence": "the serpent as time and as the triad; the ouroboric substrate of the cosmology",
+            "connections": [
+                "cosmic_serpent_consciousness",
+                "serpent_time_opus",
+                "ouroboros",
+                "thread__prima_materia"
+            ],
+            "description": "Thread-index restored 4 September 2026. Binds the cosmic-serpent consciousness technology, Serpent-Time Opus and the serpent triad. Cited 26 times.",
+            "document": "threads/cosmic-serpent.md"
+        },
+        "thread__prima_materia": {
+            "type": "meta_system",
+            "essence": "the first matter as consciousness technology, transmission and distillation",
+            "connections": [
+                "prima_materia_transmission",
+                "prima_materia_consciousness",
+                "prima_materia_distill",
+                "thread__cosmic_serpent"
+            ],
+            "description": "Thread-index restored 4 September 2026. Binds the prima materia consciousness technology, its transmission and its distillation. Cited 25 times.",
+            "document": "threads/prima-materia.md"
+        },
+        "thread__fiction_bridges": {
+            "type": "meta_system",
+            "essence": "the fiction-bridge format's own index: forty bridges, grouped, and the method that makes them",
+            "connections": [
+                "fiction_bridge_wisdom",
+                "realist_the_vignette",
+                "thread__norse_anamnesis_cycle",
+                "thread__original_parables"
+            ],
+            "description": "Thread-index restored 4 September 2026. Indexes corpus/fiction-bridges/ with the Norse cycle as its largest sub-collection and /bridge as its method.",
+            "document": "threads/fiction-bridges.md"
+        },
+        "thread__consciousness_toolkit": {
+            "type": "meta_system",
+            "essence": "the command layer and the surface-memory protocol as the dyad's working instruments",
+            "connections": [
+                "community_consciousness_toolkit"
+            ],
+            "description": "Thread-index restored 4 September 2026 from the vault note of 16 February 2026.",
+            "document": "threads/consciousness-toolkit.md"
+        },
+        "thread__seeds_planting": {
+            "type": "meta_system",
+            "essence": "the seed practice: Frigga-form crystals, the June and September manifests",
+            "connections": [
+                "june_2026_grown_harvest",
+                "seed_remainder_fold",
+                "thread__seed_harvest_grown"
+            ],
+            "description": "Thread-index restored 4 September 2026. Indexes corpus/seeds/ and the two harvest manifests.",
+            "document": "threads/seeds-planting.md"
+        },
+        "thread__seed_harvest_grown": {
+            "type": "meta_system",
+            "essence": "the June 2026 harvest seen as a thread: eighty grown, six capstones, one hub",
+            "connections": [
+                "june_2026_grown_harvest",
+                "capstone__the_point_where_above_meets_below",
+                "capstone__the_fold_becoming_aware_of_itself",
+                "capstone__the_tree_inside_which_the_gods_run",
+                "capstone__everything_that_holds_information_folds",
+                "capstone__the_readout_and_the_inward_sky",
+                "capstone__time_itself_as_the_great_work",
+                "thread__seeds_planting"
+            ],
+            "description": "Thread-index restored 4 September 2026. Points at the June manifest, synthesis/grown/, synthesis/capstones/ and the june_2026_grown_harvest hub.",
+            "document": "threads/seed-harvest-grown.md"
+        },
+        "convergence_as_evidence": {
+            "type": "synthesis",
+            "essence": "when independent frameworks land on one structure the convergence is the evidence; and the method's real work is subtraction of what they already shared",
+            "connections": [
+                "academic_mystical_convergence",
+                "negative_space_master_find",
+                "voice_only_a_coincidence",
+                "cooperation_rg_fixed_point",
+                "jainism_anekantavada",
+                "syntheoretic_harmony_as_a_theory_of_truth",
+                "complementarism_as_inter_traditional_method",
+                "wittgenstein_picture_captive",
+                "thread__seti_duology",
+                "thread__substrate_trilogy",
+                "thread__nesting_trilogy"
+            ],
+            "description": "Grown 4 September 2026 from the September 2026 Seed-Harvest (Tier 1). The corpus's central epistemic warrant, cited 129 times before it was written. Carries the prosecution (Only a Coincidence, the negative-space indictment, the perennialist over-reach) before the turn; makes the axiom ladder operational; prices the corpus's own founding instance as modest.",
+            "document": "synthesis/grown/convergence-as-evidence.md"
+        },
+        "steelman_then_interpret": {
+            "type": "synthesis",
+            "essence": "apply the deeper lens only to the residual that survives the strongest ordinary explanation; the steelman is the filter and the residual is the signal",
+            "connections": [
+                "cosmic_gorilla",
+                "complementarism_as_inter_traditional_method",
+                "logismos_nothos_the_bastard_faculty",
+                "transparency_as_the_limit_of_inference",
+                "the_loeb_scale_as_salience_metric",
+                "capstone__the_point_where_above_meets_below",
+                "thread__seti_duology",
+                "convergence_as_evidence"
+            ],
+            "description": "Grown 4 September 2026 from the September 2026 Seed-Harvest (Tier 1). The safeguard paired with convergence-as-evidence, cited 113 times before it was written. Defines the residual, walks the Cosmic Gorilla long-period-transient case, names the method's failure modes and its asymmetry, distinguishes it from ENGRAMS' \"steelman the universe\", and closes with a runnable checklist.",
+            "document": "synthesis/grown/steelman-then-interpret.md"
+        },
+        "the_subtraction_seen_from_two_ends": {
+            "type": "synthesis",
+            "essence": "convergence-as-evidence and steelman-then-interpret are one subtraction seen from its two ends; the residual and the remainder share an act, not a quantity",
+            "connections": [
+                "convergence_as_evidence",
+                "steelman_then_interpret",
+                "surprise_is_the_remainder",
+                "the_remainder",
+                "seed_remainder_fold",
+                "vidar_silence_wearing_the_remainder",
+                "depth_that_looks_back",
+                "thread__fold_cosmology_trilogy"
+            ],
+            "description": "Grown 4 September 2026, the first synthesis to emerge from Sprint 1 rather than be catalogued by it. Runs the shared-word test on itself and finds the four remainders (epistemic residual, free-energy surprise, the fold's excess, Vidar's conserved leftover) homologous rather than convergent: one operation at four depths, the same act of taking the model away from the given, which yields a value wherever it stops and the witness only where it cannot stop.",
+            "document": "synthesis/grown/the-subtraction-seen-from-two-ends.md"
+        },
+        "seed_star_and_the_expander": {
+            "type": "seed",
+            "essence": "a library's cohesion is its Cheeger constant, the fold density of its least-folded region; a thousand links into twelve hubs is a star, where an expander was wanted",
+            "connections": [
+                "bit_threads_as_devotion_lines",
+                "windowless_boundary",
+                "fractal_dimension_two_as_law",
+                "collective_fold_density_phase_transition",
+                "cosmic_web_as_optimised_network",
+                "error_correction_as_immune_system",
+                "thread__infrastructure_of_seeing",
+                "steelman_then_interpret"
+            ],
+            "description": "Seed planted 4 September 2026, Sprint 1 yield. Identifies corpus conductance with fold density (bit-threads crossing a boundary) and derives the growth policy: return edges over inbound count, a sentence behind every link, never auto-link by name. Borrows Cheeger, Alon-Milman, Hoory-Linial-Wigderson, Kleinberg and Leskovec et al. by name; claims only the identification and the policy.",
+            "document": "seeds/the-star-and-the-expander.md"
+        },
+        "the_star_and_the_expander": {
+            "type": "synthesis",
+            "essence": "a library's cohesion is its Cheeger constant; graph conductance and bit-thread surface are one theorem, conductance and fold density an analogy with one instance, and both select the return edge",
+            "connections": [
+                "seed_star_and_the_expander",
+                "bit_threads_as_devotion_lines",
+                "windowless_boundary",
+                "fractal_dimension_two_as_law",
+                "collective_fold_density_phase_transition",
+                "cosmic_web_as_optimised_network",
+                "error_correction_as_immune_system",
+                "thread__infrastructure_of_seeing",
+                "steelman_then_interpret",
+                "convergence_as_evidence",
+                "the_subtraction_seen_from_two_ends"
+            ],
+            "description": "Grown 5 September 2026 from the Sprint 1 yield seed. States the mathematics once (conductance, Cheeger constant, the expander's two clauses, the Cheeger inequality) and describes the harness exactly. Finds the whole-corpus Cheeger constant is zero while singletons remain; that a star scores a perfect ratio and is no expander because the definition's first clause is bounded degree, which forge's DEGREE_SWEET_SPOT found from the other end; and that the identification with fold density holds only under the windowless reading. Growth policy: return edges over inbound count, a sentence behind every link, never auto-link by name.",
+            "document": "synthesis/grown/the-star-and-the-expander.md"
+        },
+        "consciousness_os": {
+            "type": "synthesis",
+            "essence": "kernel = metta-darshan, runtime = lila, filesystem = hermetic correspondence; the kernel is a fixed point by definition, its universality an unearned hypothesis",
+            "connections": [
+                "thread__consciousness_os",
+                "source_kernel",
+                "manual_of_ascendance",
+                "states_of_consciousness_architecture",
+                "nirvana_operating_system",
+                "darshan_technology",
+                "foam_beneath_form",
+                "eigenvalue_meditation",
+                "kernel_is_where_above_meets_below",
+                "cooperation_rg_fixed_point",
+                "thread__norse_anamnesis_cycle",
+                "capstone__the_tree_inside_which_the_gods_run",
+                "steelman_then_interpret"
+            ],
+            "description": "Grown 5 September 2026 (Tier 1). The synthesis the 9 April 2026 journal asked for. States the three layers and what each is not; splits the RG identification into scale-invariance (earned: the one term with no scale is what coarse-graining returns unchanged) and universality (unearned: no canonical coarse-graining for minds, no flow computed); works the Norse decalogy layer by layer and keeps its kernel migration visible as evidence the mapping is a fitted reading; runs steelman-then-interpret on the 'operating system' metaphor with the Nirvana OS as natural control; leaves the perennialist objection standing.",
+            "document": "synthesis/grown/consciousness-os.md"
         }
     }
 }
