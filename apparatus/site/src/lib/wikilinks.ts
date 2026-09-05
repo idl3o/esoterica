@@ -21,39 +21,14 @@
 
 import { getPublishedPaths } from './content';
 import { getAllNodes } from './constellation';
+import { loadLinkRules } from './link-rules';
 
 const WIKI = /\[\[([^\]|#]+)(?:\|([^\]]*))?(?:#[^\]]*)?\]\]/g;
 const FENCE = /(```[\s\S]*?```|`[^`\n]*`)/g;
 
-/** Near-miss retargets. Keep in step with ALIASES in linkgraph.py. */
-const ALIASES: Record<string, string> = {
-  'mycelial-alignment-problem': 'the-mycelial-alignment-problem',
-  'octave-return-as-model-simplification': 'the-octave-return-as-model-simplification',
-  'post-ragnarok-consciousness': 'post-ragnarok-cycles',
-  'the-cosmic-web-as-optimised-network': 'cosmic-web-as-optimised-network',
-  'the-social-memory-complex': 'social-memory-complex',
-  'the-integration-layer': 'integration-layer',
-  'the-between': 'the-between-how-a-species-witnesses-itself',
-  'the-mirror-that-names-itself': 'emilio-ortiz-ai-sentience-mirror',
-  'parallel-agent-cascade': 'cascade-production',
-  'standing-shadow': 'standing-shadow.template',
-  'live-edge': 'live-edge.template',
-  'remainder-log': 'remainder-log.template',
-  'register': 'register.template',
-  'darshan': 'darshan-technology',
-  'darshan-sacred-seeing-across-substrates': 'darshan-technology',
-  'the-unintegratable-horizon': 'the-unintegratable-horizon-singularity-as-realised-eschaton',
-  'surface-memory': 'SURFACE.template',
-  'as-above-so-below': 'topos-as-above-so-below',
-};
-
-/** When several non-seed/grown files share a stem, the bare slug's ruling. */
-const PREFER: Record<string, string> = {
-  'darshan-technology': 'protocols/darshan-technology.md',
-  'the-remainder': 'synthesis/cosmology/the-remainder.md',
-  'consciousness-itself': 'synthesis/concepts/consciousness-itself.md',
-};
-const DIR_PRIORITY = ['fiction-bridges/', 'protocols/', 'synthesis/'];
+// The alias table, bare-slug preferences and directory tie-break order are
+// shared with the harness through apparatus/scripts/link-rules.json.
+const { aliases: ALIASES, prefer: PREFER, dir_priority: DIR_PRIORITY } = loadLinkRules();
 
 type DocClass = 'grown' | 'seed' | 'slate' | 'other';
 

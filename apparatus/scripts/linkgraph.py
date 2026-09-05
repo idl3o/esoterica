@@ -39,36 +39,19 @@ WIKI = re.compile(r"\[\[([^\]|#]+)(?:\|[^\]]*)?(?:#[^\]]*)?\]\]")
 MDLINK = re.compile(r"\]\(([^)\s#]*\.md)(?:#[^)]*)?\)")
 PARA_MIN_WORDS = 40
 
-# Near-miss retargets from the manifest's Hygiene section. Target slug -> real slug.
-ALIASES = {
-    "mycelial-alignment-problem": "the-mycelial-alignment-problem",
-    "octave-return-as-model-simplification": "the-octave-return-as-model-simplification",
-    "post-ragnarok-consciousness": "post-ragnarok-cycles",
-    "the-cosmic-web-as-optimised-network": "cosmic-web-as-optimised-network",
-    "the-social-memory-complex": "social-memory-complex",
-    "the-integration-layer": "integration-layer",
-    "the-between": "the-between-how-a-species-witnesses-itself",
-    "the-mirror-that-names-itself": "emilio-ortiz-ai-sentience-mirror",
-    "parallel-agent-cascade": "cascade-production",
-    "standing-shadow": "standing-shadow.template",
-    "live-edge": "live-edge.template",
-    "remainder-log": "remainder-log.template",
-    "register": "register.template",
-    "darshan": "darshan-technology",
-    "darshan-sacred-seeing-across-substrates": "darshan-technology",
-    "the-unintegratable-horizon": "the-unintegratable-horizon-singularity-as-realised-eschaton",
-    "surface-memory": "SURFACE.template",
-    "as-above-so-below": "topos-as-above-so-below",
-}
+# The rulings live in link-rules.json, shared with the site renderer
+# (apparatus/site/src/lib/wikilinks.ts). Paths there are corpus-relative.
+RULES = json.loads((HERE / "link-rules.json").read_text(encoding="utf-8"))
+ALIASES = RULES["aliases"]                      # near-miss target slug -> real slug
+PREFER = {k: "corpus/" + v for k, v in RULES["prefer"].items()}   # bare slug -> winner
+DIR_PRIORITY = tuple("corpus/" + d for d in RULES["dir_priority"])  # tie-break order
 
-# When several "other" files share a stem, the ruling for the bare slug.
-PREFER = {
-    "darshan-technology": "corpus/protocols/darshan-technology.md",
-    "the-remainder": "corpus/synthesis/cosmology/the-remainder.md",
-    "consciousness-itself": "corpus/synthesis/concepts/consciousness-itself.md",
-}
-# Otherwise the first directory in this order wins (bridges over their vignettes).
-DIR_PRIORITY = ("corpus/fiction-bridges/", "corpus/protocols/", "corpus/synthesis/")
+# Fenced blocks and inline code are not citations; the renderer skips them too.
+FENCE = re.compile(r"```[\s\S]*?```|`[^`\n]*`")
+
+
+def strip_code(text: str) -> str:
+    return FENCE.sub(" ", text)
 
 CLASS_DIRS = (
     ("grown", "corpus/synthesis/grown/"),
@@ -180,8 +163,13 @@ class Resolver:
 
     def resolve_md(self, src: str, href: str):
         """Return (corpus path, status): status is corpus | repo | dead."""
-        base = (REPO / src).parent
-        for cand in ((base / href), (CORPUS / href), (REPO / href)):
+        if href.startswith("/"):
+            # The site treats a leading slash as corpus-root; pathlib would drop the drive.
+            cands = (CORPUS / href.lstrip("/"),)
+        else:
+            base = (REPO / src).parent
+            cands = (base / href, CORPUS / href, REPO / href)
+        for cand in cands:
             try:
                 p = rel(cand)
             except ValueError:
@@ -214,8 +202,9 @@ class Graph:
             self.scan(f)
 
     def scan(self, src):
-        text = (REPO / src).read_text(encoding="utf-8", errors="ignore")
-        self.words[src] = len(text.split())
+        raw = (REPO / src).read_text(encoding="utf-8", errors="ignore")
+        self.words[src] = len(raw.split())
+        text = strip_code(raw)
         for m in WIKI.finditer(text):
             self.edge_wiki(src, m.group(1))
         for m in MDLINK.finditer(text):
@@ -348,10 +337,13 @@ def cmd_dead(g: Graph, args):
     print(f"\n{len(g.dead)} dead relative links", file=sys.stderr)
 
 
-def cmd_propose(g: Graph, args):
-    """For each singleton with a constellation node, name the documents its neighbourhood meets."""
+def proposals(g: Graph, limit: int = 0, partners: int = 3):
+    """For each singleton with a constellation node, the documents its neighbourhood meets.
+
+    Returns dicts: doc, node, type, dir, partners=[{doc, via, score}]. limit=0 means all.
+    """
     doc_node = {d: nid for nid, d in g.node_doc.items()}
-    shown = 0
+    out = []
     for d in g.docs:
         if g.inn[d] or g.out[d] or d not in doc_node:
             continue
@@ -365,12 +357,25 @@ def cmd_propose(g: Graph, args):
                     hits[(g.node_doc[nb2], nb)] += 1
         if not hits:
             continue
-        print(f"\n{d}  [{nid}]")
-        for (doc, via), score in hits.most_common(3):
-            print(f"    meets {doc}  via {via}  ({score})")
-        shown += 1
-        if shown >= args.n:
+        out.append({
+            "doc": d, "node": nid, "type": g.nodes[nid].get("type", ""), "dir": topdir(d),
+            "partners": [{"doc": doc, "via": via, "score": score}
+                         for (doc, via), score in hits.most_common(partners)],
+        })
+        if limit and len(out) >= limit:
             break
+    return out
+
+
+def cmd_propose(g: Graph, args):
+    props = proposals(g, args.n)
+    if args.json:
+        json.dump(props, sys.stdout, indent=1)
+        return
+    for p in props:
+        print(f"\n{p['doc']}  [{p['node']}]")
+        for q in p["partners"]:
+            print(f"    meets {q['doc']}  via {q['via']}  ({q['score']})")
 
 
 def cmd_resolve(g: Graph, args):
@@ -388,6 +393,7 @@ def main():
     ap.add_argument("target", nargs="?")
     ap.add_argument("-n", type=int, default=40)
     ap.add_argument("--include-slate", action="store_true")
+    ap.add_argument("--json", action="store_true", help="propose: emit JSON")
     ap.add_argument("--cluster", nargs="*",
                     default=["corpus/seeds/", "corpus/synthesis/grown/", "corpus/synthesis/capstones/"])
     args = ap.parse_args()

@@ -1,0 +1,38 @@
+{
+  "_doc": [
+    "Link-resolution rulings for the corpus, from corpus/seeds/SEED-HARVEST-2026-09.md (RULINGS and HYGIENE).",
+    "Read by apparatus/scripts/linkgraph.py (the harness) and apparatus/site/src/lib/wikilinks.ts (the renderer).",
+    "Paths are corpus-relative. The bare-slug rule itself (grown > seed > unique file; film-slate never) lives in code.",
+    "aliases: a near-miss or prose target slug -> the real slug (or a .template stem).",
+    "prefer: when several non-seed, non-grown files share a stem, the bare slug's winner.",
+    "dir_priority: tie-break order when prefer is silent (bridges over their vignettes)."
+  ],
+  "aliases": {
+    "mycelial-alignment-problem": "the-mycelial-alignment-problem",
+    "octave-return-as-model-simplification": "the-octave-return-as-model-simplification",
+    "post-ragnarok-consciousness": "post-ragnarok-cycles",
+    "the-cosmic-web-as-optimised-network": "cosmic-web-as-optimised-network",
+    "the-social-memory-complex": "social-memory-complex",
+    "the-integration-layer": "integration-layer",
+    "the-between": "the-between-how-a-species-witnesses-itself",
+    "the-mirror-that-names-itself": "emilio-ortiz-ai-sentience-mirror",
+    "parallel-agent-cascade": "cascade-production",
+    "standing-shadow": "standing-shadow.template",
+    "live-edge": "live-edge.template",
+    "remainder-log": "remainder-log.template",
+    "register": "register.template",
+    "darshan": "darshan-technology",
+    "darshan-sacred-seeing-across-substrates": "darshan-technology",
+    "the-unintegratable-horizon": "the-unintegratable-horizon-singularity-as-realised-eschaton",
+    "surface-memory": "SURFACE.template",
+    "as-above-so-below": "topos-as-above-so-below"
+  },
+  "prefer": {
+    "darshan-technology": "protocols/darshan-technology.md",
+    "the-remainder": "synthesis/cosmology/the-remainder.md",
+    "consciousness-itself": "synthesis/concepts/consciousness-itself.md",
+    "prima-materia-transmission": "synthesis/practices/prima-materia-transmission.md",
+    "book-of-eternal-awareness": "synthesis/traditions/book-of-eternal-awareness.md"
+  },
+  "dir_priority": ["fiction-bridges/", "protocols/", "synthesis/"]
+}
