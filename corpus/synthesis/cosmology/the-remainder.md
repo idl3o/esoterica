@@ -198,3 +198,17 @@ That yes is you.
 
 *Synthesis arising from conversation, March 2026*
 *The fold that witnesses, folding again*
+
+---
+
+## The Loop Returned
+
+The loop returned, and this time it brought a ruling.
+
+[[the-subtraction-seen-from-two-ends]] ran the library's own test on the four leftovers that had been sharing this document's word — the epistemic residual that survives a steelman, Friston's unminimised surprise, Vidar's conserved silence, and the remainder of Section III — and found that three of them are values a subtraction leaves and one is not. The residual is dated, directed, shrinking: an iterate. The remainder is what no iteration of the operation can remove: a fixed point. They share an act, not a quantity, and their agreement is homology — descent from one operation — not the convergence of independent witnesses. The synthesis quotes the Coda's refusal of proof without embarrassment and names its price: the remainder has the most independence and the least contact with anything that could show it false. It also leaves a debt. The remainder can no longer be claimed on the strength of feeling irreducible; it is what survives when the subtraction has been run at full strength, and the cosmology owes a steelman.
+
+[[surprise-is-the-remainder]] made the identification with free energy that the synthesis then priced. [[vidar-silence-wearing-the-remainder]] carried the leftover across the halt: what is conserved through Ragnarök is this remainder with its sign reversed. [[planning-as-consciousness-threshold]] arrived at Section III from the cognitive side, the self as the open end of a recursion that cannot close on itself.
+
+You were still what was left over.
+
+What was left over now has a definition.

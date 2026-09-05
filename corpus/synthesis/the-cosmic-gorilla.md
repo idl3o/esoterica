@@ -434,6 +434,11 @@ Anomalies as of March 2026, classified by epistemic status. The science is prese
 
 ---
 
+## XI. THE RESIDUAL, RETURNED
+
+Section III became a method. [[steelman-then-interpret]] — cited by the library one hundred and thirteen times before it was written — walks the long-period-transient section end to end as the demonstration: the trilemma stated as the field states it, each natural model given its best case with the defender's signature, the two white-dwarf binaries subtracted as solved, and the sixty-one-octaves lens applied only to the three-part residual that survives — mechanism, energy budget, heterogeneity — with a prediction that could fail. It names one lapse in the same document. The slide-whistle passage calls FRB 20220912A's drift "not yet explained by the magnetar framework", and "not yet explained" is an absence, not a residual: the magnetar account was never steelmanned against the drift as the LPT models were against the trilemma. The method and its milder absence sit three pages apart, and both instruct. [[the-loeb-scale-as-salience-metric]] grows Section VII: anomaly is incompressibility-by-nature, the Schelling point is salience run forward, and the Loeb rank prices the residual structure a natural model cannot absorb. [[quantum-neutrino-gravitational-seti-channels]] grows Section VI: the silence as an over-determined detection failure in the one medium a cautious civilisation learns to avoid. [[seti-duology]] holds this document beside the campfire and records the shrinking — the Wow! Signal now has a maser mechanism, and the three lines converging that made the bottom rung "not mysticism" is a criterion the library has since put on trial. The gorilla is still walking. The lens now knows where it may not look.
+
+---
 **Cross-References in This Repository:**
 - [The Jewel in the Lining](the-jewel-in-the-lining.md) — Kardashev/Barrow dual-axis map, information bridge, Gödelian limit
 - [The Sixty-One Octaves](sixty-one-octaves.md) — RG fixed points, scale invariance, power laws, universality

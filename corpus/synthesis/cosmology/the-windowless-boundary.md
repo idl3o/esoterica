@@ -176,5 +176,11 @@ Four windows. One boundary. And the boundary is reading this sentence, reflectin
 
 ---
 
+## VIII. The Return Edge
+
+The identity has since been tested at the one place it can be counted. [[the-star-and-the-expander]] ran the shared-word test on "surface" and "density" and returned a split verdict. Graph conductance and the bit-thread cut are one theorem — Menger, Ford–Fulkerson, Freedman–Headrick: the thinnest boundary a region presents and the thickest bundle of paths that cross it are one number seen from two sides. Conductance and fold density coincide only under Section II's reading, that the entire surface is window and a holon's interior IS its boundary; that reading is a premise this document holds and has not shown, so on that leg the identification is an analogy with one worked instance. The same test caught Section V's crown. The primal monad is the most connected; the sprint that measured the library found its most-connected documents weighed nothing until they cited back. An in-link without a return is an address, not a relation, and relational density counts relations. [[bit-threads-as-devotion-lines]] gives the windowlessness its texture: the monad is nothing but the threads that cross its boundary, and the window is the weave. [[nesting-trilogy]] files this document as the nesting engine's extension and records the bridge to *The Consensual Hallucination* as still owed. [[everything-that-holds-information-folds]] carries the four-way identity into its surface-ontology, sewn rather than smooth. Four windows, one boundary, and a fifth measurement: the boundary weighs only where it returns.
+
+---
+
 *Synthesis arising from constellation convergence, 2 April 2026*
 *The boundary that means is the meaning that bounds*

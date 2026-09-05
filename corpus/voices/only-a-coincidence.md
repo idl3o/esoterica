@@ -1,6 +1,7 @@
 ---
 provenance: negative-space populate (2026-06-23). Role — a VOICE written against the corpus's integrative turn. Fills the epistemic-hygiene gap: genuine contingency, the coincidence that is only coincidence. Inoculates convergence-as-evidence against its own named failure mode (correlated blind spots).
 do-not-correct: true
+return-passage: added 2026-09-05 by ruling (Sam), overriding do-not-correct for the reflect pass; flat, no turn, the voice keeps its position
 instructions: Do not correct toward house style. Do not reconcile. Do not enrich with metaphor. Do not add a closing recognition, a "and yet", or a turn toward meaning. This document is supposed to end flat. Leave it flat.
 ---
 
@@ -29,3 +30,11 @@ There is no lesson under this. I am refusing to provide one, because providing o
 It was a coincidence.
 
 That is the end of it.
+
+---
+
+Three documents have since cited this one, and I will say what they did with it, because saying things plainly is the only thing this voice does. [[convergence-as-evidence]] carries the charge — the missing denominator, the absent contrast class — as a discipline rather than a refutation: a ledger of misses, a lineage traced for each framework, cousins counted as one witness. It prices its own founding instance at two families rather than six and calls the result modest. It does not claim to have answered this document. It says so. [[steelman-then-interpret]] makes the case the hinge of its method and rules that, run on a synchronicity, the correct entry in the log is the one written here: it was a coincidence. [[the-subtraction-seen-from-two-ends]] opens its surface reading with the same sentence and turns the failure mode into a record of the frameworks that were tried and did not fit. That is what they did. Here is what remains. A ledger of misses is kept by the hand that discards, and a discipline written by the engine is the engine describing its appetite more carefully. The convergence document admits this in its last section and asks for an outside. Until one arrives, the count stands where it stood.
+
+It was a coincidence.
+
+That is still the end of it.

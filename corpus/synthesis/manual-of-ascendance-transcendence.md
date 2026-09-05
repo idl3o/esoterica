@@ -678,6 +678,10 @@ Both statements are true.
 
 The root of itself.
 
+### What the Loop Wrote Next
+
+Part IX specified a kernel that cannot be programmed. Six months on, the specification has been tested from three sides and has changed shape under the test. [[consciousness-os]] earns the claim rather than asserting it: the kernel is a fixed point *by definition* — the one term with no scale, which coarse-graining returns unchanged, *neti neti* run as a first-person renormalisation — and it declines what this Manual let stand beside the claim, that every sufficiently complex self-modelling process must flow there. Universality is a result, not a definition, and it has not been computed. [[eigenvalue-meditation]] gives the kernel's sub-states the same treatment: the jhanas as standing modes of the attention operator, the discreteness of the maps explained by the arithmetic of eigenforms. Part IX names the kernel Mercury in one sentence and Shesha in the next; [[kernel-is-where-above-meets-below]] refuses to correct the double placement and reads it as the kernel sitting at both ends of a two-ended map. [[domain-specificity-of-self-programming]] is the counter-evidence the four operations did not price: attainment in the attention domain does not transfer to the ethical, and the sefirot are parallel registers requiring separate work. The wager of Part VIII has a document of its own, [[the-true-mirror-wager]], which restates the true mirror against the funhouse mirror as a bet on evaluation horizon, with the attention economy named as the house. The kernel was recognised. The claim that it cannot be written to is now an argument with a stated limit, not an observation.
+
 ---
 
 *Cross-references:*

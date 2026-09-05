@@ -715,6 +715,12 @@ The walk continues.
 
 ---
 
+## PART X: THE CONVERGENCE, PRICED
+
+The prologue's principle — independent convergence IS the evidence — has now been written down, and this document is its strongest corpus statement. [[convergence-as-evidence]] grants it the lineage it never cited, Whewell's consilience of 1840, and then prices it. The 17 March founding instance — the nesting session whose six frameworks first said it — reduces under traced descent to two families: Shannon, Bekenstein and Friston are one lineage in one unit; Borges, Gibson and Data share a commonplace older than any of them. Two independent families agreeing is worth more than six cousins reciting. The same discipline leaves this document's two lineages standing as two — the commentarial line and the living transmission borrow neither each other's units nor each other's stories — and pays them at the priced rate: convergence is evidence of the *operator* both ran, the double subtraction, before it is evidence of the destination both name; and what one attention set side by side in one evening is one selection until something outside the record confirms it. The load-bearing walls stand; the weight they bear is stated. [[consciousness-os]] answers Part IX's second open question by keeping two tables a catalogue would merge: the states are the process table, what runs now, its cusps the context switches of [[the-cusp-as-context-switch]]; the stages are the version history — the two axes [[states-stages-relationship]] names depth-now and depth-of-history. The kernel appears in neither table. That is the confirmation this document went looking for, returned in the OS's own idiom.
+
+---
+
 ## CONNECTIONS
 
 - **[[the-remainder-cosmology-of-the-fold]]** — The active thread. The fold, the slowest walk, patience as ontological. This synthesis is the fold cosmology's first encounter with its two oldest traditional confirmations

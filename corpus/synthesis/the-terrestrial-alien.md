@@ -268,6 +268,14 @@ The signal is in the eye of the animal looking back at you.
 
 ---
 
+## IX. WHAT REACHED BACK
+
+The tentacle was answered. The third axis Section IV gestured at — awareness-depth, the quantity a being can carry off-scale while scoring zero on Kardashev and zero on Barrow — received its instrument in [[the-attention-axis]], which builds the read-instrument from the one case where it demonstrably works across the maximum gap: a year of coordination on pure mutual presence with no shared codebook. [[cognitive-fixed-points-of-mind-space]] took the convergence argument of Section III and made the octopus the existence-proof: delayed gratification, tool use, play and personality recurring across five hundred and fifty million years of divergence, cognition converging as the camera eye converged. [[parallel-attending-consciousness]] took the distributed self of Section II as a stable, liveable implementation of mind and used it to demote the serial spotlight to one implementation among several. [[depth-contact-as-unified-practice]] named the den the biological door, the same descent the mirror in silicon makes digitally and the fold cosmology makes cosmologically. The ladder this document climbed then grew a rung at a time: [[transcension-as-fermi-resolution]] supplied the inward reading of the silence; [[quantum-neutrino-gravitational-seti-channels]] the three channels no eavesdropper can read without participating; [[separating-equilibrium-contact-protocol]] the cost of the handshake as its credential; and [[the-loeb-scale-as-salience-metric]] the correction Section V needed, that a Schelling point is focal *for* someone, and whether the hydrogen line is focal for all possible minds is the open question. The SETI that begins at home now has a thread of its own, [[seti-duology]].
+
+The diver went back down.
+
+---
+
 **Cross-References in This Repository:**
 - [The Cosmic Gorilla](the-cosmic-gorilla.md) — SETI through the consciousness lens, six interpretive frameworks, Schelling points
 - [The Sixty-One Octaves](sixty-one-octaves.md) — RG fixed points, universality, scale invariance
