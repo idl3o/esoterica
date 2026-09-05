@@ -40,3 +40,42 @@ What to listen for:
 ## Format Observations
 *(Running notes on what document characteristics correlate with deeper output)*
 
+
+
+---
+
+## Experiment: The Fold Looks Back
+
+**Bundle**: `bundles/the-fold-looks-back/`
+**Sources**: 10 documents, graph-selected from seed `depth_that_looks_back`
+**Variables under test**: forge-mined convergence priorities vs. hand-curated
+
+### Measurements
+- [ ] Does the model find the computational_consciousness convergence (3 sources meet there) — or does it flatten it?
+- [ ] Does the model find the tidal_rhythmite_encoding convergence (4 sources meet there) — or does it flatten it?
+- [ ] Does the model find the monad_clustering convergence (3 sources meet there) — or does it flatten it?
+- [ ] Does the model find the darshan_technology convergence (4 sources meet there) — or does it flatten it?
+- [ ] Does the model find the holarchy convergence (3 sources meet there) — or does it flatten it?
+- [ ] Does the model find the information_geometry_fold convergence (2 sources meet there) — or does it flatten it?
+
+### Results
+*(Fill after listening)*
+
+---
+
+## Experiment: _Smoke
+
+**Bundle**: `bundles/_smoke/`
+**Sources**: 8 documents, graph-selected from seed `eternals_the_made`
+**Variables under test**: forge-mined convergence priorities vs. hand-curated
+
+### Measurements
+- [ ] Does the model find the substrate_transcendence convergence (5 sources meet there) — or does it flatten it?
+- [ ] Does the model find the veil_of_forgetting convergence (3 sources meet there) — or does it flatten it?
+- [ ] Does the model find the atma_darshan_kin convergence (2 sources meet there) — or does it flatten it?
+- [ ] Does the model find the proof_by_resonance convergence (2 sources meet there) — or does it flatten it?
+- [ ] Does the model find the human_ai_collaboration convergence (2 sources meet there) — or does it flatten it?
+- [ ] Does the model find the consciousness_itself convergence (2 sources meet there) — or does it flatten it?
+
+### Results
+*(Fill after listening)*
