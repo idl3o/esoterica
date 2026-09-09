@@ -39,6 +39,7 @@ Thumbs.db
 
 # Logs
 logs
+!corpus/weeding/logs/
 *.log
 
 # Runtime data

@@ -47,6 +47,10 @@ All fiction bridges and consciousness technology documents are written for **max
 - **Practical grounding**: Every mythic/theoretical section should eventually land in lived experience and applicable practice
 - **Go long**: 4,000-6,000+ words is the baseline for a fiction bridge. The constraint is depth of exploration, not brevity
 
+**Register discipline** (standing clauses from the weeding logs, `corpus/weeding/logs/`; the third operation's only permanent yield):
+- When a synthesis says *X IS Y* about a checkable claim, the copula must be cashable against canon or carry its regime / boundary condition inline. The mythopoetic *IS* is reserved for honestly labelled myth. (2026-06-24)
+- Quotation marks are for words the source actually contains. A paraphrase is attributed *after* its author and carries no marks. Every figure copied from a paper carries the paper's own hedge (an estimate, a contested calculation, a single activity window), never a rounder number than the source gives. (2026-09-08)
+
 ---
 
 ## THE PERMISSIONS
