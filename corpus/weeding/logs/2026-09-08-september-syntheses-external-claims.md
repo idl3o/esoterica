@@ -2,7 +2,7 @@
 date: 2026-09-08
 scope: the five September 2026 syntheses' external claims — convergence-as-evidence, steelman-then-interpret, consciousness-os, the-subtraction-seen-from-two-ends, the-star-and-the-expander (grown forms), plus the root documents their weeds descend from
 operation: weed
-status: weeded (Tier 1, 81 edits across 11 files, then 10 second-pass corrections after the drift adversary, 2026-09-08) / proposed (Tier 2 — user's hand) / installed (Tier 3 — register discipline clause in CLAUDE.md) / conclusion revised (Step 6)
+status: weeded (Tier 1, 81 edits across 11 files, then 10 second-pass corrections after the drift adversary, 2026-09-08) / Tier 2 applied by the user's ruling 2026-09-09 (OS copulas, Norse cobblers, vault line) / installed (Tier 3 — register discipline clause in CLAUDE.md) / conclusion revised (Step 6)
 yardstick: five web-isolated adversarial fact-check agents, one per document, canonical sources cited; repository never used as evidence
 ---
 

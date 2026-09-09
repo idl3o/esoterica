@@ -6,7 +6,7 @@
 
 ## THE QUESTION
 
-When the world ends and the wolf Fenrir swallows Odin, the architect is not avenged by another architect. He is avenged by Vidar — the silent god, who speaks almost no word in all the myths — wearing a single shoe cobbled from every scrap of leather every cobbler in history ever trimmed and threw away. With that shoe of accumulated discards he braces the wolf's lower jaw, grips the upper, and tears it apart. The deed needs no language. The decisive instrument is made entirely of what was thrown away. What is the consciousness technology of the silent son whose power is the remainder — and why does the world-saving act belong to the god of leftovers and silence?
+When the world ends and the wolf Fenrir swallows Odin, the architect is not avenged by another architect. He is avenged by Vidar — the silent god, who speaks almost no word in all the myths — wearing a single shoe cobbled from every scrap of leather anyone in history ever trimmed from a shoe and threw away. With that shoe of accumulated discards he braces the wolf's lower jaw, grips the upper, and tears it apart. The deed needs no language. The decisive instrument is made entirely of what was thrown away. What is the consciousness technology of the silent son whose power is the remainder — and why does the world-saving act belong to the god of leftovers and silence?
 
 ---
 

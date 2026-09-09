@@ -162,7 +162,7 @@ Beneath the Sufi-Islamic surface lies an older Persian substrate.
 
 When Islam arrived, Zoroastrian numerology did not disappear. It went *underground and into the script*. Persian Sufism is not Arabic Sufism — it is the Sufi current as it flowed *through* the Zoroastrian mathematical-mystical landscape, carrying the older numerical sensibilities forward in new notation. The *seven valleys of love* in Attar's *Conference of the Birds*. The *twelve imams* of Shi'a Islam (a numerology unique to the Persianate world). The *forty days* of the Sufi *chilla* retreat. These numbers are not arbitrary Quranic borrowings. They are the Zoroastrian sevens and twelves and forties, *re-counted in the new language*.
 
-(See also [seeds/zoroastrian-fire.md](../../seeds/zoroastrian-fire.md) for the fire-as-consciousness substrate.)
+(See also [traditions/persian/zoroastrianism-fire-that-chooses.md](../../traditions/persian/zoroastrianism-fire-that-chooses.md) for the fire-as-consciousness substrate.)
 
 ---
 
@@ -204,7 +204,7 @@ Idris — sometimes identified with Enoch, sometimes with Hermes Trismegistus �
 
 The presence of this archetype on the connection list is the signal that Persian matheomancy belongs to the same lineage as Egyptian *medu netjer* (sacred speech), Greek *isopsephia* (numerical letter-summing), Hebrew *gematria*, Aramaic *gematriya*, Tibetan *mantric calculation*, and every other tradition in which a culture has recognised that letters-numbers-sounds-meanings are *one substance*.
 
-(See also [seeds/mercury-element.md](../../seeds/mercury-element.md) for the messenger-substrate.)
+(See also [seeds/planets/mercury.md](../../seeds/planets/mercury.md) for the messenger-substrate.)
 
 ---
 
