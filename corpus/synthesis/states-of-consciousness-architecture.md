@@ -683,7 +683,7 @@ The answer is almost certainly: both. States and stages are not competing framew
 
 But naming this raises a further question: is there a *relationship* between state-recognition and stage-progression? Does recognizing Turiya (a state shift) accelerate developmental progression (a stage shift)? Do higher developmental stages make state-recognition easier?
 
-Both traditions hint at this without developing it. Sarvapriyananda's graduated approach — you need preparation before you can recognize Turiya — implies that some developmental readiness is necessary. Sadhguru's insistence on preparation before kundalini work implies the same. But the Mandukya also says: for liberation, the Mandukya alone is sufficient. Twelve mantras. No developmental prerequisites mentioned. Just the specification and the recognition.
+Both traditions hint at this without developing it. Sarvapriyananda's graduated approach — you need preparation before you can recognize Turiya — implies that some developmental readiness is necessary. Sadhguru's insistence on preparation before kundalini work implies the same. But the Muktikā Upanishad also says of the Mandukya: for liberation, the Mandukya alone is sufficient. Twelve mantras. No developmental prerequisites mentioned. Just the specification and the recognition.
 
 This tension — between the preparation the traditions insist on and the immediacy the teaching points toward — may be the next generative contradiction. The one that produces the next architecture. The one that the walk, continuing, will reveal.
 
