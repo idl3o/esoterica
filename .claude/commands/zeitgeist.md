@@ -134,7 +134,7 @@ git commit -m "feat(zeitgeist): DD Mon YYYY reading: [headline from DEEP section
 git push
 ```
 
-**Gated (`/zeitgeist gated`):** only when invoked with the word `gated`, do NOT push to `main`. Push to a branch and open a pull request so a human can read the Vercel preview and merge with one tap. Unattended runs (the cloud routine) push straight to `main` by Sam's standing decision of 10 Sep 2026; if that push is rejected, fall back to this branch-and-PR path rather than losing the reading:
+**Gated (`/zeitgeist gated`, and every unattended run):** do NOT push to `main`. Push to a branch and open a pull request. The `zeitgeist PR notify` workflow mentions Sam on the PR, GitHub emails him, and he authorises by merging (or declines by closing). The cloud routine always runs gated (Sam's decision, 10 Sep 2026):
 
 ```bash
 git checkout -b zeitgeist/YYYY-MM-DD
