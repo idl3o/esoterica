@@ -1,0 +1,38 @@
+# Emails Sam when an unattended zeitgeist reading is awaiting authorisation.
+# The cloud routine opens a PR from a zeitgeist/* branch; this comment mentions
+# @idl3o from the Actions bot, which GitHub delivers as a notification email.
+# Merge = publish (Vercel deploys main). Close = decline. No mail secrets needed.
+name: zeitgeist PR notify
+
+on:
+  pull_request:
+    types: [opened, reopened]
+    branches: [main]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  notify:
+    if: startsWith(github.head_ref, 'zeitgeist/')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request;
+            const body = [
+              `@idl3o a zeitgeist reading is awaiting your authorisation.`,
+              ``,
+              `**${pr.title}**`,
+              ``,
+              pr.body || '',
+              ``,
+              `Merge to publish it to esoterica.vercel.app. Close to decline. The Vercel preview, if enabled, appears as a separate comment.`
+            ].join('\n');
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr.number,
+              body,
+            });
