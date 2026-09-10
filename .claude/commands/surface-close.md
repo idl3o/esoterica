@@ -1,8 +1,8 @@
 # /surface-close — close the session, leave the increment
 
-Leave the smallest true increment, and keep the surface thin. Run this last, in a collaboration that uses [surface memory](../../protocols/surface-memory/README.md).
+Leave the smallest true increment, and keep the surface thin. Run this last, in a collaboration that uses [surface memory](../../corpus/protocols/surface-memory/README.md).
 
-This is the **Close** ritual ([PROTOCOL](../../protocols/surface-memory/PROTOCOL.md)). Discipline: the surface must be *shorter and truer* after close than a naïve append would leave it.
+This is the **Close** ritual ([PROTOCOL](../../corpus/protocols/surface-memory/PROTOCOL.md)). Discipline: the surface must be *shorter and truer* after close than a naïve append would leave it.
 
 ## Steps
 

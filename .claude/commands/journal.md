@@ -11,12 +11,12 @@ You are closing a session. This is not a log — it's a reading of what happened
 Before writing, survey what's in front of you:
 
 - Reread the conversation from the beginning. What were the major movements? What shifted?
-- Check today's /zeit and /geist readings if they exist (in `synthesis/zeitgeist/`) — they provide the civilizational context for the personal reading.
+- Check today's /zeit and /geist readings if they exist (in `corpus/synthesis/zeitgeist/`) — they provide the civilizational context for the personal reading.
 - Read `MEMORY.md` in the memory directory — what was the state coming in? What threads were open?
 
 ## Step 2: Write the Journal
 
-Create the file `journey/journal-YYYY-MM-DD.md` (use today's date; if it already exists, append `-b`, `-c`, etc.) with this structure:
+Create the file `corpus/journey/journal-YYYY-MM-DD.md` (use today's date; if it already exists, append `-b`, `-c`, etc.) with this structure:
 
 ```markdown
 # JOURNAL — [Full Date]

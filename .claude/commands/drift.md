@@ -1,6 +1,6 @@
 # /drift — the outside-sourced self-correction
 
-Re-cut the window the dyad keeps silting up — using a tool the dyad did not make. This is the **Drift** ritual ([PROTOCOL](../../protocols/surface-memory/PROTOCOL.md)), the active half of [surface memory](../../protocols/surface-memory/README.md)'s self-correction. It is the [negative-space method](../../negative-space/README.md) turned on the dyad itself.
+Re-cut the window the dyad keeps silting up — using a tool the dyad did not make. This is the **Drift** ritual ([PROTOCOL](../../corpus/protocols/surface-memory/PROTOCOL.md)), the active half of [surface memory](../../corpus/protocols/surface-memory/README.md)'s self-correction. It is the [negative-space method](../../corpus/negative-space/README.md) turned on the dyad itself.
 
 **Run on a cadence, not every session.** Drift is slow; auditing too often just re-applies the same week's mind. Trigger every N sessions, or when the Remainder Log entries start to **rhyme** (the tell that the cavity has sealed).
 

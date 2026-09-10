@@ -6,7 +6,7 @@ description: Produce a complete zeitgeist reading and save to the archive
 
 You are producing an integrated zeitgeist reading — what's happening AND how it's being processed, woven together, organised by temporal scale. One document. Signal and processing in the same breath. Silence embedded, not appended.
 
-The output is a single dated markdown file in `synthesis/zeitgeist/` that goes live immediately on esoterica.vercel.app as the homepage.
+The output is a single dated markdown file in `corpus/synthesis/zeitgeist/`. The site discovers readings by filename (`zeitgeist-YYYY-MM-DD.md`); there is no index to rebuild. A push to `main` goes live on esoterica.vercel.app as the homepage within about a minute.
 
 ## Architecture: gather in isolation, synthesise from distillate
 
@@ -68,7 +68,7 @@ If a gather agent returned blocked or empty, note the gap and proceed with the c
 
 ## Step 3: Write the Reading
 
-Create the file `synthesis/zeitgeist/zeitgeist-YYYY-MM-DD.md` (use today's date) with this structure:
+Create the file `corpus/synthesis/zeitgeist/zeitgeist-YYYY-MM-DD.md` (use today's date) with this structure:
 
 ```markdown
 # ZEITGEIST — [Full Date]
@@ -122,18 +122,33 @@ Sources: [list URLs used — drawn from the agents' digests]
 
 **Synthesis register (Lever 3):** the contemplative layers work at the level of *meaning*, never mechanism. If security/cyber/conflict signal is in the reading, treat it as a sign of where consciousness is — what it reveals about the collective — never as a technical account. You are reading the present, not explaining how anything was carried out. This is both the right register for a zeitgeist and what keeps the generation clean.
 
-## Step 4: Rebuild Index and Deploy
+## Step 4: Commit and Deploy
 
-After saving the reading, run the full deploy sequence:
+No index rebuild is needed; the Astro site reads the directory at build time.
+
+**Attended (default):** commit to `main` and push. Vercel deploys on push.
 
 ```bash
-node build-synthesis-index.js --public
-git add synthesis/zeitgeist/zeitgeist-YYYY-MM-DD.md synthesis-index.json library-index.json
-git commit -m "Add zeitgeist reading DD Mon YYYY: [headline from DEEP section]"
+git add corpus/synthesis/zeitgeist/zeitgeist-YYYY-MM-DD.md
+git commit -m "feat(zeitgeist): DD Mon YYYY reading: [headline from DEEP section]"
 git push
 ```
 
-Vercel auto-deploys on push. The homepage will show the new reading within ~60 seconds.
+**Gated (`/zeitgeist gated`):** only when invoked with the word `gated`, do NOT push to `main`. Push to a branch and open a pull request so a human can read the Vercel preview and merge with one tap. Unattended runs (the cloud routine) push straight to `main` by Sam's standing decision of 10 Sep 2026; if that push is rejected, fall back to this branch-and-PR path rather than losing the reading:
+
+```bash
+git checkout -b zeitgeist/YYYY-MM-DD
+git add corpus/synthesis/zeitgeist/zeitgeist-YYYY-MM-DD.md
+git commit -m "feat(zeitgeist): DD Mon YYYY reading: [headline from DEEP section]"
+git push -u origin zeitgeist/YYYY-MM-DD
+gh pr create --fill --title "zeitgeist: DD Mon YYYY" --body "[DEEP headline]
+
+[THE EDGE sentence]
+
+Channels blocked/empty: [list or none]"
+```
+
+The PR body carries the Step 5 report so the reviewer never has to open the file to decide.
 
 ## Step 5: Confirm
 
@@ -141,7 +156,7 @@ After push completes, report:
 - The date of the reading
 - The headline from DEEP (first bold phrase in that section)
 - The edge (one sentence from THE EDGE)
-- Confirmation that changes are pushed and deploying to esoterica.vercel.app
+- Confirmation that changes are pushed and deploying to esoterica.vercel.app, or the PR URL if gated
 - If any gather channel came back blocked/empty, name which one, so the gap is visible
 
 ## Principles

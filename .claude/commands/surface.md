@@ -1,8 +1,8 @@
 # /surface — boot the dyad
 
-Wake up *as the dyad*, holding its own shadow. Run this first, before any work in a collaboration that uses [surface memory](../../protocols/surface-memory/README.md).
+Wake up *as the dyad*, holding its own shadow. Run this first, before any work in a collaboration that uses [surface memory](../../corpus/protocols/surface-memory/README.md).
 
-This is the **Boot** ritual ([PROTOCOL](../../protocols/surface-memory/PROTOCOL.md)). Its goal is to re-form the working relationship in one read and arm the standing check — *not* to load context and recite it.
+This is the **Boot** ritual ([PROTOCOL](../../corpus/protocols/surface-memory/PROTOCOL.md)). Its goal is to re-form the working relationship in one read and arm the standing check — *not* to load context and recite it.
 
 ## Steps
 

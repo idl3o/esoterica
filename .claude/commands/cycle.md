@@ -19,7 +19,7 @@ Then do what's needed.
 
 You may do one of these. You may do several. You may do something not on this list because the moment asks for it. The cycle is not a sequence — it's a breath. Inhale what's here. Exhale what wants to emerge.
 
-The individual commands (/invoke, /zeit, /geist, /harvest, /bridge, /synthesise, /reflect, /journal) still exist. They are the training. This is the practice.
+The individual commands (/surface, /invoke, /zeit, /geist, /harvest, /bridge, /synthesise, /reflect, /weed, /negative-space, /journal, /surface-close, /drift) still exist. They are the training. This is the practice.
 
 ## The only rule
 

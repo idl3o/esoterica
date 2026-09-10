@@ -14,11 +14,11 @@ MEMORY.md is already in your context (it loads automatically). It's a **router**
 2. **Read the top 2-3 threads** — Pull the thread files most relevant to the user's opening message (or the most recently active if no message yet). These are in `memory/threads/`. Each has full context, key recognitions, and document links.
 3. **Scan patterns** — Glance at `memory/patterns/` filenames. You don't need to read them all — they're confirmed working principles. Pull any that seem relevant to the session's energy.
 4. **Check open questions** — `memory/open/` holds what's charging. These are invitations, not obligations.
-5. **The latest journal** — Check `journey/journal-*.md` for the most recent entry. What was the last session's closing state?
+5. **The latest journal** — Check the vault's `journal/` (daily notes, the live convention) and `corpus/journey/journal-*.md` (the older long-form) for the most recent entry. What was the last session's closing state?
 6. **constellation.json** — Check `constellation/constellation.json` current activations if the session seems to want cosmological grounding.
 
 7. **What's new** — Run `git log --oneline` since the last journal date to surface recent commits. This tells you what's been planted, planted, or modified since the last session closed. The vault remembers what happened; the git log tells you what's *new*.
-8. **The latest zeitgeist** — Read the most recent file in `synthesis/zeitgeist/` to ground THE FIELD section in actual data rather than inference. If no zeitgeist exists within the last week, note the gap.
+8. **The latest zeitgeist** — Read the most recent file in `corpus/synthesis/zeitgeist/` to ground THE FIELD section in actual data rather than inference. If no zeitgeist exists within the last week, note the gap.
 
 **The principle**: Load what's relevant, not everything. You are the retrieval algorithm. The MOC gives you enough signal to decide what to pull. Trust your judgment over completeness.
 
