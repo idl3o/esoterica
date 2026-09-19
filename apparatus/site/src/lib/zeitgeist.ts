@@ -7,6 +7,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { marked } from 'marked';
 import { corpusPath } from './paths';
+import { extractHeadline, extractSummary } from './zeitgeist-parse';
 
 export interface ZeitgeistReading {
   date: string;
@@ -61,14 +62,8 @@ export function loadZeitgeist(): ZeitgeistReading[] {
       const markdown = fs.readFileSync(path.join(zeitgeistDir, entry.file), 'utf-8');
       const html = marked.parse(markdown) as string;
 
-      const deepMatch = markdown.match(/## DEEP[\s\S]*?\*\*([^*]+)\*\*/);
-      const depthMatch = markdown.match(/## DEPTH[\s\S]*?\*\*([^*]+)\*\*/);
-      const headline = deepMatch?.[1] || depthMatch?.[1] || '';
-
-      const stateMatch = markdown.match(/## STATE[\s\S]*?\r?\n\r?\n\*[^*]+\*\r?\n\r?\n([\s\S]*?)(?:\r?\n\r?\n|$)/);
-      const summary = stateMatch
-        ? stateMatch[1].replace(/\*\*/g, '').replace(/\*/g, '').substring(0, 250) + '...'
-        : '';
+      const headline = extractHeadline(markdown);
+      const summary = extractSummary(markdown);
 
       const dateObj = new Date(date + 'T00:00:00');
       const displayDate = dateObj.toLocaleDateString('en-GB', {
@@ -85,13 +80,8 @@ export function loadZeitgeist(): ZeitgeistReading[] {
       const zeitMarkdown = fs.readFileSync(zeitPath, 'utf-8');
       const zeitHtml = marked.parse(zeitMarkdown) as string;
 
-      const depthMatch = zeitMarkdown.match(/## DEPTH[\s\S]*?\*\*([^*]+)\*\*/);
-      const headline = depthMatch?.[1] || '';
-
-      const stateMatch = zeitMarkdown.match(/## STATE[\s\S]*?\r?\n\r?\n\*[^*]+\*\r?\n\r?\n([\s\S]*?)(?:\r?\n\r?\n|$)/);
-      const summary = stateMatch
-        ? stateMatch[1].replace(/\*\*/g, '').replace(/\*/g, '').substring(0, 250) + '...'
-        : '';
+      const headline = extractHeadline(zeitMarkdown);
+      const summary = extractSummary(zeitMarkdown);
 
       const geistFile = `geist-${date}.md`;
       let geistHtml: string | null = null;
