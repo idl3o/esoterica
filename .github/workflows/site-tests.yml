@@ -1,0 +1,33 @@
+# Runs the site's unit tests on pull requests that touch a zeitgeist reading or
+# the site's code. The zeitgeist parser suite uses the archive as its fixture,
+# so a reading the site cannot parse fails here, before the merge that publishes it.
+name: site tests
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'corpus/synthesis/zeitgeist/**'
+      - 'apparatus/site/**'
+      - '.github/workflows/site-tests.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: apparatus/site
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: apparatus/site/package-lock.json
+      - run: npm ci
+      - run: npm test
