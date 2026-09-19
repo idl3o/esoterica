@@ -3,12 +3,20 @@
  * Extracts items from zeitgeist readings and tracks persistence across timescales.
  */
 
-import { loadZeitgeist, type ZeitgeistReading } from './zeitgeist';
+import { loadZeitgeist } from './zeitgeist';
+import {
+  TIMESCALES,
+  extractCorrespondence,
+  extractEdge,
+  extractItems,
+  parseSection,
+  type Timescale,
+} from './zeitgeist-parse';
 import fs from 'node:fs';
 import path from 'node:path';
 
 // Types
-export type Timescale = 'SURFACE' | 'CURRENT' | 'DEEP' | 'TECTONIC';
+export type { Timescale };
 
 export interface ItemAppearance {
   date: string;
@@ -104,72 +112,6 @@ function slugify(text: string): string {
     .substring(0, 60);
 }
 
-function parseSection(markdown: string, sectionName: string): string | null {
-  // Match section header followed by italic description, then content until next section
-  const regex = new RegExp(
-    `## ${sectionName}\\s*\\n\\*[^*]+\\*\\s*\\n([\\s\\S]*?)(?=\\n## |$)`,
-    'i'
-  );
-  const match = markdown.match(regex);
-  return match ? match[1].trim() : null;
-}
-
-function extractItems(sectionContent: string, timescale: Timescale): { title: string; description: string; gap: string | null }[] {
-  const items: { title: string; description: string; gap: string | null }[] = [];
-
-  // Match bold title followed by content until next bold title or end
-  // Pattern: **Title.** or **Title:** followed by description
-  const itemRegex = /\*\*([^*]+?)[.:]?\*\*\.?\s*([\s\S]*?)(?=\n\n\*\*[^*]+\*\*|$)/g;
-
-  let match;
-  while ((match = itemRegex.exec(sectionContent)) !== null) {
-    const title = match[1].trim();
-    let description = match[2].trim();
-
-    // Extract gap (final italicised text)
-    let gap: string | null = null;
-    const gapMatch = description.match(/\*([^*]+)\*\s*$/);
-    if (gapMatch) {
-      gap = gapMatch[1].trim();
-      // Remove gap from description
-      description = description.replace(/\*([^*]+)\*\s*$/, '').trim();
-    }
-
-    // Skip if title is too short or looks like a subheading
-    if (title.length < 5) continue;
-
-    items.push({ title, description, gap });
-  }
-
-  return items;
-}
-
-function extractCorrespondence(markdown: string): { pattern: string; summary: string } | null {
-  const section = parseSection(markdown, 'CORRESPONDENCE');
-  if (!section) return null;
-
-  // Look for "The pattern is **X**" or "pattern: **X**" or just first bold text
-  const patternMatch = section.match(/(?:The pattern(?:\s+operating[^*]*)?\s+is\s+\*\*([^*]+)\*\*|\*\*([^*]+)\*\*)/i);
-  const pattern = patternMatch ? (patternMatch[1] || patternMatch[2]).trim() : 'Unknown pattern';
-
-  // Get first paragraph as summary
-  const firstPara = section.split('\n\n')[0];
-  const summary = firstPara.replace(/\*\*/g, '').substring(0, 300);
-
-  return { pattern, summary };
-}
-
-function extractEdge(markdown: string): string | null {
-  const stateSection = parseSection(markdown, 'STATE');
-  if (!stateSection) return null;
-
-  const edgeMatch = stateSection.match(/\*\*THE EDGE[:\s]*\*\*:?\s*([\s\S]*?)(?:\n\n---|\n\nSources:|$)/i);
-  if (edgeMatch) {
-    return edgeMatch[1].trim().substring(0, 400);
-  }
-  return null;
-}
-
 function findCanonicalId(title: string, curation: CurationFile): { id: string; canonicalTitle: string } | null {
   const slug = slugify(title);
 
@@ -231,13 +173,11 @@ export function loadZeitgeistItems(): ZeitgeistItemsIndex {
     const itemCount = { surface: 0, current: 0, deep: 0, tectonic: 0 };
 
     // Extract items from each timescale section
-    const timescales: Timescale[] = ['SURFACE', 'CURRENT', 'DEEP', 'TECTONIC'];
-
-    for (const timescale of timescales) {
+    for (const timescale of TIMESCALES) {
       const sectionContent = parseSection(reading.zeitMarkdown, timescale);
       if (!sectionContent) continue;
 
-      const extractedItems = extractItems(sectionContent, timescale);
+      const extractedItems = extractItems(sectionContent);
       itemCount[timescale.toLowerCase() as keyof typeof itemCount] = extractedItems.length;
 
       for (const extracted of extractedItems) {

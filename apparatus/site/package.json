@@ -7,7 +7,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "prebuild": "node scripts/sync-public-data.mjs",
-    "predev": "node scripts/sync-public-data.mjs"
+    "predev": "node scripts/sync-public-data.mjs",
+    "test": "vitest run"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.1",
@@ -17,5 +18,8 @@
   },
   "overrides": {
     "vite": "^7.3.2"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.1"
   }
 }
