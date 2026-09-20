@@ -27,22 +27,23 @@ Consequence: the meta index's whole premise, persistence across scales, is inope
 - [x] Schema for the registry with zod (new dependency; first schema in the site). Type derived from schema, not hand-written.
 - [x] `zeitgeist-threads.ts`: pure resolver `(itemSlug) → threadId`, replacing the fuzzy `findCanonicalId` (which substring-matches titles against variants: any title containing "oil shock" is captured, silently).
 - [x] Tests against the archive: every variant slug in the registry exists in some reading (no dangling); no slug in two threads; every item resolves to exactly one id; resolution is deterministic.
-- [ ] Status semantics rewritten around threads: `active` / `dormant` / `closed`, with "metabolised" reserved for a thread a reading explicitly closes.
+- [x] Status semantics rewritten around threads: `active` / `dormant` / `closed`, with "metabolised" reserved for a thread a reading explicitly closes.
 
 **Phase 1 findings (20 Sep).** Migration reproduced every live item id exactly (0 mismatches over 426 items; build emits the same 402 item pages as the snapshot). Of the 29 variants hand-typed in July, 16 matched no reading at all (`civilisations-floor` for the real `civilisation-s-floor`); the fuzzy matcher had been doing the work silently, capturing 16 items. 27 live slugs end in a hyphen (truncate-after-trim), so `slugify` must never be tidied. `src/data/zeitgeist-item-ids.snapshot.json` is now the permanent no-404 contract.
 
 ## Phase 2 — backfill the archive
 
-- [ ] Export the 402 items (date, scale, title, gap) to one table.
-- [ ] Single-mind clustering pass → draft taxonomy → **D5 review gate** → assign all items → registry.
+- [x] Export the 402 items (date, scale, title, gap) to one table.
+- [x] Single-mind clustering pass → draft taxonomy: **57 threads over 330 of 426 items; recurring ids 2.2% → 38.4%.** Independently validated and dry-run (194 tests, build green, registry restored).
+- [ ] **D5 review gate — waiting on Sam.** Read `docs/zeitgeist-threads-draft.md` (ten editor's flags on top). On approval: apply renames, move the gas-prices item, copy the JSON into the registry, delete both draft files.
 - [ ] Report the residue honestly: how many items are genuine singletons (a lunar crater is allowed to be one).
 - [ ] Acceptance: recurring share rises from 2.2% to whatever is true; a named thread exists for the war, the rate cycle, AI pacing, the exit, the haze/heat line; spot-check twenty assignments by hand.
 
 ## Phase 3 — site
 
-- [ ] **Gotcha: merging a singleton into a thread deletes its public URL.** `/zeitgeist/meta/item/<slug>` pages vanish when their slug becomes a variant. Emit a redirect page for every variant slug. Test: no item URL that exists on the live site today 404s after the change (snapshot the list before starting).
-- [ ] Thread page: appearances in date order with their scale, so migration reads at a glance (SURFACE → CURRENT → DEEP is the series' own thesis made visible), gaps in sequence beneath.
-- [ ] Threads index sorted by persistence and by last movement; "moved scale this month" strip.
+- [x] **Gotcha: merging a singleton into a thread deletes its public URL.** *Done: the item route emits a redirect page per retired id; the snapshot test enforces it.* `/zeitgeist/meta/item/<slug>` pages vanish when their slug becomes a variant. Emit a redirect page for every variant slug. Test: no item URL that exists on the live site today 404s after the change (snapshot the list before starting).
+- [x] Thread page: appearances in date order with their scale, so migration reads at a glance (SURFACE → CURRENT → DEEP is the series' own thesis made visible), gaps in sequence beneath.
+- [x] "Moved between scales" on the meta index, most recently seen first. *Still open: a full threads index sorted by persistence.*
 - [ ] Reading page: each item links to its thread; archive cards show the correspondence pattern now that all 35 parse.
 - [ ] `astro build` green; page count sane (2,747 today).
 
