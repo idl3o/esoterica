@@ -49,8 +49,10 @@ Consequence: the meta index's whole premise, persistence across scales, is inope
 
 ## Phase 4 — the writer learns the threads
 
-- [ ] Command Step 0 reads the registry: open threads, last scale, last seen. Step 3 assigns every item to a thread or mints one (kebab-case noun phrase, not a sentence). Step 4 commits the registry with the reading.
-- [ ] Editorial-pass line: "a thread that has appeared three readings running at the same scale — has it moved, or are you repeating it?"
+- [x] Command Step 0 reads the registry: open threads, last scale, last seen. Step 3 assigns every item to a thread or mints one (kebab-case noun phrase, not a sentence). Step 4 commits the registry with the reading.
+- [x] Editorial-pass line: "a thread that has appeared three readings running at the same scale — has it moved, or are you repeating it?"
+- [x] Gather agents and the verifier write their own files into `docs/zeitgeist-runs/<date>/` (D1 going forward). `apparatus/scripts/zeitgeist-slugs.mjs` lists a reading's slugs and threads on a bare clone; a test pins it to the site's parser.
+- [ ] **After this branch merges:** routine prompt step 4 must allow the registry and the run directory (it still says "do not touch any other file"), and its PR-body order gains the Threads line.
 - [ ] Routine prompt: allow the registry as a second touched file. CI: registry tests run on zeitgeist PRs (already covered by the path filter if D2 = site data; extend the filter if it lives in the corpus).
 
 ## Phase 5 — stretch
