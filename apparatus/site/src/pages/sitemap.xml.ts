@@ -3,6 +3,7 @@ import { loadLibraryIndex, loadSynthesisIndex } from '../lib/content';
 import { loadBridges } from '../lib/bridges';
 import { getAllNodes } from '../lib/constellation';
 import { SITE_URL } from '../lib/publish';
+import { loadZeitgeist } from '../lib/zeitgeist';
 
 const escape = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
@@ -14,6 +15,7 @@ export const GET: APIRoute = () => {
   add('/', '1.0');
   for (const p of ['/library', '/explorer', '/wander', '/bridges', '/zeitgeist']) add(p, '0.8');
 
+  for (const reading of loadZeitgeist()) add(`/zeitgeist/${reading.date}`, '0.7');
   for (const doc of loadLibraryIndex()) add(doc.readPath, '0.7');
   for (const bridge of loadBridges()) add(`/bridges/${bridge.slug}`, '0.7');
   for (const id of Object.keys(getAllNodes())) add(`/node/${encodeURIComponent(id)}`, '0.4');

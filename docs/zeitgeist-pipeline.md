@@ -57,7 +57,7 @@ Consequence: the meta index's whole premise, persistence across scales, is inope
 
 ## Phase 5 — stretch
 
-- [ ] Atom feed at `/zeitgeist/feed.xml` (headline, pattern, edge, summary, link). None exists; distribution phase; an hour, fully testable.
+- [x] Atom feed at `/zeitgeist/feed.xml` (headline, pattern, edge, summary, link). None exists; distribution phase; an hour, fully testable.
 - [ ] `/zeitgeist-probe` as its own command: the 27-endpoint probe prompt, so replacing a dead channel is one invocation.
 - [ ] Opportunistic, only in files touched: remove the `!` and `as string` in `zeitgeist.ts` / `zeitgeist-index.ts`.
 
