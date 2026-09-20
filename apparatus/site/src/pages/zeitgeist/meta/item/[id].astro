@@ -5,6 +5,7 @@
 
 import Base from '../../../../layouts/Base.astro';
 import Sparkline from '../../../../components/Sparkline.astro';
+import ScaleMigration from '../../../../components/ScaleMigration.astro';
 import {
   STATUS_STYLES,
   loadThreadResolver,
@@ -117,6 +118,14 @@ const statusStyle = STATUS_STYLES[item.status];
         />
       </div>
     </div>
+
+    <!-- Scale migration: where the thread sat, reading by reading -->
+    {item.appearanceCount > 1 && (
+      <div class="mb-8 glass p-4">
+        <h2 class="text-xs uppercase tracking-label text-text-muted mb-3">Scale, reading by reading</h2>
+        <ScaleMigration dates={sortedDates} appearances={item.appearances} />
+      </div>
+    )}
 
     <!-- Title Variants -->
     {item.titleVariants.length > 1 && (

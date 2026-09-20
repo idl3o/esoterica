@@ -8,6 +8,7 @@ import {
   ItemSlugSchema,
   buildResolver,
   parseRegistry,
+  scaleTrajectory,
   slugify,
   statusOf,
   validateRegistry,
@@ -120,6 +121,31 @@ describe('statusOf', () => {
 
   it('calls everything active while the archive is shorter than the window', () => {
     expect(statusOf(['2026-09-19'], ['2026-09-19'])).toBe('active');
+  });
+});
+
+describe('scaleTrajectory', () => {
+  it('collapses consecutive repeats and keeps returns', () => {
+    expect(scaleTrajectory([
+      { date: '2026-03-03', timescale: 'SURFACE' },
+      { date: '2026-03-10', timescale: 'SURFACE' },
+      { date: '2026-03-18', timescale: 'DEEP' },
+      { date: '2026-04-09', timescale: 'TECTONIC' },
+      { date: '2026-05-01', timescale: 'DEEP' },
+    ])).toEqual(['SURFACE', 'DEEP', 'TECTONIC', 'DEEP']);
+  });
+
+  it('orders by date whatever order it is given, and shallow to deep within one reading', () => {
+    expect(scaleTrajectory([
+      { date: '2026-09-10', timescale: 'DEEP' },
+      { date: '2026-09-10', timescale: 'SURFACE' },
+      { date: '2026-09-04', timescale: 'CURRENT' },
+    ])).toEqual(['CURRENT', 'SURFACE', 'DEEP']);
+  });
+
+  it('has length one for a thread that never moved, and zero for none', () => {
+    expect(scaleTrajectory([{ date: '2026-09-19', timescale: 'CURRENT' }, { date: '2026-09-10', timescale: 'CURRENT' }])).toEqual(['CURRENT']);
+    expect(scaleTrajectory([])).toEqual([]);
   });
 });
 

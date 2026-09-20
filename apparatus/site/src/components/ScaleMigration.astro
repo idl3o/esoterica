@@ -1,0 +1,81 @@
+---
+/**
+ * ScaleMigration - where a thread sat, reading by reading, on the four scales.
+ *
+ * One column per reading (oldest first), one row per scale (SURFACE at the top,
+ * TECTONIC at the bottom: deeper is lower). A dot marks an appearance; a faint
+ * line joins consecutive appearances, so a thread sinking from SURFACE to DEEP
+ * reads as a descent. This is the series' own thesis drawn: signals metabolise
+ * at different depths, and some change depth.
+ *
+ * Props:
+ * - dates: string[]        every reading date, oldest first
+ * - appearances: { date, timescale }[]
+ * - width: number          SVG width in pixels (default 640)
+ */
+import { TIMESCALES, type Timescale } from '../lib/zeitgeist-parse';
+import { scaleTrajectory } from '../lib/zeitgeist-threads';
+
+interface Props {
+  dates: readonly string[];
+  appearances: readonly { date: string; timescale: Timescale }[];
+  width?: number;
+}
+
+const { dates, appearances, width = 640 } = Astro.props;
+
+// Site palette, as in Sparkline
+const fill: Record<Timescale, string> = {
+  SURFACE: '#9ca3af',
+  CURRENT: '#00ffff',
+  DEEP: '#bf5af2',
+  TECTONIC: '#00ff88',
+};
+
+const gutter = 64;
+const rowHeight = 16;
+const padTop = 8;
+const height = padTop * 2 + rowHeight * TIMESCALES.length;
+const step = dates.length > 1 ? (width - gutter - 8) / (dates.length - 1) : 0;
+
+const column = new Map(dates.map((date, i) => [date, i]));
+const x = (date: string) => gutter + (column.get(date) ?? 0) * step;
+const y = (timescale: Timescale) => padTop + rowHeight * TIMESCALES.indexOf(timescale) + rowHeight / 2;
+
+const points = [...appearances]
+  .filter(a => column.has(a.date))
+  .sort((a, b) => a.date.localeCompare(b.date) || TIMESCALES.indexOf(a.timescale) - TIMESCALES.indexOf(b.timescale));
+
+const path = points.map((p, i) => `${i === 0 ? 'M' : 'L'}${x(p.date).toFixed(1)},${y(p.timescale).toFixed(1)}`).join(' ');
+const trajectory = scaleTrajectory(appearances);
+const label = `Scale by reading: ${trajectory.join(' to ')}, over ${points.length} appearance${points.length === 1 ? '' : 's'}.`;
+---
+
+<figure class="m-0">
+  <svg
+    viewBox={`0 0 ${width} ${height}`}
+    width="100%"
+    role="img"
+    aria-label={label}
+    style={`max-width:${width}px`}
+  >
+    {TIMESCALES.map(timescale => (
+      <g>
+        <line x1={gutter} x2={width - 8} y1={y(timescale)} y2={y(timescale)} stroke="#ffffff" stroke-opacity="0.07" />
+        <text x="0" y={y(timescale) + 3} font-size="9" fill={fill[timescale]} fill-opacity="0.8" letter-spacing="1">{timescale}</text>
+      </g>
+    ))}
+    {points.length > 1 && <path d={path} fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="1" />}
+    {points.map(p => (
+      <circle cx={x(p.date)} cy={y(p.timescale)} r="3.2" fill={fill[p.timescale]}>
+        <title>{`${p.date} · ${p.timescale}`}</title>
+      </circle>
+    ))}
+  </svg>
+  <figcaption class="text-xs text-text-muted mt-2">
+    {trajectory.length > 1
+      ? <span>{trajectory.join(' → ')}</span>
+      : <span>Has stayed at {trajectory[0]}.</span>}
+    <span class="ml-2">{dates[0]} – {dates.at(-1)}</span>
+  </figcaption>
+</figure>

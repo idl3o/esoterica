@@ -19,6 +19,7 @@
  */
 
 import { z } from 'zod';
+import { TIMESCALES, type Timescale } from './zeitgeist-parse';
 
 // The trailing hyphen is legal: slugify truncates at 60 characters *after*
 // trimming hyphens, so a long title can end on one, and those ids are live URLs.
@@ -126,6 +127,27 @@ export function statusOf(
   const recent = new Set(readingDatesNewestFirst.slice(0, ACTIVE_WINDOW));
   if (appearanceDates.some(date => recent.has(date))) return 'active';
   return new Set(appearanceDates).size > 1 ? 'dormant' : 'once';
+}
+
+/**
+ * The scales a thread has occupied, in the order it reached them, with
+ * consecutive repeats collapsed: SURFACE, SURFACE, CURRENT, DEEP, CURRENT reads
+ * as SURFACE → CURRENT → DEEP → CURRENT. A thread that appears at two scales in
+ * one reading is ordered shallow to deep within that date. Length one means it
+ * never moved.
+ */
+export function scaleTrajectory(
+  appearances: readonly { readonly date: string; readonly timescale: Timescale }[],
+): Timescale[] {
+  const depth = (t: Timescale) => TIMESCALES.indexOf(t);
+  const ordered = [...appearances].sort(
+    (a, b) => a.date.localeCompare(b.date) || depth(a.timescale) - depth(b.timescale),
+  );
+  const trajectory: Timescale[] = [];
+  for (const { timescale } of ordered) {
+    if (trajectory.at(-1) !== timescale) trajectory.push(timescale);
+  }
+  return trajectory;
 }
 
 export interface Resolution {
