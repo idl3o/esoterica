@@ -9,6 +9,7 @@ import {
   buildResolver,
   parseRegistry,
   slugify,
+  statusOf,
   validateRegistry,
   type Registry,
 } from './zeitgeist-threads';
@@ -93,6 +94,32 @@ describe('buildResolver', () => {
       { id: 'a-thread', title: 'A', members: ['shared-item'] },
       { id: 'b-thread', title: 'B', members: ['shared-item'] },
     ]))).toThrow(/unsound[\s\S]*shared-item/);
+  });
+});
+
+describe('statusOf', () => {
+  const readings = ['2026-09-19', '2026-09-10', '2026-09-04', '2026-08-13', '2026-07-28'];
+
+  it('is active when seen in one of the three most recent readings, however many days ago that was', () => {
+    expect(statusOf(['2026-09-04'], readings)).toBe('active');
+    expect(statusOf(['2026-03-03', '2026-09-19'], readings)).toBe('active');
+  });
+
+  it('is dormant when it recurred and then fell out of the window', () => {
+    expect(statusOf(['2026-07-28', '2026-08-13'], readings)).toBe('dormant');
+  });
+
+  it('is once, not "metabolised", when it appeared a single time and left', () => {
+    expect(statusOf(['2026-08-13'], readings)).toBe('once');
+    expect(statusOf(['2026-08-13', '2026-08-13'], readings)).toBe('once');
+  });
+
+  it('is closed only when a reading closed it, whatever else is true', () => {
+    expect(statusOf(['2026-09-19'], readings, '2026-09-19')).toBe('closed');
+  });
+
+  it('calls everything active while the archive is shorter than the window', () => {
+    expect(statusOf(['2026-09-19'], ['2026-09-19'])).toBe('active');
   });
 });
 

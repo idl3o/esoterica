@@ -104,6 +104,30 @@ export function validateRegistry(registry: Registry): string[] {
   return problems;
 }
 
+export const THREAD_STATUSES = ['active', 'dormant', 'once', 'closed'] as const;
+export type ThreadStatus = (typeof THREAD_STATUSES)[number];
+
+/** A thread is active if it appeared in one of this many most recent readings. */
+export const ACTIVE_WINDOW = 3;
+
+/**
+ * Where a thread stands. Counted in readings, not days: the cadence runs from
+ * daily to three weeks apart, and "seen in the last three days" called almost
+ * everything gone. `once` claims only what the archive knows, that an item
+ * appeared one time; the label it replaces, "metabolised", claimed the
+ * collective had digested it, of 98% of items, the war among them.
+ */
+export function statusOf(
+  appearanceDates: readonly string[],
+  readingDatesNewestFirst: readonly string[],
+  closed?: string,
+): ThreadStatus {
+  if (closed !== undefined) return 'closed';
+  const recent = new Set(readingDatesNewestFirst.slice(0, ACTIVE_WINDOW));
+  if (appearanceDates.some(date => recent.has(date))) return 'active';
+  return new Set(appearanceDates).size > 1 ? 'dormant' : 'once';
+}
+
 export interface Resolution {
   /** The thread the item belongs to, or the item's own slug if it stands alone. */
   readonly id: ThreadId | ItemSlug;

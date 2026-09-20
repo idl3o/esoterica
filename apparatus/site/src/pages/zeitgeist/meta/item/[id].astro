@@ -6,24 +6,43 @@
 import Base from '../../../../layouts/Base.astro';
 import Sparkline from '../../../../components/Sparkline.astro';
 import {
+  STATUS_STYLES,
+  loadThreadResolver,
   loadZeitgeistItems,
   type ZeitgeistItem,
   type Timescale,
 } from '../../../../lib/zeitgeist-index';
 
+/**
+ * A page per thread or standalone item, and a redirect per retired id: a slug
+ * that joins a thread stops being a page, but its URL was public and must land
+ * somewhere. Every item slug is therefore addressable, always.
+ */
 export function getStaticPaths() {
   const index = loadZeitgeistItems();
-  return index.items.map(item => ({
+  const live = new Set(index.items.map(item => item.id));
+  const pages = index.items.map(item => ({
     params: { id: item.id },
-    props: { item },
+    props: { kind: 'item', item } satisfies Props,
   }));
+  const redirects = [...loadThreadResolver().retiredIds()]
+    .filter(([slug]) => !live.has(slug))
+    .map(([slug, threadId]) => ({
+      params: { id: slug },
+      props: { kind: 'redirect', to: threadId } satisfies Props,
+    }));
+  return [...pages, ...redirects];
 }
 
-interface Props {
-  item: ZeitgeistItem;
-}
+type Props =
+  | { kind: 'item'; item: ZeitgeistItem }
+  | { kind: 'redirect'; to: string };
 
-const { item } = Astro.props;
+const props = Astro.props;
+if (props.kind === 'redirect') {
+  return Astro.redirect(`/zeitgeist/meta/item/${props.to}`, 301);
+}
+const { item } = props;
 const index = loadZeitgeistItems();
 
 // Build appearance map for sparkline (oldest first)
@@ -45,13 +64,7 @@ const timescaleStyles: Record<Timescale, { text: string; border: string; bg: str
 const style = timescaleStyles[item.timescale];
 
 // Status styling
-const statusStyles: Record<string, { text: string; label: string }> = {
-  active: { text: 'text-cyan', label: 'Active' },
-  metabolised: { text: 'text-text-muted', label: 'Metabolised' },
-  dormant: { text: 'text-purple', label: 'Dormant' },
-};
-
-const statusStyle = statusStyles[item.status];
+const statusStyle = STATUS_STYLES[item.status];
 ---
 
 <Base title={`${item.title} | Meta-Zeitgeist`} description={item.latestDescription?.substring(0, 160)}>

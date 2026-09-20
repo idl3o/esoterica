@@ -4,7 +4,7 @@
  */
 
 import Sparkline from './Sparkline.astro';
-import type { ZeitgeistItem, Timescale } from '../lib/zeitgeist-index';
+import { STATUS_STYLES, type ZeitgeistItem, type Timescale } from '../lib/zeitgeist-index';
 
 interface Props {
   item: ZeitgeistItem;
@@ -30,13 +30,7 @@ const timescaleStyles: Record<Timescale, { text: string; border: string; bg: str
 const style = timescaleStyles[item.timescale];
 
 // Status badge styling
-const statusStyles: Record<string, { text: string; label: string }> = {
-  active: { text: 'text-cyan', label: 'Active' },
-  metabolised: { text: 'text-text-muted', label: 'Metabolised' },
-  dormant: { text: 'text-purple', label: 'Dormant' },
-};
-
-const statusStyle = statusStyles[item.status];
+const statusStyle = STATUS_STYLES[item.status];
 
 // Truncate gap for display
 const displayGap = item.latestGap
