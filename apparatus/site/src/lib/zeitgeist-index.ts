@@ -12,6 +12,13 @@ import {
   parseSection,
   type Timescale,
 } from './zeitgeist-parse';
+import {
+  EMPTY_REGISTRY,
+  buildResolver,
+  parseRegistry,
+  slugify,
+  type ThreadResolver,
+} from './zeitgeist-threads';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -76,57 +83,25 @@ export interface ZeitgeistItemsIndex {
   allDates: string[];
 }
 
-// Curation file for manual merges
-interface CurationEntry {
-  canonical: string;
-  canonicalTitle: string;
-  variants: string[];
-}
+export const THREADS_PATH = path.join('src', 'data', 'zeitgeist-threads.json');
 
-interface CurationFile {
-  merges: CurationEntry[];
-  timescaleOverrides?: Record<string, Timescale>;
-}
+let _resolverCache: ThreadResolver | null = null;
 
-let _curationCache: CurationFile | null = null;
+/**
+ * The thread registry, parsed and checked. A missing file means no threads; a
+ * malformed or unsound one throws, because a registry that fails quietly is
+ * what this replaced.
+ */
+export function loadThreadResolver(): ThreadResolver {
+  if (_resolverCache) return _resolverCache;
 
-function loadCuration(): CurationFile {
-  if (_curationCache) return _curationCache;
+  const registryPath = path.join(process.cwd(), THREADS_PATH);
+  const registry = fs.existsSync(registryPath)
+    ? parseRegistry(JSON.parse(fs.readFileSync(registryPath, 'utf-8')))
+    : EMPTY_REGISTRY;
 
-  try {
-    const curationPath = path.join(process.cwd(), 'src', 'data', 'zeitgeist-items-curation.json');
-    const content = fs.readFileSync(curationPath, 'utf-8');
-    _curationCache = JSON.parse(content);
-    return _curationCache!;
-  } catch {
-    // Return empty curation if file doesn't exist
-    return { merges: [] };
-  }
-}
-
-function slugify(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-|-$/g, '')
-    .substring(0, 60);
-}
-
-function findCanonicalId(title: string, curation: CurationFile): { id: string; canonicalTitle: string } | null {
-  const slug = slugify(title);
-
-  for (const merge of curation.merges) {
-    if (merge.canonical === slug || merge.variants.includes(slug)) {
-      return { id: merge.canonical, canonicalTitle: merge.canonicalTitle };
-    }
-    // Also check if title text matches
-    if (title.toLowerCase().includes(merge.canonicalTitle.toLowerCase()) ||
-        merge.variants.some(v => title.toLowerCase().includes(v.replace(/-/g, ' ')))) {
-      return { id: merge.canonical, canonicalTitle: merge.canonicalTitle };
-    }
-  }
-
-  return null;
+  _resolverCache = buildResolver(registry);
+  return _resolverCache;
 }
 
 function calculateDaysPersisted(firstSeen: string, lastSeen: string): number {
@@ -159,7 +134,7 @@ export function loadZeitgeistItems(): ZeitgeistItemsIndex {
   if (_indexCache) return _indexCache;
 
   const readings = loadZeitgeist();
-  const curation = loadCuration();
+  const resolver = loadThreadResolver();
 
   const itemsMap = new Map<string, ZeitgeistItem>();
   const correspondences: Correspondence[] = [];
@@ -181,10 +156,10 @@ export function loadZeitgeistItems(): ZeitgeistItemsIndex {
       itemCount[timescale.toLowerCase() as keyof typeof itemCount] = extractedItems.length;
 
       for (const extracted of extractedItems) {
-        // Check curation for canonical ID
-        const canonical = findCanonicalId(extracted.title, curation);
-        const id = canonical?.id || slugify(extracted.title);
-        const canonicalTitle = canonical?.canonicalTitle || extracted.title;
+        // The item's thread, or its own slug if it stands alone
+        const resolution = resolver.resolve(slugify(extracted.title));
+        const id: string = resolution.id;
+        const canonicalTitle = resolution.title ?? extracted.title;
 
         const appearance: ItemAppearance = {
           date: reading.date,

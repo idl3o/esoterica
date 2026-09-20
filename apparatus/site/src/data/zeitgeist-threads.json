@@ -1,0 +1,84 @@
+{
+  "version": 2,
+  "threads": [
+    {
+      "id": "iran-war",
+      "title": "The Iran War",
+      "members": [
+        "day-19-the-war-acquires-geometry",
+        "gas-prices-are-52-higher-than-before-the-iran-war",
+        "the-iran-war-enters-its-60-day-window",
+        "the-war-is-sixteen-days-old",
+        "the-war-without-a-name"
+      ]
+    },
+    {
+      "id": "oil-shock",
+      "title": "The Oil Shock",
+      "members": [
+        "the-oil-shock-has-repriced-civilisation-s-floor-and-markets-",
+        "the-oil-shock-is-repricing-civilisation-s-floor",
+        "the-oil-shock-is-repricing-the-world"
+      ]
+    },
+    {
+      "id": "social-exit",
+      "title": "The Social Exit",
+      "members": [
+        "the-social-exit",
+        "the-social-exit-deepens",
+        "the-social-exit-deepens-into-structural-architecture",
+        "the-social-exit-deepens-into-structural-withdrawal"
+      ]
+    },
+    {
+      "id": "strait-of-hormuz",
+      "title": "The Strait of Hormuz",
+      "members": [
+        "the-strait-of-hormuz-as-civilisational-chokepoint",
+        "the-strait-of-hormuz-blockade-has-lasted-three-months",
+        "the-strait-of-hormuz-crisis-reveals-the-fragility-of-global-",
+        "the-strait-of-hormuz-is-closed",
+        "the-strait-of-hormuz-is-closed-and-europe-is-running-out-of-",
+        "u-s-and-iran-trade-fire-in-the-strait-of-hormuz"
+      ]
+    },
+    {
+      "id": "inference-economy",
+      "title": "The Inference Economy",
+      "members": [
+        "ai-capital-expenditure-enters-the-absurd",
+        "the-ai-capex-trade-discovers-it-has-a-body",
+        "the-inference-economy-declared-itself-at-nvidia-gtc",
+        "the-inference-economy-is-a-civilisational-pivot-being-proces",
+        "the-inference-economy-is-a-civilisational-pivot-that-is-bein"
+      ]
+    },
+    {
+      "id": "gulf-stream-drift",
+      "title": "The Gulf Stream Drift",
+      "members": [
+        "the-gulf-stream-is-drifting-north"
+      ]
+    },
+    {
+      "id": "species-turnover-slowdown",
+      "title": "Species Turnover Slowdown",
+      "members": [
+        "the-species-turnover-slowdown"
+      ]
+    },
+    {
+      "id": "cuba-crisis",
+      "title": "The Cuba Crisis",
+      "members": []
+    },
+    {
+      "id": "cascade-structure",
+      "title": "The Cascade",
+      "members": [
+        "the-cascade-is-the-structure"
+      ]
+    }
+  ]
+}
