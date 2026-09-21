@@ -178,7 +178,7 @@ Re-read the finished draft once, against this list. Each line is a fault found i
 
 No index rebuild is needed; the Astro site reads the directory at build time.
 
-Attended, if `apparatus/site/node_modules` exists, run `npm test --prefix apparatus/site` first: the archive suite parses the new reading, and a failure means the format drifted. Gated, the `site tests` workflow runs the same suite on the pull request.
+Attended, if `apparatus/site/node_modules` exists, run `npm test --prefix apparatus/site` first: the archive suite parses the new reading, and a failure means the format drifted. Gated, the `site tests` workflow runs the same suite on the pull request. Unattended, there is no pull request and so no workflow behind you: install (`npm ci --prefix apparatus/site`) and run the suite yourself before anything goes to `main`.
 
 **Attended (default):** commit to `main` and push. Vercel deploys on push.
 
@@ -188,7 +188,9 @@ git commit -m "feat(zeitgeist): DD Mon YYYY reading: [headline from DEEP section
 git push
 ```
 
-**Gated (`/zeitgeist gated`, and every unattended run):** do NOT push to `main`. Push to a branch and open a pull request. The `zeitgeist PR notify` workflow mentions Sam on the PR, GitHub emails him, and he authorises by merging (or declines by closing). The cloud routine always runs gated (Sam's decision, 10 Sep 2026):
+**Unattended (the cloud routine):** publishes as an attended run does, commit to `main` and push, with the Step 5 report as the commit body (Sam's decision, 21 Sep 2026, reversing the PR gate of 10 Sep). Nobody reads it first, so the run has to vouch for itself. It goes to `main` only if all three hold: the processing-discourse agent (C) returned lists and not a wall of blocks; the verifier opened pages (if it opened none, or more than half its lines came back UNREACHABLE, nothing was checked); and the site tests pass. If any fails the run is degraded: take the gated path below and put the failed condition on the first line of the PR body. Never force a rejected push to `main`; a rejection is also the gated path. The floor is not hypothetical: the first cloud run, on 21 Sep 2026, had no page access, gathered no processing channel and verified 0 of 38 items.
+
+**Gated (`/zeitgeist gated`, and any degraded unattended run):** do NOT push to `main`. Push to a branch and open a pull request. The `zeitgeist PR notify` workflow mentions Sam on the PR, GitHub emails him, and he authorises by merging (or declines by closing):
 
 ```bash
 git checkout -b zeitgeist/YYYY-MM-DD
@@ -204,7 +206,7 @@ Verifier: [N checked / N corrected / N unreachable]
 Author's position: [which items touch Anthropic or the frontier labs, or none]"
 ```
 
-The PR body carries the Step 5 report so the reviewer never has to open the file to decide. The author's-position line is there so that a reading about its own maker never reaches the front door without the reviewer knowing that is what it is.
+The PR body carries the Step 5 report so the reviewer never has to open the file to decide. The author's-position line is there so that a reading about its own maker never reaches the front door without the reviewer knowing that is what it is. Ungated, there is no reviewer: the disclosure inside the item is everything the reader gets, so the editorial pass's author's-position line stops being a courtesy and becomes the whole safeguard.
 
 ## Step 5: Confirm
 
