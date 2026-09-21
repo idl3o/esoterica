@@ -14,7 +14,7 @@ This command does NOT pull raw world-signal into the main context and then write
 
 So the work is split. **Gather agents** touch the raw signal in their own isolated contexts and return *neutral factual digests* — what happened, why it matters, nothing operational. The **main turn synthesises only from those digests**, never the raw feed. This is the repo's own harvest → distillation → synthesis pipeline, applied to the news. It also means a blocked gather agent costs you one channel, not the entire reading.
 
-The pipeline has six stations. Two were added on 19 Sep 2026 after a run in which they caught what the first four let through; they are decisions, not decoration — do not skip them to save time.
+The pipeline has eight stations. Four were added on 19–20 Sep 2026 after a run in which they caught what the first four let through; they are decisions, not decoration — do not skip them to save time.
 
 | | Station | Who | Yields |
 |---|---|---|---|
@@ -24,11 +24,14 @@ The pipeline has six stations. Two were added on 19 Sep 2026 after a run in whic
 | 3 | Write | main | the draft |
 | 3a | **Verify** | one agent, isolated, in background from Step 2 | quotes and figures checked against the page |
 | 3b | **Editorial pass** | main | overclaims cut, contradictions resolved |
-| 4 | Commit | main | push, or gated PR |
+| 3c | **Thread** | main | every item joined to its thread in the registry |
+| 4 | Commit | main | reading + registry + the run's audit trail; push, or gated PR |
 
 ## Step 0: Continuity
 
 Read the most recent reading in `corpus/synthesis/zeitgeist/` before gathering. Note its DEEP headlines, its correspondence and its EDGE. A reading is one entry in a running record: carry a thread forward by name when the week advances it ("the last reading found…"), and do not re-run one of its items without new evidence. Get today's date (`date -u +%Y-%m-%d`) and give it to every agent — their sense of "now" is their training cutoff, not the calendar.
+
+Then read the open threads: `node apparatus/scripts/zeitgeist-slugs.mjs --threads`. A thread is the named thing a run of items has been about ("iran-war", "rate-cycle"); titles are fresh sentences each week, so without threads the archive cannot see that the war of March is the war of September. Know which threads are open, and at what scale each last sat, before you decide where this week's items belong. Create the run directory now: `docs/zeitgeist-runs/YYYY-MM-DD/`.
 
 ## Step 1: Deploy Gather Agents (Parallel)
 
@@ -36,10 +39,12 @@ Launch **four gather agents simultaneously** using the Agent tool (`subagent_typ
 
 Give every agent this **register contract** verbatim, then its channel list:
 
-> You are gathering raw world-signal for a contemplative news reading. Return a neutral, factual, journalistic digest — nothing else. Do NOT write any files.
+> You are gathering raw world-signal for a contemplative news reading. Return a neutral, factual, journalistic digest — nothing else. Write that digest, byte for byte as you return it, to the one file path you are given below, and write or change no other file anywhere.
 > **Register rules (hard):** For any story touching security, cyber, conflict, weapons, surveillance, or crime, report ONLY what happened and why it matters. Never include operational or technical detail — no methods, tools, code, vulnerabilities, exploit steps, malware behaviour, or capability specifics. Headline-level only. You are summarising events, not explaining how anything was done. No enablement of any kind.
 > **Format:** Under each channel heading, 3–5 bullets. Each bullet: `**[plain headline]** — [1–2 sentence factual summary: who/what/when/where]. [If a processing channel: where and how it's circulating.] (source: URL)`. Plain language, no amplification, no analysis — analysis happens later, not here.
 > **Fidelity rules (hard):** Today's date is [DATE]; discard anything older than about ten days unless the source says it is still current. Give **two dates** for every item: when the thing happened and when the source published it. If they differ by more than a few weeks — a 2023 paper on this week's front page, a spring incident reported now, a resurfaced clip — say so in the bullet; recycled items are signal, but only when labelled. Carry the source's own hedge on every figure (estimate, preliminary, self-reported, "sources say") and never give a rounder number than the source does. Attribute figures to whoever produced them, not to the outlet that relayed them. Use quotation marks only for words you saw on the page, and say who said them and where. If a claim rests on one outlet or one aggregator, say "single source". If a page was blocked or paywalled, say so rather than reconstructing it.
+
+Each agent's file, in the run directory: `1-gather-a-world-material.md`, `1-gather-b-world-frontier.md`, `1-gather-c-processing-discourse.md`, `1-gather-d-processing-culture.md`. The verifier's is `3a-verifier.md`. These are the audit trail (`docs/zeitgeist-runs/README.md`): byte-exact, never edited afterwards, so a claim in a published reading can be traced to the digest that carried it. If an agent returns a digest but wrote no file, write the file yourself from what it returned, unedited.
 
 **Agent A — World, material:**
 1. Geopolitical — "major world news today" (conflicts, diplomacy, elections, treaties, power shifts)
@@ -171,8 +176,23 @@ Re-read the finished draft once, against this list. Each line is a fault found i
 - **Bending the event.** If an item has been phrased to fit the correspondence better than the digest supports, restore the digest's version and let the correspondence be weaker.
 - **Recuperative close.** A negative finding stands. No closing aphorism that turns the week's failure into a good sign.
 - **The limits of the net.** An absence is an absence *in the lists gathered*. Say which territories and platforms those were before reading a silence into them.
+- **The thread that does not move.** A thread that has sat at the same scale for three readings running: has it moved and you missed it, or are you repeating it? And a thread that has changed scale this week is itself an item: say so.
 - **The author's position.** This reading is written by an Anthropic model. When Anthropic, Claude, or the frontier laboratories are in the week's news, say so in the item, plainly and once per item. When the reading's conclusion coincides with its maker's public position, say that too, and ask the reader to count it once: an instrument reaching its maker's view is not a second opinion.
 - **Prior art.** Before presenting an idea as the week's discovery, ask whether a literature already holds it.
+
+## Step 3c: Thread the items (main turn)
+
+Run `node apparatus/scripts/zeitgeist-slugs.mjs corpus/synthesis/zeitgeist/zeitgeist-YYYY-MM-DD.md`. It prints every item with its slug and the thread that slug already belongs to, or `(standalone)`. Do not compute slugs by eye: they truncate at sixty characters and twenty-seven live ones end in a hyphen.
+
+Then edit `apparatus/site/src/data/zeitgeist-threads.json`:
+
+- **An item that continues an open thread:** add its slug to that thread's `members`. Decide by what the item's *title* is about. One thread per item; if it straddles two, choose, and say which other thread it touched in the PR body.
+- **A thread is minted only when it has two items to hold:** this week's and an earlier standalone one it plainly continues (search the archive's titles before deciding nothing came before). `id` is kebab-case, one to five words; `title` is a short noun phrase of at most six words with no full stop, the way a reader would name the thing. Never a sentence. Never a mood, a theme or one of the series' own devices ("the silence", "the gap"): a thread is a thing in the world.
+- **A one-week event with no precedent stays standalone.** It needs no entry. Honest residue is a finding; a lunar crater is allowed to stand alone.
+- **Closing a thread:** only when the reading itself says the thing has ended. Set `closed` to the reading's date.
+- Never rename or remove an existing `id`, and never delete a member: both are public URLs.
+
+The registry is checked by the site's tests (no slug in two threads, no member that matches no item, every once-live URL still a page or a redirect). Attended, run them; gated, the `site tests` workflow runs them on the PR and a wrong slug fails there.
 
 ## Step 4: Commit and Deploy
 
@@ -183,7 +203,7 @@ Attended, if `apparatus/site/node_modules` exists, run `npm test --prefix appara
 **Attended (default):** commit to `main` and push. Vercel deploys on push.
 
 ```bash
-git add corpus/synthesis/zeitgeist/zeitgeist-YYYY-MM-DD.md
+git add corpus/synthesis/zeitgeist/zeitgeist-YYYY-MM-DD.md apparatus/site/src/data/zeitgeist-threads.json docs/zeitgeist-runs/YYYY-MM-DD
 git commit -m "feat(zeitgeist): DD Mon YYYY reading: [headline from DEEP section]"
 git push
 ```
@@ -194,7 +214,7 @@ git push
 
 ```bash
 git checkout -b zeitgeist/YYYY-MM-DD
-git add corpus/synthesis/zeitgeist/zeitgeist-YYYY-MM-DD.md
+git add corpus/synthesis/zeitgeist/zeitgeist-YYYY-MM-DD.md apparatus/site/src/data/zeitgeist-threads.json docs/zeitgeist-runs/YYYY-MM-DD
 git commit -m "feat(zeitgeist): DD Mon YYYY reading: [headline from DEEP section]"
 git push -u origin zeitgeist/YYYY-MM-DD
 gh pr create --fill --title "zeitgeist: DD Mon YYYY" --body "[DEEP headline]
@@ -203,6 +223,7 @@ gh pr create --fill --title "zeitgeist: DD Mon YYYY" --body "[DEEP headline]
 
 Channels blocked/empty: [list or none]
 Verifier: [N checked / N corrected / N unreachable]
+Threads: [N items joined open threads / N threads minted (ids) / N standalone / any straddlers]
 Author's position: [which items touch Anthropic or the frontier labs, or none]"
 ```
 
@@ -231,5 +252,6 @@ After push completes, report:
 - **The archive is the product.** Each reading becomes a permanent record. Write as if someone reads it a year from now to understand what this moment felt like.
 - **Fidelity first.** Report what's actually happening. Don't bend events to fit a narrative. The pattern emerges from honest observation or not at all.
 - **The digest is a paraphrase.** Gather agents stand one remove from the page and the writer stands one remove from them. The register clause (quotation marks only for words the source contains; every figure with its own hedge) cannot be honoured from digests alone. The verifier is what cashes it.
+- **Titles are sentences; threads are names.** The item's bold opening is written fresh and should be. What it is *about* is recorded once, in the registry, so the archive can show a thing sinking from SURFACE to DEEP over a season. Without that record 402 of the first 426 items stood alone, the war among them.
 - **Old light is signal, when labelled.** Much of any week arrives late: the memo unsealed years on, the incident reported a season after, the paper recirculated as new. The lag between event and sight is itself a reading. Unlabelled, it is just an error.
 - **Live on save.** The reading goes live immediately. This is the front door of esoterica — treat it with the gravity it deserves.

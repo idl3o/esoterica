@@ -59,7 +59,7 @@ const info = timescaleInfo[timescaleKey];
 // Group by status
 const activeItems = items.filter(i => i.status === 'active');
 const dormantItems = items.filter(i => i.status === 'dormant');
-const metabolisedItems = items.filter(i => i.status === 'metabolised');
+const onceItems = items.filter(i => i.status === 'once' || i.status === 'closed');
 ---
 
 <Base title={`${info.label} | Meta-Zeitgeist`} description={info.description}>
@@ -88,7 +88,7 @@ const metabolisedItems = items.filter(i => i.status === 'metabolised');
     <div class="flex gap-4 mb-8 text-sm">
       <span class="text-cyan">{activeItems.length} active</span>
       <span class="text-purple">{dormantItems.length} dormant</span>
-      <span class="text-text-muted">{metabolisedItems.length} metabolised</span>
+      <span class="text-text-muted">{onceItems.length} once</span>
     </div>
 
     <!-- Active Items -->
@@ -126,15 +126,15 @@ const metabolisedItems = items.filter(i => i.status === 'metabolised');
       </section>
     )}
 
-    <!-- Metabolised Items -->
-    {metabolisedItems.length > 0 && (
+    <!-- Items that appeared once -->
+    {onceItems.length > 0 && (
       <section class="mb-10">
-        <h2 class="text-lg font-light text-text-secondary mb-4">Metabolised</h2>
+        <h2 class="text-lg font-light text-text-secondary mb-4">Once</h2>
         <p class="text-xs text-text-muted italic mb-4">
-          Appeared once, processed, and passed.
+          Appeared once and has not returned. Whether it was digested or dropped, the archive cannot say.
         </p>
         <div class="space-y-2">
-          {metabolisedItems.map(item => (
+          {onceItems.map(item => (
             <MetaItemCard
               item={item}
               allDates={index.allDates}
