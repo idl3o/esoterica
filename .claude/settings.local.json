@@ -1,4 +1,5 @@
 {
+  "autoMemoryDirectory": "~/.claude/projects/c--Users-Sam-Documents-coding-projs-esoterica2-esoterica/memory",
   "permissions": {
     "allow": [
       "Bash(tree:*)",
