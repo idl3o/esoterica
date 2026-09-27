@@ -21,6 +21,7 @@ const fullTitle = title === 'Esoterica' ? title : `${title} — Esoterica`;
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex,nofollow" />}
     <title>{fullTitle}</title>
+    <link rel="alternate" type="application/atom+xml" title="Esoterica — Zeitgeist" href="/zeitgeist/feed.xml" />
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◈</text></svg>" />
   </head>
   <body class="font-sans min-h-screen">

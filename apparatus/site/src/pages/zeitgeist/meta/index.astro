@@ -4,6 +4,8 @@
  * Overview of items tracked across readings, organised by timescale.
  */
 
+import ScaleMigration from '../../../components/ScaleMigration.astro';
+import { scaleTrajectory } from '../../../lib/zeitgeist-threads';
 import Base from '../../../layouts/Base.astro';
 import MetaItemCard from '../../../components/MetaItemCard.astro';
 import {
@@ -51,6 +53,14 @@ const itemsByTimescale = timescales.map(ts => ({
   count: stats.byTimescale[ts.key],
 }));
 
+// Threads that have changed scale, most recently moved first
+const movers = index.items
+  .map(item => ({ item, trajectory: scaleTrajectory(item.appearances) }))
+  .filter(m => m.trajectory.length > 1)
+  .sort((x, y) => y.item.lastSeen.localeCompare(x.item.lastSeen) || y.item.appearanceCount - x.item.appearanceCount)
+  .slice(0, 8);
+const oldestFirst = [...index.allDates].reverse();
+
 // Recent correspondences (last 5)
 const recentCorrespondences = index.correspondences.slice(0, 5);
 ---
@@ -84,10 +94,31 @@ const recentCorrespondences = index.correspondences.slice(0, 5);
         <div class="text-xs uppercase tracking-label text-text-muted mt-1">Dormant</div>
       </div>
       <div class="glass p-4 text-center">
-        <div class="text-2xl text-text-secondary font-light">{stats.metabolised}</div>
-        <div class="text-xs uppercase tracking-label text-text-muted mt-1">Metabolised</div>
+        <div class="text-2xl text-text-secondary font-light">{stats.once}</div>
+        <div class="text-xs uppercase tracking-label text-text-muted mt-1">Once</div>
       </div>
     </div>
+
+    <!-- Threads that moved between scales -->
+    {movers.length > 0 && (
+      <section class="mb-12">
+        <h2 class="text-lg font-light text-text-secondary mb-2">Moved between scales</h2>
+        <p class="text-xs text-text-muted italic mb-4">
+          Threads that did not stay where they were first read. Most recently seen first.
+        </p>
+        <div class="space-y-3">
+          {movers.map(({ item }) => (
+            <a href={`/zeitgeist/meta/item/${item.id}`} class="block glass p-4 hover:bg-white/5 transition-colors">
+              <div class="flex items-baseline justify-between gap-4 mb-2">
+                <span class="text-text-primary">{item.title}</span>
+                <span class="text-xs text-text-muted whitespace-nowrap">{item.appearanceCount} appearances · last {item.lastSeen}</span>
+              </div>
+              <ScaleMigration dates={oldestFirst} appearances={item.appearances} />
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
 
     <!-- Timescale Sections -->
     <div class="space-y-10 mb-12">

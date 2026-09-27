@@ -9,6 +9,7 @@ on:
     paths:
       - 'corpus/synthesis/zeitgeist/**'
       - 'apparatus/site/**'
+      - 'apparatus/scripts/zeitgeist-slugs.mjs'
       - '.github/workflows/site-tests.yml'
   workflow_dispatch:
 
