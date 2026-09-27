@@ -1,0 +1,2 @@
+# Node scripts carry a shebang; a CRLF checkout on Windows breaks the parse.
+*.mjs text eol=lf
