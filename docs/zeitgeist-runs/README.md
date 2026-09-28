@@ -6,6 +6,7 @@ One directory per reading, named by date. Each holds what the reading was writte
 |---|---|---|
 | `1-gather-a…d.md` | Step 1 | the four gather agents' neutral digests, as returned |
 | `3a-verifier.md` | Step 3a | every quotation and load-bearing figure, checked against the page |
+| `3b-provenance.md` | Step 3b | item by item, the access limits the reading dropped from its prose and the corrections it applied; written by the writer, not an agent (from 28 Sep 2026) |
 | `channel-probe.md` | occasional | reachability test of candidate channels, when one was run |
 
 Rules of the directory:

@@ -29,7 +29,7 @@ The pipeline has eight stations. Four were added on 19–20 Sep 2026 after a run
 
 ## Step 0: Continuity
 
-Read the most recent reading in `corpus/synthesis/zeitgeist/` before gathering. Note its DEEP headlines, its correspondence and its EDGE. A reading is one entry in a running record: carry a thread forward by name when the week advances it ("the last reading found…"), and do not re-run one of its items without new evidence. Get today's date (`date -u +%Y-%m-%d`) and give it to every agent — their sense of "now" is their training cutoff, not the calendar.
+Read the most recent reading in `corpus/synthesis/zeitgeist/` before gathering. Note its DEEP headlines, its correspondence and its EDGE. A reading is one entry in a running record: carry a thread forward by name when the week advances it, and do not re-run one of its items without new evidence. But each reading is also someone's first: it is the homepage, and a reader who never saw the last one must be able to follow every item. The thread registry carries the longitudinal record; the prose need not. At most one backward reference per item ("the last reading found…"), never as the item's opening, and none in an item that stands without it. Get today's date (`date -u +%Y-%m-%d`) and give it to every agent — their sense of "now" is their training cutoff, not the calendar.
 
 Then read the open threads: `node apparatus/scripts/zeitgeist-slugs.mjs --threads`. A thread is the named thing a run of items has been about ("iran-war", "rate-cycle"); titles are fresh sentences each week, so without threads the archive cannot see that the war of March is the war of September. Know which threads are open, and at what scale each last sat, before you decide where this week's items belong. Create the run directory now: `docs/zeitgeist-runs/YYYY-MM-DD/`.
 
@@ -44,7 +44,7 @@ Give every agent this **register contract** verbatim, then its channel list:
 > **Format:** Under each channel heading, 3–5 bullets. Each bullet: `**[plain headline]** — [1–2 sentence factual summary: who/what/when/where]. [If a processing channel: where and how it's circulating.] (source: URL)`. Plain language, no amplification, no analysis — analysis happens later, not here.
 > **Fidelity rules (hard):** Today's date is [DATE]; discard anything older than about ten days unless the source says it is still current. Give **two dates** for every item: when the thing happened and when the source published it. If they differ by more than a few weeks — a 2023 paper on this week's front page, a spring incident reported now, a resurfaced clip — say so in the bullet; recycled items are signal, but only when labelled. Carry the source's own hedge on every figure (estimate, preliminary, self-reported, "sources say") and never give a rounder number than the source does. Attribute figures to whoever produced them, not to the outlet that relayed them. Use quotation marks only for words you saw on the page, and say who said them and where. If a claim rests on one outlet or one aggregator, say "single source". If a page was blocked or paywalled, say so rather than reconstructing it.
 
-Each agent's file, in the run directory: `1-gather-a-world-material.md`, `1-gather-b-world-frontier.md`, `1-gather-c-processing-discourse.md`, `1-gather-d-processing-culture.md`. The verifier's is `3a-verifier.md`. These are the audit trail (`docs/zeitgeist-runs/README.md`): byte-exact, never edited afterwards, so a claim in a published reading can be traced to the digest that carried it. If an agent returns a digest but wrote no file, write the file yourself from what it returned, unedited.
+Each agent's file, in the run directory: `1-gather-a-world-material.md`, `1-gather-b-world-frontier.md`, `1-gather-c-processing-discourse.md`, `1-gather-d-processing-culture.md`. The verifier's is `3a-verifier.md`. The writer adds one, `3b-provenance.md` (Step 3b). These are the audit trail (`docs/zeitgeist-runs/README.md`): byte-exact, never edited afterwards, so a claim in a published reading can be traced to the digest that carried it. If an agent returns a digest but wrote no file, write the file yourself from what it returned, unedited.
 
 **Agent A — World, material:**
 1. Geopolitical — "major world news today" (conflicts, diplomacy, elections, treaties, power shifts)
@@ -106,28 +106,28 @@ Create the file `corpus/synthesis/zeitgeist/zeitgeist-YYYY-MM-DD.md` (use today'
 ## SURFACE
 *Events that metabolise in days.*
 
-[3-5 items. Each item: what happened + how it's being processed + what the gap between event and processing reveals (in italics). The gap is the diagnostic — it shows where integration is happening and where the thermostat is active.]
+[3-5 items, about 120 words each. Each item: what happened + how it's being processed + what the gap between event and processing reveals (in italics, two or three sentences). The gap is the diagnostic — it shows where integration is happening and where the thermostat is active.]
 
 ---
 
 ## CURRENT
 *Trends that metabolise in weeks to months.*
 
-[3-5 items. Same integrated format. These are the rivers beneath the surface. Each item names not just the trend but how different organs of the collective body are metabolising it — financial markets, social media, subcultures, tech discourse. Show how the same signal produces different responses in different processing systems.]
+[3-5 items, about 160 words each. Same integrated format. These are the rivers beneath the surface. Each item names not just the trend but how different organs of the collective body are metabolising it — financial markets, social media, subcultures, tech discourse. Show how the same signal produces different responses in different processing systems.]
 
 ---
 
 ## DEEP
 *Phase transitions that metabolise in years.*
 
-[2-3 items. The big fish. Each item includes the signal, the silence around it (how the collective gaze refuses or fails to process it), and what the silence means. These items get more space — 2-3 paragraphs each. The silence is part of the signal, not a separate section. Show the correspondence between what the gaze reaches for and what it refuses: "The ocean the escape trend reaches for is the same ocean whose coral is dying."]
+[2-3 items. The big fish. Each item includes the signal, the silence around it (how the collective gaze refuses or fails to process it), and what the silence means. These items get more space — 2-3 paragraphs each, under about 550 words. The silence is part of the signal, not a separate section. Show the correspondence between what the gaze reaches for and what it refuses: "The ocean the escape trend reaches for is the same ocean whose coral is dying."]
 
 ---
 
 ## TECTONIC
 *Epoch markers. The fish too big for the net.*
 
-[1-2 items. Named, pointed at, explicitly acknowledged as exceeding the format's capacity. "We cannot contain this, but we can name it." No false domestication. These get honest treatment: what the signal is, why it exceeds the container, and what the only honest relationship to it might be.]
+[1-2 items, about 300 words each. Named, pointed at, explicitly acknowledged as exceeding the format's capacity. "We cannot contain this, but we can name it." No false domestication. These get honest treatment: what the signal is, why it exceeds the container, and what the only honest relationship to it might be.]
 
 ---
 
@@ -145,8 +145,14 @@ Create the file `corpus/synthesis/zeitgeist/zeitgeist-YYYY-MM-DD.md` (use today'
 
 Sources: [list URLs used — drawn from the agents' digests and the verifier's report]
 
-*Channel note: [which channels were blocked or thin; which items rest on a single outlet; what the verifier could not reach; which territories and platforms the trend lists actually covered; any context that came from the historical record and not from this week's gathering.]*
+*Channel note: [at most 150 words: which channels were blocked or thin; which territories and platforms the trend lists actually covered, and when they were sampled; the verifier's tally (checked / changed / unreachable); one line naming the author's position if any item touches Anthropic or the frontier laboratories; and a pointer: "Item-by-item provenance: docs/zeitgeist-runs/YYYY-MM-DD/3b-provenance.md".]*
 ```
+
+**Budget.** About 4,500 words in all, counted to the end of STATE. The budget is not decoration: the archive grew from 2,100 words (7 July) to 8,600 (21 September) as each fidelity station deposited its working into the prose, and the 21 September reading carried 30 inline notes about how a page was reached. Fidelity is kept by cutting, not by annotating. An item that cannot be stated honestly in its budget is two items, or it is not ready.
+
+**Two kinds of hedge.** The *source's* hedge belongs in the sentence: "preliminary", "an estimate", "by the ministry's count", "single source" where it changes what a reader may rely on. *Our access* does not: "read here through a relay", "in a summary this reading could not open", "the page reached does not say". Those go, item by item, into `3b-provenance.md`. If an item can only be stated by relaying a relay, cut it rather than hedge it.
+
+**One processing fact per item.** The attention lists (X, Google, Wikipedia, Bluesky, Hacker News) are the series' own instrument, and they are recorded in full in `1-gather-c-processing-discourse.md`. In the reading, give each item the one or two positions that say most — the list that held it, or the telling list that did not — not a census. An absence across every list gathered is stated once, where it matters most, with the limits of the net.
 
 **Format is load-bearing.** The site parses this file. Each SURFACE and CURRENT item is one paragraph that opens with a `**bold sentence.**` and closes with its italic gap; each DEEP and TECTONIC item opens with a bold sentence and runs to several paragraphs, none of the later ones opening in bold. The bold opening is the item's title and, slugified, its public URL under `/zeitgeist/meta/item/`. The first bold phrase under DEEP is the reading's headline everywhere. `apparatus/site/src/lib/zeitgeist-parse.test.ts` runs the parsers over the whole archive; if you change the template, run it.
 
@@ -177,8 +183,11 @@ Re-read the finished draft once, against this list. Each line is a fault found i
 - **Recuperative close.** A negative finding stands. No closing aphorism that turns the week's failure into a good sign.
 - **The limits of the net.** An absence is an absence *in the lists gathered*. Say which territories and platforms those were before reading a silence into them.
 - **The thread that does not move.** A thread that has sat at the same scale for three readings running: has it moved and you missed it, or are you repeating it? And a thread that has changed scale this week is itself an item: say so.
-- **The author's position.** This reading is written by an Anthropic model. When Anthropic, Claude, or the frontier laboratories are in the week's news, say so in the item, plainly and once per item. When the reading's conclusion coincides with its maker's public position, say that too, and ask the reader to count it once: an instrument reaching its maker's view is not a second opinion.
+- **The author's position.** This reading is written by an Anthropic model. When Anthropic, Claude, or the frontier laboratories are in the week's news, say so in the item, plainly and once per item — in the item that touches them, not in every section after it. When the reading's conclusion coincides with its maker's public position, say that too, and ask the reader to count it once: an instrument reaching its maker's view is not a second opinion. Beyond those items, one line in the channel note. A disclosure repeated seven times (21 Sep 2026) reads as a tic, and a tic is not read.
 - **Prior art.** Before presenting an idea as the week's discovery, ask whether a literature already holds it.
+- **Read it as a stranger.** Last, read each item as someone arriving at the homepage who has never seen a previous reading. Can they follow it without one? Is any sentence there for the audit rather than for them? Every check above subtracts an overclaim; this one subtracts accretion. Then count the words (to the end of STATE) and cut to the budget.
+
+Then write `3b-provenance.md` in the run directory: one entry per item, keyed by its bold title, listing every access limit the reading dropped from its prose — relays, excerpts, paywalls, unreachable pages, pages read through a summarising model, samplings that rotated — and each verifier correction applied. This file is written by the writer and is not byte-exact from an agent, so it opens with a comment saying so. It is where the audit lives; the reading is where the reader lives.
 
 ## Step 3c: Thread the items (main turn)
 
