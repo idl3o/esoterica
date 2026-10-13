@@ -27,7 +27,7 @@ The source's last lines: "The hidden life rests in the unvisited tomb. No one co
 
 ## Generation Notes
 - **Style:** nineteenth-century Realist oil painting, ordinary provincial and rural life, plain daylight, unidealised working figures, in the manner of Gustave Courbet, Jean-François Millet, Grigoriy Myasoyedov's *Mowers* and the interiors of Vilhelm Hammershøi.
-- **One line held for an outside check before render** (see the wave README): a Chekhov sentence in quotation marks that paraphrases his 1888 letter.
+- **One line weeded before render** (13 October 2026; see the wave README): Chekhov's 1888 letter is now paraphrased without quotation marks.
 - **Kept line (checked after adapt):** "Leave it there."
 - **AVOID:** trees as world-trees, golden-hour fields, a tomb lit from above, any composition that makes the ordinary glow, and symbolic still-life arrangements.
 
@@ -87,7 +87,7 @@ This is also where the realist novel sets itself, deliberately, against the very
 
 ## Chekhov: The Withheld Verdict
 
-If Tolstoy accumulates the ordinary, Chekhov *protects* it — from the writer himself. His signature technology is the refusal of moral verdict. "It is not the business of the artist to solve the problem," he wrote, "but only to state it correctly." In "The Lady with the Dog," Gurov and Anna — both married, both adulterous, both in many tellings *contemptible* — fall into something that is recognizably love, and Chekhov declines, across the whole story, to tell you what to make of it. The story ends with the hardest part not yet begun, no resolution, no judgment, no lesson:
+If Tolstoy accumulates the ordinary, Chekhov *protects* it — from the writer himself. His signature technology is the refusal of moral verdict. The artist's job, he told his publisher Suvorin in 1888, is not to solve the problem but to state it correctly. In "The Lady with the Dog," Gurov and Anna — both married, both adulterous, both in many tellings *contemptible* — fall into something that is recognizably love, and Chekhov declines, across the whole story, to tell you what to make of it. The story ends with the hardest part not yet begun, no resolution, no judgment, no lesson:
 
 > "and it seemed as though in a little while the solution would be found, and then a new and splendid life would begin; and it was clear to both of them that they had still a long, long road before them, and that the most complicated and difficult part of it was only just beginning."
 

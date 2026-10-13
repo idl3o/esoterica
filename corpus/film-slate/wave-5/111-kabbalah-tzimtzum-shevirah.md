@@ -28,7 +28,7 @@ Ordinary acts in Safed's alleys: bread handed through a door, a lamp lit, a debt
 
 ## Generation Notes
 - **Style:** sixteenth-century Safed stone houses and alleys in lamplight, broken earthenware and shards on stone floors, hands gathering shards, a thin ray into a dark empty room, worn manuscript pages, sombre ochre and stone grey, unconsoled, in the manner of Rembrandt's etchings and Georges de La Tour, highly detailed.
-- **One line held for an outside check before render** (see the wave README): a motive, grief for children buried in Safed, given to the literalist readers of tzimtzum.
+- **One line weeded before render** (13 October 2026; see the wave README): the unsourced motive given to the literalist readers of tzimtzum, grief for children buried in Safed, is cut; their resistance is given on its recorded grounds.
 - **Kept line (checked after adapt):** "Do not fold it shut."
 
 ---
@@ -150,8 +150,8 @@ Tzimtzum will not be folded. The vacated space is not a crease in the divine sur
 it is the *removal* of the divine surface from a region. The mystics knew exactly how
 dangerous this was. If you take tzimtzum literally, you have a God with a literal
 hole in him, a finite absence inside the Infinite, which is a contradiction sharp
-enough to cut. So a great controversy opened — running from Luria's own circle
-through Hasidism and into the Mitnagdic opposition — between those who read tzimtzum
+enough to cut. So a great controversy opened — running from the generations after
+Luria through Hasidism and into the Mitnagdic opposition — between those who read tzimtzum
 *ki-peshuto* (literally: a real withdrawal, a real void) and those who read it as a
 *concealment*, a *veiling* (the void only seems empty; God is still there but hidden,
 withdrawn from perception, not from being).
@@ -160,11 +160,11 @@ Notice what the second reading is. It is the integrative turn, arriving four hun
 years early. *There is no real absence; the absence is only apparent; underneath the
 hiddenness the plenum is intact.* It is the most natural move in mystical theology and
 it is precisely the move that converts catastrophe into comfort. The literalist
-Kabbalists resisted it, and we should mark why: because the *non-literal* reading
-makes the suffering of the world into a misunderstanding, a perceptual error, a veil
-to be lifted — and the literalists had buried too many children to believe the
-absence was only a trick of the light. The void is a real void. The first gesture of
-the cosmos is God making himself *less* so that something else could be at all.
+reading resisted it, on textual and theological grounds in its own day, and we should
+mark what that resistance protects: the *non-literal* reading makes the suffering of
+the world into a misunderstanding, a perceptual error, a veil to be lifted. The void
+is a real void. The first gesture of the cosmos is God making himself *less* so that
+something else could be at all.
 
 The corpus can use this. But it must use it *whole*. Tzimtzum is not the fold's
 contraction by another name. It is the fold's contraction's *opposite* — the one

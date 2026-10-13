@@ -51,7 +51,7 @@ This is also where the realist novel sets itself, deliberately, against the very
 
 ## Chekhov: The Withheld Verdict
 
-If Tolstoy accumulates the ordinary, Chekhov *protects* it — from the writer himself. His signature technology is the refusal of moral verdict. "It is not the business of the artist to solve the problem," he wrote, "but only to state it correctly." In "The Lady with the Dog," Gurov and Anna — both married, both adulterous, both in many tellings *contemptible* — fall into something that is recognizably love, and Chekhov declines, across the whole story, to tell you what to make of it. The story ends with the hardest part not yet begun, no resolution, no judgment, no lesson:
+If Tolstoy accumulates the ordinary, Chekhov *protects* it — from the writer himself. His signature technology is the refusal of moral verdict. The artist's job, he told his publisher Suvorin in 1888, is not to solve the problem but to state it correctly. In "The Lady with the Dog," Gurov and Anna — both married, both adulterous, both in many tellings *contemptible* — fall into something that is recognizably love, and Chekhov declines, across the whole story, to tell you what to make of it. The story ends with the hardest part not yet begun, no resolution, no judgment, no lesson:
 
 > "and it seemed as though in a little while the solution would be found, and then a new and splendid life would begin; and it was clear to both of them that they had still a long, long road before them, and that the most complicated and difficult part of it was only just beginning."
 

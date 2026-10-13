@@ -63,17 +63,17 @@ Each pair counts as one fill, so both halves are filmed: the long house-style ha
 7. **Polyphony voiced.** *The Dialogue* (102) gets one voice per speaker, with a fourth for the stage directions. Read by a single narrator, a polyphonic specimen becomes exactly what Bakhtin called monologic.
 8. **No music**, as in waves 2–4.
 
-## Before render — open
+## Before render
 
-**Claims the films would narrate as fact.** A read-through of the house-register sources found these. The reader shares the generator that wrote the sources (standing check 11), so this is a list for an outside check, not a verdict:
-- 103 — a Sol LeWitt wall-drawing instruction is given in quotation marks ("ten thousand straight lines, then ten thousand crooked lines, evenly distributed"); the wording is unconfirmed.
-- 103 — the reading of "R. Mutt" as a pun on the German *Armut* is presented as Duchamp's own; it is a critics' reading.
-- 105 — "It is not the business of the artist to solve the problem, but only to state it correctly" is in quotation marks; Chekhov's 1888 letter to Suvorin says something close but in other words.
-- 107 — Matzinger's danger model is called "the deepest current model"; it is influential and contested.
-- 109 — the Yellowstone cascade (wolves restored, rivers settling) is stated flatly, "with data"; the cascade's strength is disputed in the ecological literature.
-- 111 — a motive (grief for children buried in Safed) is given to the literalist readers of tzimtzum; no source supplies it.
+**Claims the films would narrate as fact — weeded 13 October 2026.** A read-through of the house-register sources found six. The reader shared the generator that wrote the sources (standing check 11), so they went to outside sources, and were corrected in the corpus originals and in these copies. The log, with every citation, is [weeding/logs/2026-10-13-wave-5-house-register-claims.md](../../weeding/logs/2026-10-13-wave-5-house-register-claims.md). Three neighbouring overstatements found in the same pass were corrected with them.
+- 103 — the LeWitt instruction now quotes *Wall Drawing 86* (1971) exactly; the old wording matched no wall drawing.
+- 103 — "R. Mutt" plays on *Mott*, the firm the urinal was bought from; *Armut* is given as a critics' reading, not Duchamp's.
+- 105 — Chekhov's 1888 letter to Suvorin is paraphrased without quotation marks.
+- 107 — Matzinger's danger model is one influential and still-contested model, not "the deepest current model".
+- 109 — Yellowstone is told as a disputed cascade, and Paine's shore carries "with data".
+- 111 — the grief motive given to the literalists is cut, and the dispute starts in the generations after Luria rather than in his own circle.
 
-The options are to run `/weed` on the sources of 99, 101, 103, 105 and 107–111 and re-copy them here before rendering, or to render now and accept these lines. The voices and native-form halves make no checkable external claims.
+The voices and native-form halves make no checkable external claims.
 
 **Rendering.** The plan is `tools/wave5_plan.json` in text-to-video, built by `tools/_build_wave5_plan.py`. Small pipeline changes support it:
 - per-film negative and environment overrides in the wave driver;
@@ -83,14 +83,20 @@ The options are to run `/weed` on the sources of 99, 101, 103, 105 and 107–111
 - `tools/voices_by_speaker.py` for 102's second pass;
 - `tools/check_kept_lines.py`, which confirms each film-mode narration kept its refusal line.
 
-A placeholder-image smoke render of 90 ran clean end to end. Its shot descriptions went from five stock-poetic subjects in eight beats (a door ajar, dawn light, a lone chair) with the direction appended, to two in eight with the direction replacing the brief. The local shot-describer still leans that way, so watch the first literal film before trusting the strand.
+A placeholder-image smoke render of 90 ran clean end to end. Its shot descriptions went from five stock-poetic subjects in eight beats (a door ajar, dawn light, a lone chair) with the direction appended, to two in eight with the direction replacing the brief.
+
+Two changes on 13 October 2026, after that smoke render:
+- **The shot-describer** moved from llama3.2 to gemma4 (8B). On 76 beats of films 94, 97 and 91 under the literal direction, it wrote 2 stock or symbolic shots to llama3.2's 20, and kept the restraint llama3.2 broke.
+- **The twenty photographic films** (88–100, 102–104, 106–109) render on Z-Image Turbo, which in a side-by-side held the literal register with better subject fidelity than SDXL at about SDXL's speed. Turbo runs without a negative prompt, and a named artist printed as text (90's preview drew "STEPHEN SHORE" on a book spine), so their "in the manner of …" clauses are cut in the plan builder. 101, 105, 110 and 111 stay on SDXL with their painters.
+
+Watch the first literal film before trusting the strand.
 
 ---
 
 ## What is declined
 - **An anthology cut** of the voices. They stay separate films.
 - **A slate-conclusions update.** The wave is filed here, not interpreted there.
-- **Correcting the sources.** The six lines above are flagged, not edited; the voices carry `do-not-correct` and are copied as they stand.
+- **Correcting the voices.** They carry `do-not-correct` and are copied as they stand. (The six house-register lines above were weeded rather than left flagged; see the log.)
 - **The three mechanism halves** (`synthesis/immunology-the-mechanism.md`, `synthesis/trophic-ecology-the-mechanism.md`, `synthesis/attachment-theory-the-mechanism.md`). By the pair logic of XXIII they belong beside 107–109. They were held back to keep to the agreed lineup and head the bench.
 
 **Bench (wave 6 / swap-ins):** the three mechanism halves above · the remaining negative-space pairs (morphogenesis, neidan, topos theory, information geometry, the I Ching) · from the Wave 4 bench, *The Eternals*, after its three marked overstatements are corrected · Tyr, Freyja, *Invincible* and *Invincible — Still*, Star Trek, Elden Ring, Dragonball, Loki's lie, One Piece · the ten unfilmed parables · Zoroastrianism, fana-baqa.
