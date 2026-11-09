@@ -426,7 +426,7 @@ def list_types() -> dict[str, int]:
 
 
 @mcp.tool()
-def nodes_by_type(node_type: str) -> list[dict[str, str]]:
+def nodes_by_type(node_type: str) -> list[dict[str, Any]]:
     """
     Get all constellation nodes of a given type.
 
