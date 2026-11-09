@@ -19,8 +19,20 @@ from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-# One pair of quotation marks on one line, straight or curly; 120+ characters inside.
-QUOTE_SPAN = re.compile('(?:"([^"\\n]{120,}?)"|\u201c([^\u201d\\n]{120,}?)\u201d)')
+# Curly quotes have distinct open and close marks, so a regex pairs them correctly.
+# Straight quotes do not: a regex would bridge from one quotation's close to the
+# next one's open, so those are paired by position in quoted_spans().
+CURLY_SPAN = re.compile("“([^”\\n]+?)”")
+
+
+def quoted_spans(text: str) -> list[str]:
+    """Every quotation on a line: straight quotes paired 1st-2nd, 3rd-4th…, curly by mark."""
+    out: list[str] = []
+    for line in text.split("\n"):
+        idx = [i for i, ch in enumerate(line) if ch == '"']
+        out.extend(line[a + 1 : b] for a, b in zip(idx[0::2], idx[1::2]))
+        out.extend(m.group(1) for m in CURLY_SPAN.finditer(line))
+    return out
 EPIGRAPH = re.compile('^\\*["\u201c](.+?)["\u201d]\\*\\s*$')
 # An em dash, en dash or double hyphen opens an attribution; a plain hyphen is a bullet.
 ATTRIB = re.compile(
@@ -54,7 +66,7 @@ def scan(path: Path) -> dict:
     if cur:
         runs.append(cur)
     epigraphs = [words(m.group(1)) for ln in lines if (m := EPIGRAPH.match(ln.strip()))]
-    spans = [n for m in QUOTE_SPAN.finditer(text) if (n := words(m.group(1) or m.group(2))) >= 40]
+    spans = [n for s in quoted_spans(text) if (n := words(s)) >= 40]
     attribs = []
     for ln in lines:
         m = ATTRIB.match(ln.strip())
