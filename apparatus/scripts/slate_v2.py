@@ -126,7 +126,9 @@ def read(path: Path) -> str:
 
 
 def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    # Hash the text with line endings normalised: autocrlf rewrites a Windows
+    # checkout to CRLF, and that must not report every gate stale.
+    return hashlib.sha256(read(path).encode("utf-8")).hexdigest()
 
 
 def split_frontmatter(text: str) -> tuple[dict, str]:

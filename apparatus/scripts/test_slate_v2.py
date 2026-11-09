@@ -142,6 +142,14 @@ def test_any_verbatim_span_of_the_dossier_passes():
 
 
 # --------------------------------------------------------------------------- gates
+def test_hash_ignores_line_endings(tmp_path: Path):
+    """autocrlf rewrites a checkout to CRLF; a gate must not go stale for that alone."""
+    lf, crlf = tmp_path / "lf.md", tmp_path / "crlf.md"
+    lf.write_bytes(b'# Title\n\nline one\nline two\n')
+    crlf.write_bytes(b'# Title\r\n\r\nline one\r\nline two\r\n')
+    assert sv.sha256(lf) == sv.sha256(crlf)
+
+
 def test_gate_goes_stale_when_a_checked_file_changes(topic: Path):
     sv.stamp(topic, "quotes")
     assert sv.gate_state(topic, "quotes") == "pass"
