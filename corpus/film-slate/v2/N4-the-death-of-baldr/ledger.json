@@ -1,0 +1,57 @@
+{
+  "gates": {
+    "gathered": {
+      "date": "2026-10-14",
+      "files": {
+        "dossier.md": "9e7d239b29a3ef4778de7c68ff2510e54662f46dcc17abbb609cf9126f489a98"
+      },
+      "words": 23697
+    },
+    "ruled": {
+      "date": "2026-10-14",
+      "files": {
+        "dossier.md": "9e7d239b29a3ef4778de7c68ff2510e54662f46dcc17abbb609cf9126f489a98"
+      },
+      "claims": 83,
+      "verdicts": {
+        "correct": 41,
+        "mark": 25,
+        "stands": 14,
+        "pull": 3
+      }
+    },
+    "quotes": {
+      "date": "2026-10-14",
+      "files": {
+        "script.md": "af60471756f8a3057282c4bd4345d8b467f797edbc7aef1800581dfc6547a69b",
+        "dossier.md": "9e7d239b29a3ef4778de7c68ff2510e54662f46dcc17abbb609cf9126f489a98"
+      },
+      "quotes": 29
+    },
+    "written": {
+      "date": "2026-10-14",
+      "files": {
+        "script.md": "af60471756f8a3057282c4bd4345d8b467f797edbc7aef1800581dfc6547a69b"
+      },
+      "words": 3206,
+      "movements": 11,
+      "est_minutes": 21.4
+    },
+    "register": {
+      "date": "2026-10-14",
+      "files": {
+        "script.md": "af60471756f8a3057282c4bd4345d8b467f797edbc7aef1800581dfc6547a69b"
+      },
+      "reviewed": 0
+    },
+    "second_check": {
+      "date": "2026-10-14",
+      "files": {
+        "script.md": "af60471756f8a3057282c4bd4345d8b467f797edbc7aef1800581dfc6547a69b",
+        "dossier.md": "9e7d239b29a3ef4778de7c68ff2510e54662f46dcc17abbb609cf9126f489a98",
+        "second-check.md": "7d1945f435a4bbb5bde8a492d0d05f9a945c6ff26f8e2360e9a27ed4ca152b29"
+      },
+      "flags": 12
+    }
+  }
+}
