@@ -47,7 +47,8 @@
         "the-oil-shock-is-repricing-civilisation-s-floor",
         "the-oil-shock-is-repricing-the-world",
         "the-risk-premium-returns-to-the-strait",
-        "gas-prices-are-52-higher-than-before-the-iran-war"
+        "gas-prices-are-52-higher-than-before-the-iran-war",
+        "oil-fell-below-ninety-dollars-with-the-strait-still-shut"
       ]
     },
     {
@@ -191,6 +192,7 @@
       "id": "rate-cycle",
       "title": "The Rate Cycle",
       "members": [
+        "the-bank-of-england-raised-its-rate-the-federal-reserve-s-mi",
         "the-bond-market-is-repricing-the-century-and-it-is-the-only-",
         "the-central-banks-held-and-the-dissents-pointed-up-and-the-p",
         "the-fed-cannot-decide",
@@ -272,7 +274,8 @@
         "a-king-is-buried-while-the-continent-s-sky-is-described-as-a",
         "nato-summit-in-ankara-over-a-rift-it-can-t-name",
         "the-peaceful-sky-was-the-settlement-and-the-sky-is-now-descr",
-        "three-postwar-settlements-are-being-tested-in-the-same-week-"
+        "three-postwar-settlements-are-being-tested-in-the-same-week-",
+        "three-presidents-met-for-the-first-time-and-signed-a-peace-d"
       ]
     },
     {
@@ -354,13 +357,15 @@
         "anthropic-nears-a-trillion-as-chips-lose-one",
         "anthropic-passed-openai-as-the-most-valuable-ai-company-on-e",
         "anthropic-s-annual-recurring-revenue-overtook-openai-s-for-t",
-        "the-maker-of-this-reading-filed-to-go-public-and-the-post-th"
+        "the-maker-of-this-reading-filed-to-go-public-and-the-post-th",
+        "the-maker-of-this-reading-went-public-at-83-a-share-closed-i"
       ]
     },
     {
       "id": "ai-self-improvement",
       "title": "AI Self-Improvement",
       "members": [
+        "a-mathematician-at-the-company-that-made-this-reading-says-h",
         "a-quarter-of-the-work-of-making-the-next-mind-is-reported-as",
         "recursion-has-reached-the-substrate",
         "the-company-that-made-this-reading-told-the-regulator-it-may",
@@ -493,13 +498,15 @@
         "the-machines-electricity-bill-is-on-today-s-national-ballot-",
         "the-midterm-energy-question",
         "the-pause-that-is-actually-happening-is-made-of-substations",
-        "the-thermal-bill-for-abstraction-is-coming-due-in-bodies-and"
+        "the-thermal-bill-for-abstraction-is-coming-due-in-bodies-and",
+        "voters-backed-limits-on-data-centres-in-forty-of-forty-one-l"
       ]
     },
     {
       "id": "human-made-premium",
       "title": "The Human-Made Premium",
       "members": [
+        "cambridge-chose-human-as-its-word-of-the-year-and-a-music-se",
         "human-made-becomes-a-price-signal",
         "made-by-humans-hardens-from-a-complaint-into-infrastructure",
         "refusal-has-become-a-feature-and-it-is-selling"
@@ -660,7 +667,8 @@
         "the-central-pacific-is-forecast-with-an-83-per-cent-chance-t",
         "the-forecast-has-a-second-signature-and-still-no-day",
         "the-forecast-has-run-past-anything-it-was-tested-on",
-        "the-forecast-is-nearly-certain-and-it-has-no-day-on-which-it"
+        "the-forecast-is-nearly-certain-and-it-has-no-day-on-which-it",
+        "the-forecasters-give-about-three-chances-in-five-that-this-e"
       ]
     },
     {
@@ -698,6 +706,7 @@
       "members": [
         "ebola-s-quiet-arithmetic-in-central-africa",
         "the-outbreak-passed-7-600-confirmed-cases-and-was-on-none-of",
+        "the-outbreak-passed-eleven-thousand-confirmed-cases-the-heal",
         "the-outbreak-passed-ten-thousand-confirmed-cases-and-five-th",
         "the-outbreak-reached-nairobi-and-reached-none-of-the-lists",
         "the-vaccine-was-licensed-for-another-strain-and-it-is-the-on"
@@ -718,6 +727,14 @@
       "members": [
         "brazil-votes-again-next-sunday-and-its-x-list-spent-the-morn",
         "lula-won-a-fourth-term-by-a-margin-his-opponent-has-not-acce"
+      ]
+    },
+    {
+      "id": "us-midterms-2026",
+      "title": "The 2026 Midterms",
+      "members": [
+        "america-votes-today-and-at-dawn-its-election-was-germany-s-l",
+        "the-count-gave-the-democrats-both-chambers-by-the-widest-mid"
       ]
     }
   ]
